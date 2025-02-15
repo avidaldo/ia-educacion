@@ -3,7 +3,7 @@
 ## Introducción
 
 - ¿Qué es un prompt y por qué es importante?
-    - Un prompt es una instrucción que se le da a un modelo de lenguaje para que genere una respuesta.
+    - Un prompt es una instrucción que se le da a un modelo de lenguaje para que genere una respuesta (la pregunta que le hacemos al chatbot).
     - Es importante porque determina la calidad de la respuesta.
     - Un buen prompt es aquel que permite al modelo entender bien lo que se le pide y dar una respuesta adecuada.
     - Un mal prompt puede llevar a respuestas incorrectas o incoherentes.
@@ -43,6 +43,7 @@
     - Muestreo (la mayor parte de fotos son de contexto urbano, por lo que el modelo no sabrá describir bien un campo)
     - Sesgos humanos implícitos (si se entrena con textos que reflejan sesgos, los reflejará). Los datasets de texto contienen muchos textos de hace 50 años, por lo que no se ajustará bien a la realidad actual.
 
+Solución: ser críticos y usar prompts claros para definir qué queremos y qué no queremos.
 
 
 ## *Red team*
