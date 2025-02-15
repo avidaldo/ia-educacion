@@ -116,6 +116,3 @@
 
 ## Otras
 - Marketing: [Jasper](https://www.jasper.ai/)
-
-- NotebookLM (sin enlace)
-  - Similar proyectos de ChatGPT...
