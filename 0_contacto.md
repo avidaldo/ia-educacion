@@ -21,4 +21,4 @@
 }
 </style>
 
-<meta name="color-scheme" content="light">
+# USO DE IA EN EDUCACIÓN

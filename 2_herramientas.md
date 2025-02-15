@@ -2,7 +2,7 @@
 
 ## Chatbots (LLMs)
 
-- OpenAI
+### OpenAI
     - [ChatGPT](https://chat.openai.com/)
             - GPT-4o: "Omni" (multimodal)
             - GPT-4o con tareas programadas
