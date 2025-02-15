@@ -5,8 +5,8 @@
 ### OpenAI
 
 - [ChatGPT](https://chat.openai.com/)
-        - GPT-4o: "Omni" (multimodal)
-        - GPT-4o con tareas programadas
+    - GPT-4o: "Omni" (multimodal)
+    - GPT-4o con tareas programadas
     - Serie o (con razonamiento):
         - o1
         - o3-mini (integra el razonamiento con búsquedas)
