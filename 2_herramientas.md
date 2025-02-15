@@ -3,49 +3,58 @@
 ## Chatbots (LLMs)
 
 ### OpenAI
-    - [ChatGPT](https://chat.openai.com/)
-            - GPT-4o: "Omni" (multimodal)
-            - GPT-4o con tareas programadas
-        - Serie o (con razonamiento):
-            - o1
-            - o3-mini (integra el razonamiento con búsquedas)
-            - o3-mini-high (mejor que o3-mini)
 
-        Integra:
-        - Dall-E: texto a imagen
-        - Sora: texto a vídeo
+- [ChatGPT](https://chat.openai.com/)
+        - GPT-4o: "Omni" (multimodal)
+        - GPT-4o con tareas programadas
+    - Serie o (con razonamiento):
+        - o1
+        - o3-mini (integra el razonamiento con búsquedas)
+        - o3-mini-high (mejor que o3-mini)
+
+    Integra:
+    - Dall-E: texto a imagen
+    - Sora: texto a vídeo
 
 ### DeepSeek
-    - DeepSeek-R1
-        - Compite con los mejores en todos los benchmarks
-        - Open source (podemos descargarlo, ver como funciona, crear nuestra versión...)
-        - 27 veces más barato que GPT-o1
-        - Permite ver CoT
+
+- [DeepSeek-R1](https://chat.deepseek.com/)
+    - Compite con los mejores en todos los benchmarks
+    - Open source (podemos descargarlo, ver como funciona, crear nuestra versión...)
+    - 27 veces más barato que GPT-o1
+    - Permite ver CoT
 
 ### Google
-    - [Gemini](https://gemini.google.com/)
-        - Chatbot multimodal
-        - Integrado en Gmail, Docs...
-        - Chatbot educativo
-        - 2.0: 8x Contexto ChatGPT y más barato que DeepSeek
 
-    - NotebookLM
-        - Similar proyectos de ChatGPT pero centrado en los documentos.
+- [Gemini](https://gemini.google.com/)
+    - Chatbot multimodal
+    - Integrado en Gmail, Docs...
+    - Chatbot educativo
+    - 2.0: 8x Contexto ChatGPT y más barato que DeepSeek
+
+- [NotebookLM](https://notebooklm.google/)
+    - Similar proyectos de ChatGPT pero centrado en los documentos.
 
 ### Anthropic
-    - [Claude](https://claude.ai/)
-        - Tres versiones: Opus (grande), Sonnet (media) y Haiku (pequeña)
+
+- [Claude](https://claude.ai/)
+    - Tres versiones: Opus (grande), Sonnet (media) y Haiku (pequeña)
 
 ### Microsoft
-    - [Copilot](https://copilot.microsoft.com/)
-        - Basado en GPT
-        - Copilotos integrados en Office, Teams, etc.
+
+- [Copilot](https://copilot.microsoft.com/)
+    - Basado en GPT
+    - Copilotos integrados en Office, Teams, etc.
+
+### Mistral
+
+- [Le Chat Mistral](https://chat.mistral.ai/chat)
+    - Único competidor europeo (francés, opensource)
 
 ### Otros:
-    - [Copilot](https://copilot.github.com/) de GitHub (basado en Codex de OpenAI)
-    - [Grok](https://x.com/i/grok?focus=1)
-    - [Le Chat Mistral](https://chat.mistral.ai/chat) (Francés, Opensource)
-    - [Qwen](https://chat.qwenlm.ai/) (Opensource)
+
+- [Grok](https://x.com/i/grok?focus=1)
+- [Qwen](https://chat.qwenlm.ai/) (Opensource)
 
 
 ## Otras herramientas útiles
@@ -107,3 +116,6 @@
 
 ## Otras
 - Marketing: [Jasper](https://www.jasper.ai/)
+
+- NotebookLM (sin enlace)
+  - Similar proyectos de ChatGPT...
