@@ -50,4 +50,4 @@ Solución: ser críticos y usar prompts claros para definir qué queremos y qué
 
 - Lo que le pides a una IA, pide a otra (o a un chat temporal / sin memoria) que haga una valoración crítica.
 
-> "Haz un análisis señalando todo aquello que pueda ser cuestionable o mejorade en el siguiente texto."
+> "Haz un análisis señalando todo aquello que pueda ser cuestionable o mejorable en el siguiente texto."
