@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IA para educación</title>
+  <!-- Include marked.js -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Optional CSS for styling -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
+  <style>
+    .markdown-body {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body class="markdown-body">
+  <div id="content"></div>
+
+  <script>
+    // GitHub raw content URL (replace with your repo details)
+    const repo = 'https://raw.githubusercontent.com/avidaldo/ia-educacion/master/';
+    // Path to your markdown file in the repo
+    const mdFiles = [
+        '0_contacto.md',
+        '1_historia_y_llms.md',
+        '2_herramientas.md',
+        '3_prompt.md',
+        '4_uso_docente.md',
+    ];
+
+    // Fetch and render all markdown files
+    Promise.all(mdFiles.map(file => 
+        fetch(repo + file)
+            .then(response => response.text())
+            .then(md => {
+                // Process images/links for each file
+                return marked.parse(md.replace(/!\[(.*?)\]\((?!http)(.*?)\)/g, `![$1](${repo}$2)`));
+            })
+    ))
+    .then(htmlContents => {
+        // Combine all HTML content
+        document.getElementById('content').innerHTML = htmlContents.join('\n');
+    });
+
+    // Only keep this commit date function
+    function updateCommitDate() {
+        fetch('https://api.github.com/repos/avidaldo/ia-educacion/commits?per_page=1')
+            .then(response => response.json())
+            .then(commits => {
+                const commitDate = new Date(commits[0].commit.author.date);
+                document.getElementById('lastCommitDate').textContent = 
+                    commitDate.toLocaleDateString('es-ES', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+            })
+            .catch(() => {
+                document.getElementById('lastCommitDate').textContent = 
+                    'Fecha no disponible';
+            });
+    }
+    
+    updateCommitDate();
+  </script>
+</body>
+</html>
