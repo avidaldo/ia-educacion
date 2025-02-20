@@ -2,7 +2,7 @@
 
 ## Conceptos básicos
 
-<img src="./img/ia_ml_dl_gen.jpg" width="600" alt="Conversación con ELIZA">
+<img src="./img/venn.gif" width="600" alt="AI vs ML vs DL">
 
 
 - **Inteligencia Artificial** (1956): Desarrollo de sistemas que pueden realizar tareas que normalmente requieren inteligencia humana.
