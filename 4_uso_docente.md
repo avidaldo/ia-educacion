@@ -4,9 +4,11 @@
 
 - Redacción/corrección de informes, emails, documentos...
 - Interpretación de textos (legales, técnicos...), gráficos o capturas de pantalla (te puede arreglar el ordenador)
+- Creación de resúmenes, esquemas, mapas conceptuales...
+- Creación de presentaciones
 - Corrección de estilo (escribir en LinkedIneano, estilo más académico, más promocional...)
 - Convertir entre formatos (pdf, word, latex...) 
-- Escribir pequeños programas (scripts) para automatizar tareas
+- Escribir pequeños programas para automatizar tareas
 
 ## Apoyo al docente
 

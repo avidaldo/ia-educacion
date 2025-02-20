@@ -16,13 +16,15 @@
     - Dall-E: texto a imagen
     - Sora: texto a vídeo
 
+    - GPTs específicos: integran prom
+
 ### DeepSeek
 
 - [DeepSeek-R1](https://chat.deepseek.com/)
     - Compite con los mejores en todos los benchmarks
     - Open source (podemos descargarlo, ver como funciona, crear nuestra versión...)
     - 27 veces más barato que GPT-o1
-    - Permite ver CoT
+    - Permite ver CoT completa
 
 ### Google
 
@@ -51,9 +53,11 @@
 - [Le Chat Mistral](https://chat.mistral.ai/chat)
     - Único competidor europeo (francés, opensource)
 
-### Otros:
+### Grok (x):
 
 - [Grok](https://x.com/i/grok?focus=1)
+
+### Qwen
 - [Qwen](https://chat.qwenlm.ai/) (Opensource)
 
 
@@ -92,6 +96,11 @@
 ## Diagramas
 
 [Mermaid](https://mermaid.js.org/)
+GPT's específicos:
+    - https://chatgpt.com/g/g-1IRFKwq4G-mermaid-chart-diagrams-and-charts
+        (oficial de Mermaid, con ejemplos y explicaciones)
+    - https://chatgpt.com/g/g-7BAVTYCJr-sonia-diagramas-educativos-mermaid
+        (además de escribir el código para mermaid, te enseña a insertarlo como si no tuvieses ni idea de lo que estás haciendo.)
 
 
 
