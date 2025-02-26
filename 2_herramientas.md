@@ -95,12 +95,12 @@
 
 ## Diagramas
 
-[Mermaid](https://mermaid.js.org/)
-GPT's específicos:
-    - https://chatgpt.com/g/g-1IRFKwq4G-mermaid-chart-diagrams-and-charts
-        (oficial de Mermaid, con ejemplos y explicaciones)
-    - https://chatgpt.com/g/g-7BAVTYCJr-sonia-diagramas-educativos-mermaid
-        (además de escribir el código para mermaid, te enseña a insertarlo como si no tuvieses ni idea de lo que estás haciendo.)
+- [Mermaid](https://mermaid.js.org/)
+
+- GPT's específicos:
+
+    - [Oficial de Mermaid](https://chatgpt.com/g/g-1IRFKwq4G-mermaid-chart-diagrams-and-charts)
+    - [Sonia (genera el código y enseña a insertarlo)](https://chatgpt.com/g/g-7BAVTYCJr-sonia-diagramas-educativos-mermaid)
 
 
 

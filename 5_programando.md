@@ -9,6 +9,12 @@
 - Webs simples
     - Claude Artifacts permite crear aplicaciones simples y publicarlas gratuitamente.
 
+    - 
+
+
+
+    
+
 - Pequeños Scripts de Python para automatizar tareas:
     - Cambiar el nombre de los archivos y reorganizarlos
     - Descargar archivos de una web
