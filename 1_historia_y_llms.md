@@ -13,10 +13,10 @@
     - Árboles de decisión (1960), Regresión logística (1958), K-means (1967), SVM (1995), Random Forest (2001), Gradient Boosting (2001), etc.
     - Predicciones basadas en datos (bolsa, clima, etc.)
 
-<img src="./img/reglas_vs_ml.jpg" width="600">
+<img src="./img/reglas_vs_ml.jpg" width="400">
 
 
-> Paradoja de  Moravec (1980): Es relativamente fácil hacer que las computadoras realicen operaciones matemáticas y lógicas, pero es difícil hacer que realicen tareas simples que cualquier niño de 4 años puede hacer, como reconocer un objeto o entender un lenguaje natural.
+> Paradoja de  Moravec (1980): Es relativamente fácil hacer que las computadoras realicen operaciones matemáticas y lógicas, pero [es difícil hacer que realicen tareas simples que cualquier niño de 4 años puede hacer](https://www.smbc-comics.com/comic/ai-7?fbclid=IwY2xjawItKRFleHRuA2FlbQIxMAABHVZSt2Sks4COowshXz1d-2qcawJEbIr3kF3pCskfK9pFV8Oh0MgTvC1otw_aem_9YONOGize2uCs327bG33gA), como reconocer un objeto o entender un lenguaje natural.
 
 - **Redes neuronales artificiales**: Imitan el funcionamiento de las neuronas del cerebro humano para aplicaciones de Machine Learning.
     - Neurona artificial (1943)
@@ -50,7 +50,7 @@
     - 2016: AlphaGo derrota a Lee Sedol en Go aprendiendo a jugar contra sí mismo (*Reinforcement Learning*)
 
     - 2017: Aparece el "Transformer" con la publicación de "Attention is all you need"
-    - 2018: Primeros modelos de lenguaje de gran escala (BERT, GPT-2?)
+    - 2018: Primeros modelos de lenguaje de gran escala (BERT de Google)
     - 2020: GPT-3 de OpenAI
     - 2022: Aparece **ChatGPT** (modelo GPT-3.5) de OpenAI y Stable Diffusion
     - 2024: Primeros modelos de lenguaje con razonamiento (OpenAI o1)
