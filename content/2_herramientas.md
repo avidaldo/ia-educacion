@@ -13,10 +13,12 @@
         - o3-mini-high (mejor que o3-mini)
 
     Integra:
+    - Búsqueda web
+    - *Deep Research* (creación de informes detallados tras búsqueda web)
     - Dall-E: texto a imagen
     - Sora: texto a vídeo
 
-    - GPTs específicos: integran prom
+    - GPTs específicos: integran prompts para tareas específicas.
 
 ### DeepSeek
 
@@ -30,7 +32,7 @@
 
 - [Gemini](https://gemini.google.com/)
     - Chatbot multimodal
-    - Integrado en Gmail, Docs...
+    - Integrado en Gmail, GDocs, Maps, YouTube (*2.O Flash Thinking Experimental with apps*)
     - Chatbot educativo
     - 2.0: 8x Contexto ChatGPT y más barato que DeepSeek
 
@@ -61,9 +63,12 @@
 - [Qwen](https://chat.qwenlm.ai/) (Opensource)
 
 
-## Otras herramientas útiles
+### [Perplexity](https://www.perplexity.ai/): 
+    - Permite usar modelos como los anteriores pero para buscar en la web. Destaca por la velocidad y precisión.
+    - Permite realizar investigaciones en profundidad, parecido a *Deep Research* de chatGPT pero mucho más rápido.
 
-- [Perplexity](https://www.perplexity.ai/): Permite usar modelos como los anteriores pero para buscar en la web.
+### Trasncripción de vídeos
+
 - [Video Highlight](https://videohighlight.com/): Transcribe y resume vídeos y permite chatear sobre el contenido.
 
 
