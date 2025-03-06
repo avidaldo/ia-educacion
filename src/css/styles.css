@@ -256,4 +256,22 @@ header h1 {
   .author-info {
     font-size: 0.75rem;
   }
+}
+
+/* Loading indicator */
+.loading {
+  padding: 20px;
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  background-color: var(--background-light);
+  border-radius: 5px;
+  margin: 20px 0;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
 } 
