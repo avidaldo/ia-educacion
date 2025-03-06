@@ -92,9 +92,15 @@ document.addEventListener('DOMContentLoaded', function() {
           // Process images/links for each file - only for GitHub paths
           if (!isLocal) {
             md = md.replace(/!\[(.*?)\]\((?!http)(.*?)\)/g, `![$1](${basePath}$2)`);
+            // Also handle HTML img tags with relative paths
+            md = md.replace(/<img src=["']\.\/img\/(.*?)["']/g, function(match, imgPath) {
+              return `<img src="${basePath}content/img/${imgPath}"`;
+            });
           } else {
             // Fix image paths for local development
             md = md.replace(/!\[(.*?)\]\(\.\/img\/(.*?)\)/g, `![$1](content/img/$2)`);
+            // Also handle HTML img tags with relative paths
+            md = md.replace(/<img src=["']\.\/(img\/.*?)["']/g, `<img src="content/$1"`);
           }
           
           // Render markdown and insert into corresponding section
