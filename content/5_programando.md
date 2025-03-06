@@ -6,7 +6,7 @@
 
 ## Programación con código
 
-- Webs simples
+- Webs/apps/bots simples
     - Claude Artifacts permite crear aplicaciones simples y publicarlas gratuitamente.
     - 
 
