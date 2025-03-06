@@ -105,6 +105,7 @@ USER: Crea preguntas de test en formato GIFT importable a Moodle, siguiendo las 
 
 Un ejemplo del formato deseado de pregunta sería el siguiente:
 
+---
 
 // question: 91483439  name: ¿Qué es el muestreo estratificado?
 ::¿Qué es el muestreo estratificado?::[html]¿Qué es el muestreo estratificado?{
@@ -115,6 +116,35 @@ Un ejemplo del formato deseado de pregunta sería el siguiente:
 }
 ```
 
+
 [GPT personalizado creado con este prompt](https://chatgpt.com/g/g-67b721d49a0481918a78bc5104bd22ea-generador-de-preguntas-de-test)
 
 [Ejemplo de chat con él con preguntas sobre los apuntes previos de prompt engineering y pidiendo indicaciones de cómo importar a Moodle](https://chatgpt.com/share/67b732ca-1a94-8002-978e-d2c13676e49a)
+
+
+
+## Ejemplo de prompt para *Deep Research*
+
+```chat
+
+USER: 
+Elabora un informe actualizado, integral y basado en evidencias que explore las estrategias para implantar la Inteligencia Artificial (IA) en la educación secundaria y la formación profesional. La audiencia principal serán docentes de formación profesional en marketing y comercio, extendiéndose también a áreas como acondicionamiento físico e inglés. El informe deberá abordar los siguientes puntos:
+
+**1. Aplicaciones de la IA en la Docencia:**
+- Explorar todas las herramientas de IA disponibles que puedan facilitar la labor docente, desde modelos de lenguaje hasta otras soluciones tecnológicas.
+- Presentar una lista de posibles usos y aplicaciones para mejorar las tareas de los profesores, incluyendo ejemplos prácticos y aplicables. No es necesario incluir tutoriales paso a paso, sino indicaciones generales y prompts que sirvan como punto de partida para futuras consultas y puesta en práctica.
+
+**2. Integración Tecnológica y Moodle:**
+- Describir de forma concreta cómo se pueden generar materiales importables y compatibles con Moodle, ofreciendo ejemplos específicos de estrategias y métodos para aprovechar al máximo esta plataforma en el contexto educativo.
+
+**3. Casos Prácticos y Ejemplos Aplicables:**
+- Incluir estudios de caso o ejemplos prácticos que ilustren cómo la IA se ha implementado con éxito en instituciones similares, resaltando el impacto en las tareas y procesos docentes.
+- Enfocarse en ejemplos concretos para las áreas de marketing y comercio, pero también contemplar escenarios para acondicionamiento físico e inglés.
+
+**4. Aspectos Adicionales y Recomendaciones:**
+- Ofrecer una breve referencia a otros aspectos a tener en cuenta, como desafíos éticos, formación continua de docentes y la adaptación de metodologías pedagógicas ante la incorporación de IA.
+- Incluir recomendaciones para la capacitación de educadores en el uso de estas tecnologías y sugerir fuentes actualizadas y relevantes para profundizar en el tema.
+
+El objetivo es proporcionar un material de referencia que no solo informe, sino que también sirva de guía práctica para que los docentes puedan identificar, evaluar y aplicar de manera efectiva las herramientas de IA en su labor educativa.
+
+```

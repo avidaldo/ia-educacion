@@ -57,7 +57,6 @@ Solución: ser críticos y usar prompts claros para definir qué queremos y qué
 
 Generador de informes detallados y estructurados. Toma un tiempo y un tema, y genera un informe con fuentes y referencias.
 
-> "Investiga y genera un informe sobre el siguiente tema: <tema>"
 
 
 
