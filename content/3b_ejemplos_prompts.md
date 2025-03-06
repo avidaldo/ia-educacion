@@ -79,7 +79,6 @@ Lo que sucede es magia científica: el Sol calienta el agua, que sube como vapor
 ¿No es asombroso que puedas ver todo el ciclo del agua en un vasito? ¡Los amiguitos del agua han hecho su viaje completo frente a tus ojos!
 ```
 
-Este formato te permite crear y visualizar conversaciones que se mostrarán con un formato similar a ChatGPT en tu página web. Simplemente coloca tus conversaciones dentro de bloques de código con la etiqueta `chat` y utiliza las prefijos `USER:` y `ASSISTANT:` para identificar quién está hablando en cada momento. 
 
 
 ## Ejemplo de prompt utilizado para un GPT personalizado
@@ -88,7 +87,7 @@ Los "GPT's" son una función de ChatGPT que te permite trabajar con prompts espe
 
 > Ojo, error en el prompt que se ha utilizado para crear este GPT:
 > ~~Crea un generador de preguntas de test~~ 
-> Aunque estamos definiendo un GPT personalizado, en sus `Instrucciones` debemos escribir directamnte el prompt que se pondrá delante del que luego añadirá el usuario, y no queremos un generador de preguntas de test (nos indicaría como crear un programa que genere preguntas de test), queremos directamente generar las preguntas.
+> Aunque estamos definiendo un GPT personalizado, en sus `Instrucciones` debemos escribir directamente el prompt que se pondrá delante del que luego añadirá el usuario, y no queremos un generador de preguntas de test (nos indicaría como crear un programa que genere preguntas de test), queremos directamente generar las preguntas.
 
 ```chat
 

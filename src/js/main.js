@@ -64,84 +64,181 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Load markdown content
   function loadMarkdownContent() {
-    // Define markdown files to load
-    const mdFiles = [
-      { id: 'historia-section', file: 'content/1_historia_y_llms.md' },
-      { id: 'herramientas-section', file: 'content/2_herramientas.md' },
-      { id: 'prompt-section', file: 'content/3_prompt.md' },
-      { id: 'zeroshot-section', file: 'content/3b_zero-shot.md' },
-      { id: 'ejemplos-section', file: 'content/3b_ejemplos_prompts.md' },
-      { id: 'docente-section', file: 'content/4_uso_docente.md' },
-      { id: 'programando-section', file: 'content/5_programando.md' }
-    ];
+    // Get the content container
+    const contentWrapper = document.getElementById('content-wrapper');
+    const sidebar = document.querySelector('.sidebar-menu');
     
-    // Track loading progress
-    let loadedCount = 0;
+    // Clear existing content (in case of refresh)
+    contentWrapper.innerHTML = '';
+    sidebar.innerHTML = '';
     
-    // Load each file
-    mdFiles.forEach(item => {
-      fetch(basePath + item.file)
-        .then(response => {
-          if (!response.ok) throw new Error('File not found: ' + item.file);
-          return response.text();
-        })
-        .then(md => {
-          // Process chat conversation syntax
-          md = processChatSyntax(md);
+    // Helper function to convert filename to section ID
+    function fileNameToSectionId(fileName) {
+      // Remove numbers and file extension, convert to lowercase
+      return fileName.replace(/^\d+_/, '').replace(/\.md$/, '').replace(/-/g, '_') + '-section';
+    }
+    
+    // Fetch the list of markdown files from the content directory
+    fetch(basePath + 'content/')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to access content directory');
+        }
+        // For local development or GitHub Pages, we need to handle this differently
+        if (isLocal) {
+          // For local development, we'll use a fixed list of files from the directory
+          return listContentFiles();
+        } else {
+          // For GitHub Pages or deployed sites, parse the directory listing
+          return response.text().then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const links = Array.from(doc.querySelectorAll('a'));
+            
+            // Filter for markdown files only
+            return links
+              .map(link => link.getAttribute('href'))
+              .filter(href => href && href.endsWith('.md'))
+              .map(href => href);
+          });
+        }
+      })
+      .then(files => {
+        // Sort files by filename (which might include numeric prefixes for order)
+        files.sort();
+        
+        // Track loading progress
+        let loadedCount = 0;
+        
+        // Process each markdown file
+        files.forEach(file => {
+          // For GitHub, file is just the filename; for local we need to ensure it's a relative path
+          const fileName = file.split('/').pop();
+          const filePath = 'content/' + fileName;
           
-          // Process images/links for each file - only for GitHub paths
-          if (!isLocal) {
-            md = md.replace(/!\[(.*?)\]\((?!http)(.*?)\)/g, `![$1](${basePath}$2)`);
-            // Also handle HTML img tags with relative paths
-            md = md.replace(/<img src=["']\.\/img\/(.*?)["']/g, function(match, imgPath) {
-              return `<img src="${basePath}content/img/${imgPath}"`;
-            });
-          } else {
-            // Fix image paths for local development
-            md = md.replace(/!\[(.*?)\]\(\.\/img\/(.*?)\)/g, `![$1](content/img/$2)`);
-            // Also handle HTML img tags with relative paths
-            md = md.replace(/<img src=["']\.\/(img\/.*?)["']/g, `<img src="content/$1"`);
-          }
+          // Create a section ID based on the filename
+          const sectionId = fileNameToSectionId(fileName);
           
-          // Render markdown and insert into corresponding section
-          const html = marked.parse(md);
-          document.getElementById(item.id).innerHTML = html;
+          // Create a new section element
+          const sectionElement = document.createElement('section');
+          sectionElement.id = sectionId;
+          sectionElement.className = 'content-section';
+          contentWrapper.appendChild(sectionElement);
           
-          // Extract title from the markdown for the menu item
-          const titleMatch = md.match(/^# (.*?)$/m);
-          if (titleMatch && titleMatch[1]) {
-            const menuItem = document.querySelector(`[data-target="${item.id}"]`);
-            if (menuItem) {
-              menuItem.textContent = titleMatch[1];
-            }
-          }
-          
-          // Track loading progress
-          loadedCount++;
-          
-          // All content loaded, initialize content display
-          if (loadedCount === mdFiles.length) {
-            // Add a small delay to ensure proper render
-            setTimeout(() => {
-              // Activate the first section by default
-              if (menuLinks.length > 0) {
-                menuLinks[0].click();
+          // Load the markdown file
+          fetch(basePath + filePath)
+            .then(response => {
+              if (!response.ok) throw new Error('File not found: ' + filePath);
+              return response.text();
+            })
+            .then(md => {
+              // Process chat conversation syntax
+              md = processChatSyntax(md);
+              
+              // Process images/links for each file
+              if (!isLocal) {
+                md = md.replace(/!\[(.*?)\]\((?!http)(.*?)\)/g, `![$1](${basePath}$2)`);
+                // Also handle HTML img tags with relative paths
+                md = md.replace(/<img src=["']\.\/img\/(.*?)["']/g, function(match, imgPath) {
+                  return `<img src="${basePath}content/img/${imgPath}"`;
+                });
+              } else {
+                // Fix image paths for local development
+                md = md.replace(/!\[(.*?)\]\(\.\/img\/(.*?)\)/g, `![$1](content/img/$2)`);
+                // Also handle HTML img tags with relative paths
+                md = md.replace(/<img src=["']\.\/(img\/.*?)["']/g, `<img src="content/$1"`);
               }
               
-              // Add loaded class to body for CSS transitions
-              document.body.classList.add('content-loaded');
-            }, 100);
-          }
-        })
-        .catch(error => {
-          console.error(`Error loading ${item.file}:`, error);
-          document.getElementById(item.id).innerHTML = 
-            `<div class="error">Error cargando ${item.file}: ${error.message}</div>`;
-            
-          // Still track loading even on error
-          loadedCount++;
+              // Render markdown and insert into the section
+              const html = marked.parse(md);
+              sectionElement.innerHTML = html;
+              
+              // Extract title (main heading) from the markdown
+              const titleMatch = md.match(/^# (.*?)$/m);
+              const menuTitle = titleMatch && titleMatch[1] ? titleMatch[1] : fileName.replace(/^\d+_/, '').replace(/\.md$/, '');
+              
+              // Create menu item
+              const menuItem = document.createElement('li');
+              const menuLink = document.createElement('a');
+              menuLink.href = '#';
+              menuLink.setAttribute('data-target', sectionId);
+              menuLink.textContent = menuTitle;
+              
+              // Add click event handler
+              menuLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Update active class
+                document.querySelectorAll('.sidebar-menu a').forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Show corresponding section with smooth transition
+                document.querySelectorAll('.content-section').forEach(section => {
+                  if (section.id === sectionId) {
+                    section.classList.add('active');
+                    // Scroll to top of content with smooth animation
+                    contentWrapper.scrollTo({
+                      top: 0,
+                      behavior: 'smooth'
+                    });
+                  } else {
+                    section.classList.remove('active');
+                  }
+                });
+                
+                // On mobile, hide sidebar after selection
+                if (window.innerWidth <= 768) {
+                  document.getElementById('sidebar').classList.add('sidebar-hidden');
+                  contentWrapper.classList.add('full-width');
+                }
+              });
+              
+              menuItem.appendChild(menuLink);
+              sidebar.appendChild(menuItem);
+              
+              // Track loading progress
+              loadedCount++;
+              
+              // All content loaded, initialize content display
+              if (loadedCount === files.length) {
+                // Add a small delay to ensure proper render
+                setTimeout(() => {
+                  // Activate the first section by default
+                  if (sidebar.firstElementChild && sidebar.firstElementChild.firstElementChild) {
+                    sidebar.firstElementChild.firstElementChild.click();
+                  }
+                  
+                  // Add loaded class to body for CSS transitions
+                  document.body.classList.add('content-loaded');
+                }, 100);
+              }
+            })
+            .catch(error => {
+              console.error(`Error loading ${filePath}:`, error);
+              document.getElementById(sectionId).innerHTML = 
+                `<div class="error">Error cargando ${filePath}: ${error.message}</div>`;
+                
+              // Still track loading even on error
+              loadedCount++;
+            });
         });
-    });
+      })
+      .catch(error => {
+        contentWrapper.innerHTML = `<div class="error">Error loading content directory: ${error.message}</div>`;
+        console.error('Error loading content directory:', error);
+      });
+  }
+  
+  // For local development, fall back to a fixed list of files
+  function listContentFiles() {
+    return [
+      '1_historia_y_llms.md',
+      '2_herramientas.md',
+      '3_prompt.md',
+      '3b_ejemplos_prompts.md',
+      '4_uso_docente.md',
+      '5_programando.md'
+    ];
   }
   
   // Function to process chat conversation syntax
