@@ -1,83 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IA para educación</title>
-  <!-- Include marked.js -->
+  
+  <!-- Include marked.js for markdown parsing -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <!-- Optional CSS for styling -->
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  <!-- CSS for styling -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
-  <style>
-    .markdown-body {
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .error {
-        color: #dc3545;
-        border: 1px solid #f8d7da;
-        padding: 10px;
-        margin: 10px 0;
-        border-radius: 4px;
-        background: #f8d7da;
-    }
-  </style>
+  <link rel="stylesheet" href="src/css/styles.css">
 </head>
-<body class="markdown-body">
-  <div id="content"></div>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <button id="menu-toggle" class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <h1>IA para educación</h1>
+    </div>
+    <div class="header-right">
+      <div class="author-info">
+        <span>👨💻 Alejandro Vidal Domínguez</span>
+        <span>🔄 Última actualización: <span id="lastCommitDate">cargando fecha...</span></span>
+      </div>
+    </div>
+  </header>
 
-  <script>
-    // GitHub raw content URL (replace with your repo details)
-    const repo = 'https://raw.githubusercontent.com/avidaldo/ia-educacion/master/';
-    // Path to your markdown file in the repo
-    const mdFiles = [
-        '0_contacto.md',
-        '1_historia_y_llms.md',
-        '2_herramientas.md',
-        '3_prompt.md',
-        '3b_zero-shot.md',
-        '4_uso_docente.md',
-    ];
+  <div class="container">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+      <nav>
+        <ul class="sidebar-menu">
+          <li><a href="#" data-target="historia-section">Historia y LLMs</a></li>
+          <li><a href="#" data-target="herramientas-section">Herramientas</a></li>
+          <li><a href="#" data-target="prompt-section">Prompts</a></li>
+          <li><a href="#" data-target="zeroshot-section">Zero-shot</a></li>
+          <li><a href="#" data-target="ejemplos-section">Ejemplos de prompts</a></li>
+          <li><a href="#" data-target="docente-section">Uso docente</a></li>
+          <li><a href="#" data-target="programando-section">Programando</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-    // Fetch and render all markdown files
-    Promise.all(mdFiles.map(file => 
-        fetch(repo + file)
-            .then(response => {
-                if (!response.ok) throw new Error('File not found');
-                return response.text();
-            })
-            .then(md => {
-                // Process images/links for each file
-                return marked.parse(md.replace(/!\[(.*?)\]\((?!http)(.*?)\)/g, `![$1](${repo}$2)`));
-            })
-            .catch(error => {
-                console.error(`Error loading ${file}:`, error);
-                return `<div class="error">Error cargando ${file}</div>`;
-            })
-    ))
-    .then(htmlContents => {
-        // Combine all HTML content
-        document.getElementById('content').innerHTML = htmlContents.join('\n');
-    });
+    <!-- Content area -->
+    <main id="content-wrapper" class="content-wrapper markdown-body">
+      <!-- Other content sections -->
+      <section id="historia-section" class="content-section">
+        <!-- Content loaded from 1_historia_y_llms.md -->
+      </section>
+      
+      <section id="herramientas-section" class="content-section">
+        <!-- Content loaded from 2_herramientas.md -->
+      </section>
+      
+      <section id="prompt-section" class="content-section">
+        <!-- Content loaded from 3_prompt.md -->
+      </section>
+      
+      <section id="zeroshot-section" class="content-section">
+        <!-- Content loaded from 3b_zero-shot.md -->
+      </section>
+      
+      <section id="ejemplos-section" class="content-section">
+        <!-- Content loaded from 3b_ejemplos_prompts.md -->
+      </section>
+      
+      <section id="docente-section" class="content-section">
+        <!-- Content loaded from 4_uso_docente.md -->
+      </section>
+      
+      <section id="programando-section" class="content-section">
+        <!-- Content loaded from 5_programando.md -->
+      </section>
+    </main>
+  </div>
 
-    // Only keep this commit date function
-    function updateCommitDate() {
-        fetch('https://api.github.com/repos/avidaldo/ia-educacion/commits?per_page=1')
-            .then(response => response.json())
-            .then(commits => {
-                const commitDate = new Date(commits[0].commit.author.date);
-                document.getElementById('lastCommitDate').textContent = 
-                    commitDate.toLocaleDateString('es-ES', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                    });
-            })
-            .catch(() => {
-                document.getElementById('lastCommitDate').textContent = 
-                    'Fecha no disponible';
-            });
-    }
-    
-    updateCommitDate();
-  </script>
+  <!-- JavaScript -->
+  <script src="src/js/main.js"></script>
 </body>
-</html>
+</html> 

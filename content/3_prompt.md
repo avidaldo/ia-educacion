@@ -11,7 +11,7 @@
 ## Estrategias de diseño de prompts
 
 ### Lo más básico:
-    - Usa varios modelos y prueba.
+    - Usa varios modelos (distintas aplicaciones) y prueba.
     - Siempre itera: da correcciones y matices a las respuestas.
         - crítico e inquisitivo ("¿Estás seguro?")
     - Pregunta al propio modelo cómo mejorar el prompt / Ofrece al modelo clarificar dudas.
@@ -51,3 +51,14 @@ Solución: ser críticos y usar prompts claros para definir qué queremos y qué
 - Lo que le pides a una IA, pide a otra (o a un chat temporal / sin memoria) que haga una valoración crítica.
 
 > "Haz un análisis señalando todo aquello que pueda ser cuestionable o mejorable en el siguiente texto."
+
+
+### *Deep Research* (Investigación en profundidad)
+
+Generador de informes detallados y estructurados. Toma un tiempo y un tema, y genera un informe con fuentes y referencias.
+
+> "Investiga y genera un informe sobre el siguiente tema: <tema>"
+
+
+
+

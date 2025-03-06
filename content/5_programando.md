@@ -8,7 +8,6 @@
 
 - Webs simples
     - Claude Artifacts permite crear aplicaciones simples y publicarlas gratuitamente.
-
     - 
 
 
