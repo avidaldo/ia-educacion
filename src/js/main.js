@@ -3,21 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = document.getElementById('menu-toggle');
   const sidebar = document.getElementById('sidebar');
   const contentWrapper = document.getElementById('content-wrapper');
-  const menuLinks = document.querySelectorAll('.sidebar-menu a');
   
   // Check if we're in local development or GitHub Pages
   const isLocal = window.location.protocol === 'file:' || 
                  window.location.hostname === 'localhost' || 
                  window.location.hostname === '127.0.0.1';
-  
-  // Get the current directory path for local development
-  function getLocalBasePath() {
-    const pathSegments = window.location.pathname.split('/');
-    // Remove the last segment (index.html) and empty segments
-    const filteredSegments = pathSegments.filter(segment => segment && segment !== 'index.html');
-    // Build the path with trailing slash
-    return filteredSegments.length ? '/' + filteredSegments.join('/') + '/' : '/';
-  }
   
   // Set the base path accordingly
   const basePath = isLocal 
@@ -33,38 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
   menuToggle.addEventListener('click', function() {
     sidebar.classList.toggle('sidebar-hidden');
     contentWrapper.classList.toggle('full-width');
-  });
-  
-  // Handle menu clicks
-  menuLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      // Update active class
-      menuLinks.forEach(item => item.classList.remove('active'));
-      this.classList.add('active');
-      
-      // Show corresponding section with smooth transition
-      const targetId = this.getAttribute('data-target');
-      document.querySelectorAll('.content-section').forEach(section => {
-        if (section.id === targetId) {
-          section.classList.add('active');
-          // Scroll to top of content with smooth animation
-          contentWrapper.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
-        } else {
-          section.classList.remove('active');
-        }
-      });
-      
-      // On mobile, hide sidebar after selection
-      if (window.innerWidth <= 768) {
-        sidebar.classList.add('sidebar-hidden');
-        contentWrapper.classList.add('full-width');
-      }
-    });
   });
   
   // Function to process chat conversation syntax
@@ -126,99 +84,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Add a function to manually initialize the menu from the hard-coded list
-  function initializeMenuAndContent() {
-    const contentWrapper = document.getElementById('content-wrapper');
-    const sidebar = document.querySelector('.sidebar-menu');
+  // Setup menu click handlers (for the predefined menu in HTML)
+  function setupMenuHandlers() {
+    const menuLinks = document.querySelectorAll('.sidebar-menu a');
     
-    // Clear existing content (in case of refresh)
-    contentWrapper.innerHTML = '';
-    sidebar.innerHTML = '';
-    
-    // Helper function to convert section ID to display name
-    function sectionIdToDisplayName(sectionId) {
-      // Remove -section suffix and replace underscores with spaces
-      const baseName = sectionId.replace('-section', '').replace(/_/g, ' ');
-      // Capitalize first letter of each word
-      return baseName.split(' ').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join(' ');
-    }
-    
-    // Define the sections that should be in the menu
-    const sections = [
-      { id: 'historia-section', title: 'Historia y LLMs' },
-      { id: 'herramientas-section', title: 'Herramientas' },
-      { id: 'prompt-section', title: 'Prompts' },
-      { id: 'ejemplos-section', title: 'Ejemplos de prompts' },
-      { id: 'docente-section', title: 'Uso docente' },
-      { id: 'programando-section', title: 'Programando' }
-    ];
-    
-    // Create menu items and sections
-    sections.forEach(section => {
-      // Create a section element if it doesn't exist
-      let sectionElement = document.getElementById(section.id);
-      if (!sectionElement) {
-        sectionElement = document.createElement('section');
-        sectionElement.id = section.id;
-        sectionElement.className = 'content-section';
-        contentWrapper.appendChild(sectionElement);
-      }
-      
-      // Create menu item
-      const menuItem = document.createElement('li');
-      const menuLink = document.createElement('a');
-      menuLink.href = '#';
-      menuLink.setAttribute('data-target', section.id);
-      menuLink.textContent = section.title;
-      
-      // Add click event handler
-      menuLink.addEventListener('click', function(e) {
+    menuLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
         e.preventDefault();
         
         // Update active class
-        document.querySelectorAll('.sidebar-menu a').forEach(item => item.classList.remove('active'));
+        menuLinks.forEach(item => item.classList.remove('active'));
         this.classList.add('active');
         
         // Show corresponding section with smooth transition
-        document.querySelectorAll('.content-section').forEach(sect => {
-          if (sect.id === section.id) {
-            sect.classList.add('active');
+        const targetId = this.getAttribute('data-target');
+        document.querySelectorAll('.content-section').forEach(section => {
+          if (section.id === targetId) {
+            section.classList.add('active');
             // Scroll to top of content with smooth animation
             contentWrapper.scrollTo({
               top: 0,
               behavior: 'smooth'
             });
           } else {
-            sect.classList.remove('active');
+            section.classList.remove('active');
           }
         });
         
         // On mobile, hide sidebar after selection
         if (window.innerWidth <= 768) {
-          document.getElementById('sidebar').classList.add('sidebar-hidden');
+          sidebar.classList.add('sidebar-hidden');
           contentWrapper.classList.add('full-width');
         }
       });
-      
-      menuItem.appendChild(menuLink);
-      sidebar.appendChild(menuItem);
     });
     
-    // Activate the first section by default
-    if (sidebar.firstElementChild && sidebar.firstElementChild.firstElementChild) {
-      sidebar.firstElementChild.firstElementChild.click();
+    // Activate the first menu item by default
+    if (menuLinks.length > 0) {
+      menuLinks[0].click();
     }
   }
   
-  // Function to handle GitHub Pages specific setup
-  function setupForGitHubPages() {
-    // Initialize the menu structure first
-    initializeMenuAndContent();
-    
-    // Now load content for each section
-    const files = [
+  // Load content for sections
+  function loadContent() {
+    // Define the mapping between section IDs and content files
+    const contentMap = [
       { file: '1_historia_y_llms.md', section: 'historia-section' },
       { file: '2_herramientas.md', section: 'herramientas-section' },
       { file: '3_prompt.md', section: 'prompt-section' },
@@ -228,15 +138,39 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     
     let loadedCount = 0;
+    const totalFiles = contentMap.length;
     
     // Load content for each section
-    files.forEach(fileInfo => {
-      const filePath = 'content/' + fileInfo.file;
+    contentMap.forEach(item => {
+      const filePath = 'content/' + item.file;
+      const sectionElement = document.getElementById(item.section);
+      
+      if (!sectionElement) {
+        console.error(`Section element with ID "${item.section}" not found`);
+        loadedCount++;
+        return;
+      }
+      
+      // Display loading indicator in the section
+      sectionElement.innerHTML = '<div class="loading">Cargando contenido...</div>';
+      
+      // Determine URL for fetching content
+      let fetchUrl = '';
+      if (isLocal) {
+        fetchUrl = filePath;
+      } else {
+        fetchUrl = rawContentPath + filePath;
+      }
+      
+      // Log the URL for debugging
+      console.log(`Fetching content from: ${fetchUrl}`);
       
       // Load the markdown file
-      fetch((isLocal ? basePath : rawContentPath) + filePath)
+      fetch(fetchUrl)
         .then(response => {
-          if (!response.ok) throw new Error('File not found: ' + filePath);
+          if (!response.ok) {
+            throw new Error(`Failed to load ${filePath} (Status: ${response.status})`);
+          }
           return response.text();
         })
         .then(md => {
@@ -260,20 +194,24 @@ document.addEventListener('DOMContentLoaded', function() {
           
           // Render markdown and insert into the section
           const html = marked.parse(md);
-          document.getElementById(fileInfo.section).innerHTML = html;
+          sectionElement.innerHTML = html;
           
           // Track loading progress
           loadedCount++;
+          console.log(`Loaded ${loadedCount}/${totalFiles} files`);
           
           // Add loaded class to body for CSS transitions when all content is loaded
-          if (loadedCount === files.length) {
+          if (loadedCount === totalFiles) {
             document.body.classList.add('content-loaded');
           }
         })
         .catch(error => {
           console.error(`Error loading ${filePath}:`, error);
-          document.getElementById(fileInfo.section).innerHTML = 
+          sectionElement.innerHTML = 
             `<div class="error">Error cargando ${filePath}: ${error.message}</div>`;
+          
+          // Still track loading even on error
+          loadedCount++;
         });
     });
   }
@@ -305,14 +243,25 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Initialize
-  document.addEventListener('DOMContentLoaded', function() {
+  // Initialize everything
+  function initialize() {
+    // Setup menu click handlers first
+    setupMenuHandlers();
+    
+    // Load content for all sections
+    loadContent();
+    
     // Update the commit date
     updateCommitDate();
     
-    // Setup the site based on whether we're in local development or GitHub Pages
-    setupForGitHubPages();
-  });
+    // Add debug info to console
+    console.log(`Running in ${isLocal ? 'local' : 'GitHub Pages'} mode`);
+    console.log(`Base path: ${basePath}`);
+    console.log(`Raw content path: ${rawContentPath}`);
+  }
+  
+  // Start initialization
+  initialize();
   
   // On smaller screens, start with sidebar hidden
   if (window.innerWidth <= 768) {
