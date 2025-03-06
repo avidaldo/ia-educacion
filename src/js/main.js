@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Set the raw content path for fetching markdown files
   const rawContentPath = isLocal
       ? ''
-      : 'https://raw.githubusercontent.com/avidaldo/ia-educacion/main/';
+      : 'https://raw.githubusercontent.com/avidaldo/ia-educacion/master/';
   
   // Toggle sidebar
   menuToggle.addEventListener('click', function() {
@@ -66,148 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  
-  // Load markdown content
-  function loadMarkdownContent() {
-    // Get the content container
-    const contentWrapper = document.getElementById('content-wrapper');
-    const sidebar = document.querySelector('.sidebar-menu');
-    
-    // Clear existing content (in case of refresh)
-    contentWrapper.innerHTML = '';
-    sidebar.innerHTML = '';
-    
-    // Helper function to convert filename to section ID
-    function fileNameToSectionId(fileName) {
-      // Remove numbers and file extension, convert to lowercase
-      return fileName.replace(/^\d+_/, '').replace(/\.md$/, '').replace(/-/g, '_') + '-section';
-    }
-    
-    // Use a fixed list of files instead of trying to fetch a directory listing
-    const files = [
-      '1_historia_y_llms.md',
-      '2_herramientas.md',
-      '3_prompt.md',
-      '3b_ejemplos_prompts.md',
-      '4_uso_docente.md',
-      '5_programando.md'
-    ];
-    
-    // Track loading progress
-    let loadedCount = 0;
-    
-    // Process each markdown file
-    files.forEach(fileName => {
-      const filePath = 'content/' + fileName;
-      
-      // Create a section ID based on the filename
-      const sectionId = fileNameToSectionId(fileName);
-      
-      // Create a new section element
-      const sectionElement = document.createElement('section');
-      sectionElement.id = sectionId;
-      sectionElement.className = 'content-section';
-      contentWrapper.appendChild(sectionElement);
-      
-      // Load the markdown file
-      fetch((isLocal ? basePath : rawContentPath) + filePath)
-        .then(response => {
-          if (!response.ok) throw new Error('File not found: ' + filePath);
-          return response.text();
-        })
-        .then(md => {
-          // Process chat conversation syntax
-          md = processChatSyntax(md);
-          
-          // Process images/links for each file
-          if (!isLocal) {
-            // For GitHub Pages: use raw content URL for images
-            md = md.replace(/!\[(.*?)\]\((?!http)(.*?)\)/g, `![$1](${rawContentPath}$2)`);
-            // Also handle HTML img tags with relative paths
-            md = md.replace(/<img src=["']\.\/img\/(.*?)["']/g, function(match, imgPath) {
-              return `<img src="${rawContentPath}content/img/${imgPath}"`;
-            });
-          } else {
-            // Fix image paths for local development
-            md = md.replace(/!\[(.*?)\]\(\.\/img\/(.*?)\)/g, `![$1](content/img/$2)`);
-            // Also handle HTML img tags with relative paths
-            md = md.replace(/<img src=["']\.\/(img\/.*?)["']/g, `<img src="content/$1"`);
-          }
-          
-          // Render markdown and insert into the section
-          const html = marked.parse(md);
-          sectionElement.innerHTML = html;
-          
-          // Extract title (main heading) from the markdown
-          const titleMatch = md.match(/^# (.*?)$/m);
-          const menuTitle = titleMatch && titleMatch[1] ? titleMatch[1] : fileName.replace(/^\d+_/, '').replace(/\.md$/, '');
-          
-          // Create menu item
-          const menuItem = document.createElement('li');
-          const menuLink = document.createElement('a');
-          menuLink.href = '#';
-          menuLink.setAttribute('data-target', sectionId);
-          menuLink.textContent = menuTitle;
-          
-          // Add click event handler
-          menuLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Update active class
-            document.querySelectorAll('.sidebar-menu a').forEach(item => item.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Show corresponding section with smooth transition
-            document.querySelectorAll('.content-section').forEach(section => {
-              if (section.id === sectionId) {
-                section.classList.add('active');
-                // Scroll to top of content with smooth animation
-                contentWrapper.scrollTo({
-                  top: 0,
-                  behavior: 'smooth'
-                });
-              } else {
-                section.classList.remove('active');
-              }
-            });
-            
-            // On mobile, hide sidebar after selection
-            if (window.innerWidth <= 768) {
-              document.getElementById('sidebar').classList.add('sidebar-hidden');
-              contentWrapper.classList.add('full-width');
-            }
-          });
-          
-          menuItem.appendChild(menuLink);
-          sidebar.appendChild(menuItem);
-          
-          // Track loading progress
-          loadedCount++;
-          
-          // All content loaded, initialize content display
-          if (loadedCount === files.length) {
-            // Add a small delay to ensure proper render
-            setTimeout(() => {
-              // Activate the first section by default
-              if (sidebar.firstElementChild && sidebar.firstElementChild.firstElementChild) {
-                sidebar.firstElementChild.firstElementChild.click();
-              }
-              
-              // Add loaded class to body for CSS transitions
-              document.body.classList.add('content-loaded');
-            }, 100);
-          }
-        })
-        .catch(error => {
-          console.error(`Error loading ${filePath}:`, error);
-          document.getElementById(sectionId).innerHTML = 
-            `<div class="error">Error cargando ${filePath}: ${error.message}</div>`;
-            
-          // Still track loading even on error
-          loadedCount++;
-        });
-    });
-  }
   
   // Function to process chat conversation syntax
   function processChatSyntax(markdown) {
@@ -257,9 +115,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
       
-      // Process and close the last message if needed
+      // Handle the last message if there is one
       if (currentRole) {
-        // Process markdown in the current message
         const processedContent = marked.parse(currentMessage.trim());
         chatHtml += processedContent + '\n</div>\n';
       }
@@ -269,32 +126,193 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Update commit date function
-  function updateCommitDate() {
-    fetch('https://api.github.com/repos/avidaldo/ia-educacion/commits?per_page=1')
-      .then(response => response.json())
-      .then(commits => {
-        const commitDate = new Date(commits[0].commit.author.date);
-        const dateElements = document.querySelectorAll('#lastCommitDate');
-        dateElements.forEach(el => {
-          el.textContent = commitDate.toLocaleDateString('es-ES', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          });
+  // Add a function to manually initialize the menu from the hard-coded list
+  function initializeMenuAndContent() {
+    const contentWrapper = document.getElementById('content-wrapper');
+    const sidebar = document.querySelector('.sidebar-menu');
+    
+    // Clear existing content (in case of refresh)
+    contentWrapper.innerHTML = '';
+    sidebar.innerHTML = '';
+    
+    // Helper function to convert section ID to display name
+    function sectionIdToDisplayName(sectionId) {
+      // Remove -section suffix and replace underscores with spaces
+      const baseName = sectionId.replace('-section', '').replace(/_/g, ' ');
+      // Capitalize first letter of each word
+      return baseName.split(' ').map(word => 
+        word.charAt(0).toUpperCase() + word.slice(1)
+      ).join(' ');
+    }
+    
+    // Define the sections that should be in the menu
+    const sections = [
+      { id: 'historia-section', title: 'Historia y LLMs' },
+      { id: 'herramientas-section', title: 'Herramientas' },
+      { id: 'prompt-section', title: 'Prompts' },
+      { id: 'ejemplos-section', title: 'Ejemplos de prompts' },
+      { id: 'docente-section', title: 'Uso docente' },
+      { id: 'programando-section', title: 'Programando' }
+    ];
+    
+    // Create menu items and sections
+    sections.forEach(section => {
+      // Create a section element if it doesn't exist
+      let sectionElement = document.getElementById(section.id);
+      if (!sectionElement) {
+        sectionElement = document.createElement('section');
+        sectionElement.id = section.id;
+        sectionElement.className = 'content-section';
+        contentWrapper.appendChild(sectionElement);
+      }
+      
+      // Create menu item
+      const menuItem = document.createElement('li');
+      const menuLink = document.createElement('a');
+      menuLink.href = '#';
+      menuLink.setAttribute('data-target', section.id);
+      menuLink.textContent = section.title;
+      
+      // Add click event handler
+      menuLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Update active class
+        document.querySelectorAll('.sidebar-menu a').forEach(item => item.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Show corresponding section with smooth transition
+        document.querySelectorAll('.content-section').forEach(sect => {
+          if (sect.id === section.id) {
+            sect.classList.add('active');
+            // Scroll to top of content with smooth animation
+            contentWrapper.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          } else {
+            sect.classList.remove('active');
+          }
         });
-      })
-      .catch(() => {
-        const dateElements = document.querySelectorAll('#lastCommitDate');
-        dateElements.forEach(el => {
-          el.textContent = 'Fecha no disponible';
-        });
+        
+        // On mobile, hide sidebar after selection
+        if (window.innerWidth <= 768) {
+          document.getElementById('sidebar').classList.add('sidebar-hidden');
+          contentWrapper.classList.add('full-width');
+        }
       });
+      
+      menuItem.appendChild(menuLink);
+      sidebar.appendChild(menuItem);
+    });
+    
+    // Activate the first section by default
+    if (sidebar.firstElementChild && sidebar.firstElementChild.firstElementChild) {
+      sidebar.firstElementChild.firstElementChild.click();
+    }
   }
   
-  // Initialize the page
-  loadMarkdownContent();
-  updateCommitDate();
+  // Function to handle GitHub Pages specific setup
+  function setupForGitHubPages() {
+    // Initialize the menu structure first
+    initializeMenuAndContent();
+    
+    // Now load content for each section
+    const files = [
+      { file: '1_historia_y_llms.md', section: 'historia-section' },
+      { file: '2_herramientas.md', section: 'herramientas-section' },
+      { file: '3_prompt.md', section: 'prompt-section' },
+      { file: '3b_ejemplos_prompts.md', section: 'ejemplos-section' },
+      { file: '4_uso_docente.md', section: 'docente-section' },
+      { file: '5_programando.md', section: 'programando-section' }
+    ];
+    
+    let loadedCount = 0;
+    
+    // Load content for each section
+    files.forEach(fileInfo => {
+      const filePath = 'content/' + fileInfo.file;
+      
+      // Load the markdown file
+      fetch((isLocal ? basePath : rawContentPath) + filePath)
+        .then(response => {
+          if (!response.ok) throw new Error('File not found: ' + filePath);
+          return response.text();
+        })
+        .then(md => {
+          // Process chat conversation syntax
+          md = processChatSyntax(md);
+          
+          // Process images/links for each file
+          if (!isLocal) {
+            // For GitHub Pages: use raw content URL for images
+            md = md.replace(/!\[(.*?)\]\((?!http)(.*?)\)/g, `![$1](${rawContentPath}$2)`);
+            // Also handle HTML img tags with relative paths
+            md = md.replace(/<img src=["']\.\/img\/(.*?)["']/g, function(match, imgPath) {
+              return `<img src="${rawContentPath}content/img/${imgPath}"`;
+            });
+          } else {
+            // Fix image paths for local development
+            md = md.replace(/!\[(.*?)\]\(\.\/img\/(.*?)\)/g, `![$1](content/img/$2)`);
+            // Also handle HTML img tags with relative paths
+            md = md.replace(/<img src=["']\.\/(img\/.*?)["']/g, `<img src="content/$1"`);
+          }
+          
+          // Render markdown and insert into the section
+          const html = marked.parse(md);
+          document.getElementById(fileInfo.section).innerHTML = html;
+          
+          // Track loading progress
+          loadedCount++;
+          
+          // Add loaded class to body for CSS transitions when all content is loaded
+          if (loadedCount === files.length) {
+            document.body.classList.add('content-loaded');
+          }
+        })
+        .catch(error => {
+          console.error(`Error loading ${filePath}:`, error);
+          document.getElementById(fileInfo.section).innerHTML = 
+            `<div class="error">Error cargando ${filePath}: ${error.message}</div>`;
+        });
+    });
+  }
+  
+  // Function to update the last commit date
+  function updateCommitDate() {
+    const dateElement = document.getElementById('lastCommitDate');
+    if (!dateElement) return;
+    
+    if (!isLocal) {
+      // For GitHub Pages, fetch the last commit date from GitHub API
+      fetch('https://api.github.com/repos/avidaldo/ia-educacion/commits?per_page=1')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.length > 0 && data[0].commit) {
+            const commitDate = new Date(data[0].commit.author.date);
+            dateElement.textContent = commitDate.toLocaleDateString();
+          } else {
+            dateElement.textContent = 'Fecha no disponible';
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching last commit date:', error);
+          dateElement.textContent = 'Fecha no disponible';
+        });
+    } else {
+      // For local development, use current date
+      dateElement.textContent = new Date().toLocaleDateString();
+    }
+  }
+  
+  // Initialize
+  document.addEventListener('DOMContentLoaded', function() {
+    // Update the commit date
+    updateCommitDate();
+    
+    // Setup the site based on whether we're in local development or GitHub Pages
+    setupForGitHubPages();
+  });
   
   // On smaller screens, start with sidebar hidden
   if (window.innerWidth <= 768) {
