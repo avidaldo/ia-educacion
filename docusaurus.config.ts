@@ -71,12 +71,7 @@ const config: Config = {
         {
           type: 'html',
           position: 'right',
-          value: 'Alejandro Vidal Domínguez',
-        },
-        {
-          type: 'html',
-          position: 'right',
-          value: '<span id="lastUpdateSpan">Última actualización: <span id="lastUpdateDate">...</span></span>',
+          value: '<div style="display: flex; flex-direction: column; align-items: flex-end; line-height: 1.2;"><div style="font-weight: 500;">Alejandro Vidal Domínguez</div><div style="font-size: 0.8rem; opacity: 0.8;">Última actualización: <span id="lastUpdateDate">...</span></div></div>',
         },
       ],
     },
