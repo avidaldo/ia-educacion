@@ -69,9 +69,14 @@ const config: Config = {
           label: 'Tutorial',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          type: 'html',
           position: 'right',
+          value: 'Alejandro Vidal Domínguez',
+        },
+        {
+          type: 'html',
+          position: 'right',
+          value: '<span id="lastUpdateSpan">Última actualización: <span id="lastUpdateDate">...</span></span>',
         },
       ],
     },
@@ -80,6 +85,13 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+  
+  scripts: [
+    {
+      src: '/ia-edu2/js/lastUpdate.js',
+      async: true,
+    },
+  ],
 };
 
 export default config;
