@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Ejemplos de Prompts
 
 ## Ejemplo de conversación simple
