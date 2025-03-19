@@ -1,7 +1,3 @@
----
-sidebar_position: 4
----
-
 # Aplicaciones en docencia
 
 ## Tareas administrativas en general
