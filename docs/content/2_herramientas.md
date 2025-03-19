@@ -75,7 +75,7 @@
 
 ## Presentaciones
 
-- [slidesgpt](slidesgpt.com)
+- [slidesgpt](https://slidesgpt.com)
 - [Gamma](https://gamma.app/)
 - [Beautiful.AI](https://www.beautiful.ai/)
 - [Ludus](https://ludus.one/)
@@ -85,7 +85,7 @@
 
 ## Ámbito educativo
 
-- [unstuckstudy](unstuckstudy.com)
+- [unstuckstudy](https://unstuckstudy.com)
 - [Poe AI](https://poe.com) 
 
 
@@ -118,7 +118,7 @@
 - [NightCafé](https://nightcafe.ai/)
 - [Leonardo](https://app.leonardo.ai/)
 - [Ideogram](https://ideogram.ai/)
-- [Midjourney](www.midjourney.com)
+- [Midjourney](https://www.midjourney.com)
 - [Adobe Firefly](https://firefly.adobe.com/)
 - [Stable Diffusion](https://stability.ai/stable-assistant)
 - [Freepik](https://www.freepik.com/)
