@@ -71,7 +71,14 @@ const config: Config = {
         {
           type: 'html',
           position: 'right',
-          value: '<div style="display: flex; flex-direction: column; align-items: flex-end; line-height: 1.2;"><div style="font-weight: 500;">Alejandro Vidal Domínguez</div><div style="font-size: 0.8rem; opacity: 0.8;">Última actualización: <span id="lastUpdateDate">...</span></div></div>',
+          value: `<div style="display: flex; flex-direction: column; align-items: flex-end; line-height: 1.5;">
+                  <div style="font-weight: 500; margin-bottom: 4px;">Alejandro Vidal Domínguez</div>
+                  <div style="font-size: 0.8rem; opacity: 0.8;">Última actualización: ${new Date().toLocaleDateString('es-ES', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric'
+                  })}</div>
+                </div>`,
         },
       ],
     },
@@ -81,12 +88,7 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
   
-  scripts: [
-    {
-      src: '/ia-edu2/js/lastUpdate.js',
-      async: true,
-    },
-  ],
+  scripts: [],
 };
 
 export default config;
