@@ -83,6 +83,7 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
   
   scripts: [],
+  staticDirectories: ['public', 'static'],
 };
 
 export default config;
