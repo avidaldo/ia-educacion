@@ -9,28 +9,21 @@ const config: Config = {
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
   url: 'https://avidaldo.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/ia-edu2/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'avidaldo', // Usually your GitHub org/user name.
-  projectName: 'ia-edu2', // Usually your repo name.
-  deploymentBranch: 'gh-pages', // The branch of your site that GitHub pages will deploy from.
+  organizationName: 'avidaldo',
+  projectName: 'ia-edu2',
+  deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'es',
+    locales: ['es'],
   },
 
   presets: [
@@ -71,9 +64,10 @@ const config: Config = {
         {
           type: 'html',
           position: 'right',
-          value: `<div style="display: flex; flex-direction: column; align-items: flex-end; line-height: 1.5;">
-                  <div style="font-weight: 500; margin-bottom: 4px;">Alejandro Vidal Domínguez</div>
-                  <div style="font-size: 0.8rem; opacity: 0.8;">Última actualización: ${new Date().toLocaleDateString('es-ES', {
+          value: `<div style="display: flex; flex-direction: column; align-items: flex-end; line-height: 1.2;">
+                  <div style="font-weight: 500; margin-bottom: 6px;">Alejandro Vidal Domínguez</div>
+                  <div style="font-size: 0.8rem; opacity: 0.8;">Última actualización: 
+                  ${new Date().toLocaleDateString('es-ES', {
                     day: '2-digit',
                     month: '2-digit',
                     year: 'numeric'
