@@ -58,6 +58,29 @@ Solución: ser críticos y usar prompts claros para definir qué queremos y qué
 Generador de informes detallados y estructurados. Toma un tiempo y un tema, y genera un informe con fuentes y referencias.
 
 
+## Ejemplos de Prompts
 
+import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/components/ChatConversation';
 
+Encuentra ejemplos detallados de diferentes tipos de prompts en las siguientes páginas:
 
+- [Índice de ejemplos](./ejemplos/index)
+- [Prueba de componente](./ejemplos/test)
+- [Conversación simple](./ejemplos/conversacion-simple)
+- [Instrucciones específicas](./ejemplos/instrucciones-especificas)
+- [Pensamiento paso a paso (CoT)](./ejemplos/pensamiento-paso-a-paso)
+- [Few-shot prompting](./ejemplos/few-shot-prompting)
+- [Evaluación crítica](./ejemplos/evaluacion-critica)
+- [Comparaciones y análisis](./ejemplos/comparaciones-analisis)
+- [Explicaciones con analogías](./ejemplos/explicaciones-analogias)
+- [Más ejemplos](./ejemplos/mas-ejemplos)
+- [GPT personalizado](./ejemplos/gpt-personalizado)
+- [Deep Research](./ejemplos/deep-research)
+
+## Conclusión
+
+Estos ejemplos muestran cómo los prompts bien diseñados pueden mejorar la calidad de las respuestas. Puedes combinarlos según la tarea:
+
+- Para tareas técnicas: usa roles, estructura clara y CoT.
+- Para creatividad: usa ejemplos (few-shot) y analogías.
+- Para análisis críticos: usa red teaming y evaluaciones comparativas.
