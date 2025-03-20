@@ -1,98 +1,94 @@
 /* Container styling */
 .chatContainer {
-    border: 1px solid var(--ifm-color-emphasis-300);
-    border-radius: 8px;
-    margin: 20px 0;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    background-color: var(--ifm-background-color);
-  }
-  
-  /* Header styling */
-  .chatHeader {
-    background-color: var(--ifm-color-emphasis-100);
-    padding: 12px 16px;
-    border-bottom: 1px solid var(--ifm-color-emphasis-300);
-  }
-  
-  .modelInfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .modelName {
-    font-weight: bold;
-    color: var(--ifm-color-emphasis-900);
-  }
-  
-  .chatDate {
-    color: var(--ifm-color-emphasis-600);
-    font-size: 0.9em;
-  }
-  
-  /* Messages container */
-  .messagesContainer {
-    padding: 16px;
-  }
-  
-  /* Message row styling */
-  .messageRow {
-    display: flex;
-    margin-bottom: 16px;
-  }
-  
-  /* Avatar styling */
-  .userAvatar, .assistantAvatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 12px;
-    flex-shrink: 0;
-  }
-  
-  .userAvatar {
-    background-color: var(--ifm-color-primary-lightest);
-    color: var(--ifm-color-primary-darkest);
-  }
-  
-  .assistantAvatar {
-    background-color: var(--ifm-color-success-lightest);
-    color: var(--ifm-color-success-darkest);
-  }
-  
-  /* Message styling */
-  .userMessage, .assistantMessage {
-    padding: 12px 16px;
-    border-radius: 18px;
-    max-width: calc(100% - 44px);
-  }
-  
-  .userMessage {
-    background-color: var(--ifm-color-primary-lightest);
-    border: 1px solid var(--ifm-color-primary-lighter);
-  }
-  
-  .assistantMessage {
-    background-color: var(--ifm-color-success-lightest);
-    border: 1px solid var(--ifm-color-success-lighter);
-  }
-  
-  /* Add proper spacing between messages from the same sender */
-  .messageRow + .messageRow {
-    margin-top: -8px;
-  }
-  
-  /* Loading and error states */
-  .loading, .error {
-    padding: 16px;
-    text-align: center;
-    color: var(--ifm-color-emphasis-600);
-  }
-  
-  .error {
-    color: var(--ifm-color-danger);
-  }
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  margin: 20px 0;
+  background-color: var(--ifm-background-surface-color);
+  overflow: hidden;
+}
+
+/* Header styling */
+.chatHeader {
+  background-color: var(--ifm-background-surface-color);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.modelInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modelName {
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.chatDate {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.9em;
+}
+
+/* Messages container */
+.messagesContainer {
+  padding: 16px;
+}
+
+/* Message row styling */
+.messageRow {
+  display: flex;
+  padding: 20px 16px;
+  position: relative;
+}
+
+/* User message has light grey background */
+.messageRow:nth-child(odd) {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+/* Assistant message has default background */
+.messageRow:nth-child(even) {
+  background-color: var(--ifm-background-surface-color);
+}
+
+/* Avatar styling */
+.userAvatar, .assistantAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.userAvatar {
+  color: var(--ifm-color-emphasis-700);
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+.assistantAvatar {
+  color: var(--ifm-color-emphasis-700);
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+/* Message styling */
+.userMessage, .assistantMessage {
+  padding: 0;
+  border-radius: 0;
+  max-width: calc(100% - 46px);
+  color: var(--ifm-font-color-base);
+}
+
+/* Loading and error states */
+.loading, .error {
+  padding: 16px;
+  text-align: center;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.error {
+  color: var(--ifm-color-danger);
+}
