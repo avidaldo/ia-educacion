@@ -80,24 +80,10 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-    admonitions: {
-      keywords: ['note', 'tip', 'info', 'caution', 'danger', 'chat', 'user', 'assistant'],
-      extendDefaults: true,
-    },
   } satisfies Preset.ThemeConfig,
   
   scripts: [],
   staticDirectories: ['public', 'static'],
-
-  // Add MDX components configuration
-  markdown: {
-    mermaid: false,
-    mdx1Compat: {
-      admonitions: true,
-      comments: true,
-      headingIds: true,
-    },
-  },
 };
 
 export default config;
