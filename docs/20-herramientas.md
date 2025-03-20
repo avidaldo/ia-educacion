@@ -67,7 +67,7 @@
     - Permite usar modelos como los anteriores pero para buscar en la web. Destaca por la velocidad y precisión.
     - Permite realizar investigaciones en profundidad, parecido a *Deep Research* de chatGPT pero mucho más rápido.
 
-### Trasncripción de vídeos
+## Trasncripción de vídeos
 
 - [Video Highlight](https://videohighlight.com/): Transcribe y resume vídeos y permite chatear sobre el contenido.
 
