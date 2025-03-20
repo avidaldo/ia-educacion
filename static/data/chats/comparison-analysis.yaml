@@ -1,0 +1,17 @@
+model: Claude 3
+date: March 20, 2025
+messages:
+  - role: user
+    content: >
+      Compara y contrasta las diferencias entre el aprendizaje supervisado y el aprendizaje no supervisado en inteligencia artificial.
+      Organiza la respuesta en una tabla con las siguientes columnas: "Tipo de aprendizaje", "Definición", "Ejemplo de uso" y "Ventajas/desventajas".
+  
+  - role: assistant
+    content: |
+      Aquí tienes la comparación entre el aprendizaje supervisado y no supervisado en inteligencia artificial en formato de tabla:
+
+      ### **Tabla comparativa:**
+      | **Tipo de aprendizaje**     | **Definición** | **Ejemplo de uso** | **Ventajas/Desventajas** |
+      |----------------------------|---------------|--------------------|--------------------------|
+      | **Aprendizaje supervisado** | Se entrena con datos etiquetados, donde el modelo aprende a predecir una salida específica a partir de una entrada dada. | Clasificación de correos electrónicos en "spam" y "no spam". | ✅ Alta precisión cuando hay datos etiquetados suficientes. <br> ✅ Adecuado para tareas predefinidas. <br> ❌ Requiere una gran cantidad de datos etiquetados. <br> ❌ Puede ser menos flexible para datos nuevos no vistos. |
+      | **Aprendizaje no supervisado** | Se entrena con datos sin etiquetar, buscando patrones, estructuras o agrupaciones dentro de los datos. | Agrupación de clientes según su comportamiento de compra (*clustering*). | ✅ No requiere datos etiquetados. <br> ✅ Útil para descubrir estructuras ocultas en los datos. <br> ❌ Menos preciso en algunas aplicaciones. <br> ❌ Difícil de evaluar sin una referencia clara. | 

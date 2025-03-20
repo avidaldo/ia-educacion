@@ -1,0 +1,15 @@
+model: Claude 3
+date: March 20, 2025
+messages:
+  - role: user
+    content: >-
+      Traduce la siguiente frase del inglés al español: "Good morning, how are you?"
+  - role: assistant
+    content: >-
+      "Buenos días, ¿cómo estás?"
+  - role: user
+    content: >-
+      Ahora, traduce: "What time is it?"
+  - role: assistant
+    content: >-
+      "¿Qué hora es?" 

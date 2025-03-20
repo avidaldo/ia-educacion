@@ -1,0 +1,9 @@
+model: Claude 3
+date: March 20, 2025
+messages:
+  - role: user
+    content: Dado el contexto de la Revolución Francesa, escribe un resumen de 200 palabras explicando sus causas principales, siguiendo un tono formal y dirigido a estudiantes de secundaria. Evita tecnicismos innecesarios y usa ejemplos concretos.
+  
+  - role: assistant
+    content: |
+      La Revolución Francesa (1789-1799) fue un evento clave en la historia que transformó Francia y tuvo repercusiones en todo el mundo. Sus principales causas fueron sociales, económicas y políticas. En primer lugar, la sociedad francesa estaba dividida en tres estados: el clero y la nobleza, que tenían privilegios, y el Tercer Estado, compuesto por campesinos, artesanos y burgueses, que pagaban la mayoría de los impuestos sin tener poder político. Esto generó un profundo descontento. En lo económico, Francia enfrentaba una grave crisis financiera. El rey Luis XVI gastaba enormes sumas en guerras y lujos, mientras que la mayoría del pueblo sufría hambre debido a malas cosechas y altos precios del pan. Además, los impuestos recaían principalmente sobre los más pobres. Políticamente, el absolutismo del rey y la falta de representación justa en los Estados Generales (una asamblea convocada para tratar problemas del país) aumentaron las tensiones. Inspirados por ideas de la Ilustración, que promovían libertad e igualdad, muchos franceses exigieron cambios. Estos factores llevaron al estallido de la Revolución en 1789, con eventos como la toma de la Bastilla y la abolición de la monarquía, marcando el inicio de una nueva era para Francia. 

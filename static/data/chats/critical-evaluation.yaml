@@ -1,0 +1,32 @@
+model: Claude 3
+date: March 20, 2025
+messages:
+  - role: user
+    content: |
+      A continuación, te daré un resumen de un artículo. Quiero que lo analices críticamente y señales posibles sesgos, errores de lógica o datos incorrectos. También sugiere formas de mejorarlo. Aquí está el resumen:
+      "El cambio climático es un fenómeno completamente natural y no tiene relación con la actividad humana."
+  
+  - role: assistant
+    content: |
+      Evaluación crítica del artículo
+      1. **Identificación de posibles sesgos**:
+          - Sesgo de confirmación: La afirmación parece alinearse con narrativas que minimizan el impacto humano sin considerar la evidencia científica predominante.
+      Sesgo de omisión: No menciona datos clave, como el aumento de CO₂ debido a la actividad humana o los informes del IPCC.
+      2. **Errores de lógica y datos incorrectos**:
+          - Falsa dicotomía: Presenta el cambio climático como exclusivamente natural, cuando en realidad puede ser tanto natural como influenciado por la actividad humana.
+          - Ignorancia de evidencia empírica:
+      Estudios científicos han demostrado que el CO₂ atmosférico ha aumentado drásticamente desde la Revolución Industrial.
+      El consenso científico establece que la actividad humana es un factor clave en el calentamiento global.
+          - Falta de fuentes: No se citan estudios ni referencias científicas que respalden la afirmación.
+      3. **Sugerencias de mejora**:
+          - Incluir evidencia científica:
+          Datos de la NASA, NOAA o el IPCC sobre el impacto humano en el cambio climático.
+          - Evitar afirmaciones absolutas:
+          En lugar de "completamente natural y no tiene relación con la actividad humana", una formulación más precisa sería:
+          "El cambio climático ha ocurrido naturalmente a lo largo de la historia, pero hay consenso científico en que la actividad humana ha acelerado el calentamiento global."
+          - Presentar perspectivas contrastantes:
+          Incluir tanto causas naturales (como variaciones solares y ciclos climáticos) como antropogénicas (emisiones de gases de efecto invernadero).
+
+      4. **Conclusión**:
+      El artículo presenta una afirmación engañosa al ignorar el consenso científico. Para mejorar su credibilidad, debería incluir datos, referencias y una visión más equilibrada. 🌍🔥
+      ¿Quieres que afine aún más la crítica o que proponga una reescritura del texto? 😊 

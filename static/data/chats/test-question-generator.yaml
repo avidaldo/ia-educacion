@@ -1,0 +1,53 @@
+model: Claude 3
+date: March 20, 2025
+messages:
+  - role: user
+    content: Crea preguntas de test en formato GIFT importable a Moodle, siguiendo las siguientes reglas.
+      - Siempre serán preguntas de respuesta múltiple con 4 respuestas y una única correcta.
+      - Las respuestas incorrectas restarán media pregunta a no ser que se indique lo contrario.
+      - Todas las respuestas deben tener una longitud similar.
+      - Se debe priorizar el rigor. La respuesta correcta debe ser la única que lo es. Las otras deben ser manifiestamente incorrectas.
+      - Deben evitarse preguntas respuestas incorrectas por no ser "la mejor definición" de las que se dan, "la principal desventaja" u otras formas de graduación. Las respuestas incorrectas deben ser manifiestamente incorrectas para evitar ambigüedades y las preguntas deben ser claras.
+      - Ninguna de las respuestas debe ser trivialmente descartable. Evita el habitual sesgo de que la pregunta correcta siempre sea una de 3 similares y haya otra más absurda.
+      - El nivel de dificultad esperado es para alumnos de master universitario salvo que se indique lo contrario.
+      - No incluyas un número antes de las preguntas, serán barajadas.
+      - Normalmente se pasará material con el que generar las preguntas, evita hacer referencias directas como "según los apuntes". Las preguntas deben contener por si solas toda la información necesaria para responderlas. Los alumnos no podrán consultar los apuntes durante la prueba.
+      - Se cuidadoso evitando sesgos como que la respuesta correcta sea la más detallada o la que tiene más longitud.
+
+      Un ejemplo del formato deseado de pregunta sería el siguiente:
+
+      ---
+
+      // question: 91483439  name: ¿Qué es el muestreo estratificado?
+      ::¿Qué es el muestreo estratificado?::[html]¿Qué es el muestreo estratificado?{
+          ~%-50%Dividir el dataset en grupos y garantizar que todas las muestras de un grupo lo están en el mismo conjunto (test, validación o entrenamiento).
+          =Dividir el dataset en grupos y tomar un porcentaje de cada estrato manteniendo la proporción original de las clases
+          ~%-50%Dividir el dataset en grupos y aumentar la presencia de las clases minoritarias mediante la duplicación o generación de nuevas muestras, lo que puede llevar a una representación más equilibrada de las clases en el conjunto de prueba.
+          ~%-50%Dividir el dataset en grupos y aumentar la complejidad del modelo, lo que puede resultar en un modelo más robusto pero también más difícil de interpretar y ajustar.
+      }
+  
+  - role: assistant
+    content: |
+      // question: 67895124  name: ¿Qué es un modelo generativo en inteligencia artificial?
+      ::¿Qué es un modelo generativo en inteligencia artificial?::[html]¿Qué es un modelo generativo en inteligencia artificial?{
+          ~%-50%Un algoritmo que clasifica datos existentes en categorías predefinidas basándose en características aprendidas durante el entrenamiento.
+          ~%-50%Un sistema que optimiza decisiones secuenciales mediante la interacción con un entorno para maximizar una recompensa acumulativa.
+          =Un tipo de modelo que aprende la distribución de los datos de entrenamiento y puede generar nuevas muestras similares a estos.
+          ~%-50%Un enfoque que reduce dimensionalidad de datos complejos transformándolos en representaciones más simples mientras preserva información esencial.
+      }
+
+      // question: 38215907  name: ¿Cuál es la principal diferencia entre aprendizaje supervisado y no supervisado?
+      ::¿Cuál es la principal diferencia entre aprendizaje supervisado y no supervisado?::[html]¿Cuál es la principal diferencia entre aprendizaje supervisado y no supervisado?{
+          ~%-50%El aprendizaje supervisado utiliza redes neuronales mientras que el no supervisado emplea algoritmos estadísticos tradicionales.
+          =El aprendizaje supervisado utiliza datos etiquetados como ejemplos correctos mientras que el no supervisado trabaja con datos sin etiquetar.
+          ~%-50%El aprendizaje supervisado requiere menos poder computacional mientras que el no supervisado necesita ordenadores más potentes.
+          ~%-50%El aprendizaje supervisado fue desarrollado en la década de 2010 mientras que el no supervisado existe desde los años 1980.
+      }
+
+      // question: 29463187  name: ¿Qué es la validación cruzada (cross-validation)?
+      ::¿Qué es la validación cruzada (cross-validation)?::[html]¿Qué es la validación cruzada (cross-validation)?{
+          ~%-50%Una técnica para reducir la complejidad del modelo eliminando características redundantes del conjunto de datos.
+          ~%-50%Un método para evaluar el rendimiento de varios modelos simultáneamente en un único conjunto de entrenamiento.
+          ~%-50%Un procedimiento que combina las predicciones de varios modelos para mejorar la precisión general del sistema.
+          =Una técnica que divide los datos en múltiples subconjuntos para entrenar y validar el modelo, usando cada subconjunto como datos de prueba una vez.
+      } 
