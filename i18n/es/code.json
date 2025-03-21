@@ -1,0 +1,10 @@
+{
+  "theme.SearchBar.label": {
+    "message": "Buscar",
+    "description": "The ARIA label and placeholder for search button"
+  },
+  "theme.SearchModal.placeholder": {
+    "message": "Buscar",
+    "description": "The placeholder of the input of the search bar"
+  }
+} 

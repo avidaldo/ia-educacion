@@ -22,8 +22,13 @@ const config: Config = {
 
 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'es',
+    locales: ['es'],
+    localeConfigs: {
+      es: {
+        htmlLang: 'es-ES',
+      },
+    },
   },
 
   presets: [
@@ -38,6 +43,18 @@ const config: Config = {
           customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
+    ],
+  ],
+
+  plugins: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        indexDocs: true,
+        indexPages: true,
+        language: ['es'],
+      },
     ],
   ],
 
