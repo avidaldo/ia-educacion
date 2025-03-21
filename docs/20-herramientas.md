@@ -18,7 +18,7 @@
     - Dall-E: texto a imagen
     - Sora: texto a vídeo
 
-    - GPTs específicos: integran prompts para tareas específicas.
+    - [GPTs personalizados](https://chatgpt.com/gpts): integran prompts para tareas específicas.
 
 ### DeepSeek
 

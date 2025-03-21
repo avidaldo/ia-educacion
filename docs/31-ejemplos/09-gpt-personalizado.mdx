@@ -1,17 +1,26 @@
 import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/components/ChatConversation';
 
-# GPT personalizado
-
-Los "GPT's" son una función de ChatGPT que te permite trabajar con prompts específicos almacenados por anticipado.
-
-> ::warning[Ojo]
-
-> Ojo, error en el prompt que se ha utilizado para crear este GPT:
-> ~~Crea un generador de preguntas de test~~ 
-> Aunque estamos definiendo un GPT personalizado, en sus `Instrucciones` debemos escribir directamente el prompt que se pondrá delante del que luego añadirá el usuario, y no queremos un generador de preguntas de test (nos indicaría como crear un programa que genere preguntas de test), queremos directamente generar las preguntas.
+# Tests para Moodle y GPT personalizado
 
 <ChatConversation source="/data/chats/test-question-generator.yaml" />
 
-[GPT personalizado creado con este prompt](https://chatgpt.com/g/g-67b721d49a0481918a78bc5104bd22ea-generador-de-preguntas-de-test)
+Los "GPT's" son una función de ChatGPT que te permite trabajar con prompts específicos almacenados por anticipado.
+
+
+
+:::tip[Utilidad]
+Este *prompt* se ha utilizado para crear un [GPT personalizado público](https://chatgpt.com/g/g-67b721d49a0481918a78bc5104bd22ea-generador-de-preguntas-de-test) que genera preguntas de test.
+:::
+
+Un GPT personalizado es una función de ChatGPT que te permite trabajar con prompts específicos almacenados por anticipado. El usuario ve un chat normal, pero el prompt almacenado se añade delante del prompt del usuario. ChatGPT permite crearlos con sus cuentas plus.
+
+
+:::warning[Cuidado]
+Error en el prompt que se ha utilizado para crear este GPT:
+> ~~Crea un generador de preguntas de test ...~~
+
+Aunque estamos definiendo un GPT personalizado, en sus `Instrucciones` debemos escribir directamente el prompt que se pondrá delante del que luego añadirá el usuario, y no queremos un generador de preguntas de test (nos indicaría como crear un programa que genere preguntas de test), queremos directamente generar las preguntas.
+:::
+
 
 [Ejemplo de chat con él con preguntas sobre los apuntes previos de prompt engineering y pidiendo indicaciones de cómo importar a Moodle](https://chatgpt.com/share/67b732ca-1a94-8002-978e-d2c13676e49a) 
