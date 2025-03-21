@@ -78,7 +78,6 @@ const config: Config = {
           type: 'html',
           position: 'right',
           value: `<div style="display: flex; flex-direction: column; align-items: flex-end; line-height: 1.2;">
-                  <div style="font-weight: 500; margin-bottom: 6px;">Alejandro Vidal Domínguez</div>
                   <div style="font-size: 0.8rem; opacity: 0.8;">Última actualización: 
                   ${new Date().toLocaleDateString('es-ES', {
                     day: '2-digit',
