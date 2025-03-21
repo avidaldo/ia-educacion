@@ -2,7 +2,8 @@ model: Claude 3
 date: March 20, 2025
 messages:
   - role: user
-    content: Crea preguntas de test en formato GIFT importable a Moodle, siguiendo las siguientes reglas.
+    content: |
+      Crea preguntas de test en formato GIFT importable a Moodle, siguiendo las siguientes reglas.
       - Siempre serán preguntas de respuesta múltiple con 4 respuestas y una única correcta.
       - Las respuestas incorrectas restarán media pregunta a no ser que se indique lo contrario.
       - Todas las respuestas deben tener una longitud similar.
