@@ -10,10 +10,10 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   url: 'https://avidaldo.github.io',
-  baseUrl: '/ia-edu2/',
+  baseUrl: '/ia-educacion/',
 
   organizationName: 'avidaldo',
-  projectName: 'ia-edu2',
+  projectName: 'ia-educacion',
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
