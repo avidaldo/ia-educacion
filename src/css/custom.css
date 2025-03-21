@@ -40,3 +40,27 @@
   display: flex;
   align-items: center;
 }
+
+/* Global overrides for chat headings - important to override any other styles */
+.chatHeading {
+  font-size: inherit !important; /* Use the size specified in component CSS */
+  margin-top: 1em !important;
+  margin-bottom: 0.5em !important;
+}
+
+/* Ensure chat message headings don't get the main page heading styles */
+[class*="assistantMessage"] h1,
+[class*="assistantMessage"] h2,
+[class*="assistantMessage"] h3,
+[class*="assistantMessage"] h4,
+[class*="assistantMessage"] h5,
+[class*="assistantMessage"] h6,
+[class*="userMessage"] h1,
+[class*="userMessage"] h2,
+[class*="userMessage"] h3,
+[class*="userMessage"] h4,
+[class*="userMessage"] h5,
+[class*="userMessage"] h6 {
+  font-size: inherit;
+  margin: 0.5em 0;
+}

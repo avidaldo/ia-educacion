@@ -15,6 +15,14 @@ function MarkdownContent({ children }: { children: React.ReactNode }): JSX.Eleme
       <ReactMarkdown 
         rehypePlugins={[rehypeRaw]} 
         remarkPlugins={[remarkGfm]}
+        components={{
+          h1: ({node, ...props}) => <h1 className={styles.chatHeading} {...props} />,
+          h2: ({node, ...props}) => <h2 className={styles.chatHeading} {...props} />,
+          h3: ({node, ...props}) => <h3 className={styles.chatHeading} {...props} />,
+          h4: ({node, ...props}) => <h4 className={styles.chatHeading} {...props} />,
+          h5: ({node, ...props}) => <h5 className={styles.chatHeading} {...props} />,
+          h6: ({node, ...props}) => <h6 className={styles.chatHeading} {...props} />
+        }}
       >
         {children}
       </ReactMarkdown>

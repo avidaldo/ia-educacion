@@ -82,6 +82,63 @@
   color: var(--ifm-font-color-base);
 }
 
+/* Base class for all headings in chat messages */
+.chatHeading {
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: var(--ifm-color-emphasis-900);
+}
+
+/* Specific heading sizes for chat messages */
+h1.chatHeading {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  padding-bottom: 0.3em;
+}
+
+h2.chatHeading {
+  font-size: 1.3rem;
+}
+
+h3.chatHeading {
+  font-size: 1.1rem;
+}
+
+h4.chatHeading, h5.chatHeading, h6.chatHeading {
+  font-size: 1rem;
+}
+
+/* Style markdown headers within chat messages */
+.userMessage h1,
+.assistantMessage h1 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.userMessage h2,
+.assistantMessage h2 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.userMessage h3,
+.assistantMessage h3 {
+  font-size: 1.1rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.userMessage h4, .userMessage h5, .userMessage h6,
+.assistantMessage h4, .assistantMessage h5, .assistantMessage h6 {
+  font-size: 1rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
 /* Loading and error states */
 .loading, .error {
   padding: 16px;
