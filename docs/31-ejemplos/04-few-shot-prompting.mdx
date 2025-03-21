@@ -1,8 +1,11 @@
 import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/components/ChatConversation';
 
-# Ejemplos de Few-shot prompting (dar ejemplos de respuestas correctas)
+# Few-shot
 
-## 1. Ejemplo one-shot (solo un ejemplo)
+La técnica de *Few-shot prompting* consiste en proporcionar al modelo varios ejemplos de respuestas correctas para que pueda aprender a generar respuestas similares.
+
+
+## One-shot (un ejemplo)
 
 <ChatConversation source="/data/chats/few-shot-one.yaml" />
 
@@ -11,7 +14,7 @@ import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/compo
 >- Reduce la ambigüedad al proporcionar ejemplos claros, reduciendo la posibilidad de que el modelo genere respuestas ambiguas o fuera de contexto.
 >- Facilita tareas complejas, siendo especialmente útil para tareas que requieren un formato específico o un estilo particular, como la generación de código, la traducción, o la creación de contenido estructurado.
 
-## 2. Ejemplo few-shot (varios ejemplos)
+## Few-shot (varios ejemplos)
 
 <ChatConversation source="/data/chats/few-shot-multiple.yaml" />
 
