@@ -1,36 +1,38 @@
 # Creando Aplicaciones sin Programación
 
-## Moodle
+## Para importar a Moodle (aulas virtuales)
 
 ### Creación de preguntas en formatos importables
 
-- [Formato GIFT](https://docs.moodle.org/all/es/Formato_GIFT): Formato de texto para crear preguntas importables
-  - Puedes generar estas preguntas con ChatGPT u otros asistentes de IA
-  
-- [Formato Aiken](https://docs.moodle.org/all/es/Formato_Aiken): Formato simple para preguntas de opción múltiple
-  - Estructura sencilla ideal para generar con herramientas de IA
+- [Formato Aiken](https://docs.moodle.org/all/es/Formato_Aiken): Sencillo e interpretable, limitado (preguntas de opción múltiple sin penalización por respuesta incorrecta)
+- [Formato GIFT](https://docs.moodle.org/all/es/Formato_GIFT): Más complejo, permite preguntas de opción múltiple con distinta puntuación para cada respuesta, incluyendo una respuesta correcta y una incorrecta.
 
-- [H5P](https://h5p.org/): Contenido interactivo importable en Moodle
-  - Presentaciones, cuestionarios, líneas de tiempo, etc.
-  - Interfaz visual sin necesidad de programación
 
 ### Creación de páginas en HTML
 
-Cualquier chatbot puede crear páginas en HTML fácilmente a golpe de prompt y después darte los pasos para insertarlas en Moodle.
+Cualquier chatbot puede crear páginas en HTML fácilmente a golpe de prompt y después darte los pasos para insertarlas en Moodle. Bastará con descargar la página y pegar el código HTML en un recurso de tipo "Página" de Moodle, o también en recurso de tipo "Etiqueta" si quieres que se vea directamente en la página de tu curso.
 
-
-## Recursos para crear sin programación
+## Recursos para crear aplicaciones sin programación
 
 - [Claude Artifacts](https://claude.ai/artifacts): Crear aplicaciones simples con IA y publicarlas gratuitamente
   - **Guía rápida**: 
     1. Visita Claude.ai y accede con tu cuenta
     2. En la sección Artifacts, describe la aplicación que necesitas
-    3. Claude la creará automáticamente y te dará un enlace para compartir
-    4. Puedes insertar este enlace en Moodle usando un iframe
+    3. Claude la creará automáticamente y te dará un enlace para compartir. Almacenará el código en su servidor.
 
-### Incrustar aplicaciones en Moodle
+:::note[Artículo interesante]
+[Cómo crear mini-aplicaciones educativas con Claude](https://educacion.bilateria.org/como-crear-aplicaciones-educativas-con-claude)
+:::
+
+### Integrar aplicaciones en Moodle
 
 Para insertar una aplicación (como un Claude Artifact) en Moodle:
+
+#### Usando la URL de la aplicación
+
+Puedes usar la URL (el enlace de Claude Artifacts) para insertarla en Moodle directamente con un recurso de tipo "URL".
+
+#### Usando un iframe
 
 1. Obtén el enlace de tu aplicación (por ejemplo, el enlace de Claude Artifacts)
 2. En tu curso de Moodle, activa el modo de edición
