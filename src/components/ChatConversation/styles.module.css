@@ -36,20 +36,21 @@
 }
 
 /* Message row styling */
-.messageRow {
+.messageRow, .userMessageRow {
   display: flex;
-  padding: 20px 16px;
+  padding: 12px 20px;
   position: relative;
 }
 
-/* User message has light grey background */
-.messageRow:nth-child(odd) {
-  background-color: var(--ifm-color-emphasis-100);
+/* Message row with user message */
+.userMessageRow {
+  justify-content: flex-end;
 }
 
-/* Assistant message has default background */
-.messageRow:nth-child(even) {
-  background-color: var(--ifm-background-surface-color);
+/* Removing the alternating backgrounds for a cleaner look */
+.messagesContainer > div:nth-child(odd),
+.messagesContainer > div:nth-child(even) {
+  background-color: transparent;
 }
 
 /* Avatar styling */
@@ -67,6 +68,9 @@
 .userAvatar {
   color: var(--ifm-color-emphasis-700);
   background-color: var(--ifm-color-emphasis-200);
+  margin-right: 0;
+  margin-left: 16px;
+  order: 2;
 }
 
 .assistantAvatar {
@@ -76,10 +80,24 @@
 
 /* Message styling */
 .userMessage, .assistantMessage {
-  padding: 0;
-  border-radius: 0;
+  padding: 10px 14px;
   max-width: calc(100% - 46px);
   color: var(--ifm-font-color-base);
+  border-radius: 18px;
+}
+
+.userMessage {
+  background-color: var(--ifm-color-emphasis-200);
+  margin-left: auto;
+  order: 1;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  text-align: left;
+  max-width: 80%;
+}
+
+.assistantMessage {
+  background-color: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
 }
 
 /* Base class for all headings in chat messages */

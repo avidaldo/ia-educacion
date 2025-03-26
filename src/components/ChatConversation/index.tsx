@@ -34,7 +34,7 @@ function MarkdownContent({ children }: { children: React.ReactNode }): JSX.Eleme
 // User Message Component with Markdown support
 export function UserMessage({ children }: UserMessageProps): JSX.Element {
   return (
-    <div className={styles.messageRow}>
+    <div className={styles.userMessageRow}>
       <div className={styles.userAvatar}>
         <span>👤</span>
       </div>
