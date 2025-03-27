@@ -62,17 +62,16 @@
 - [Qwen](https://chat.qwenlm.ai/) (*open weights*)
 
 
+## Otras herramientas
 
+### [Perplexity](https://www.perplexity.ai/):
 
-### [Perplexity](https://www.perplexity.ai/): 
-    - Permite usar modelos como los anteriores pero para buscar en la web. Destaca por la velocidad y precisión.
-    - Permite realizar investigaciones en profundidad, parecido a *Deep Research* de chatGPT pero mucho más rápido.
+- Permite usar modelos como los anteriores pero para buscar en la web. Destaca por la velocidad y precisión.
+- Permite realizar investigaciones en profundidad, parecido a *Deep Research* de chatGPT pero mucho más rápido.
 
-## Trasncripción de vídeos
+## Transcripción de vídeos
 
 - [Video Highlight](https://videohighlight.com/): Transcribe y resume vídeos y permite chatear sobre el contenido.
-
-
 
 ## Presentaciones
 
@@ -81,7 +80,6 @@
 - [Beautiful.AI](https://www.beautiful.ai/)
 - [Ludus](https://ludus.one/)
 - [Canva](https://www.canva.com/education/) (Presentaciones, infografías...)
-
 
 
 ## Ámbito educativo
@@ -123,10 +121,4 @@
 - [Freepik](https://www.freepik.com/)
 - [Shutterstock](https://www.shutterstock.com/)
 - [Flux](https://flux-ai.io/)
-
-
 - [LogoMaker](https://www.logomaker.com/) (Para logos)
-
-
-## Otras
-- Marketing: [Jasper](https://www.jasper.ai/)
