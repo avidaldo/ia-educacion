@@ -13,8 +13,6 @@
         - o3-mini-high (mejor que o3-mini)
 
     Integra:
-    - Búsqueda web
-    - *Deep Research* (creación de informes detallados tras búsqueda web)
     - Dall-E: texto a imagen
     - Sora: texto a vídeo
 
@@ -23,9 +21,8 @@
 ### DeepSeek
 
 - [DeepSeek-R1](https://chat.deepseek.com/)
-    - Compite con los mejores en todos los benchmarks
-    - Open source (podemos descargarlo, ver como funciona, crear nuestra versión...)
-    - 27 veces más barato que GPT-o1
+    - Compite con GPT-o1 en todos los benchmarks pero 27 veces más barato.
+    - *Open weights* (podemos descargarlo, ver como funciona, crear nuestra versión...)
     - Permite ver CoT completa
 
 ### Google
@@ -39,10 +36,14 @@
 - [NotebookLM](https://notebooklm.google/)
     - Similar proyectos de ChatGPT pero centrado en los documentos.
 
+- [AI Studio](https://aistudio.google.com/)
+    - Modelos más nuevos de Google (2.0 Flash) y más personalización técnica.
+    - Streaming en tiempo real (IA asistiendo a vídeo)
+
 ### Anthropic
 
 - [Claude](https://claude.ai/)
-    - Tres versiones: Opus (grande), Sonnet (media) y Haiku (pequeña)
+    - Modelos más potentes para programación y matemáticas.
 
 ### Microsoft
 
