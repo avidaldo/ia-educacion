@@ -28,8 +28,7 @@
 ### Google
 
 - [Gemini](https://gemini.google.com/)
-    - Chatbot multimodal
-    - Integrado en Gmail, GDocs, Maps, YouTube (*2.O Flash Thinking Experimental with apps*)
+    - Integrado con Gmail, GDocs, GMaps, YouTube...
     - Chatbot educativo
     - 2.0: 8x Contexto ChatGPT y más barato que DeepSeek
 
@@ -54,14 +53,15 @@
 ### Mistral
 
 - [Le Chat Mistral](https://chat.mistral.ai/chat)
-    - Único competidor europeo (francés, opensource)
+    - Único competidor europeo (francés, *open weights*)
 
 ### Grok (x):
-
 - [Grok](https://x.com/i/grok?focus=1)
 
 ### Qwen
-- [Qwen](https://chat.qwenlm.ai/) (Opensource)
+- [Qwen](https://chat.qwenlm.ai/) (*open weights*)
+
+
 
 
 ### [Perplexity](https://www.perplexity.ai/): 
@@ -92,7 +92,6 @@
 
 ## Detección de plagio
 
-
 - [zerogpt](https://www.zerogpt.com/)
 - [Turnitin](https://www.turnitin.com/)
 - [Quibot](https://quillbot.com/ai-content-detector)
@@ -105,7 +104,6 @@
 - [Mermaid](https://mermaid.js.org/)
 
 - GPT's específicos:
-
     - [Oficial de Mermaid](https://chatgpt.com/g/g-1IRFKwq4G-mermaid-chart-diagrams-and-charts)
     - [Sonia (genera el código y enseña a insertarlo)](https://chatgpt.com/g/g-7BAVTYCJr-sonia-diagramas-educativos-mermaid)
 
