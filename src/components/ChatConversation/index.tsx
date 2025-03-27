@@ -62,8 +62,8 @@ export function AssistantMessage({ children }: AssistantMessageProps): JSX.Eleme
 // Main Chat Conversation Component
 export function ChatConversation({
   children,
-  model: initialModel = "AI Assistant",
-  date: initialDate = "Current Date",
+  model: initialModel = "Asistente IA",
+  date: initialDate = "",
   source
 }: ChatConversationProps): JSX.Element {
   const [messages, setMessages] = useState<Message[]>([]);

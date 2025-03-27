@@ -1,5 +1,3 @@
-model: Claude 3
-date: March 20, 2025
 messages:
   - role: user
     content: Dado el contexto de la Revolución Francesa, escribe un resumen de 200 palabras explicando sus causas principales, siguiendo un tono formal y dirigido a estudiantes de secundaria. Evita tecnicismos innecesarios y usa ejemplos concretos.
