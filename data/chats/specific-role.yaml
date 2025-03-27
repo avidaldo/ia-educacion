@@ -1,5 +1,3 @@
-model: Claude 3
-date: March 20, 2025
 messages:
   - role: user
     content: Actúa como un asesor financiero especializado en inversiones. Quiero que me expliques las ventajas y riesgos de invertir en criptomonedas en 2024. Usa un lenguaje accesible para principiantes y evita términos demasiado técnicos. Finaliza con una recomendación general según el perfil de riesgo de un inversor novato.
