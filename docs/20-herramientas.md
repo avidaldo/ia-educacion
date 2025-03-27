@@ -1,29 +1,28 @@
 # Chatbots y herramientas
 
+![](./img/herramientas_napkin.png)
+(imagen creada con Napkin partiendo de estos mismos apuntes)
+
 ## Chatbots (LLMs)
 
-### OpenAI
+### [ChatGPT](https://chat.openai.com/) (OpenAI)
+- GPT-4o: "Omni" (multimodal)
+- GPT-4o con tareas programadas
+- Serie o (con razonamiento):
+    - o1
+    - o3-mini (integra el razonamiento con búsquedas)
+    - o3-mini-high (mejor que o3-mini)
 
-- [ChatGPT](https://chat.openai.com/)
-    - GPT-4o: "Omni" (multimodal)
-    - GPT-4o con tareas programadas
-    - Serie o (con razonamiento):
-        - o1
-        - o3-mini (integra el razonamiento con búsquedas)
-        - o3-mini-high (mejor que o3-mini)
+Integra:
+- Dall-E: texto a imagen
+- Sora: texto a vídeo
 
-    Integra:
-    - Dall-E: texto a imagen
-    - Sora: texto a vídeo
+- [GPTs personalizados](https://chatgpt.com/gpts): integran prompts para tareas específicas.
 
-    - [GPTs personalizados](https://chatgpt.com/gpts): integran prompts para tareas específicas.
-
-### DeepSeek
-
-- [DeepSeek-R1](https://chat.deepseek.com/)
-    - Compite con GPT-o1 en todos los benchmarks pero 27 veces más barato.
-    - *Open weights* (podemos descargarlo, ver como funciona, crear nuestra versión...)
-    - Permite ver CoT completa
+### [DeepSeek](https://chat.deepseek.com/)
+- Modelo R1:compite con GPT-o1 en todos los benchmarks pero 27 veces más barato.
+- *Open weights* (podemos descargarlo, ver como funciona, crear nuestra versión...)
+- Permite ver CoT completa
 
 ### Google
 
@@ -39,39 +38,47 @@
     - Modelos más nuevos de Google (2.0 Flash) y más personalización técnica.
     - Streaming en tiempo real (IA asistiendo a vídeo)
 
-### Anthropic
+### [Claude](https://claude.ai/) (Anthropic)
+- Modelos más potentes para programación y matemáticas.
 
-- [Claude](https://claude.ai/)
-    - Modelos más potentes para programación y matemáticas.
+### [Copilot](https://copilot.microsoft.com/) (Microsoft)
+- Basado en GPT
+- Copilotos integrados en Office, Teams, etc.
 
-### Microsoft
+### [Le Chat](https://chat.mistral.ai/chat) (Mistral)
+- Único competidor europeo (francés, *open weights*)
 
-- [Copilot](https://copilot.microsoft.com/)
-    - Basado en GPT
-    - Copilotos integrados en Office, Teams, etc.
-
-### Mistral
-
-- [Le Chat Mistral](https://chat.mistral.ai/chat)
-    - Único competidor europeo (francés, *open weights*)
-
-### Grok (x):
+### Grok (xAI)
 - [Grok](https://x.com/i/grok?focus=1)
 
-### Qwen
-- [Qwen](https://chat.qwenlm.ai/) (*open weights*)
+### [Qwen](https://chat.qwenlm.ai/) 
+- (*open weights*)
 
 
 ## Otras herramientas
 
-### [Perplexity](https://www.perplexity.ai/):
+### [Perplexity](https://www.perplexity.ai/)
 
 - Permite usar modelos como los anteriores pero para buscar en la web. Destaca por la velocidad y precisión.
 - Permite realizar investigaciones en profundidad, parecido a *Deep Research* de chatGPT pero mucho más rápido.
 
-## Transcripción de vídeos
+### [Napkin](https://app.napkin.ai/)
 
-- [Video Highlight](https://videohighlight.com/): Transcribe y resume vídeos y permite chatear sobre el contenido.
+- Permite crear gráficos y diagramas para explicar conceptos matemáticos partiendo directamente de apuntes.
+
+
+## [Mermaid](https://mermaid.js.org/)
+
+Genera diagramas de flujo, secuencias, etc.
+
+- GPT's específicos:
+    - [Oficial de Mermaid](https://chatgpt.com/g/g-1IRFKwq4G-mermaid-chart-diagrams-and-charts)
+    - [Sonia (genera el código y enseña a insertarlo)](https://chatgpt.com/g/g-7BAVTYCJr-sonia-diagramas-educativos-mermaid)
+
+
+### [Video Highlight](https://videohighlight.com/)
+- Transcribe y resume vídeos y permite chatear sobre el contenido.
+
 
 ## Presentaciones
 
@@ -85,7 +92,8 @@
 ## Ámbito educativo
 
 - [unstuckstudy](https://unstuckstudy.com)
-- [Poe AI](https://poe.com) 
+- [Poe AI](https://poe.com)
+- [Magic School](https://www.magicschool.ai/)
 
 
 ## Detección de plagio
@@ -95,16 +103,6 @@
 - [Quibot](https://quillbot.com/ai-content-detector)
 - [Grammarly](https://www.grammarly.com/plagiarism-checker)
 - [Plagiarism Checker](https://www.plagiarismchecker.com/)
-
-
-## Diagramas
-
-- [Mermaid](https://mermaid.js.org/)
-
-- GPT's específicos:
-    - [Oficial de Mermaid](https://chatgpt.com/g/g-1IRFKwq4G-mermaid-chart-diagrams-and-charts)
-    - [Sonia (genera el código y enseña a insertarlo)](https://chatgpt.com/g/g-7BAVTYCJr-sonia-diagramas-educativos-mermaid)
-
 
 
 ## Modelos de texto a imagen
