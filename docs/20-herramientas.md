@@ -1,6 +1,7 @@
 # Chatbots y herramientas
 
-![](./img/herramientas_napkin.png)
+![](./img/herramientas_napkin.png)  
+
 (imagen creada con Napkin partiendo de estos mismos apuntes)
 
 ## Chatbots (LLMs)
@@ -35,7 +36,7 @@ Integra:
     - Similar proyectos de ChatGPT pero centrado en los documentos.
 
 - [AI Studio](https://aistudio.google.com/)
-    - Modelos más nuevos de Google (2.0 Flash) y más personalización técnica.
+    - Modelos más experimentales de Google (2.5 Flash) y más personalización técnica.
     - Streaming en tiempo real (IA asistiendo a vídeo)
 
 ### [Claude](https://claude.ai/) (Anthropic)

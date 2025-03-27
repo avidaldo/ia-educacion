@@ -36,16 +36,6 @@
 > En modelos anteriores, dar ejemplos explícitos de cadenas de pensamiento inducía al modelo a “pensar en voz alta” y a desplegar sus pasos intermedios. Sin embargo, en o1, o3 y variantes similares, el razonamiento ya se ejecuta de forma interna y optimizada; incluir ejemplos de cadena de pensamiento o indicaciones como “piensa paso a paso” puede incluso obstaculizar su rendimiento, pues estos modelos han sido diseñados para operar con prompts simples y directos
 
 
-## Sesgos
-
-- Causas
-    - Realidad estadística (si hay más hombres que mujeres en la programación, es normal que el modelo lo refleje)
-    - Muestreo (la mayor parte de fotos son de contexto urbano, por lo que el modelo no sabrá describir bien un campo)
-    - Sesgos humanos implícitos (si se entrena con textos que reflejan sesgos, los reflejará). Los datasets de texto contienen muchos textos de hace 50 años, por lo que no se ajustará bien a la realidad actual.
-
-Solución: ser críticos y usar prompts claros para definir qué queremos y qué no queremos.
-
-
 ## *Red team*
 
 - Lo que le pides a una IA, pide a otra (o a un chat temporal / sin memoria) que haga una valoración crítica.
