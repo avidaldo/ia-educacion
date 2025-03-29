@@ -1,3 +1,4 @@
+model: chatGPT / Mis GPTs
 messages:
   - role: user
     content: |
