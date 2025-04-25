@@ -1,5 +1,4 @@
-model: chatGPT
-date: 2025-04-25
+model: chatGPT | GPT's
 messages:
   - role: user
     content: |
