@@ -36,11 +36,11 @@
 > En modelos anteriores, dar ejemplos explícitos de cadenas de pensamiento inducía al modelo a “pensar en voz alta” y a desplegar sus pasos intermedios. Sin embargo, en o1, o3 y variantes similares, el razonamiento ya se ejecuta de forma interna y optimizada; incluir ejemplos de cadena de pensamiento o indicaciones como “piensa paso a paso” puede incluso obstaculizar su rendimiento, pues estos modelos han sido diseñados para operar con prompts simples y directos
 
 
-## *Red team*
+## *Contrarian Prompting*
 
-- Lo que le pides a una IA, pide a otra (o a un chat temporal / sin memoria) que haga una valoración crítica.
+- Lo que le pides a una IA, pide a otra (o a un chat temporal / sin memoria) que haga una valoración crítica. Pedírselo a otra hace que no esté sesgada por su memoria de las conversaciones previas.
 
-> "Haz un análisis señalando todo aquello que pueda ser cuestionable o mejorable en el siguiente texto."
+> "Haz un análisis señalando todo aquello que pueda ser cuestionable o mejorable en el siguiente texto. Sé exhaustivo y crítico. El texto es el siguiente: [texto]."
 
 
 ### *Deep Research* (Investigación en profundidad)
