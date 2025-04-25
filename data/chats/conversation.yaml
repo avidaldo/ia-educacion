@@ -1,0 +1,124 @@
+model: chatGPT
+date: '2025-04-25'
+messages:
+- role: user
+  content: 'Analiza el contenido de la siguiente web. Realiza un análisis crítico siendo extremadamente riguroso señalando todo aquello que no sea completamente correcto o que sea matizable o complementable.
+
+    https://avidaldo.github.io/ia-educacion/docs/prompt'
+
+- role: user
+  content: |
+Thought for 25 seconds
+
+    Resumen ejecutivo
+La página “Prompt Engineering” de Docencia con IA ofrece una visión introductoria correcta sobre la relevancia de los prompts, pero adolece de varias imprecisiones terminológicas, afirmaciones no fundamentadas y omisiones en prácticas clave. Emplea denominaciones no oficiales como “GPT-o1” y “GPT-o3” en lugar de “gpt-3.5-turbo” o “gpt-4” 
+OpenAI Platform
+, simplifica excesivamente la definición de prompt frente a la descripción oficial de OpenAI que lo presenta como un conjunto de mensajes —incluyendo sistema, usuario y asistente— que configuran el contexto de la tarea 
+OpenAI Platform
+. Además, afirma sin evidencia que Chain-of-Thought (CoT) “puede obstaculizar” el rendimiento en modelos avanzados, pese a estudios que documentan mejoras sustanciales con CoT en GPT-4 
+Medium
+arxiv.org
+. Se echan en falta aspectos esenciales como el control de temperatura y top-p para ajustar la aleatoriedad de las respuestas 
+OpenAI Help Center
+, medidas de seguridad contra inyección de prompts 
+IBM - United States
+docs.aws.amazon.com
+, y las últimas características de API (p. ej., function calling) 
+OpenAI Platform
+.
+
+1. Definición y terminología
+1.1 Definición de prompt
+Imprecisión: El sitio describe el prompt como “la pregunta que le hacemos al chatbot”.
+
+Matización: Según la documentación de OpenAI, un prompt es un conjunto de mensajes (system, user y assistant) que establecen contexto, no solo una “pregunta” 
+OpenAI Platform
+.
+
+1.2 Nomenclatura de modelos
+Inexactitud: Se alude a “GPT-o1” y “GPT-o3” para referirse a versiones de modelos.
+
+Corrección: OpenAI nombra oficialmente a sus modelos como gpt-3.5-turbo, gpt-4, etc.; no existe “GPT-o1” ni “GPT-o3” 
+OpenAI Platform
+.
+
+2. Estrategias de diseño de prompts
+2.1 Buenas prácticas de entrada
+Cita recomendada: “Pon las instrucciones al inicio y usa delimitadores (###, """) para separar instrucciones de contexto” 
+OpenAI Help Center
+.
+
+Omisión: No se menciona la importancia de definir claramente el rol del sistema (system messages) para gobernar el comportamiento global del modelo 
+OpenAI Help Center
+.
+
+2.2 Iteración y refinamiento
+Acierto: Recomendar iterar y pedir al modelo sugerencias de mejora.
+
+Profundización: Faltan referencias a métricas cuantitativas y ensayos A/B para evaluar impactos de cambios en prompts, algo habitual en equipos de IA productiva 
+Tom's Guide
+.
+
+3. Reglas “tradicionales” para prompts
+3.1 Few‐Shot vs. Few‐Shot Learning
+Confusión: Hablan de “few-shot” como simple demostración de respuestas.
+
+Clarificación: En Machine Learning, Few‐Shot Learning es un paradigma que usa pocos ejemplos para generalizar a nuevas clases 
+DigitalOcean
+DataCamp
+. En prompt engineering, “few-shot prompting” son ejemplos dentro del prompt para guiar al modelo 
+OpenAI Community
+.
+
+3.2 Chain-of-Thought (CoT)
+Afirmación cuestionable: Sostiene que CoT “puede ser contraproducente” en GPT-3.5/4.
+
+Evidencia contraria: Estudios demuestran que CoT mejora la precisión en GPT-4, especialmente en tareas de razonamiento complejo 
+Medium
+arxiv.org
+. Solo en casos muy específicos puede aumentar tokens sin beneficio notable.
+
+4. Modelos “razonadores” y contrarian prompting
+4.1 Rendimiento en modelos avanzados
+Carencia: No se fundamenta científicamente la supuesta reducción de rendimiento con prompts complejos.
+
+Mejores referencias: OpenAI recomienda prompts claros y estructurados, pero no prohíbe CoT; de hecho, su guía lo insta a “pensar paso a paso” cuando aporte valor 
+OpenAI Help Center
+.
+
+4.2 Contrarian prompting
+Concepto útil: Invocar a un “segundo” modelo o chat sin contexto para revisión crítica.
+
+Profundización: Es preferible usar la técnica de “self-critique” dentro del mismo hilo (“¿Qué errores podría haber cometido?”) antes que depender siempre de otro modelo externo 
+Tom's Guide
+.
+
+5. Omisiones críticas
+5.1 Ajuste de parámetros
+Parámetros: No se refiere a temperature, top-p, frecuencia de penalizaciones y otros que influyen en creatividad y coherencia 
+OpenAI Help Center
+.
+
+5.2 Seguridad y fiabilidad
+Inyección de prompts: Carece de mención a mitigaciones como input sanitization, parameterization y output filtering 
+IBM - United States
+docs.aws.amazon.com
+.
+
+5.3 Características avanzadas de API
+Function calling: No se alude a la capacidad de definir funciones que el modelo puede invocar para obtener datos o ejecutar código externo 
+OpenAI Platform
+.
+
+RAG y contextualización: Falta cualquier referencia a retrieval-augmented generation para enriquecer prompts con información dinámica.
+
+5.4 Evaluación y herramientas
+Debugging de prompts: No menciona el uso de la interfaz Playground, logs de tokens o métricas de confianza incorporadas en la API.
+
+6. Estilo y formato
+Mezcla de idiomas: Alterna español e inglés sin consistencia, lo cual puede confundir al lector.
+
+Enlaces rotos o irrelevantes: El enlace a DeepSeek-R1 no remite a documentación pública reconocida.
+
+Conclusión
+El contenido es un buen punto de partida didáctico, pero para su uso en entornos de producción o investigación docente requiere correcciones terminológicas, fundamentación empírica en claims controversiales y ampliaciones en seguridad, ajuste de parámetros y nuevas funcionalidades de la API. Una revisión que incorpore las guías oficiales de OpenAI, estudios académicos y prácticas de ingeniería de prompts robustas elevará la calidad y fiabilidad del material.
