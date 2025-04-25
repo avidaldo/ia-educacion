@@ -38,7 +38,7 @@
 
 ## *Contrarian Prompting*
 
-- Lo que le pides a una IA, pide a otra (o a un chat temporal / sin memoria) que haga una valoración crítica. Pedírselo a otra hace que no esté sesgada por su memoria de las conversaciones previas.
+Lo que le pides a una IA, pide a otra (o a un chat temporal / sin memoria) que haga una valoración crítica. Pedírselo a otra hace que no esté sesgada por su memoria de las conversaciones previas. De este modo, se esquiva el sesgo de "dar siempre la razón" o de "no cuestionar lo que ya ha dicho".
 
 > "Haz un análisis señalando todo aquello que pueda ser cuestionable o mejorable en el siguiente texto. Sé exhaustivo y crítico. El texto es el siguiente: [texto]."
 

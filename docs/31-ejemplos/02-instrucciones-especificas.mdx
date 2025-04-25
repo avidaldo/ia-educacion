@@ -11,3 +11,27 @@ import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/compo
 >- Especifica el tema (criptomonedas en 2024).
 >- Indica el tono y público objetivo (lenguaje accesible para principiantes).
 >- Pide una conclusión útil (recomendación según perfil de riesgo). 
+
+
+# Uso de ejemplos de respuesta
+
+Dependiendo de la pregunta, puede ser útil proporcionar al modelo ejemplos de respuesta.
+
+- Zero-shot: No se dan ejemplos, solo la instrucción.
+- One-shot: Se incluye un único ejemplo para guiar.
+- Few-shot: Se ofrecen varios ejemplos para mayor claridad.
+
+## Zero-shot (sin ejemplos)
+
+<ChatConversation source="/data/chats/few-shot-one.yaml" />
+
+
+## Few-shot (varios ejemplos)
+
+
+<ChatConversation source="/data/chats/few-shot-multiple.yaml" />
+
+>**Por qué funciona**:
+>- Da ejemplos de referencia.
+>- Explica por qué los ejemplos funcionan.
+>- Específica un número exacto de resultados esperados (5 nombres). 
