@@ -8,8 +8,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
 import { ChatConversationProps, UserMessageProps, AssistantMessageProps, ConversationData, Message } from './types';
 
-// A component to render markdown content
-function MarkdownContent({ children }: { children: React.ReactNode }): JSX.Element {
+// A component to render markdown content with proper image path resolution
+function MarkdownContent({ children, baseUrl }: { children: React.ReactNode; baseUrl?: string }): JSX.Element {
   if (typeof children === 'string') {
     return (
       <ReactMarkdown 
@@ -21,7 +21,15 @@ function MarkdownContent({ children }: { children: React.ReactNode }): JSX.Eleme
           h3: ({node, ...props}) => <h3 className={styles.chatHeading} {...props} />,
           h4: ({node, ...props}) => <h4 className={styles.chatHeading} {...props} />,
           h5: ({node, ...props}) => <h5 className={styles.chatHeading} {...props} />,
-          h6: ({node, ...props}) => <h6 className={styles.chatHeading} {...props} />
+          h6: ({node, ...props}) => <h6 className={styles.chatHeading} {...props} />,
+          img: ({node, src, ...props}) => {
+            // Fix image paths by prepending baseUrl if needed
+            let fixedSrc = src;
+            if (src && src.startsWith('/') && baseUrl && !src.startsWith(baseUrl)) {
+              fixedSrc = `${baseUrl.replace(/\/$/, '')}${src}`;
+            }
+            return <img src={fixedSrc} {...props} />;
+          }
         }}
       >
         {children}
@@ -32,28 +40,28 @@ function MarkdownContent({ children }: { children: React.ReactNode }): JSX.Eleme
 }
 
 // User Message Component with Markdown support
-export function UserMessage({ children }: UserMessageProps): JSX.Element {
+export function UserMessage({ children, baseUrl }: UserMessageProps & { baseUrl?: string }): JSX.Element {
   return (
     <div className={styles.userMessageRow}>
       <div className={styles.userAvatar}>
         <span>👤</span>
       </div>
       <div className={styles.userMessage}>
-        <MarkdownContent>{children}</MarkdownContent>
+        <MarkdownContent baseUrl={baseUrl}>{children}</MarkdownContent>
       </div>
     </div>
   );
 }
 
 // Assistant Message Component with Markdown support
-export function AssistantMessage({ children }: AssistantMessageProps): JSX.Element {
+export function AssistantMessage({ children, baseUrl }: AssistantMessageProps & { baseUrl?: string }): JSX.Element {
   return (
     <div className={styles.messageRow}>
       <div className={styles.assistantAvatar}>
         <span>🤖</span>
       </div>
       <div className={styles.assistantMessage}>
-        <MarkdownContent>{children}</MarkdownContent>
+        <MarkdownContent baseUrl={baseUrl}>{children}</MarkdownContent>
       </div>
     </div>
   );
@@ -133,9 +141,9 @@ export function ChatConversation({
           // Render messages from YAML if available
           messages.map((msg, index) => (
             msg.role === 'user' ? (
-              <UserMessage key={index}>{msg.content}</UserMessage>
+              <UserMessage key={index} baseUrl={siteConfig.baseUrl}>{msg.content}</UserMessage>
             ) : (
-              <AssistantMessage key={index}>{msg.content}</AssistantMessage>
+              <AssistantMessage key={index} baseUrl={siteConfig.baseUrl}>{msg.content}</AssistantMessage>
             )
           ))
         ) : (
