@@ -1,4 +1,4 @@
-# Creando Aplicaciones sin Programación
+# Creando aplicaciones sin saber programar
 
 ## Para importar a Moodle (aulas virtuales)
 
