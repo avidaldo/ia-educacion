@@ -6,13 +6,9 @@
 
 ## Chatbots (LLMs)
 
-### [ChatGPT](https://chat.openai.com/) (OpenAI)
-- GPT-4o: "Omni" (multimodal)
-- GPT-4o con tareas programadas
-- Serie o (con razonamiento):
-    - o1
-    - o3-mini (integra el razonamiento con búsquedas)
-    - o3-mini-high (mejor que o3-mini)
+### OpenAI
+
+- [ChatGPT](https://chat.openai.com/)
 
 Integra:
 - Dall-E: texto a imagen
@@ -20,17 +16,11 @@ Integra:
 
 - [GPTs personalizados](https://chatgpt.com/gpts): integran prompts para tareas específicas.
 
-### [DeepSeek](https://chat.deepseek.com/)
-- Modelo R1:compite con GPT-o1 en todos los benchmarks pero 27 veces más barato.
-- *Open weights* (podemos descargarlo, ver como funciona, crear nuestra versión...)
-- Permite ver CoT completa
-
 ### Google
 
 - [Gemini](https://gemini.google.com/)
-    - Integrado con Gmail, GDocs, GMaps, YouTube...
+    - Integrado con Gmail, GDocs, GMaps, **YouTube**...
     - Chatbot educativo
-    - 2.0: 8x Contexto ChatGPT y más barato que DeepSeek
 
 - [NotebookLM](https://notebooklm.google/)
     - Similar proyectos de ChatGPT pero centrado en los documentos.
@@ -42,15 +32,20 @@ Integra:
 ### [Claude](https://claude.ai/) (Anthropic)
 - Modelos más potentes para programación y matemáticas.
 
+### [DeepSeek](https://chat.deepseek.com/)
+- Modelo R1:compite con GPT-o1 en todos los *benchmarks* pero 27 veces más barato.
+- *Open weights* (podemos descargarlo, ver como funciona, crear nuestra versión...)
+- Permite ver CoT completa
+
+### Grok (xAI)
+- [Grok](https://x.com/i/grok?focus=1)
+
 ### [Copilot](https://copilot.microsoft.com/) (Microsoft)
 - Basado en GPT
 - Copilotos integrados en Office, Teams, etc.
 
 ### [Le Chat](https://chat.mistral.ai/chat) (Mistral)
 - Único competidor europeo (francés, *open weights*)
-
-### Grok (xAI)
-- [Grok](https://x.com/i/grok?focus=1)
 
 ### [Qwen](https://chat.qwenlm.ai/) 
 - (*open weights*)
@@ -60,17 +55,11 @@ Integra:
 
 ### [Perplexity](https://www.perplexity.ai/)
 
-- Permite usar modelos como los anteriores pero para buscar en la web. Destaca por la velocidad y precisión.
+- Permite usar modelos como los anteriores pero para buscar en la web.
 - Permite realizar investigaciones en profundidad, parecido a *Deep Research* de chatGPT pero mucho más rápido.
 
-### [Napkin](https://app.napkin.ai/)
-
-- Permite crear gráficos y diagramas para explicar conceptos matemáticos partiendo directamente de apuntes.
-
-
-## [Mermaid](https://mermaid.js.org/)
-
-Genera diagramas de flujo, secuencias, etc.
+### [Mermaid](https://mermaid.js.org/)
+- Genera diagramas de flujo, secuencias, etc.
 
 - GPT's específicos:
     - [Oficial de Mermaid](https://chatgpt.com/g/g-1IRFKwq4G-mermaid-chart-diagrams-and-charts)
@@ -81,7 +70,7 @@ Genera diagramas de flujo, secuencias, etc.
 - Transcribe y resume vídeos y permite chatear sobre el contenido.
 
 
-## Presentaciones
+### Herramientas para crear presentaciones
 
 - [slidesgpt](https://slidesgpt.com)
 - [Gamma](https://gamma.app/)
@@ -90,7 +79,7 @@ Genera diagramas de flujo, secuencias, etc.
 - [Canva](https://www.canva.com/education/) (Presentaciones, infografías...)
 
 
-## Ámbito educativo
+### Especialmente para el ámbito educativo
 
 - [unstuckstudy](https://unstuckstudy.com)
 - [Poe AI](https://poe.com)

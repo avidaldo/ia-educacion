@@ -1,0 +1,8 @@
+messages:
+  - role: user
+    content: >
+      Crea una imagen de un reloj analógico mostrando las 6:30.
+  
+  - role: assistant
+    content: |
+      

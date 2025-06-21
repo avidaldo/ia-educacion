@@ -12,20 +12,22 @@
 
 ## Apoyo al docente
 
-### Planificación de asignatura/módulo
+### Planificación de asignatura
+
 - Diseño de programación didáctica
 - Roadmap de un módulo
 - Plantear tareas
+- **Diseño de programaciones didácticas*
 - Desarrolla un plan de estudios personalizado para un estudiante con NEE
 - Creación de diagramas (mermaid...)
 
 ### Creación de materiales
+
 - Preguntas, textos, ejercicios, imágenes…
 - Materiales en formatos importables a Moodle (H5P, Aiken...)
 - Mensajes aula virtual
 - Presentaciones de temas, apuntes... 
 - Traducción de documentos.
-
 
 ### Evaluación
 - Creación y aplicación de rúbricas.
