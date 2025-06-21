@@ -43,7 +43,7 @@ Un modelo de Machine Learning aprende a partir de datos. Si los datos con los qu
 
 #### Sesgos corregidos con sesgos
 
-![](./img/black-ss.png)
+![](/img/black-ss.png)
 
 > "No puedes tener un sistema que no tenga sesgos, o que sea percibido como no sesgado por todo el mundo" ([Yann LeCun](https://www.youtube.com/watch?v=ZQXHf6gv6s8))
 
