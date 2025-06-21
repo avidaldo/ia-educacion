@@ -19,24 +19,13 @@ El "sesgo" en el contexto de la inteligencia artificial (IA) se refiere a la ten
 
 Un modelo de Machine Learning aprende a partir de datos. Si los datos con los que se entrena reflejan prejuicios o desigualdades del mundo real, la IA los aprenderá.
 
-### 2.1. El Error desde la Estadística
 
-En estadística, el error de un modelo predictivo se puede descomponer. Una de las descomposiciones más famosas es la del **Trade-off Sesgo-Varianza**.
-El error total de un modelo se puede pensar como:
-
-$$ \text{Error Total} = \text{Sesgo}^2 + \text{Varianza} + \text{Error Irreducible} $$
-
-* **Sesgo (Bias):** Es la diferencia entre la predicción promedio de nuestro modelo y el valor real que intentamos predecir. Un **alto sesgo** significa que el modelo es demasiado simple y no logra capturar la complejidad de los datos (subajuste o *underfitting*). Por ejemplo, asumir que el rendimiento académico depende únicamente del número de horas de estudio, ignorando otros factores.
-* **Varianza (Variance):** Es la variabilidad de la predicción del modelo para un punto de dato dado. Una **alta varianza** significa que el modelo es demasiado complejo y se ajusta demasiado al ruido de los datos de entrenamiento (sobreajuste o *overfitting*). Aprende detalles tan específicos de los datos de entrenamiento que no logra generalizar a datos nuevos.
-* **Error Irreducible:** Es el ruido inherente a los datos que ningún modelo puede eliminar.
-
-El problema ético surge cuando el **sesgo sistemático** del modelo perjudica a un grupo demográfico particular.
-
-### 2.2. Tipos de Sesgo Relevantes para la Educación
+### Tipos de sesgos
 
 - **Sesgo de muestreo**: Si un conjunto de datos para el reconocimiento facial contiene predominantemente imágenes de personas de piel clara, el modelo resultante puede tener un rendimiento deficiente al reconocer a personas de piel más oscura.
 
-- **Sesgo histórico**: Si los datos de contratación pasados de una empresa muestran una preferencia por candidatos masculinos para ciertos puestos, un algoritmo de IA entrenado con esos datos aprenderá a favorecer a hombres en futuras selecciones.á.
+- **Sesgo histórico**: Datos históricos reflejan prejuicios sociales.  
+  - *Ejemplo*: IA de contratación de Amazon (2018) penalizaba CVs con la palabra "mujer", al entrenarse con datos de una industria dominada por hombres.
 
 - **Sesgo de medición**: Proviene de errores sistemáticos en la forma en que se miden o recogen los datos. La variable que se mide no representa de forma precisa la característica que se quiere evaluar.
 
