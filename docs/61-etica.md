@@ -1,4 +1,4 @@
-# Ética en Inteligencia Artificial: Guía Esquemática para Docentes
+# Ética en IA
 
 ## Principios éticos fundamentales
 
