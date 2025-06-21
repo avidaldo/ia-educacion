@@ -5,4 +5,4 @@ messages:
   
   - role: assistant
     content: |
-      
+      ![Reloj analógico mostrando las 6:30](/img/reloj.png)
