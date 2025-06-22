@@ -62,31 +62,24 @@
     - 2024: Primeros modelos con capacidades avanzadas de razonamiento (**OpenAI o1**).
     - 2025: **DeepSeek-R1** (open-weights) baja el coste de los modelos de lenguaje con un rendimiento similar al de o1.
 
-## Expectativas de la IA en los Próximos Años:
-
+## Expectativas futuras:
 
 
 ### **Aumento de las capacidades humanas (*Human Augmentation*)**
 
 La IA se perfila como un colaborador que potenciará nuestras habilidades. Desde la asistencia en tareas complejas y la toma de decisiones hasta la superación de limitaciones físicas o cognitivas, la IA actuará como una extensión de nuestras propias capacidades.
 
-### **Inteligencia Artificial General (AGI)**
+### **Creación Audiovisual Generativa**
 
-    **¿Qué es exactamente la AGI?** El problema de definición:
-    - **Definición amplia**: Un sistema que puede realizar cualquier tarea cognitiva que un humano pueda hacer.
-    - **Definición estricta**: Un sistema que no solo iguala sino que supera significativamente a los humanos en la mayoría de tareas económicamente valiosas.
-    - **El problema**: No existe consenso científico sobre qué constituye exactamente "inteligencia general" o cómo medirla objetivamente. Investigadores como **Yann LeCun** (Meta) argumentan que el propio término *AGI* es impreciso y que la inteligencia es un espectro multidimensional alcanzable solo mediante avances graduales.
+Los avances en los modelos de difusión, el vídeo generativo y la síntesis de audio están transformando la producción audiovisual. Entre las expectativas más relevantes se encuentran:
 
-    **Expectativas divergentes sobre la AGI**:
-    - **Optimistas**: Predicen AGI entre 2025-2030 (como algunos investigadores de OpenAI o DeepMind).
-    - **Moderados**: Estiman que llegará entre 2030-2050 (la mayoría de expertos en IA).
-    - **Escépticos**: Consideran que podría tardar décadas o incluso siglos, o que requiere avances fundamentales en nuestra comprensión de la inteligencia.
-    - **Críticos del concepto**: Expertos como **Yann LeCun** o **Rodney Brooks** cuestionan la utilidad del término *AGI*. Prevén mejoras continuas y acumulativas en capacidades específicas, sin un "salto" único que marque la llegada de una inteligencia general.
+- **Vídeo generativo de alta fidelidad**: Modelos como **Sora** (OpenAI), **Pika** o **Runway Gen-2** permitirán crear secuencias cinematográficas completas a partir de simples descripciones textuales.
+- **Música y sonido**: Herramientas como **Stable Audio**, **LMusic** o **Sunshine** compondrán bandas sonoras y efectos adaptados al contexto en tiempo real.
+- **Realidad mixta y videojuegos**: Mundos y personajes que se generan dinámicamente, ajustándose al estilo y preferencias de cada jugador.
+- **Post-producción automatizada**: Procesos de edición, corrección de color, doblaje y subtitulado guiados por IA, reduciendo drásticamente los tiempos de producción.
+- **Accesibilidad incrementada**: Generación automática de audiodescripciones, traducciones y lenguaje de señas, ampliando el alcance del contenido.
 
-    **Hitos esperados hacia la AGI**:
-    - **Próximos 2-5 años**: Modelos que superen a los humanos en la mayoría de tareas cognitivas individuales (escritura, programación, análisis, etc.).
-    - **5-10 años**: Sistemas que puedan combinar múltiples habilidades de forma coherente y mantener contexto a largo plazo.
-    - **10-20 años**: Posible emergencia de sistemas que demuestren razonamiento abstracto, creatividad genuina y aprendizaje autónomo comparables o superiores a los humanos.
+Estos avances, aunque centrados en la creatividad, comparten con la automatización la capacidad de acelerar flujos de trabajo y derribar barreras técnicas, razón por la cual merecen un apartado propio.
 
 ### **Agentes Autónomos**
 
@@ -97,35 +90,34 @@ Representan la evolución natural de los chatbots hacia sistemas verdaderamente 
     - **Agente autónomo**: "Organiza mi viaje a Roma" → Planifica, busca opciones, compara precios, hace reservas, gestiona imprevistos y te informa del resultado final.
     
     **Características fundamentales de los agentes**:
-    - **Autonomía**: Actúan independientemente durante períodos prolongados.
-    - **Proactividad**: Toman iniciativas para alcanzar objetivos.
-    - **Reactividad**: Se adaptan a cambios en el entorno.
-    - **Capacidad social**: Interactúan con otros agentes, sistemas y humanos.
-    - **Uso de herramientas**: Acceden a APIs, bases de datos, internet, aplicaciones, etc.
+    Se definen por su **autonomía** para actuar a largo plazo, **proactividad** para tomar la iniciativa, **reactividad** para adaptarse al entorno, **capacidad social** para interactuar y el **uso de herramientas** (APIs, Internet, etc.).
 
-    **Agentes en desarrollo que serán comunes a corto plazo**:
+    **Ejemplos y aplicaciones destacadas**:
+    - **Gestión personal**: Planificación automática de viajes (**Kayak**), gestión de finanzas o coordinación de tareas domésticas.
+    - **Ámbito profesional**:
+        - **Programación**: Desarrollo de software con **Devin AI** o **GitHub Copilot Workspace**.
+        - **Investigación y legal**: Análisis de información con **Perplexity Pro** o revisión de contratos con **Harvey AI**.
+    - **Sectores de impacto**: Ya se utilizan en atención al cliente (**Zendesk**), logística y trading algorítmico.
 
-    **Gestión personal y doméstica**:
-    - **Asistentes de viaje**: Como **Kayak's AI Trip Planner** o **Expedia's AI assistant**, que planifican itinerarios completos incluyendo vuelos, alojamiento, actividades y restaurantes.
-    - **Gestores financieros**: Agentes que monitorizan gastos, optimizan inversiones, buscan mejores ofertas de servicios y gestionan presupuestos familiares.
-    - **Organizadores domésticos**: Sistemas como **Amazon's Alexa Plus** que gestionarán compras, citas médicas, mantenimiento del hogar y coordinación familiar.
+### **IA en la Educación**
 
-    **Agentes profesionales especializados**:
-    - **Asistentes de investigación**: Como **Perplexity Pro** o **Claude's Computer Use**, capaces de realizar investigaciones profundas, recopilar datos de múltiples fuentes y generar informes analíticos.
-    - **Agentes de programación**: **Devin AI** (Cognition Labs), **GitHub Copilot Workspace**, o **Cursor AI** que pueden desarrollar aplicaciones completas, desde la planificación hasta el despliegue.
-    - **Agentes de marketing**: Sistemas que crean estrategias completas de marketing, generan contenido, gestionan campañas publicitarias y analizan resultados.
-    - **Agentes legales**: Como **Harvey AI** para bufetes, que revisan contratos, investigan precedentes y preparan documentos legales.
+La inteligencia artificial transformará el panorama educativo, creando un entorno de aprendizaje más personalizado, eficiente y accesible.
 
-    **Agentes educativos**:
-    - **Tutores personalizados**: Sistemas que adaptan el ritmo de enseñanza, identifican lagunas de conocimiento y crean planes de estudio personalizados.
-    - **Asistentes de investigación académica**: Agentes que ayudan en la revisión bibliográfica, análisis de datos y redacción de papers.
+-   **Tutoría personalizada e inteligente**: Los sistemas de IA actuarán como tutores individuales para cada estudiante, adaptando el contenido y el ritmo de aprendizaje a sus necesidades específicas. Proporcionarán *feedback* instantáneo, resolverán dudas y ofrecerán refuerzo en las áreas donde el alumno presente dificultades.
+-   **Creación de contenido educativo dinámico**: Los docentes podrán utilizar herramientas de IA para generar materiales didácticos a medida, como planes de lecciones, ejercicios, rúbricas de evaluación, presentaciones interactivas y simulaciones. Esto permitirá una enseñanza más rica y diversificada con menos esfuerzo.
+-   **Automatización de tareas administrativas**: La IA liberará a los educadores de tareas repetitivas como la corrección de exámenes, la gestión de horarios o la comunicación de rutinas, permitiéndoles centrarse en la interacción directa con los estudiantes y en el diseño de experiencias de aprendizaje significativas.
+-   **Accesibilidad e inclusión**: Las tecnologías de IA eliminarán barreras para estudiantes con necesidades especiales. Herramientas como la transcripción en tiempo real, la traducción simultánea o los lectores de pantalla avanzados garantizarán que todos los alumnos tengan las mismas oportunidades de acceso a la información.
+-   **Análisis del aprendizaje y detección temprana**: La IA analizará patrones en el rendimiento de los estudiantes para identificar posibles dificultades de aprendizaje de manera proactiva. Esto permitirá a los educadores intervenir a tiempo y ofrecer el apoyo necesario antes de que los problemas se agraven.
+-   **Desarrollo profesional para docentes**: La IA también podrá asistir a los propios docentes, ofreciendo análisis sobre sus métodos de enseñanza, sugiriendo nuevas estrategias pedagógicas y facilitando el acceso a recursos de formación continua.
 
-    **Sectores donde ya se implementan**:
-    - **Atención al cliente**: Agentes como los de **Intercom** o **Zendesk** que resuelven problemas complejos sin intervención humana.
-    - **Gestión de cadenas de suministro**: Agentes que predicen demanda, optimizan inventarios y gestionan proveedores.
-    - **Trading algorítmico**: Sistemas que analizan mercados, ejecutan operaciones y gestionan carteras de inversión.
+### **Inteligencia Artificial General (AGI)**
 
+    **¿Qué es exactamente la AGI?**
+    - **Definición amplia**: Un sistema que puede realizar cualquier tarea cognitiva que un humano pueda hacer.
+    - **Definición estricta**: Un sistema que no solo iguala sino que supera significativamente a los humanos en la mayoría de tareas económicamente valiosas.
+    - **El problema**: No existe consenso científico sobre qué constituye exactamente "inteligencia general" o cómo medirla objetivamente. Investigadores como **Yann LeCun** (Meta) argumentan que el propio término *AGI* es impreciso y que la inteligencia es un espectro multidimensional alcanzable solo mediante avances graduales.
 
-### **Automatización e Interacción Inteligente**
-
-Los modelos seguirán evolucionando para ser **multimodales** (entenderán texto, imágenes, sonido...) y permitirán una **personalización** masiva en todos los sectores (educación, salud, entretenimiento). Esto impulsará una nueva ola de **automatización avanzada**, donde la IA gestionará procesos cada vez más complejos de nuestra vida personal y profesional.
+    **Hitos esperados hacia la AGI**:
+    - **Próximos 2-5 años**: Modelos que superen a los humanos en la mayoría de tareas cognitivas individuales (escritura, programación, análisis, etc.).
+    - **5-10 años**: Sistemas que puedan combinar múltiples habilidades de forma coherente y mantener contexto a largo plazo.
+    - **10-20 años**: Posible emergencia de sistemas que demuestren razonamiento abstracto, creatividad genuina y aprendizaje autónomo comparables o superiores a los humanos.
