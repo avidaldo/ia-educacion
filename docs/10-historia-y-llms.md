@@ -61,3 +61,71 @@
     - 2023: **GPT-4** de OpenAI y proliferación de modelos **multimodales** (texto, imagen, audio, video).
     - 2024: Primeros modelos con capacidades avanzadas de razonamiento (**OpenAI o1**).
     - 2025: **DeepSeek-R1** (open-weights) baja el coste de los modelos de lenguaje con un rendimiento similar al de o1.
+
+## Expectativas de la IA en los Próximos Años:
+
+
+
+### **Aumento de las capacidades humanas (*Human Augmentation*)**
+
+La IA se perfila como un colaborador que potenciará nuestras habilidades. Desde la asistencia en tareas complejas y la toma de decisiones hasta la superación de limitaciones físicas o cognitivas, la IA actuará como una extensión de nuestras propias capacidades.
+
+### **Inteligencia Artificial General (AGI)**
+
+    **¿Qué es exactamente la AGI?** El problema de definición:
+    - **Definición amplia**: Un sistema que puede realizar cualquier tarea cognitiva que un humano pueda hacer.
+    - **Definición estricta**: Un sistema que no solo iguala sino que supera significativamente a los humanos en la mayoría de tareas económicamente valiosas.
+    - **El problema**: No existe consenso científico sobre qué constituye exactamente "inteligencia general" o cómo medirla objetivamente. Investigadores como **Yann LeCun** (Meta) argumentan que el propio término *AGI* es impreciso y que la inteligencia es un espectro multidimensional alcanzable solo mediante avances graduales.
+
+    **Expectativas divergentes sobre la AGI**:
+    - **Optimistas**: Predicen AGI entre 2025-2030 (como algunos investigadores de OpenAI o DeepMind).
+    - **Moderados**: Estiman que llegará entre 2030-2050 (la mayoría de expertos en IA).
+    - **Escépticos**: Consideran que podría tardar décadas o incluso siglos, o que requiere avances fundamentales en nuestra comprensión de la inteligencia.
+    - **Críticos del concepto**: Expertos como **Yann LeCun** o **Rodney Brooks** cuestionan la utilidad del término *AGI*. Prevén mejoras continuas y acumulativas en capacidades específicas, sin un "salto" único que marque la llegada de una inteligencia general.
+
+    **Hitos esperados hacia la AGI**:
+    - **Próximos 2-5 años**: Modelos que superen a los humanos en la mayoría de tareas cognitivas individuales (escritura, programación, análisis, etc.).
+    - **5-10 años**: Sistemas que puedan combinar múltiples habilidades de forma coherente y mantener contexto a largo plazo.
+    - **10-20 años**: Posible emergencia de sistemas que demuestren razonamiento abstracto, creatividad genuina y aprendizaje autónomo comparables o superiores a los humanos.
+
+### **Agentes Autónomos**
+
+Representan la evolución natural de los chatbots hacia sistemas verdaderamente proactivos e independientes.
+
+    **¿Qué es un agente de IA?** Diferencias clave:
+    - **Chatbot tradicional**: "¿En qué puedo ayudarte?" → Responde a cada pregunta individual.
+    - **Agente autónomo**: "Organiza mi viaje a Roma" → Planifica, busca opciones, compara precios, hace reservas, gestiona imprevistos y te informa del resultado final.
+    
+    **Características fundamentales de los agentes**:
+    - **Autonomía**: Actúan independientemente durante períodos prolongados.
+    - **Proactividad**: Toman iniciativas para alcanzar objetivos.
+    - **Reactividad**: Se adaptan a cambios en el entorno.
+    - **Capacidad social**: Interactúan con otros agentes, sistemas y humanos.
+    - **Uso de herramientas**: Acceden a APIs, bases de datos, internet, aplicaciones, etc.
+
+    **Agentes en desarrollo que serán comunes a corto plazo**:
+
+    **Gestión personal y doméstica**:
+    - **Asistentes de viaje**: Como **Kayak's AI Trip Planner** o **Expedia's AI assistant**, que planifican itinerarios completos incluyendo vuelos, alojamiento, actividades y restaurantes.
+    - **Gestores financieros**: Agentes que monitorizan gastos, optimizan inversiones, buscan mejores ofertas de servicios y gestionan presupuestos familiares.
+    - **Organizadores domésticos**: Sistemas como **Amazon's Alexa Plus** que gestionarán compras, citas médicas, mantenimiento del hogar y coordinación familiar.
+
+    **Agentes profesionales especializados**:
+    - **Asistentes de investigación**: Como **Perplexity Pro** o **Claude's Computer Use**, capaces de realizar investigaciones profundas, recopilar datos de múltiples fuentes y generar informes analíticos.
+    - **Agentes de programación**: **Devin AI** (Cognition Labs), **GitHub Copilot Workspace**, o **Cursor AI** que pueden desarrollar aplicaciones completas, desde la planificación hasta el despliegue.
+    - **Agentes de marketing**: Sistemas que crean estrategias completas de marketing, generan contenido, gestionan campañas publicitarias y analizan resultados.
+    - **Agentes legales**: Como **Harvey AI** para bufetes, que revisan contratos, investigan precedentes y preparan documentos legales.
+
+    **Agentes educativos**:
+    - **Tutores personalizados**: Sistemas que adaptan el ritmo de enseñanza, identifican lagunas de conocimiento y crean planes de estudio personalizados.
+    - **Asistentes de investigación académica**: Agentes que ayudan en la revisión bibliográfica, análisis de datos y redacción de papers.
+
+    **Sectores donde ya se implementan**:
+    - **Atención al cliente**: Agentes como los de **Intercom** o **Zendesk** que resuelven problemas complejos sin intervención humana.
+    - **Gestión de cadenas de suministro**: Agentes que predicen demanda, optimizan inventarios y gestionan proveedores.
+    - **Trading algorítmico**: Sistemas que analizan mercados, ejecutan operaciones y gestionan carteras de inversión.
+
+
+### **Automatización e Interacción Inteligente**
+
+Los modelos seguirán evolucionando para ser **multimodales** (entenderán texto, imágenes, sonido...) y permitirán una **personalización** masiva en todos los sectores (educación, salud, entretenimiento). Esto impulsará una nueva ola de **automatización avanzada**, donde la IA gestionará procesos cada vez más complejos de nuestra vida personal y profesional.
