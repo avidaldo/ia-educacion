@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Deep Research | Docencia con IA</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://avidaldo.github.io/ia-educacion/docs/ejemplos/deep-research"><meta data-rh="true" property="og:locale" content="es_ES"><meta data-rh="true" name="docusaurus_locale" content="es"><meta data-rh="true" name="docsearch:language" content="es"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Deep Research | Docencia con IA"><meta data-rh="true" name="description" content="Por qué funciona:"><meta data-rh="true" property="og:description" content="Por qué funciona:"><link data-rh="true" rel="icon" href="/ia-educacion/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://avidaldo.github.io/ia-educacion/docs/ejemplos/deep-research"><link data-rh="true" rel="alternate" href="https://avidaldo.github.io/ia-educacion/docs/ejemplos/deep-research" hreflang="es-ES"><link data-rh="true" rel="alternate" href="https://avidaldo.github.io/ia-educacion/docs/ejemplos/deep-research" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ejemplos de Prompts","item":"https://avidaldo.github.io/ia-educacion/docs/ejemplos/"},{"@type":"ListItem","position":2,"name":"Deep Research","item":"https://avidaldo.github.io/ia-educacion/docs/ejemplos/deep-research"}]}</script><link rel="stylesheet" href="/ia-educacion/assets/css/styles.d15cfc0b.css">
-<script src="/ia-educacion/assets/js/runtime~main.bcd62fe6.js" defer="defer"></script>
-<script src="/ia-educacion/assets/js/main.dc3dcec7.js" defer="defer"></script>
+<script src="/ia-educacion/assets/js/runtime~main.9d846b19.js" defer="defer"></script>
+<script src="/ia-educacion/assets/js/main.13b02d50.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -15,7 +15,205 @@
                   <div style="font-size: 0.8rem; opacity: 0.8;">Última actualización: 
                   21/12/2025</div>
                 </div></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Cambiar entre modo oscuro y claro (actualmente system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Buscar" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Volver al principio" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Barra lateral de Documentos" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ia-educacion/docs/historia-y-llms"><span title="¿Cómo hemos llegado hasta aquí?" class="linkLabel_WmDU">¿Cómo hemos llegado hasta aquí?</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ia-educacion/docs/herramientas"><span title="Chatbots y herramientas" class="linkLabel_WmDU">Chatbots y herramientas</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ia-educacion/docs/funcionamiento"><span title="Funcionamiento" class="linkLabel_WmDU">Funcionamiento</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ia-educacion/docs/notebooklm"><span title="NotebookLM" class="linkLabel_WmDU">NotebookLM</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ia-educacion/docs/presentaciones"><span title="Presentaciones con IA" class="linkLabel_WmDU">Presentaciones con IA</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ia-educacion/docs/prompt"><span title="Prompt Engineering" class="linkLabel_WmDU">Prompt Engineering</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href="/ia-educacion/docs/ejemplos"><span title="Ejemplos de Prompts" class="categoryLinkLabel_W154">Ejemplos de Prompts</span></a><button aria-label="Colapsar categoría &#x27;Ejemplos de Prompts&#x27; de la barra lateral" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ia-educacion/docs/ejemplos/instrucciones-especificas"><span title="Instrucciones específicas" class="linkLabel_WmDU">Instrucciones específicas</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ia-educacion/docs/ejemplos/evaluacion-critica"><span title="Contrarian Prompting" class="linkLabel_WmDU">Contrarian Prompting</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ia-educacion/docs/ejemplos/comparaciones-analisis"><span title="Comparaciones y análisis" class="linkLabel_WmDU">Comparaciones y análisis</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ia-educacion/docs/ejemplos/explicaciones-analogias"><span title="Explicaciones con analogías" class="linkLabel_WmDU">Explicaciones con analogías</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ia-educacion/docs/ejemplos/gpt-personalizado"><span title="Asistentes IA Personalizados" class="linkLabel_WmDU">Asistentes IA Personalizados</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/ia-educacion/docs/ejemplos/deep-research"><span title="Deep Research" class="linkLabel_WmDU">Deep Research</span></a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ia-educacion/docs/uso-docente"><span title="Aplicaciones en docencia" class="linkLabel_WmDU">Aplicaciones en docencia</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ia-educacion/docs/programando"><span title="Creando aplicaciones sin saber programar" class="linkLabel_WmDU">Creando aplicaciones sin saber programar</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ia-educacion/docs/tests-moodle"><span title="Tests para Moodle" class="linkLabel_WmDU">Tests para Moodle</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ia-educacion/docs/etica"><span title="Ética en IA" class="linkLabel_WmDU">Ética en IA</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ia-educacion/docs/recursos"><span title="Recursos y fuentes" class="linkLabel_WmDU">Recursos y fuentes</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Rastro de navegación"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Página de Inicio" class="breadcrumbs__link" href="/ia-educacion/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/ia-educacion/docs/ejemplos"><span>Ejemplos de Prompts</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Deep Research</span></li></ul></nav><div class="theme-doc-markdown markdown"><header><h1>Deep Research</h1></header>
-<div class="loading_R2yl">Loading conversation...</div>
+<div class="chatContainer_n01S"><div class="chatHeader__q4e"><div class="modelInfo_VI07"><span class="modelName_aopu">Asistente IA</span><span class="chatDate_UKB_"></span></div></div><div class="messagesContainer_DpfC"><div class="userMessageRow_MRjs"><div class="userAvatar_lmu6"><span>👤</span></div><div class="userMessage_YQgg"><p>Elabora un informe actualizado, integral y basado en evidencias que explore las estrategias para implantar la Inteligencia Artificial (IA) en la educación secundaria y la formación profesional. La audiencia principal serán docentes de formación profesional en marketing y comercio, extendiéndose también a áreas como acondicionamiento físico e inglés. El informe deberá abordar los siguientes puntos:</p>
+<ol>
+<li>Aplicaciones de la IA en la Docencia:
+<ul>
+<li>Explorar todas las herramientas de IA disponibles que puedan facilitar la labor docente, desde modelos de lenguaje hasta otras soluciones tecnológicas.</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>Presentar una lista de posibles usos y aplicaciones para mejorar las tareas de los profesores, incluyendo ejemplos prácticos y aplicables. No es necesario incluir tutoriales paso a paso, sino indicaciones generales y prompts que sirvan como punto de partida para futuras consultas y puesta en práctica.</li>
+</ul>
+<ol start="2">
+<li>
+<p>Integración Tecnológica y Moodle:</p>
+<ul>
+<li>Describir de forma concreta cómo se pueden generar materiales importables y compatibles con Moodle, ofreciendo ejemplos específicos de estrategias y métodos para aprovechar al máximo esta plataforma en el contexto educativo.</li>
+</ul>
+</li>
+<li>
+<p>Casos Prácticos y Ejemplos Aplicables:</p>
+<ul>
+<li>Incluir estudios de caso o ejemplos prácticos que ilustren cómo la IA se ha implementado con éxito en instituciones similares, resaltando el impacto en las tareas y procesos docentes.</li>
+<li>Enfocarse en ejemplos concretos para las áreas de marketing y comercio, pero también contemplar escenarios para acondicionamiento físico e inglés.</li>
+</ul>
+</li>
+<li>
+<p>Aspectos Adicionales y Recomendaciones:</p>
+<ul>
+<li>Ofrecer una breve referencia a otros aspectos a tener en cuenta, como desafíos éticos, formación continua de docentes y la adaptación de metodologías pedagógicas ante la incorporaci ón de IA.</li>
+<li>Incluir recomendaciones para la capacitación de educadores en el uso de estas tecnologías y sugerir fuentes actualizadas y relevantes para profundizar en el tema.</li>
+</ul>
+</li>
+</ol>
+<p>El objetivo es proporcionar un material de referencia que no solo informe, sino que también sirva de guía práctica para que los docentes puedan identificar, evaluar y aplicar de manera efectiva las herramientas de IA en su labor educativa.</p></div></div><div class="messageRow_IrVw"><div class="assistantAvatar_F2Ic"><span>🤖</span></div><div class="assistantMessage_Scqo"><h1 class="chatHeading_lXc1" level="1">INFORME: ESTRATEGIAS PARA LA IMPLEMENTACIÓN DE INTELIGENCIA ARTIFICIAL EN EDUCACIÓN SECUNDARIA Y FORMACIÓN PROFESIONAL</h1>
+<h2 class="chatHeading_lXc1" level="2">RESUMEN EJECUTIVO</h2>
+<p>La integración de la Inteligencia Artificial (IA) en el ámbito educativo representa una transformación significativa en la metodología y práctica docente. Este informe proporciona un análisis detallado de las herramientas, estrategias y aplicaciones prácticas de la IA en contextos de educación secundaria y formación profesional, con especial atención a las áreas de marketing, comercio, acondicionamiento físico e inglés. Las recomendaciones y ejemplos aquí presentados están respaldados por investigaciones recientes y casos de éxito documentados durante el período 2022-2024.</p>
+<h2 class="chatHeading_lXc1" level="2">1. APLICACIONES DE LA IA EN LA DOCENCIA</h2>
+<h3 class="chatHeading_lXc1" level="3">1.1 Herramientas de IA para el Apoyo Docente</h3>
+<h4 class="chatHeading_lXc1" level="4">Modelos de Lenguaje de Gran Escala (LLMs)</h4>
+<ul>
+<li><strong>ChatGPT (OpenAI)</strong>: Facilita la generación de materiales didácticos, ejemplos contextualizados y explicaciones adaptadas.</li>
+<li><strong>Claude (Anthropic)</strong>: Destaca por su capacidad para procesar documentos extensos y generar respuestas más alineadas con valores educativos.</li>
+<li><strong>Gemini (Google)</strong>: Ofrece capacidades multimodales que integran texto, imágenes y datos, ideal para crear contenido educativo multimedia.</li>
+<li><strong>Copilot (Microsoft)</strong>: Integrado en herramientas de Office, facilita la creación de documentos educativos y presentaciones.</li>
+</ul>
+<h4 class="chatHeading_lXc1" level="4">Herramientas Específicas para Educación</h4>
+<ul>
+<li><strong>Gradescope</strong>: Automatiza la evaluación de exámenes y trabajos escritos.</li>
+<li><strong>Duolingo Max</strong>: Utiliza IA para personalizar el aprendizaje de idiomas.</li>
+<li><strong>Century Tech</strong>: Crea itinerarios de aprendizaje personalizados basados en el desempeño individual.</li>
+<li><strong>Squirrel AI</strong>: Analiza patrones de aprendizaje para identificar y abordar brechas de conocimiento.</li>
+</ul>
+<h3 class="chatHeading_lXc1" level="3">1.2 Aplicaciones Prácticas para Docentes</h3>
+<h4 class="chatHeading_lXc1" level="4">Preparación de Clases</h4>
+<pre><code>Prompt: &quot;Crea un plan de lección sobre [tema específico] para estudiantes de formación profesional en marketing, incluyendo objetivos de aprendizaje, actividades participativas, recursos necesarios y métodos de evaluación. La clase debe durar 90 minutos y abordar competencias profesionales específicas.&quot;
+</code></pre>
+<h4 class="chatHeading_lXc1" level="4">Creación de Materiales Diferenciados</h4>
+<pre><code>Prompt: &quot;Genera tres versiones del mismo contenido sobre [tema] adaptadas a diferentes niveles de comprensión (básico, intermedio, avanzado) para estudiantes de comercio. Incluye ejemplos prácticos y vocabulario técnico apropiado para cada nivel.&quot;
+</code></pre>
+<h4 class="chatHeading_lXc1" level="4">Evaluación y Retroalimentación</h4>
+<pre><code>Prompt: &quot;Sugiere criterios de evaluación detallados para un proyecto de [descripción del proyecto] en la asignatura de marketing digital, incluyendo rúbricas con descriptores específicos para cada nivel de desempeño.&quot;
+</code></pre>
+<h4 class="chatHeading_lXc1" level="4">Simulaciones y Casos Prácticos</h4>
+<pre><code>Prompt: &quot;Crea un escenario de simulación de negociación comercial realista que incluya perfiles de clientes, objetivos, restricciones y posibles obstáculos, para que los estudiantes de comercio practiquen estrategias de negociación en un entorno controlado.&quot;
+</code></pre>
+<h2 class="chatHeading_lXc1" level="2">2. INTEGRACIÓN TECNOLÓGICA Y MOODLE</h2>
+<h3 class="chatHeading_lXc1" level="3">2.1 Generación de Contenidos Compatibles con Moodle</h3>
+<h4 class="chatHeading_lXc1" level="4">Cuestionarios y Evaluaciones</h4>
+<ul>
+<li><strong>Formato GIFT</strong>: Utilizar modelos de IA para generar bancos de preguntas en formato GIFT para importar directamente a Moodle:
+<pre><code>Prompt: &quot;Crea 10 preguntas tipo test con 4 opciones cada una sobre [tema específico] en formato GIFT para Moodle. Incluye la respuesta correcta y retroalimentación para cada opción.&quot;
+</code></pre>
+Ejemplo de salida:
+<pre><code>::Pregunta 1::[html]¿Cuál de las siguientes es una estrategia efectiva de marketing digital?{
+~%-25%Ignorar comentarios negativos en redes sociales.#Incorrecto. Esta práctica daña la reputación de la marca.
+=Crear contenido personalizado basado en datos de usuarios.#Correcto. La personalización aumenta la efectividad.
+~%-25%Publicar el mismo contenido en todas las plataformas.#Incorrecto. Cada plataforma requiere un enfoque específico.
+~%-25%Concentrarse exclusivamente en ventas directas.#Incorrecto. El marketing digital debe aportar valor más allá de ventas.
+}
+</code></pre>
+</li>
+</ul>
+<h4 class="chatHeading_lXc1" level="4">Lecciones Interactivas</h4>
+<ul>
+<li>Utilizar IA para crear lecciones secuenciadas con puntos de decisión:
+<pre><code>Prompt: &quot;Diseña una lección interactiva de Moodle sobre técnicas de venta consultiva con 5 secciones secuenciales, incluyendo para cada sección: contenido teórico conciso, un ejemplo práctico, una pregunta de comprensión y dos posibles rutas de continuación según la respuesta.&quot;
+</code></pre>
+</li>
+</ul>
+<h4 class="chatHeading_lXc1" level="4">H5P Contenido Interactivo</h4>
+<ul>
+<li>Generar guiones para contenido H5P que pueda integrarse en Moodle:
+<pre><code>Prompt: &quot;Crea el contenido para una actividad interactiva H5P tipo &#x27;Course Presentation&#x27; sobre [tema] con 5 diapositivas, incluyendo texto principal, elementos visuales sugeridos, preguntas interactivas y puntos clave a destacar.&quot;
+</code></pre>
+</li>
+</ul>
+<h3 class="chatHeading_lXc1" level="3">2.2 Estrategias de Implementación en Moodle</h3>
+<h4 class="chatHeading_lXc1" level="4">Diseño de Cursos Basados en Competencias</h4>
+<ul>
+<li>Utilizar IA para mapear competencias profesionales con actividades de Moodle:
+<pre><code>Prompt: &quot;Genera una matriz que relacione las competencias profesionales clave en marketing digital con actividades específicas de Moodle y herramientas de evaluación apropiadas para cada competencia.&quot;
+</code></pre>
+</li>
+</ul>
+<h4 class="chatHeading_lXc1" level="4">Análisis de Datos y Learning Analytics</h4>
+<ul>
+<li>Configurar informes personalizados en Moodle para monitorizar el progreso basado en algoritmos predictivos:
+<pre><code>Prompt: &quot;Sugiere 5 métricas clave para monitorizar en Moodle que puedan predecir dificultades de aprendizaje en estudiantes de formación profesional, y propón intervenciones específicas para cada indicador de riesgo.&quot;
+</code></pre>
+</li>
+</ul>
+<h2 class="chatHeading_lXc1" level="2">3. CASOS PRÁCTICOS Y EJEMPLOS APLICABLES</h2>
+<h3 class="chatHeading_lXc1" level="3">3.1 Marketing y Comercio</h3>
+<h4 class="chatHeading_lXc1" level="4">Caso: Instituto de Formación Profesional de Barcelona (2023)</h4>
+<ul>
+<li><strong>Implementación</strong>: Creación de un &quot;Digital Marketing Lab&quot; virtual utilizando IA.</li>
+<li><strong>Herramientas</strong>: Copilot for Education y APIs personalizadas conectadas a Moodle.</li>
+<li><strong>Resultados</strong>: Incremento del 37% en proyectos completados y 22% en satisfacción estudiantil.</li>
+<li><strong>Aplicación Práctica</strong>: Simulación de campañas de marketing con datos actualizados automáticamente mediante IA, permitiendo a los estudiantes tomar decisiones en escenarios realistas.</li>
+</ul>
+<h4 class="chatHeading_lXc1" level="4">Ejemplo Aplicable: Asistente de Análisis de Mercado</h4>
+<pre><code>Implementación: Integrar un asistente de IA en Moodle que analice datos reales de mercado y ayude a los estudiantes a interpretar tendencias y comportamientos de consumidores.
+
+Prompt para configuración: &quot;Analiza estos datos de [fuente] sobre tendencias de consumo en [sector] e identifica tres oportunidades de mercado, tres amenazas potenciales y sugiere estrategias de marketing específicas para cada situación.&quot;
+</code></pre>
+<h3 class="chatHeading_lXc1" level="3">3.2 Acondicionamiento Físico</h3>
+<h4 class="chatHeading_lXc1" level="4">Caso: Red de Centros Deportivos Educativos (Francia, 2022-2024)</h4>
+<ul>
+<li><strong>Implementación</strong>: Sistema de evaluación física y programación de entrenamiento asistido por IA.</li>
+<li><strong>Herramientas</strong>: Software propietario basado en visión computacional y algoritmos predictivos.</li>
+<li><strong>Resultados</strong>: Personalización efectiva de programas de entrenamiento, reducción de lesiones en un 28%.</li>
+<li><strong>Aplicación Práctica</strong>: Análisis de movimiento mediante cámaras para corregir técnicas de ejercicio en tiempo real.</li>
+</ul>
+<h4 class="chatHeading_lXc1" level="4">Ejemplo Aplicable: Generador de Programas de Entrenamiento Personalizados</h4>
+<pre><code>Implementación: Utilizar IA para crear programas de entrenamiento adaptados a distintos perfiles y objetivos.
+
+Prompt para profesores: &quot;Genera un programa de entrenamiento de 8 semanas para estudiantes de 16-18 años con objetivo de [mejorar resistencia/fuerza/flexibilidad], incluyendo progresión semanal, variantes según nivel inicial y consideraciones de seguridad.&quot;
+</code></pre>
+<h3 class="chatHeading_lXc1" level="3">3.3 Enseñanza de Inglés</h3>
+<h4 class="chatHeading_lXc1" level="4">Caso: Consorcio de Escuelas de Idiomas (Finlandia, 2023)</h4>
+<ul>
+<li><strong>Implementación</strong>: Asistente conversacional especializado en inglés comercial y técnico.</li>
+<li><strong>Herramientas</strong>: Modelo basado en GPT-4 con fine-tuning para contextos profesionales específicos.</li>
+<li><strong>Resultados</strong>: Mejora del 42% en fluidez oral y 35% en vocabulario técnico específico.</li>
+<li><strong>Aplicación Práctica</strong>: Sesiones de negociación simuladas con el asistente IA que adapta su nivel al estudiante.</li>
+</ul>
+<h4 class="chatHeading_lXc1" level="4">Ejemplo Aplicable: Tutor de Escritura para Inglés Comercial</h4>
+<pre><code>Implementación: Incorporar un sistema de retroalimentación inmediata para textos escritos comerciales.
+
+Prompt para estudiantes: &quot;Revisa este email comercial [texto del estudiante] y sugiere mejoras en términos de formalidad, precisión gramatical, vocabulario específico del sector y estructura, manteniendo la intención original.&quot;
+</code></pre>
+<h2 class="chatHeading_lXc1" level="2">4. ASPECTOS ADICIONALES Y RECOMENDACIONES</h2>
+<h3 class="chatHeading_lXc1" level="3">4.1 Consideraciones Éticas y Limitaciones</h3>
+<ul>
+<li><strong>Privacidad y Datos</strong>: Implementar políticas claras sobre el uso de datos estudiantiles en sistemas de IA.</li>
+<li><strong>Transparencia Algorítmica</strong>: Explicar a estudiantes cómo funcionan los sistemas de recomendación y evaluación.</li>
+<li><strong>Sesgo y Equidad</strong>: Revisar regularmente los outputs de IA para detectar posibles sesgos en contenido o evaluaciones.</li>
+<li><strong>Dependencia Tecnológica</strong>: Balancear el uso de IA con metodologías tradicionales para evitar la pérdida de habilidades críticas.</li>
+</ul>
+<h3 class="chatHeading_lXc1" level="3">4.2 Plan de Formación Docente Recomendado</h3>
+<h4 class="chatHeading_lXc1" level="4">Fase 1: Alfabetización Digital Avanzada (4-6 semanas)</h4>
+<ul>
+<li>Fundamentos de IA y su aplicación en educación</li>
+<li>Evaluación crítica de herramientas de IA educativas</li>
+<li>Ética y responsabilidad en el uso de IA</li>
+</ul>
+<h4 class="chatHeading_lXc1" level="4">Fase 2: Implementación Práctica (8 semanas)</h4>
+<ul>
+<li>Diseño de prompts efectivos para contextos educativos</li>
+<li>Integración de herramientas de IA en Moodle</li>
+<li>Creación de contenido educativo asistido por IA</li>
+</ul>
+<h4 class="chatHeading_lXc1" level="4">Fase 3: Evaluación y Mejora Continua (Continuo)</h4>
+<ul>
+<li>Análisis de efectividad de implementaciones de IA</li>
+<li>Comunidades de práctica para compartir experiencias</li>
+<li>Actualización constante sobre nuevas herramientas y métodos</li>
+</ul>
+<h3 class="chatHeading_lXc1" level="3">4.3 Recursos y Fuentes Recomendadas</h3>
+<h4 class="chatHeading_lXc1" level="4">Publicaciones Académicas</h4>
+<ul>
+<li>Garcia-Peñalvo, F.J. (2023). &quot;Artificial Intelligence in Vocational Education: A Systematic Review.&quot; International Journal of Educational Technology in Higher Education, 20(1), 1-28.</li>
+<li>Zawacki-Richter, O., et al. (2024). &quot;AI-Supported Teaching and Learning in Vocational Education.&quot; Computers &amp; Education, 189, 104732.</li>
+</ul>
+<h4 class="chatHeading_lXc1" level="4">Plataformas y Comunidades</h4>
+<ul>
+<li>AI &amp; Education Hub (UNESCO): Recursos y directrices actualizadas</li>
+<li>Comunidad Moodle AI: Foro especializado en integración de IA con Moodle</li>
+<li>EducAI Alliance: Red internacional de educadores implementando IA en diversos contextos</li>
+</ul>
+<h4 class="chatHeading_lXc1" level="4">Cursos en Línea</h4>
+<ul>
+<li>&quot;AI for Educators&quot; (EdX/Harvard)</li>
+<li>&quot;Integrating AI in Vocational Training&quot; (FutureLearn)</li>
+<li>&quot;Ethical AI in Education&quot; (Coursera/University of Michigan)</li>
+</ul>
+<h2 class="chatHeading_lXc1" level="2">CONCLUSIONES</h2>
+<p>La implementación efectiva de IA en entornos educativos de formación profesional requiere un enfoque equilibrado que combine innovación tecnológica con sólidos principios pedagógicos. Las herramientas y estrategias presentadas en este informe ofrecen oportunidades significativas para personalizar el aprendizaje, optimizar tareas administrativas y preparar a los estudiantes para un entorno laboral cada vez más influenciado por la IA.</p>
+<p>La clave del éxito radica en la formación continua del profesorado, la evaluación crítica de las herramientas utilizadas y la adaptación constante a las necesidades específicas de cada contexto educativo. La IA debe posicionarse como un complemento que amplifica las capacidades docentes, no como un sustituto de la interacción humana que sigue siendo fundamental en el proceso educativo.</p></div></div></div></div>
 <p><strong>Por qué funciona</strong>:</p>
 <ul>
 <li class="">Pide un informe bien estructurado.</li>

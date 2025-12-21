@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Asistentes IA Personalizados | Docencia con IA</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://avidaldo.github.io/ia-educacion/docs/ejemplos/gpt-personalizado"><meta data-rh="true" property="og:locale" content="es_ES"><meta data-rh="true" name="docusaurus_locale" content="es"><meta data-rh="true" name="docsearch:language" content="es"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Asistentes IA Personalizados | Docencia con IA"><meta data-rh="true" name="description" content="Los asistentes personalizados te permiten guardar prompts específicos para tareas que repites frecuentemente. El usuario ve un chat normal, pero el prompt almacenado se añade automáticamente delante de cada mensaje."><meta data-rh="true" property="og:description" content="Los asistentes personalizados te permiten guardar prompts específicos para tareas que repites frecuentemente. El usuario ve un chat normal, pero el prompt almacenado se añade automáticamente delante de cada mensaje."><link data-rh="true" rel="icon" href="/ia-educacion/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://avidaldo.github.io/ia-educacion/docs/ejemplos/gpt-personalizado"><link data-rh="true" rel="alternate" href="https://avidaldo.github.io/ia-educacion/docs/ejemplos/gpt-personalizado" hreflang="es-ES"><link data-rh="true" rel="alternate" href="https://avidaldo.github.io/ia-educacion/docs/ejemplos/gpt-personalizado" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ejemplos de Prompts","item":"https://avidaldo.github.io/ia-educacion/docs/ejemplos/"},{"@type":"ListItem","position":2,"name":"Asistentes IA Personalizados","item":"https://avidaldo.github.io/ia-educacion/docs/ejemplos/gpt-personalizado"}]}</script><link rel="stylesheet" href="/ia-educacion/assets/css/styles.d15cfc0b.css">
-<script src="/ia-educacion/assets/js/runtime~main.bcd62fe6.js" defer="defer"></script>
-<script src="/ia-educacion/assets/js/main.dc3dcec7.js" defer="defer"></script>
+<script src="/ia-educacion/assets/js/runtime~main.9d846b19.js" defer="defer"></script>
+<script src="/ia-educacion/assets/js/main.13b02d50.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -77,7 +77,48 @@
 <li class=""><strong>Traductor especializado</strong>: traduce con terminología específica del área</li>
 <li class=""><strong>Simulador de entrevistas</strong>: practica respuestas para oposiciones o entrevistas</li>
 </ul>
-<div class="loading_R2yl">Loading conversation...</div>
+<div class="chatContainer_n01S"><div class="chatHeader__q4e"><div class="modelInfo_VI07"><span class="modelName_aopu">chatGPT | GPT&#x27;s</span><span class="chatDate_UKB_"></span></div></div><div class="messagesContainer_DpfC"><div class="userMessageRow_MRjs"><div class="userAvatar_lmu6"><span>👤</span></div><div class="userMessage_YQgg"><p>Crea preguntas de test en formato GIFT importable a Moodle, siguiendo las siguientes reglas.</p>
+<ul>
+<li>Siempre serán preguntas de respuesta múltiple con 4 respuestas y una única correcta.</li>
+<li>Las respuestas incorrectas restarán media pregunta a no ser que se indique lo contrario.</li>
+<li>Todas las respuestas deben tener una longitud similar.</li>
+<li>Se debe priorizar el rigor. La respuesta correcta debe ser la única que lo es. Las otras deben ser manifiestamente incorrectas.</li>
+<li>Deben evitarse preguntas respuestas incorrectas por no ser &quot;la mejor definición&quot; de las que se dan, &quot;la principal desventaja&quot; u otras formas de graduación. Las respuestas incorrectas deben ser manifiestamente incorrectas para evitar ambigüedades y las preguntas deben ser claras.</li>
+<li>Ninguna de las respuestas debe ser trivialmente descartable. Evita el habitual sesgo de que la pregunta correcta siempre sea una de 3 similares y haya otra más absurda.</li>
+<li>El nivel de dificultad esperado es para alumnos de master universitario salvo que se indique lo contrario.</li>
+<li>No incluyas un número antes de las preguntas, serán barajadas.</li>
+<li>Normalmente se pasará material con el que generar las preguntas, evita hacer referencias directas como &quot;según los apuntes&quot;. Las preguntas deben contener por si solas toda la información necesaria para responderlas. Los alumnos no podrán consultar los apuntes durante la prueba.</li>
+<li>Se cuidadoso evitando sesgos como que la respuesta correcta sea la más detallada o la que tiene más longitud.</li>
+</ul>
+<p>Un ejemplo del formato deseado de pregunta sería el siguiente:</p>
+<hr>
+<p>// question: 91483439  name: ¿Qué es el muestreo estratificado?
+::¿Qué es el muestreo estratificado?::[html]¿Qué es el muestreo estratificado?{
+~%-50%Dividir el dataset en grupos y garantizar que todas las muestras de un grupo lo están en el mismo conjunto (test, validación o entrenamiento).
+=Dividir el dataset en grupos y tomar un porcentaje de cada estrato manteniendo la proporción original de las clases
+~%-50%Dividir el dataset en grupos y aumentar la presencia de las clases minoritarias mediante la duplicación o generación de nuevas muestras, lo que puede llevar a una representación más equilibrada de las clases en el conjunto de prueba.
+~%-50%Dividir el dataset en grupos y aumentar la complejidad del modelo, lo que puede resultar en un modelo más robusto pero también más difícil de interpretar y ajustar.
+}</p></div></div><div class="messageRow_IrVw"><div class="assistantAvatar_F2Ic"><span>🤖</span></div><div class="assistantMessage_Scqo"><p>// question: 67895124  name: ¿Qué es un modelo generativo en inteligencia artificial?
+::¿Qué es un modelo generativo en inteligencia artificial?::[html]¿Qué es un modelo generativo en inteligencia artificial?{
+~%-50%Un algoritmo que clasifica datos existentes en categorías predefinidas basándose en características aprendidas durante el entrenamiento.
+~%-50%Un sistema que optimiza decisiones secuenciales mediante la interacción con un entorno para maximizar una recompensa acumulativa.
+=Un tipo de modelo que aprende la distribución de los datos de entrenamiento y puede generar nuevas muestras similares a estos.
+~%-50%Un enfoque que reduce dimensionalidad de datos complejos transformándolos en representaciones más simples mientras preserva información esencial.
+}</p>
+<p>// question: 38215907  name: ¿Cuál es la principal diferencia entre aprendizaje supervisado y no supervisado?
+::¿Cuál es la principal diferencia entre aprendizaje supervisado y no supervisado?::[html]¿Cuál es la principal diferencia entre aprendizaje supervisado y no supervisado?{
+~%-50%El aprendizaje supervisado utiliza redes neuronales mientras que el no supervisado emplea algoritmos estadísticos tradicionales.
+=El aprendizaje supervisado utiliza datos etiquetados como ejemplos correctos mientras que el no supervisado trabaja con datos sin etiquetar.
+~%-50%El aprendizaje supervisado requiere menos poder computacional mientras que el no supervisado necesita ordenadores más potentes.
+~%-50%El aprendizaje supervisado fue desarrollado en la década de 2010 mientras que el no supervisado existe desde los años 1980.
+}</p>
+<p>// question: 29463187  name: ¿Qué es la validación cruzada (cross-validation)?
+::¿Qué es la validación cruzada (cross-validation)?::[html]¿Qué es la validación cruzada (cross-validation)?{
+~%-50%Una técnica para reducir la complejidad del modelo eliminando características redundantes del conjunto de datos.
+~%-50%Un método para evaluar el rendimiento de varios modelos simultáneamente en un único conjunto de entrenamiento.
+~%-50%Un procedimiento que combina las predicciones de varios modelos para mejorar la precisión general del sistema.
+=Una técnica que divide los datos en múltiples subconjuntos para entrenar y validar el modelo, usando cada subconjunto como datos de prueba una vez.
+}</p></div></div></div></div>
 <p>Este ejemplo muestra cómo un prompt bien diseñado puede convertirse en un asistente reutilizable para generar tests. Más detalles en <a class="" href="/ia-educacion/docs/tests-moodle">Tests para Moodle</a>.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Página del documento"><a class="pagination-nav__link pagination-nav__link--prev" href="/ia-educacion/docs/ejemplos/explicaciones-analogias"><div class="pagination-nav__sublabel">Anterior</div><div class="pagination-nav__label">Explicaciones con analogías</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/ia-educacion/docs/ejemplos/deep-research"><div class="pagination-nav__sublabel">Siguiente</div><div class="pagination-nav__label">Deep Research</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#gpts-de-chatgpt" class="table-of-contents__link toc-highlight">GPTs de ChatGPT</a><ul><li><a href="#cómo-crear-un-gpt" class="table-of-contents__link toc-highlight">Cómo crear un GPT</a></li><li><a href="#gpts-educativos-útiles" class="table-of-contents__link toc-highlight">GPTs educativos útiles</a></li></ul></li><li><a href="#gems-de-gemini" class="table-of-contents__link toc-highlight">Gems de Gemini</a><ul><li><a href="#cómo-crear-una-gem" class="table-of-contents__link toc-highlight">Cómo crear una Gem</a></li><li><a href="#gems-premade" class="table-of-contents__link toc-highlight">Gems premade</a></li></ul></li><li><a href="#proyectos-de-claude" class="table-of-contents__link toc-highlight">Proyectos de Claude</a></li><li><a href="#comparativa" class="table-of-contents__link toc-highlight">Comparativa</a></li><li><a href="#casos-de-uso-educativo" class="table-of-contents__link toc-highlight">Casos de uso educativo</a></li></ul></div></div></div></div></main></div></div></div></div>
 </body>
 </html>

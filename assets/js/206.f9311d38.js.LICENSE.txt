@@ -5,8 +5,6 @@
  * @license  MIT
  */
 
-/*! js-yaml 4.1.1 https://github.com/nodeca/js-yaml @license MIT */
-
 /**
  * @license React
  * react-is.production.min.js

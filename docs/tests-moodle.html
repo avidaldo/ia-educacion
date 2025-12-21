@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Tests para Moodle | Docencia con IA</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://avidaldo.github.io/ia-educacion/docs/tests-moodle"><meta data-rh="true" property="og:locale" content="es_ES"><meta data-rh="true" name="docusaurus_locale" content="es"><meta data-rh="true" name="docsearch:language" content="es"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Tests para Moodle | Docencia con IA"><meta data-rh="true" name="description" content="Esta sección cubre la generación de preguntas de test con IA para importar a Moodle y otras plataformas de aulas virtuales."><meta data-rh="true" property="og:description" content="Esta sección cubre la generación de preguntas de test con IA para importar a Moodle y otras plataformas de aulas virtuales."><link data-rh="true" rel="icon" href="/ia-educacion/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://avidaldo.github.io/ia-educacion/docs/tests-moodle"><link data-rh="true" rel="alternate" href="https://avidaldo.github.io/ia-educacion/docs/tests-moodle" hreflang="es-ES"><link data-rh="true" rel="alternate" href="https://avidaldo.github.io/ia-educacion/docs/tests-moodle" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tests para Moodle","item":"https://avidaldo.github.io/ia-educacion/docs/tests-moodle"}]}</script><link rel="stylesheet" href="/ia-educacion/assets/css/styles.d15cfc0b.css">
-<script src="/ia-educacion/assets/js/runtime~main.bcd62fe6.js" defer="defer"></script>
-<script src="/ia-educacion/assets/js/main.dc3dcec7.js" defer="defer"></script>
+<script src="/ia-educacion/assets/js/runtime~main.9d846b19.js" defer="defer"></script>
+<script src="/ia-educacion/assets/js/main.13b02d50.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -40,7 +40,48 @@
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="prompt-base-para-generar-tests">Prompt base para generar tests<a href="#prompt-base-para-generar-tests" class="hash-link" aria-label="Enlace directo al Prompt base para generar tests" title="Enlace directo al Prompt base para generar tests" translate="no">​</a></h3>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Genera 10 preguntas de opción múltiple en formato [GIFT/Aiken] sobre el siguiente tema: [TEMA].</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Requisitos:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- 4 opciones por pregunta</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Solo una respuesta correcta</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Variedad de dificultad (fácil, media, difícil)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Las opciones incorrectas deben ser plausibles</span><br></span></code></pre></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="gpt-personalizado-para-tests">GPT personalizado para tests<a href="#gpt-personalizado-para-tests" class="hash-link" aria-label="Enlace directo al GPT personalizado para tests" title="Enlace directo al GPT personalizado para tests" translate="no">​</a></h3>
-<div class="loading_R2yl">Loading conversation...</div>
+<div class="chatContainer_n01S"><div class="chatHeader__q4e"><div class="modelInfo_VI07"><span class="modelName_aopu">chatGPT | GPT&#x27;s</span><span class="chatDate_UKB_"></span></div></div><div class="messagesContainer_DpfC"><div class="userMessageRow_MRjs"><div class="userAvatar_lmu6"><span>👤</span></div><div class="userMessage_YQgg"><p>Crea preguntas de test en formato GIFT importable a Moodle, siguiendo las siguientes reglas.</p>
+<ul>
+<li>Siempre serán preguntas de respuesta múltiple con 4 respuestas y una única correcta.</li>
+<li>Las respuestas incorrectas restarán media pregunta a no ser que se indique lo contrario.</li>
+<li>Todas las respuestas deben tener una longitud similar.</li>
+<li>Se debe priorizar el rigor. La respuesta correcta debe ser la única que lo es. Las otras deben ser manifiestamente incorrectas.</li>
+<li>Deben evitarse preguntas respuestas incorrectas por no ser &quot;la mejor definición&quot; de las que se dan, &quot;la principal desventaja&quot; u otras formas de graduación. Las respuestas incorrectas deben ser manifiestamente incorrectas para evitar ambigüedades y las preguntas deben ser claras.</li>
+<li>Ninguna de las respuestas debe ser trivialmente descartable. Evita el habitual sesgo de que la pregunta correcta siempre sea una de 3 similares y haya otra más absurda.</li>
+<li>El nivel de dificultad esperado es para alumnos de master universitario salvo que se indique lo contrario.</li>
+<li>No incluyas un número antes de las preguntas, serán barajadas.</li>
+<li>Normalmente se pasará material con el que generar las preguntas, evita hacer referencias directas como &quot;según los apuntes&quot;. Las preguntas deben contener por si solas toda la información necesaria para responderlas. Los alumnos no podrán consultar los apuntes durante la prueba.</li>
+<li>Se cuidadoso evitando sesgos como que la respuesta correcta sea la más detallada o la que tiene más longitud.</li>
+</ul>
+<p>Un ejemplo del formato deseado de pregunta sería el siguiente:</p>
+<hr>
+<p>// question: 91483439  name: ¿Qué es el muestreo estratificado?
+::¿Qué es el muestreo estratificado?::[html]¿Qué es el muestreo estratificado?{
+~%-50%Dividir el dataset en grupos y garantizar que todas las muestras de un grupo lo están en el mismo conjunto (test, validación o entrenamiento).
+=Dividir el dataset en grupos y tomar un porcentaje de cada estrato manteniendo la proporción original de las clases
+~%-50%Dividir el dataset en grupos y aumentar la presencia de las clases minoritarias mediante la duplicación o generación de nuevas muestras, lo que puede llevar a una representación más equilibrada de las clases en el conjunto de prueba.
+~%-50%Dividir el dataset en grupos y aumentar la complejidad del modelo, lo que puede resultar en un modelo más robusto pero también más difícil de interpretar y ajustar.
+}</p></div></div><div class="messageRow_IrVw"><div class="assistantAvatar_F2Ic"><span>🤖</span></div><div class="assistantMessage_Scqo"><p>// question: 67895124  name: ¿Qué es un modelo generativo en inteligencia artificial?
+::¿Qué es un modelo generativo en inteligencia artificial?::[html]¿Qué es un modelo generativo en inteligencia artificial?{
+~%-50%Un algoritmo que clasifica datos existentes en categorías predefinidas basándose en características aprendidas durante el entrenamiento.
+~%-50%Un sistema que optimiza decisiones secuenciales mediante la interacción con un entorno para maximizar una recompensa acumulativa.
+=Un tipo de modelo que aprende la distribución de los datos de entrenamiento y puede generar nuevas muestras similares a estos.
+~%-50%Un enfoque que reduce dimensionalidad de datos complejos transformándolos en representaciones más simples mientras preserva información esencial.
+}</p>
+<p>// question: 38215907  name: ¿Cuál es la principal diferencia entre aprendizaje supervisado y no supervisado?
+::¿Cuál es la principal diferencia entre aprendizaje supervisado y no supervisado?::[html]¿Cuál es la principal diferencia entre aprendizaje supervisado y no supervisado?{
+~%-50%El aprendizaje supervisado utiliza redes neuronales mientras que el no supervisado emplea algoritmos estadísticos tradicionales.
+=El aprendizaje supervisado utiliza datos etiquetados como ejemplos correctos mientras que el no supervisado trabaja con datos sin etiquetar.
+~%-50%El aprendizaje supervisado requiere menos poder computacional mientras que el no supervisado necesita ordenadores más potentes.
+~%-50%El aprendizaje supervisado fue desarrollado en la década de 2010 mientras que el no supervisado existe desde los años 1980.
+}</p>
+<p>// question: 29463187  name: ¿Qué es la validación cruzada (cross-validation)?
+::¿Qué es la validación cruzada (cross-validation)?::[html]¿Qué es la validación cruzada (cross-validation)?{
+~%-50%Una técnica para reducir la complejidad del modelo eliminando características redundantes del conjunto de datos.
+~%-50%Un método para evaluar el rendimiento de varios modelos simultáneamente en un único conjunto de entrenamiento.
+~%-50%Un procedimiento que combina las predicciones de varios modelos para mejorar la precisión general del sistema.
+=Una técnica que divide los datos en múltiples subconjuntos para entrenar y validar el modelo, usando cada subconjunto como datos de prueba una vez.
+}</p></div></div></div></div>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Utilidad</div><div class="admonitionContent_BuS1"><p>Este <em>prompt</em> se ha utilizado para crear un <a href="https://chatgpt.com/g/g-67b721d49a0481918a78bc5104bd22ea-generador-de-preguntas-de-test" target="_blank" rel="noopener noreferrer" class="">GPT personalizado público</a> que genera preguntas de test.</p></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cómo-crear-un-asistente-para-tests">Cómo crear un asistente para tests<a href="#cómo-crear-un-asistente-para-tests" class="hash-link" aria-label="Enlace directo al Cómo crear un asistente para tests" title="Enlace directo al Cómo crear un asistente para tests" translate="no">​</a></h3>
 <p>Los asistentes personalizados permiten reutilizar prompts complejos:</p>
