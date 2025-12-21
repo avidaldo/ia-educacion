@@ -4,11 +4,7 @@
 
 ## ¿Qué lo hace diferente?
 
-A diferencia de ChatGPT o Gemini, NotebookLM es **"source-grounded"** (fundamentado en fuentes): solo genera respuestas basándose en los documentos que tú subes. Esto significa:
-
-- ✅ No inventa información (*hallucinations*)
-- ✅ Todas las respuestas tienen citas de tus documentos
-- ✅ Ideal para trabajo académico donde necesitas fuentes verificables
+A diferencia de ChatGPT o Gemini, NotebookLM es **"source-grounded"** (fundamentado en fuentes): solo genera respuestas basándose en los documentos que tú subes. 
 
 ## Funcionalidades principales
 

@@ -44,9 +44,13 @@ Un modelo de Machine Learning aprende a partir de datos. Si los datos con los qu
 #### Sesgos corregidos con sesgos
 
 <div style={{maxWidth: "600px"}}>
+
 <a href="https://elpais.com/tecnologia/2024-02-24/nazis-chinas-y-vikingos-negros-google-suspende-su-ia-de-imagenes-por-sobrerrepresentar-a-minorias.html" target="_blank" rel="noopener noreferrer">
+
 ![](./img/black-ss.png)
+
 </a>
+
 </div>
 
 > "No puedes tener un sistema que no tenga sesgos, o que sea percibido como no sesgado por todo el mundo" ([Yann LeCun](https://www.youtube.com/watch?v=ZQXHf6gv6s8))

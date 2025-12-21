@@ -4,7 +4,9 @@
 
 
 <div style={{maxWidth: "600px"}}>
+
 ![](./img/venn.gif)
+
 </div>
 
 
@@ -18,7 +20,9 @@
 
 
 <div style={{maxWidth: "600px"}}>
+
 ![](./img/reglas_vs_ml.jpg)
+
 </div>
 
 
@@ -85,19 +89,19 @@ Estos avances, aunque centrados en la creatividad, comparten con la automatizaci
 
 Representan la evolución natural de los chatbots hacia sistemas verdaderamente proactivos e independientes.
 
-    **¿Qué es un agente de IA?** Diferencias clave:
-    - **Chatbot tradicional**: "¿En qué puedo ayudarte?" → Responde a cada pregunta individual.
-    - **Agente autónomo**: "Organiza mi viaje a Roma" → Planifica, busca opciones, compara precios, hace reservas, gestiona imprevistos y te informa del resultado final.
-    
-    **Características fundamentales de los agentes**:
-    Se definen por su **autonomía** para actuar a largo plazo, **proactividad** para tomar la iniciativa, **reactividad** para adaptarse al entorno, **capacidad social** para interactuar y el **uso de herramientas** (APIs, Internet, etc.).
+**¿Qué es un agente de IA?** Diferencias clave:
+- **Chatbot tradicional**: "¿En qué puedo ayudarte?" → Responde a cada pregunta individual.
+- **Agente autónomo**: "Organiza mi viaje a Roma" → Planifica, busca opciones, compara precios, hace reservas, gestiona imprevistos y te informa del resultado final.
 
-    **Ejemplos y aplicaciones destacadas**:
-    - **Gestión personal**: Planificación automática de viajes (**Kayak**), gestión de finanzas o coordinación de tareas domésticas.
-    - **Ámbito profesional**:
-        - **Programación**: Desarrollo de software con **Devin AI** o **GitHub Copilot Workspace**.
-        - **Investigación y legal**: Análisis de información con **Perplexity Pro** o revisión de contratos con **Harvey AI**.
-    - **Sectores de impacto**: Ya se utilizan en atención al cliente (**Zendesk**), logística y trading algorítmico.
+**Características fundamentales de los agentes**:
+Se definen por su **autonomía** para actuar a largo plazo, **proactividad** para tomar la iniciativa, **reactividad** para adaptarse al entorno, **capacidad social** para interactuar y el **uso de herramientas** (APIs, Internet, etc.).
+
+**Ejemplos y aplicaciones destacadas**:
+- **Gestión personal**: Planificación automática de viajes (**Kayak**), gestión de finanzas o coordinación de tareas domésticas.
+- **Ámbito profesional**:
+    - **Programación**: Desarrollo de software con **Devin AI** o **GitHub Copilot Workspace**.
+    - **Investigación y legal**: Análisis de información con **Perplexity Pro** o revisión de contratos con **Harvey AI**.
+- **Sectores de impacto**: Ya se utilizan en atención al cliente (**Zendesk**), logística y trading algorítmico.
 
 ### **IA en la Educación**
 
@@ -112,12 +116,12 @@ La inteligencia artificial transformará el panorama educativo, creando un entor
 
 ### **Inteligencia Artificial General (AGI)**
 
-    **¿Qué es exactamente la AGI?**
-    - **Definición amplia**: Un sistema que puede realizar cualquier tarea cognitiva que un humano pueda hacer.
-    - **Definición estricta**: Un sistema que no solo iguala sino que supera significativamente a los humanos en la mayoría de tareas económicamente valiosas.
-    - **El problema**: No existe consenso científico sobre qué constituye exactamente "inteligencia general" o cómo medirla objetivamente. Investigadores como **Yann LeCun** (Meta) argumentan que el propio término *AGI* es impreciso y que la inteligencia es un espectro multidimensional alcanzable solo mediante avances graduales.
+**¿Qué es exactamente la AGI?**
+- **Definición amplia**: Un sistema que puede realizar cualquier tarea cognitiva que un humano pueda hacer.
+- **Definición estricta**: Un sistema que no solo iguala sino que supera significativamente a los humanos en la mayoría de tareas económicamente valiosas.
+- **El problema**: No existe consenso científico sobre qué constituye exactamente "inteligencia general" o cómo medirla objetivamente. Investigadores como **Yann LeCun** (Meta) argumentan que el propio término *AGI* es impreciso y que la inteligencia es un espectro multidimensional alcanzable solo mediante avances graduales.
 
-    **Hitos esperados hacia la AGI**:
-    - **Próximos 2-5 años**: Modelos que superen a los humanos en la mayoría de tareas cognitivas individuales (escritura, programación, análisis, etc.).
-    - **5-10 años**: Sistemas que puedan combinar múltiples habilidades de forma coherente y mantener contexto a largo plazo.
-    - **10-20 años**: Posible emergencia de sistemas que demuestren razonamiento abstracto, creatividad genuina y aprendizaje autónomo comparables o superiores a los humanos.
+**Hitos esperados hacia la AGI**:
+- **Próximos 2-5 años**: Modelos que superen a los humanos en la mayoría de tareas cognitivas individuales (escritura, programación, análisis, etc.).
+- **5-10 años**: Sistemas que puedan combinar múltiples habilidades de forma coherente y mantener contexto a largo plazo.
+- **10-20 años**: Posible emergencia de sistemas que demuestren razonamiento abstracto, creatividad genuina y aprendizaje autónomo comparables o superiores a los humanos.

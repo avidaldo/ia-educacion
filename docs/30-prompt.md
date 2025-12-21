@@ -1,4 +1,4 @@
-# Prompt Engineering
+# Diseño de Prompts
 
 ## Introducción
 
@@ -157,7 +157,9 @@ Los modelos más recientes (diciembre 2025) como **GPT-5.2**, **Gemini 3 Deep Th
 - **Usa delimitadores**: estructura inputs complejos con Markdown o XML
 - **Define formato explícitamente**: especifica si quieres JSON, lista, tabla, etc.
 
-> **Nota académica**: En modelos anteriores, ejemplos explícitos de cadenas de pensamiento inducían al modelo a "pensar en voz alta". En GPT-5.x, Gemini 3 y Claude 4.5, el razonamiento se ejecuta internamente y está optimizado; incluir "piensa paso a paso" puede obstaculizar su rendimiento, pues están diseñados para prompts directos.[^openai2025]
+:::warning
+En modelos anteriores, ejemplos explícitos de cadenas de pensamiento inducían al modelo a "pensar en voz alta". En GPT-5.x, Gemini 3 y Claude 4.5, el razonamiento se ejecuta internamente y está optimizado; incluir "piensa paso a paso" puede obstaculizar su rendimiento, pues están diseñados para prompts directos.[^openai2025]
+:::
 
 ---
 
@@ -203,7 +205,7 @@ Coordinar prompts entre múltiples agentes especializados para tareas complejas.
 
 ---
 
-## Documentación oficial y recursos académicos
+## Documentación
 
 ### Guías oficiales
 - [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)

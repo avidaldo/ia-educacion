@@ -1,64 +1,54 @@
 # Chatbots y herramientas
 
-![](./img/herramientas_napkin.png)  
-
-(imagen creada con Napkin partiendo de estos mismos apuntes)
-
-## Chatbots (LLMs)
+## Principales chatbots
 
 ### OpenAI
 
-- [ChatGPT](https://chat.openai.com/) - GPT-5.2, GPT-5.2 Pro, GPT-5.2-Codex
-  - Anterior: GPT-5, GPT-5.1, GPT-4o
-  - Modelos razonadores: integrados en GPT-5.x (razonamiento interno automático)
+- [ChatGPT](https://chat.openai.com/) - GPT 5.2
 
 Integra:
 - Dall-E: texto a imagen
 - Sora: texto a vídeo
-
 - [GPTs personalizados](https://chatgpt.com/gpts): asistentes con prompts específicos para tareas concretas.
 
 ### Google
 
 - [Gemini](https://gemini.google.com/) - Gemini 3 Pro, Gemini 3 Flash
-  - Anterior: Gemini 2.5 Pro, Flash
-  - Gemini 3 Deep Think: modo de razonamiento mejorado
   - Integrado con Gmail, GDocs, GMaps, **YouTube**...
   - [Gems](https://gemini.google.com/gems): asistentes personalizados (equivalente a GPTs)
-  - Chatbot educativo con Google Workspace for Education
 
 - [NotebookLM](https://notebooklm.google/) - ver [sección dedicada](./22-notebooklm.md)
   - IA "source-grounded": solo responde basándose en tus documentos
-  - Genera podcasts, guías de estudio, quizzes...
+  - Genera podcasts, guías de estudio, cuestionarios...
 
 - [AI Studio](https://aistudio.google.com/)
-  - Modelos experimentales (2.5 Flash) y personalización técnica avanzada
+  - Modelos experimentales y personalización técnica avanzada
   - Streaming en tiempo real (IA asistiendo a vídeo)
 
 ### [Claude](https://claude.ai/) (Anthropic)
-- Claude Opus 4.5 (modelo más capaz, noviembre 2025)
-- Claude Sonnet 4.5 (septiembre 2025)
-  - Anteriores: Claude 3.5 Sonnet, Claude 3 Opus
-- Líder en programación, agentes y uso de ordenador
-- [Claude Artifacts](https://claude.ai/artifacts): crea y publica aplicaciones directamente
+- Claude Sonnet/Opus 4.5
+- Líder en programación
+
+### [Perplexity](https://www.perplexity.ai/)
+- Utiliza principalmente otros modelos, pero centra su servicio en la búsqueda web
 
 ### [DeepSeek](https://chat.deepseek.com/)
-- **DeepSeek-R1**: modelo razonador que compite con o1 en benchmarks, 27 veces más barato
-- *Open weights* (podemos descargarlo, ver cómo funciona, crear nuestra versión...)
-- Permite ver la cadena de pensamiento (CoT) completa
+- Hito histórico (enero 2025): "momento Sputnik":
+  - *Open weights* (podemos descargarlo, ver cómo funciona, crear nuestra versión...)
+  - Permite ver la cadena de pensamiento (CoT) completa
+  - Mucho más barato que sus competidores
 
 ### Grok (xAI)
-- [Grok](https://x.com/i/grok?focus=1) - Integrado en X (Twitter)
+- [Grok](https://x.com/i/grok?focus=1)
 
 ### [Copilot](https://copilot.microsoft.com/) (Microsoft)
-- Basado en GPT-4o
 - Copilotos integrados en Office 365, Teams, etc.
 
 ### [Le Chat](https://chat.mistral.ai/chat) (Mistral)
 - Único competidor europeo relevante (francés, *open weights*)
 
 ### [Qwen](https://chat.qwenlm.ai/) 
-- Modelo chino (*open weights*), muy competitivo
+- Modelo chino (*open weights*)
 
 
 ## Configuración de Chatbots
@@ -100,31 +90,12 @@ Interfaces avanzadas para edición colaborativa con la IA:
 
 ## Navegadores con IA
 
-Nueva categoría de navegadores que integran IA para automatizar tareas:
-
-### [Dia Browser](https://diabrowser.com/) (The Browser Company)
-- Navegador "AI-first" de los creadores de Arc
-- Chatbot integrado que accede a información de todas las pestañas abiertas
-- Barra de direcciones conversacional
-- Sistema de "Skills" para guardar prompts frecuentes
-- Automatización de tareas online
-
 ### [Perplexity Comet](https://www.perplexity.ai/)
 - Navegador de Perplexity con búsqueda integrada
 - Investigación en profundidad mientras navegas
 
-### Otros navegadores con IA
-- **Microsoft Edge** con Copilot integrado
-- **Brave Leo**: asistente IA privado
-- **Opera Aria**: asistente con acceso a información actualizada
-
 
 ## Otras herramientas
-
-### [Perplexity](https://www.perplexity.ai/)
-
-- Permite usar modelos como los anteriores pero para buscar en la web
-- Permite realizar investigaciones en profundidad, parecido a *Deep Research* de ChatGPT pero mucho más rápido
 
 ### [Mermaid](https://mermaid.js.org/)
 - Genera diagramas de flujo, secuencias, etc. desde texto
@@ -146,22 +117,6 @@ Ver [sección dedicada a presentaciones con IA](./23-presentaciones.md)
 - [Canva](https://www.canva.com/education/) - Control de diseño extenso
 - [Beautiful.AI](https://www.beautiful.ai/)
 - [slidesgpt](https://slidesgpt.com)
-
-
-### Especialmente para el ámbito educativo
-
-- [Magic School](https://www.magicschool.ai/)
-- [Poe AI](https://poe.com)
-- [unstuckstudy](https://unstuckstudy.com)
-
-
-## Detección de plagio
-
-- [zerogpt](https://www.zerogpt.com/)
-- [Turnitin](https://www.turnitin.com/)
-- [Quibot](https://quillbot.com/ai-content-detector)
-- [Grammarly](https://www.grammarly.com/plagiarism-checker)
-- [Plagiarism Checker](https://www.plagiarismchecker.com/)
 
 
 ## Modelos de texto a imagen

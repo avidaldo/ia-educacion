@@ -93,4 +93,3 @@ Podemos pedir a los estudiantes que:
 3. Mejoren y personalicen el diseño
 4. Presenten explicando sus cambios
 
-Esto enseña tanto el uso de herramientas IA como pensamiento crítico.
