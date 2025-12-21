@@ -1,0 +1,105 @@
+import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/components/ChatConversation';
+
+# Tests para Moodle
+
+Esta sección cubre la generación de preguntas de test con IA para importar a Moodle y otras plataformas de aulas virtuales.
+
+## Formatos importables a Moodle
+
+### Formato Aiken
+[Documentación oficial](https://docs.moodle.org/all/es/Formato_Aiken)
+
+- ✅ Sencillo e interpretable
+- ❌ Limitado a preguntas de opción múltiple
+- ❌ Sin penalización por respuesta incorrecta
+
+**Ejemplo**:
+```
+¿Cuál es la capital de Francia?
+A. Londres
+B. París
+C. Berlín
+D. Madrid
+ANSWER: B
+```
+
+### Formato GIFT
+[Documentación oficial](https://docs.moodle.org/all/es/Formato_GIFT)
+
+- ✅ Más versátil
+- ✅ Permite distinta puntuación por respuesta
+- ✅ Soporta varios tipos de pregunta
+- ⚠️ Sintaxis más compleja
+
+**Ejemplo**:
+```
+::Capital de Francia::¿Cuál es la capital de Francia?{
+=París
+~Londres
+~Berlín
+~Madrid
+}
+```
+
+## Generación con IA
+
+### Prompt base para generar tests
+
+```
+Genera 10 preguntas de opción múltiple en formato [GIFT/Aiken] sobre el siguiente tema: [TEMA].
+
+Requisitos:
+- 4 opciones por pregunta
+- Solo una respuesta correcta
+- Variedad de dificultad (fácil, media, difícil)
+- Las opciones incorrectas deben ser plausibles
+```
+
+### GPT personalizado para tests
+
+<ChatConversation source="/data/chats/test-question-generator.yaml" />
+
+:::tip[Utilidad]
+Este *prompt* se ha utilizado para crear un [GPT personalizado público](https://chatgpt.com/g/g-67b721d49a0481918a78bc5104bd22ea-generador-de-preguntas-de-test) que genera preguntas de test.
+:::
+
+### Cómo crear un asistente para tests
+
+Los asistentes personalizados permiten reutilizar prompts complejos:
+
+**En ChatGPT (GPTs)**:
+1. Ve a [ChatGPT GPTs](https://chatgpt.com/gpts)
+2. Crea un nuevo GPT
+3. En "Instructions", define el prompt para generar tests
+4. Guarda y comparte el enlace
+
+**En Gemini (Gems)**:
+1. Accede a [Gemini Gems](https://gemini.google.com/gems)
+2. Crea una nueva Gem
+3. Define las instrucciones similares
+4. Disponible para usuarios con Gemini Advanced
+
+:::warning[Cuidado con el prompt]
+En las instrucciones del asistente, NO escribas "Crea un generador de preguntas de test...". Escribe directamente el prompt que quieres que se añada a cada conversación, como: "Eres un experto en evaluación educativa. Cuando el usuario te proporcione un tema, genera preguntas de test en formato GIFT..."
+:::
+
+## Importar a Moodle
+
+1. Prepara el archivo con las preguntas en formato Aiken o GIFT
+2. Ve al banco de preguntas de tu curso
+3. Selecciona "Importar"
+4. Elige el formato (Aiken o GIFT)
+5. Sube el archivo
+6. Revisa que las preguntas se hayan importado correctamente
+
+:::info[Ejemplo de chat]
+[Ejemplo de chat con el GPT generador de tests, pidiendo preguntas sobre prompt engineering y cómo importar a Moodle](https://chatgpt.com/share/67b732ca-1a94-8002-978e-d2c13676e49a) 
+:::
+
+## Buenas prácticas
+
+- **Revisa siempre**: La IA puede generar preguntas con errores o ambigüedades
+- **Varía la dificultad**: Pide explícitamente preguntas fáciles, medias y difíciles
+- **Distractores plausibles**: Las opciones incorrectas deben ser creíbles
+- **Evita negaciones**: Las preguntas con "NO" o "EXCEPTO" confunden más que evalúan
+- **Prueba antes de usar**: Importa y revisa en Moodle antes de usar en un examen real

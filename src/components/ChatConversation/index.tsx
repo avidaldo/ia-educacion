@@ -5,6 +5,7 @@ import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import { useColorMode } from '@docusaurus/theme-common';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 import { ChatConversationProps, UserMessageProps, AssistantMessageProps, ConversationData, Message } from './types';
 
@@ -82,16 +83,17 @@ export function ChatConversation({
   
   const { siteConfig } = useDocusaurusContext();
   const { colorMode } = useColorMode();
+  
+  // Use useBaseUrl to properly resolve the source path
+  const resolvedUrl = useBaseUrl(source || '');
 
   useEffect(() => {
     if (!source) return;
     
     async function loadConversation() {
       try {
-        // Construct full URL with baseUrl if needed
-        const url = source.startsWith('http') 
-          ? source 
-          : `${siteConfig.baseUrl || ''}${source.startsWith('/') ? source : `/${source}`}`;
+        // Use the resolved URL from useBaseUrl hook
+        const url = source.startsWith('http') ? source : resolvedUrl;
         
         // Fetch the YAML file
         const response = await fetch(url);
@@ -122,7 +124,7 @@ export function ChatConversation({
     }
     
     loadConversation();
-  }, [source, siteConfig.baseUrl]);
+  }, [source, resolvedUrl]);
   
   // Render based on the current state
   if (loading) return <div className={styles.loading}>Loading conversation...</div>;
