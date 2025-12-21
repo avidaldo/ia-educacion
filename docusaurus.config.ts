@@ -61,6 +61,7 @@ const config: Config = {
         language: ['es'],
       },
     ],
+    require.resolve('./plugins/chat-data-plugin'),
   ],
 
   themeConfig: {

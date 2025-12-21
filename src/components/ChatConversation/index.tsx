@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import yaml from 'js-yaml';
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import { useColorMode } from '@docusaurus/theme-common';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import { usePluginData } from '@docusaurus/useGlobalData';
 import styles from './styles.module.css';
 import { ChatConversationProps, UserMessageProps, AssistantMessageProps, ConversationData, Message } from './types';
 
@@ -75,60 +74,38 @@ export function ChatConversation({
   date: initialDate = "",
   source
 }: ChatConversationProps): JSX.Element {
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [model, setModel] = useState<string>(initialModel);
-  const [date, setDate] = useState<string>(initialDate);
-  const [loading, setLoading] = useState<boolean>(Boolean(source));
-  const [error, setError] = useState<string | null>(null);
-  
   const { siteConfig } = useDocusaurusContext();
   const { colorMode } = useColorMode();
   
-  // Use useBaseUrl to properly resolve the source path
-  const resolvedUrl = useBaseUrl(source || '');
-
-  useEffect(() => {
-    if (!source) return;
+  // Get chat data from plugin (loaded at build time)
+  const chatData = usePluginData('docusaurus-plugin-chat-data') as Record<string, ConversationData>;
+  
+  // If source is provided, get data from plugin
+  let messages: Message[] = [];
+  let model = initialModel;
+  let date = initialDate;
+  
+  if (source && chatData) {
+    const conversationData = chatData[source];
     
-    async function loadConversation() {
-      try {
-        // Use the resolved URL from useBaseUrl hook
-        const url = source.startsWith('http') ? source : resolvedUrl;
-        
-        // Fetch the YAML file
-        const response = await fetch(url);
-        
-        if (!response.ok) {
-          throw new Error(`Failed to load conversation: ${response.status}`);
-        }
-        
-        const yamlText = await response.text();
-        const conversationData = yaml.load(yamlText) as ConversationData;
-        
-        // Update component state with the loaded data
-        if (conversationData.model) setModel(conversationData.model);
-        if (conversationData.date) setDate(conversationData.date);
-        
-        if (Array.isArray(conversationData.messages)) {
-          setMessages(conversationData.messages);
-        } else {
-          throw new Error('Invalid conversation format: messages should be an array');
-        }
-      } catch (err) {
-        const errorMessage = err instanceof Error ? err.message : 'Unknown error';
-        setError(errorMessage);
-        console.error('Error loading conversation:', err);
-      } finally {
-        setLoading(false);
-      }
+    if (!conversationData) {
+      // Chat not found - show error
+      return (
+        <div className={styles.error}>
+          Chat conversation not found: {source}
+          <br />
+          <small>Available chats: {Object.keys(chatData).join(', ')}</small>
+        </div>
+      );
     }
     
-    loadConversation();
-  }, [source, resolvedUrl]);
-  
-  // Render based on the current state
-  if (loading) return <div className={styles.loading}>Loading conversation...</div>;
-  if (error) return <div className={styles.error}>Error: {error}</div>;
+    // Extract data from loaded conversation
+    if (conversationData.model) model = conversationData.model;
+    if (conversationData.date) date = conversationData.date;
+    if (Array.isArray(conversationData.messages)) {
+      messages = conversationData.messages;
+    }
+  }
   
   return (
     <div className={styles.chatContainer}>
@@ -140,7 +117,7 @@ export function ChatConversation({
       </div>
       <div className={styles.messagesContainer}>
         {messages.length > 0 ? (
-          // Render messages from YAML if available
+          // Render messages from plugin data
           messages.map((msg, index) => (
             msg.role === 'user' ? (
               <UserMessage key={index} baseUrl={siteConfig.baseUrl}>{msg.content}</UserMessage>
@@ -149,7 +126,7 @@ export function ChatConversation({
             )
           ))
         ) : (
-          // Otherwise render children elements
+          // Otherwise render children elements (manual messages)
           children
         )}
       </div>
