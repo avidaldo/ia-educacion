@@ -1,250 +1,154 @@
 # Diseño de Prompts
 
-## Introducción
+## Qué buscamos (en contexto educativo)
 
-- ¿Qué es un prompt y por qué es importante?
-    - Un prompt es una instrucción que se le da a un modelo de lenguaje para que genere una respuesta (la pregunta que le hacemos al chatbot).
-    - Es importante porque determina la calidad de la respuesta.
-    - Un buen prompt es aquel que permite al modelo entender bien lo que se le pide y dar una respuesta adecuada.
-    - Un mal prompt puede llevar a respuestas incorrectas o incoherentes.
+Un buen prompt no es “una frase ingeniosa”: es un **encargo didáctico** bien definido.
 
----
+En docencia, un prompt es útil cuando ayuda a producir **materiales usables y evaluables**, por ejemplo:
 
-## Estrategias básicas
+- una ficha de actividad con pasos minuto a minuto,
+- un banco de preguntas en un formato importable (p. ej. GIFT),
+- una rúbrica con criterios observables,
+- una adaptación (apoyo/ampliación) sin cambiar el objetivo.
 
-### Lo más básico:
-- Usa varios modelos (distintas aplicaciones) y prueba.
-- Siempre itera: da correcciones y matices a las respuestas.
-    - Sé crítico e inquisitivo ("¿Estás seguro?")
-- Pregunta al propio modelo cómo mejorar el prompt / Ofrece al modelo clarificar dudas.
-- Estructura: "dado esto, siguiendo estas reglas y estas restricciones, dame esto"
+## Plantilla base (reutilizable)
 
----
+Cuando no sabes por dónde empezar, usa una plantilla. Esto funciona especialmente bien con modelos modernos.
 
-## Técnicas fundamentales de prompting
+```text
+Eres un asistente de diseño didáctico para secundaria y FP.
 
-### 1. Especificidad y claridad
+Tarea:
+- Quiero crear: [actividad / banco de preguntas / rúbrica / guía de estudio]
 
-Los LLMs son altamente sensibles a la formulación exacta de los prompts.[^maxim2025]
+Contexto:
+- Materia/tema:
+- Nivel (curso o FP):
+- Duración:
+- Recursos disponibles:
+- Perfil del grupo (general, sin datos personales):
 
-**✅ Buena práctica**:
-```
-Analiza el impacto económico de la Revolución Industrial en Inglaterra 
-entre 1760-1840. Estructura la respuesta en: causas, desarrollo, 
-consecuencias económicas y sociales. Usa 500 palabras máximo.
-```
+Antes de responder:
+- Hazme 3–5 preguntas de aclaración (solo las necesarias).
+- Si falta información crítica, propón hasta 3 supuestos explícitos y continúa.
 
-**❌ Evitar**:
-```
-Háblame de la Revolución Industrial
-```
+Salida:
+- Formato: Markdown
+- Encabezados fijos: [lista de encabezados]
+- Límites: [p. ej. máx. 1 página / máx. 12 ítems / tabla]
 
-### 2. Definición de contexto y perspectiva
+Restricciones:
+- No uses datos personales del alumnado.
+- No inventes normativa, datos del centro ni cifras. Si no lo sabes, indícalo.
 
-Proporcionar contexto relevante y definir una perspectiva o rol mejora significativamente la calidad de las respuestas.[^orq2025]
-
-**Ejemplo**:
-```
-Eres un profesor de historia especializado en enseñanza secundaria. 
-Explica la fotosíntesis a estudiantes de 14 años usando analogías 
-cotidianas. Evita jerga técnica.
+Criterios de calidad:
+- Debe incluir criterios de éxito observables y una evaluación rápida.
 ```
 
-### 3. Especificación del formato de salida
+## Técnicas fundamentales (las que más impacto tienen)
 
-Definir explícitamente la estructura deseada asegura consistencia y usabilidad.[^maxim2025]
+### 1) Claridad del objetivo (y evidencia)
 
-**Ejemplo**:
-```
-Genera un resumen del siguiente texto en formato de lista con:
-- 3 puntos clave
-- 2 conclusiones principales
-- 1 recomendación práctica
-```
+Mal: “Haz una actividad sobre IA.”
 
-### 4. Uso de delimitadores
+Mejor: “Crea una actividad de 50 min para 2º FP sobre cómo **evaluar respuestas de una IA**. Evidencia: el alumnado identifica 3 errores típicos y propone 1 mejora.”
 
-Los delimitadores (comillas triples, XML, Markdown) ayudan al modelo a distinguir diferentes partes del prompt.[^openai2025]
+### 2) Contexto docente mínimo viable
 
-**Ejemplo**:
-```
-Traduce el siguiente texto al inglés:
+Incluye siempre: **nivel**, **tiempo**, **recursos** y **producto final**.
+
+Si no lo tienes claro, pide que la IA haga preguntas. Eso reduce respuestas genéricas.
+
+### 3) Control del formato (para que sea usable)
+
+Especifica el formato como si fuese una “plantilla de entrega”. Ejemplos útiles:
+
+- tabla de comparación con columnas fijas,
+- lista de verificación (checklist),
+- Markdown con encabezados exactos.
+
+Si vas a reutilizar el resultado en herramientas, pide formatos **estructurados** (por ejemplo JSON) *solo* cuando lo necesites.
+
+### 4) Delimitadores (para evitar mezclas)
+
+Si incluyes textos largos (temario, contexto, instrucciones del centro), sepáralos con delimitadores:
+
+```text
+Contexto del centro:
 """
-[Texto en español aquí]
+[pega aquí el texto]
 """
-
-Después resume la traducción en 2 frases.
 ```
 
----
+## Prácticas “modernas” que sí se notan (calidad y rigor)
 
-## Técnicas avanzadas de razonamiento
+### A) Dos pasadas: borrador → auditoría → versión final
 
-### Chain-of-Thought (CoT) Prompting
+Pide primero una versión 1 y luego una auditoría contra criterios.
 
-Introducido en 2022, CoT anima a los LLMs a descomponer problemas complejos en pasos lógicos intermedios.[^getmaxim2025][^adaline2025]
+Ejemplo de auditoría:
 
-**Modalidades**:
+```text
+Revisa tu propuesta con esta lista:
+1) ¿El objetivo es observable?
+2) ¿Hay riesgos de privacidad?
+3) ¿La evaluación mide lo que se pretende?
+4) ¿Hay supuestos no declarados?
 
-#### Few-Shot CoT (con ejemplos)
-```
-P: Si tengo 15 manzanas y doy 4 a mi hermano, ¿cuántas me quedan?
-Razonamiento: Empiezo con 15. Si doy 4, resto: 15 - 4 = 11
-R: Me quedan 11 manzanas.
-
-P: Si un tren viaja a 60 km/h durante 2.5 horas, ¿qué distancia recorre?
-Razonamiento:
+Devuelve: (a) hallazgos, (b) versión mejorada.
 ```
 
-#### Zero-Shot CoT
-```
-Resuelve el siguiente problema pensando paso a paso:
+### B) Comparación A/B (cuando iteras)
 
-Si una clase tiene 24 estudiantes y se dividen en grupos de 4, 
-¿cuántos grupos se forman?
-```
+En lugar de “mejóralo”, da dos versiones y pide una tabla por criterios:
 
-**Beneficios demostrados**:
-- Mejora significativa en razonamiento matemático y lógico
-- Reduce errores en tareas de múltiples pasos
-- Aumenta la transparencia del proceso de razonamiento
-
-### Tree-of-Thought (ToT)
-
-Generaliza CoT permitiendo al modelo generar múltiples caminos de razonamiento en paralelo, usando algoritmos de búsqueda en árbol.[^getmaxim2025]
-
-**Aplicación**:
-- Problemas con múltiples soluciones válidas
-- Planificación estratégica
-- Análisis de escenarios alternativos
-
-### Self-Consistency
-
-Genera múltiples caminos de razonamiento y selecciona la respuesta más consistente mediante votación por mayoría, reduciendo errores.[^getmaxim2025][^adaline2025]
-
-### ReAct (Reasoning + Acting)
-
-Combina trazas de razonamiento con acciones específicas de tarea, permitiendo al modelo adaptar sus planes basándose en observaciones.[^adaline2025]
-
-**Ejemplo**:
-```
-Pensamiento: Necesito buscar información sobre el PIB de España en 2024
-Acción: búsqueda["PIB España 2024"]
-Observación: [resultados de búsqueda]
-Pensamiento: Los datos muestran...
+```text
+Compara Prompt A vs Prompt B por: claridad, formato, verificabilidad, riesgos.
+Devuelve una tabla y una recomendación.
 ```
 
----
+### C) Verificación y límites (anti-alucinaciones)
 
-## Prompting para modelos razonadores (GPT-5.x, Gemini 3, Claude 4.5)
+En docencia, el problema no es solo “acertar”: es **no inventar**.
 
-Los modelos más recientes (diciembre 2025) como **GPT-5.2**, **Gemini 3 Deep Think** y **Claude Opus 4.5** integran razonamiento interno automático, por lo que requieren estrategias diferentes.[^openai2025][^google2025]
+Incluye restricciones como:
 
-### Mejores prácticas para razonadores
+- “Si necesitas datos (fechas, normativa, estadísticas), indícalo y sugiere cómo verificarlo. No inventes.”
+- “Marca claramente lo que sea supuesto.”
 
-| ❌ Evitar | ✅ Hacer |
-|-----------|----------|
-| "Piensa paso a paso" | Prompts directos y claros |
-| Demasiados ejemplos | Zero-shot primero, few-shot solo si necesario |
-| Over-engineering del prompt | Solo contexto esencial |
-| Especificar rol demasiado detallado | Especificar formato de salida |
-| Ejemplos de CoT explícitos | Dejar que el modelo razone internamente |
+## Modelos con razonamiento (cómo pedir mejor)
 
-**Guía específica**:
-- **Sé directo**: prompts simples y claros funcionan mejor que instrucciones elaboradas
-- **Zero-shot primero**: intenta sin ejemplos, añádelos solo para formatos específicos
-- **No pidas CoT manualmente**: ya lo hacen internamente; pedirlo puede degradar rendimiento
-- **Usa delimitadores**: estructura inputs complejos con Markdown o XML
-- **Define formato explícitamente**: especifica si quieres JSON, lista, tabla, etc.
+Con modelos actuales, suele funcionar mejor:
 
-:::warning
-En modelos anteriores, ejemplos explícitos de cadenas de pensamiento inducían al modelo a "pensar en voz alta". En GPT-5.x, Gemini 3 y Claude 4.5, el razonamiento se ejecuta internamente y está optimizado; incluir "piensa paso a paso" puede obstaculizar su rendimiento, pues están diseñados para prompts directos.[^openai2025]
-:::
+- pedir una respuesta **directa**,
+- pedir **supuestos** si falta información,
+- y pedir una **justificación breve** basada en criterios (no un razonamiento largo).
 
----
+Evita convertir el prompt en una receta interminable. Si la salida está bien especificada, el modelo “se organiza” solo.
 
-## Técnicas emergentes (2025)
+## Cuando usar one-shot / few-shot
 
-### Recursive Self-Improvement Prompting (RSIP)
+Úsalos sobre todo para **estilo y formato**, no para “enseñar contenido”.
 
-El modelo evalúa críticamente y mejora iterativamente sus propias respuestas.[^reddit2025]
+- One-shot: un ejemplo de la salida deseada.
+- Few-shot: 2–3 ejemplos cuando el formato es complejo o muy sensible (p. ej. rúbricas).
 
-**Ejemplo**:
-```
-Genera una explicación de la fotosíntesis para niños de 10 años.
+## Agentes y flujos (cuando el chat no basta)
 
-Ahora revisa tu respuesta y mejórala considerando:
-1. ¿Es el vocabulario apropiado para la edad?
-2. ¿Hay analogías más efectivas?
-3. ¿Falta algún concepto clave?
-```
+Un “agente” tiene sentido cuando quieres que el sistema:
 
-### Context-Aware Decomposition (CAD)
+- siga un plan,
+- use herramientas (p. ej., convertir a GIFT, aplicar una rúbrica, revisar formato),
+- y pare cuando cumpla criterios.
 
-Descompone tareas complejas manteniendo consciencia del contexto global.[^reddit2025]
+Si estás diseñando un flujo, especifica:
 
-### Mega-Prompts
+- objetivo y criterios de parada,
+- herramientas permitidas,
+- restricciones (privacidad y fuentes),
+- formato de salida.
 
-Instrucciones detalladas con contexto enriquecido para tareas específicas complejas.[^godofprompt2025]
+## Guías oficiales recomendadas
 
----
-
-## Estrategias de validación
-
-### *Contrarian Prompting*
-
-Solicita a otro modelo (o chat temporal sin memoria) que haga una valoración crítica de las respuestas.
-
-> "Haz un análisis exhaustivo señalando todo aquello que pueda ser cuestionable, incompleto o mejorable en el siguiente texto. Sé exhaustivo y crítico: [texto]."
-
-**Ventaja**: Evita el sesgo de "dar siempre la razón" o "no cuestionar lo previo".
-
-### Multi-Agent Orchestration
-
-Coordinar prompts entre múltiples agentes especializados para tareas complejas.[^getmaxim2025]
-
----
-
-## Documentación
-
-### Guías oficiales
-- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
-- [Anthropic Prompt Engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering)
-- [Google AI Prompting Guide](https://ai.google.dev/gemini-api/docs/prompting-intro)
-
-### Investigación académica clave
-
-**The Prompt Report** (Febrero 2025)[^aakashg2025]  
-Revisión sistemática catalogando 58 técnicas de prompting para texto y 40 para otras modalidades.
-
-**SOPL: Sequential Optimal Learning** (EMNLP 2025)[^emnlp2025]  
-Aproximación de aprendizaje óptimo secuencial a la ingeniería automática de prompts.
-
-**Prompt Engineering and LLM Productivity** (arXiv 2025)[^arxiv2025]  
-Investiga cómo la estructura y claridad de prompts impacta la efectividad y productividad.
-
----
-
-## El futuro del prompt engineering
-
-En 2025, el campo evoluciona hacia:[^renierbotha2025][^getmaxim2025]
-
-1. **Context Engineering**: Del prompt al contexto completo (tokens, información, memoria)
-2. **Automated Optimization**: LLMs optimizando prompts para otros LLMs
-3. **Prompt Libraries**: Bibliotecas versionadas de prompts como código
-4. **Multimodal Prompting**: Integración de texto, imagen, audio, vídeo
-
----
-
-[^maxim2025]: Maxim AI. "Prompt Engineering Trends 2025." [getmaxim.ai](https://getmaxim.ai)
-[^orq2025]: Orq.ai. "Best Practices for Prompt Engineering." [orq.ai](https://orq.ai)
-[^openai2025]: OpenAI. "Reasoning Guide - GPT-5." [platform.openai.com/docs/guides/reasoning](https://platform.openai.com/docs/guides/reasoning)
-[^google2025]: Google AI. "Gemini 3 Release Notes." [blog.google](https://blog.google)
-[^getmaxim2025]: Maxim AI. "Advanced Prompting Techniques: CoT, ToT, Self-Consistency." [getmaxim.ai](https://getmaxim.ai)
-[^adaline2025]: Adaline AI. "Reasoning Techniques for LLMs." [adaline.ai](https://adaline.ai)
-[^godofprompt2025]: God of Prompt. "Prompt Engineering Trends 2025." [godofprompt.ai](https://godofprompt.ai)
-[^reddit2025]: Reddit AI. "RSIP and CAD Techniques Discussion." [reddit.com](https://reddit.com)
-[^aakashg2025]: Aakash Gupta. "The Prompt Report - A Systematic Survey." [aakashg.com](https://aakashg.com)
-[^emnlp2025]: EMNLP. "Accepted Papers 2025." [emnlp.org](https://emnlp.org)
-[^arxiv2025]: arXiv. "Prompt Engineering and the Effectiveness of LLMs." [arxiv.org](https://arxiv.org)
-[^renierbotha2025]: Renier Botha. "The Future of Prompt Engineering." [renierbotha.com](https://renierbotha.com)
+- OpenAI: https://platform.openai.com/docs/guides/prompt-engineering
+- Google Gemini: https://ai.google.dev/gemini-api/docs/prompting-intro

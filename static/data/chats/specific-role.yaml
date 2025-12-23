@@ -1,28 +1,49 @@
 messages:
   - role: user
-    content: Actúa como un asesor financiero especializado en inversiones. Quiero que me expliques las ventajas y riesgos de invertir en criptomonedas en 2024. Usa un lenguaje accesible para principiantes y evita términos demasiado técnicos. Finaliza con una recomendación general según el perfil de riesgo de un inversor novato.
+    content: |
+      Actúa como un asesor pedagógico especializado en secundaria y FP.
+
+      Objetivo: necesito un prompt reutilizable para pedir a una IA que genere una actividad de aula (45-60 min) sobre cualquier tema.
+
+      Requisitos del prompt:
+      - Debe empezar pidiendo 3-5 preguntas de aclaración (nivel, materia, requisitos del centro, tiempo, recursos).
+      - Debe producir una ficha lista para usar con: objetivos, criterios de éxito, materiales, pasos minuto a minuto, atención a la diversidad (2 adaptaciones), y evaluación rápida (exit ticket).
+      - Debe evitar inventar normativa o “datos del centro”; si falta información debe marcarlo como supuesto.
+      - Debe pedir el formato de salida en Markdown con encabezados fijos.
+
+      Devuélveme SOLO el prompt final (en español).
   
   - role: assistant
     content: |
-      Invertir en **criptomonedas** en 2024 sigue siendo una opción atractiva, pero también conlleva riesgos importantes. Te explico sus ventajas y desventajas para que tomes una decisión informada.
+      Copia y pega este prompt (es un “prompt plantilla”):
 
-      ### ✅ **Ventajas de invertir en criptomonedas**
-      1. **Alta rentabilidad potencial**: Muchas criptomonedas han generado grandes ganancias a largo plazo. Bitcoin, por ejemplo, ha mostrado una tendencia alcista en el tiempo, aunque con altibajos.
-      2. **Diversificación**: Agregar criptomonedas a tu portafolio puede servir para diversificar tus inversiones, reduciendo la dependencia de activos tradicionales como acciones o bonos.
-      3. **Accesibilidad y liquidez**: Puedes comprar y vender criptomonedas en cualquier momento del día, sin depender de horarios de mercado como en la bolsa.
-      4. **Innovación y adopción creciente**: La tecnología blockchain sigue evolucionando, y cada vez más empresas e instituciones la están adoptando, lo que puede aumentar su valor con el tiempo.
+      ---
 
-      ### ⚠ **Riesgos de invertir en criptomonedas**
-      1. **Alta volatilidad**: El precio de las criptomonedas puede subir o bajar bruscamente en cuestión de horas, lo que significa que puedes ganar mucho, pero también perder dinero rápidamente.
-      2. **Falta de regulación**: Aunque algunos países están regulando las criptomonedas, aún existen riesgos relacionados con fraudes, hackeos y cambios en las normativas gubernamentales.
-      3. **Riesgo de pérdida total**: No todas las criptomonedas tienen futuro. Algunas pueden desaparecer o perder casi todo su valor, lo que podría significar una pérdida total de tu inversión.
-      4. **Requiere conocimientos**: A diferencia de otros activos más tradicionales, invertir en criptomonedas implica entender conceptos como billeteras digitales, claves privadas y exchanges, lo que puede ser complicado para principiantes.
+      Eres un asistente de diseño didáctico para secundaria y FP. Tu objetivo es ayudarme a crear una actividad de aula lista para usar.
 
-      ### 📌 **Recomendación para un inversor novato**
-      Si estás empezando, lo ideal es **invertir solo una pequeña parte de tu dinero** (por ejemplo, entre el 3% y el 10% de tu capital total), sin arriesgar más de lo que puedas permitirte perder. También es recomendable empezar con criptomonedas más establecidas como **Bitcoin (BTC) o Ethereum (ETH)**, en lugar de proyectos más nuevos y arriesgados.  
+      1) Antes de proponer la actividad, hazme 3–5 preguntas de aclaración (solo las necesarias) sobre:
+      - Materia/tema y curso o nivel
+      - Tiempo disponible (45–60 min)
+      - Recursos (aula, proyector, móviles, internet, etc.)
+      - Perfil del grupo (heterogeneidad, NEAE, nivel lingüístico)
+      - Criterios o evidencias de aprendizaje que quiero observar
 
-      Además, considera la estrategia de **compras periódicas** en lugar de poner todo tu dinero de golpe. Esto te ayudará a reducir el impacto de la volatilidad.  
+      2) Si falta información crítica, propón supuestos explícitos (máximo 3) y continúa.
 
-      Por último, mantente informado y **nunca inviertas en algo que no entiendas completamente**. Si lo prefieres, puedes consultar con un asesor financiero antes de dar el paso.
+      3) Genera una ficha de actividad en Markdown con estos encabezados EXACTOS:
+      - Objetivo
+      - Objetivos de aprendizaje (3–5)
+      - Criterios de éxito (observables)
+      - Materiales
+      - Desarrollo (minuto a minuto)
+      - Atención a la diversidad (2 adaptaciones: apoyo y ampliación)
+      - Evaluación rápida (exit ticket de 3 ítems)
+      - Riesgos y cómo mitigarlos
 
-      ¿Te gustaría conocer alguna estrategia específica de inversión en criptomonedas? 
+      4) Restricciones:
+      - No inventes normativa, datos del centro ni cifras. Si algo no está en el contexto, indícalo como supuesto.
+      - Evita jerga innecesaria; escribe para un docente principiante/intermedio.
+
+      Tema: [escribe aquí el tema]
+
+      ---

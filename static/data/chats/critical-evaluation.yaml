@@ -1,30 +1,40 @@
 messages:
   - role: user
     content: |
-      A continuación, te daré un resumen de un artículo. Quiero que lo analices críticamente y señales posibles sesgos, errores de lógica o datos incorrectos. También sugiere formas de mejorarlo. Aquí está el resumen:
-      "El cambio climático es un fenómeno completamente natural y no tiene relación con la actividad humana."
+      Haz un análisis exhaustivo señalando todo aquello que pueda ser cuestionable, incompleto o mejorable en el siguiente prompt.
+
+      Quiero que lo evalúes críticamente con mentalidad de docente: detecta ambigüedades, posibles sesgos (p. ej. ejemplos estereotipados), riesgos de privacidad, y falta de verificabilidad. Luego propón una versión mejor.
+
+      Prompt:
+      "Crea una actividad divertida sobre IA para mi clase y pon ejemplos reales de mis alumnos."
   
   - role: assistant
     content: |
-      Evaluación crítica del artículo
-      1. **Identificación de posibles sesgos**:
-          - Sesgo de confirmación: La afirmación parece alinearse con narrativas que minimizan el impacto humano sin considerar la evidencia científica predominante.
-      Sesgo de omisión: No menciona datos clave, como el aumento de CO₂ debido a la actividad humana o los informes del IPCC.
-      2. **Errores de lógica y datos incorrectos**:
-          - Falsa dicotomía: Presenta el cambio climático como exclusivamente natural, cuando en realidad puede ser tanto natural como influenciado por la actividad humana.
-          - Ignorancia de evidencia empírica:
-      Estudios científicos han demostrado que el CO₂ atmosférico ha aumentado drásticamente desde la Revolución Industrial.
-      El consenso científico establece que la actividad humana es un factor clave en el calentamiento global.
-          - Falta de fuentes: No se citan estudios ni referencias científicas que respalden la afirmación.
-      3. **Sugerencias de mejora**:
-          - Incluir evidencia científica:
-          Datos de la NASA, NOAA o el IPCC sobre el impacto humano en el cambio climático.
-          - Evitar afirmaciones absolutas:
-          En lugar de "completamente natural y no tiene relación con la actividad humana", una formulación más precisa sería:
-          "El cambio climático ha ocurrido naturalmente a lo largo de la historia, pero hay consenso científico en que la actividad humana ha acelerado el calentamiento global."
-          - Presentar perspectivas contrastantes:
-          Incluir tanto causas naturales (como variaciones solares y ciclos climáticos) como antropogénicas (emisiones de gases de efecto invernadero).
+      Análisis crítico del prompt
 
-      4. **Conclusión**:
-      El artículo presenta una afirmación engañosa al ignorar el consenso científico. Para mejorar su credibilidad, debería incluir datos, referencias y una visión más equilibrada.
-      ¿Quieres que afine aún más la crítica o que proponga una reescritura del texto? 
+      1) Ambigüedad
+      - “Actividad divertida” no define objetivos, duración, nivel, ni producto final.
+      - “Sobre IA” es demasiado amplio: ¿uso responsable, conceptos, herramientas, ética, sesgos, evaluación de respuestas?
+
+      2) Riesgos de privacidad
+      - “Ejemplos reales de mis alumnos” puede implicar datos personales o situaciones identificables. Es un riesgo claro y evitable.
+
+      3) Sesgos y estereotipos
+      - Sin restricciones, el modelo puede usar ejemplos “típicos” con sesgos (género, origen, etc.) o situaciones sensibles.
+
+      4) Falta de verificabilidad
+      - No hay criterios de éxito ni evaluación (cómo saber si la actividad funciona).
+      - No pides formato, así que la respuesta puede ser difícil de usar.
+
+      Versión mejorada (prompt propuesto)
+
+      "Eres un asistente de diseño didáctico para secundaria/FP.
+
+      Antes de proponer nada, hazme 4 preguntas de aclaración sobre: nivel, tema exacto (uso responsable / evaluación de respuestas / sesgos), tiempo y recursos.
+
+      Requisitos:
+      - NO uses datos personales ni ejemplos basados en alumnado real. Usa ejemplos ficticios y neutrales.
+      - Incluye: objetivos (3), criterios de éxito, materiales, desarrollo minuto a minuto, 2 adaptaciones (apoyo y ampliación) y un exit ticket de 3 ítems.
+      - Formato: Markdown con encabezados fijos.
+
+      Contexto inicial: [describe aquí tu grupo en términos generales, sin datos personales]." 

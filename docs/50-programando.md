@@ -111,4 +111,4 @@ Cualquier chatbot puede crear páginas HTML fácilmente a golpe de prompt. Despu
 ## Recursos relacionados
 
 - [Tests para Moodle](./51-tests-moodle.mdx) - Generación de preguntas importables
-- [Asistentes personalizados](./31-ejemplos/09-gpt-personalizado.mdx) - Crear GPTs y Gems
+- [Asistentes personalizados](./31-ejemplos/09-asistente-personalizado.mdx) - Crear GPTs y Gems

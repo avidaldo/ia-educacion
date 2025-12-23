@@ -1,48 +1,36 @@
 messages:
   - role: user
-    content: Explica cómo funciona una red neuronal en inteligencia artificial usando una analogía con un equipo de fútbol. Usa un lenguaje sencillo y accesible.
-  
+    content: |
+      Explica qué es un “agente de IA” (en el sentido de un sistema que persigue un objetivo, usa herramientas y se adapta) usando una analogía que un grupo de docentes de secundaria/FP entienda.
+
+      Requisitos:
+      - Lenguaje claro, sin jerga.
+      - 1 analogía central + 1 tabla que mapee conceptos.
+      - Termina con 3 ejemplos de tareas docentes donde un agente tendría sentido y 3 donde NO.
+
   - role: assistant
     content: |
-      ¡Por supuesto! Aquí tienes la explicación con la analogía de un equipo de fútbol:  
+      Un “agente de IA” se parece más a un ayudante que no solo responde, sino que también ejecuta pasos para lograr un objetivo.
 
+      Analogía: un docente con un “equipo de apoyo”
+      Imagina que tú planteas un objetivo: “Quiero preparar una secuencia didáctica con materiales, una rúbrica y un cuestionario”.
+      Un chatbot simple te da ideas. Un agente, además, podría: buscar información en documentos, crear borradores, convertir formatos, y revisar si cumple tus requisitos.
 
-      ### **📌 ¿Cómo funciona una red neuronal?** ⚽🏆  
+      Tabla de equivalencias
+      | Concepto | Analogía docente |
+      |---|---|
+      | Objetivo | Encargo (“prepara una actividad evaluable”) |
+      | Plan | Guion de trabajo (pasos y orden) |
+      | Herramientas | Recursos (plantillas, repositorio del centro, Moodle, buscador) |
+      | Observaciones | Lo que encuentra/lee (documentos, resultados, errores) |
+      | Corrección | Revisar y ajustar tras ver que algo no encaja |
 
-      Imagina que una **red neuronal artificial** es como un equipo de fútbol entrenando para ganar partidos. Cada jugador representa una **neurona** y todo el equipo trabajando en conjunto representa la **red neuronal**. Veamos cómo funciona:  
+      3 tareas docentes donde un agente tiene sentido
+      1. Generar un banco de preguntas y validarlo con una rúbrica de calidad.
+      2. Adaptar materiales a distintos niveles (apoyo/ampliación) manteniendo objetivos.
+      3. Preparar una unidad didáctica a partir de documentos del currículo del departamento.
 
-      1. **Entrada de datos = Pase inicial del balón** 🎾  
-         - En una red neuronal, los datos iniciales entran en la primera capa de neuronas, igual que en un partido, donde el balón se pasa entre los jugadores desde el inicio de la jugada.  
-         
-      2. **Capas ocultas = Jugadores analizando la jugada** 🧐  
-         - Los jugadores procesan la información y deciden qué hacer con el balón (pasarlo, avanzar, cambiar de estrategia).  
-         - En la red neuronal, las capas ocultas procesan los datos aplicando pesos y funciones matemáticas para tomar decisiones.  
-
-      3. **Activación de neuronas = Decisión de juego** 🏃‍♂️⚡  
-         - No todos los jugadores actúan en cada jugada; algunos se activan según la estrategia.  
-         - De igual manera, algunas neuronas se activan dependiendo de la importancia de los datos procesados.  
-
-      4. **Salida = Gol o pérdida de balón** ⚽🥅  
-         - Finalmente, después de analizar múltiples opciones, un jugador decide chutar a portería.  
-         - En una red neuronal, la salida es el resultado final, como clasificar una imagen o hacer una predicción.  
-
-      5. **Entrenamiento = Prácticas y ajustes** 🔄  
-         - Si un equipo pierde, el entrenador analiza el partido y ajusta la estrategia.  
-         - En una red neuronal, se usa un algoritmo llamado **backpropagation**, que ajusta los pesos para mejorar la precisión del modelo en futuras predicciones.  
-
-
-      ### **🔍 Resumen de la analogía:**  
-      | **Concepto en Redes Neuronales** | **Analogía en el fútbol** |
-      |----------------------|---------------------------|
-      | Neuronas | Jugadores del equipo |
-      | Datos de entrada | Pase inicial del balón |
-      | Capas ocultas | Jugadores analizando la jugada |
-      | Activación de neuronas | Decidir qué jugador actúa |
-      | Resultado final | Gol o pérdida de balón |
-      | Entrenamiento | Prácticas y ajustes tácticos |
-
-
-      ### **Conclusión:**
-
-      Así como un equipo de fútbol mejora con la práctica y el análisis de partidos, una red neuronal aprende con más datos y ajustes en sus parámetros. Ambos buscan **optimizar su rendimiento** para obtener mejores resultados.
-      ¿Te gustaría otra analogía con otro deporte o actividad? ¡Estoy listo para adaptarlo! 
+      3 tareas donde NO tiene sentido (o hay alto riesgo)
+      1. Tomar decisiones disciplinarias o sensibles sobre alumnado.
+      2. Evaluar con consecuencias sin revisión humana (calificaciones finales).
+      3. Trabajar con datos personales del alumnado (privacidad).

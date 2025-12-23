@@ -7,31 +7,31 @@ import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/compo
 <ChatConversation source="/data/chats/specific-role.yaml" />
 
 >**Por qué funciona**:
->- Define un rol (asesor financiero).
->- Especifica el tema (criptomonedas en 2024).
->- Indica el tono y público objetivo (lenguaje accesible para principiantes).
->- Pide una conclusión útil (recomendación según perfil de riesgo). 
+>- Define el rol (asesoría pedagógica) y el **objetivo** (actividad lista para usar).
+>- Obliga a hacer **preguntas de aclaración** antes de escribir la propuesta.
+>- Controla la salida con **encabezados fijos** y restricciones (no inventar datos, marcar supuestos).
+>- Introduce buenas prácticas de **privacidad** (no usar datos del centro o alumnado).
 
 
-# Uso de ejemplos de respuesta
+# Uso de ejemplos de salida (one-shot / few-shot)
 
 Dependiendo de la pregunta, puede ser útil proporcionar al modelo ejemplos de respuesta.
 
 - Zero-shot: No se dan ejemplos, solo la instrucción.
-- One-shot: Se incluye un único ejemplo para guiar.
+- One-shot: Se incluye un único ejemplo/patrón para guiar.
 - Few-shot: Se ofrecen varios ejemplos para mayor claridad.
 
-## Zero-shot (sin ejemplos)
+## One-shot (patrón de formato)
 
 <ChatConversation source="/data/chats/few-shot-one.yaml" />
 
 
-## Few-shot (varios ejemplos)
+## Few-shot (varios patrones)
 
 
 <ChatConversation source="/data/chats/few-shot-multiple.yaml" />
 
 >**Por qué funciona**:
->- Da ejemplos de referencia.
->- Explica por qué los ejemplos funcionan.
->- Específica un número exacto de resultados esperados (5 nombres). 
+>- Da ejemplos de referencia (patrón de salida estable).
+>- Controla el **formato** (tres líneas fijas) y el **nivel**.
+>- Reduce ambigüedad: hace la tarea más evaluable.

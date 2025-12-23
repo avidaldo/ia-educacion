@@ -1,20 +1,35 @@
 messages:
   - role: user
     content: |
-      Quiero que generes nombres creativos para startups de tecnología. Aquí tienes algunos ejemplos de nombres exitosos:
+      Estoy creando un asistente para docentes. Necesito que la IA genere “instrucciones para una tarea” con un estilo consistente.
 
-      - OpenAI (nombre claro y directo)
-      - DeepMind (evoca profundidad e inteligencia)
-      - Neuralink (relaciona neuronas con conexión)
-      - Ahora, crea 5 nombres originales siguiendo este patrón.
+      Aquí tienes DOS ejemplos del estilo exacto que quiero (formato y tono):
+
+      Ejemplo 1
+      Tarea: Resume un texto.
+      Entrega: 8-10 líneas.
+      Criterios: incluye idea central + 3 ideas clave + 1 duda.
+
+      Ejemplo 2
+      Tarea: Debate guiado.
+      Entrega: 1 postura + 2 argumentos + 1 contraargumento.
+      Criterios: argumentos basados en evidencias del material.
+
+      Ahora genera 3 instrucciones de tarea nuevas para “aprender a usar IA de forma responsable en clase”.
+      Reglas:
+      - Mantén EXACTAMENTE el mismo patrón de 3 líneas (Tarea / Entrega / Criterios).
+      - Nivel: 2º FP Grado Medio.
   
   - role: assistant
     content: |
-      Aquí tienes cinco nombres originales siguiendo el mismo patrón de claridad, profundidad e innovación en tecnología:
+      Tarea: Auditoría de una respuesta de IA.
+      Entrega: 6-8 líneas con 3 riesgos y 3 mitigaciones.
+      Criterios: menciona privacidad, sesgos y verificación.
 
-      1. QuantumCore – Evoca el núcleo de la computación cuántica y el poder del procesamiento avanzado.
-      2. SynthiSense – Combina synthetic (sintético) y sense (sentido), ideal para inteligencia artificial sensorial o percepción avanzada.
-      3. NeuroForge – Relaciona redes neuronales con la idea de construcción (forge, forjar), perfecto para IA o deep learning.
-      4. AetherMind – Inspirado en Aether (éter, concepto de lo intangible) y Mind (mente), ideal para una startup de IA o computación avanzada.
-      5. LogicFlow – Un nombre que transmite fluidez en la toma de decisiones y en el procesamiento lógico, ideal para automatización o algoritmos.
-      Estos nombres mantienen el estilo de OpenAI, DeepMind y Neuralink: combinan claridad con un significado tecnológico potente. ¿Te gustaría ajustar el enfoque hacia un nicho específico, como fintech o biotecnología? 
+      Tarea: Diseña un prompt seguro.
+      Entrega: 1 prompt con contexto + 3 restricciones + formato de salida.
+      Criterios: evita datos personales y exige evidencias.
+
+      Tarea: Checklist de uso responsable.
+      Entrega: lista de 7 ítems “antes/durante/después”.
+      Criterios: ítems accionables y verificables.

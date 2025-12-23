@@ -1,0 +1,99 @@
+import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/components/ChatConversation';
+
+# Asistentes IA Personalizados
+
+Los asistentes personalizados te permiten guardar prompts específicos para tareas repetibles (por ejemplo, generar bancos de preguntas, rúbricas o fichas de actividad). El usuario ve un chat normal, pero las instrucciones base se aplican en cada conversación.
+
+## Qué es un asistente personalizado (idea general)
+
+Un asistente es básicamente un **prompt fijo + contexto opcional** que se reutiliza en múltiples conversaciones.
+
+La mayoría de plataformas principales (ChatGPT, Gemini, Claude) ofrecen formas de crear asistentes o "proyectos" con nombres diferentes:
+
+- **GPTs** (ChatGPT): asistentes compartibles con instrucciones, documentos y capacidades opcionales.
+- **Gems** (Gemini): instrucciones guardadas que puedes activar en cada chat.
+- **Projects** (Claude): contexto compartido entre conversaciones con instrucciones base y documentos adjuntos.
+
+:::info[Cambios frecuentes]
+Los nombres, interfaces y requisitos de plan cambian con frecuencia. Lo importante es el **concepto**: guardar un prompt reutilizable para no tener que reescribirlo cada vez.
+:::
+
+## Cómo crear un asistente (flujo general)
+
+Aunque cada plataforma tiene su interfaz, el flujo básico es:
+
+1. **Define instrucciones base** (el prompt que siempre se aplicará)
+2. *Opcional:* Añade documentos de contexto (p. ej., un currículo, una rúbrica, un glosario)
+3. *Opcional:* Activa capacidades extra (búsqueda web, generación de imágenes, análisis de código)
+4. Guarda y reutiliza
+
+:::warning[Error común al escribir instrucciones]
+NO escribas "Crea un asistente que genere preguntas...".
+
+Escribe directamente el prompt que **la IA verá** en cada conversación:
+
+❌ Incorrecto: "Crea un generador de preguntas de test que..."
+✅ Correcto: "Eres un experto en evaluación educativa. Cuando el usuario proporcione un tema, genera 10 preguntas tipo test en formato GIFT..."
+:::
+
+## Estructura típica de un asistente docente
+
+```text
+Rol y objetivo:
+Eres un asistente de diseño didáctico para secundaria y FP.
+Tu objetivo es [tarea concreta].
+
+Contexto fijo:
+- Nivel: [especificar si aplica]
+- Restricciones: no uses datos personales; no inventes normativa.
+
+Formato de salida:
+- [Encabezados fijos / tabla / JSON / GIFT]
+
+Flujo:
+1. Haz preguntas de aclaración (solo las necesarias).
+2. Genera la propuesta.
+3. Incluye criterios de éxito observables.
+```
+
+## Conceptos clave (agnósticos de plataforma)
+
+| Concepto | Qué significa en docencia |
+|---|---|
+| **Instrucciones base** | El prompt que se aplicará siempre (tu "plantilla") |
+| **Contexto / Documentos** | Archivos que el asistente puede consultar (p. ej., currículo, ejemplos de actividades, rúbricas) |
+| **Compartir** | Poder dar acceso al asistente a otros docentes del centro |
+| **Proyecto / Sesión** | Mantener contexto entre varias conversaciones sobre el mismo tema |
+
+
+## Casos de uso educativo
+
+### Escenarios donde un asistente tiene sentido
+
+- **Generador de bancos de preguntas**: instrucciones fijas para formato GIFT + rúbrica de calidad
+- **Adaptador de materiales**: convierte un texto a distintos niveles (apoyo/ampliación) manteniendo objetivos
+- **Revisor de actividades**: valida que una propuesta incluya objetivos observables, evaluación y atención a la diversidad
+- **Tutor de asignatura**: prompt con temario, estilo y restricciones (p. ej., "usa analogías cotidianas")
+- **Traductor especializado**: traduce con terminología específica del área y formato consistente
+
+### Cuándo NO usar un asistente
+
+- Para tareas únicas o exploratorias (usa un chat normal).
+- Cuando necesitas cambiar las instrucciones constantemente (no tiene sentido "fijarlo").
+
+## Ejemplo: asistente para tests Moodle
+
+<ChatConversation source="/data/chats/test-question-generator.yaml" />
+
+Este ejemplo muestra cómo un prompt bien diseñado puede convertirse en un asistente reutilizable para generar tests. Más detalles en [Tests para Moodle](../51-tests-moodle.mdx).
+
+## Checklist para crear un buen asistente
+
+Antes de "guardar" un asistente, revisa:
+
+- [ ] **Objetivo claro**: ¿qué producto final debe generar?
+- [ ] **Formato definido**: ¿tabla / lista / JSON / GIFT / Markdown con encabezados?
+- [ ] **Restricciones de calidad**: ¿criterios de éxito? ¿verificabilidad?
+- [ ] **Privacidad**: ¿evita pedir datos personales del alumnado?
+- [ ] **Preguntas de aclaración**: ¿pide lo que necesita antes de responder?
+- [ ] **Reutilizable**: ¿sirve para múltiples temas/situaciones similares?

@@ -1,15 +1,23 @@
 import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/components/ChatConversation';
 
-# Contrarian Prompting
+# Evaluación y verificación
+
+## Crítica del prompt (contrarian prompting)
 
 <ChatConversation source="/data/chats/critical-evaluation.yaml" />
 
 >**Por qué funciona**:
->- Evita el sesgo común de "darte siempre la razón".
->- Especifica qué debe analizar (sesgos, errores lógicos, datos incorrectos).
->- Incluye una mejora sugerida. 
+>- Evita el sesgo de “decirte que sí” y pide un análisis **con criterios**.
+>- Señala riesgos típicos en docencia: **privacidad**, sesgos en ejemplos y ambigüedad.
+>- Termina con una **versión mejorada** que puedes reutilizar.
 
+## Comparar dos prompts (análisis en tabla)
 
-<!-- 
-<ChatConversation source="/data/chats/conversation.yaml" />
--->
+Cuando dudas entre dos versiones, pide una comparación por criterios. Esto suele dar un feedback más concreto que “¿cuál es mejor?”.
+
+<ChatConversation source="/data/chats/comparison-analysis.yaml" />
+
+>**Por qué funciona**:
+>- Convierte una opinión en una revisión **estructurada**.
+>- Obliga a hablar de control de formato, verificabilidad y riesgos.
+>- La recomendación final sale de criterios, no de estilo.
