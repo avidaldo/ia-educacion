@@ -1,15 +1,26 @@
 messages:
   - role: user
-    content: >
-      Compara y contrasta las diferencias entre el aprendizaje supervisado y el aprendizaje no supervisado en inteligencia artificial.
-      Organiza la respuesta en una tabla con las siguientes columnas: "Tipo de aprendizaje", "Definición", "Ejemplo de uso" y "Ventajas/desventajas".
+    content: |
+      Soy docente y tengo dos versiones de un prompt para generar una ficha de actividad.
+      Quiero que compares ambos y me digas cuál es mejor y por qué, en una tabla.
+
+      Columnas: "Criterio", "Prompt A", "Prompt B", "Recomendación".
+      Criterios mínimos: claridad del objetivo, información faltante, control del formato, verificabilidad, y riesgos (sesgos/privacidad).
+
+      Prompt A:
+      "Hazme una actividad sobre inteligencia artificial para mis alumnos."
+
+      Prompt B:
+      "Crea una actividad de 50 min para 2º FP sobre cómo evaluar respuestas de una IA. Incluye objetivos, materiales, pasos minuto a minuto, 2 adaptaciones y un exit ticket. No inventes normativa ni datos. Formato Markdown con encabezados." 
   
   - role: assistant
     content: |
-      Aquí tienes la comparación entre el aprendizaje supervisado y no supervisado en inteligencia artificial en formato de tabla:
+      | Criterio | Prompt A | Prompt B | Recomendación |
+      |---|---|---|---|
+      | Claridad del objetivo | Vago: no indica qué se quiere conseguir (aprendizaje, producto, duración). | Claro: define tema concreto (evaluar respuestas de IA) y duración. | Mantén un objetivo observable (“el alumnado detecta 3 errores típicos…”). |
+      | Información faltante | No pide contexto (nivel, recursos, tiempo, perfil). | Incluye nivel y tiempo; faltan recursos y perfil del grupo. | Añade 3–5 preguntas de aclaración antes de generar la actividad. |
+      | Control del formato | Sin formato: salida impredecible. | Pide Markdown con encabezados. | Especifica encabezados fijos y límites (p. ej., “máx. 1 página”). |
+      | Verificabilidad | Difícil evaluar si “sirve”. | Incluye exit ticket y estructura; más evaluable. | Añade criterios de éxito y evidencias de aprendizaje. |
+      | Riesgos (sesgos/privacidad) | No menciona riesgos: puede introducir ejemplos problemáticos o pedir datos personales. | Menciona no inventar normativa; no trata privacidad. | Añade: “no uses datos personales; incluye advertencias de sesgo y verificación”. |
 
-      ### **Tabla comparativa:**
-      | **Tipo de aprendizaje**     | **Definición** | **Ejemplo de uso** | **Ventajas/Desventajas** |
-      |----------------------------|---------------|--------------------|--------------------------|
-      | **Aprendizaje supervisado** | Se entrena con datos etiquetados, donde el modelo aprende a predecir una salida específica a partir de una entrada dada. | Clasificación de correos electrónicos en "spam" y "no spam". | ✅ Alta precisión cuando hay datos etiquetados suficientes. <br> ✅ Adecuado para tareas predefinidas. <br> ❌ Requiere una gran cantidad de datos etiquetados. <br> ❌ Puede ser menos flexible para datos nuevos no vistos. |
-      | **Aprendizaje no supervisado** | Se entrena con datos sin etiquetar, buscando patrones, estructuras o agrupaciones dentro de los datos. | Agrupación de clientes según su comportamiento de compra (*clustering*). | ✅ No requiere datos etiquetados. <br> ✅ Útil para descubrir estructuras ocultas en los datos. <br> ❌ Menos preciso en algunas aplicaciones. <br> ❌ Difícil de evaluar sin una referencia clara. | 
+      Mejor prompt: **B**, porque reduce ambigüedad y controla la salida. Aun así, lo mejoraría pidiendo aclaraciones y añadiendo privacidad/verificación.

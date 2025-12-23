@@ -1,13 +1,26 @@
 messages:
   - role: user
-    content: >-
-      Traduce la siguiente frase del inglés al español: "Good morning, how are you?"
+    content: |
+      Quiero un ejemplo de salida para una “ficha de actividad” que yo pueda usar como patrón.
+
+      Ejemplo (patrón de formato) para una actividad cualquiera:
+      - Título: ...
+      - Objetivo: ...
+      - Desarrollo: 3 pasos numerados
+      - Evaluación: 2 criterios
+
+      Ahora crea UNA ficha nueva sobre “cómo enseñar a mi alumnado a escribir buenos prompts”, para 4º ESO o 1º FP Básica.
+      Reglas:
+      - Máximo 180 palabras.
+      - Respeta el mismo patrón de formato.
   - role: assistant
-    content: >-
-      "Buenos días, ¿cómo estás?"
-  - role: user
-    content: >-
-      Ahora, traduce: "What time is it?"
-  - role: assistant
-    content: >-
-      "¿Qué hora es?" 
+    content: |
+      - Título: Taller exprés: “Preguntar bien a una IA”
+      - Objetivo: Que el alumnado convierta una petición vaga en un prompt claro con contexto, restricciones y formato.
+      - Desarrollo:
+        1. (10 min) En parejas, reescriben “Explícame X” añadiendo: público, longitud y formato.
+        2. (20 min) Comparan dos prompts sobre el mismo tema y eligen cuál es más verificable.
+        3. (15 min) Crean su propio prompt para generar una ficha de estudio y lo prueban.
+      - Evaluación:
+        - El prompt incluye contexto (nivel, tema, objetivo) y restricciones (longitud/formato).
+        - La salida es evaluable (tiene criterios de éxito o una lista de comprobación).
