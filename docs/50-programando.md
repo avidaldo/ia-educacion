@@ -34,6 +34,66 @@
 
 ---
 
+## De Vibe Coding a agentes (automatización con criterios)
+
+El vibe coding suele describirse como “iterar por sensación” hasta que algo funciona. Eso es útil para prototipos, pero en cuanto quieres **fiabilidad**, conviene pasar de “chat” a un **flujo tipo agente**.
+
+### Qué es un agente (en la práctica)
+
+Un agente no es “una IA más lista”, sino un sistema que:
+
+- persigue un **objetivo** (con criterios de aceptación),
+- mantiene **estado** (qué se intentó, qué falló, qué queda),
+- puede usar **herramientas** (tests, linters, búsqueda, conversores de formato, etc.),
+- ejecuta un bucle controlado y **se detiene** cuando cumple el objetivo.
+
+Si quieres ver plantillas orientadas a docencia, aquí tienes ejemplos listos para reutilizar:
+
+- [/docs/ejemplos/agentes-y-orquestacion](/docs/ejemplos/agentes-y-orquestacion)
+- [/docs/ejemplos/razonamiento-avanzado](/docs/ejemplos/razonamiento-avanzado)
+
+### Patrones que funcionan (y cómo pedirlos)
+
+**1) Planner/Executor (planificar → ejecutar → validar)**
+
+- Pide un plan corto (3–7 pasos), luego ejecución paso a paso con validación.
+- Define una “Definition of Done”: qué pruebas pasar, qué archivos cambiar, qué formato entregar.
+
+**2) Critique loop (borrador → crítica → versión final)**
+
+- Útil para: rúbricas, actividades, bancos de preguntas, textos explicativos.
+- Limita rondas (1–2) y define criterios (claridad, privacidad, verificabilidad).
+
+**3) Tool-use / ReAct (Acción → Observación → Ajuste)**
+
+- Útil para: investigación con fuentes, verificación, extracción y re-formateo.
+- Pide “acciones y observaciones” (qué hizo y qué obtuvo). Evita pedir “pensamiento paso a paso”.
+
+**4) Multi‑agente (roles: diseñar → evaluar → editar)**
+
+- Útil cuando quieres separar creatividad, revisión crítica y edición final.
+- Define roles y orden estricto para reducir el sesgo de auto‑confirmación.
+
+### Prompts más útiles al programar con IA
+
+Cuando uses Copilot/Cursor/Canvas/Artifacts, estos requisitos suelen mejorar mucho la calidad:
+
+- Entradas/salidas como contrato: “devuélveme solo el código”, “encabezados fijos”, “tabla con columnas X”.
+- Criterios de parada: “para cuando pase X / cuando no haya warnings / cuando compile”.
+- Restricciones: “no añadir dependencias”, “no inventar datos”, “no usar datos personales”.
+
+Para la base de prompting (formato, delimitadores, verificación), ver: [/docs/prompt](/docs/prompt)
+
+### Fuentes (fiables) para el concepto de agente
+
+- ReAct (Reasoning + Acting): https://arxiv.org/abs/2210.03629
+- Reflexion (agentes con feedback/memoria): https://arxiv.org/abs/2303.11366
+- Self-Refine (mejora iterativa con auto-feedback): https://arxiv.org/abs/2303.17651
+- AutoGen (multi‑agente): https://arxiv.org/abs/2308.08155
+- MetaGPT (multi‑agente): https://arxiv.org/abs/2308.00352
+
+---
+
 ## Espacios de trabajo en chatbots
 
 ### Claude Artifacts

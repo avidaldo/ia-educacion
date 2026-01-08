@@ -1,8 +1,8 @@
 # Diseño de Prompts
 
-## Qué buscamos (en contexto educativo)
+## Qué buscamos
 
-Un buen prompt no es “una frase ingeniosa”: es un **encargo didáctico** bien definido.
+Un buen prompt es un **encargo** bien definido.
 
 En docencia, un prompt es útil cuando ayuda a producir **materiales usables y evaluables**, por ejemplo:
 
@@ -116,6 +116,40 @@ Incluye restricciones como:
 - “Si necesitas datos (fechas, normativa, estadísticas), indícalo y sugiere cómo verificarlo. No inventes.”
 - “Marca claramente lo que sea supuesto.”
 
+## Razonamiento y verificación
+
+En educación, muchas tareas no tienen una única respuesta “correcta” (p. ej. diseñar una actividad, redactar una rúbrica o elegir ejemplos). En esos casos funciona mejor pedir **alternativas + criterios + selección** que pedir “la mejor respuesta” a secas.
+
+### Tree of Thoughts (ToT): explorar alternativas y elegir con criterios
+
+Pide 2–4 propuestas distintas (A/B/C) y una evaluación con una rúbrica breve. Después, solicita **solo la versión final** integrando mejoras.
+
+Ver ejemplo: [/docs/ejemplos/razonamiento-avanzado](/docs/ejemplos/razonamiento-avanzado)
+
+### Self-consistency: consenso (especialmente para checklists)
+
+Pide varias propuestas independientes y luego una versión por “consenso”: conservar lo común y justificar excepciones. Es muy útil para **checklists** y pautas de corrección.
+
+Ver ejemplo: [/docs/ejemplos/razonamiento-avanzado](/docs/ejemplos/razonamiento-avanzado)
+
+### ReAct (Reasoning + Acting): investigar y verificar con acciones observables
+
+Cuando la tarea requiere herramientas (búsqueda, extracción, validación de formato), usa un ciclo breve de **Acción → Observación → Ajuste**. Importante: pide **acciones y evidencias**, no “pensamiento paso a paso”.
+
+Ver ejemplo: [/docs/ejemplos/agentes-y-orquestacion](/docs/ejemplos/agentes-y-orquestacion)
+
+### Iteración controlada (Self-Refine / Reflexion): borrador → crítica → versión final
+
+Lo que a veces se llama “RSIP” suele corresponder a patrones más estándar como **Self-Refine** (mejora iterativa con auto-feedback) y **Reflexion** (agentes que mejoran con feedback y memoria). En docencia, basta con 1–2 rondas y **criterios de parada** claros.
+
+Ver ejemplo: [/docs/ejemplos/agentes-y-orquestacion](/docs/ejemplos/agentes-y-orquestacion)
+
+### Descomposición con restricciones (task decomposition / prompt chaining)
+
+Lo que a veces se etiqueta como “CAD” suele corresponder a **descomponer** el trabajo manteniendo restricciones globales (nivel, tiempo, privacidad, formato). Pide un “blueprint” primero y el contenido después, seguido de una revisión de coherencia.
+
+Ver ejemplo: [/docs/ejemplos/razonamiento-avanzado](/docs/ejemplos/razonamiento-avanzado)
+
 ## Modelos con razonamiento (cómo pedir mejor)
 
 Con modelos actuales, suele funcionar mejor:
@@ -148,7 +182,21 @@ Si estás diseñando un flujo, especifica:
 - restricciones (privacidad y fuentes),
 - formato de salida.
 
+Si el modelo debe usar herramientas o hacer iteraciones, pide que registre **acciones y observaciones** (qué hizo y qué obtuvo) y limita el número de ciclos. Evita pedir cadenas de pensamiento explícitas.
+
 ## Guías oficiales recomendadas
 
 - OpenAI: https://platform.openai.com/docs/guides/prompt-engineering
 - Google Gemini: https://ai.google.dev/gemini-api/docs/prompting-intro
+
+## Referencias técnicas (para profundizar)
+
+Estas referencias son útiles como base rigurosa (no hace falta leerlas para usar las plantillas):
+
+- ReAct (Reasoning + Acting): https://arxiv.org/abs/2210.03629
+- Tree of Thoughts (ToT): https://arxiv.org/abs/2305.10601
+- Self-Consistency: https://arxiv.org/abs/2203.11171
+- Self-Refine: https://arxiv.org/abs/2303.17651
+- Reflexion: https://arxiv.org/abs/2303.11366
+- Multi-agent (AutoGen): https://arxiv.org/abs/2308.08155
+- Multi-agent (MetaGPT): https://arxiv.org/abs/2308.00352
