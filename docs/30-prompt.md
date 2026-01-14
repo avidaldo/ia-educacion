@@ -1,22 +1,22 @@
 # Diseño de Prompts
 
-## Qué buscamos
+## Definición y Propósito
 
-Un buen prompt es un **encargo** bien definido.
+Un prompt eficaz funciona como una **especificación técnica** precisa.
 
-En docencia, un prompt es útil cuando ayuda a producir **materiales usables y evaluables**, por ejemplo:
+En el contexto educativo, el diseño de prompts debe orientarse a la producción de **artefactos funcionales y verificables**, tales como:
 
-- una ficha de actividad con pasos minuto a minuto,
-- un banco de preguntas en un formato importable (p. ej. GIFT),
-- una rúbrica con criterios observables,
-- una adaptación (apoyo/ampliación) sin cambiar el objetivo.
+- Fichas de actividad con desgloses temporales detallados.
+- Bancos de preguntas en formatos estándar de importación (ej. GIFT).
+- Rúbricas de evaluación con indicadores observables.
+- Adaptaciones curriculares que mantengan la alineación con los objetivos de aprendizaje.
 
-## Plantilla base (reutilizable)
+## Estructura de Referencia (Ejemplo)
 
-Cuando no sabes por dónde empezar, usa una plantilla. Esto funciona especialmente bien con modelos modernos.
+La siguiente estructura sirve como punto de partida para diseñar prompts robustos, facilitando la interacción con modelos de lenguaje avanzados. Debe considerarse un esquema flexible a adaptar según la necesidad.
 
 ```text
-Eres un asistente de diseño didáctico para secundaria y FP.
+Eres un consultor experto en diseño curricular y normativa educativa.
 
 Tarea:
 - Quiero crear: [actividad / banco de preguntas / rúbrica / guía de estudio]
@@ -63,9 +63,10 @@ Si no lo tienes claro, pide que la IA haga preguntas. Eso reduce respuestas gen�
 
 Especifica el formato como si fuese una “plantilla de entrega”. Ejemplos útiles:
 
-- tabla de comparación con columnas fijas,
-- lista de verificación (checklist),
+- Tabla de comparación con columnas fijas,
+- Lista de verificación (checklist),
 - Markdown con encabezados exactos.
+- Las cabeceras deben tener solo la primera palabra (y los nombres propios) en mayúsculas, siguiendo el estándar del español. Evita escribirlas con todo mayúsculas como en inglés.
 
 Si vas a reutilizar el resultado en herramientas, pide formatos **estructurados** (por ejemplo JSON) *solo* cuando lo necesites.
 
@@ -79,6 +80,15 @@ Contexto del centro:
 [pega aquí el texto]
 """
 ```
+
+### 5) Definición de Rol
+
+Asignar un rol (Persona Pattern) no sirve para hacer al modelo "más listo", sino para **comprimir instrucciones** sobre el tono, vocabulario y predisposición (priors).
+
+- **Lazy Prompting (Mal uso):** "Eres un experto en física, explícame esto." (Delegas en el modelo la definición de éxito).
+- **Control de Actitud (Buen uso):** "Actúa como un *editor pedante*: busca ambigüedades y errores de formato." (Defines un filtro específico).
+
+Usa el rol para configurar el **sesgo inicial**, no para ahorrarte la definición de requisitos.
 
 ## Prácticas “modernas” que sí se notan (calidad y rigor)
 
@@ -189,14 +199,4 @@ Si el modelo debe usar herramientas o hacer iteraciones, pide que registre **acc
 - OpenAI: https://platform.openai.com/docs/guides/prompt-engineering
 - Google Gemini: https://ai.google.dev/gemini-api/docs/prompting-intro
 
-## Referencias técnicas (para profundizar)
 
-Estas referencias son útiles como base rigurosa (no hace falta leerlas para usar las plantillas):
-
-- ReAct (Reasoning + Acting): https://arxiv.org/abs/2210.03629
-- Tree of Thoughts (ToT): https://arxiv.org/abs/2305.10601
-- Self-Consistency: https://arxiv.org/abs/2203.11171
-- Self-Refine: https://arxiv.org/abs/2303.17651
-- Reflexion: https://arxiv.org/abs/2303.11366
-- Multi-agent (AutoGen): https://arxiv.org/abs/2308.08155
-- Multi-agent (MetaGPT): https://arxiv.org/abs/2308.00352
