@@ -13,7 +13,7 @@ En el contexto educativo, el diseño de prompts debe orientarse a la producción
 
 ## Estructura de Referencia (Ejemplo)
 
-La siguiente estructura sirve como punto de partida para diseñar prompts robustos, facilitando la interacción con modelos de lenguaje avanzados. Debe considerarse un esquema flexible a adaptar según la necesidad.
+La siguiente estructura sirve como punto de partida para diseñar prompts robustos, facilitando la interacción con modelos de lenguaje avanzados.
 
 ```text
 Eres un consultor experto en diseño curricular y normativa educativa.
@@ -47,32 +47,57 @@ Criterios de calidad:
 
 ## Técnicas fundamentales (las que más impacto tienen)
 
-### 1) Claridad del objetivo (y evidencia)
+### 1) Definición de Rol (Persona Pattern)
+
+Asignar un rol no sirve para hacer al modelo "más listo", sino para **comprimir instrucciones**: activa sus *priors* (conocimientos y tonos pre-asociados) para alinear la respuesta con una expectativa específica, descartando vocabulario o estilos irrelevantes.
+
+- **Mal uso (Lazy Prompting):** "Eres un experto en Python."
+  - *Problema:* Delegas en el modelo la definición de "experto". Puede activar *priors* indeseados (ej. usar librerías obsoletas) si no especificas más.
+
+- **Buen uso (Filtro de Enfoque):** "Actúa como un Auditor de Seguridad (Senior): revisa este código buscando vulnerabilidades críticas (OWASP Top 10) y sugiere correcciones defensivas."
+  - *Ventaja:* Usas el rol para establecer la "lente" (perspectiva crítica) y las instrucciones para definir la "tarea" (criterios OWASP).
+
+**Conclusión:** El rol configura el *quién* (la voz), pero nunca debe sustituir al *qué* (las instrucciones). Si confías solo en el rol para tareas lógicas o factuales, aumentas el riesgo de alucinaciones plausibles.
+
+### 2) Claridad del objetivo (y evidencia)
 
 Mal: “Haz una actividad sobre IA.”
 
 Mejor: “Crea una actividad de 50 min para 2º FP sobre cómo **evaluar respuestas de una IA**. Evidencia: el alumnado identifica 3 errores típicos y propone 1 mejora.”
 
-### 2) Contexto docente mínimo viable
+### 3) Contexto docente mínimo viable
 
-Incluye siempre: **nivel**, **tiempo**, **recursos** y **producto final**.
+Incluye siempre: **nivel**, **tiempo**, **recursos** y **producto final**. Proporcionar estos datos reduce drásticamente las respuestas genéricas.
 
-Si no lo tienes claro, pide que la IA haga preguntas. Eso reduce respuestas genéricas.
+### 4) Interacción Inversa (Flipped Interaction)
 
-### 3) Control del formato (para que sea usable)
+Consiste en pedir al modelo que te entreviste antes de generar la respuesta final.
+
+- **En la plantilla:** "Hazme 3–5 preguntas de aclaración (solo las necesarias)".
+- **Por qué funciona:** Obliga al modelo a detectar lagunas en tu petición antes de "alucinar" detalles (ej. asumir que todos tienen portátil).
+
+**¿Cuándo usarlo?**
+- **Úsalo sélo** en tareas complejas de diseño (proyectos, rúbricas completas) donde el contexto es determinante.
+- **Evítalo** en consultas rápidas o directas; en esos casos solo añade fricción innecesaria.
+
+### 5) Gestión de la incertidumbre (Supuestos explícitos)
+
+Si el modelo no tiene toda la información, tenderá a rellenar los huecos (alucinar) o a ser vago.
+- **En la plantilla:** "Si falta información crítica, propón hasta 3 supuestos explícitos".
+- **Por qué funciona:** Hace visible la "imaginación" del modelo. Te permite corregir la premisa ("No, no tienen portátiles, tienen tablets") antes de que genere todo el contenido.
+
+### 6) Control del formato (para que sea usable)
 
 Especifica el formato como si fuese una “plantilla de entrega”. Ejemplos útiles:
 
-- Tabla de comparación con columnas fijas,
-- Lista de verificación (checklist),
+- Tabla de comparación con columnas fijas.
+- Lista de verificación (checklist).
 - Markdown con encabezados exactos.
-- Las cabeceras deben tener solo la primera palabra (y los nombres propios) en mayúsculas, siguiendo el estándar del español. Evita escribirlas con todo mayúsculas como en inglés.
+- Las cabeceras deben tener solo la primera palabra en mayúsculas (norma RAE), salvo nombres propios.
 
-Si vas a reutilizar el resultado en herramientas, pide formatos **estructurados** (por ejemplo JSON) *solo* cuando lo necesites.
+### 7) Delimitadores (para separar instrucciones de datos)
 
-### 4) Delimitadores (para evitar mezclas)
-
-Si incluyes textos largos (temario, contexto, instrucciones del centro), sepáralos con delimitadores:
+Si incluyes textos largos (temario, contexto, instrucciones del centro), sepáralos con delimitadores para que el modelo no confunda las instrucciones del prompt con el texto a analizar:
 
 ```text
 Contexto del centro:
@@ -80,15 +105,6 @@ Contexto del centro:
 [pega aquí el texto]
 """
 ```
-
-### 5) Definición de Rol
-
-Asignar un rol (Persona Pattern) no sirve para hacer al modelo "más listo", sino para **comprimir instrucciones** sobre el tono, vocabulario y predisposición (priors).
-
-- **Lazy Prompting (Mal uso):** "Eres un experto en física, explícame esto." (Delegas en el modelo la definición de éxito).
-- **Control de Actitud (Buen uso):** "Actúa como un *editor pedante*: busca ambigüedades y errores de formato." (Defines un filtro específico).
-
-Usa el rol para configurar el **sesgo inicial**, no para ahorrarte la definición de requisitos.
 
 ## Prácticas “modernas” que sí se notan (calidad y rigor)
 
