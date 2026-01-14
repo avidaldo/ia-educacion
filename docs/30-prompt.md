@@ -49,7 +49,7 @@ Criterios de calidad:
 
 ### 1) Definición de Rol (Persona Pattern)
 
-Asignar un rol no sirve para hacer al modelo "más listo", sino para **comprimir instrucciones**: activa sus *priors* (conocimientos y tonos pre-asociados) para alinear la respuesta con una expectativa específica, descartando vocabulario o estilos irrelevantes.
+Asignar un rol no sirve para hacer al modelo "más listo", sino para **comprimir instrucciones**: activa sus *priors* (conocimientos y tonos pre-asociados) para alinear la respuesta con una expectativa específica, descartando vocabulario o estilos irrelevantes. Es útil para establecer el **estilo* con el queremos la respuesta, pero no es necesario si la definición del resultado que queremos es suficientemente detallada.
 
 - **Mal uso (Lazy Prompting):** "Eres un experto en Python."
   - *Problema:* Delegas en el modelo la definición de "experto". Puede activar *priors* indeseados (ej. usar librerías obsoletas) si no especificas más.
@@ -57,7 +57,7 @@ Asignar un rol no sirve para hacer al modelo "más listo", sino para **comprimir
 - **Buen uso (Filtro de Enfoque):** "Actúa como un Auditor de Seguridad (Senior): revisa este código buscando vulnerabilidades críticas (OWASP Top 10) y sugiere correcciones defensivas."
   - *Ventaja:* Usas el rol para establecer la "lente" (perspectiva crítica) y las instrucciones para definir la "tarea" (criterios OWASP).
 
-**Conclusión:** El rol configura el *quién* (la voz), pero nunca debe sustituir al *qué* (las instrucciones). Si confías solo en el rol para tareas lógicas o factuales, aumentas el riesgo de alucinaciones plausibles.
+El rol configura el *quién* (la voz), pero nunca debe sustituir al *qué* (las instrucciones). Si confías solo en el rol para tareas lógicas o factuales, aumentas el riesgo de alucinaciones plausibles.
 
 ### 2) Claridad del objetivo (y evidencia)
 
