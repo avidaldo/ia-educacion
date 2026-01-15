@@ -48,6 +48,11 @@ function HistorySection() {
 
       <section>
         <h2>Conceptos básicos</h2>
+        <img src="/ia-educacion/img/venn.gif" alt="Diagrama IA/ML/DL" style={{maxWidth: '70%', maxHeight: '60vh', display: 'block', margin: '0 auto'}} />
+      </section>
+
+      <section>
+        <h2>Conceptos básicos</h2>
         <ul>
           <li><span className="highlight">IA</span> (1956): Sistemas que realizan tareas que requieren inteligencia humana</li>
           <li><span className="highlight">Machine Learning</span> (1959): Algoritmos que aprenden de los datos</li>
@@ -115,25 +120,25 @@ function ToolsSection() {
           <div>
             <h3>OpenAI</h3>
             <ul>
-              <li>ChatGPT (GPT-5.2)</li>
+              <li><a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer">ChatGPT</a> (GPT-5.2)</li>
               <li>DALL-E, Sora</li>
-              <li>GPTs personalizados</li>
+              <li><a href="https://chatgpt.com/gpts" target="_blank" rel="noopener noreferrer">GPTs personalizados</a></li>
             </ul>
             <h3>Google</h3>
             <ul>
-              <li>Gemini</li>
-              <li>NotebookLM</li>
-              <li>AI Studio</li>
+              <li><a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">Gemini</a></li>
+              <li><a href="https://notebooklm.google" target="_blank" rel="noopener noreferrer">NotebookLM</a></li>
+              <li><a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer">AI Studio</a></li>
             </ul>
           </div>
           <div>
             <h3>Otros</h3>
             <ul>
-              <li><strong>Claude</strong> (Anthropic)</li>
-              <li><strong>Perplexity</strong> - Búsqueda</li>
-              <li><strong>DeepSeek</strong> - Open weights</li>
-              <li><strong>Copilot</strong> (Microsoft)</li>
-              <li><strong>Mistral</strong> - Europeo</li>
+              <li><a href="https://claude.ai" target="_blank" rel="noopener noreferrer"><strong>Claude</strong></a> (Anthropic)</li>
+              <li><a href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer"><strong>Perplexity</strong></a> - Búsqueda</li>
+              <li><a href="https://chat.deepseek.com" target="_blank" rel="noopener noreferrer"><strong>DeepSeek</strong></a> - Open weights</li>
+              <li><a href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer"><strong>Copilot</strong></a> (Microsoft)</li>
+              <li><a href="https://chat.mistral.ai" target="_blank" rel="noopener noreferrer"><strong>Mistral</strong></a> - Europeo</li>
             </ul>
           </div>
         </div>
@@ -151,10 +156,10 @@ function ToolsSection() {
       <section>
         <h2>Otras herramientas</h2>
         <ul>
-          <li>📊 <strong>Mermaid</strong>: Diagramas desde texto</li>
-          <li>🎥 <strong>Video Highlight</strong>: Transcribe y resume vídeos</li>
-          <li>📽️ <strong>Presentaciones</strong>: Gamma, Canva, Beautiful.AI</li>
-          <li>🎨 <strong>Imágenes</strong>: Midjourney, Stable Diffusion, Ideogram</li>
+          <li>📊 <a href="https://mermaid.js.org" target="_blank" rel="noopener noreferrer"><strong>Mermaid</strong></a>: Diagramas desde texto</li>
+          <li>🎥 <a href="https://videohighlight.com" target="_blank" rel="noopener noreferrer"><strong>Video Highlight</strong></a>: Transcribe y resume vídeos</li>
+          <li>📽️ <strong>Presentaciones</strong>: <a href="https://gamma.app" target="_blank" rel="noopener noreferrer">Gamma</a>, <a href="https://www.canva.com" target="_blank" rel="noopener noreferrer">Canva</a>, <a href="https://www.beautiful.ai" target="_blank" rel="noopener noreferrer">Beautiful.AI</a></li>
+          <li>🎨 <strong>Imágenes</strong>: <a href="https://www.midjourney.com" target="_blank" rel="noopener noreferrer">Midjourney</a>, <a href="https://stability.ai" target="_blank" rel="noopener noreferrer">Stable Diffusion</a>, <a href="https://ideogram.ai" target="_blank" rel="noopener noreferrer">Ideogram</a></li>
         </ul>
       </section>
     </section>
@@ -382,13 +387,24 @@ function RevealPresentation() {
       const Reveal = (await import('reveal.js')).default || (await import('reveal.js'));
       const RevealHighlight = ((await import('reveal.js/plugin/highlight/highlight')) as any).default;
 
-      // Load chalkboard plugin from CDN
-      await new Promise<void>((resolve) => {
-        const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chalkboard/plugin.js';
-        script.onload = () => resolve();
-        document.head.appendChild(script);
-      });
+      // Load chalkboard plugin CSS (only once)
+      if (!document.getElementById('chalkboard-css')) {
+        const chalkboardCss = document.createElement('link');
+        chalkboardCss.id = 'chalkboard-css';
+        chalkboardCss.rel = 'stylesheet';
+        chalkboardCss.href = 'https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chalkboard/style.css';
+        document.head.appendChild(chalkboardCss);
+      }
+
+      // Load chalkboard plugin from CDN (only once)
+      if (!(window as any).RevealChalkboard) {
+        await new Promise<void>((resolve) => {
+          const script = document.createElement('script');
+          script.src = 'https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chalkboard/plugin.js';
+          script.onload = () => resolve();
+          document.head.appendChild(script);
+        });
+      }
 
       const RevealChalkboard = (window as any).RevealChalkboard;
 

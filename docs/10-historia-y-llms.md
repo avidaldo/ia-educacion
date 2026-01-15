@@ -5,7 +5,7 @@
 
 <div style={{maxWidth: "600px"}}>
 
-![](./img/venn.gif)
+![](/img/venn.gif)
 
 </div>
 
@@ -21,7 +21,7 @@
 
 <div style={{maxWidth: "600px"}}>
 
-![](./img/reglas_vs_ml.jpg)
+![](/img/reglas_vs_ml.jpg)
 
 </div>
 
@@ -38,7 +38,7 @@
 - **Deep Learning**: Subcampo de la IA que se enfoca en el desarrollo de redes neuronales profundas (redes neuronales con muchas capas ocultas) y con el se desarrolla el boom de la IA.
     - AlexNet (2012)
 
-![](./img/deep_learning.jpg)
+![](/img/deep_learning.jpg)
 
 - **IA Generativa**: Campo de la IA que utiliza *Deep Learning* en la creación de sistemas que pueden generar contenido nuevo y original.
     - ChatGPT, Dall-E, Sora, etc.

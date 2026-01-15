@@ -47,7 +47,7 @@ Un modelo de Machine Learning aprende a partir de datos. Si los datos con los qu
 
 <a href="https://elpais.com/tecnologia/2024-02-24/nazis-chinas-y-vikingos-negros-google-suspende-su-ia-de-imagenes-por-sobrerrepresentar-a-minorias.html" target="_blank" rel="noopener noreferrer">
 
-![](./img/black-ss.png)
+![](/img/black-ss.png)
 
 </a>
 
