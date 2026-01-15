@@ -81,6 +81,11 @@ const config: Config = {
           label: 'Contenidos',
         },
         {
+          to: '/presentation',
+          position: 'left',
+          label: 'Presentación',
+        },
+        {
           type: 'html',
           position: 'right',
           value: `<div style="display: flex; flex-direction: column; align-items: flex-end; line-height: 1.2;">

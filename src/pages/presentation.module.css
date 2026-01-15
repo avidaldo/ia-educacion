@@ -1,0 +1,177 @@
+/* Presentation container - full viewport below navbar */
+.presentationContainer {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+/* Override reveal.js to fill container */
+.reveal {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+/* Ensure slides container is centered */
+.reveal :global(.slides) {
+  text-align: left;
+}
+
+.reveal :global(.slides) h1,
+.reveal :global(.slides) h2,
+.reveal :global(.slides) h3 {
+  text-transform: none;
+}
+
+.reveal :global(.slides) h1 {
+  font-size: 2.2em;
+}
+
+.reveal :global(.slides) h2 {
+  font-size: 1.6em;
+}
+
+.reveal :global(.slides) h3 {
+  font-size: 1.2em;
+}
+
+.reveal :global(.slides) ul,
+.reveal :global(.slides) ol {
+  text-align: left;
+  display: block;
+}
+
+.reveal :global(.slides) li {
+  margin-bottom: 0.4em;
+}
+
+.reveal :global(.slides) blockquote {
+  padding: 1em;
+  font-style: italic;
+  border-left: 4px solid;
+  margin: 1em 0;
+}
+
+.reveal :global(.slides) pre {
+  font-size: 0.55em;
+  width: 100%;
+}
+
+.reveal :global(.slides) :global(.small) {
+  font-size: 0.6em;
+  opacity: 0.8;
+}
+
+/* Dark theme */
+.reveal :global(.slides.dark-theme) {
+  background: #1a1a2e;
+  color: #e0e0e0;
+}
+
+.reveal :global(.slides.dark-theme) h1 {
+  color: #ffffff;
+}
+
+.reveal :global(.slides.dark-theme) h2 {
+  color: #58a6ff;
+}
+
+.reveal :global(.slides.dark-theme) h3 {
+  color: #79c0ff;
+}
+
+.reveal :global(.slides.dark-theme) :global(.highlight) {
+  color: #58a6ff;
+  font-weight: bold;
+}
+
+.reveal :global(.slides.dark-theme) blockquote {
+  background: rgba(88, 166, 255, 0.1);
+  border-left-color: #58a6ff;
+}
+
+.reveal :global(.slides.dark-theme) a {
+  color: #58a6ff;
+}
+
+/* Light theme */
+.reveal :global(.slides.light-theme) {
+  background: #ffffff;
+  color: #1a1a2e;
+}
+
+.reveal :global(.slides.light-theme) h1 {
+  color: #1a1a2e;
+}
+
+.reveal :global(.slides.light-theme) h2 {
+  color: #0969da;
+}
+
+.reveal :global(.slides.light-theme) h3 {
+  color: #0550ae;
+}
+
+.reveal :global(.slides.light-theme) :global(.highlight) {
+  color: #0969da;
+  font-weight: bold;
+}
+
+.reveal :global(.slides.light-theme) blockquote {
+  background: rgba(9, 105, 218, 0.1);
+  border-left-color: #0969da;
+}
+
+.reveal :global(.slides.light-theme) a {
+  color: #0969da;
+}
+
+/* Two columns layout */
+.reveal :global(.slides) :global(.two-columns) {
+  display: flex;
+  gap: 2em;
+}
+
+.reveal :global(.slides) :global(.two-columns) > div {
+  flex: 1;
+}
+
+/* Timeline styling */
+.reveal :global(.slides) :global(.timeline) {
+  list-style: none;
+  padding-left: 0;
+}
+
+.reveal :global(.slides) :global(.timeline) li {
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.reveal :global(.slides) :global(.timeline) li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+}
+
+/* Chat slides - make them scroll if needed */
+.reveal :global(.slides) :global(.chat-slide) {
+  max-height: 60vh;
+  overflow-y: auto;
+  font-size: 0.7em;
+}
+
+/* Loading fallback */
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.5em;
+}
