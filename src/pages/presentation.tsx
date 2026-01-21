@@ -5,10 +5,10 @@ import { useColorMode } from '@docusaurus/theme-common';
 import { ChatConversation } from '@site/src/components/ChatConversation';
 import styles from './presentation.module.css';
 
-// Reveal.js styles - imported globally for proper layout
-import 'reveal.js/dist/reset.css';
-import 'reveal.js/dist/reveal.css';
-import 'reveal.js/dist/theme/black.css';
+// Reveal.js styles - imported dynamically to avoid global side effects
+// import 'reveal.js/dist/reset.css';
+// import 'reveal.js/dist/reveal.css';
+// import 'reveal.js/dist/theme/black.css';
 
 // Slide components
 function TitleSlide() {
@@ -48,7 +48,7 @@ function HistorySection() {
 
       <section>
         <h2>Conceptos básicos</h2>
-        <img src="/ia-educacion/img/venn.gif" alt="Diagrama IA/ML/DL" style={{maxWidth: '70%', maxHeight: '60vh', display: 'block', margin: '0 auto'}} />
+        <img src="/ia-educacion/img/venn.gif" alt="Diagrama IA/ML/DL" style={{ maxWidth: '70%', maxHeight: '60vh', display: 'block', margin: '0 auto' }} />
       </section>
 
       <section>
@@ -64,7 +64,7 @@ function HistorySection() {
       <section>
         <h2>La paradoja de Moravec</h2>
         <blockquote>
-          "Es relativamente fácil hacer que las computadoras realicen operaciones matemáticas y lógicas, 
+          "Es relativamente fácil hacer que las computadoras realicen operaciones matemáticas y lógicas,
           pero es difícil hacer que realicen tareas simples que cualquier niño de 4 años puede hacer"
         </blockquote>
         <p className="small">Moravec, 1980</p>
@@ -337,7 +337,7 @@ function EthicsSection() {
       <section>
         <h2>Ejemplo: UK 2020</h2>
         <blockquote>
-          Algoritmo de calificaciones durante la pandemia penalizó sistemáticamente 
+          Algoritmo de calificaciones durante la pandemia penalizó sistemáticamente
           a estudiantes de escuelas con peores resultados históricos.
         </blockquote>
         <p className="small">
@@ -386,6 +386,11 @@ function RevealPresentation() {
       // Dynamically import reveal.js
       const Reveal = (await import('reveal.js')).default || (await import('reveal.js'));
       const RevealHighlight = ((await import('reveal.js/plugin/highlight/highlight')) as any).default;
+
+      // Import styles dynamically to prevent global style pollution
+      await import('reveal.js/dist/reset.css');
+      await import('reveal.js/dist/reveal.css');
+      await import('reveal.js/dist/theme/black.css');
 
       // Load chalkboard plugin CSS (only once)
       if (!document.getElementById('chalkboard-css')) {
@@ -475,10 +480,10 @@ function RevealPresentation() {
 function LoadingFallback() {
   return (
     <div className={styles.presentationContainer}>
-      <div style={{ 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         height: '100%',
         fontSize: '1.5em'
       }}>

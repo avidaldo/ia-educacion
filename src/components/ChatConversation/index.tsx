@@ -108,7 +108,7 @@ export function ChatConversation({
   }
   
   return (
-    <div className={styles.chatContainer}>
+    <div className={`${styles.chatContainer} custom-chat-conversation`}>
       <div className={styles.chatHeader}>
         <div className={styles.modelInfo}>
           <span className={styles.modelName}>{model}</span>
