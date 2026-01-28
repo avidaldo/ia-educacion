@@ -1,4 +1,8 @@
+npm run build && npm run serve
+
+
 # NPM Commands Reference
+
 
 A beginner-friendly guide to npm commands used in this Docusaurus project.
 
