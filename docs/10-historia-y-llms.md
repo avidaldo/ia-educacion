@@ -54,7 +54,7 @@
     - Gran incremento de la financiación e inversión industrial
 
 - Hitos principales:
-    - 2012: **AlexNet** reduce el error en **ImageNet** al 15.3% (antes 26%), demostrando el poder de las CNNs y marcando el inicio del boom.
+    - 2012: **AlexNet** reduce el error en **ImageNet** al 15.3% (antes 26%), demostrando el poder de las redes neuronales convolucionales y marcando el inicio del boom.
     - 2014: **DeepFace** de Facebook alcanza precisión casi humana (97.35%) en reconocimiento facial.
     - 2014: Las **GANs** (Generative Adversarial Networks), revolucionan la generación de contenido.
     - 2016: **AlphaGo** de DeepMind derrota al campeón mundial Lee Sedol.

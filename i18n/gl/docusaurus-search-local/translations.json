@@ -1,0 +1,8 @@
+{
+    "search.placeholder": "Buscar",
+    "search.noResults": "Non se atoparon resultados.",
+    "search.algoliaLabel": "Busca por Algolia",
+    "search.category.docs": "Documentos",
+    "search.category.blog": "Blog",
+    "search.category.pages": "Páxinas"
+}

@@ -382,23 +382,40 @@ function RevealPresentation() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    // Track injected stylesheets for cleanup
+    const injectedStyles: HTMLLinkElement[] = [];
+
     const initReveal = async () => {
       // Dynamically import reveal.js
       const Reveal = (await import('reveal.js')).default || (await import('reveal.js'));
       const RevealHighlight = ((await import('reveal.js/plugin/highlight/highlight')) as any).default;
 
-      // Import styles dynamically to prevent global style pollution
-      await import('reveal.js/dist/reset.css');
-      await import('reveal.js/dist/reveal.css');
-      await import('reveal.js/dist/theme/black.css');
+      // Inject reveal.js stylesheets as link elements (properly cleaned up on unmount)
+      const revealStyles = [
+        { id: 'reveal-reset-css', href: 'https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reset.css' },
+        { id: 'reveal-core-css', href: 'https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.css' },
+        { id: 'reveal-theme-css', href: 'https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/theme/black.css' },
+      ];
 
-      // Load chalkboard plugin CSS (only once)
+      for (const style of revealStyles) {
+        if (!document.getElementById(style.id)) {
+          const link = document.createElement('link');
+          link.id = style.id;
+          link.rel = 'stylesheet';
+          link.href = style.href;
+          document.head.appendChild(link);
+          injectedStyles.push(link);
+        }
+      }
+
+      // Load chalkboard plugin CSS
       if (!document.getElementById('chalkboard-css')) {
         const chalkboardCss = document.createElement('link');
         chalkboardCss.id = 'chalkboard-css';
         chalkboardCss.rel = 'stylesheet';
         chalkboardCss.href = 'https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chalkboard/style.css';
         document.head.appendChild(chalkboardCss);
+        injectedStyles.push(chalkboardCss);
       }
 
       // Load chalkboard plugin from CDN (only once)
@@ -435,10 +452,18 @@ function RevealPresentation() {
     initReveal();
 
     return () => {
+      // Clean up reveal.js instance
       if (revealInstance.current) {
         revealInstance.current.destroy();
         revealInstance.current = null;
       }
+
+      // Remove injected stylesheets to prevent style leakage
+      injectedStyles.forEach(link => {
+        if (link.parentNode) {
+          link.parentNode.removeChild(link);
+        }
+      });
     };
   }, []);
 

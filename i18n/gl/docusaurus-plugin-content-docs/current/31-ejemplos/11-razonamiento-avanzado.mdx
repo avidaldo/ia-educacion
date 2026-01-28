@@ -1,0 +1,117 @@
+---
+slug: /ejemplos/razonamiento-avanzado
+---
+
+# Razoamento avanzado
+
+Estes modelos son útiles cando:
+
+- hai **varias solucións razoables** (deseño de actividades, rúbricas, exemplos),
+- necesitas **consistencia** (checklists, pautas),
+- ou convén **descompoñer** sen perder restriccións (nivel, tempo, privacidade, formato).
+
+> Idea clave: pide **alternativas + criterios + selección**, non “pensa paso a paso”.
+
+---
+
+## Tree of Thoughts (ToT): explora alternativas e elixe con rúbrica
+
+```text
+Es un asistente de deseño didáctico para secundaria e FP.
+
+Tarefa:
+- Deseña unha actividade de 50 min sobre “como avaliar a calidade dunha resposta de IA”.
+
+Contexto:
+- Nivel: 4º ESO
+- Recursos: encerado + móbiles opcionais
+- Produto final do alumnado: unha checklist de verificación + 3 correccións xustificadas
+
+Instrucións (ToT):
+1) Propón 3 deseños alternativos (A, B, C) con enfoques distintos.
+2) Avalía A/B/C con esta rúbrica (0–2 por criterio):
+   - Obxectivo observable e evidencia
+   - Realista en 50 min
+   - Avaliación rápida e usable
+   - Inclusión (apoio/ampliación)
+   - Riscos e mitigacións (privacidade/sesgos)
+3) Elixe a mellor e entrega SOLO a versión final incorporando melloras.
+
+Saída (Markdown con encabezados fixos):
+- Obxectivo e evidencia
+- Materiais
+- Secuencia minuto a minuto
+- Avaliación (checklist + criterios)
+- Adaptacións (apoio/ampliación)
+- Riscos e mitigacións
+```
+
+**Por que funciona**:
+- Obliga a explorar opcións (evita a primeira idea mediocre).
+- Converte “mellor/peor” en criterios observables.
+- Pide unha entrega final lista para usar.
+
+---
+
+## Self-consistency: consenso para unha checklist
+
+```text
+Es un asistente de docencia.
+
+Tarefa:
+- Crear unha checklist para que o alumnado avalíe unha resposta de IA antes de entregala.
+
+Restriccións:
+- Máximo 10 ítems.
+- Redacta cada ítem como pregunta de Si/Non.
+- Sen datos persoais do alumnado.
+
+Instrucións (Self-consistency):
+1) Xera 3 propostas independentes de checklist (sen referirte entre si).
+2) Constrúe unha checklist final por consenso:
+   - Conserva os ítems comúns.
+   - Se engades un non común, xustifica por que é crítico.
+
+Saída (Markdown):
+- Checklist final (≤10)
+- 2 exemplos de uso (moi breves)
+```
+
+**Por que funciona**:
+- Reduce variabilidade e “ocorrencias” dunha soa pasada.
+- Produce unha lista curta e estable (ideal para a aula).
+
+---
+
+## Descomposición con restricións (task decomposition / prompt chaining)
+
+Isto é útil cando queres un resultado longo, pero sen perder requisitos globais.
+
+```text
+Es un asistente de deseño didáctico para FP.
+
+Tarefa:
+- Crear un banco de 12 preguntas tipo test sobre “seguridade e privacidade ao usar IA”.
+
+Contexto:
+- Nivel: 1º FP Básica
+- Tempo de avaliación: 15 min
+- Requisito: distractores plausibles, linguaxe clara, sen preguntas-trampa
+
+Proceso (descomposición):
+1) Define un blueprint con 6 subtemas (2 preguntas por subtema).
+2) Escribe as 12 preguntas seguindo o blueprint.
+3) Revisa coherencia global:
+   - distribución equilibrada por subtema
+   - nivel axeitado
+   - sen afirmacións dubidosas (se o son, marca “a verificar”)
+   - sen datos persoais
+
+Saída:
+- Blueprint (lista numerada)
+- Táboa Markdown con columnas: Pregunta | A | B | C | D | Correcta | Xustificación breve
+```
+
+**Por que funciona**:
+- Controla cobertura (non se “esquece” medio temario).
+- Mantén restricións globais ata o final.

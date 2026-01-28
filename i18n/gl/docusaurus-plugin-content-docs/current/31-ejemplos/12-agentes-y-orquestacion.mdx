@@ -1,0 +1,119 @@
+---
+slug: /ejemplos/agentes-y-orquestacion
+---
+
+# Axentes e orquestración (para automatizar con rigor)
+
+Estes modelos son útiles cando o “chat” queda curto e necesitas:
+
+- usar ferramentas (busca, extracción, validación de formato),
+- iterar con criterios (borrador → crítica → versión final),
+- repartir o traballo en roles (multi‑axente) para mellorar a calidade.
+
+> Regra práctica: pide **accións e evidencias**, limita ciclos, e define **criterios de parada**.
+
+---
+
+## ReAct (Reasoning + Acting): ciclo Acción → Observación → Axuste
+
+```text
+Es un asistente para preparar materiais docentes de secundaria e FP.
+
+Obxectivo:
+- Crear un mini-informe (1 páxina) sobre “como reducir erros e alucinacións ao usar IA en tarefas educativas”.
+
+Regras de rigor:
+- Non inventes datos nin citas.
+- Se necesitas fontes e non podes acceder a elas, indícao e entrega un marco xeral + checklist verificable.
+- Sen datos persoais.
+
+Formato de traballo (ReAct):
+- Repite como máximo 3 ciclos, e en cada ciclo escribe:
+  - Acción: (Buscar / Preguntar / Extraer / Comparar / Verificar)
+  - Observación: (o atopado ou o que falta)
+  - Axuste: (como cambia o plan)
+
+Saída final (Markdown):
+- 5 prácticas concretas (cun exemplo breve cada unha)
+- Checklist de verificación rápida (10 ítems)
+- “Fontes a consultar / por verificar” (lista)
+```
+
+**Por que funciona**:
+- Evita “inventarse” unha bibliografía.
+- Converte a investigación nun proceso auditable (accións/observacións).
+
+---
+
+## Iteración controlada (Self-Refine): borrador → crítica → versión final
+
+Ás veces etiquétase como “RSIP”, pero é máis estándar falar de **Self‑Refine**.
+
+```text
+Es un asistente de avaliación educativa.
+
+Tarefa:
+- Crear unha rúbrica para avaliar unha exposición oral (3–4 min) sobre “impacto da IA na vida diaria”.
+
+Contexto:
+- Nivel: 2º ESO
+- Rúbrica: 4 criterios, 4 niveis (1–4)
+
+Restricións:
+- Linguaxe clara e observable.
+- Sen normativa específica.
+- Sen datos persoais.
+
+Iteración (máx. 2 roldas):
+Rolda 1) Entrega un borrador.
+Rolda 2) Critica o borrador con estes criterios:
+  - Pódese aplicar en 3–4 min?
+  - Evita ambigüidades?
+  - Avalía o que se pretende (aliñamento obxectivo‑criterios)?
+  - Inclúe erros típicos (p.ex. exemplos inventados, afirmacións non verificables)?
+Logo entrega a versión final incorporando as melloras.
+
+Saída (Markdown):
+- Táboa de rúbrica
+- Instrucións para o alumnado (máx. 6 liñas)
+```
+
+**Por que funciona**:
+- A crítica está acotada por criterios (non por “opinión”).
+- Limita a iteración para evitar bucles interminables.
+
+---
+
+## Orquestración multi‑axente (roles): Deseñar → Avaliar → Editar
+
+Útil cando queres separar creatividade, revisión e edición final.
+
+```text
+Simula un equipo de 3 axentes e respecta a orde. Non mestures roles.
+
+Axente 1 (Deseñador):
+- Propón unha actividade de 45 min sobre “sesgos en exemplos xerados por IA”.
+
+Axente 2 (Avaliador):
+- Revisa con criterios: claridade, avaliación, inclusión, privacidade, verificabilidade.
+- Devolve unha lista de melloras obrigatorias (máx. 6).
+
+Axente 3 (Editor):
+- Reescribe a actividade final incorporando TODAS as melloras obrigatorias.
+- Entrega SOLO a versión final.
+
+Restriccións:
+- Sen datos persoais.
+- Non inventar normativa ou estatísticas.
+
+Formato final (Markdown con encabezados fixos):
+- Obxectivo e evidencia
+- Desenvolvemento (pasos)
+- Avaliación
+- Adaptacións
+- Riscos e mitigacións
+```
+
+**Por que funciona**:
+- Reduce o sesgo de auto‑confirmación (un rol “critica”).
+- Mellora a calidade sen pedir cadeas de pensamento.

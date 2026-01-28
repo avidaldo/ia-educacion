@@ -1,0 +1,36 @@
+import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/components/ChatConversation';
+
+# Funcionamento
+
+## Como funcionan?
+
+- De xeito estatístico. Aprenden a predicir a seguinte palabra baseándose nas anteriores.
+- Non parte de cero, predí a seguinte palabra baseándose no prompt que lle damos, nas anteriores (memoria) e no contexto (configuración).
+- Están adestrados con datos existentes, pero **non teñen un "coñecemento funcional" das regras** (por exemplo ao crear imaxes, non saben como funcionan os punteiros dun reloxo).
+
+
+<ChatConversation source="/data/chats/clock.yaml" />
+
+
+:::tip[Máis en profundidade]
+[Machine learning](https://github.com/avidaldo/ia24/blob/main/intro/intro-ml.md)
+:::
+
+### Modelos de linguaxe
+
+<iframe 
+  width="100%"
+  height="500"
+  src="https://www.youtube.com/embed/LPZh9BOjkQs" 
+  title="YouTube video player" 
+  frameBorder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowFullScreen>
+</iframe>
+
+
+
+### Razoadores
+
+Os modelos razoadores dan en xeral un mellor resultado á conta de maior tempo. Integran no seu funcionamento a estratexia de cadea de pensamento (*Chain of Thought* - CoT) habendo sido adestrados con exemplos de razoamento paso a paso.
+Permitiron superar novos niveis en *benchmarks* matemáticos e lógicos.

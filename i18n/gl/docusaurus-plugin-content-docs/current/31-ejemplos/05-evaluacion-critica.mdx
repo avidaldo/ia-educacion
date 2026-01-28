@@ -1,0 +1,27 @@
+---
+slug: /ejemplos/evaluacion-critica
+---
+
+import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/components/ChatConversation';
+
+# Avaliación e verificación
+
+## Crítica do prompt (contrarian prompting)
+
+<ChatConversation source="/data/chats/critical-evaluation.yaml" />
+
+>**Por que funciona**:
+>- Evita o sesgo de “dirche que si” e pide unha análise **con criterios**.
+>- Sinala riscos típicos na docencia: **privacidade**, sesgos en exemplos e ambigüidade.
+>- Remata cunha **versión mellorada** que podes reutilizar.
+
+## Comparar dous prompts (análise en táboa)
+
+Cando dubidas entre dúas versións, pide unha comparación por criterios. Isto adoita dar un feedback máis concreto que “cal é mellor?”.
+
+<ChatConversation source="/data/chats/comparison-analysis.yaml" />
+
+>**Por que funciona**:
+>- Converte unha opinión nunha revisión **estruturada**.
+>- Obriga a falar de control de formato, verificabilidade e riscos.
+>- A recomendación final sae de criterios, non de estilo.

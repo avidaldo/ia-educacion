@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -15,7 +15,7 @@ const config: Config = {
   organizationName: 'avidaldo',
   projectName: 'ia-educacion',
   deploymentBranch: 'gh-pages',
-  trailingSlash: false,
+  trailingSlash: true,
 
   onBrokenLinks: 'warn',
   markdown: {
@@ -28,10 +28,15 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'es',
-    locales: ['es'],
+    locales: ['es', 'gl'],
     localeConfigs: {
       es: {
         htmlLang: 'es-ES',
+        label: 'Español',
+      },
+      gl: {
+        htmlLang: 'gl',
+        label: 'Galego',
       },
     },
   },
@@ -86,16 +91,20 @@ const config: Config = {
           label: 'Presentación',
         },
         {
+          type: 'localeDropdown',
+          position: 'right',
+        },
+        {
           type: 'html',
           position: 'right',
-          value: `<div style="display: flex; flex-direction: column; align-items: flex-end; line-height: 1.2;">
-                  <div style="font-size: 0.8rem; opacity: 0.8;">Última actualización: 
+          value: `\u003cdiv style=\"display: flex; flex-direction: column; align-items: flex-end; line-height: 1.2;\"\u003e
+                  \u003cdiv style=\"font-size: 0.8rem; opacity: 0.8;\"\u003eÚltima actualización: 
                   ${new Date().toLocaleDateString('es-ES', {
-                    day: '2-digit',
-                    month: '2-digit',
-                    year: 'numeric'
-                  })}</div>
-                </div>`,
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+          })}\u003c/div\u003e
+                \u003c/div\u003e`,
         },
       ],
     },
@@ -104,7 +113,7 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
-  
+
   scripts: [],
   staticDirectories: ['public', 'static'],
 };

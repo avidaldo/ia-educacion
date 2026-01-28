@@ -1,0 +1,22 @@
+{
+    "theme.SearchBar.label": {
+        "message": "Buscar",
+        "description": "The ARIA label and placeholder for search button"
+    },
+    "theme.SearchModal.placeholder": {
+        "message": "Buscar",
+        "description": "The placeholder of the input of the search bar"
+    },
+    "docusaurus.config.title": {
+        "message": "IA na educación",
+        "description": "The title of the site"
+    },
+    "docusaurus.config.tagline": {
+        "message": "Intelixencia artificial para docentes de secundaria e FP",
+        "description": "The tagline of the site"
+    },
+    "homepage.startButton": {
+        "message": "Comecemos",
+        "description": "The button to start the tutorial"
+    }
+}
