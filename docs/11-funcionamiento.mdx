@@ -1,38 +1,127 @@
-import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/components/ChatConversation';
+# Funcionamiento de los modelos de lenguaje
 
-# Funcionamiento
+## ¿Qué hace un modelo de lenguaje?
 
-## ¿Cómo funcionan?
+Un modelo de lenguaje hace, en esencia, lo mismo que el teclado de tu móvil cuando te sugiere la siguiente palabra: **predecir qué palabra es más probable que venga a continuación**, dado el texto anterior.
 
-- De manera estadística. Aprenden a predecir la siguiente palabra basándose en las anteriores.
-- No parte de cero, predice la siguiente palabra basándose en el prompt que le damos, en las anteriores (memoria) y en el contexto (configuración).
-- Están entrenados con datos existentes, pero **no tienen un "conocimiento funcional" de las reglas** (por ejemplo al crear imágenes, no saben cómo funcionan las manecillas de un reloj).
+La diferencia es de escala. El autocompletado del móvil trabaja con patrones simples (qué palabras suelen ir juntas). Un modelo de lenguaje como GPT-4, Claude o Gemini ha sido entrenado con cantidades enormes de texto y es capaz de generar secuencias largas y coherentes, mantener el hilo de una conversación, o producir un ensayo completo. Pero el mecanismo subyacente es el mismo: **calcular la probabilidad de la siguiente palabra** y elegir una.
 
+Esto es importante: un modelo de lenguaje no "entiende" el texto en el sentido humano del término. No tiene creencias, ni intenciones, ni una representación del mundo. Calcula probabilidades sobre secuencias de texto.
 
-<ChatConversation source="/data/chats/clock.yaml" />
+## ¿De dónde salen esas probabilidades?
 
+Las probabilidades que maneja un modelo de lenguaje proceden de su **entrenamiento**: un proceso en el que el modelo ha procesado cantidades masivas de texto (libros, artículos, páginas web, foros, documentación técnica...) y ha extraído de ellos **patrones estadísticos**.
 
-:::tip[En más profundidad]
-[Machine learning](https://github.com/avidaldo/ia24/blob/main/intro/intro-ml.md)
+¿Qué tipo de patrones? Básicamente, qué palabras, frases y estructuras tienden a aparecer juntas y en qué contextos. Por ejemplo:
+
+- Tras "buenos", es muy probable que aparezca "días" o "resultados".
+- Tras "el paciente presenta fiebre y...", es probable que sigan términos médicos.
+- Un texto que empieza con "Érase una vez..." seguirá probablemente con un tono narrativo.
+
+Una analogía: si hubieras leído miles de recetas de cocina, podrías "predecir" que después de "añadir sal y..." probablemente viene "pimienta". No porque entiendas de cocina ni porque pimienta sea la respuesta correcta en todos los casos, sino porque es el patrón más frecuente en los textos que has visto. Eso es exactamente lo que hace un modelo de lenguaje, pero con todo tipo de textos y a una escala enormemente mayor.
+
+:::info[Concepto clave]
+El modelo no memoriza datos concretos ni almacena una base de datos de hechos. Lo que almacena son **distribuciones de probabilidad** sobre secuencias de texto: patrones estadísticos que le permiten generar texto nuevo que se *parece* al texto con el que fue entrenado.
 :::
 
-### Modelos de lenguaje
-
-<iframe 
-  width="100%"
-  height="500"
-  src="https://www.youtube.com/embed/LPZh9BOjkQs" 
-  title="YouTube video player" 
-  frameBorder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowFullScreen>
-</iframe>
+:::tip[En más profundidad]
+[Introducción al Machine Learning](https://github.com/avidaldo/ia24/blob/main/intro/intro-ml.md)
+:::
 
 
+## Implicaciones de ser una herramienta estadística
 
-### Razonadores
+Comprender que un modelo de lenguaje es, fundamentalmente, una herramienta estadística de predicción permite entender tanto sus capacidades como sus limitaciones.
 
-Los modelos razonadores dan en general un mejor resultado a costa de mayor tiempo. Integran en su funcionamiento la estrategia de cadena de pensamiento (*Chain of Thought* - CoT) habiendo sido entrenados con ejemplos de razonamiento paso a paso.
-Han permitido superar nuevos niveles en *benchmarks* matemáticos y lógicos.
+### No hay comprensión, hay correlación
+
+El modelo produce texto que es **estadísticamente plausible**, no necesariamente verdadero. Esto tiene una consecuencia directa que se conoce como **"alucinación"**: el modelo puede generar con total fluidez información falsa, citas inventadas o datos inexistentes.
+
+Esto no es un "error" en el sentido habitual. El modelo no distingue entre lo verdadero y lo falso porque no tiene acceso a "la verdad": su único criterio es si una secuencia de texto es coherente con los patrones estadísticos que ha aprendido. Un dato inventado puede ser perfectamente plausible desde el punto de vista estadístico.
+
+:::warning[Implicación práctica]
+Cualquier información generada por un modelo de lenguaje debe ser verificada por el usuario. El modelo no es una fuente de información fiable: es una herramienta de generación de texto.
+:::
+
+### El prompt modifica las probabilidades
+
+El texto que proporcionamos como entrada (*prompt*) condiciona directamente las probabilidades de la salida. Al cambiar la formulación de una pregunta, cambiamos el contexto estadístico y, por tanto, la distribución de respuestas probables.
+
+Esto explica por qué:
+- Reformular una pregunta puede producir respuestas muy diferentes.
+- Dar instrucciones detalladas mejora los resultados (proporcionamos más contexto estadístico).
+- La **ingeniería de prompts** funciona: no es "magia", es la manipulación del contexto que el modelo usa para calcular sus probabilidades.
+
+### Limitaciones inherentes
+
+- **Conocimiento congelado**: el modelo solo puede generar texto basado en los patrones aprendidos durante su entrenamiento. No sabe qué ha ocurrido después de su fecha de corte, a no ser que se le proporcione esa información.
+- **Aproximación, no razonamiento**: el modelo puede producir secuencias de texto que *parecen* razonamiento lógico, porque ha visto muchos ejemplos de razonamiento en sus datos de entrenamiento. Pero no realiza deducción lógica formal: reproduce patrones de texto que se *asocian* con el razonamiento.
+- **Confianza sin calibrar**: el modelo genera texto con la misma fluidez independientemente de si la información es correcta o no. No tiene un mecanismo interno de duda ni de incertidumbre.
 
 
+## Los sesgos como consecuencia estadística
+
+El término "sesgo" en el contexto de los modelos de lenguaje se refiere a la tendencia sistemática de un modelo a producir resultados que reflejan determinadas asociaciones, estereotipos o desequilibrios. Sin embargo, es fundamental entender **de dónde procede** ese sesgo para no caer en análisis simplistas.
+
+### ¿Por qué un modelo de lenguaje reproduce sesgos?
+
+La respuesta es directa: **porque sus datos de entrenamiento los contienen**.
+
+Un modelo de lenguaje aprende patrones estadísticos de los textos con los que fue entrenado. Si en esos textos determinadas profesiones se asocian más frecuentemente con un género, si ciertos grupos se describen con adjetivos diferentes, o si ciertos estereotipos aparecen de forma recurrente, el modelo aprenderá esas asociaciones porque **eso es exactamente lo que hace**: extraer y reproducir las regularidades estadísticas de sus datos.
+
+Esto no es un "defecto" del modelo, ni una "decisión" que el modelo toma. Es el resultado directo de su diseño: ser un reflejo estadístico de los textos que ha procesado. Y esos textos son un reflejo del mundo en que fueron escritos, con sus desequilibrios y sus convenciones.
+
+:::info[Perspectiva]
+La pregunta no es "¿por qué la IA es sesgada?", sino: **¿qué contienen los datos con los que fue entrenada, y qué implicaciones tiene usar una herramienta que reproduce fielmente las regularidades estadísticas de esos datos?**
+:::
+
+### Tipos de sesgos en los datos
+
+- **Sesgo de muestreo**: los datos de entrenamiento no representan adecuadamente a todos los grupos. Por ejemplo, un sistema de reconocimiento facial entrenado predominantemente con imágenes de personas de piel clara puede tener menor precisión con otros tonos de piel, simplemente porque tiene menos ejemplos de los que aprender.
+
+- **Sesgo histórico**: los datos reflejan prejuicios sociales del momento y lugar en que fueron generados. Un ejemplo documentado: el sistema de selección de currículos de Amazon (2018) penalizaba CVs que contenían la palabra "mujer", porque se había entrenado con datos históricos de una industria donde la mayoría de contrataciones eran de hombres. El modelo aprendió esa correlación estadística.
+
+- **Sesgo de medición**: los datos se recogen o se miden de forma que no representan con precisión lo que se quiere evaluar. La variable medida no captura fielmente la característica real.
+
+- **Sesgo algorítmico**: introducido por las decisiones de diseño del propio algoritmo, como qué función se optimiza o qué simplificaciones se asumen. Puede ocurrir que la métrica que se optimiza no capture aspectos como la equidad.
+
+- **Sesgo de etiquetado**: las personas que etiquetan los datos de entrenamiento introducen sus propios prejuicios y preconceptos en las etiquetas, lo que el modelo aprende como si fueran veredades objetivas.
+
+
+### Ejemplos
+
+#### [El algoritmo de calificaciones en Reino Unido (2020)](https://www.xataka.com/robotica-e-ia/cuando-nota-no-te-pone-profesor-sino-algoritmo-caos-estudiantes-reino-unido)
+
+* **Problema:** Debido a la cancelación de exámenes por la pandemia, el gobierno británico usó un algoritmo para predecir las calificaciones de los estudiantes.
+* **El sesgo:** El modelo daba un peso significativo al rendimiento histórico de la escuela. Esto penalizó sistemáticamente a estudiantes brillantes de escuelas con peores resultados históricos (generalmente en zonas de menores ingresos), mientras que beneficiaba a estudiantes de centros de élite.
+* **Consecuencia:** Miles de estudiantes vieron sus calificaciones rebajadas injustamente, lo que les impidió acceder a la universidad deseada. El caso generó protestas masivas y el gobierno tuvo que dar marcha atrás.
+* **Análisis:** Este es un caso donde el sesgo no es un fallo técnico del algoritmo, sino la consecuencia directa de usar datos históricos que reflejan desigualdades socioeconómicas preexistentes. El algoritmo hizo exactamente lo que estaba diseñado para hacer: reproducir las distribuciones estadísticas de los datos. El problema estaba en la decisión de usar esas distribuciones como criterio de evaluación individual.
+
+
+#### Sesgos corregidos con sesgos
+
+<div style={{maxWidth: "600px"}}>
+
+<a href="https://elpais.com/tecnologia/2024-02-24/nazis-chinas-y-vikingos-negros-google-suspende-su-ia-de-imagenes-por-sobrerrepresentar-a-minorias.html" target="_blank" rel="noopener noreferrer">
+
+![](/img/black-ss.png)
+
+</a>
+
+</div>
+
+Este ejemplo de Google Gemini generando imágenes históricamente inexactas es especialmente ilustrativo. Intentar corregir un sesgo estadístico (la sobrerrepresentación de personas blancas en los datos de entrenamiento) con una corrección artificial produjo resultados absurdos. Demuestra la dificultad fundamental de "arreglar" sesgos que son reflejo de datos reales:
+
+> "No puedes tener un sistema que no tenga sesgos, o que sea percibido como no sesgado por todo el mundo" ([Yann LeCun](https://www.youtube.com/watch?v=ZQXHf6gv6s8))
+
+
+### De los sesgos a la ética
+
+Comprender que los sesgos son una consecuencia inherente del funcionamiento estadístico de estos modelos — y no un "defecto" que pueda eliminarse sin más — es la base para un uso crítico y responsable de la IA. Las implicaciones éticas de esta realidad y las consideraciones prácticas para docentes se abordan en la sección de [Ética en IA](61-etica.md).
+
+
+## Modelos razonadores
+
+Los modelos razonadores representan una evolución que mejora los resultados en tareas que requieren pensamiento estructurado, a costa de mayor tiempo de procesamiento. Integran en su funcionamiento la estrategia de **cadena de pensamiento** (*Chain of Thought* — CoT): han sido entrenados con ejemplos explícitos de razonamiento paso a paso, lo que les permite generar secuencias intermedias que descomponen un problema en pasos más simples.
+
+Esto ha permitido mejoras significativas en *benchmarks* matemáticos y lógicos. Sin embargo, es importante mantener la perspectiva: estos modelos siguen siendo herramientas estadísticas. Su "razonamiento" consiste en generar secuencias de texto que *se parecen* a un razonamiento lógico, porque han sido entrenados con muchos ejemplos de razonamiento. Esto les permite resolver muchos más problemas que los modelos convencionales, pero no implica que realicen deducción lógica formal en el sentido estricto del término.

@@ -13,47 +13,9 @@ La Comisión Europea define los siguientes principios éticos fundamentales de l
 * **Rendición de Cuentas (Accountability):** Deben existir mecanismos para asegurar la responsabilidad por los sistemas de IA y sus resultados.
 
 
-## Los sesgos en la IA
-
-El "sesgo" en el contexto de la inteligencia artificial (IA) se refiere a la tendencia sistemática de un sistema de IA a producir resultados que son consistentemente inexactos, injustos o desfavorables para ciertos grupos de personas, o que refuerzan prejuicios y estereotipos existentes. Este sesgo se manifiesta en los resultados, decisiones o predicciones de la IA.
-
-Un modelo de Machine Learning aprende a partir de datos. Si los datos con los que se entrena reflejan prejuicios o desigualdades del mundo real, la IA los aprenderá.
-
-
-### Tipos de sesgos
-
-- **Sesgo de muestreo**: Si un conjunto de datos para el reconocimiento facial contiene predominantemente imágenes de personas de piel clara, el modelo resultante puede tener un rendimiento deficiente al reconocer a personas de piel más oscura.
-
-- **Sesgo histórico**: Datos históricos reflejan prejuicios sociales.  
-  - *Ejemplo*: IA de contratación de Amazon (2018) penalizaba CVs con la palabra "mujer", al entrenarse con datos de una industria dominada por hombres.
-
-- **Sesgo de medición**: Proviene de errores sistemáticos en la forma en que se miden o recogen los datos. La variable que se mide no representa de forma precisa la característica que se quiere evaluar.
-
-- **Sesgo algorítmico**: Es el sesgo introducido por el propio algoritmo. Puede ser el resultado de simplificaciones o de la optimización de métricas que no capturan la "justicia" (fairness).
-
-- **Sesgo de etiquetado**: Es una manifestación del sesgo de confirmación de los desarrolladores o usuarios. Tienden a crear y confiar en modelos que confirman sus creencias preexistentes, etiquetando los datos o interpretando los resultados de manera que se ajusten a sus prejuicios.
-
-### Ejemplos
-
-#### [El algoritmo de calificaciones en Reino Unido (2020)](https://www.xataka.com/robotica-e-ia/cuando-nota-no-te-pone-profesor-sino-algoritmo-caos-estudiantes-reino-unido)
-
-* **Problema:** Debido a la cancelación de exámenes por la pandemia, el gobierno británico usó un algoritmo para predecir las calificaciones de los estudiantes.
-* **El Sesgo:** El modelo daba un peso significativo al rendimiento histórico de la escuela. Esto penalizó sistemáticamente a estudiantes brillantes de escuelas con peores resultados históricos (generalmente en zonas de menores ingresos), mientras que beneficiaba a estudiantes de centros de élite.
-* **Consecuencia:** Miles de estudiantes vieron sus calificaciones rebajadas injustamente, lo que les impidió acceder a la universidad deseada. El caso generó protestas masivas y el gobierno tuvo que dar marcha atrás. Fue un claro ejemplo de **sesgo algorítmico y de selección** con un impacto devastador.
-
-#### Sesgos corregidos con sesgos
-
-<div style={{maxWidth: "600px"}}>
-
-<a href="https://elpais.com/tecnologia/2024-02-24/nazis-chinas-y-vikingos-negros-google-suspende-su-ia-de-imagenes-por-sobrerrepresentar-a-minorias.html" target="_blank" rel="noopener noreferrer">
-
-![](/img/black-ss.png)
-
-</a>
-
-</div>
-
-> "No puedes tener un sistema que no tenga sesgos, o que sea percibido como no sesgado por todo el mundo" ([Yann LeCun](https://www.youtube.com/watch?v=ZQXHf6gv6s8))
+:::info[Los sesgos como consecuencia del funcionamiento]
+Los sesgos en la IA son una consecuencia directa de su naturaleza estadística: los modelos reflejan las regularidades de los datos con los que fueron entrenados. Comprender este mecanismo es necesario para un uso ético de estas herramientas. Los tipos de sesgos, sus causas y ejemplos se abordan en detalle en la sección de [Funcionamiento de los modelos de lenguaje](11-funcionamiento).
+:::
 
 
 ## Consideraciones especiales para docentes

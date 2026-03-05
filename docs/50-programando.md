@@ -84,14 +84,6 @@ Cuando uses Copilot/Cursor/Canvas/Artifacts, estos requisitos suelen mejorar muc
 
 Para la base de prompting (formato, delimitadores, verificación), ver: [/docs/prompt](/docs/prompt)
 
-### Fuentes (fiables) para el concepto de agente
-
-- ReAct (Reasoning + Acting): https://arxiv.org/abs/2210.03629
-- Reflexion (agentes con feedback/memoria): https://arxiv.org/abs/2303.11366
-- Self-Refine (mejora iterativa con auto-feedback): https://arxiv.org/abs/2303.17651
-- AutoGen (multi‑agente): https://arxiv.org/abs/2308.08155
-- MetaGPT (multi‑agente): https://arxiv.org/abs/2308.00352
-
 ---
 
 ## Espacios de trabajo en chatbots
