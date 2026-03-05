@@ -20,7 +20,6 @@ Una de las funcionalidades más populares: NotebookLM puede generar un **podcast
 - Dos "presentadores" discuten el contenido de forma natural
 - Personalizable: duración, tono, enfoque
 - Ideal para repasar contenido "de camino" a clase
-- [Tutorial oficial](https://support.google.com/notebooklm/answer/14277038)
 
 ### 🎬 Video Overviews
 Similar a los podcasts pero en formato vídeo:
@@ -54,12 +53,6 @@ Mapas mentales interactivos para:
 - Generar preguntas de test sobre el temario
 - Preparar resúmenes para los alumnos
 - Crear podcasts educativos sin grabación
-
-## Acceso
-
-- **Gratuito** para uso personal
-- **Google Workspace for Education**: disponible para instituciones educativas con protecciones de datos (FERPA, COPPA)
-- Los datos de educación **no se usan para entrenar modelos**
 
 ## Comparación con Proyectos de ChatGPT
 

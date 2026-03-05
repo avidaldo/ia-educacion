@@ -2,7 +2,7 @@
 
 Educational website built with Docusaurus to showcase AI tools and techniques for teaching.
 
-**Live Site:** https://avidaldo.github.io/ia-educacion/
+**Live Site:** https://i.gal/ia-edu
 
 ## 📋 Project Overview
 

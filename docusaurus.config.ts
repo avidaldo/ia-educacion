@@ -85,11 +85,12 @@ const config: Config = {
           position: 'left',
           label: 'Contenidos',
         },
-        {
-          to: '/presentation',
-          position: 'left',
-          label: 'Presentación',
-        },
+        // UNCOMMENT To SHOW THE PRESENTATION (SLIDES) SECTION
+        // {
+        //   to: '/presentation',
+        //   position: 'left',
+        //   label: 'Presentación',
+        // },
         {
           type: 'localeDropdown',
           position: 'right',
