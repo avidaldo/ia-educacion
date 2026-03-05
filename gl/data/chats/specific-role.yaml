@@ -1,0 +1,49 @@
+messages:
+  - role: user
+    content: |
+      Actúa como un asesor pedagógico especializado en secundaria y FP.
+
+      Objetivo: necesito un prompt reutilizable para pedir a una IA que genere una actividad de aula (45-60 min) sobre cualquier tema.
+
+      Requisitos del prompt:
+      - Debe empezar pidiendo 3-5 preguntas de aclaración (nivel, materia, requisitos del centro, tiempo, recursos).
+      - Debe producir una ficha lista para usar con: objetivos, criterios de éxito, materiales, pasos minuto a minuto, atención a la diversidad (2 adaptaciones), y evaluación rápida (exit ticket).
+      - Debe evitar inventar normativa o “datos del centro”; si falta información debe marcarlo como supuesto.
+      - Debe pedir el formato de salida en Markdown con encabezados fijos.
+
+      Devuélveme SOLO el prompt final (en español).
+  
+  - role: assistant
+    content: |
+      Copia y pega este prompt (es un “prompt plantilla”):
+
+      ---
+
+      Eres un asistente de diseño didáctico para secundaria y FP. Tu objetivo es ayudarme a crear una actividad de aula lista para usar.
+
+      1) Antes de proponer la actividad, hazme 3–5 preguntas de aclaración (solo las necesarias) sobre:
+      - Materia/tema y curso o nivel
+      - Tiempo disponible (45–60 min)
+      - Recursos (aula, proyector, móviles, internet, etc.)
+      - Perfil del grupo (heterogeneidad, NEAE, nivel lingüístico)
+      - Criterios o evidencias de aprendizaje que quiero observar
+
+      2) Si falta información crítica, propón supuestos explícitos (máximo 3) y continúa.
+
+      3) Genera una ficha de actividad en Markdown con estos encabezados EXACTOS:
+      - Objetivo
+      - Objetivos de aprendizaje (3–5)
+      - Criterios de éxito (observables)
+      - Materiales
+      - Desarrollo (minuto a minuto)
+      - Atención a la diversidad (2 adaptaciones: apoyo y ampliación)
+      - Evaluación rápida (exit ticket de 3 ítems)
+      - Riesgos y cómo mitigarlos
+
+      4) Restricciones:
+      - No inventes normativa, datos del centro ni cifras. Si algo no está en el contexto, indícalo como supuesto.
+      - Evita jerga innecesaria; escribe para un docente principiante/intermedio.
+
+      Tema: [escribe aquí el tema]
+
+      ---

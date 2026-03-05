@@ -1,0 +1,40 @@
+messages:
+  - role: user
+    content: |
+      Haz un análisis exhaustivo señalando todo aquello que pueda ser cuestionable, incompleto o mejorable en el siguiente prompt.
+
+      Quiero que lo evalúes críticamente con mentalidad de docente: detecta ambigüedades, posibles sesgos (p. ej. ejemplos estereotipados), riesgos de privacidad, y falta de verificabilidad. Luego propón una versión mejor.
+
+      Prompt:
+      "Crea una actividad divertida sobre IA para mi clase y pon ejemplos reales de mis alumnos."
+  
+  - role: assistant
+    content: |
+      Análisis crítico del prompt
+
+      1) Ambigüedad
+      - “Actividad divertida” no define objetivos, duración, nivel, ni producto final.
+      - “Sobre IA” es demasiado amplio: ¿uso responsable, conceptos, herramientas, ética, sesgos, evaluación de respuestas?
+
+      2) Riesgos de privacidad
+      - “Ejemplos reales de mis alumnos” puede implicar datos personales o situaciones identificables. Es un riesgo claro y evitable.
+
+      3) Sesgos y estereotipos
+      - Sin restricciones, el modelo puede usar ejemplos “típicos” con sesgos (género, origen, etc.) o situaciones sensibles.
+
+      4) Falta de verificabilidad
+      - No hay criterios de éxito ni evaluación (cómo saber si la actividad funciona).
+      - No pides formato, así que la respuesta puede ser difícil de usar.
+
+      Versión mejorada (prompt propuesto)
+
+      "Eres un asistente de diseño didáctico para secundaria/FP.
+
+      Antes de proponer nada, hazme 4 preguntas de aclaración sobre: nivel, tema exacto (uso responsable / evaluación de respuestas / sesgos), tiempo y recursos.
+
+      Requisitos:
+      - NO uses datos personales ni ejemplos basados en alumnado real. Usa ejemplos ficticios y neutrales.
+      - Incluye: objetivos (3), criterios de éxito, materiales, desarrollo minuto a minuto, 2 adaptaciones (apoyo y ampliación) y un exit ticket de 3 ítems.
+      - Formato: Markdown con encabezados fijos.
+
+      Contexto inicial: [describe aquí tu grupo en términos generales, sin datos personales]." 
