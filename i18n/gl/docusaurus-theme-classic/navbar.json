@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Docencia con IA",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Docencia con IA",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Contenidos": {
+    "message": "Contidos",
+    "description": "Navbar item with label Contenidos"
+  }
+}

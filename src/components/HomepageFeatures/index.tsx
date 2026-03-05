@@ -1,7 +1,14 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
+function BuildDate() {
+  const { siteConfig } = useDocusaurusContext();
+  const buildDate = (siteConfig.customFields?.buildDate as string) || 'Desconocida';
+  return <>{buildDate}</>;
+}
 
 type FeatureItem = {
   title: string;
@@ -15,23 +22,19 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/logo.svg').default,
     description: (
       <>
-        <div style={{fontSize: '0.8rem', opacity: 0.8}}>
-          Última actualización: {new Date().toLocaleDateString('es-ES', {
-            day: '2-digit',
-            month: '2-digit',
-            year: 'numeric'
-          })}
+        <div style={{ fontSize: '0.8rem', opacity: 0.8 }}>
+          Última actualización: <BuildDate />
         </div>
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--12')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" style={{height: 'auto', width: 'auto'}} />
+        <Svg className={styles.featureSvg} role="img" style={{ height: 'auto', width: 'auto' }} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

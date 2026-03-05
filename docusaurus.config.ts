@@ -4,6 +4,12 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const buildDate = new Date().toLocaleDateString('es-ES', {
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric'
+});
+
 const config: Config = {
   title: 'Docencia con IA',
   tagline: 'Usando IAs para la docencia',
@@ -11,6 +17,10 @@ const config: Config = {
 
   url: 'https://avidaldo.github.io',
   baseUrl: '/ia-educacion/',
+
+  customFields: {
+    buildDate,
+  },
 
   organizationName: 'avidaldo',
   projectName: 'ia-educacion',
@@ -100,11 +110,7 @@ const config: Config = {
           position: 'right',
           value: `\u003cdiv style=\"display: flex; flex-direction: column; align-items: flex-end; line-height: 1.2;\"\u003e
                   \u003cdiv style=\"font-size: 0.8rem; opacity: 0.8;\"\u003eÚltima actualización: 
-                  ${new Date().toLocaleDateString('es-ES', {
-            day: '2-digit',
-            month: '2-digit',
-            year: 'numeric'
-          })}\u003c/div\u003e
+                  ${buildDate}\u003c/div\u003e
                 \u003c/div\u003e`,
         },
       ],
