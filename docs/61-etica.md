@@ -14,7 +14,7 @@ La Comisión Europea define los siguientes principios éticos fundamentales de l
 
 
 :::info[Los sesgos como consecuencia del funcionamiento]
-Los sesgos en la IA son una consecuencia directa de su naturaleza estadística: los modelos reflejan las regularidades de los datos con los que fueron entrenados. Comprender este mecanismo es necesario para un uso ético de estas herramientas. Los tipos de sesgos, sus causas y ejemplos se abordan en detalle en la sección de [Funcionamiento de los modelos de lenguaje](11-funcionamiento).
+Los sesgos en la IA son una consecuencia directa de su naturaleza estadística: los modelos reflejan las regularidades de los datos con los que fueron entrenados. Comprender este mecanismo es necesario para un uso ético de estas herramientas. Los tipos de sesgos, sus causas y ejemplos se abordan en detalle en la sección de [Funcionamiento de los modelos de lenguaje](11-funcionamiento.mdx).
 :::
 
 

@@ -162,5 +162,5 @@ Calquera chatbot pode crear páxinas HTML facilmente a golpe de prompt. Despois 
 
 ## Recursos relacionados
 
-- [Tests para Moodle](./51-tests-moodle.mdx) - Xeración de preguntas importables
+- [Tests para Moodle](./41-casos-uso/01-tests-moodle.mdx) - Xeración de preguntas importables
 - [Asistentes personalizados](./31-ejemplos/09-asistente-personalizado.mdx) - Crear GPTs e Gems
