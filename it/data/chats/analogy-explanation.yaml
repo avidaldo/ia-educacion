@@ -1,0 +1,36 @@
+messages:
+  - role: user
+    content: |
+      Explica qué es un “agente de IA” (en el sentido de un sistema que persigue un objetivo, usa herramientas y se adapta) usando una analogía que un grupo de docentes de secundaria/FP entienda.
+
+      Requisitos:
+      - Lenguaje claro, sin jerga.
+      - 1 analogía central + 1 tabla que mapee conceptos.
+      - Termina con 3 ejemplos de tareas docentes donde un agente tendría sentido y 3 donde NO.
+
+  - role: assistant
+    content: |
+      Un “agente de IA” se parece más a un ayudante que no solo responde, sino que también ejecuta pasos para lograr un objetivo.
+
+      Analogía: un docente con un “equipo de apoyo”
+      Imagina que tú planteas un objetivo: “Quiero preparar una secuencia didáctica con materiales, una rúbrica y un cuestionario”.
+      Un chatbot simple te da ideas. Un agente, además, podría: buscar información en documentos, crear borradores, convertir formatos, y revisar si cumple tus requisitos.
+
+      Tabla de equivalencias
+      | Concepto | Analogía docente |
+      |---|---|
+      | Objetivo | Encargo (“prepara una actividad evaluable”) |
+      | Plan | Guion de trabajo (pasos y orden) |
+      | Herramientas | Recursos (plantillas, repositorio del centro, Moodle, buscador) |
+      | Observaciones | Lo que encuentra/lee (documentos, resultados, errores) |
+      | Corrección | Revisar y ajustar tras ver que algo no encaja |
+
+      3 tareas docentes donde un agente tiene sentido
+      1. Generar un banco de preguntas y validarlo con una rúbrica de calidad.
+      2. Adaptar materiales a distintos niveles (apoyo/ampliación) manteniendo objetivos.
+      3. Preparar una unidad didáctica a partir de documentos del currículo del departamento.
+
+      3 tareas donde NO tiene sentido (o hay alto riesgo)
+      1. Tomar decisiones disciplinarias o sensibles sobre alumnado.
+      2. Evaluar con consecuencias sin revisión humana (calificaciones finales).
+      3. Trabajar con datos personales del alumnado (privacidad).
