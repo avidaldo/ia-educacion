@@ -16,7 +16,7 @@
     "description": "The tagline of the site"
   },
   "homepage.startButton": {
-    "message": "Comecemos"
+    "message": "Comezamos"
   },
   "theme.ErrorPageContent.title": {
     "message": "This page crashed.",
@@ -375,5 +375,11 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "site.title": {
+    "message": "Docencia con IA"
+  },
+  "site.tagline": {
+    "message": "Usando IAs para a docencia"
   }
 }

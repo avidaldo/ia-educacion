@@ -65,3 +65,9 @@
   font-size: inherit;
   margin: 0.5em 0;
 }
+
+.last-updated-text::before { content: 'Última actualización: '; }
+html[lang="gl"] .last-updated-text::before { content: 'Última actualización: '; }
+html[lang="en"] .last-updated-text::before { content: 'Last updated: '; }
+html[lang="it"] .last-updated-text::before { content: 'Ultimo aggiornamento: '; }
+

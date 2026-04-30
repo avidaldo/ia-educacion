@@ -13,7 +13,7 @@ La Commissione Europea definisce i seguenti principi etici fondamentali dell’I
 * **Responsabilità:** devono esistere meccanismi per garantire la responsabilità dei sistemi di intelligenza artificiale e dei loro risultati.
 
 
-:::info[Los sesgos como consecuencia del funcionamiento]
+:::info[I bias come conseguenza del funzionamento]
 I bias nell’intelligenza artificiale sono una conseguenza diretta della sua natura statistica: i modelli riflettono le regolarità dei dati su cui sono stati addestrati. Comprendere questo meccanismo è necessario per un uso etico di questi strumenti. I tipi di pregiudizi, le loro cause e gli esempi sono discussi in dettaglio nella sezione [Come funzionano i modelli linguistici] (11-functioning.mdx).
 :::
 

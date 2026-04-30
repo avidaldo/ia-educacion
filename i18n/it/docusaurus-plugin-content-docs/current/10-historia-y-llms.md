@@ -26,7 +26,7 @@
 </div>
 
 
-> Paradosso di Moravec (1980): È relativamente facile far eseguire ai computer operazioni matematiche e logiche, ma [è difficile fargli eseguire compiti semplici che qualsiasi bambino di 4 anni può fare. fare](https://www.smbc-comics.com/comic/ai-7?fbclid=IwY2xjawItKRFleHRuA2FlbQIxMAABHV ZSt2Sks4COowshXz1d-2qcawJEbIr3kF3pCskfK9pFV8Oh0MgTvC1otw_aem_9YONOGize2uCs327bG33gA), come riconoscere un oggetto o comprendere il linguaggio naturale.
+> Paradosso di Moravec (1980): È relativamente facile far eseguire ai computer operazioni matematiche e logiche, ma [è difficile fargli eseguire compiti semplici che qualsiasi bambino di 4 anni può fare. fare](https://www.smbc-comics.com/comic/ai-7?fbclid=IwY2xjawItKRFleHRuA2FlbQIxMAABHVZSt2Sks4COowshXz1d-2qcawJEbIr3kF3pCskfK9pFV8Oh0MgTvC1otw_aem_9YONOGize2uCs327bG33gA), come riconoscere un oggetto o comprendere il linguaggio naturale.
 
 - **Reti neurali artificiali**: imitano il funzionamento dei neuroni nel cervello umano per applicazioni di machine learning.
 - Neurone artificiale (1943)

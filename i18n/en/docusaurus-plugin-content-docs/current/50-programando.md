@@ -98,7 +98,7 @@ For the prompting basis (formatting, delimiters, verification), see: [/docs/prom
 3. Claude creates it automatically and gives you a link to share
 4. The code is hosted on Anthropic servers
 
-:::note[Artículo interesante]
+:::note[Interesting article]
 [How to create educational mini-applications with Claude](https://educacion.bilateria.org/como-crear-aplicaciones-educativas-con-claude)
 :::
 

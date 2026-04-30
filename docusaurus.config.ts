@@ -117,7 +117,7 @@ const config: Config = {
           type: 'html',
           position: 'right',
           value: `\u003cdiv style=\"display: flex; flex-direction: column; align-items: flex-end; line-height: 1.2;\"\u003e
-                  \u003cdiv style=\"font-size: 0.8rem; opacity: 0.8;\"\u003eÚltima actualización: 
+                  \u003cdiv style=\"font-size: 0.8rem; opacity: 0.8;\" class=\"last-updated-text\"\u003e
                   ${buildDate}\u003c/div\u003e
                 \u003c/div\u003e`,
         },

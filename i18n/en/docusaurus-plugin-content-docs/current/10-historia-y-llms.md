@@ -26,7 +26,7 @@
 </div>
 
 
-> Moravec Paradox (1980): It is relatively easy to make computers perform mathematical and logical operations, but [it is difficult to make them perform simple tasks that any 4-year-old can do. do](https://www.smbc-comics.com/comic/ai-7?fbclid=IwY2xjawItKRFleHRuA2FlbQIxMAABHV ZSt2Sks4COowshXz1d-2qcawJEbIr3kF3pCskfK9pFV8Oh0MgTvC1otw_aem_9YONOGize2uCs327bG33gA), like recognizing an object or understanding natural language.
+> Moravec Paradox (1980): It is relatively easy to make computers perform mathematical and logical operations, but [it is difficult to make them perform simple tasks that any 4-year-old can do. do](https://www.smbc-comics.com/comic/ai-7?fbclid=IwY2xjawItKRFleHRuA2FlbQIxMAABHVZSt2Sks4COowshXz1d-2qcawJEbIr3kF3pCskfK9pFV8Oh0MgTvC1otw_aem_9YONOGize2uCs327bG33gA), like recognizing an object or understanding natural language.
 
 - **Artificial neural networks**: They imitate the functioning of neurons in the human brain for Machine Learning applications.
 - Artificial neuron (1943)

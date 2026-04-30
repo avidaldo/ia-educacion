@@ -1,6 +1,6 @@
 {
   "homepage.startButton": {
-    "message": "Empezamos"
+    "message": "Iniziamo"
   },
   "theme.ErrorPageContent.title": {
     "message": "Questa pagina è andata in crash.",
@@ -363,5 +363,11 @@
   "theme.tags.tagsPageTitle": {
     "message": "Etichette",
     "description": "The title of the tag list page"
+  },
+  "site.title": {
+    "message": "Insegnare con l'IA"
+  },
+  "site.tagline": {
+    "message": "Usare le IA per la didattica"
   }
 }

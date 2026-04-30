@@ -13,7 +13,7 @@ The European Commission defines the following fundamental ethical principles of 
 * **Accountability:** Mechanisms must exist to ensure responsibility for AI systems and their results.
 
 
-:::info[Los sesgos como consecuencia del funcionamiento]
+:::info[Biases as a consequence of how it works]
 Biases in AI are a direct consequence of its statistical nature: models reflect the regularities of the data on which they were trained. Understanding this mechanism is necessary for ethical use of these tools. The types of biases, their causes, and examples are discussed in detail in the [How language models work] section (11-functioning.mdx).
 :::
 

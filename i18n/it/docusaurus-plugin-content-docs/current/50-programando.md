@@ -98,7 +98,7 @@ Per la base dei prompt (formattazione, delimitatori, verifica), vedere: [/docs/p
 3. Claude lo crea automaticamente e ti fornisce un collegamento da condividere
 4. Il codice è ospitato su server Anthropic
 
-:::note[Artículo interesante]
+:::note[Articolo interessante]
 [Come creare mini-applicazioni educative con Claude](https://educacion.bilateria.org/como-crear-aplicaciones-educativas-con-claude)
 :::
 
