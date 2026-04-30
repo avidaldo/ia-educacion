@@ -6,6 +6,20 @@ import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/compo
 
 # Deep Research
 
+As capacidades de **Deep Research** (Investigación Profunda), integradas en modelos como os de OpenAI e Gemini, representan un salto cualitativo respecto á busca web tradicional en chatbots. 
+
+Mentres que unha busca web normal fai unha consulta e resume os primeiros resultados, un axente de Deep Research funciona de forma autónoma e iterativa:
+1. **Planifica** unha estratexia de investigación.
+2. **Executa** múltiples buscas e le ducias de páxinas.
+3. **Itera** buscando información adicional se atopa baleiros na súa investigación inicial.
+4. **Sintetiza** toda a información nun informe final, rigorosamente referenciado.
+
+Esta ferramenta é excepcional para docentes cando necesitan preparar temarios novos, investigar metodoloxías ou analizar marcos normativos complexos.
+
+## Exemplo de uso
+
+A continuación móstrase unha estrutura de prompt que aproveita estas capacidades para investigación educativa:
+
 <ChatConversation source="/data/chats/deep-research.yaml" />
 
 **Por que funciona**:
@@ -13,3 +27,4 @@ import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/compo
 - Empeza declarando límites de rigor: se non hai fontes, propón un marco e un protocolo.
 - Fai preguntas de aclaración (para evitar “informes xenéricos”).
 - Pide evidencias e define entregables prácticos (modelos, checklist, rúbricas).
+- Aproveita a capacidade do axente de navegar múltiples fontes antes de dar unha resposta final.

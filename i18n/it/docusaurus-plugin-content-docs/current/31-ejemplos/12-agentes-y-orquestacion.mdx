@@ -1,0 +1,119 @@
+---
+slug: /ejemplos/agentes-y-orquestacion
+---
+
+# Agenti e orchestrazione (da automatizzare rigorosamente)
+
+Questi modelli sono utili quando la "chat" non è sufficiente e hai bisogno di:
+
+- utilizzare strumenti (ricerca, estrazione, validazione del formato),
+- iterare con criteri (bozza → critica → versione finale),
+- distribuire il lavoro in ruoli (multi-agente) per migliorare la qualità.
+
+> Regola pratica: richiedere **azioni e prove**, limitare i cicli e definire i **criteri di arresto**.
+
+---
+
+## ReAct (Ragionamento + Agire): Azione → Osservazione → Ciclo di aggiustamento
+
+```text
+Eres un asistente para preparar materiales docentes de secundaria y FP.
+
+Objetivo:
+- Crear un mini-informe (1 página) sobre “cómo reducir errores y alucinaciones al usar IA en tareas educativas”.
+
+Reglas de rigor:
+- No inventes datos ni citas.
+- Si necesitas fuentes y no puedes acceder a ellas, indícalo y entrega un marco general + checklist verificable.
+- Sin datos personales.
+
+Formato de trabajo (ReAct):
+- Repite como máximo 3 ciclos, y en cada ciclo escribe:
+  - Acción: (Buscar / Preguntar / Extraer / Comparar / Verificar)
+  - Observación: (lo encontrado o lo que falta)
+  - Ajuste: (cómo cambia el plan)
+
+Salida final (Markdown):
+- 5 prácticas concretas (con ejemplo breve cada una)
+- Checklist de verificación rápida (10 ítems)
+- “Fuentes a consultar / por verificar” (lista)
+```
+
+**Perché funziona**:
+- Evitare di “inventare” una bibliografia.
+- Converte l'indagine in un processo verificabile (azioni/osservazioni).
+
+---
+
+## Iterazione controllata (auto-raffinazione): bozza → critica → versione finale
+
+A volte è etichettato come “RSIP”, ma è più standard fare riferimento a **Self-Refine**.
+
+```text
+Eres un asistente de evaluación educativa.
+
+Tarea:
+- Crear una rúbrica para evaluar una exposición oral (3–4 min) sobre “impacto de la IA en la vida diaria”.
+
+Contexto:
+- Nivel: 2º ESO
+- Rúbrica: 4 criterios, 4 niveles (1–4)
+
+Restricciones:
+- Lenguaje claro y observable.
+- Sin normativa específica.
+- Sin datos personales.
+
+Iteración (máx. 2 rondas):
+Ronda 1) Entrega un borrador.
+Ronda 2) Critica el borrador con estos criterios:
+  - ¿Se puede aplicar en 3–4 min?
+  - ¿Evita ambigüedades?
+  - ¿Evalúa lo que se pretende (alineación objetivo‑criterios)?
+  - ¿Incluye errores típicos (p.ej. ejemplos inventados, afirmaciones no verificables)?
+Luego entrega la versión final incorporando las mejoras.
+
+Salida (Markdown):
+- Tabla de rúbrica
+- Instrucciones para el alumnado (máx. 6 líneas)
+```
+
+**Perché funziona**:
+- La critica è limitata da criteri (non da “opinione”).
+- Limita l'iterazione per evitare cicli infiniti.
+
+---
+
+## Orchestrazione multi-agente (ruoli): Progettazione → Valutazione → Modifica
+
+Utile quando vuoi separare creatività, revisione e editing finale.
+
+```text
+Simula un equipo de 3 agentes y respeta el orden. No mezcles roles.
+
+Agente 1 (Diseñador):
+- Propón una actividad de 45 min sobre “sesgos en ejemplos generados por IA”.
+
+Agente 2 (Evaluador):
+- Revisa con criterios: claridad, evaluación, inclusión, privacidad, verificabilidad.
+- Devuelve una lista de mejoras obligatorias (máx. 6).
+
+Agente 3 (Editor):
+- Reescribe la actividad final incorporando TODAS las mejoras obligatorias.
+- Entrega SOLO la versión final.
+
+Restricciones:
+- Sin datos personales.
+- No inventar normativa o estadísticas.
+
+Formato final (Markdown con encabezados fijos):
+- Objetivo y evidencia
+- Desarrollo (pasos)
+- Evaluación
+- Adaptaciones
+- Riesgos y mitigaciones
+```
+
+**Perché funziona**:
+- Riduce i bias di autoconferma (un ruolo “critico”).
+- Migliorare la qualità senza chiedere catene di pensiero.

@@ -1,0 +1,30 @@
+---
+slug: /ejemplos/deep-research
+---
+
+import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/components/ChatConversation';
+
+#DeepResearch
+
+**Deep Research** capabilities, integrated into models such as OpenAI and Gemini, represent a qualitative leap over traditional web search in chatbots.
+
+While a normal web search makes a query and summarizes the first results, a Deep Research agent works autonomously and iteratively:
+1. **Plan** a research strategy.
+2. **Run** multiple searches and read dozens of pages.
+3. **Iterate** looking for additional information if you find gaps in your initial research.
+4. **Synthesizes** all the information in a final, rigorously referenced report.
+
+This tool is exceptional for teachers when they need to prepare new syllabi, research methodologies, or analyze complex regulatory frameworks.
+
+## Usage example
+
+Below is a prompt structure that takes advantage of these capabilities for educational research:
+
+<ChatConversation source="/data/chats/deep-research.yaml" />
+
+**Why it works**:
+
+- Start by declaring limits of rigor: if there are no sources, propose a framework and a protocol.
+- Asks clarifying questions (to avoid “generic reports”).
+- Ask for evidence and define practical deliverables (templates, checklist, rubrics).
+- Take advantage of the agent's ability to navigate multiple sources before providing a final response.

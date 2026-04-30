@@ -1,0 +1,27 @@
+---
+slug: /ejemplos/evaluacion-critica
+---
+
+import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/components/ChatConversation';
+
+# Evaluation and verification
+
+## Criticism of the prompt (contrarian prompting)
+
+<ChatConversation source="/data/chats/critical-evaluation.yaml" />
+
+>**Why it works**:
+>- Avoid the bias of “saying yes” and ask for an analysis **with criteria**.
+>- Point out typical risks in teaching: **privacy**, biases in examples and ambiguity.
+>- End up with an **improved version** that you can reuse.
+
+## Compare two prompts (table analysis)
+
+When you doubt between two versions, ask for a comparison by criteria. This usually gives more concrete feedback than “which is better?”
+
+<ChatConversation source="/data/chats/comparison-analysis.yaml" />
+
+>**Why it works**:
+>- Convert an opinion into a **structured** review.
+>- It requires talking about format control, verifiability and risks.
+>- The final recommendation comes from criteria, not style.

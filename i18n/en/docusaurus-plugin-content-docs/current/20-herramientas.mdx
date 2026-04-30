@@ -1,0 +1,130 @@
+# Chatbots and tools
+
+## Top chatbots
+
+###OpenAI
+
+- [ChatGPT](https://chat.openai.com/) - GPT-5.5
+
+Integrates:
+- Dall-E: text to image
+- Sora: text to video
+- **Deep Research**: Deep research mode that iterates through web searches to prepare exhaustive and rigorous reports (ideal for preparing advanced syllabi).
+- [Custom GPTs](https://chatgpt.com/gpts): wizards with specific prompts for specific tasks.
+
+### Google
+
+- [Gemini](https://gemini.google.com/) - Gemini 3.1 Pro, Gemini 3.1 Flash
+- Integrated with Gmail, GDocs, GMaps, **YouTube**...
+- **Deep Research**: Autonomous researcher integrated into the Google Workspace ecosystem, which plans structured searches and synthesizes information in cited reports.
+- [Gems](https://gemini.google.com/gems): personalized assistants (equivalent to GPTs), very useful for designing routines or Socratic tutoring (see [example of Guided Learning](./41-casos-uso/02-guided-learning.mdx)).
+
+- [NotebookLM](https://notebooklm.google/) - see [dedicated section](./22-notebooklm.md)
+- Source-grounded AI: only responds based on your documents
+- Generate podcasts, study guides, quizzes...
+
+- [AI Studio](https://aistudio.google.com/)
+- Experimental models and advanced technical customization
+- Real-time streaming (AI assisting video)
+
+### [Claude](https://claude.ai/) (Anthropic)
+- Claude 4.6 Sonnet and 4.7 Opus
+- Leader in programming and structured reasoning.
+
+### [Perplexity](https://www.perplexity.ai/)
+- It mainly uses other models, but focuses its service on web search and rigorous citation of sources.
+- **Spaces**: Collaborative workspaces where you can define custom instructions (prompts) and upload base files. Unlike Gems or GPTs, when sharing a Space with students through a link, **they do not need to log in or create an account**, which is key to comply with privacy regulations in educational centers.
+
+### [DeepSeek](https://chat.deepseek.com/)
+- Historical milestone (January 2025): "Sputnik moment":
+- *Open weights* (we can download it, see how it works, create our version...)
+- Allows you to see the complete chain of thought (CoT)
+- Much cheaper than its competitors
+
+### [Kimi (Moonshot AI)](https://kimi.moonshot.cn/)
+- **Kimi K2** series (and later K2.5/K2.6).
+- Developed in China, it stands out for having one of the largest context windows on the market (ideal for analyzing educational laws or entire syllabi).
+- Incorporates "Agent Swarm" technology, capable of orchestrating multiple sub-agents in parallel for complex tasks.
+
+### [Qwen](https://chat.qwenlm.ai/)
+- Powerful Chinese model from Alibaba (*open weights*), with excellent performance in global benchmarks.
+
+### Grok (xAI)
+- [Grok](https://x.com/i/grok?focus=1)
+
+### [Copilot](https://copilot.microsoft.com/) (Microsoft)
+- Co-pilots integrated into Office 365, Teams, etc.
+
+### [Le Chat](https://chat.mistral.ai/chat) (Mistral)
+- Only relevant European competitor (French, *open weights*)
+
+
+## Chatbot Configuration
+
+### Memory
+
+Modern chatbots can remember information between conversations:
+
+| Chatbot | Feature | Description |
+|---------|---------------|-------------|
+| **ChatGPT** | Memory | Remember preferences and data between chats. Activable/deactivatable. |
+| **Gemini** | Memory | Remember context from previous conversations. Configurable. |
+| **Claude** | Projects | Organize conversations with shared context. |
+
+### Temporary Chats (Privacy)
+
+For conversations that you do not want to be saved or train the model:
+
+- **ChatGPT**: *Temporary Chat* - automatically deleted after 30 days, does not train the model
+- **Gemini**: *Temporary chat* - deleted after 72 hours, does not train the model, similar to incognito mode
+- **Claude**: Option not to share data for training
+
+> [!TIP]
+> Use temporary chats when working with sensitive or confidential information.
+
+### Canvas / Workspaces
+
+Advanced interfaces for collaborative editing with AI:
+
+**ChatGPT Canvas** ([documentation](https://openai.com/index/introducing-canvas/)):
+- Chat panel + integrated editor
+- Inline editing: select text and request specific changes
+- For code: debugging, comments, refactoring, Python execution
+- For text: adjust reading level, expand/collapse, check grammar
+- Version control: undo changes, restore previous versions
+
+**Gemini** also allows you to collaboratively edit code and documents, although with fewer features than Canvas.
+
+
+## Browsers with AI
+
+### [Comet (Perplexity)](https://www.perplexity.ai/)
+- Native AI browser developed by Perplexity.
+- It goes beyond the classic side chatbot: it integrates an "agent assistant" capable of interacting with web content, managing tabs, summarizing articles and performing tasks on behalf of the user while browsing.
+- Facilitates teaching research by dynamically processing information from multiple open sources.
+
+
+## Other tools
+
+### [Mermaid](https://mermaid.js.org/)
+- Generate flowcharts, sequences, etc. from text
+
+- Specific GPT's:
+- [Mermaid Official](https://chatgpt.com/g/g-1IRFKwq4G-mermaid-chart-diagrams-and-charts)
+- [Sonia (generates the code and shows how to insert it)](https://chatgpt.com/g/g-7BAVTYCJr-sonia-diagramas-educativos-mermaid)
+
+
+### [Video Highlight](https://videohighlight.com/)
+- Transcribe and summarize videos and allow chatting about the content
+
+
+## Text to Image Models
+
+- [Nano Banana](https://banana-ai.org/) (Google) - The most powerful model today (March 2026), with versions such as Nano Banana 2 (Gemini 3.1 Flash Image) and Nano Banana Pro. Exceptional in speed, character consistency and text rendering.
+- [Midjourney v7](https://www.midjourney.com) - Remains the gold standard in the industry for its exceptional artistic aesthetic and photographic quality.
+- **FLUX.2** (Black Forest Labs) - The current leader in photorealism and prompt compliance within open weights models.
+- **GPT Image** (DALL-E) - Integrated natively and conversationally in ChatGPT, very accessible for teachers.
+- [Ideogram v3](https://ideogram.ai/) - Outstanding in generating precise and coherent text within images (ideal for signage).
+- [Adobe Firefly v5](https://firefly.adobe.com/) - Integrated into the Adobe ecosystem. It is the safest option at the copyright level.
+- [Recraft v4 Pro](https://www.recraft.ai/) - Very popular for pure graphic design, SVG generation (vectorization) and consistent styles.
+- All-in-one platforms: [Leonardo](https://app.leonardo.ai/) and [Freepik](https://www.freepik.com/) (Offer access to multiple models in one place, mitigating the need to pay for multiple subscriptions).

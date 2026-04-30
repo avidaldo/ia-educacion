@@ -1,0 +1,123 @@
+# Come funzionano i modelli linguistici
+
+## Cosa fa un modello linguistico?
+
+Un modello linguistico fa, in sostanza, la stessa cosa della tastiera del tuo cellulare quando suggerisce la parola successiva: **prevedere quale parola verrà probabilmente successiva**, dato il testo precedente.
+
+La differenza è di scala. Il completamento automatico mobile funziona con schemi semplici (quali parole di solito vanno insieme). Un modello linguistico come GPT-4, Claude o Gemini è stato addestrato con enormi quantità di testo ed è in grado di generare sequenze lunghe e coerenti, mantenere il filo di una conversazione o produrre un intero saggio. Ma il meccanismo di fondo è lo stesso: **calcolare la probabilità della parola successiva** e sceglierne una.
+
+Questo è importante: un modello linguistico non "comprende" il testo nel senso umano del termine. Non ha credenze, né intenzioni, né rappresentazione del mondo. Calcola le probabilità su sequenze di testo.
+
+## Da dove vengono queste probabilità?
+
+Le probabilità gestite da un modello linguistico derivano dal suo **addestramento**: un processo in cui il modello ha elaborato enormi quantità di testo (libri, articoli, pagine web, forum, documentazione tecnica...) e ha estratto da essi **modelli statistici**.
+
+Che tipo di modelli? Fondamentalmente, quali parole, frasi e strutture tendono ad apparire insieme e in quali contesti. Per esempio:
+
+- Dopo "buono", è molto probabile che appaiano "giorni" o "risultati".
+- Dopo "il paziente ha la febbre e...", probabilmente seguiranno termini medici.
+- Un testo che inizia con "C'era una volta..." probabilmente proseguirà con un tono narrativo.
+
+Un'analogia: se avessi letto migliaia di ricette di cucina, potresti "prevedere" che dopo "sale e..." probabilmente arriva "pepe". Non perché capisci di cucina o perché il pepe sia la risposta corretta in tutti i casi, ma perché è lo schema più frequente nei testi che hai visto. Questo è esattamente ciò che fa un modello linguistico, ma con tutti i tipi di testi e su scala molto più ampia.
+
+:::info[Concepto clave]
+Il modello non memorizza dati concreti né archivia un database di fatti. Ciò che memorizza sono **distribuzioni di probabilità** su sequenze di testo: modelli statistici che gli consentono di generare nuovo testo che *assomiglia* al testo su cui è stato addestrato.
+:::
+
+:::tip[En más profundidad]
+[Introduzione all'apprendimento automatico](https://github.com/avidaldo/ia24/blob/main/intro/intro-ml.md)
+:::
+
+
+## Implicazioni dell'essere uno strumento statistico
+
+Comprendere che un modello linguistico è, fondamentalmente, uno strumento di previsione statistica ci consente di comprenderne sia le capacità che i limiti.
+
+### Non c'è comprensione, c'è correlazione
+
+Il modello produce testo che è **statisticamente plausibile**, non necessariamente vero. Ciò ha una conseguenza diretta nota come **"allucinazione"**: il modello può facilmente generare informazioni false, citazioni inventate o dati inesistenti.
+
+Questo non è un "bug" nel senso comune del termine. Il modello non distingue tra vero e falso perché non ha accesso alla "verità": il suo unico criterio è se una sequenza di testo è coerente con i modelli statistici appresi. Un fatto inventato può essere perfettamente plausibile da un punto di vista statistico.
+
+:::warning[Implicación práctica]
+Qualsiasi informazione generata da un modello linguistico deve essere verificata dall'utente. Il modello non è una fonte affidabile di informazioni: è uno strumento di generazione di testo.
+:::
+
+### Il prompt modifica le probabilità
+
+Il testo che forniamo come input (*prompt*) condiziona direttamente le probabilità dell'output. Modificando la formulazione di una domanda, modifichiamo il contesto statistico e, quindi, la distribuzione delle risposte probabili.
+
+Questo spiega perché:
+- Riformulare una domanda può produrre risposte molto diverse.
+- Fornire istruzioni dettagliate migliora i risultati (forniamo un contesto più statistico).
+- Il **Prompt Engineering** funziona: non è “magia”, è la manipolazione del contesto che il modello utilizza per calcolare le sue probabilità.
+
+### Limitazioni intrinseche
+
+- **Conoscenza congelata**: il modello può generare testo solo in base ai modelli appresi durante l'addestramento. Non sai cosa è successo dopo la tua data in tribunale a meno che non ti venga data questa informazione.
+- **Approssimazione, non ragionamento**: il modello può produrre sequenze di testo che *sembrano* ragionamenti logici, perché ha visto molti esempi di ragionamento nei suoi dati di addestramento. Ma non esegue una deduzione logica formale: riproduce modelli di testo che sono *associati* al ragionamento.
+- **Confidenza non calibrata**: il modello genera testo con la stessa fluidità indipendentemente dal fatto che le informazioni siano corrette o meno. Non ha un meccanismo interno di dubbio o incertezza.
+
+
+## I bias come conseguenza statistica
+
+Il termine "bias" nel contesto dei modelli linguistici si riferisce alla tendenza sistematica di un modello a produrre risultati che riflettono determinate associazioni, stereotipi o squilibri. Tuttavia, è fondamentale capire **da dove** provenga questo pregiudizio per non cadere in analisi semplicistiche.
+
+### Perché un modello linguistico riproduce pregiudizi?
+
+La risposta è semplice: **perché i tuoi dati di allenamento li contengono**.
+
+Un modello linguistico apprende modelli statistici dai testi con cui è stato addestrato. Se in quei testi certe professioni sono più frequentemente associate a un genere, se certi gruppi sono descritti con aggettivi diversi, o se certi stereotipi compaiono in modo ricorrente, il modello apprenderà quelle associazioni perché **è esattamente quello che fa**: estrae e riproduce le regolarità statistiche dei tuoi dati.
+
+Questo non è un "difetto" del modello, né una "decisione" presa dal modello. È il risultato diretto della sua progettazione: essere un riflesso statistico dei testi che ha elaborato. E questi testi sono uno specchio del mondo in cui sono stati scritti, con i suoi squilibri e le sue convenzioni.
+
+:::info[Perspectiva]
+La domanda non è "perché l'intelligenza artificiale è distorta?", ma: **cosa contengono i dati su cui è stata addestrata e quali sono le implicazioni dell'utilizzo di uno strumento che riproduce fedelmente le regolarità statistiche di tali dati?**
+:::
+
+### Tipi di distorsioni nei dati
+
+- **Distorsioni di campionamento**: i dati di addestramento non rappresentano adeguatamente tutti i gruppi. Ad esempio, un sistema di riconoscimento facciale addestrato prevalentemente con immagini di persone dalla pelle chiara potrebbe essere meno accurato con altre tonalità della pelle, semplicemente perché ha meno esempi da cui imparare.
+
+- **Pregiudizi storici**: i dati riflettono i pregiudizi sociali del tempo e del luogo in cui sono stati generati. Un esempio documentato: il sistema di selezione dei curriculum di Amazon (2018) penalizzava i CV che contenevano la parola "donna" perché erano stati formati con dati storici di un settore in cui la maggior parte delle assunzioni erano uomini. Il modello ha appreso tale correlazione statistica.
+
+- **Bias di misurazione**: i dati vengono raccolti o misurati in un modo che non rappresenta accuratamente ciò che vogliamo valutare. La variabile misurata non cattura fedelmente la caratteristica effettiva.
+
+- **Pregiudizio algoritmico**: introdotto dalle decisioni di progettazione dell'algoritmo stesso, ad esempio quale funzione è ottimizzata o quali semplificazioni si assumono. È possibile che la metrica in fase di ottimizzazione non copra aspetti come l’equità.
+
+- **Labeling bias**: le persone che etichettano i dati di training introducono nelle etichette i propri pregiudizi e preconcetti, che il modello apprende come se fossero verità oggettive.
+
+
+### Esempi
+
+#### [L'algoritmo di valutazione nel Regno Unito (2020)](https://www.xataka.com/robotica-e-ia/when-nota-no-te-pone-profesor-sino-algoritmo-caos-estudiantes-reino-unido)
+
+* **Problema:** A causa della cancellazione degli esami a causa della pandemia, il governo britannico ha utilizzato un algoritmo per prevedere i voti degli studenti.
+* **Il pregiudizio:** Il modello ha dato un peso significativo alla performance storica della scuola. Ciò ha sistematicamente penalizzato gli studenti brillanti provenienti dalle scuole storicamente più povere (generalmente nelle aree a basso reddito), avvantaggiando invece gli studenti delle scuole d’élite.
+* **Conseguenza:** Migliaia di studenti hanno visto i loro voti abbassati ingiustamente, cosa che ha impedito loro di accedere all'università desiderata. Il caso scatenò massicce proteste e il governo dovette fare marcia indietro.
+* **Analisi:** Questo è un caso in cui la distorsione non è un fallimento tecnico dell'algoritmo, ma piuttosto la conseguenza diretta dell'utilizzo di dati storici che riflettono le disuguaglianze socioeconomiche preesistenti. L'algoritmo ha fatto esattamente quello per cui era stato progettato: riprodurre le distribuzioni statistiche dei dati. Il problema risiedeva nella decisione di utilizzare queste distribuzioni come criteri di valutazione individuali.
+
+
+#### Bias corretti con bias
+
+<div style={{maxWidth: "600px"}}>
+<a href="https://elpais.com/tecnologia/2024-02-24/nazis-chinas-y-vikingos-negros-google-suspende-su-ia-de-imagenes-por-sobrerrepresentar-a-minorias.html" target="_blank" rel="noopener noreferrer">
+![](/img/nero-ss.png)
+</a>
+</div>
+
+Questo esempio di Google Gemini che genera immagini storicamente imprecise è particolarmente illustrativo. Cercare di correggere un bias statistico (la sovrarappresentazione dei bianchi nei dati di addestramento) con una correzione artificiale ha prodotto risultati assurdi. Dimostra la difficoltà fondamentale di “correggere” i pregiudizi che riflettono dati reali:
+
+> "Non è possibile avere un sistema imparziale o percepito come imparziale da tutti" ([Yann LeCun](https://www.youtube.com/watch?v=ZQXHf6gv6s8))
+
+
+### Dai pregiudizi all'etica
+
+Comprendere che i bias sono una conseguenza intrinseca della performance statistica di questi modelli – e non un “difetto” che può essere semplicemente eliminato – è la base per un uso critico e responsabile dell’IA. Le implicazioni etiche di questa realtà e le considerazioni pratiche per gli insegnanti sono affrontate nella sezione [Etica nell'intelligenza artificiale] (61-etica.md).
+
+
+## Modelli di ragionamento
+
+I modelli di ragionamento rappresentano un’evoluzione che migliora i risultati in compiti che richiedono un pensiero strutturato, al costo di maggiori tempi di elaborazione. Integrano la strategia della **catena di pensiero** (CoT) nel loro funzionamento: sono stati addestrati con esempi espliciti di ragionamento passo dopo passo, che consente loro di generare sequenze intermedie che scompongono un problema in passaggi più semplici.
+
+Ciò ha consentito miglioramenti significativi nei *benchmark* matematici e logici. Tuttavia, è importante mantenere la prospettiva: questi modelli sono ancora strumenti statistici. Il loro "ragionamento" consiste nel generare sequenze di testo che *sembrano* ragionamenti logici, perché sono stati addestrati con molti esempi di ragionamento. Ciò consente loro di risolvere molti più problemi rispetto ai modelli convenzionali, ma non implica che eseguano una deduzione logica formale nel senso stretto del termine.

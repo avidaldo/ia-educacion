@@ -1,0 +1,41 @@
+---
+slug: /ejemplos/instrucciones-especificas
+---
+
+import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/components/ChatConversation';
+
+# Specific instructions
+
+## Example of a prompt with specific role and clear objectives
+
+<ChatConversation source="/data/chats/specific-role.yaml" />
+
+>**Why it works**:
+>- Defines the role (pedagogical advice) and the **objective** (ready-to-use activity).
+>- It requires you to ask **clarification questions** before writing the proposal.
+>- Control the output with **fixed headers** and restrictions (do not invent data, mark assumptions).
+>- Introduce good **privacy** practices (do not use center or student data).
+
+
+# Using output examples (one-shot / few-shot)
+
+Depending on the question, it may be helpful to provide the model with answer examples.
+
+- Zero-shot: No examples are given, only the instruction.
+- One-shot: A single example/pattern is included to guide you.
+- Few-shot: Several examples are provided for clarity.
+
+## One-shot (format pattern)
+
+<ChatConversation source="/data/chats/few-shot-one.yaml" />
+
+
+## Few-shot (various patterns)
+
+
+<ChatConversation source="/data/chats/few-shot-multiple.yaml" />
+
+>**Why it works**:
+>- Give reference examples (stable output pattern).
+>- Controls the **format** (three fixed lines) and the **level**.
+>- Reduces ambiguity: makes the task more evaluable.

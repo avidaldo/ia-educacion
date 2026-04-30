@@ -1,0 +1,27 @@
+---
+slug: /ejemplos/evaluacion-critica
+---
+
+import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/components/ChatConversation';
+
+# Valutazione e verifica
+
+## Critica del suggerimento (suggerimento contrarian)
+
+<ChatConversation source="/data/chats/critical-evaluation.yaml" />
+
+>**Perché funziona**:
+>- Evita il pregiudizio del “dire sì” e chiedi un'analisi **con criterio**.
+>- Evidenziare i rischi tipici dell'insegnamento: **privacy**, pregiudizi negli esempi e ambiguità.
+>- Alla fine ti ritroverai con una **versione migliorata** che potrai riutilizzare.
+
+## Confronta due prompt (analisi della tabella)
+
+Quando dubiti tra due versioni, chiedi un confronto per criteri. Questo di solito fornisce un feedback più concreto di "quale è meglio?"
+
+<ChatConversation source="/data/chats/comparison-analysis.yaml" />
+
+>**Perché funziona**:
+>- Convertire un'opinione in una recensione **strutturata**.
+>- È necessario parlare di controllo del formato, verificabilità e rischi.
+>- La raccomandazione finale viene dai criteri, non dallo stile.

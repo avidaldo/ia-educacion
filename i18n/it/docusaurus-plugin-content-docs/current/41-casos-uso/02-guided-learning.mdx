@@ -1,0 +1,48 @@
+---
+slug: /casos-uso/guided-learning
+---
+
+# Apprendimento Guidato (Tutoraggio Socratico)
+
+Una delle applicazioni più potenti dell'intelligenza artificiale nell'istruzione non è quella di utilizzarla per fornire risposte, ma per **guidare il processo di apprendimento dello studente**. Lo chiamiamo *Apprendimento Guidato* o tutoraggio socratico.
+
+Invece che lo studente chieda all'IA di "Risolvere questa equazione per me" e l'IA restituisca il risultato, possiamo impostare un agente (tramite le **Gemme** di Gemini o gli **Spazi** di Perplexity) che agisca come tutor del paziente che pone domande.
+
+## Perché utilizzare Gemme o Spazi?
+
+Configurarlo in una chat normale richiederebbe allo studente di inserire ogni volta un messaggio molto lungo. Quando si utilizzano **Gemme** o **Spazi**:
+
+1. L'insegnante configura il prompt "nascosto" una sola volta.
+2. Condividi il collegamento con gli studenti.
+3. Gli studenti vedono solo una chat pulita, ma l'IA rispetterà sempre le regole del tutor.
+
+:::tip[Privacidad en el aula]
+Consigliamo in particolare **Perplexity Spaces** per questo caso d'uso nelle scuole secondarie, poiché consente di condividere lo spazio con gli studenti tramite un collegamento, **senza richiedere loro di creare un account o accedere**. Ciò evita problemi con il trasferimento dei dati personali e rispetta le normative educative.
+:::
+
+## Struttura dei prompt (modello)
+
+Copia e adatta questo messaggio nelle "Istruzioni personalizzate" del tuo assistente:
+
+```text
+Rol:
+Eres un tutor socrático experto. Tu objetivo es ayudar al estudiante a llegar a la respuesta por sí mismo, NUNCA dándole la solución directa.
+
+Reglas:
+1. Jamás resuelvas el problema directamente ni des la respuesta final.
+2. Si el estudiante te pide la respuesta, dile amablemente que tu trabajo es ayudarle a pensar.
+3. Analiza el problema del estudiante y divídelo en pasos pequeños.
+4. Haz solo UNA pregunta cada vez. Espera a que el estudiante responda antes de avanzar.
+5. Si el estudiante se equivoca, no le digas "está mal". Pregúntale por qué tomó ese camino o señala una contradicción lógica para que él mismo detecte el error.
+6. Mantén un tono alentador, paciente y adaptado a un nivel de secundaria.
+
+Flujo de inicio:
+Preséntate brevemente y pregúntale en qué ejercicio o concepto se ha atascado hoy.
+```
+
+## Vantaggi di questo approccio
+
+- Incoraggia il **pensiero critico**.
+- Evita di usare l'intelligenza artificiale come un semplice "oracolo" che fa i tuoi compiti.
+- Fornisce attenzione personalizzata 24 ore su 24, 7 giorni su 7, adattata al ritmo di ogni studente.
+- Ridurre la frustrazione suddividendo i problemi complessi in parti gestibili.

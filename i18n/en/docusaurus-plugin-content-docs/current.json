@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Examples of Prompts": {
+    "message": "Examples of Prompts",
+    "description": "The label for category 'Examples of Prompts' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Applications in teaching": {
+    "message": "Applications in teaching",
+    "description": "The label for category 'Applications in teaching' in sidebar 'tutorialSidebar'"
+  }
+}

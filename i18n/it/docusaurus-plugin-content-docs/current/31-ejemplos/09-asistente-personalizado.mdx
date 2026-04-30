@@ -1,0 +1,104 @@
+---
+slug: /ejemplos/asistente-personalizado
+---
+
+import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/components/ChatConversation';
+
+# Assistenti IA personalizzati
+
+Le procedure guidate personalizzate consentono di salvare suggerimenti specifici per attività ripetibili (ad esempio, la generazione di banche di domande, griglie o fogli di attività). L'utente vede una chat normale, ma ad ogni conversazione vengono applicate le istruzioni di base.
+
+## Cos'è un assistente personalizzato (idea generale)
+
+Una procedura guidata è fondamentalmente un **prompt fisso + contesto opzionale** che viene riutilizzato in più conversazioni.
+
+La maggior parte delle principali piattaforme (ChatGPT, Gemini, Claude) offrono modi per creare procedure guidate o "progetti" con nomi diversi:
+
+- **GPT** (ChatGPT): procedure guidate condivisibili con istruzioni, documenti e funzionalità opzionali.
+- **Gemme** (Gemelli): istruzioni salvate che puoi attivare in ogni chat. Particolarmente utile per creare [tutor socratici o guidati](../41-cases-use/02-guided-learning.mdx).
+- **Spazi** (Perplessità): spazi con istruzioni e file di base, che si distinguono perché condivisi con gli studenti **non richiedono loro di registrarsi o accedere**, nel pieno rispetto della normativa sulla privacy.
+- **Progetti** (Claude): contesto condiviso tra conversazioni con istruzioni di base e documenti allegati.
+
+:::info[Cambios frecuentes]
+Nomi, interfacce e requisiti del piano cambiano frequentemente. La cosa importante è il **concetto**: salvare un prompt riutilizzabile in modo da non doverlo riscrivere ogni volta.
+:::
+
+## Come creare una procedura guidata (flusso generale)
+
+Sebbene ogni piattaforma abbia la sua interfaccia, il flusso di base è:
+
+1. **Definisce le istruzioni di base** (il prompt che verrà sempre applicato)
+2. *Facoltativo:* Aggiungi documenti di base (ad esempio curriculum, rubrica, glossario)
+3. *Facoltativo:* Attiva funzionalità extra (ricerca web, generazione di immagini, analisi del codice)
+4. Salva e riutilizza
+
+:::warning[Error común al escribir instrucciones]
+NON scrivere "Crea una procedura guidata che genera domande...".
+
+Scrivi direttamente il messaggio che **l'IA vedrà** in ogni conversazione:
+
+❌ Errato: "Crea un generatore di domande di prova che..."
+✅ Corretto: "Sei un esperto in valutazione didattica. Quando l'utente fornisce un argomento, genera 10 domande a scelta multipla in formato REGALO..."
+:::
+
+## Struttura tipica di un assistente didattico
+
+```text
+Rol y objetivo:
+Eres un asistente de diseño didáctico para secundaria y FP.
+Tu objetivo es [tarea concreta].
+
+Contexto fijo:
+- Nivel: [especificar si aplica]
+- Restricciones: no uses datos personales; no inventes normativa.
+
+Formato de salida:
+- [Encabezados fijos / tabla / JSON / GIFT]
+
+Flujo:
+1. Haz preguntas de aclaración (solo las necesarias).
+2. Genera la propuesta.
+3. Incluye criterios de éxito observables.
+```
+
+## Concetti chiave (indipendenti dalla piattaforma)
+
+| Concetto | Cosa significa nell'insegnamento |
+|---|---|
+| **Istruzioni di base** | Il prompt che verrà sempre applicato (il tuo "modello") |
+| **Contesto/Documenti** | File che il partecipante può visualizzare (ad esempio, curriculum, esempi di attività, rubriche) |
+| **Condividi** | Poter dare all'assistente l'accesso ad altri insegnanti del centro |
+| **Progetto/Sessione** | Mantieni il contesto tra più conversazioni sullo stesso argomento |
+
+
+## Casi d'uso didattici
+
+### Scenari in cui un assistente ha senso
+
+- **Generatore di banche di domande**: istruzioni fisse per il formato REGALO + rubrica qualità
+- **Adattatore materiale**: converte un testo a diversi livelli (supporto/estensione) mantenendo gli obiettivi
+- **Revisore dell'attività**: verifica che una proposta includa obiettivi osservabili, valutazione e attenzione alla diversità
+- **Tutor della materia**: istruzioni con programma, stile e restrizioni (ad esempio, "usa analogie quotidiane")
+- **Traduttore specializzato**: traduce con terminologia specifica dell'area e formato coerente
+
+### Quando NON utilizzare una procedura guidata
+
+- Per attività una tantum o esplorative (utilizzare una normale chat).
+- Quando è necessario modificare costantemente le istruzioni (non ha senso "bloccarle").
+
+## Esempio: assistente al test di Moodle
+
+<ChatConversation source="/data/chats/test-question-generator.yaml" />
+
+Questo esempio mostra come un prompt ben progettato può diventare una procedura guidata riutilizzabile per la generazione di test. Maggiori dettagli in [Test per Moodle](../41-cases-use/01-tests-moodle.mdx).
+
+## Lista di controllo per creare un buon assistente
+
+Prima di "salvare" una procedura guidata, controlla:
+
+- [ ] **Obiettivo chiaro**: quale prodotto finale dovresti generare?
+- [ ] **Formato definito**: tabella/elenco/JSON/REGALO/Markdown con intestazioni?
+- [ ] **Restrizioni di qualità**: criteri di successo? verificabilità?
+- [ ] **Privacy**: eviti di chiedere dati personali agli studenti?
+- [ ] **Domande di chiarimento**: Chiedi ciò di cui hai bisogno prima di rispondere?
+- [ ] **Riutilizzabile**: funziona per più argomenti/situazioni simili?

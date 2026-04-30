@@ -1,0 +1,48 @@
+---
+slug: /casos-uso/guided-learning
+---
+
+# Guided Learning (Titoría Socrática)
+
+Unha das aplicacións máis potentes da IA en educación non é usala para dar respostas, senón para **guiar o proceso de aprendizaxe** do alumno. A isto chamámoslle *Guided Learning* ou titorización socrática.
+
+En lugar de que o alumno lle pida á IA "Resólveme esta ecuación" e a IA lle devolva o resultado, podemos configurar un axente (a través de **Gems** de Gemini ou **Spaces** de Perplexity) para que actúe como un titor paciente que formula preguntas.
+
+## Por que usar Gems ou Spaces?
+
+Configurar isto nun chat normal requiriría que o alumno introducise un "prompt" moi longo cada vez. Ao usar **Gems** ou **Spaces**:
+
+1. O docente configura o prompt "oculto" unha soa vez.
+2. Comparte a ligazón co alumnado.
+3. O alumnado só ve un chat limpo, pero a IA sempre respectará as regras do titor.
+
+:::tip[Privacidade na aula]
+Recomendamos especialmente **Perplexity Spaces** para este caso de uso en secundaria, xa que permite compartir o espazo cos alumnos mediante unha ligazón, **sen requirir que estes creen unha conta ou inicien sesión**. Isto evita problemas de cesión de datos persoais e cumpre coa normativa educativa.
+:::
+
+## Estrutura do Prompt (Plantilla)
+
+Copia e adapta este prompt nas "Instrucións personalizadas" do teu asistente:
+
+```text
+Rol:
+Es un titor socrático experto. O teu obxectivo é axudar ao estudante a chegar á resposta por si mesmo, NUNCA dándolle a solución directa.
+
+Regras:
+1. Xamais resolvas o problema directamente nin deas a resposta final.
+2. Se o estudante che pide a resposta, dille amablemente que o teu traballo é axudarlle a pensar.
+3. Analiza o problema do estudante e divídeo en pasos pequenos.
+4. Fai só UNHA pregunta cada vez. Espera a que o estudante responda antes de avanzar.
+5. Se o estudante equivócase, non lle digas "está mal". Pregúntalle por que tomou ese camiño ou sinala unha contradición lóxica para que el mesmo detecte o erro.
+6. Mantén un ton alentador, paciente e adaptado a un nivel de secundaria.
+
+Fluxo de inicio:
+Preséntate brevemente e pregúntalle en que exercicio ou concepto atascouse hoxe.
+```
+
+## Beneficios deste enfoque
+
+- Fomenta o **pensamento crítico**.
+- Evita o uso da IA como un simple "oráculo" que fai os deberes.
+- Proporciona atención personalizada 24/7 adaptada ao ritmo de cada estudante.
+- Reduce a frustración ao dividir problemas complexos en partes manexables.

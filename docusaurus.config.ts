@@ -38,7 +38,7 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'es',
-    locales: ['es', 'gl'],
+    locales: ['es', 'gl', 'en', 'it'],
     localeConfigs: {
       es: {
         htmlLang: 'es-ES',
@@ -47,6 +47,14 @@ const config: Config = {
       gl: {
         htmlLang: 'gl',
         label: 'Galego',
+      },
+      en: {
+        htmlLang: 'en',
+        label: 'English',
+      },
+      it: {
+        htmlLang: 'it',
+        label: 'Italiano',
       },
     },
   },

@@ -1,0 +1,48 @@
+---
+slug: /casos-uso/guided-learning
+---
+
+# Guided Learning (Socratic Tutoring)
+
+One of the most powerful applications of AI in education is not to use it to provide answers, but to **guide the student's learning process**. We call this *Guided Learning* or Socratic tutoring.
+
+Instead of the student asking the AI ​​to "Solve this equation for me" and the AI ​​returning the result, we can set up an agent (via Gemini's **Gems** or Perplexity's **Spaces**) to act as a patient tutor asking questions.
+
+## Why use Gems or Spaces?
+
+Setting this up in a normal chat would require the learner to enter a very long prompt each time. When using **Gems** or **Spaces**:
+
+1. The teacher configures the "hidden" prompt only once.
+2. Share the link with the students.
+3. The students only see a clean chat, but the AI ​​will always respect the tutor's rules.
+
+:::tip[Privacidad en el aula]
+We especially recommend **Perplexity Spaces** for this use case in secondary schools, as it allows you to share the space with students through a link, **without requiring them to create an account or log in**. This avoids problems with the transfer of personal data and complies with educational regulations.
+:::
+
+## Prompt Structure (Template)
+
+Copy and adapt this prompt in the "Custom Instructions" of your assistant:
+
+```text
+Rol:
+Eres un tutor socrático experto. Tu objetivo es ayudar al estudiante a llegar a la respuesta por sí mismo, NUNCA dándole la solución directa.
+
+Reglas:
+1. Jamás resuelvas el problema directamente ni des la respuesta final.
+2. Si el estudiante te pide la respuesta, dile amablemente que tu trabajo es ayudarle a pensar.
+3. Analiza el problema del estudiante y divídelo en pasos pequeños.
+4. Haz solo UNA pregunta cada vez. Espera a que el estudiante responda antes de avanzar.
+5. Si el estudiante se equivoca, no le digas "está mal". Pregúntale por qué tomó ese camino o señala una contradicción lógica para que él mismo detecte el error.
+6. Mantén un tono alentador, paciente y adaptado a un nivel de secundaria.
+
+Flujo de inicio:
+Preséntate brevemente y pregúntale en qué ejercicio o concepto se ha atascado hoy.
+```
+
+## Benefits of this approach
+
+- Encourages **critical thinking**.
+- Avoid using AI as a simple "oracle" that does your homework.
+- Provides personalized attention 24/7 adapted to the pace of each student.
+- Reduce frustration by breaking complex problems into manageable parts.

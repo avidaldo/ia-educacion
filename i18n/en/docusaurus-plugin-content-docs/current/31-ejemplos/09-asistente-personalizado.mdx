@@ -1,0 +1,104 @@
+---
+slug: /ejemplos/asistente-personalizado
+---
+
+import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/components/ChatConversation';
+
+# Custom AI Assistants
+
+Custom wizards allow you to save specific prompts for repeatable tasks (for example, generating question banks, rubrics, or activity sheets). The user sees a normal chat, but the base instructions are applied to each conversation.
+
+## What is a custom assistant (general idea)
+
+A wizard is basically a **fixed prompt + optional context** that is reused across multiple conversations.
+
+Most major platforms (ChatGPT, Gemini, Claude) offer ways to create wizards or "projects" with different names:
+
+- **GPTs** (ChatGPT): shareable wizards with instructions, documents and optional capabilities.
+- **Gems** (Gemini): saved instructions that you can activate in each chat. Especially useful for creating [Socratic or guided tutors](../41-cases-use/02-guided-learning.mdx).
+- **Spaces** (Perplexity): spaces with base instructions and files, which stand out because when shared with students **they do not require them to register or log in**, robustly complying with privacy regulations.
+- **Projects** (Claude): shared context between conversations with base instructions and attached documents.
+
+:::info[Cambios frecuentes]
+Names, interfaces, and plan requirements change frequently. The important thing is the **concept**: saving a reusable prompt so you don't have to rewrite it every time.
+:::
+
+## How to create a wizard (general flow)
+
+Although each platform has its interface, the basic flow is:
+
+1. **Defines base instructions** (the prompt that will always be applied)
+2. *Optional:* Add background documents (e.g., resume, rubric, glossary)
+3. *Optional:* Activate extra capabilities (web search, image generation, code analysis)
+4. Save and reuse
+
+:::warning[Error común al escribir instrucciones]
+DO NOT write "Create a wizard that generates questions...".
+
+Directly write the prompt that **the AI ​​will see** in each conversation:
+
+❌ Incorrect: "Create a test question generator that..."
+✅ Correct: "You are an expert in educational evaluation. When the user provides a topic, generate 10 multiple choice questions in GIFT format..."
+:::
+
+## Typical structure of a teaching assistant
+
+```text
+Rol y objetivo:
+Eres un asistente de diseño didáctico para secundaria y FP.
+Tu objetivo es [tarea concreta].
+
+Contexto fijo:
+- Nivel: [especificar si aplica]
+- Restricciones: no uses datos personales; no inventes normativa.
+
+Formato de salida:
+- [Encabezados fijos / tabla / JSON / GIFT]
+
+Flujo:
+1. Haz preguntas de aclaración (solo las necesarias).
+2. Genera la propuesta.
+3. Incluye criterios de éxito observables.
+```
+
+## Key concepts (platform agnostic)
+
+| Concept | What does it mean in teaching |
+|---|---|
+| **Base instructions** | The prompt that will always be applied (your "template") |
+| **Context / Documents** | Files that the attendee can view (e.g., curriculum, activity examples, rubrics) |
+| **Share** | Being able to give the assistant access to other teachers at the center |
+| **Project / Session** | Maintain context between multiple conversations on the same topic |
+
+
+## Educational use cases
+
+### Scenarios where an assistant makes sense
+
+- **Question bank generator**: fixed instructions for GIFT format + quality rubric
+- **Material adapter**: converts a text to different levels (support/extension) while maintaining objectives
+- **Activity reviewer**: validates that a proposal includes observable objectives, evaluation and attention to diversity
+- **Subject tutor**: prompt with syllabus, style and restrictions (e.g., "use everyday analogies")
+- **Specialized translator**: translates with area-specific terminology and consistent format
+
+### When NOT to use a wizard
+
+- For one-off or exploratory tasks (use a normal chat).
+- When you need to change instructions constantly (there is no point in "pinning" it).
+
+## Example: Moodle test assistant
+
+<ChatConversation source="/data/chats/test-question-generator.yaml" />
+
+This example shows how a well-designed prompt can become a reusable wizard for generating tests. More details in [Tests for Moodle](../41-cases-use/01-tests-moodle.mdx).
+
+## Checklist to create a good assistant
+
+Before "saving" a wizard, check:
+
+- [ ] **Clear objective**: what final product should you generate?
+- [ ] **Format defined**: table / list / JSON / GIFT / Markdown with headers?
+- [ ] **Quality restrictions**: success criteria? verifiability?
+- [ ] **Privacy**: do you avoid asking for personal data from students?
+- [ ] **Clarification questions**: Do you ask for what you need before responding?
+- [ ] **Reusable**: does it work for multiple similar topics/situations?

@@ -1,0 +1,30 @@
+---
+slug: /ejemplos/deep-research
+---
+
+import { ChatConversation, UserMessage, AssistantMessage } from '@site/src/components/ChatConversation';
+
+#RicercaProfonda
+
+Le funzionalità di **Deep Research**, integrate in modelli come OpenAI e Gemini, rappresentano un salto di qualità rispetto alla tradizionale ricerca web nei chatbot.
+
+Mentre una normale ricerca sul web effettua una query e riassume i primi risultati, un agente di Deep Research lavora in modo autonomo e iterativo:
+1. **Pianificare** una strategia di ricerca.
+2. **Esegui** ricerche multiple e leggi decine di pagine.
+3. **Ripeti** cercando ulteriori informazioni se trovi lacune nella tua ricerca iniziale.
+4. **Sintetizza** tutte le informazioni in un report finale rigorosamente referenziato.
+
+Questo strumento è eccezionale per gli insegnanti quando devono preparare nuovi programmi, metodologie di ricerca o analizzare quadri normativi complessi.
+
+## Esempio di utilizzo
+
+Di seguito è riportata una struttura rapida che sfrutta queste funzionalità per la ricerca educativa:
+
+<ChatConversation source="/data/chats/deep-research.yaml" />
+
+**Perché funziona**:
+
+- Iniziare dichiarando limiti di rigore: se non ci sono fonti, proporre un quadro e un protocollo.
+- Porre domande chiarificatrici (per evitare “rapporti generici”).
+- Richiedere prove e definire risultati pratici (modelli, lista di controllo, rubriche).
+- Approfitta della capacità dell'agente di navigare tra più fonti prima di fornire una risposta finale.

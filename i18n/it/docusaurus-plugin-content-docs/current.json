@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Esempi di suggerimenti": {
+    "message": "Esempi di suggerimenti",
+    "description": "The label for category 'Esempi di suggerimenti' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Applicazioni nell'insegnamento": {
+    "message": "Applicazioni nell'insegnamento",
+    "description": "The label for category 'Applicazioni nell'insegnamento' in sidebar 'tutorialSidebar'"
+  }
+}
