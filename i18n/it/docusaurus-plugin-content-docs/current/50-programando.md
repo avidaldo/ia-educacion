@@ -19,7 +19,7 @@
 |-------------|-------------|
 | **Artefatti di Claude** | Crea applicazioni web e ospitale automaticamente |
 | **ChatGPT Canvas** | Area di lavoro con modifica ed esecuzione del codice |
-| **Gemelli** | Genera codice con possibilità di esportare |
+| **Gemini** | Genera codice con possibilità di esportare |
 | **Cursore/Copilota GitHub** | Editor di codice con AI integrata |
 
 ### Vantaggi
@@ -123,7 +123,7 @@ Per la base dei prompt (formattazione, delimitatori, verifica), vedere: [/docs/p
 - Automaticamente quando rileva il codice lungo
 - Digitando manualmente "usa tela" o "apri tela"
 
-### Gemelli
+### Gemini
 
 Gemini può anche generare codice e applicazioni, sebbene con capacità di hosting meno dirette. Tuttavia consente:
 - Genera codice in più lingue

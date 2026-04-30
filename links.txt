@@ -104,7 +104,7 @@ i18n/it/docusaurus-plugin-content-docs/current/20-herramientas.mdx:[Gemini](http
 i18n/it/docusaurus-plugin-content-docs/current/20-herramientas.mdx:[Gems](https://gemini.google.com/gems): assistenti personalizzati (equivalenti ai GPT), molto utili per progettare routine o tutoraggio socratico (vedi [esempio di Apprendimento Guidato](./41-casos-uso/02-guided-learning.mdx))
 i18n/it/docusaurus-plugin-content-docs/current/20-herramientas.mdx:[NotebookLM](https://notebooklm.google/) - vedi [sezione dedicata](./22-notebooklm.md)
 i18n/it/docusaurus-plugin-content-docs/current/20-herramientas.mdx:[AI Studio](https://aistudio.google.com/)
-i18n/it/docusaurus-plugin-content-docs/current/20-herramientas.mdx:[Claude](https://claude.ai/) (Antropico)
+i18n/it/docusaurus-plugin-content-docs/current/20-herramientas.mdx:[Claude](https://claude.ai/) (Antropic)
 i18n/it/docusaurus-plugin-content-docs/current/20-herramientas.mdx:[Perplessità](https://www.perplexity.ai/)
 i18n/it/docusaurus-plugin-content-docs/current/20-herramientas.mdx:[DeepSeek](https://chat.deepseek.com/)
 i18n/it/docusaurus-plugin-content-docs/current/20-herramientas.mdx:[Kimi (Moonshot AI)](https://kimi.moonshot.cn/)
