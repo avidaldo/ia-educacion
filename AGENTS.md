@@ -18,7 +18,7 @@ Web educativa dirigida a **docentes de educación secundaria** que quieren compr
 
 ## Traducciones (i18n)
 
-El proyecto tiene traducciones al **gallego** en el directorio `i18n/`. Al editar contenido en `docs/`:
+El proyecto tiene traducciones a **gallego, inglés e italiano** en el directorio `i18n/`. Al editar contenido en `docs/`:
 
 - **No traducir automáticamente** cada cambio intermedio para ahorrar tokens.
 - Al terminar de editar un documento, **recordar al usuario** que existen traducciones que pueden necesitar sincronización.
@@ -61,6 +61,20 @@ import { ChatConversation } from '@site/src/components/ChatConversation';
 
 <ChatConversation source="/data/chats/ejemplo.yaml" />
 ```
+
+#### Traducción de chats
+
+Los archivos YAML de `static/data/chats/` son el contenido por defecto (español). Para traducir un chat a otro idioma, crear el mismo archivo en `i18n/{locale}/chat-data/`:
+
+```
+i18n/en/chat-data/specific-role.yaml   ← traducción al inglés
+i18n/gl/chat-data/specific-role.yaml   ← traducción al gallego
+i18n/it/chat-data/specific-role.yaml   ← traducción al italiano
+```
+
+- Solo es necesario crear los archivos que se quieran traducir; los que no existan usarán el contenido por defecto en español.
+- El nombre del archivo debe coincidir exactamente con el original en `static/data/chats/`.
+- El formato del YAML traducido es idéntico al original.
 
 ## Estilo de código
 

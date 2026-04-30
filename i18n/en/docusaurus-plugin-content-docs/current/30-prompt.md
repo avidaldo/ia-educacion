@@ -16,33 +16,33 @@ In the educational context, the design of prompts should be oriented towards the
 The following structure serves as a starting point for designing robust prompts, facilitating interaction with advanced language models.
 
 ```text
-Eres un consultor experto en diseño curricular y normativa educativa.
+You are an expert consultant in instructional design and educational regulations.
 
-Tarea:
-- Quiero crear: [actividad / banco de preguntas / rúbrica / guía de estudio]
+Task:
+- I want to create: [activity / question bank / rubric / study guide]
 
-Contexto:
-- Materia/tema:
-- Nivel (curso o FP):
-- Duración:
-- Recursos disponibles:
-- Perfil del grupo (general, sin datos personales):
+Context:
+- Subject/topic:
+- Level (grade or VET):
+- Duration:
+- Available resources:
+- Group profile (general, without personal data):
 
-Antes de responder:
-- Hazme 3–5 preguntas de aclaración (solo las necesarias).
-- Si falta información crítica, propón hasta 3 supuestos explícitos y continúa.
+Before replying:
+- Ask me 3–5 clarifying questions (only the necessary ones).
+- If critical information is missing, propose up to 3 explicit assumptions and continue.
 
-Salida:
-- Formato: Markdown
-- Encabezados fijos: [lista de encabezados]
-- Límites: [p. ej. máx. 1 página / máx. 12 ítems / tabla]
+Output:
+- Format: Markdown
+- Fixed headers: [list of headers]
+- Limits: [e.g. max 1 page / max 12 items / table]
 
-Restricciones:
-- No uses datos personales del alumnado.
-- No inventes normativa, datos del centro ni cifras. Si no lo sabes, indícalo.
+Constraints:
+- Do not use students' personal data.
+- Do not invent regulations, school data, or figures. If you don't know, state it.
 
-Criterios de calidad:
-- Debe incluir criterios de éxito observables y una evaluación rápida.
+Quality criteria:
+- Must include observable success criteria and a quick assessment.
 ```
 
 ## Fundamental techniques (those that have the most impact)
@@ -100,9 +100,9 @@ Specifies the format as if it were a “delivery template.” Useful examples:
 If you include long texts (syllabus, context, center instructions), separate them with delimiters so that the model does not confuse the prompt instructions with the text to be analyzed:
 
 ```text
-Contexto del centro:
+School context:
 """
-[pega aquí el texto]
+[paste text here]
 """
 ```
 
@@ -115,13 +115,13 @@ Ask for version 1 first and then an audit against criteria.
 Audit example:
 
 ```text
-Revisa tu propuesta con esta lista:
-1) ¿El objetivo es observable?
-2) ¿Hay riesgos de privacidad?
-3) ¿La evaluación mide lo que se pretende?
-4) ¿Hay supuestos no declarados?
+Review your proposal against this list:
+1) Is the objective observable?
+2) Are there privacy risks?
+3) Does the assessment measure what is intended?
+4) Are there undeclared assumptions?
 
-Devuelve: (a) hallazgos, (b) versión mejorada.
+Return: (a) findings, (b) improved version.
 ```
 
 ### B) A/B Comparison (when you iterate)
@@ -129,8 +129,8 @@ Devuelve: (a) hallazgos, (b) versión mejorada.
 Instead of “improve it”, give two versions and ask for a table by criteria:
 
 ```text
-Compara Prompt A vs Prompt B por: claridad, formato, verificabilidad, riesgos.
-Devuelve una tabla y una recomendación.
+Compare Prompt A vs Prompt B by: clarity, format, verifiability, risks.
+Return a table and a recommendation.
 ```
 
 ### C) Verification and limits (anti-hallucinations)

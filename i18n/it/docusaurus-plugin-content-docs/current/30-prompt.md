@@ -1,4 +1,4 @@
-# Progettazione rapida
+# Disegno di prompt
 
 ## Definizione e scopo
 
@@ -16,33 +16,33 @@ Nel contesto educativo, la progettazione dei suggerimenti dovrebbe essere orient
 La struttura seguente funge da punto di partenza per progettare suggerimenti robusti, facilitando l'interazione con modelli linguistici avanzati.
 
 ```text
-Eres un consultor experto en diseño curricular y normativa educativa.
+Sei un consulente esperto in progettazione didattica e normative educative.
 
-Tarea:
-- Quiero crear: [actividad / banco de preguntas / rúbrica / guía de estudio]
+Compito:
+- Voglio creare: [attività / banca dati di domande / rubrica / guida allo studio]
 
-Contexto:
-- Materia/tema:
-- Nivel (curso o FP):
-- Duración:
-- Recursos disponibles:
-- Perfil del grupo (general, sin datos personales):
+Contesto:
+- Materia/argomento:
+- Livello (corso o formazione professionale):
+- Durata:
+- Risorse disponibili:
+- Profilo del gruppo (generale, senza dati personali):
 
-Antes de responder:
-- Hazme 3–5 preguntas de aclaración (solo las necesarias).
-- Si falta información crítica, propón hasta 3 supuestos explícitos y continúa.
+Prima di rispondere:
+- Fammi 3–5 domande di chiarimento (solo quelle necessarie).
+- Se mancano informazioni critiche, proponi fino a 3 ipotesi esplicite e continua.
 
-Salida:
+Output:
 - Formato: Markdown
-- Encabezados fijos: [lista de encabezados]
-- Límites: [p. ej. máx. 1 página / máx. 12 ítems / tabla]
+- Intestazioni fisse: [elenco delle intestazioni]
+- Limiti: [es. max 1 pagina / max 12 elementi / tabella]
 
-Restricciones:
-- No uses datos personales del alumnado.
-- No inventes normativa, datos del centro ni cifras. Si no lo sabes, indícalo.
+Restrizioni:
+- Non utilizzare i dati personali degli studenti.
+- Non inventare normative, dati della scuola o cifre. Se non lo sai, dillo.
 
-Criterios de calidad:
-- Debe incluir criterios de éxito observables y una evaluación rápida.
+Criteri di qualità:
+- Deve includere criteri di successo osservabili e una valutazione rapida.
 ```
 
 ##Tecniche fondamentali (quelle che hanno il maggiore impatto)
@@ -100,9 +100,9 @@ Specifica il formato come se fosse un “modello di consegna”. Esempi utili:
 Se includi testi lunghi (programma, contesto, istruzioni centrali), separali con delimitatori in modo che il modello non confonda le istruzioni del prompt con il testo da analizzare:
 
 ```text
-Contexto del centro:
+Contesto della scuola:
 """
-[pega aquí el texto]
+[incolla qui il testo]
 """
 ```
 
@@ -115,13 +115,13 @@ Richiedi prima la versione 1 e poi un audit rispetto ai criteri.
 Esempio di controllo:
 
 ```text
-Revisa tu propuesta con esta lista:
-1) ¿El objetivo es observable?
-2) ¿Hay riesgos de privacidad?
-3) ¿La evaluación mide lo que se pretende?
-4) ¿Hay supuestos no declarados?
+Rivedi la tua proposta con questo elenco:
+1) L'obiettivo è osservabile?
+2) Ci sono rischi per la privacy?
+3) La valutazione misura ciò che è previsto?
+4) Ci sono ipotesi non dichiarate?
 
-Devuelve: (a) hallazgos, (b) versión mejorada.
+Restituisci: (a) risultati, (b) versione migliorata.
 ```
 
 ### B) Confronto A/B (quando si ripete)
@@ -129,8 +129,8 @@ Devuelve: (a) hallazgos, (b) versión mejorada.
 Invece di “migliorarlo”, fornisci due versioni e chiedi una tabella per criteri:
 
 ```text
-Compara Prompt A vs Prompt B por: claridad, formato, verificabilidad, riesgos.
-Devuelve una tabla y una recomendación.
+Confronta Prompt A vs Prompt B per: chiarezza, formato, verificabilità, rischi.
+Restituisci una tabella e una raccomandazione.
 ```
 
 ### C) Verifica e limiti (antiallucinazioni)
