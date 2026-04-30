@@ -49,8 +49,8 @@ An agent is not “a smarter AI”, but a system that:
 
 If you want to see templates aimed at teaching, here are examples ready to reuse:
 
-- [/docs/examples/agents-and-orquestation](/docs/examples/agents-and-orquestation)
-- [/docs/examples/advanced-reasoning](/docs/examples/advanced-reasoning)
+- [/docs/ejemplos/agentes-y-orquestacion](/docs/ejemplos/agentes-y-orquestacion)
+- [/docs/ejemplos/razonamiento-avanzado](/docs/ejemplos/razonamiento-avanzado)
 
 ### Patterns that work (and how to order them)
 
@@ -162,5 +162,5 @@ Any chatbot can easily create HTML pages at the touch of a prompt. Then you can:
 
 ## Related resources
 
-- [Tests for Moodle](./41-cases-use/01-tests-moodle.mdx) - Generation of importable questions
-- [Custom Wizards](./31-examples/09-custom-wizard.mdx) - Create GPTs and Gems
+- [Tests for Moodle](./41-casos-uso/01-tests-moodle.mdx) - Generation of importable questions
+- [Custom Wizards](./31-ejemplos/09-asistente-personalizado.mdx) - Create GPTs and Gems

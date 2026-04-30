@@ -21,7 +21,7 @@
 
 <div style={{maxWidth: "600px"}}>
 
-![](/img/rulas_vs_ml.jpg)
+![](/img/reglas_vs_ml.jpg)
 
 </div>
 

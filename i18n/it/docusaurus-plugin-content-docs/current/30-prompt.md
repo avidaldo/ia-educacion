@@ -159,25 +159,25 @@ Nell’istruzione, molti compiti non hanno un’unica risposta “corretta” (a
 
 Richiedi 2-4 proposte diverse (A/B/C) e una valutazione con una breve rubrica. Successivamente, richiedi **solo la versione finale** integrando i miglioramenti.
 
-Vedi esempio: [/docs/examples/advanced-reasoning](/docs/examples/advanced-reasoning)
+Vedi esempio: [/docs/ejemplos/razonamiento-avanzado](/docs/ejemplos/razonamiento-avanzado)
 
 ### Autocoerenza: consenso (soprattutto per le liste di controllo)
 
 Richiede diverse proposte indipendenti e poi una versione “consensuale”: preservare ciò che è comune e giustificare le eccezioni. È molto utile per le **liste di controllo** e le linee guida per la correzione.
 
-Vedi esempio: [/docs/examples/advanced-reasoning](/docs/examples/advanced-reasoning)
+Vedi esempio: [/docs/ejemplos/razonamiento-avanzado](/docs/ejemplos/razonamiento-avanzado)
 
 ### ReAct (ragionamento + azione): indaga e verifica con azioni osservabili
 
 Quando l'attività richiede strumenti (ricerca, estrazione, convalida del formato), utilizzare un breve ciclo di **Azione → Osserva → Modifica**. Importante: chiedi **azioni e prove**, non “pensiero passo dopo passo”.
 
-Vedi esempio: [/docs/examples/agentes-y-orquestacion](/docs/examples/agentes-y-orquestacion)
+Vedi esempio: [/docs/ejemplos/agentes-y-orquestacion](/docs/ejemplos/agentes-y-orquestacion)
 
 ### Iterazione controllata (auto-perfezionamento/riflessione): bozza → critica → versione finale
 
 Ciò che a volte viene chiamato "RSIP" di solito corrisponde a modelli più standard come **Self-Refine** (miglioramento iterativo con auto-feedback) e **Reflexion** (agenti che migliorano con feedback e memoria). Nell’insegnamento sono sufficienti 1–2 cicli e chiari **criteri di arresto**.
 
-Vedi esempio: [/docs/examples/agentes-y-orquestacion](/docs/examples/agentes-y-orquestacion)
+Vedi esempio: [/docs/ejemplos/agentes-y-orquestacion](/docs/ejemplos/agentes-y-orquestacion)
 
 ### Scomposizione con vincoli (scomposizione delle attività/concatenamento dei prompt)
 
@@ -188,7 +188,7 @@ Un ottimo caso d’uso è separare il design dal contenuto. Forzare un modello a
 - **Passaggio 1 (Semantica):** "Progetta il contenuto di un'infografica sul ciclo dell'acqua. Organizza le idee e genera il codice in Sirena per il diagramma."
 - **Passaggio 2 (Estetica):** (Una volta convalidato il testo e il diagramma) "Ora, utilizzando il contenuto convalidato dal passaggio 1, genera il codice HTML/CSS per conferire all'infografica un aspetto moderno e professionale."
 
-Vedi esempio: [/docs/examples/advanced-reasoning](/docs/examples/advanced-reasoning)
+Vedi esempio: [/docs/ejemplos/razonamiento-avanzado](/docs/ejemplos/razonamiento-avanzado)
 
 ## Modelli con ragionamento (come chiedere meglio)
 

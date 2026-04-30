@@ -49,8 +49,8 @@ Un agente non è “un’intelligenza artificiale più intelligente”, ma un si
 
 Se vuoi vedere modelli finalizzati alla didattica, ecco degli esempi pronti da riutilizzare:
 
-- [/docs/examples/agents-and-orquestation](/docs/examples/agents-and-orquestation)
-- [/docs/examples/advanced-reasoning](/docs/examples/advanced-reasoning)
+- [/docs/ejemplos/agentes-y-orquestacion](/docs/ejemplos/agentes-y-orquestacion)
+- [/docs/ejemplos/razonamiento-avanzado](/docs/ejemplos/razonamiento-avanzado)
 
 ### Modelli che funzionano (e come ordinarli)
 
@@ -162,5 +162,5 @@ Qualsiasi chatbot può creare facilmente pagine HTML con il semplice tocco di un
 
 ## Risorse correlate
 
-- [Test per Moodle](./41-cases-use/01-tests-moodle.mdx) - Generazione di domande importabili
-- [Procedure guidate personalizzate](./31-examples/09-custom-wizard.mdx) - Crea GPT e gemme
+- [Test per Moodle](./41-casos-uso/01-tests-moodle.mdx) - Generazione di domande importabili
+- [Procedure guidate personalizzate](./31-ejemplos/09-asistente-personalizado.mdx) - Crea GPT e gemme

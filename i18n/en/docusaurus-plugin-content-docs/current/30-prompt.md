@@ -159,25 +159,25 @@ In education, many tasks do not have a single “correct” answer (e.g., design
 
 Ask for 2–4 different proposals (A/B/C) and an evaluation with a short rubric. Then, request **only the final version** integrating improvements.
 
-See example: [/docs/examples/advanced-reasoning](/docs/examples/advanced-reasoning)
+See example: [/docs/ejemplos/razonamiento-avanzado](/docs/ejemplos/razonamiento-avanzado)
 
 ### Self-consistency: consensus (especially for checklists)
 
 It calls for several independent proposals and then a “consensus” version: preserving what is common and justifying exceptions. It is very useful for **checklists** and correction guidelines.
 
-See example: [/docs/examples/advanced-reasoning](/docs/examples/advanced-reasoning)
+See example: [/docs/ejemplos/razonamiento-avanzado](/docs/ejemplos/razonamiento-avanzado)
 
 ### ReAct (Reasoning + Acting): Investigate and verify with observable actions
 
 When the task requires tools (search, extraction, format validation), use a short cycle of **Action → Observe → Adjust**. Important: ask for **actions and evidence**, not “step-by-step thinking”.
 
-See example: [/docs/examples/agentes-y-orquestacion](/docs/examples/agentes-y-orquestacion)
+See example: [/docs/ejemplos/agentes-y-orquestacion](/docs/ejemplos/agentes-y-orquestacion)
 
 ### Controlled Iteration (Self-Refine / Reflexion): draft → critique → final version
 
 What is sometimes called “RSIP” usually corresponds to more standard patterns such as **Self-Refine** (iterative improvement with self-feedback) and **Reflexion** (agents that improve with feedback and memory). In teaching, 1–2 rounds and clear **stopping criteria** are enough.
 
-See example: [/docs/examples/agentes-y-orquestacion](/docs/examples/agentes-y-orquestacion)
+See example: [/docs/ejemplos/agentes-y-orquestacion](/docs/ejemplos/agentes-y-orquestacion)
 
 ### Decomposition with constraints (task decomposition / prompt chaining)
 
@@ -188,7 +188,7 @@ A great use case is to separate design from content. Forcing a model to write, r
 - **Step 1 (Semantics):** "Design the content of an infographic about the water cycle. Organize the ideas and generate the code in Mermaid for the diagram."
 - **Step 2 (Aesthetics):** (Once you validate the text and diagram) "Now, using the validated content from step 1, generate the HTML/CSS code to give the infographic a modern and professional look."
 
-See example: [/docs/examples/advanced-reasoning](/docs/examples/advanced-reasoning)
+See example: [/docs/ejemplos/razonamiento-avanzado](/docs/ejemplos/razonamiento-avanzado)
 
 ## Models with reasoning (how to ask better)
 
