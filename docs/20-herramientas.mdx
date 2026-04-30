@@ -4,18 +4,20 @@
 
 ### OpenAI
 
-- [ChatGPT](https://chat.openai.com/) - GPT 5.2
+- [ChatGPT](https://chat.openai.com/) - GPT-5.5
 
 Integra:
 - Dall-E: texto a imagen
 - Sora: texto a vídeo
+- **Deep Research**: Modo de investigación profunda que itera en búsquedas web para elaborar informes exhaustivos y rigurosos (ideal para preparar temarios avanzados).
 - [GPTs personalizados](https://chatgpt.com/gpts): asistentes con prompts específicos para tareas concretas.
 
 ### Google
 
-- [Gemini](https://gemini.google.com/) - Gemini 3 Pro, Gemini 3 Flash
+- [Gemini](https://gemini.google.com/) - Gemini 3.1 Pro, Gemini 3.1 Flash
   - Integrado con Gmail, GDocs, GMaps, **YouTube**...
-  - [Gems](https://gemini.google.com/gems): asistentes personalizados (equivalente a GPTs)
+  - **Deep Research**: Investigador autónomo integrado en el ecosistema de Google Workspace, que planifica búsquedas estructuradas y sintetiza información en informes citados.
+  - [Gems](https://gemini.google.com/gems): asistentes personalizados (equivalente a GPTs), muy útiles para diseñar rutinas o tutorización socrática (ver [ejemplo de Guided Learning](./41-casos-uso/02-guided-learning.mdx)).
 
 - [NotebookLM](https://notebooklm.google/) - ver [sección dedicada](./22-notebooklm.md)
   - IA "source-grounded": solo responde basándose en tus documentos
@@ -26,17 +28,26 @@ Integra:
   - Streaming en tiempo real (IA asistiendo a vídeo)
 
 ### [Claude](https://claude.ai/) (Anthropic)
-- Claude Sonnet/Opus 4.5
-- Líder en programación
+- Claude 4.6 Sonnet y 4.7 Opus
+- Líder en programación y razonamiento estructurado.
 
 ### [Perplexity](https://www.perplexity.ai/)
-- Utiliza principalmente otros modelos, pero centra su servicio en la búsqueda web
+- Utiliza principalmente otros modelos, pero centra su servicio en la búsqueda web y la cita rigurosa de fuentes.
+- **Spaces**: Espacios de trabajo colaborativos donde puedes definir instrucciones personalizadas (prompts) y subir archivos base. A diferencia de los Gems o GPTs, al compartir un Space con el alumnado mediante un enlace, **no necesitan loguearse ni crear cuenta**, lo cual es clave para cumplir con la normativa de privacidad en centros educativos.
 
 ### [DeepSeek](https://chat.deepseek.com/)
 - Hito histórico (enero 2025): "momento Sputnik":
   - *Open weights* (podemos descargarlo, ver cómo funciona, crear nuestra versión...)
   - Permite ver la cadena de pensamiento (CoT) completa
   - Mucho más barato que sus competidores
+
+### [Kimi (Moonshot AI)](https://kimi.moonshot.cn/)
+- Serie **Kimi K2** (y posteriores K2.5/K2.6).
+- Desarrollado en China, destaca por tener una de las ventanas de contexto más grandes del mercado (ideal para analizar leyes educativas o temarios enteros).
+- Incorpora tecnología de "Agent Swarm" (enjambre de agentes), capaz de orquestar múltiples sub-agentes en paralelo para tareas complejas.
+
+### [Qwen](https://chat.qwenlm.ai/) 
+- Potente modelo chino de Alibaba (*open weights*), con excelente rendimiento en benchmarks globales.
 
 ### Grok (xAI)
 - [Grok](https://x.com/i/grok?focus=1)
@@ -46,9 +57,6 @@ Integra:
 
 ### [Le Chat](https://chat.mistral.ai/chat) (Mistral)
 - Único competidor europeo relevante (francés, *open weights*)
-
-### [Qwen](https://chat.qwenlm.ai/) 
-- Modelo chino (*open weights*)
 
 
 ## Configuración de Chatbots
@@ -90,9 +98,10 @@ Interfaces avanzadas para edición colaborativa con la IA:
 
 ## Navegadores con IA
 
-### [Perplexity Comet](https://www.perplexity.ai/)
-- Navegador de Perplexity con búsqueda integrada
-- Investigación en profundidad mientras navegas
+### [Comet (Perplexity)](https://www.perplexity.ai/)
+- Navegador nativo de IA desarrollado por Perplexity.
+- Va más allá del clásico chatbot lateral: integra un "asistente agéntico" capaz de interactuar con el contenido web, gestionar pestañas, resumir artículos y realizar tareas en nombre del usuario mientras navegas.
+- Facilita la investigación docente al procesar dinámicamente la información de múltiples fuentes abiertas.
 
 
 ## Otras herramientas
@@ -112,11 +121,10 @@ Interfaces avanzadas para edición colaborativa con la IA:
 ## Modelos de texto a imagen
 
 - [Nano Banana](https://banana-ai.org/) (Google) - El modelo más potente en la actualidad (marzo 2026), con versiones como Nano Banana 2 (Gemini 3.1 Flash Image) y Nano Banana Pro. Excepcional en velocidad, coherencia de personajes y renderizado de texto.
-- [Midjourney](https://www.midjourney.com) - Sigue siendo un estándar en la industria por su estilo artístico.
-- Dall-E 3 - Integrado en ChatGPT.
-- [Adobe Firefly](https://firefly.adobe.com/) - Integrado en el ecosistema Adobe.
-- [Flux](https://flux-ai.io/) / [Stable Diffusion](https://stability.ai/stable-assistant) - Modelos de pesos abiertos. (*Flux está integrado también en Grok*).
-- [Ideogram](https://ideogram.ai/) - Destacable en la generación de texto dentro de imágenes, aunque superado ahora por Nano Banana.
-- [Leonardo](https://app.leonardo.ai/)
-- [Freepik](https://www.freepik.com/)
-- [LogoMaker](https://www.logomaker.com/) (Para logos)
+- [Midjourney v7](https://www.midjourney.com) - Sigue siendo el estándar de oro en la industria por su excepcional estética artística y calidad fotográfica.
+- **FLUX.2** (Black Forest Labs) - El líder actual en fotorrealismo y cumplimiento de prompts dentro de los modelos de pesos abiertos (*open weights*).
+- **GPT Image** (DALL-E) - Integrado de forma nativa y conversacional en ChatGPT, muy accesible para docentes.
+- [Ideogram v3](https://ideogram.ai/) - Destacable en la generación de texto preciso y coherente dentro de imágenes (ideal para cartelería).
+- [Adobe Firefly v5](https://firefly.adobe.com/) - Integrado en el ecosistema Adobe. Es la opción más segura a nivel de derechos de autor.
+- [Recraft v4 Pro](https://www.recraft.ai/) - Muy popular para diseño gráfico puro, generación de SVG (vectorización) y estilos consistentes.
+- Plataformas todo-en-uno: [Leonardo](https://app.leonardo.ai/) y [Freepik](https://www.freepik.com/) (Ofrecen acceso a múltiples modelos en un solo lugar, mitigando la necesidad de pagar varias suscripciones).
