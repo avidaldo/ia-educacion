@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Assistenti IA personalizzati | Docencia con IA</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://avidaldo.github.io/ia-educacion/it/docs/ejemplos/asistente-personalizado/"><meta data-rh="true" property="og:locale" content="it"><meta data-rh="true" property="og:locale:alternate" content="es_ES"><meta data-rh="true" property="og:locale:alternate" content="gl"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="it"><meta data-rh="true" name="docsearch:language" content="it"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Assistenti IA personalizzati | Docencia con IA"><meta data-rh="true" name="description" content="Le procedure guidate personalizzate consentono di salvare suggerimenti specifici per attività ripetibili (ad esempio, la generazione di banche di domande, griglie o fogli di attività). L&#x27;utente vede una chat normale, ma ad ogni conversazione vengono applicate le istruzioni di base."><meta data-rh="true" property="og:description" content="Le procedure guidate personalizzate consentono di salvare suggerimenti specifici per attività ripetibili (ad esempio, la generazione di banche di domande, griglie o fogli di attività). L&#x27;utente vede una chat normale, ma ad ogni conversazione vengono applicate le istruzioni di base."><link data-rh="true" rel="icon" href="/ia-educacion/it/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://avidaldo.github.io/ia-educacion/it/docs/ejemplos/asistente-personalizado/"><link data-rh="true" rel="alternate" href="https://avidaldo.github.io/ia-educacion/docs/ejemplos/asistente-personalizado/" hreflang="es-ES"><link data-rh="true" rel="alternate" href="https://avidaldo.github.io/ia-educacion/gl/docs/ejemplos/asistente-personalizado/" hreflang="gl"><link data-rh="true" rel="alternate" href="https://avidaldo.github.io/ia-educacion/en/docs/ejemplos/asistente-personalizado/" hreflang="en"><link data-rh="true" rel="alternate" href="https://avidaldo.github.io/ia-educacion/it/docs/ejemplos/asistente-personalizado/" hreflang="it"><link data-rh="true" rel="alternate" href="https://avidaldo.github.io/ia-educacion/docs/ejemplos/asistente-personalizado/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Esempi di suggerimenti","item":"https://avidaldo.github.io/ia-educacion/it/docs/ejemplos/"},{"@type":"ListItem","position":2,"name":"Assistenti IA personalizzati","item":"https://avidaldo.github.io/ia-educacion/it/docs/ejemplos/asistente-personalizado"}]}</script><link rel="stylesheet" href="/ia-educacion/it/assets/css/styles.a638e2cd.css">
 <script src="/ia-educacion/it/assets/js/runtime~main.7fa2deb4.js" defer="defer"></script>
-<script src="/ia-educacion/it/assets/js/main.38e5e585.js" defer="defer"></script>
+<script src="/ia-educacion/it/assets/js/main.435c96cd.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -55,47 +55,47 @@
 <li class="">Quando è necessario modificare costantemente le istruzioni (non ha senso &quot;bloccarle&quot;).</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="esempio-assistente-al-test-di-moodle">Esempio: assistente al test di Moodle<a href="#esempio-assistente-al-test-di-moodle" class="hash-link" aria-label="Link diretto a Esempio: assistente al test di Moodle" title="Link diretto a Esempio: assistente al test di Moodle" translate="no">​</a></h2>
-<div class="chatContainer_n01S custom-chat-conversation"><div class="chatHeader__q4e"><div class="modelInfo_VI07"><span class="modelName_aopu">chatGPT | GPT&#x27;s</span><span class="chatDate_UKB_"></span></div></div><div class="messagesContainer_DpfC"><div class="userMessageRow_MRjs"><div class="userAvatar_lmu6"><span>👤</span></div><div class="userMessage_YQgg"><p>Crea preguntas de test en formato GIFT importable a Moodle, siguiendo las siguientes reglas.</p>
+<div class="chatContainer_n01S custom-chat-conversation"><div class="chatHeader__q4e"><div class="modelInfo_VI07"><span class="modelName_aopu">chatGPT | GPT&#x27;s</span><span class="chatDate_UKB_"></span></div></div><div class="messagesContainer_DpfC"><div class="userMessageRow_MRjs"><div class="userAvatar_lmu6"><span>👤</span></div><div class="userMessage_YQgg"><p>Crea domande di test in formato GIFT importabile in Moodle, seguendo le seguenti regole:</p>
 <ul>
-<li>Siempre serán preguntas de respuesta múltiple con 4 respuestas y una única correcta.</li>
-<li>Las respuestas incorrectas restarán media pregunta a no ser que se indique lo contrario.</li>
-<li>Todas las respuestas deben tener una longitud similar.</li>
-<li>Se debe priorizar el rigor. La respuesta correcta debe ser la única que lo es. Las otras deben ser manifiestamente incorrectas.</li>
-<li>Deben evitarse preguntas respuestas incorrectas por no ser &quot;la mejor definición&quot; de las que se dan, &quot;la principal desventaja&quot; u otras formas de graduación. Las respuestas incorrectas deben ser manifiestamente incorrectas para evitar ambigüedades y las preguntas deben ser claras.</li>
-<li>Ninguna de las respuestas debe ser trivialmente descartable. Evita el habitual sesgo de que la pregunta correcta siempre sea una de 3 similares y haya otra más absurda.</li>
-<li>El nivel de dificultad esperado es para alumnos de master universitario salvo que se indique lo contrario.</li>
-<li>No incluyas un número antes de las preguntas, serán barajadas.</li>
-<li>Normalmente se pasará material con el que generar las preguntas, evita hacer referencias directas como &quot;según los apuntes&quot;. Las preguntas deben contener por si solas toda la información necesaria para responderlas. Los alumnos no podrán consultar los apuntes durante la prueba.</li>
-<li>Se cuidadoso evitando sesgos como que la respuesta correcta sea la más detallada o la que tiene más longitud.</li>
+<li>Saranno sempre domande a risposta multipla con 4 risposte e una sola corretta.</li>
+<li>Le risposte errate sottrarranno mezzo punto se non diversamente indicato.</li>
+<li>Tutte le risposte devono avere una lunghezza simile.</li>
+<li>Il rigore deve avere la priorità. La risposta corretta deve essere l&#x27;unica ad esserlo. Le altre devono essere palesemente errate.</li>
+<li>Devono essere evitate le domande con risposte errate perché non sono &quot;la migliore definizione&quot; tra quelle fornite, &quot;il principale svantaggio&quot; o altre forme di gradazione. Le risposte errate devono essere palesemente errate per evitare ambiguità e le domande devono essere chiare.</li>
+<li>Nessuna delle risposte dovrebbe essere banalmente scartabile. Evita il solito pregiudizio che la domanda corretta sia sempre una su 3 simili e ce ne sia un&#x27;altra più assurda.</li>
+<li>Il livello di difficoltà previsto è per studenti di master universitario se non diversamente indicato.</li>
+<li>Non includere un numero prima delle domande, verranno mescolate.</li>
+<li>Normalmente verrà fornito del materiale con cui generare le domande, evita di fare riferimenti diretti come &quot;secondo gli appunti&quot;. Le domande devono contenere da sole tutte le informazioni necessarie per risponderle. Gli studenti non potranno consultare gli appunti durante il test.</li>
+<li>Fai attenzione a evitare pregiudizi come che la risposta corretta sia la più dettagliata o la più lunga.</li>
 </ul>
-<p>Un ejemplo del formato deseado de pregunta sería el siguiente:</p>
+<p>Un esempio del formato della domanda desiderato sarebbe il seguente:</p>
 <hr>
-<p>// question: 91483439  name: ¿Qué es el muestreo estratificado?
-::¿Qué es el muestreo estratificado?::[html]¿Qué es el muestreo estratificado?{
-~%-50%Dividir el dataset en grupos y garantizar que todas las muestras de un grupo lo están en el mismo conjunto (test, validación o entrenamiento).
-=Dividir el dataset en grupos y tomar un porcentaje de cada estrato manteniendo la proporción original de las clases
-~%-50%Dividir el dataset en grupos y aumentar la presencia de las clases minoritarias mediante la duplicación o generación de nuevas muestras, lo que puede llevar a una representación más equilibrada de las clases en el conjunto de prueba.
-~%-50%Dividir el dataset en grupos y aumentar la complejidad del modelo, lo que puede resultar en un modelo más robusto pero también más difícil de interpretar y ajustar.
-}</p></div></div><div class="messageRow_IrVw"><div class="assistantAvatar_F2Ic"><span>🤖</span></div><div class="assistantMessage_Scqo"><p>// question: 67895124  name: ¿Qué es un modelo generativo en inteligencia artificial?
-::¿Qué es un modelo generativo en inteligencia artificial?::[html]¿Qué es un modelo generativo en inteligencia artificial?{
-~%-50%Un algoritmo que clasifica datos existentes en categorías predefinidas basándose en características aprendidas durante el entrenamiento.
-~%-50%Un sistema que optimiza decisiones secuenciales mediante la interacción con un entorno para maximizar una recompensa acumulativa.
-=Un tipo de modelo que aprende la distribución de los datos de entrenamiento y puede generar nuevas muestras similares a estos.
-~%-50%Un enfoque que reduce dimensionalidad de datos complejos transformándolos en representaciones más simples mientras preserva información esencial.
+<p>// question: 91483439  name: Cos&#x27;è il campionamento stratificato?
+::Cos&#x27;è il campionamento stratificato?::[html]Cos&#x27;è il campionamento stratificato?{
+~%-50%Dividere il set di dati in gruppi e garantire che tutti i campioni di un gruppo siano nello stesso insieme (test, convalida o addestramento).
+=Dividere il set di dati in gruppi e prendere una percentuale da ogni strato mantenendo la proporzione originale delle classi
+~%-50%Dividere il set di dati in gruppi e aumentare la presenza delle classi minoritarie duplicando o generando nuovi campioni, il che può portare a una rappresentazione più equilibrata delle classi nel set di test.
+~%-50%Dividere il set di dati in gruppi e aumentare la complessità del modello, il che può tradursi in un modello più robusto ma anche più difficile da interpretare e adattare.
+}</p></div></div><div class="messageRow_IrVw"><div class="assistantAvatar_F2Ic"><span>🤖</span></div><div class="assistantMessage_Scqo"><p>// question: 67895124  name: Che cos&#x27;è un modello generativo in intelligenza artificiale?
+::Che cos&#x27;è un modello generativo in intelligenza artificiale?::[html]Che cos&#x27;è un modello generativo in intelligenza artificiale?{
+~%-50%Un algoritmo che classifica i dati esistenti in categorie predefinite basandosi su caratteristiche apprese durante l&#x27;addestramento.
+~%-50%Un sistema che ottimizza decisioni sequenziali attraverso l&#x27;interazione con un ambiente per massimizzare una ricompensa cumulativa.
+=Un tipo di modello che apprende la distribuzione dei dati di addestramento e può generare nuovi campioni simili a questi.
+~%-50%Un approccio che riduce la dimensionalità dei dati complessi trasformandoli in rappresentazioni più semplici preservando le informazioni essenziali.
 }</p>
-<p>// question: 38215907  name: ¿Cuál es la principal diferencia entre aprendizaje supervisado y no supervisado?
-::¿Cuál es la principal diferencia entre aprendizaje supervisado y no supervisado?::[html]¿Cuál es la principal diferencia entre aprendizaje supervisado y no supervisado?{
-~%-50%El aprendizaje supervisado utiliza redes neuronales mientras que el no supervisado emplea algoritmos estadísticos tradicionales.
-=El aprendizaje supervisado utiliza datos etiquetados como ejemplos correctos mientras que el no supervisado trabaja con datos sin etiquetar.
-~%-50%El aprendizaje supervisado requiere menos poder computacional mientras que el no supervisado necesita ordenadores más potentes.
-~%-50%El aprendizaje supervisado fue desarrollado en la década de 2010 mientras que el no supervisado existe desde los años 1980.
+<p>// question: 38215907  name: Qual è la differenza principale tra apprendimento supervisionato e non supervisionato?
+::Qual è la differenza principale tra apprendimento supervisionato e non supervisionato?::[html]Qual è la differenza principale tra apprendimento supervisionato e non supervisionato?{
+~%-50%L&#x27;apprendimento supervisionato utilizza reti neurali mentre quello non supervisionato impiega algoritmi statistici tradizionali.
+=L&#x27;apprendimento supervisionato utilizza dati etichettati come esempi corretti mentre quello non supervisionato lavora con dati senza etichetta.
+~%-50%L&#x27;apprendimento supervisionato richiede meno potenza di calcolo mentre quello non supervisionato necessita di computer più potenti.
+~%-50%L&#x27;apprendimento supervisionato è stato sviluppato negli anni 2010 mentre quello non supervisionato esiste dagli anni &#x27;80.
 }</p>
-<p>// question: 29463187  name: ¿Qué es la validación cruzada (cross-validation)?
-::¿Qué es la validación cruzada (cross-validation)?::[html]¿Qué es la validación cruzada (cross-validation)?{
-~%-50%Una técnica para reducir la complejidad del modelo eliminando características redundantes del conjunto de datos.
-~%-50%Un método para evaluar el rendimiento de varios modelos simultáneamente en un único conjunto de entrenamiento.
-~%-50%Un procedimiento que combina las predicciones de varios modelos para mejorar la precisión general del sistema.
-=Una técnica que divide los datos en múltiples subconjuntos para entrenar y validar el modelo, usando cada subconjunto como datos de prueba una vez.
+<p>// question: 29463187  name: Che cos&#x27;è la convalida incrociata (cross-validation)?
+::Che cos&#x27;è la convalida incrociata (cross-validation)?::[html]Che cos&#x27;è la convalida incrociata (cross-validation)?{
+~%-50%Una tecnica per ridurre la complessità del modello eliminando caratteristiche ridondanti dal set di dati.
+~%-50%Un metodo per valutare le prestazioni di diversi modelli simultaneamente su un singolo set di addestramento.
+~%-50%Una procedura che combina le previsioni di vari modelli per migliorare la precisione complessiva del sistema.
+=Una tecnica che divide i dati in più sottoinsiemi per addestrare e convalidare il modello, utilizzando ogni sottoinsieme come dati di test una volta.
 }</p></div></div></div></div>
 <p>Questo esempio mostra come un prompt ben progettato può diventare una procedura guidata riutilizzabile per la generazione di test. Maggiori dettagli in <a class="" href="/ia-educacion/it/docs/casos-uso/tests-moodle/">Test per Moodle</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="lista-di-controllo-per-creare-un-buon-assistente">Lista di controllo per creare un buon assistente<a href="#lista-di-controllo-per-creare-un-buon-assistente" class="hash-link" aria-label="Link diretto a Lista di controllo per creare un buon assistente" title="Link diretto a Lista di controllo per creare un buon assistente" translate="no">​</a></h2>

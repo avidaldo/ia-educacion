@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Tests for Moodle | Docencia con IA</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://avidaldo.github.io/ia-educacion/en/docs/casos-uso/tests-moodle/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="es_ES"><meta data-rh="true" property="og:locale:alternate" content="gl"><meta data-rh="true" property="og:locale:alternate" content="it"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Tests for Moodle | Docencia con IA"><meta data-rh="true" name="description" content="This section covers generating test questions with AI for import into Moodle and other virtual classroom platforms."><meta data-rh="true" property="og:description" content="This section covers generating test questions with AI for import into Moodle and other virtual classroom platforms."><link data-rh="true" rel="icon" href="/ia-educacion/en/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://avidaldo.github.io/ia-educacion/en/docs/casos-uso/tests-moodle/"><link data-rh="true" rel="alternate" href="https://avidaldo.github.io/ia-educacion/docs/casos-uso/tests-moodle/" hreflang="es-ES"><link data-rh="true" rel="alternate" href="https://avidaldo.github.io/ia-educacion/gl/docs/casos-uso/tests-moodle/" hreflang="gl"><link data-rh="true" rel="alternate" href="https://avidaldo.github.io/ia-educacion/en/docs/casos-uso/tests-moodle/" hreflang="en"><link data-rh="true" rel="alternate" href="https://avidaldo.github.io/ia-educacion/it/docs/casos-uso/tests-moodle/" hreflang="it"><link data-rh="true" rel="alternate" href="https://avidaldo.github.io/ia-educacion/docs/casos-uso/tests-moodle/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Applications in teaching","item":"https://avidaldo.github.io/ia-educacion/en/docs/casos-uso/"},{"@type":"ListItem","position":2,"name":"Tests for Moodle","item":"https://avidaldo.github.io/ia-educacion/en/docs/casos-uso/tests-moodle"}]}</script><link rel="stylesheet" href="/ia-educacion/en/assets/css/styles.a638e2cd.css">
 <script src="/ia-educacion/en/assets/js/runtime~main.40fdbbed.js" defer="defer"></script>
-<script src="/ia-educacion/en/assets/js/main.77f6fd9d.js" defer="defer"></script>
+<script src="/ia-educacion/en/assets/js/main.4a964e48.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -40,47 +40,47 @@
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="base-prompt-to-generate-tests">Base prompt to generate tests<a href="#base-prompt-to-generate-tests" class="hash-link" aria-label="Direct link to Base prompt to generate tests" title="Direct link to Base prompt to generate tests" translate="no">​</a></h3>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Generate 10 multiple choice questions in [GIFT/Aiken] format about the following topic: [TOPIC].</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Requirements:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- 4 options per question</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Only one correct answer</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Variety of difficulty (easy, medium, hard)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Incorrect options must be plausible</span><br></span></code></pre></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="custom-gpt-for-tests">Custom GPT for tests<a href="#custom-gpt-for-tests" class="hash-link" aria-label="Direct link to Custom GPT for tests" title="Direct link to Custom GPT for tests" translate="no">​</a></h3>
-<div class="chatContainer_n01S custom-chat-conversation"><div class="chatHeader__q4e"><div class="modelInfo_VI07"><span class="modelName_aopu">chatGPT | GPT&#x27;s</span><span class="chatDate_UKB_"></span></div></div><div class="messagesContainer_DpfC"><div class="userMessageRow_MRjs"><div class="userAvatar_lmu6"><span>👤</span></div><div class="userMessage_YQgg"><p>Crea preguntas de test en formato GIFT importable a Moodle, siguiendo las siguientes reglas.</p>
+<div class="chatContainer_n01S custom-chat-conversation"><div class="chatHeader__q4e"><div class="modelInfo_VI07"><span class="modelName_aopu">chatGPT | GPT&#x27;s</span><span class="chatDate_UKB_"></span></div></div><div class="messagesContainer_DpfC"><div class="userMessageRow_MRjs"><div class="userAvatar_lmu6"><span>👤</span></div><div class="userMessage_YQgg"><p>Create test questions in GIFT format importable to Moodle, following these rules:</p>
 <ul>
-<li>Siempre serán preguntas de respuesta múltiple con 4 respuestas y una única correcta.</li>
-<li>Las respuestas incorrectas restarán media pregunta a no ser que se indique lo contrario.</li>
-<li>Todas las respuestas deben tener una longitud similar.</li>
-<li>Se debe priorizar el rigor. La respuesta correcta debe ser la única que lo es. Las otras deben ser manifiestamente incorrectas.</li>
-<li>Deben evitarse preguntas respuestas incorrectas por no ser &quot;la mejor definición&quot; de las que se dan, &quot;la principal desventaja&quot; u otras formas de graduación. Las respuestas incorrectas deben ser manifiestamente incorrectas para evitar ambigüedades y las preguntas deben ser claras.</li>
-<li>Ninguna de las respuestas debe ser trivialmente descartable. Evita el habitual sesgo de que la pregunta correcta siempre sea una de 3 similares y haya otra más absurda.</li>
-<li>El nivel de dificultad esperado es para alumnos de master universitario salvo que se indique lo contrario.</li>
-<li>No incluyas un número antes de las preguntas, serán barajadas.</li>
-<li>Normalmente se pasará material con el que generar las preguntas, evita hacer referencias directas como &quot;según los apuntes&quot;. Las preguntas deben contener por si solas toda la información necesaria para responderlas. Los alumnos no podrán consultar los apuntes durante la prueba.</li>
-<li>Se cuidadoso evitando sesgos como que la respuesta correcta sea la más detallada o la que tiene más longitud.</li>
+<li>They will always be multiple-choice questions with 4 answers and only one correct one.</li>
+<li>Incorrect answers will deduct half a point unless otherwise indicated.</li>
+<li>All answers must be of similar length.</li>
+<li>Rigor must be prioritized. The correct answer must be the only one that is correct. The others must be manifestly incorrect.</li>
+<li>Questions with incorrect answers because they are not &quot;the best definition&quot; of those given, &quot;the main disadvantage&quot; or other forms of graduation must be avoided. Incorrect answers must be manifestly incorrect to avoid ambiguities and questions must be clear.</li>
+<li>None of the answers should be trivially dismissible. Avoid the usual bias that the correct question is always one of 3 similar ones and there is another more absurd one.</li>
+<li>The expected difficulty level is for university master&#x27;s degree students unless otherwise indicated.</li>
+<li>Do not include a number before the questions, they will be shuffled.</li>
+<li>Material will normally be provided to generate the questions, avoid making direct references such as &quot;according to the notes&quot;. The questions must contain by themselves all the necessary information to answer them. Students will not be able to consult the notes during the test.</li>
+<li>Be careful avoiding biases such as the correct answer being the most detailed or the longest one.</li>
 </ul>
-<p>Un ejemplo del formato deseado de pregunta sería el siguiente:</p>
+<p>An example of the desired question format would be the following:</p>
 <hr>
-<p>// question: 91483439  name: ¿Qué es el muestreo estratificado?
-::¿Qué es el muestreo estratificado?::[html]¿Qué es el muestreo estratificado?{
-~%-50%Dividir el dataset en grupos y garantizar que todas las muestras de un grupo lo están en el mismo conjunto (test, validación o entrenamiento).
-=Dividir el dataset en grupos y tomar un porcentaje de cada estrato manteniendo la proporción original de las clases
-~%-50%Dividir el dataset en grupos y aumentar la presencia de las clases minoritarias mediante la duplicación o generación de nuevas muestras, lo que puede llevar a una representación más equilibrada de las clases en el conjunto de prueba.
-~%-50%Dividir el dataset en grupos y aumentar la complejidad del modelo, lo que puede resultar en un modelo más robusto pero también más difícil de interpretar y ajustar.
-}</p></div></div><div class="messageRow_IrVw"><div class="assistantAvatar_F2Ic"><span>🤖</span></div><div class="assistantMessage_Scqo"><p>// question: 67895124  name: ¿Qué es un modelo generativo en inteligencia artificial?
-::¿Qué es un modelo generativo en inteligencia artificial?::[html]¿Qué es un modelo generativo en inteligencia artificial?{
-~%-50%Un algoritmo que clasifica datos existentes en categorías predefinidas basándose en características aprendidas durante el entrenamiento.
-~%-50%Un sistema que optimiza decisiones secuenciales mediante la interacción con un entorno para maximizar una recompensa acumulativa.
-=Un tipo de modelo que aprende la distribución de los datos de entrenamiento y puede generar nuevas muestras similares a estos.
-~%-50%Un enfoque que reduce dimensionalidad de datos complejos transformándolos en representaciones más simples mientras preserva información esencial.
+<p>// question: 91483439  name: What is stratified sampling?
+::What is stratified sampling?::[html]What is stratified sampling?{
+~%-50%Dividing the dataset into groups and guaranteeing that all samples of a group are in the same set (test, validation, or training).
+=Dividing the dataset into groups and taking a percentage of each stratum maintaining the original proportion of the classes
+~%-50%Dividing the dataset into groups and increasing the presence of minority classes by duplicating or generating new samples, which can lead to a more balanced representation of classes in the test set.
+~%-50%Dividing the dataset into groups and increasing the complexity of the model, which can result in a more robust model but also harder to interpret and adjust.
+}</p></div></div><div class="messageRow_IrVw"><div class="assistantAvatar_F2Ic"><span>🤖</span></div><div class="assistantMessage_Scqo"><p>// question: 67895124  name: What is a generative model in artificial intelligence?
+::What is a generative model in artificial intelligence?::[html]What is a generative model in artificial intelligence?{
+~%-50%An algorithm that classifies existing data into predefined categories based on features learned during training.
+~%-50%A system that optimizes sequential decisions through interaction with an environment to maximize a cumulative reward.
+=A type of model that learns the distribution of training data and can generate new samples similar to these.
+~%-50%An approach that reduces dimensionality of complex data by transforming them into simpler representations while preserving essential information.
 }</p>
-<p>// question: 38215907  name: ¿Cuál es la principal diferencia entre aprendizaje supervisado y no supervisado?
-::¿Cuál es la principal diferencia entre aprendizaje supervisado y no supervisado?::[html]¿Cuál es la principal diferencia entre aprendizaje supervisado y no supervisado?{
-~%-50%El aprendizaje supervisado utiliza redes neuronales mientras que el no supervisado emplea algoritmos estadísticos tradicionales.
-=El aprendizaje supervisado utiliza datos etiquetados como ejemplos correctos mientras que el no supervisado trabaja con datos sin etiquetar.
-~%-50%El aprendizaje supervisado requiere menos poder computacional mientras que el no supervisado necesita ordenadores más potentes.
-~%-50%El aprendizaje supervisado fue desarrollado en la década de 2010 mientras que el no supervisado existe desde los años 1980.
+<p>// question: 38215907  name: What is the main difference between supervised and unsupervised learning?
+::What is the main difference between supervised and unsupervised learning?::[html]What is the main difference between supervised and unsupervised learning?{
+~%-50%Supervised learning uses neural networks while unsupervised employs traditional statistical algorithms.
+=Supervised learning uses labeled data as correct examples while unsupervised works with unlabeled data.
+~%-50%Supervised learning requires less computational power while unsupervised needs more powerful computers.
+~%-50%Supervised learning was developed in the 2010s while unsupervised has existed since the 1980s.
 }</p>
-<p>// question: 29463187  name: ¿Qué es la validación cruzada (cross-validation)?
-::¿Qué es la validación cruzada (cross-validation)?::[html]¿Qué es la validación cruzada (cross-validation)?{
-~%-50%Una técnica para reducir la complejidad del modelo eliminando características redundantes del conjunto de datos.
-~%-50%Un método para evaluar el rendimiento de varios modelos simultáneamente en un único conjunto de entrenamiento.
-~%-50%Un procedimiento que combina las predicciones de varios modelos para mejorar la precisión general del sistema.
-=Una técnica que divide los datos en múltiples subconjuntos para entrenar y validar el modelo, usando cada subconjunto como datos de prueba una vez.
+<p>// question: 29463187  name: What is cross-validation?
+::What is cross-validation?::[html]What is cross-validation?{
+~%-50%A technique to reduce model complexity by removing redundant features from the dataset.
+~%-50%A method to evaluate the performance of several models simultaneously on a single training set.
+~%-50%A procedure that combines predictions of several models to improve the overall accuracy of the system.
+=A technique that divides the data into multiple subsets to train and validate the model, using each subset as test data once.
 }</p></div></div></div></div>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Utility</div><div class="admonitionContent_BuS1"><p>This <em>prompt</em> has been used to create a <a href="https://chatgpt.com/g/g-67b721d49a0481918a78bc5104bd22ea-test-question-generator" target="_blank" rel="noopener noreferrer" class="">public custom GPT</a> that generates test questions.</p></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-create-a-test-wizard">How to create a test wizard<a href="#how-to-create-a-test-wizard" class="hash-link" aria-label="Direct link to How to create a test wizard" title="Direct link to How to create a test wizard" translate="no">​</a></h3>
