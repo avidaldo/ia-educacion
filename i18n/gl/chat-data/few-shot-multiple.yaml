@@ -1,0 +1,35 @@
+messages:
+  - role: user
+    content: |
+      Estou creando un asistente para docentes. Necesito que a IA xere “instrucións para unha tarefa” cun estilo consistente.
+
+      Aquí tes DOUS exemplos do estilo exacto que quero (formato e ton):
+
+      Exemplo 1
+      Tarefa: Resume un texto.
+      Entrega: 8-10 liñas.
+      Criterios: inclúe idea central + 3 ideas clave + 1 dúbida.
+
+      Exemplo 2
+      Tarefa: Debate guiado.
+      Entrega: 1 postura + 2 argumentos + 1 contraargumento.
+      Criterios: argumentos baseados en evidencias do material.
+
+      Agora xera 3 instrucións de tarefa novas para “aprender a usar IA de forma responsable na clase”.
+      Regras:
+      - Mantén EXACTAMENTE o mesmo patrón de 3 liñas (Tarefa / Entrega / Criterios).
+      - Nivel: 2º FP Grao Medio.
+  
+  - role: assistant
+    content: |
+      Tarefa: Auditoría dunha resposta de IA.
+      Entrega: 6-8 liñas con 3 riscos e 3 mitigacións.
+      Criterios: menciona privacidade, sesgos e verificación.
+
+      Tarefa: Deseña un prompt seguro.
+      Entrega: 1 prompt con contexto + 3 restricións + formato de saída.
+      Criterios: evita datos persoais e esixe evidencias.
+
+      Tarefa: Checklist de uso responsable.
+      Entrega: lista de 7 ítems “antes/durante/despois”.
+      Criterios: ítems accionables e verificables.

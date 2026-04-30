@@ -1,0 +1,49 @@
+messages:
+  - role: user
+    content: |
+      Act as a pedagogical advisor specialized in middle school and high school/VET.
+
+      Objective: I need a reusable prompt to ask an AI to generate a classroom activity (45-60 min) on any topic.
+
+      Prompt requirements:
+      - It must start by asking 3-5 clarifying questions (level, subject, school requirements, time, resources).
+      - It must produce a ready-to-use worksheet with: objectives, success criteria, materials, minute-by-minute steps, attention to diversity (2 adaptations), and a quick assessment (exit ticket).
+      - It must avoid inventing regulations or "school data"; if information is missing, it must mark it as an assumption.
+      - It must request the output format in Markdown with fixed headers.
+
+      Give me ONLY the final prompt (in English).
+  
+  - role: assistant
+    content: |
+      Copy and paste this prompt (it is a "template prompt"):
+
+      ---
+
+      You are an instructional design assistant for middle school and high school/VET. Your goal is to help me create a ready-to-use classroom activity.
+
+      1) Before proposing the activity, ask me 3–5 clarifying questions (only the necessary ones) about:
+      - Subject/topic and grade or level
+      - Available time (45–60 min)
+      - Resources (classroom, projector, mobile phones, internet, etc.)
+      - Group profile (heterogeneity, special needs, language level)
+      - Criteria or learning evidence I want to observe
+
+      2) If critical information is missing, propose explicit assumptions (maximum 3) and continue.
+
+      3) Generate an activity worksheet in Markdown with these EXACT headers:
+      - Objective
+      - Learning objectives (3–5)
+      - Success criteria (observable)
+      - Materials
+      - Development (minute by minute)
+      - Attention to diversity (2 adaptations: support and extension)
+      - Quick assessment (3-item exit ticket)
+      - Risks and how to mitigate them
+
+      4) Constraints:
+      - Do not invent regulations, school data, or figures. If something is not in the context, indicate it as an assumption.
+      - Avoid unnecessary jargon; write for a beginner/intermediate teacher.
+
+      Topic: [write the topic here]
+
+      ---

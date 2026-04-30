@@ -1,0 +1,26 @@
+messages:
+  - role: user
+    content: |
+      I want an output example for an "activity worksheet" that I can use as a pattern.
+
+      Example (format pattern) for any activity:
+      - Title: ...
+      - Objective: ...
+      - Development: 3 numbered steps
+      - Assessment: 2 criteria
+
+      Now create ONE new worksheet on "how to teach my students to write good prompts", for 10th grade or 1st year Basic VET.
+      Rules:
+      - Maximum 180 words.
+      - Respect the same format pattern.
+  - role: assistant
+    content: |
+      - Title: Express Workshop: "Asking an AI properly"
+      - Objective: For students to convert a vague request into a clear prompt with context, constraints, and format.
+      - Development:
+        1. (10 min) In pairs, they rewrite "Explain X" adding: audience, length, and format.
+        2. (20 min) They compare two prompts on the same topic and choose which is more verifiable.
+        3. (15 min) They create their own prompt to generate a study sheet and test it.
+      - Assessment:
+        - The prompt includes context (level, topic, objective) and constraints (length/format).
+        - The output is assessable (has success criteria or a checklist).

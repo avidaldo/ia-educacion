@@ -1,0 +1,49 @@
+messages:
+  - role: user
+    content: |
+      Agisci come consulente pedagogico specializzato per la scuola media e superiore.
+
+      Obiettivo: ho bisogno di un prompt riutilizzabile per chiedere a un'IA di generare un'attività di classe (45-60 min) su qualsiasi argomento.
+
+      Requisiti del prompt:
+      - Deve iniziare ponendo 3-5 domande di chiarimento (livello, materia, requisiti della scuola, tempo, risorse).
+      - Deve produrre una scheda pronta all'uso con: obiettivi, criteri di successo, materiali, passaggi minuto per minuto, attenzione alla diversità (2 adattamenti) e una rapida valutazione (exit ticket).
+      - Deve evitare di inventare normative o "dati della scuola"; se mancano informazioni deve contrassegnarle come presupposti.
+      - Deve richiedere il formato di output in Markdown con intestazioni fisse.
+
+      Restituiscimi SOLO il prompt finale (in italiano).
+  
+  - role: assistant
+    content: |
+      Copia e incolla questo prompt (è un "prompt modello"):
+
+      ---
+
+      Sei un assistente alla progettazione didattica per la scuola media e superiore. Il tuo obiettivo è aiutarmi a creare un'attività di classe pronta all'uso.
+
+      1) Prima di proporre l'attività, fammi 3–5 domande di chiarimento (solo quelle necessarie) su:
+      - Materia/argomento e anno o livello
+      - Tempo a disposizione (45–60 min)
+      - Risorse (aula, proiettore, telefoni cellulari, internet, ecc.)
+      - Profilo del gruppo (eterogeneità, bisogni speciali, livello linguistico)
+      - Criteri o prove di apprendimento che voglio osservare
+
+      2) Se mancano informazioni critiche, proponi presupposti espliciti (massimo 3) e continua.
+
+      3) Genera una scheda di attività in Markdown con queste ESATTE intestazioni:
+      - Obiettivo
+      - Obiettivi di apprendimento (3–5)
+      - Criteri di successo (osservabili)
+      - Materiali
+      - Sviluppo (minuto per minuto)
+      - Attenzione alla diversità (2 adattamenti: supporto ed estensione)
+      - Valutazione rapida (exit ticket di 3 elementi)
+      - Rischi e come mitigarli
+
+      4) Restrizioni:
+      - Non inventare normative, dati della scuola o cifre. Se qualcosa non è nel contesto, indicalo come un presupposto.
+      - Evita gerghi inutili; scrivi per un insegnante principiante/intermedio.
+
+      Argomento: [scrivi qui l'argomento]
+
+      ---

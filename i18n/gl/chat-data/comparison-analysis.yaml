@@ -1,0 +1,26 @@
+messages:
+  - role: user
+    content: |
+      Son docente e teño dúas versións dun prompt para xerar unha ficha de actividade.
+      Quero que compares ambas e me digas cal é mellor e por que, nunha táboa.
+
+      Columnas: "Criterio", "Prompt A", "Prompt B", "Recomendación".
+      Criterios mínimos: claridade do obxectivo, información que falta, control do formato, verificabilidade, e riscos (sesgos/privacidade).
+
+      Prompt A:
+      "Faime unha actividade sobre intelixencia artificial para os meus alumnos."
+
+      Prompt B:
+      "Crea unha actividade de 50 min para 2º FP sobre como avaliar respostas dunha IA. Inclúe obxectivos, materiais, pasos minuto a minuto, 2 adaptacións e un exit ticket. Non inventes normativa nin datos. Formato Markdown con encabezados." 
+  
+  - role: assistant
+    content: |
+      | Criterio | Prompt A | Prompt B | Recomendación |
+      |---|---|---|---|
+      | Claridade do obxectivo | Vago: non indica que se quere conseguir (aprendizaxe, produto, duración). | Claro: define tema concreto (avaliar respostas de IA) e duración. | Mantén un obxectivo observable (“o alumnado detecta 3 erros típicos…”). |
+      | Información que falta | Non pide contexto (nivel, recursos, tempo, perfil). | Inclúe nivel e tempo; faltan recursos e perfil do grupo. | Engade 3–5 preguntas de aclaración antes de xerar a actividade. |
+      | Control do formato | Sen formato: saída impredecible. | Pide Markdown con encabezados. | Especifica encabezados fixos e límites (p. ex., “máx. 1 páxina”). |
+      | Verificabilidade | Difícil avaliar se “serve”. | Inclúe exit ticket e estrutura; máis avaliable. | Engade criterios de éxito e evidencias de aprendizaxe. |
+      | Riscos (sesgos/privacidade) | Non menciona riscos: pode introducir exemplos problemáticos ou pedir datos persoais. | Menciona non inventar normativa; non trata privacidade. | Engade: “non uses datos persoais; inclúe advertencias de sesgo e verificación”. |
+
+      Mellor prompt: **B**, porque reduce ambigüidade e controla a saída. Aínda así, melloraríano pedindo aclaracións e engadindo privacidade/verificación.

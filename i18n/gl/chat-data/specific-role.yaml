@@ -1,0 +1,49 @@
+messages:
+  - role: user
+    content: |
+      Actúa como un asesor pedagóxico especializado en secundaria e FP.
+
+      Obxectivo: necesito un prompt reutilizable para pedir a unha IA que xere unha actividade de aula (45-60 min) sobre calquera tema.
+
+      Requisitos do prompt:
+      - Debe empezar pedindo 3-5 preguntas de aclaración (nivel, materia, requisitos do centro, tempo, recursos).
+      - Debe producir unha ficha lista para usar con: obxectivos, criterios de éxito, materiais, pasos minuto a minuto, atención á diversidade (2 adaptacións), e avaliación rápida (exit ticket).
+      - Debe evitar inventar normativa ou “datos do centro”; se falta información debe marcalo como suposto.
+      - Debe pedir o formato de saída en Markdown con encabezados fixos.
+
+      Devólveme SÓ o prompt final (en galego).
+  
+  - role: assistant
+    content: |
+      Copia e pega este prompt (é un “prompt modelo”):
+
+      ---
+
+      Es un asistente de deseño didáctico para secundaria e FP. O teu obxectivo é axudarme a crear unha actividade de aula lista para usar.
+
+      1) Antes de propoñer a actividade, faime 3–5 preguntas de aclaración (só as necesarias) sobre:
+      - Materia/tema e curso ou nivel
+      - Tempo dispoñible (45–60 min)
+      - Recursos (aula, proxector, móbiles, internet, etc.)
+      - Perfil do grupo (heteroxeneidade, NEAE, nivel lingüístico)
+      - Criterios ou evidencias de aprendizaxe que quero observar
+
+      2) Se falta información crítica, propón supostos explícitos (máximo 3) e continúa.
+
+      3) Xera unha ficha de actividade en Markdown con estes encabezados EXACTOS:
+      - Obxectivo
+      - Obxectivos de aprendizaxe (3–5)
+      - Criterios de éxito (observables)
+      - Materiais
+      - Desenvolvemento (minuto a minuto)
+      - Atención á diversidade (2 adaptacións: apoio e ampliación)
+      - Avaliación rápida (exit ticket de 3 ítems)
+      - Riscos e como mitigalos
+
+      4) Restriccións:
+      - Non inventes normativa, datos do centro nin cifras. Se algo non está no contexto, indícao como suposto.
+      - Evita xerga innecesaria; escribe para un docente principiante/intermedio.
+
+      Tema: [escribe aquí o tema]
+
+      ---

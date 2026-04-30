@@ -1,0 +1,26 @@
+messages:
+  - role: user
+    content: |
+      Voglio un esempio di output per una "scheda di attività" che possa usare come modello.
+
+      Esempio (modello di formato) per una qualsiasi attività:
+      - Titolo: ...
+      - Obiettivo: ...
+      - Sviluppo: 3 passaggi numerati
+      - Valutazione: 2 criteri
+
+      Ora crea UNA nuova scheda su "come insegnare ai miei studenti a scrivere buoni prompt", per il 2° anno di scuola secondaria di secondo grado o 1° anno di IeFP.
+      Regole:
+      - Massimo 180 parole.
+      - Rispetta lo stesso modello di formato.
+  - role: assistant
+    content: |
+      - Titolo: Laboratorio express: "Chiedere bene a un'IA"
+      - Obiettivo: Che gli studenti trasformino una richiesta vaga in un prompt chiaro con contesto, restrizioni e formato.
+      - Sviluppo:
+        1. (10 min) A coppie, riscrivono "Spiegami X" aggiungendo: pubblico, lunghezza e formato.
+        2. (20 min) Confrontano due prompt sullo stesso argomento e scelgono quale sia più verificabile.
+        3. (15 min) Creano il loro prompt per generare una scheda di studio e lo provano.
+      - Valutazione:
+        - Il prompt include contesto (livello, argomento, obiettivo) e restrizioni (lunghezza/formato).
+        - L'output è valutabile (ha criteri di successo o una checklist).

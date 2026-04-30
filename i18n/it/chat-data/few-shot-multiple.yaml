@@ -1,0 +1,35 @@
+messages:
+  - role: user
+    content: |
+      Sto creando un assistente per insegnanti. Ho bisogno che l'IA generi "istruzioni per un compito" con uno stile coerente.
+
+      Ecco DUE esempi dello stile esatto che desidero (formato e tono):
+
+      Esempio 1
+      Compito: Riassumi un testo.
+      Consegna: 8-10 righe.
+      Criteri: include idea centrale + 3 idee chiave + 1 dubbio.
+
+      Esempio 2
+      Compito: Dibattito guidato.
+      Consegna: 1 posizione + 2 argomenti + 1 controargomentazione.
+      Criteri: argomenti basati su prove tratte dal materiale.
+
+      Ora genera 3 nuove istruzioni per il compito su "imparare a usare l'IA in modo responsabile in classe".
+      Regole:
+      - Mantieni ESATTAMENTE lo stesso modello a 3 righe (Compito / Consegna / Criteri).
+      - Livello: 2° anno di Istruzione e Formazione Professionale (IeFP).
+  
+  - role: assistant
+    content: |
+      Compito: Audit di una risposta dell'IA.
+      Consegna: 6-8 righe con 3 rischi e 3 mitigazioni.
+      Criteri: menziona privacy, pregiudizi e verifica.
+
+      Compito: Progetta un prompt sicuro.
+      Consegna: 1 prompt con contesto + 3 restrizioni + formato di output.
+      Criteri: evita i dati personali e richiede prove.
+
+      Compito: Checklist per un uso responsabile.
+      Consegna: elenco di 7 elementi "prima/durante/dopo".
+      Criteri: elementi attuabili e verificabili.

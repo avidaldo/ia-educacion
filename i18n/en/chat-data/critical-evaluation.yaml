@@ -1,0 +1,40 @@
+messages:
+  - role: user
+    content: |
+      Do a comprehensive analysis pointing out anything that could be questionable, incomplete, or improved in the following prompt.
+
+      I want you to critically evaluate it with a teacher's mindset: detect ambiguities, potential biases (e.g. stereotypical examples), privacy risks, and lack of verifiability. Then propose a better version.
+
+      Prompt:
+      "Create a fun activity about AI for my class and use real examples of my students."
+  
+  - role: assistant
+    content: |
+      Critical analysis of the prompt
+
+      1) Ambiguity
+      - "Fun activity" does not define objectives, duration, level, or final product.
+      - "About AI" is too broad: responsible use, concepts, tools, ethics, biases, evaluating responses?
+
+      2) Privacy risks
+      - "Real examples of my students" may involve personal data or identifiable situations. This is a clear and avoidable risk.
+
+      3) Biases and stereotypes
+      - Without constraints, the model may use "typical" examples with biases (gender, origin, etc.) or sensitive situations.
+
+      4) Lack of verifiability
+      - There are no success criteria or assessment (how to know if the activity works).
+      - You don't ask for a format, so the response might be hard to use.
+
+      Improved version (proposed prompt)
+
+      "You are an instructional design assistant for middle school/VET.
+
+      Before proposing anything, ask me 4 clarifying questions about: level, exact topic (responsible use / response evaluation / biases), time, and resources.
+
+      Requirements:
+      - DO NOT use personal data or examples based on real students. Use fictitious and neutral examples.
+      - Include: objectives (3), success criteria, materials, minute-by-minute development, 2 adaptations (support and extension), and a 3-item exit ticket.
+      - Format: Markdown with fixed headers.
+
+      Initial context: [describe your group here in general terms, without personal data]."

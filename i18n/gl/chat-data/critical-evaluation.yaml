@@ -1,0 +1,40 @@
+messages:
+  - role: user
+    content: |
+      Fai unha análise exhaustiva sinalando todo aquilo que poida ser cuestionable, incompleto ou mellorable no seguinte prompt.
+
+      Quero que o avalíes criticamente con mentalidade de docente: detecta ambigüidades, posibles sesgos (p. ex. exemplos estereotipados), riscos de privacidade, e falta de verificabilidade. Logo propón unha versión mellor.
+
+      Prompt:
+      "Crea unha actividade divertida sobre IA para a miña clase e pon exemplos reais dos meus alumnos."
+  
+  - role: assistant
+    content: |
+      Análise crítica do prompt
+
+      1) Ambigüidade
+      - “Actividade divertida” non define obxectivos, duración, nivel, nin produto final.
+      - “Sobre IA” é demasiado amplo: uso responsable, conceptos, ferramentas, ética, sesgos, avaliación de respostas?
+
+      2) Riscos de privacidade
+      - “Exemplos reais dos meus alumnos” pode implicar datos persoais ou situacións identificables. É un risco claro e evitable.
+
+      3) Sesgos e estereotipos
+      - Sen restricións, o modelo pode usar exemplos “típicos” con sesgos (xénero, orixe, etc.) ou situacións sensibles.
+
+      4) Falta de verificabilidade
+      - Non hai criterios de éxito nin avaliación (como saber se a actividade funciona).
+      - Non pides formato, así que a resposta pode ser difícil de usar.
+
+      Versión mellorada (prompt proposto)
+
+      "Es un asistente de deseño didáctico para secundaria/FP.
+
+      Antes de propoñer nada, faime 4 preguntas de aclaración sobre: nivel, tema exacto (uso responsable / avaliación de respostas / sesgos), tempo e recursos.
+
+      Requisitos:
+      - NON uses datos persoais nin exemplos baseados en alumnado real. Usa exemplos ficticios e neutrais.
+      - Inclúe: obxectivos (3), criterios de éxito, materiais, desenvolvemento minuto a minuto, 2 adaptacións (apoio e ampliación) e un exit ticket de 3 ítems.
+      - Formato: Markdown con encabezados fixos.
+
+      Contexto inicial: [describe aquí o teu grupo en termos xerais, sen datos persoais]." 

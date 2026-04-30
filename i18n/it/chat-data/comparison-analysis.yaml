@@ -1,0 +1,26 @@
+messages:
+  - role: user
+    content: |
+      Sono un insegnante e ho due versioni di un prompt per generare una scheda di attività.
+      Voglio che tu le confronti entrambe e mi dica quale sia migliore e perché, in una tabella.
+
+      Colonne: "Criterio", "Prompt A", "Prompt B", "Raccomandazione".
+      Criteri minimi: chiarezza dell'obiettivo, informazioni mancanti, controllo del formato, verificabilità e rischi (pregiudizi/privacy).
+
+      Prompt A:
+      "Fammi un'attività sull'intelligenza artificiale per i miei studenti."
+
+      Prompt B:
+      "Crea un'attività di 50 min per il 2° anno di IeFP su come valutare le risposte di un'IA. Includi obiettivi, materiali, passaggi minuto per minuto, 2 adattamenti e un exit ticket. Non inventare normative o dati. Formato Markdown con intestazioni." 
+  
+  - role: assistant
+    content: |
+      | Criterio | Prompt A | Prompt B | Raccomandazione |
+      |---|---|---|---|
+      | Chiarezza dell'obiettivo | Vago: non indica cosa si vuole ottenere (apprendimento, prodotto, durata). | Chiaro: definisce argomento specifico (valutazione risposte IA) e durata. | Mantieni un obiettivo osservabile ("gli studenti rilevano 3 errori tipici..."). |
+      | Informazioni mancanti | Non chiede contesto (livello, risorse, tempo, profilo). | Include livello e tempo; mancano risorse e profilo del gruppo. | Aggiungi 3–5 domande di chiarimento prima di generare l'attività. |
+      | Controllo del formato | Senza formato: output imprevedibile. | Chiede Markdown con intestazioni. | Specifica intestazioni fisse e limiti (es. "max. 1 pagina"). |
+      | Verificabilità | Difficile valutare se "funziona". | Include exit ticket e struttura; più valutabile. | Aggiungi criteri di successo e prove di apprendimento. |
+      | Rischi (pregiudizi/privacy) | Non menziona rischi: può introdurre esempi problematici o chiedere dati personali. | Menziona di non inventare normative; non tratta la privacy. | Aggiungi: "non usare dati personali; includi avvisi su pregiudizi e verifica". |
+
+      Miglior prompt: **B**, perché riduce l'ambiguità e controlla l'output. Anche così, lo migliorerei chiedendo chiarimenti e aggiungendo privacy/verifica.

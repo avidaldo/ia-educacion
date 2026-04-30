@@ -1,0 +1,40 @@
+messages:
+  - role: user
+    content: |
+      Esegui un'analisi esaustiva segnalando tutto ciò che potrebbe essere discutibile, incompleto o migliorabile nel seguente prompt.
+
+      Voglio che tu lo valuti criticamente con la mentalità di un insegnante: individua ambiguità, potenziali pregiudizi (ad es. esempi stereotipati), rischi per la privacy e mancanza di verificabilità. Poi proponi una versione migliore.
+
+      Prompt:
+      "Crea un'attività divertente sull'IA per la mia classe e usa esempi reali dei miei studenti."
+  
+  - role: assistant
+    content: |
+      Analisi critica del prompt
+
+      1) Ambiguità
+      - "Attività divertente" non definisce obiettivi, durata, livello o prodotto finale.
+      - "Sull'IA" è troppo ampio: uso responsabile, concetti, strumenti, etica, pregiudizi, valutazione delle risposte?
+
+      2) Rischi per la privacy
+      - "Esempi reali dei miei studenti" può implicare dati personali o situazioni identificabili. È un rischio chiaro ed evitabile.
+
+      3) Pregiudizi e stereotipi
+      - Senza restrizioni, il modello può utilizzare esempi "tipici" con pregiudizi (genere, origine, ecc.) o situazioni sensibili.
+
+      4) Mancanza di verificabilità
+      - Non ci sono criteri di successo o valutazione (come sapere se l'attività funziona).
+      - Non chiedi un formato, quindi la risposta potrebbe essere difficile da usare.
+
+      Versione migliorata (prompt proposto)
+
+      "Sei un assistente alla progettazione didattica per la scuola media/superiore.
+
+      Prima di proporre qualcosa, fammi 4 domande di chiarimento su: livello, argomento esatto (uso responsabile / valutazione delle risposte / pregiudizi), tempo e risorse.
+
+      Requisiti:
+      - NON utilizzare dati personali o esempi basati su studenti reali. Usa esempi fittizi e neutrali.
+      - Includi: obiettivi (3), criteri di successo, materiali, sviluppo minuto per minuto, 2 adattamenti (supporto ed estensione) e un exit ticket di 3 elementi.
+      - Formato: Markdown con intestazioni fisse.
+
+      Contesto iniziale: [descrivi qui il tuo gruppo in termini generali, senza dati personali]." 

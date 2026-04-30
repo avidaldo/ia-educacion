@@ -1,0 +1,26 @@
+messages:
+  - role: user
+    content: |
+      I am a teacher and I have two versions of a prompt to generate an activity worksheet.
+      I want you to compare both and tell me which one is better and why, in a table.
+
+      Columns: "Criterion", "Prompt A", "Prompt B", "Recommendation".
+      Minimum criteria: clarity of objective, missing information, format control, verifiability, and risks (biases/privacy).
+
+      Prompt A:
+      "Make an activity about artificial intelligence for my students."
+
+      Prompt B:
+      "Create a 50-min activity for 2nd year VET on how to evaluate AI responses. Include objectives, materials, minute-by-minute steps, 2 adaptations, and an exit ticket. Do not invent regulations or data. Markdown format with headers." 
+  
+  - role: assistant
+    content: |
+      | Criterion | Prompt A | Prompt B | Recommendation |
+      |---|---|---|---|
+      | Clarity of objective | Vague: does not indicate what is to be achieved (learning, product, duration). | Clear: defines specific topic (evaluating AI responses) and duration. | Keep an observable objective ("students detect 3 typical errors..."). |
+      | Missing information | Does not ask for context (level, resources, time, profile). | Includes level and time; resources and group profile are missing. | Add 3–5 clarifying questions before generating the activity. |
+      | Format control | No format: unpredictable output. | Requests Markdown with headers. | Specify fixed headers and limits (e.g., "max. 1 page"). |
+      | Verifiability | Difficult to evaluate if it "works". | Includes exit ticket and structure; more assessable. | Add success criteria and learning evidence. |
+      | Risks (biases/privacy) | Does not mention risks: may introduce problematic examples or ask for personal data. | Mentions not to invent regulations; does not address privacy. | Add: "do not use personal data; include bias and verification warnings". |
+
+      Best prompt: **B**, because it reduces ambiguity and controls the output. Even so, I would improve it by asking for clarifications and adding privacy/verification.

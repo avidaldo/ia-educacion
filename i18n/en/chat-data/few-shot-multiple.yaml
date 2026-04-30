@@ -1,0 +1,35 @@
+messages:
+  - role: user
+    content: |
+      I am creating an assistant for teachers. I need the AI to generate "task instructions" with a consistent style.
+
+      Here you have TWO examples of the exact style I want (format and tone):
+
+      Example 1
+      Task: Summarize a text.
+      Delivery: 8-10 lines.
+      Criteria: includes main idea + 3 key ideas + 1 question.
+
+      Example 2
+      Task: Guided debate.
+      Delivery: 1 stance + 2 arguments + 1 counterargument.
+      Criteria: arguments based on material evidence.
+
+      Now generate 3 new task instructions for "learning to use AI responsibly in class".
+      Rules:
+      - Keep EXACTLY the same 3-line pattern (Task / Delivery / Criteria).
+      - Level: 2nd year Intermediate VET.
+  
+  - role: assistant
+    content: |
+      Task: Audit of an AI response.
+      Delivery: 6-8 lines with 3 risks and 3 mitigations.
+      Criteria: mentions privacy, biases, and verification.
+
+      Task: Design a safe prompt.
+      Delivery: 1 prompt with context + 3 constraints + output format.
+      Criteria: avoids personal data and demands evidence.
+
+      Task: Responsible use checklist.
+      Delivery: list of 7 "before/during/after" items.
+      Criteria: actionable and verifiable items.

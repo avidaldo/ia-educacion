@@ -1,0 +1,53 @@
+model: chatGPT | GPT's
+messages:
+  - role: user
+    content: |
+      Crea domande di test in formato GIFT importabile in Moodle, seguendo le seguenti regole:
+      - Saranno sempre domande a risposta multipla con 4 risposte e una sola corretta.
+      - Le risposte errate sottrarranno mezzo punto se non diversamente indicato.
+      - Tutte le risposte devono avere una lunghezza simile.
+      - Il rigore deve avere la priorità. La risposta corretta deve essere l'unica ad esserlo. Le altre devono essere palesemente errate.
+      - Devono essere evitate le domande con risposte errate perché non sono "la migliore definizione" tra quelle fornite, "il principale svantaggio" o altre forme di gradazione. Le risposte errate devono essere palesemente errate per evitare ambiguità e le domande devono essere chiare.
+      - Nessuna delle risposte dovrebbe essere banalmente scartabile. Evita il solito pregiudizio che la domanda corretta sia sempre una su 3 simili e ce ne sia un'altra più assurda.
+      - Il livello di difficoltà previsto è per studenti di master universitario se non diversamente indicato.
+      - Non includere un numero prima delle domande, verranno mescolate.
+      - Normalmente verrà fornito del materiale con cui generare le domande, evita di fare riferimenti diretti come "secondo gli appunti". Le domande devono contenere da sole tutte le informazioni necessarie per risponderle. Gli studenti non potranno consultare gli appunti durante il test.
+      - Fai attenzione a evitare pregiudizi come che la risposta corretta sia la più dettagliata o la più lunga.
+
+      Un esempio del formato della domanda desiderato sarebbe il seguente:
+
+      ---
+
+      // question: 91483439  name: Cos'è il campionamento stratificato?
+      ::Cos'è il campionamento stratificato?::[html]Cos'è il campionamento stratificato?{
+          ~%-50%Dividere il set di dati in gruppi e garantire che tutti i campioni di un gruppo siano nello stesso insieme (test, convalida o addestramento).
+          =Dividere il set di dati in gruppi e prendere una percentuale da ogni strato mantenendo la proporzione originale delle classi
+          ~%-50%Dividere il set di dati in gruppi e aumentare la presenza delle classi minoritarie duplicando o generando nuovi campioni, il che può portare a una rappresentazione più equilibrata delle classi nel set di test.
+          ~%-50%Dividere il set di dati in gruppi e aumentare la complessità del modello, il che può tradursi in un modello più robusto ma anche più difficile da interpretare e adattare.
+      }
+  
+  - role: assistant
+    content: |
+      // question: 67895124  name: Che cos'è un modello generativo in intelligenza artificiale?
+      ::Che cos'è un modello generativo in intelligenza artificiale?::[html]Che cos'è un modello generativo in intelligenza artificiale?{
+          ~%-50%Un algoritmo che classifica i dati esistenti in categorie predefinite basandosi su caratteristiche apprese durante l'addestramento.
+          ~%-50%Un sistema che ottimizza decisioni sequenziali attraverso l'interazione con un ambiente per massimizzare una ricompensa cumulativa.
+          =Un tipo di modello che apprende la distribuzione dei dati di addestramento e può generare nuovi campioni simili a questi.
+          ~%-50%Un approccio che riduce la dimensionalità dei dati complessi trasformandoli in rappresentazioni più semplici preservando le informazioni essenziali.
+      }
+
+      // question: 38215907  name: Qual è la differenza principale tra apprendimento supervisionato e non supervisionato?
+      ::Qual è la differenza principale tra apprendimento supervisionato e non supervisionato?::[html]Qual è la differenza principale tra apprendimento supervisionato e non supervisionato?{
+          ~%-50%L'apprendimento supervisionato utilizza reti neurali mentre quello non supervisionato impiega algoritmi statistici tradizionali.
+          =L'apprendimento supervisionato utilizza dati etichettati come esempi corretti mentre quello non supervisionato lavora con dati senza etichetta.
+          ~%-50%L'apprendimento supervisionato richiede meno potenza di calcolo mentre quello non supervisionato necessita di computer più potenti.
+          ~%-50%L'apprendimento supervisionato è stato sviluppato negli anni 2010 mentre quello non supervisionato esiste dagli anni '80.
+      }
+
+      // question: 29463187  name: Che cos'è la convalida incrociata (cross-validation)?
+      ::Che cos'è la convalida incrociata (cross-validation)?::[html]Che cos'è la convalida incrociata (cross-validation)?{
+          ~%-50%Una tecnica per ridurre la complessità del modello eliminando caratteristiche ridondanti dal set di dati.
+          ~%-50%Un metodo per valutare le prestazioni di diversi modelli simultaneamente su un singolo set di addestramento.
+          ~%-50%Una procedura che combina le previsioni di vari modelli per migliorare la precisione complessiva del sistema.
+          =Una tecnica che divide i dati in più sottoinsiemi per addestrare e convalidare il modello, utilizzando ogni sottoinsieme come dati di test una volta.
+      } 

@@ -1,0 +1,53 @@
+model: chatGPT | GPT's
+messages:
+  - role: user
+    content: |
+      Crea preguntas de test en formato GIFT importable a Moodle, seguindo as seguintes regras.
+      - Sempre serán preguntas de resposta múltiple con 4 respostas e unha única correcta.
+      - As respostas incorrectas restarán media pregunta a non ser que se indique o contrario.
+      - Todas as respostas deben ter unha lonxitude similar.
+      - Debe priorizarse o rigor. A resposta correcta debe ser a única que o é. As outras deben ser manifestamente incorrectas.
+      - Deben evitarse preguntas con respostas incorrectas por non ser "a mellor definición" das que se dan, "a principal desvantaxe" ou outras formas de graduación. As respostas incorrectas deben ser manifestamente incorrectas para evitar ambigüidades e as preguntas deben ser claras.
+      - Ningunha das respostas debe ser trivialmente descartable. Evita o habitual sesgo de que a resposta correcta sempre sexa unha de 3 similares e haxa outra máis absurda.
+      - O nivel de dificultade esperado é para alumnos de máster universitario salvo que se indique o contrario.
+      - Non inclúas un número antes das preguntas, serán baralladas.
+      - Normalmente pasarase material co que xerar as preguntas, evita facer referencias directas como "segundo os apuntamentos". As preguntas deben conter por si soas toda a información necesaria para respondelas. Os alumnos non poderán consultar os apuntamentos durante a proba.
+      - Sé coidadoso evitando sesgos como que a resposta correcta sexa a máis detallada ou a que ten máis lonxitude.
+
+      Un exemplo do formato desexado de pregunta sería o seguinte:
+
+      ---
+
+      // question: 91483439  name: Que é a mostraxe estratificada?
+      ::Que é a mostraxe estratificada?::[html]Que é a mostraxe estratificada?{
+          ~%-50%Dividir o dataset en grupos e garantir que todas as mostras dun grupo o están no mesmo conxunto (test, validación ou adestramento).
+          =Dividir o dataset en grupos e tomar unha porcentaxe de cada estrato mantendo a proporción orixinal das clases
+          ~%-50%Dividir o dataset en grupos e aumentar a presenza das clases minoritarias mediante a duplicación ou xeración de novas mostras, o que pode levar a unha representación máis equilibrada das clases no conxunto de proba.
+          ~%-50%Dividir o dataset en grupos e aumentar a complexidade do modelo, o que pode resultar nun modelo máis robusto pero tamén máis difícil de interpretar e axustar.
+      }
+  
+  - role: assistant
+    content: |
+      // question: 67895124  name: Que é un modelo xerativo en intelixencia artificial?
+      ::Que é un modelo xerativo en intelixencia artificial?::[html]Que é un modelo xerativo en intelixencia artificial?{
+          ~%-50%Un algoritmo que clasifica datos existentes en categorías predefinidas baseándose en características aprendidas durante o adestramento.
+          ~%-50%Un sistema que optimiza decisións secuenciais mediante a interacción cun contorno para maximizar unha recompensa acumulativa.
+          =Un tipo de modelo que aprende a distribución dos datos de adestramento e pode xerar novas mostras similares a estes.
+          ~%-50%Un enfoque que reduce a dimensionalidade de datos complexos transformándoos en representacións máis simples mentres preserva información esencial.
+      }
+
+      // question: 38215907  name: Cal é a principal diferenza entre aprendizaxe supervisada e non supervisada?
+      ::Cal é a principal diferenza entre aprendizaxe supervisada e non supervisada?::[html]Cal é a principal diferenza entre aprendizaxe supervisada e non supervisada?{
+          ~%-50%A aprendizaxe supervisada utiliza redes neuronais mentres que a non supervisada emprega algoritmos estatísticos tradicionais.
+          =A aprendizaxe supervisada utiliza datos etiquetados como exemplos correctos mentres que a non supervisada traballa con datos sen etiquetar.
+          ~%-50%A aprendizaxe supervisada require menos poder computacional mentres que a non supervisada necesita ordenadores máis potentes.
+          ~%-50%A aprendizaxe supervisada foi desenvolvida na década de 2010 mentres que a non supervisada existe desde os anos 1980.
+      }
+
+      // question: 29463187  name: Que é a validación cruzada (cross-validation)?
+      ::Que é a validación cruzada (cross-validation)?::[html]Que é a validación cruzada (cross-validation)?{
+          ~%-50%Unha técnica para reducir a complexidade do modelo eliminando características redundantes do conxunto de datos.
+          ~%-50%Un método para avaliar o rendemento de varios modelos simultaneamente nun único conxunto de adestramento.
+          ~%-50%Un procedemento que combina as predicións de varios modelos para mellorar a precisión xeral do sistema.
+          =Unha técnica que divide os datos en múltiples subconxuntos para adestrar e validar o modelo, usando cada subconxunto como datos de proba unha vez.
+      } 

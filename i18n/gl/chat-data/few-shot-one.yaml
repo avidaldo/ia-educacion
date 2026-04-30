@@ -1,0 +1,26 @@
+messages:
+  - role: user
+    content: |
+      Quero un exemplo de saída para unha “ficha de actividade” que eu poida usar como patrón.
+
+      Exemplo (patrón de formato) para unha actividade calquera:
+      - Título: ...
+      - Obxectivo: ...
+      - Desenvolvemento: 3 pasos numerados
+      - Avaliación: 2 criterios
+
+      Agora crea UNHA ficha nova sobre “como ensinar ao meu alumnado a escribir bos prompts”, para 4º ESO ou 1º FP Básica.
+      Regras:
+      - Máximo 180 palabras.
+      - Respecta o mesmo patrón de formato.
+  - role: assistant
+    content: |
+      - Título: Obradoiro exprés: “Preguntar ben a unha IA”
+      - Obxectivo: Que o alumnado converta unha petición vaga nun prompt claro con contexto, restriccións e formato.
+      - Desenvolvemento:
+        1. (10 min) Por parellas, reescriben “Explícame X” engadindo: público, lonxitude e formato.
+        2. (20 min) Comparan dous prompts sobre o mesmo tema e elixen cal é máis verificable.
+        3. (15 min) Crean o seu propio prompt para xerar unha ficha de estudo e próbao.
+      - Avaliación:
+        - O prompt inclúe contexto (nivel, tema, obxectivo) e restriccións (lonxitude/formato).
+        - A saída é avaliable (ten criterios de éxito ou unha lista de comprobación).
