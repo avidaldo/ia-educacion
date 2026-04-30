@@ -17,33 +17,33 @@ These templates are useful when:
 ## Tree of Thoughts (ToT): Explore alternatives and choose with a rubric
 
 ```text
-Eres un asistente de diseño didáctico para secundaria y FP.
+You are an instructional design assistant for middle school and high school/VET.
 
-Tarea:
-- Diseña una actividad de 50 min sobre “cómo evaluar la calidad de una respuesta de IA”.
+Task:
+- Design a 50-minute activity on "how to evaluate the quality of an AI response".
 
-Contexto:
-- Nivel: 4º ESO
-- Recursos: pizarra + móviles opcionales
-- Producto final del alumnado: una checklist de verificación + 3 correcciones justificadas
+Context:
+- Level: 10th grade
+- Resources: whiteboard + optional mobile phones
+- Students' final product: a verification checklist + 3 justified corrections
 
-Instrucciones (ToT):
-1) Propón 3 diseños alternativos (A, B, C) con enfoques distintos.
-2) Evalúa A/B/C con esta rúbrica (0–2 por criterio):
-   - Objetivo observable y evidencia
-   - Realista en 50 min
-   - Evaluación rápida y usable
-   - Inclusión (apoyo/ampliación)
-   - Riesgos y mitigaciones (privacidad/sesgos)
-3) Elige la mejor y entrega SOLO la versión final incorporando mejoras.
+Instructions (ToT):
+1) Propose 3 alternative designs (A, B, C) with different approaches.
+2) Evaluate A/B/C using this rubric (0–2 per criterion):
+   - Observable objective and evidence
+   - Realistic in 50 mins
+   - Quick and usable assessment
+   - Inclusion (support/extension)
+   - Risks and mitigations (privacy/biases)
+3) Choose the best one and deliver ONLY the final version incorporating improvements.
 
-Salida (Markdown con encabezados fijos):
-- Objetivo y evidencia
-- Materiales
-- Secuencia minuto a minuto
-- Evaluación (checklist + criterios)
-- Adaptaciones (apoyo/ampliación)
-- Riesgos y mitigaciones
+Output (Markdown with fixed headers):
+- Objective and evidence
+- Materials
+- Minute-by-minute sequence
+- Assessment (checklist + criteria)
+- Adaptations (support/extension)
+- Risks and mitigations
 ```
 
 **Why it works**:
@@ -56,25 +56,25 @@ Salida (Markdown con encabezados fijos):
 ## Self-consistency: consensus for a checklist
 
 ```text
-Eres un asistente de docencia.
+You are a teaching assistant.
 
-Tarea:
-- Crear una checklist para que el alumnado evalúe una respuesta de IA antes de entregarla.
+Task:
+- Create a checklist for students to evaluate an AI response before submitting it.
 
-Restricciones:
-- Máximo 10 ítems.
-- Redacta cada ítem como pregunta de Sí/No.
-- Sin datos personales del alumnado.
+Constraints:
+- Maximum 10 items.
+- Write each item as a Yes/No question.
+- No students' personal data.
 
-Instrucciones (Self-consistency):
-1) Genera 3 propuestas independientes de checklist (sin referirte entre sí).
-2) Construye una checklist final por consenso:
-   - Conserva los ítems comunes.
-   - Si añades uno no común, justifica por qué es crítico.
+Instructions (Self-consistency):
+1) Generate 3 independent checklist proposals (without referring to each other).
+2) Build a final checklist by consensus:
+   - Keep the common items.
+   - If you add an uncommon one, justify why it is critical.
 
-Salida (Markdown):
-- Checklist final (≤10)
-- 2 ejemplos de uso (muy breves)
+Output (Markdown):
+- Final checklist (≤10)
+- 2 use examples (very brief)
 ```
 
 **Why it works**:
@@ -88,28 +88,28 @@ Salida (Markdown):
 This is useful when you want a long result, but without losing global requirements.
 
 ```text
-Eres un asistente de diseño didáctico para FP.
+You are an instructional design assistant for VET.
 
-Tarea:
-- Crear un banco de 12 preguntas tipo test sobre “seguridad y privacidad al usar IA”.
+Task:
+- Create a bank of 12 multiple choice questions on "security and privacy when using AI".
 
-Contexto:
-- Nivel: 1º FP Básica
-- Tiempo de evaluación: 15 min
-- Requisito: distractores plausibles, lenguaje claro, sin preguntas-trampa
+Context:
+- Level: 1st year Basic VET
+- Evaluation time: 15 mins
+- Requirement: plausible distractors, clear language, no trick questions
 
-Proceso (descomposición):
-1) Define un blueprint con 6 subtemas (2 preguntas por subtema).
-2) Escribe las 12 preguntas siguiendo el blueprint.
-3) Revisa coherencia global:
-   - distribución equilibrada por subtema
-   - nivel adecuado
-   - sin afirmaciones dudosas (si lo son, marca “a verificar”)
-   - sin datos personales
+Process (decomposition):
+1) Define a blueprint with 6 subtopics (2 questions per subtopic).
+2) Write the 12 questions following the blueprint.
+3) Review global consistency:
+   - balanced distribution by subtopic
+   - appropriate level
+   - no doubtful statements (if any, mark as "to verify")
+   - no personal data
 
-Salida:
-- Blueprint (lista numerada)
-- Tabla Markdown con columnas: Pregunta | A | B | C | D | Correcta | Justificación breve
+Output:
+- Blueprint (numbered list)
+- Markdown table with columns: Question | A | B | C | D | Correct | Brief justification
 ```
 
 **Why it works**:

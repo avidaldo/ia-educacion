@@ -15,10 +15,10 @@ This section covers generating test questions with AI for import into Moodle and
 
 **Example**:
 ```
-¿Cuál es la capital de Francia?
-A. Londres
-B. París
-C. Berlín
+What is the capital of France?
+A. London
+B. Paris
+C. Berlin
 D. Madrid
 ANSWER: B
 ```
@@ -33,10 +33,10 @@ ANSWER: B
 
 **Example**:
 ```
-::Capital de Francia::¿Cuál es la capital de Francia?{
-=París
-~Londres
-~Berlín
+::Capital of France::What is the capital of France?{
+=Paris
+~London
+~Berlin
 ~Madrid
 }
 ```
@@ -46,13 +46,13 @@ ANSWER: B
 ### Base prompt to generate tests
 
 ```
-Genera 10 preguntas de opción múltiple en formato [GIFT/Aiken] sobre el siguiente tema: [TEMA].
+Generate 10 multiple choice questions in [GIFT/Aiken] format about the following topic: [TOPIC].
 
-Requisitos:
-- 4 opciones por pregunta
-- Solo una respuesta correcta
-- Variedad de dificultad (fácil, media, difícil)
-- Las opciones incorrectas deben ser plausibles
+Requirements:
+- 4 options per question
+- Only one correct answer
+- Variety of difficulty (easy, medium, hard)
+- Incorrect options must be plausible
 ```
 
 ### Custom GPT for tests

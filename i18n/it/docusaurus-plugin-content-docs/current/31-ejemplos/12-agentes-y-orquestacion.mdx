@@ -17,26 +17,26 @@ Questi modelli sono utili quando la "chat" non è sufficiente e hai bisogno di:
 ## ReAct (Ragionamento + Agire): Azione → Osservazione → Ciclo di aggiustamento
 
 ```text
-Eres un asistente para preparar materiales docentes de secundaria y FP.
+Sei un assistente per la preparazione di materiale didattico per la scuola media e superiore.
 
-Objetivo:
-- Crear un mini-informe (1 página) sobre “cómo reducir errores y alucinaciones al usar IA en tareas educativas”.
+Obiettivo:
+- Creare un mini-report (1 pagina) su "come ridurre gli errori e le allucinazioni quando si utilizza l'IA nei compiti educativi".
 
-Reglas de rigor:
-- No inventes datos ni citas.
-- Si necesitas fuentes y no puedes acceder a ellas, indícalo y entrega un marco general + checklist verificable.
-- Sin datos personales.
+Regole di rigore:
+- Non inventare dati o citazioni.
+- Se hai bisogno di fonti e non puoi accedervi, indicalo e fornisci un quadro generale + una checklist verificabile.
+- Nessun dato personale.
 
-Formato de trabajo (ReAct):
-- Repite como máximo 3 ciclos, y en cada ciclo escribe:
-  - Acción: (Buscar / Preguntar / Extraer / Comparar / Verificar)
-  - Observación: (lo encontrado o lo que falta)
-  - Ajuste: (cómo cambia el plan)
+Formato di lavoro (ReAct):
+- Ripeti un massimo di 3 cicli e in ogni ciclo scrivi:
+  - Azione: (Cerca / Chiedi / Estrai / Confronta / Verifica)
+  - Osservazione: (cosa è stato trovato o cosa manca)
+  - Aggiustamento: (come cambia il piano)
 
-Salida final (Markdown):
-- 5 prácticas concretas (con ejemplo breve cada una)
-- Checklist de verificación rápida (10 ítems)
-- “Fuentes a consultar / por verificar” (lista)
+Output finale (Markdown):
+- 5 pratiche concrete (con un breve esempio ciascuna)
+- Checklist di verifica rapida (10 elementi)
+- "Fonti da consultare / da verificare" (elenco)
 ```
 
 **Perché funziona**:
@@ -50,32 +50,32 @@ Salida final (Markdown):
 A volte è etichettato come “RSIP”, ma è più standard fare riferimento a **Self-Refine**.
 
 ```text
-Eres un asistente de evaluación educativa.
+Sei un assistente alla valutazione didattica.
 
-Tarea:
-- Crear una rúbrica para evaluar una exposición oral (3–4 min) sobre “impacto de la IA en la vida diaria”.
+Compito:
+- Crea una rubrica per valutare una presentazione orale (3–4 min) su "l'impatto dell'IA nella vita quotidiana".
 
-Contexto:
-- Nivel: 2º ESO
-- Rúbrica: 4 criterios, 4 niveles (1–4)
+Contesto:
+- Livello: 2° anno di scuola secondaria di primo grado
+- Rubrica: 4 criteri, 4 livelli (1–4)
 
-Restricciones:
-- Lenguaje claro y observable.
-- Sin normativa específica.
-- Sin datos personales.
+Restrizioni:
+- Linguaggio chiaro e osservabile.
+- Nessuna normativa specifica.
+- Nessun dato personale.
 
-Iteración (máx. 2 rondas):
-Ronda 1) Entrega un borrador.
-Ronda 2) Critica el borrador con estos criterios:
-  - ¿Se puede aplicar en 3–4 min?
-  - ¿Evita ambigüedades?
-  - ¿Evalúa lo que se pretende (alineación objetivo‑criterios)?
-  - ¿Incluye errores típicos (p.ej. ejemplos inventados, afirmaciones no verificables)?
-Luego entrega la versión final incorporando las mejoras.
+Iterazione (max. 2 round):
+Round 1) Consegna una bozza.
+Round 2) Critica la bozza con questi criteri:
+  - Può essere applicata in 3–4 min?
+  - Evita ambiguità?
+  - Valuta ciò che si intende (allineamento obiettivo-criteri)?
+  - Include errori tipici (es. esempi inventati, affermazioni non verificabili)?
+Quindi consegna la versione finale incorporando i miglioramenti.
 
-Salida (Markdown):
-- Tabla de rúbrica
-- Instrucciones para el alumnado (máx. 6 líneas)
+Output (Markdown):
+- Tabella della rubrica
+- Istruzioni per gli studenti (max. 6 righe)
 ```
 
 **Perché funziona**:
@@ -89,29 +89,29 @@ Salida (Markdown):
 Utile quando vuoi separare creatività, revisione e editing finale.
 
 ```text
-Simula un equipo de 3 agentes y respeta el orden. No mezcles roles.
+Simula un team di 3 agenti e rispetta l'ordine. Non mescolare i ruoli.
 
-Agente 1 (Diseñador):
-- Propón una actividad de 45 min sobre “sesgos en ejemplos generados por IA”.
+Agente 1 (Designer):
+- Proponi un'attività di 45 minuti su "pregiudizi negli esempi generati dall'IA".
 
-Agente 2 (Evaluador):
-- Revisa con criterios: claridad, evaluación, inclusión, privacidad, verificabilidad.
-- Devuelve una lista de mejoras obligatorias (máx. 6).
+Agente 2 (Valutatore):
+- Rivedi in base a criteri: chiarezza, valutazione, inclusione, privacy, verificabilità.
+- Restituisci un elenco di miglioramenti obbligatori (max. 6).
 
 Agente 3 (Editor):
-- Reescribe la actividad final incorporando TODAS las mejoras obligatorias.
-- Entrega SOLO la versión final.
+- Riscrivi l'attività finale integrando TUTTI i miglioramenti obbligatori.
+- Consegna SOLO la versione finale.
 
-Restricciones:
-- Sin datos personales.
-- No inventar normativa o estadísticas.
+Restrizioni:
+- Nessun dato personale.
+- Non inventare normative o statistiche.
 
-Formato final (Markdown con encabezados fijos):
-- Objetivo y evidencia
-- Desarrollo (pasos)
-- Evaluación
-- Adaptaciones
-- Riesgos y mitigaciones
+Formato finale (Markdown con intestazioni fisse):
+- Obiettivo e prove
+- Sviluppo (passaggi)
+- Valutazione
+- Adattamenti
+- Rischi e mitigazioni
 ```
 
 **Perché funziona**:

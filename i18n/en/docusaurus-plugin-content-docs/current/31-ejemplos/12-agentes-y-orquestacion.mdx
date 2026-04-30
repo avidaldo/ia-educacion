@@ -17,26 +17,26 @@ These templates are useful when the “chat” falls short and you need:
 ## ReAct (Reasoning + Acting): Action → Observation → Adjustment cycle
 
 ```text
-Eres un asistente para preparar materiales docentes de secundaria y FP.
+You are an assistant for preparing teaching materials for middle school and high school/VET.
 
-Objetivo:
-- Crear un mini-informe (1 página) sobre “cómo reducir errores y alucinaciones al usar IA en tareas educativas”.
+Objective:
+- Create a mini-report (1 page) on "how to reduce errors and hallucinations when using AI in educational tasks".
 
-Reglas de rigor:
-- No inventes datos ni citas.
-- Si necesitas fuentes y no puedes acceder a ellas, indícalo y entrega un marco general + checklist verificable.
-- Sin datos personales.
+Rigor rules:
+- Do not invent data or quotes.
+- If you need sources and cannot access them, indicate it and deliver a general framework + verifiable checklist.
+- No personal data.
 
-Formato de trabajo (ReAct):
-- Repite como máximo 3 ciclos, y en cada ciclo escribe:
-  - Acción: (Buscar / Preguntar / Extraer / Comparar / Verificar)
-  - Observación: (lo encontrado o lo que falta)
-  - Ajuste: (cómo cambia el plan)
+Work format (ReAct):
+- Repeat a maximum of 3 cycles, and in each cycle write:
+  - Action: (Search / Ask / Extract / Compare / Verify)
+  - Observation: (what was found or what is missing)
+  - Adjustment: (how the plan changes)
 
-Salida final (Markdown):
-- 5 prácticas concretas (con ejemplo breve cada una)
-- Checklist de verificación rápida (10 ítems)
-- “Fuentes a consultar / por verificar” (lista)
+Final output (Markdown):
+- 5 concrete practices (with a brief example each)
+- Quick verification checklist (10 items)
+- "Sources to consult / to be verified" (list)
 ```
 
 **Why it works**:
@@ -50,32 +50,32 @@ Salida final (Markdown):
 It is sometimes labeled “RSIP”, but it is more standard to refer to **Self-Refine**.
 
 ```text
-Eres un asistente de evaluación educativa.
+You are an educational evaluation assistant.
 
-Tarea:
-- Crear una rúbrica para evaluar una exposición oral (3–4 min) sobre “impacto de la IA en la vida diaria”.
+Task:
+- Create a rubric to evaluate an oral presentation (3–4 mins) on "the impact of AI on daily life".
 
-Contexto:
-- Nivel: 2º ESO
-- Rúbrica: 4 criterios, 4 niveles (1–4)
+Context:
+- Level: 8th grade
+- Rubric: 4 criteria, 4 levels (1–4)
 
-Restricciones:
-- Lenguaje claro y observable.
-- Sin normativa específica.
-- Sin datos personales.
+Constraints:
+- Clear and observable language.
+- No specific regulations.
+- No personal data.
 
-Iteración (máx. 2 rondas):
-Ronda 1) Entrega un borrador.
-Ronda 2) Critica el borrador con estos criterios:
-  - ¿Se puede aplicar en 3–4 min?
-  - ¿Evita ambigüedades?
-  - ¿Evalúa lo que se pretende (alineación objetivo‑criterios)?
-  - ¿Incluye errores típicos (p.ej. ejemplos inventados, afirmaciones no verificables)?
-Luego entrega la versión final incorporando las mejoras.
+Iteration (max. 2 rounds):
+Round 1) Deliver a draft.
+Round 2) Critique the draft using these criteria:
+  - Can it be applied in 3–4 mins?
+  - Does it avoid ambiguities?
+  - Does it evaluate what is intended (objective-criteria alignment)?
+  - Does it include typical errors (e.g. invented examples, unverifiable claims)?
+Then deliver the final version incorporating the improvements.
 
-Salida (Markdown):
-- Tabla de rúbrica
-- Instrucciones para el alumnado (máx. 6 líneas)
+Output (Markdown):
+- Rubric table
+- Instructions for students (max. 6 lines)
 ```
 
 **Why it works**:
@@ -89,29 +89,29 @@ Salida (Markdown):
 Useful when you want to separate creativity, review and final editing.
 
 ```text
-Simula un equipo de 3 agentes y respeta el orden. No mezcles roles.
+Simulate a team of 3 agents and respect the order. Do not mix roles.
 
-Agente 1 (Diseñador):
-- Propón una actividad de 45 min sobre “sesgos en ejemplos generados por IA”.
+Agent 1 (Designer):
+- Propose a 45-minute activity on "biases in AI-generated examples".
 
-Agente 2 (Evaluador):
-- Revisa con criterios: claridad, evaluación, inclusión, privacidad, verificabilidad.
-- Devuelve una lista de mejoras obligatorias (máx. 6).
+Agent 2 (Evaluator):
+- Review against criteria: clarity, assessment, inclusion, privacy, verifiability.
+- Return a list of mandatory improvements (max. 6).
 
-Agente 3 (Editor):
-- Reescribe la actividad final incorporando TODAS las mejoras obligatorias.
-- Entrega SOLO la versión final.
+Agent 3 (Editor):
+- Rewrite the final activity incorporating ALL mandatory improvements.
+- Deliver ONLY the final version.
 
-Restricciones:
-- Sin datos personales.
-- No inventar normativa o estadísticas.
+Constraints:
+- No personal data.
+- Do not invent regulations or statistics.
 
-Formato final (Markdown con encabezados fijos):
-- Objetivo y evidencia
-- Desarrollo (pasos)
-- Evaluación
-- Adaptaciones
-- Riesgos y mitigaciones
+Final format (Markdown with fixed headers):
+- Objective and evidence
+- Development (steps)
+- Assessment
+- Adaptations
+- Risks and mitigations
 ```
 
 **Why it works**:

@@ -15,10 +15,10 @@ Questa sezione riguarda la generazione di domande di prova con l'intelligenza ar
 
 **Esempio**:
 ```
-¿Cuál es la capital de Francia?
-A. Londres
-B. París
-C. Berlín
+Qual è la capitale della Francia?
+A. Londra
+B. Parigi
+C. Berlino
 D. Madrid
 ANSWER: B
 ```
@@ -33,10 +33,10 @@ ANSWER: B
 
 **Esempio**:
 ```
-::Capital de Francia::¿Cuál es la capital de Francia?{
-=París
-~Londres
-~Berlín
+::Capitale della Francia::Qual è la capitale della Francia?{
+=Parigi
+~Londra
+~Berlino
 ~Madrid
 }
 ```
@@ -46,13 +46,13 @@ ANSWER: B
 ### Richiesta di base per generare test
 
 ```
-Genera 10 preguntas de opción múltiple en formato [GIFT/Aiken] sobre el siguiente tema: [TEMA].
+Genera 10 domande a scelta multipla in formato [GIFT/Aiken] sul seguente argomento: [ARGOMENTO].
 
-Requisitos:
-- 4 opciones por pregunta
-- Solo una respuesta correcta
-- Variedad de dificultad (fácil, media, difícil)
-- Las opciones incorrectas deben ser plausibles
+Requisiti:
+- 4 opzioni per domanda
+- Una sola risposta corretta
+- Varietà di difficoltà (facile, media, difficile)
+- Le opzioni errate devono essere plausibili
 ```
 
 ### GPT personalizzato per i test
