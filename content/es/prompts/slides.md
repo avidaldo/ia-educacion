@@ -1,4 +1,8 @@
 ---
+derived_from:
+  es/prompts/index.md: "c63d641d4a28f8e300e29db3cfca21efe8f35cff"
+  es/prompts/ejemplos.md: "e1dc354eed44255b467f904ef5e713b9aef4c074"
+  es/prompts/avanzado.md: "3b6f49a6e77242e316c6f7ac38bfda8858f5c9c5"
 ---
 
 <!-- .slide: id="especificacion" class="statement" -->

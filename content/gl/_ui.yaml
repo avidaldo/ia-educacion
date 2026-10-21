@@ -55,3 +55,5 @@ labels:
 months: [xaneiro, febreiro, marzo, abril, maio, xuño, xullo, agosto, setembro, outubro, novembro, decembro]
 footer:
   privacy: Esta web non usa cookies nin rastrexadores, e non carga recursos de terceiros agás a biblioteca de diagramas Mermaid nas páxinas que a precisan.
+derived_from:
+  es/_ui.yaml: "20a8f4ddbb108628ace8959f12771c2faadc3807"
