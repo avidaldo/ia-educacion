@@ -1,5 +1,8 @@
 # AGENTS.md
 
+> [!IMPORTANT]
+> **Reconstrucción en curso (desde 2026-10-21), en la rama `rebuild`.** La web se está rehaciendo con un generador propio: `content/` (contenido) + `engine/` (construcción). `master` sigue publicando la web vieja hasta el cambio. En esta rama, mientras convivan, `docs/`, `i18n/`, `src/`, `static/` y `plugins/` son **legado de solo lectura**: Docusaurus sigue publicando la web vieja desde ahí hasta el cambio. No edites esas carpetas; el contenido nuevo va en `content/`. Plan (en el workspace privado): `projects/ia-edu/plan-reconstruccion.md`. Las reglas de abajo se reescribirán al terminar.
+
 ## Contexto del proyecto
 
 Web educativa dirigida a **docentes de educación secundaria** que quieren comprender las herramientas de IA y sus casos de uso aplicados a la docencia. El objetivo no es formar expertos técnicos, sino dar una comprensión práctica y fundamentada de estas tecnologías.
@@ -19,6 +22,7 @@ Web educativa dirigida a **docentes de educación secundaria** que quieren compr
 ## Traducciones (i18n)
 
 El proyecto tiene traducciones a **gallego, inglés e italiano** en el directorio `i18n/`. Al editar contenido en `docs/`:
+<!-- TODO: Eliminar la versión en italiano e inglés para ahorrar tokens por ahora. -->
 
 - **No traducir automáticamente** cada cambio intermedio para ahorrar tokens.
 - Al terminar de editar un documento, **recordar al usuario** que existen traducciones que pueden necesitar sincronización.
