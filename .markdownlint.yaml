@@ -1,0 +1,6 @@
+# Rules that contradict this repository's content conventions; everything else stays on.
+MD013: false                     # prose is never hard-wrapped
+MD022: false                     # slide regions put a ### title directly above its text
+MD024: { siblings_only: true }   # decks repeat region titles (Mal / Mejor) across slides
+MD032: false                     # slide notes and regions start lists right after a line of text
+MD041: false                     # the page title lives in the front matter, not in a # heading

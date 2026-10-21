@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/prompts/slides.md: "c5a6420075e4a9e98d4eb667a35a2ba79043f865"
+  es/prompts/slides.md: "722682882e3d04e98ba7d9abb9b75029b7bc76d3"
 ---
 
 <!-- .slide: id="especificacion" class="statement" -->
@@ -134,6 +134,9 @@ Contexto do centro:
 [texto]
 """
 ```
+
+Notas:
+Valen as comiñas triplas ou etiquetas con nome (`<temario>…</temario>`). O importante é usar sempre as mesmas e nomealas na instrución.
 
 ---
 

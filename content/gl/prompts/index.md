@@ -2,7 +2,7 @@
 title: Deseño de prompts
 description: Como especificar unha tarefa para que o resultado sexa un material útil e verificable, non unha resposta xenérica.
 derived_from:
-  es/prompts/index.md: "c63d641d4a28f8e300e29db3cfca21efe8f35cff"
+  es/prompts/index.md: "8aba2aa9d5e0509c6d1923990cef353b92d052ed"
 ---
 
 ## Que é un bo *prompt*
@@ -96,7 +96,7 @@ Especifica o formato coma se fose un modelo de entrega:
 
 ### Delimitadores
 
-Se inclúes textos longos (temario, normas do centro, un texto do alumnado xa anonimizado), sepáraos con delimitadores para que o modelo non confunda as túas instrucións co texto que debe analizar:
+Se inclúes textos longos (temario, normas do centro, un texto do alumnado xa anonimizado), sepáraos con delimitadores para que o modelo non confunda as túas instrucións co texto que debe analizar. Serven as comiñas triplas ou etiquetas con nome, como `<temario>…</temario>`; o importante é usar sempre as mesmas e nomealas na instrución:
 
 ```text
 Contexto do centro:

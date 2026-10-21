@@ -95,7 +95,7 @@ Especifica el formato como si fuera una plantilla de entrega:
 
 ### Delimitadores
 
-Si incluyes textos largos (temario, normas del centro, un texto del alumnado ya anonimizado), sepáralos con delimitadores para que el modelo no confunda tus instrucciones con el texto que debe analizar:
+Si incluyes textos largos (temario, normas del centro, un texto del alumnado ya anonimizado), sepáralos con delimitadores para que el modelo no confunda tus instrucciones con el texto que debe analizar. Sirven las comillas triples o etiquetas con nombre, como `<temario>…</temario>`; lo importante es usar siempre las mismas y nombrarlas en la instrucción:
 
 ```text
 Contexto del centro:
