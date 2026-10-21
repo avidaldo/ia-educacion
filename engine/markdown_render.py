@@ -24,7 +24,7 @@ from content_model import ASSETS_DIR, CONTENT_DIR, ContentModel, Problem, repo_r
 ALLOWED_ATTRIBUTES = ("id", "class", "alt", "width", "loading")
 CONTENT_IMAGE_CLASSES = {"narrow", "wide", "border"}
 EXTERNAL_LINK = re.compile(r"^[a-z][a-z0-9+.-]*:", re.IGNORECASE)
-PLAIN_FENCE_LANGUAGES = {"", "text", "plain", "gift", "aiken", "prompt"}
+PLAIN_FENCE_LANGUAGES = {"", "text", "plain", "gift", "aiken", "prompt", "markdown", "md"}
 CODE_FORMATTER = HtmlFormatter(cssclass="highlight", wrapcode=True)
 
 

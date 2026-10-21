@@ -15,7 +15,8 @@ CATEGORIES = {
     "parity": {"heading-parity", "orphan-translation"},
     "stale": {"stale", "trivial", "unstamped", "missing"},
     "reviewed": {"reviewed-missing", "reviewed-stale"},
-    "content": {"inline-style", "body-h1", "front-matter", "nav-entry", "nav-missing-page", "not-in-nav", "reserved-slug"},
+    "content": {"inline-style", "body-h1", "front-matter", "nav-entry", "nav-missing-page", "not-in-nav", "reserved-slug",
+                "todo"},
 }
 
 
@@ -86,4 +87,19 @@ def review_problems(model: ContentModel, today: datetime.date) -> list[Problem]:
         if age >= limit:
             problems.append(Problem("warning", source, 1, "reviewed-stale",
                                     f"reviewed {reviewed.isoformat()}, {age} months ago (review every {limit})"))
+    return problems
+
+
+def todo_problems(model: ContentModel) -> list[Problem]:
+    """Pending work left in the content as <!-- TODO: ... --> comments."""
+    problems = []
+    for language in model.languages.values():
+        for page in language.pages.values():
+            if page.is_fallback:
+                continue
+            for offset, line in enumerate(page.body.split("\n")):
+                if "<!-- TODO" in line:
+                    note = line.split("<!-- TODO", 1)[1].split("-->", 1)[0].strip(" :")
+                    problems.append(Problem("warning", repo_relative(page.source_file), page.body_start_line + offset,
+                                            "todo", note))
     return problems

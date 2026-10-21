@@ -124,7 +124,9 @@ def count_words_and_bullets(text: str) -> tuple[int, int]:
             continue
         if BULLET_LINE.match(line):
             bullets += 1
-        words += len(re.findall(r"\w+", line))
+        visible = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", line)
+        visible = re.sub(r"\]\([^)]*\)", "]", visible)
+        words += len(re.findall(r"\w+", visible))
     return words, bullets
 
 

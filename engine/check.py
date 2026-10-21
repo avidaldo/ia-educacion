@@ -14,7 +14,7 @@ from dataclasses import asdict
 from build import render_decks, render_pages
 from content_model import Problem, load_config, load_content
 from provenance import all_statuses
-from validation import CATEGORIES, category_of, review_problems, validate_rendered
+from validation import CATEGORIES, category_of, review_problems, todo_problems, validate_rendered
 
 
 def provenance_problems() -> list[Problem]:
@@ -41,6 +41,7 @@ def main() -> int:
     problems += validate_rendered(model, rendered, decks)
     problems += review_problems(model, datetime.date.today())
     problems += provenance_problems()
+    problems += todo_problems(model)
     if arguments.only:
         problems = [problem for problem in problems if category_of(problem.code) in arguments.only]
     if arguments.lang:
