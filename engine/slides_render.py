@@ -8,7 +8,7 @@ import yaml
 from markdown_it.common.utils import escapeHtml
 
 from content_model import ENGINE_DIR, ContentModel, Deck, Problem, repo_relative
-from markdown_render import RenderContext, render_markdown
+from markdown_render import LinkReference, RenderContext, render_markdown
 
 LAYOUTS_FILE = ENGINE_DIR / "theme" / "layouts.yaml"
 DEFAULT_LAYOUT = "bullets"
@@ -55,6 +55,7 @@ class RenderedDeck:
     language: str
     slides: list[RenderedSlide]
     problems: list[Problem]
+    links: list[LinkReference] = field(default_factory=list)
 
 
 def split_slides(body: str, first_line: int) -> list[RawSlide]:
@@ -132,6 +133,7 @@ def render_deck(deck: Deck, model: ContentModel, vocabulary: Vocabulary) -> Rend
     problems: list[Problem] = []
     source_label = repo_relative(deck.source_file)
     rendered: list[RenderedSlide] = []
+    links: list[LinkReference] = []
     seen_ids: set[str] = set()
     for raw in split_slides(deck.body, deck.body_start_line):
         slide_id = raw.attributes.get("id", "")
@@ -182,8 +184,9 @@ def render_deck(deck: Deck, model: ContentModel, vocabulary: Vocabulary) -> Rend
         notes_html = render_markdown(raw.notes, notes_context).html if raw.notes else ""
         problems.extend(context.problems)
         problems.extend(notes_context.problems)
+        links.extend(context.links)
         rendered.append(RenderedSlide(slide_id, layout, modifiers, html, notes_html, raw.start_line))
-    return RenderedDeck(deck.module, deck.language, rendered, problems)
+    return RenderedDeck(deck.module, deck.language, rendered, problems, links)
 
 
 def section_html(module: str, slide: RenderedSlide) -> str:

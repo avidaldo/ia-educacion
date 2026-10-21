@@ -18,6 +18,7 @@ from content_model import (ASSETS_DIR, ENGINE_DIR, REPO_ROOT, ContentModel, Page
                            load_config, load_content)
 from markdown_render import RenderContext, pygments_css, render_markdown
 from slides_render import RenderedDeck, load_vocabulary, module_title_section, render_deck, section_html
+from validation import validate_rendered
 
 OUTPUT_DIR = ENGINE_DIR / "_build"
 TEMPLATES_DIR = ENGINE_DIR / "templates"
@@ -33,6 +34,7 @@ class RenderedPage:
     html: str
     toc: list
     has_mermaid: bool
+    context: RenderContext
 
 
 @dataclass
@@ -85,7 +87,7 @@ def render_pages(model: ContentModel, problems: list[Problem]) -> dict[str, dict
             if not page.is_fallback:
                 problems.extend(context.problems)
             toc = [heading for heading in context.headings if heading.level in (2, 3)]
-            rendered[language][relative_path] = RenderedPage(page, result.html, toc, context.has_mermaid)
+            rendered[language][relative_path] = RenderedPage(page, result.html, toc, context.has_mermaid, context)
     return rendered
 
 
@@ -284,6 +286,7 @@ def build(config: SiteConfig, output_dir: Path = OUTPUT_DIR, include_drafts: boo
     problems = list(model.problems)
     rendered = render_pages(model, problems)
     decks = render_decks(model, problems)
+    problems += validate_rendered(model, rendered, decks)
     if output_dir.exists():
         shutil.rmtree(output_dir)
     output_dir.mkdir(parents=True)

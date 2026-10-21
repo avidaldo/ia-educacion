@@ -2,6 +2,7 @@
 
 import re
 import shlex
+from urllib.parse import unquote
 from dataclasses import dataclass, field
 from pathlib import Path, PurePosixPath
 
@@ -280,11 +281,12 @@ def rewrite_link(token: Token, block_token: Token, context: RenderContext, sourc
         token.attrSet("rel", "noopener")
         return
     if href.startswith("#"):
-        context.links.append(LinkReference(context.source_label, context.line_of(block_token), None, href[1:]))
+        context.links.append(LinkReference(context.source_label, context.line_of(block_token), None, unquote(href[1:])))
         if context.slide_mode:
             context.problem("warning", block_token, "slide-anchor-link", "slide links must point to a page, not to #anchor")
         return
     path_part, _, anchor = href.partition("#")
+    path_part = unquote(path_part)
     if not path_part.endswith(".md"):
         context.problem("error", block_token, "link-not-md", f"internal link must point to a .md source file: {href}")
         return
@@ -292,7 +294,8 @@ def rewrite_link(token: Token, block_token: Token, context: RenderContext, sourc
     if relative_page is None or relative_page not in source_pages:
         context.problem("error", block_token, "broken-link", f"link target does not exist: {href}")
         return
-    context.links.append(LinkReference(context.source_label, context.line_of(block_token), relative_page, anchor or None))
+    context.links.append(LinkReference(context.source_label, context.line_of(block_token), relative_page,
+                                       unquote(anchor) or None))
     url = context.model.url_for(context.language, relative_page)
     token.attrSet("href", url + (f"#{anchor}" if anchor else ""))
 

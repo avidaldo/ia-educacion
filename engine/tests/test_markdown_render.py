@@ -126,3 +126,17 @@ def test_problems_report_the_file_line(config, content_dir):
     model = load_content(config, content_dir)
     _, context = render(model, "Texto.\n\n[roto](nada.md)\n", line_offset=4)
     assert [problem.line for problem in context.problems if problem.code == "broken-link"] == [7]
+
+
+def test_broken_anchor_is_found_by_validation(config, content_dir):
+    from build import render_decks, render_pages
+    from validation import validate_rendered
+    (content_dir / "es" / "tests-moodle" / "index.md").write_text(
+        "---\ntitle: M\n---\n## GIFT\n\n[ok](../prompts/index.md#qué-es-un-prompt) [mal](../prompts/index.md#no-existe)\n",
+        encoding="utf-8")
+    model = load_content(config, content_dir)
+    problems = []
+    rendered = render_pages(model, problems)
+    found = validate_rendered(model, rendered, render_decks(model, problems))
+    assert [problem.message for problem in found if problem.code == "broken-anchor"] == [
+        "#no-existe is not a heading of prompts/index.md (es)"]
