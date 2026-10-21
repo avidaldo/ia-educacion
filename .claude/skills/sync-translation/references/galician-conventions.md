@@ -21,7 +21,9 @@ Write normative Galician (RAG, *Normas ortográficas e morfolóxicas do idioma g
 - Contractions: *ao*, *á*, *polo*, *pola*, *co*, *coa*, *cun*, *cunha*, *no*, *na*, *dun*, *dunha*.
 - Infinitive with person when the subject differs: *para o modelo entender* is correct, but prefer *para que o modelo entenda* in instructions.
 - Possessives take the article: *o teu prompt*, *a túa clase*.
-- No *usted* forms; imperatives with *ti*: *Pide*, *Inclúe*, *Compara*, *Revisa*.
+- No *usted* forms; imperatives with *ti*: *Pide*, *Inclúe*, *Compara*, *Revisa*; negative imperatives in the subjunctive: *Non mestures*, *Non inventes*.
+- No preposition before a personal direct object (*derrotou Kasparov*, *derrota o campión*), except with tonic pronouns or to avoid ambiguity.
+- Pronouns attach to the verb: *abrino*, *dío*, *éncheo*, *corríxeo*.
 
 ## Frequent Spanish (and Portuguese) forms to avoid
 
@@ -39,4 +41,5 @@ Write normative Galician (RAG, *Normas ortográficas e morfolóxicas do idioma g
 | -ble with Spanish spelling (disponible) | dispoñible, posible, verificable |
 | ventaja, desventaja | vantaxe, desvantaxe (feminine) |
 | asignatura | materia |
+| acuñar (un término) | crear, aparecer, empezar a usarse (*cuñar* exists but reads as *cuñado*) |
 | plantilla, patrón (template, pattern) | modelo, formato, estrutura (see the glossary) |

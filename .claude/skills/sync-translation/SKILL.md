@@ -55,7 +55,7 @@ Mirror the Spanish file exactly: same headings in the same order and number (the
 | Prose, headings, list items, table cells, alert titles | URLs and link paths (`../tests-moodle/index.md#gift`), anchors after `#` |
 | Chat messages (user and assistant) | Chat `model=` and `date=` parameters |
 | | Data examples inside `gift`, `aiken` and `xml` fences, questions included: they stay in Spanish (teacher's decision) |
-| `text` fences (they are prompts to copy) | Every other fence: `gift`, `aiken`, `xml`, `html`, `json`, `mermaid` labels… — except comments meant for the reader |
+| `text` fences, and `markdown` fences that hold a prompt or a skill (they are meant to be copied) | Every other fence: `gift`, `aiken`, `xml`, `html`, `json`, `mermaid` labels… — except comments meant for the reader |
 | Slide content and `Notas:` (the marker stays `Notas:`) | Slide comments `<!-- .slide: id="…" class="…" -->` |
 | `title`, `description` | Image paths (a Galician capture is a `name.gl.webp` sibling, chosen by the build) |
 
