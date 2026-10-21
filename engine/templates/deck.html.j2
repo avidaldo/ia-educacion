@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="{{ lang }}" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ ui.labels.deck }} · {{ ui.site_title }}</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="{{ base_path }}assets/shared/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="{{ vendor_url }}reset.css">
+<link rel="stylesheet" href="{{ vendor_url }}reveal.css">
+<link rel="stylesheet" href="{{ engine_url }}theme/tokens.css">
+<link rel="stylesheet" href="{{ engine_url }}theme/pygments.css">
+<link rel="stylesheet" href="{{ engine_url }}theme/slides.css">
+<style>:root { --label-demo: {{ ui.labels.slide_demo | css_string }}; --label-practice: {{ ui.labels.slide_practice | css_string }}; }</style>
+</head>
+<body class="deck-page" data-vendor-url="{{ vendor_url }}" data-mermaid-url="{{ mermaid_url }}">
+<div class="deck-picker" hidden>
+  <div class="deck-picker-panel">
+    <h1>{{ ui.labels.picker_title }}</h1>
+    <p>{{ ui.labels.picker_help }}</p>
+    <ol class="deck-picker-list">
+    {% for module in modules %}<li><label><input type="checkbox" value="{{ module.slug }}"> <span class="order" aria-hidden="true"></span> <strong>{{ module.title }}</strong> <span class="count">{{ module.slide_count }} {{ ui.labels.slides }}</span></label></li>
+    {% endfor %}</ol>
+    <p class="deck-picker-actions"><a class="button deck-picker-start" href="?m=">{{ ui.labels.picker_start }}</a> <a class="button secondary" href="{{ home_url }}">{{ ui.labels.back_to_site }}</a></p>
+  </div>
+</div>
+<div class="reveal"><div class="slides">
+<section id="portada" class="layout-statement is-cover" data-module="_cover">
+<div class="slide-body"><p class="kicker">{{ ui.site_tagline }}</p><h2>{{ ui.site_title }}</h2><p class="subtitle">{{ ui.footer.author }} · {{ short_url }}</p></div>
+</section>
+<section id="agenda" class="layout-bullets is-agenda" data-module="_agenda">
+<div class="slide-body"><h2>{{ ui.labels.agenda }}</h2><ol class="agenda-list"></ol></div>
+</section>
+{% for module in modules %}{{ module.sections_html | safe }}
+{% endfor %}<section id="cierre" class="layout-statement is-closing" data-module="_closing">
+<div class="slide-body"><h2>{{ ui.labels.closing }}</h2><img class="qr" src="{{ base_path }}assets/shared/qr-ia-edu.svg" alt="{{ ui.labels.qr_alt }}" width="240" height="240"><p class="subtitle">{{ short_url }}</p></div>
+</section>
+</div></div>
+<script type="application/json" id="deck-data">{{ deck_data | tojson }}</script>
+<script type="module" src="{{ engine_url }}theme/deck.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+# Closed vocabulary of slide layouts. Single source for the build (unknown classes fail it)
+# and for the update-slides skill. Each slide uses at most one layout (default: bullets)
+# plus any number of modifiers: <!-- .slide: id="x" class="layout modifier" -->
+#
+# regions: number of `###` regions the layout expects (0 = none). Each `###` heading opens
+#          a region; text before the first `###` is the slide header.
+# max_bullets / max_words: soft limits, reported as warnings by the checker.
+
+layouts:
+  bullets:
+    purpose: "Default. A title and a short list of points."
+    regions: 0
+    max_bullets: 6
+    max_words: 70
+  statement:
+    purpose: "One idea in large type, optionally with a one-line subtitle. Use to open or close a block."
+    regions: 0
+    max_bullets: 0
+    max_words: 30
+  section:
+    purpose: "Divider between blocks of a module. Title and optional subtitle, accent background."
+    regions: 0
+    max_bullets: 0
+    max_words: 20
+  two-col:
+    purpose: "Two parallel regions of the same kind (two concepts, two tools)."
+    regions: 2
+    max_bullets: 8
+    max_words: 90
+  comparison:
+    purpose: "Worse vs better (or before vs after). First region is the weak version, second the strong one."
+    regions: 2
+    max_bullets: 8
+    max_words: 90
+  cards:
+    purpose: "Three or four short items at the same level, one region per card."
+    regions: 4
+    max_bullets: 8
+    max_words: 90
+  big-number:
+    purpose: "One figure that carries the message. The first strong text is the number, the rest is context and source."
+    regions: 0
+    max_bullets: 0
+    max_words: 35
+  quote:
+    purpose: "A citation in a blockquote, with its source on the last line."
+    regions: 0
+    max_bullets: 0
+    max_words: 60
+  prompt:
+    purpose: "A prompt to copy, in a `text` fence, with at most one line of framing above it."
+    regions: 0
+    max_bullets: 0
+    max_words: 140
+  chat:
+    purpose: "A short chat excerpt (:::: chat container), to show an interaction."
+    regions: 0
+    max_bullets: 0
+    max_words: 140
+  demo:
+    purpose: "Announces a live demo. Title, tool and the one thing to watch. The steps live in the notes."
+    regions: 0
+    max_bullets: 3
+    max_words: 40
+  practice:
+    purpose: "A task for the participants. Instructions, time and expected product."
+    regions: 0
+    max_bullets: 5
+    max_words: 70
+  image-full:
+    purpose: "One image that fills the slide, with an optional caption line."
+    regions: 0
+    max_bullets: 0
+    max_words: 20
+  image-text:
+    purpose: "Image region and text region side by side. The region that contains the image goes left."
+    regions: 2
+    max_bullets: 5
+    max_words: 70
+  timeline:
+    purpose: "A dated sequence, written as a list whose items start with **year**."
+    regions: 0
+    max_bullets: 7
+    max_words: 80
+  table:
+    purpose: "One small table (at most 5 rows x 4 columns)."
+    regions: 0
+    max_bullets: 0
+    max_words: 90
+  checklist:
+    purpose: "A task list (- [ ]) to verify something, e.g. before using an output."
+    regions: 0
+    max_bullets: 7
+    max_words: 70
+
+modifiers:
+  fragments:
+    purpose: "List items and regions appear one by one."
+  dense:
+    purpose: "Smaller type for a slide that has to carry more text. Use sparingly."

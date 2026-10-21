@@ -1,0 +1,3 @@
+<nav class="lang-switch" aria-label="{{ ui.labels.language }}">
+{% for alternate in alternates %}{% if alternate.lang == lang %}<span class="current" aria-current="true" lang="{{ alternate.lang }}">{{ alternate.code }}</span>{% else %}<a href="{{ alternate.url }}" hreflang="{{ alternate.lang }}" lang="{{ alternate.lang }}" title="{{ alternate.name }}">{{ alternate.code }}</a>{% endif %}
+{% endfor %}</nav>

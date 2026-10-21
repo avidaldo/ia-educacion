@@ -1,0 +1,11 @@
+<section class="deck-card" data-deck-url="{{ deck.frame_url }}">
+  <div class="deck-card-text">
+    <h2 class="deck-card-title">{{ ui.labels.deck }}</h2>
+    <p>{{ deck.slide_count }} {{ ui.labels.slides }} · {{ ui.labels.deck_presenter_hint }}</p>
+  </div>
+  <div class="deck-card-actions">
+    <button type="button" class="button deck-load">{{ ui.labels.deck_view_here }}</button>
+    <a class="button secondary" href="{{ deck.url }}">{{ ui.labels.deck_fullscreen }}</a>
+  </div>
+  <div class="deck-frame" hidden></div>
+</section>

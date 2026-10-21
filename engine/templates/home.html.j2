@@ -1,0 +1,23 @@
+{% extends "base.html.j2" %}
+{% block body_class %}home{% endblock %}
+{% block main %}
+<section class="hero">
+  <h1>{{ ui.site_title }}</h1>
+  <p class="lead">{{ ui.site_tagline }}</p>
+</section>
+<div class="prose">
+{{ content_html | safe }}
+</div>
+{% for section in nav_tree %}
+<section class="module-group">
+  <h2>{{ section.label }}</h2>
+  <ul class="module-cards">
+  {% for module in section.modules %}<li class="module-card">
+    <a href="{{ module.url }}"><h3>{{ module.title }}{% if module.advanced %} <span class="badge">{{ ui.labels.advanced }}</span>{% endif %}</h3>
+    {% if module.description %}<p>{{ module.description }}</p>{% endif %}</a>
+    {% if module.deck_url %}<a class="module-card-deck" href="{{ module.deck_url }}">{{ ui.labels.deck }} · {{ module.slide_count }} {{ ui.labels.slides }}</a>{% endif %}
+  </li>
+  {% endfor %}</ul>
+</section>
+{% endfor %}
+{% endblock %}

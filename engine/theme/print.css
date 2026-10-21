@@ -1,0 +1,8 @@
+/* Printing a page: content only, black on white, link targets shown. */
+.site-header, .site-nav, .toc, .pager, .deck-card, .site-footer, .copy-button, .skip-link { display: none !important; }
+.layout { display: block; max-width: none; padding: 0; }
+body { background: #fff; color: #000; font-size: 11pt; }
+.prose { max-width: none; }
+.prose a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; color: #444; overflow-wrap: anywhere; }
+.code-block, .chat, .markdown-alert, pre { break-inside: avoid; }
+details > :not(summary) { display: block !important; }

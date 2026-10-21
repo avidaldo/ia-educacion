@@ -1,0 +1,29 @@
+{% extends "base.html.j2" %}
+{% block body_class %}page{% endblock %}
+{% block main %}
+<article>
+  <header class="page-header">
+    {% if breadcrumb %}<p class="breadcrumb"><a href="{{ breadcrumb.url }}">{{ breadcrumb.title }}</a></p>{% endif %}
+    <h1>{{ page_title }}</h1>
+    {% if description %}<p class="lead">{{ description }}</p>{% endif %}
+    <p class="page-meta">{% if reviewed %}<span class="reviewed{% if reviewed_stale %} stale{% endif %}">{{ ui.labels.reviewed }}: <time datetime="{{ reviewed_iso }}">{{ reviewed }}</time></span>{% endif %}</p>
+    {% if is_fallback %}<p class="untranslated" lang="{{ lang }}">{{ ui.labels.untranslated }}</p>{% endif %}
+  </header>
+  {% if deck %}{% include "partials/deck-card.html.j2" %}{% endif %}
+  <div class="prose">
+{{ content_html | safe }}
+  </div>
+  {% if previous_page or next_page %}<nav class="pager" aria-label="{{ ui.labels.pager }}">
+    {% if previous_page %}<a class="previous" href="{{ previous_page.url }}"><span>{{ ui.labels.previous }}</span>{{ previous_page.title }}</a>{% endif %}
+    {% if next_page %}<a class="next" href="{{ next_page.url }}"><span>{{ ui.labels.next }}</span>{{ next_page.title }}</a>{% endif %}
+  </nav>{% endif %}
+</article>
+{% endblock %}
+{% block aside %}
+{% if toc %}<aside class="toc" aria-label="{{ ui.labels.on_this_page }}">
+  <h2>{{ ui.labels.on_this_page }}</h2>
+  <ul>
+  {% for heading in toc %}<li class="toc-level-{{ heading.level }}"><a href="#{{ heading.id }}">{{ heading.text }}</a></li>
+  {% endfor %}</ul>
+</aside>{% endif %}
+{% endblock %}
