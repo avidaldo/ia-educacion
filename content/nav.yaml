@@ -1,0 +1,27 @@
+# Language-neutral navigation: sections, then modules (folder names under content/<lang>/), then sub-pages.
+# Section labels live in each language's _ui.yaml (nav.<id>); page titles come from front matter.
+sections:
+  - id: fundamentos
+    modules:
+      - intro-ia
+      - chatbots
+      - prompts: [ejemplos, avanzado]
+  - id: herramientas
+    modules:
+      - skills
+      - notebooks
+      - bots-educativos
+      - navegadores-agenticos
+  - id: aplicaciones
+    modules:
+      - tests-moodle
+      - webs-educativas: [presentaciones]
+      - vibe-coding
+      - n8n
+  - id: marco
+    modules:
+      - etica-legal: [normativa, anexo-formacion-xunta]
+  - id: recursos
+    modules:
+      - recursos
+advanced: [n8n]

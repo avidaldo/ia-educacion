@@ -1,0 +1,59 @@
+# Interface strings for Spanish. Galician overrides them key by key in gl/_ui.yaml.
+site_title: Docencia con IA
+site_tagline: Inteligencia artificial para docentes de secundaria y FP
+language_name: Español
+nav:
+  fundamentos: Fundamentos
+  herramientas: Herramientas
+  aplicaciones: Aplicaciones en el aula
+  marco: Ética y normativa
+  recursos: Recursos
+alerts:
+  note: Nota
+  tip: Consejo
+  important: Importante
+  warning: Atención
+  caution: Precaución
+chat:
+  user: Docente
+  assistant: Asistente
+  expand: (ver respuesta)
+labels:
+  advanced: avanzado
+  agenda: Hoy veremos
+  back_to_site: Volver a la web
+  built_on: actualizado el
+  closing: Materiales y enlaces
+  contents: Contenidos
+  copied_button: Copiado
+  copy_button: Copiar
+  date_format: "{day} de {month} de {year}"
+  deck: Presentación
+  deck_fullscreen: Pantalla completa
+  deck_picker_link: Presentaciones
+  deck_presenter_hint: "vista de ponente: tecla S"
+  deck_view_here: Ver aquí
+  language: Idioma
+  menu: Menú
+  next: Siguiente
+  on_this_page: En esta página
+  pager: Navegación entre páginas
+  picker_help: Marca los módulos en el orden en que quieras presentarlos. La dirección resultante se puede guardar o compartir.
+  picker_start: Presentar
+  picker_title: Prepara la sesión
+  previous: Anterior
+  prompt: Prompt
+  qr_alt: Código QR que enlaza a la web del curso
+  reviewed: Revisado
+  skip_to_content: Saltar al contenido
+  slide_demo: Demo en directo
+  slide_practice: Práctica
+  slides: diapositivas
+  source_code: código fuente
+  theme_toggle: Cambiar entre tema claro y oscuro
+  untranslated: Esta página aún no está traducida; se muestra en castellano.
+months: [enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre]
+footer:
+  author: Alejandro Vidal Domínguez
+  repository_url: https://github.com/avidaldo/ia-educacion
+  privacy: Esta web no usa cookies ni rastreadores, y no carga recursos de terceros salvo la librería de diagramas Mermaid en las páginas que la necesitan.
