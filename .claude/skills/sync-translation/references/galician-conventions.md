@@ -39,3 +39,4 @@ Write normative Galician (RAG, *Normas ortográficas e morfolóxicas do idioma g
 | -ble with Spanish spelling (disponible) | dispoñible, posible, verificable |
 | ventaja, desventaja | vantaxe, desvantaxe (feminine) |
 | asignatura | materia |
+| plantilla, patrón (template, pattern) | modelo, formato, estrutura (see the glossary) |

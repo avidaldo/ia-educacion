@@ -1,6 +1,6 @@
 # Glossary es → gl
 
-Fixed choices for the course site. Add a row whenever a new term is settled, and mention it to the user. Terms marked **(to confirm)** await the teacher's decision.
+Fixed choices for the course site. Add a row whenever a new term is settled, and mention it to the user. Terms marked **(to confirm)** await the teacher's decision. Decisions of 2026-10-22: *o prompt*, *a skill*, *o notebook*, *modelo* for «plantilla», site title «Docencia con IA» in both languages, GIFT/XML examples left in Spanish.
 
 ## Moodle (Galician interface of the aula virtual)
 
@@ -35,9 +35,9 @@ Check new interface strings against a capture of the Galician interface before a
 | alucinación | alucinación |
 | razonamiento, modelo que razona | razoamento, modelo que razoa |
 | agente | axente |
-| el *prompt* (to confirm) | o *prompt* (masculine by common use; equivalent *instrución* is feminine) |
+| el *prompt* | o *prompt* (masculine by common use, decided by the teacher; equivalent *instrución* is feminine) |
 | el *chatbot* | o *chatbot* (asistente conversacional) |
-| la *skill* (to confirm) | a *skill* (habilidade) |
+| la *skill* | a *skill* (habilidade) |
 | el *notebook* | o *notebook* (caderno) |
 | *metaprompting* | *metaprompting* |
 | *one-shot*, *few-shot*, *zero-shot* | the same, in italics |
@@ -57,7 +57,8 @@ Check new interface strings against a capture of the Galician interface before a
 | rúbrica | rúbrica |
 | *exit ticket* | o *exit ticket* (billete de saída) |
 | ficha de actividad | ficha de actividade |
-| plantilla (to confirm) | modelo; *padrón* when «modelo» would be confused with a language model |
+| plantilla (template) | modelo (as in LibreOffice and Google in Galician). *Plantilla* is not Galician in this sense (RAG). When «modelo» could be read as a language model, rephrase: «modelo de prompt», «formato», «estrutura» |
+| patrón (pattern, model to copy) | modelo, formato, estrutura. Never *patrón*: in Galician it means employer, patron saint or skipper (RAG). *Padrón* is correct in this sense but readers associate it with the census, so avoid it |
 | supuesto (assumption) | suposto |
 | salida (output) | saída |
 | enlace | ligazón |

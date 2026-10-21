@@ -71,9 +71,9 @@ Tema: [escribe aquí o tema]
 
 :::: chat
 ::: user
-Quero un exemplo de saída para unha «ficha de actividade» que eu poida usar como patrón.
+Quero un exemplo de saída para unha «ficha de actividade» que eu poida usar como modelo.
 
-Exemplo (patrón de formato) para unha actividade calquera:
+Exemplo (modelo de formato) para unha actividade calquera:
 
 - Título: ...
 - Obxectivo: ...
@@ -83,7 +83,7 @@ Exemplo (patrón de formato) para unha actividade calquera:
 Agora crea UNHA ficha nova sobre «como ensinarlle ao meu alumnado a escribir bos prompts», para 4.º ESO ou 1.º FP Básica. Regras:
 
 - Máximo 180 palabras.
-- Respecta o mesmo patrón de formato.
+- Respecta o mesmo formato.
 :::
 ::: assistant
 - Título: Obradoiro exprés: «Preguntarlle ben a unha IA»
@@ -118,7 +118,7 @@ Criterios: argumentos baseados en evidencias do material.
 
 Agora xera 3 instrucións de tarefa novas para «aprender a usar a IA de forma responsable na clase». Regras:
 
-- Mantén EXACTAMENTE o mesmo patrón de 3 liñas (Tarefa / Entrega / Criterios).
+- Mantén EXACTAMENTE a mesma estrutura de 3 liñas (Tarefa / Entrega / Criterios).
 - Nivel: 2.º FP Grao Medio.
 :::
 ::: assistant
@@ -138,7 +138,7 @@ Criterios: ítems accionables e verificables.
 
 > [!TIP]
 > **Por que funciona**
-> - Os exemplos fixan un patrón de saída estable.
+> - Os exemplos fixan un formato de saída estable.
 > - Controla o **formato** (tres liñas fixas) e o **nivel**.
 > - Reduce a ambigüidade: o resultado pódese avaliar.
 
