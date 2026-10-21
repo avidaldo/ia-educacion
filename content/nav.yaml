@@ -3,7 +3,7 @@
 sections:
   - id: fundamentos
     modules:
-      - intro-ia
+      - intro-ia: [funcionamiento]
       - chatbots
       - prompts: [ejemplos, avanzado]
   - id: herramientas
