@@ -63,7 +63,22 @@ async function renderMermaid() {
     block.removeAttribute("data-processed");
     block.textContent = mermaidSources.get(block);
   });
-  mermaid.initialize({ startOnLoad: false, theme: root.dataset.theme === "dark" ? "dark" : "neutral" });
+  // "base" is the only Mermaid theme that takes variables; they come from tokens.css so diagrams follow both themes.
+  const token = (name) => getComputedStyle(root).getPropertyValue(name).trim();
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: "base",
+    themeVariables: {
+      darkMode: root.dataset.theme === "dark",
+      fontFamily: token("--font-sans"),
+      background: token("--bg"),
+      primaryColor: token("--accent-soft"),
+      primaryBorderColor: token("--accent"),
+      primaryTextColor: token("--ink"),
+      lineColor: token("--ink-2"),
+      textColor: token("--ink"),
+    },
+  });
   await mermaid.run({ nodes: blocks });
 }
 document.addEventListener("ia-edu:mermaid-ready", renderMermaid);
