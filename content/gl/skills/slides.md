@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/skills/slides.md: "262cfd253fe108453956bb414d39c238b7f4fafc"
+  es/skills/slides.md: "86b243db474fe069872d97973b4ca9c78fd8f3e1"
 ---
 
 <!-- .slide: id="no-repitas" class="statement" -->

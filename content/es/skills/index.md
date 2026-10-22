@@ -25,7 +25,7 @@ Asistente personalizado
 | ChatGPT | GPTs | Instrucciones, ficheros de conocimiento y capacidades (búsqueda, imágenes, código). Se pueden compartir con un enlace |
 | ChatGPT y Claude | Proyectos | Instrucciones y ficheros comunes a un grupo de conversaciones |
 | Gemini | Gems | Instrucciones y ficheros. Disponibles también en el plan gratuito. Google las convierte en *skills* a partir de noviembre de 2026 (en las cuentas de centro, en 2027) |
-| Perplexity | Espacios | Instrucciones, ficheros y búsqueda web. Se ven en el módulo de bots educativos<!-- TODO: enlazar ../bots-educativos/index.md cuando exista --> |
+| Perplexity | Espacios | Instrucciones, ficheros y búsqueda web. Se ven en [Bots educativos](../bots-educativos/index.md) |
 
 Los nombres y lo que incluye cada plan cambian a menudo. Lo que no cambia es la idea: **un *prompt* fijo más un contexto opcional**, reutilizado en muchas conversaciones.
 

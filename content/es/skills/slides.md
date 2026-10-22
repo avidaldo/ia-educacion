@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/skills/index.md: "0f1a7e389572e38c8db92ee280c615fbbc2b337a"
+  es/skills/index.md: "f28eecf86c888bb077a33a0a55fb4e7a88c89961"
 ---
 
 <!-- .slide: id="no-repitas" class="statement" -->

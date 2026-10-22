@@ -51,7 +51,7 @@ No hay un *chatbot* mejor para todo, y los rankings cambian cada mes. Estos crit
 | --- | --- | --- |
 | Información actual con fuentes que puedas comprobar | Perplexity, o cualquiera con la búsqueda activada | Citan las páginas que usan; las fuentes hay que abrirlas igualmente |
 | Un informe sobre un tema nuevo (metodologías, normativa) | La investigación a fondo (*Deep Research*) de ChatGPT, Gemini, Claude o Perplexity | Planifica, busca decenas de fuentes y redacta un informe referenciado |
-| Trabajar solo con tus documentos | Los cuadernos de Gemini (NotebookLM) o un proyecto de ChatGPT o Claude | Responden a partir de las fuentes que subes. Se ve en el módulo de cuadernos<!-- TODO: enlazar ../notebooks/index.md cuando exista --> |
+| Trabajar solo con tus documentos | Los cuadernos de Gemini (NotebookLM) o un proyecto de ChatGPT o Claude | Responden a partir de las fuentes que subes. Se ve en [Cuadernos de Gemini](../notebooks/index.md) |
 | Repetir una tarea con las mismas instrucciones | Un asistente personalizado (GPT, Gem, proyecto, *skill*) | Las instrucciones no se reescriben cada vez. Se ve en [Skills](../skills/index.md) |
 | Crear una página o una pequeña aplicación | Claude (Artifacts), ChatGPT o Gemini (Canvas) | Muestran el resultado funcionando dentro del chat |
 | Generar o editar imágenes | ChatGPT o Gemini | Tienen generadores de imágenes propios integrados |

@@ -2,7 +2,7 @@
 title: Asistentes e skills
 description: Como fixar instrucións e materiais para as tarefas que se repiten, desde un asistente personalizado ata unha skill.
 derived_from:
-  es/skills/index.md: "0f1a7e389572e38c8db92ee280c615fbbc2b337a"
+  es/skills/index.md: "f28eecf86c888bb077a33a0a55fb4e7a88c89961"
 ---
 
 ## Por que fixar as instrucións
@@ -25,7 +25,7 @@ Asistente personalizado
 | ChatGPT | GPTs | Instrucións, ficheiros de coñecemento e capacidades (busca, imaxes, código). Pódense compartir cunha ligazón |
 | ChatGPT e Claude | Proxectos | Instrucións e ficheiros comúns a un grupo de conversas |
 | Gemini | Gems | Instrucións e ficheiros. Dispoñibles tamén no plan gratuíto. Google convérteas en *skills* a partir de novembro de 2026 (nas contas de centro, en 2027) |
-| Perplexity | Espazos | Instrucións, ficheiros e busca web. Vense no módulo de bots educativos<!-- TODO: enlazar ../bots-educativos/index.md cuando exista --> |
+| Perplexity | Espazos | Instrucións, ficheiros e busca web. Vense en [Bots educativos](../bots-educativos/index.md) |
 
 Os nomes e o que inclúe cada plan cambian a miúdo. O que non cambia é a idea: **un *prompt* fixo máis un contexto opcional**, reutilizado en moitas conversas.
 

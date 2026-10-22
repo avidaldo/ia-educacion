@@ -2,7 +2,7 @@
 title: Chatbots
 description: Os principais asistentes, que os distingue, cal convén para cada tarefa e que axustes hai que coñecer antes de usalos no traballo docente.
 derived_from:
-  es/chatbots/index.md: "6daec52ed415eac4181bb48565e1c391ba8440b2"
+  es/chatbots/index.md: "ede584a273171fc94c89236966e79952595954c0"
 ---
 
 > [!IMPORTANT]
@@ -51,7 +51,7 @@ Non hai un *chatbot* mellor para todo, e as clasificacións cambian cada mes. Es
 | --- | --- | --- |
 | Información actual con fontes que poidas comprobar | Perplexity, ou calquera coa busca activada | Citan as páxinas que usan; as fontes hai que abrilas igualmente |
 | Un informe sobre un tema novo (metodoloxías, normativa) | A investigación a fondo (*Deep Research*) de ChatGPT, Gemini, Claude ou Perplexity | Planifica, busca decenas de fontes e redacta un informe referenciado |
-| Traballar só cos teus documentos | Os cadernos de Gemini (NotebookLM) ou un proxecto de ChatGPT ou Claude | Responden a partir das fontes que subes. Vese no módulo de cadernos<!-- TODO: enlazar ../notebooks/index.md cuando exista --> |
+| Traballar só cos teus documentos | Os cadernos de Gemini (NotebookLM) ou un proxecto de ChatGPT ou Claude | Responden a partir das fontes que subes. Vese en [Cadernos de Gemini](../notebooks/index.md) |
 | Repetir unha tarefa coas mesmas instrucións | Un asistente personalizado (GPT, Gem, proxecto, *skill*) | As instrucións non se reescriben cada vez. Vese en [Skills](../skills/index.md) |
 | Crear unha páxina ou unha pequena aplicación | Claude (Artifacts), ChatGPT ou Gemini (Canvas) | Mostran o resultado funcionando dentro do chat |
 | Xerar ou editar imaxes | ChatGPT ou Gemini | Teñen xeradores de imaxes propios integrados |
