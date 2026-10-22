@@ -78,6 +78,6 @@ Modelo de lenguaje
 Agente
 : Un sistema que, a partir de un objetivo, **actúa**: planifica pasos, usa herramientas (un navegador, un programa, el correo) y decide qué hacer a continuación según lo que observa, hasta cumplir el objetivo o detenerse.
 
-La diferencia práctica: a un *chatbot* le preguntas y te responde; a un agente le encargas una tarea y la ejecuta, con los riesgos que eso implica. Se ve en detalle en el módulo de navegadores con agentes.<!-- TODO: enlazar ../navegadores-agenticos/index.md cuando exista -->
+La diferencia práctica: a un *chatbot* le preguntas y te responde; a un agente le encargas una tarea y la ejecuta, con los riesgos que eso implica. Se ve en detalle en [Navegadores con agentes](../navegadores-agenticos/index.md).
 
 Cómo funciona por dentro un modelo de lenguaje, y por qué eso explica sus aciertos y sus errores, está en [Cómo funciona un modelo de lenguaje](funcionamiento.md).

@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/intro-ia/index.md: "217e0bd102a40b0d3292bc6282f800e3c63f95d3"
+  es/intro-ia/index.md: "092b9369e10fe8c4f69fb793a24a4bab55e19b09"
   es/intro-ia/funcionamiento.md: "85900217673a2a2f9c7585cce76fe1c774c77bc3"
 ---
 

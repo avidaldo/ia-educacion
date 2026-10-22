@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/webs-educativas/index.md: "738bad2789a5baa7ac8e4bee0f328d088d2bf28b"
+  es/webs-educativas/index.md: "ffaa09e32dced5a94e8f12000040daf964147b26"
   es/webs-educativas/presentaciones.md: "8ba1f937e70def616ac39f15221015ce5d2889c5"
 ---
 
@@ -29,7 +29,7 @@ Simuladores, repasos, líneas de tiempo, juegos: un único fichero HTML.
 | --- | --- |
 | Claude (Artifacts) | Quien la abra necesita cuenta de Claude (18 años) |
 | Gemini (Canvas) | Enlace público; quien lo tenga puede editar los datos de la aplicación |
-| ChatGPT (Canvas) | Descargar el código y publicarlo fuera |
+| ChatGPT (Canvas, Sites) | Sites, en Plus y Pro, la publica con una dirección propia; si no, descargar el código |
 
 Notas:
 En todos los casos, lo más robusto es pedir un único fichero HTML, descargarlo y publicarlo tú donde ya entra el alumnado.

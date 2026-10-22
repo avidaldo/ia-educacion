@@ -15,7 +15,7 @@ Con una descripción en lenguaje natural, los *chatbots* generan **páginas web 
 - una calculadora específica de la materia (escalas, porcentajes, unidades);
 - un juego de vocabulario o de emparejar conceptos.
 
-Una página así es un único fichero HTML con su diseño y su código. Cuando el proyecto crece (varias pantallas, datos guardados, usuarios), ya no es una página sino una aplicación: se trata en el módulo de *vibe coding*.<!-- TODO: enlazar ../vibe-coding/index.md cuando exista -->
+Una página así es un único fichero HTML con su diseño y su código. Cuando el proyecto crece (varias pantallas, datos guardados, usuarios), ya no es una página sino una aplicación: se trata en [*Vibe coding*](../vibe-coding/index.md).
 
 ## Dónde crearlas
 
@@ -23,7 +23,7 @@ Una página así es un único fichero HTML con su diseño y su código. Cuando e
 | --- | --- | --- |
 | Claude | Los Artifacts muestran la página funcionando junto al chat | Con enlace, pero **quien la abra necesita cuenta de Claude** (y Claude exige 18 años). Para el alumnado, descarga el código y publícalo en otro sitio |
 | Gemini | Canvas, también en el plan gratuito | Con un enlace público que se abre en gemini.google.com. Según Google, quien tenga el enlace puede ver y editar los datos asociados a la aplicación |
-| ChatGPT | Canvas para código y, desde GPT-6, respuestas con elementos interactivos | Descarga el código para publicarlo fuera de ChatGPT |
+| ChatGPT | Canvas para código y, desde GPT-6, respuestas con elementos interactivos. En los planes Plus y Pro, Sites (en pruebas) crea y publica páginas y aplicaciones ligeras | Con Sites, con una dirección propia; si no, descarga el código para publicarlo fuera de ChatGPT |
 
 En todos los casos, el camino más robusto es el mismo: **pedir la página como un único fichero HTML, descargarlo y publicarlo tú** donde el alumnado ya entra.
 
