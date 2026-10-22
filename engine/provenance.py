@@ -235,7 +235,7 @@ def write_derived_from(path: Path, hashes: dict[str, str]) -> None:
         front = "".join(front_lines)
         new_text = "---\n" + front + block + text[closing + 1:]
     else:
-        new_text = "---\n" + block + "---\n" + text
+        new_text = "---\n" + block + "---\n\n" + text.lstrip("\n")
     path.write_text(new_text, encoding="utf-8")
 
 

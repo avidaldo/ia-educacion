@@ -60,6 +60,15 @@ def test_stamp_keeps_the_rest_of_the_file_and_quotes_the_hash(repo):
     assert state_of("gl/prompts/index.md") == "up-to-date"
 
 
+def test_stamp_adds_front_matter_with_a_blank_line_to_a_new_deck(repo):
+    deck = repo / "content" / "es" / "prompts" / "slides.md"
+    deck.write_text('<!-- .slide: id="uno" -->\n## Uno\n')
+    stamp(deck, if_trivial=False)
+    text = deck.read_text()
+    assert text.startswith("---\nderived_from:\n  es/prompts/index.md: \"")
+    assert text.endswith('"\n---\n\n<!-- .slide: id="uno" -->\n## Uno\n')
+
+
 def test_source_change_makes_it_stale_and_diff_shows_the_change(repo):
     source = repo / "content" / "es" / "prompts" / "index.md"
     target = repo / "content" / "gl" / "prompts" / "index.md"
