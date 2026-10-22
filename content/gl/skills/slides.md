@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/skills/slides.md: "1fddd371455f217475433703128de7f1d977a3cf"
+  es/skills/slides.md: "262cfd253fe108453956bb414d39c238b7f4fafc"
 ---
 
 <!-- .slide: id="no-repitas" class="statement" -->
@@ -30,7 +30,7 @@ Un **procedemento** que se carga só cando a tarefa o require, en calquera conve
 | Ferramenta | Nome |
 | --- | --- |
 | ChatGPT | GPTs e proxectos |
-| Gemini | Gems (tamén no plan gratuíto) |
+| Gemini | Gems (pasan a ser *skills* desde novembro de 2026) |
 | Claude | Proxectos |
 | Perplexity | Espazos |
 
@@ -58,6 +58,7 @@ Por iso pode ter moitas skills dispoñibles sen encher a conversa, e non fai fal
 | --- | --- |
 | Claude | Todos os plans, coa execución de código activada |
 | ChatGPT | Plans Business, Enterprise e Edu |
+| Gemini | Desde outubro de 2026, contas persoais de adultos |
 | Ferramentas de programación con axentes | Desde cartafoles do proxecto |
 
 ---

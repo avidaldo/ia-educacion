@@ -24,7 +24,7 @@ Asistente personalizado
 | --- | --- | --- |
 | ChatGPT | GPTs | Instrucciones, ficheros de conocimiento y capacidades (búsqueda, imágenes, código). Se pueden compartir con un enlace |
 | ChatGPT y Claude | Proyectos | Instrucciones y ficheros comunes a un grupo de conversaciones |
-| Gemini | Gems | Instrucciones y ficheros. Disponibles también en el plan gratuito |
+| Gemini | Gems | Instrucciones y ficheros. Disponibles también en el plan gratuito. Google las convierte en *skills* a partir de noviembre de 2026 (en las cuentas de centro, en 2027) |
 | Perplexity | Espacios | Instrucciones, ficheros y búsqueda web. Se ven en el módulo de bots educativos<!-- TODO: enlazar ../bots-educativos/index.md cuando exista --> |
 
 Los nombres y lo que incluye cada plan cambian a menudo. Lo que no cambia es la idea: **un *prompt* fijo más un contexto opcional**, reutilizado en muchas conversaciones.
@@ -43,6 +43,7 @@ El formato lo publicó Anthropic como estándar abierto ([Agent Skills](https://
 | --- | --- |
 | Claude (web y aplicaciones) | Todos los planes, incluido el gratuito. Requiere activar la ejecución de código en Ajustes → Capacidades (*Capabilities*) |
 | ChatGPT | Planes Business, Enterprise y Edu |
+| Gemini | En despliegue desde octubre de 2026: por ahora, cuentas personales de mayores de 18 años; las cuentas de centro llegarán después. Se invocan con `/` o Gemini las aplica cuando encajan |
 | Herramientas de programación con agentes (Claude Code, Codex, Gemini CLI…) | Cargan *skills* desde carpetas del proyecto |
 
 Las *skills* pueden incluir código que el asistente ejecuta. Por eso **instala solo *skills* que hayas leído** o que vengan de una fuente de confianza: igual que una extensión del navegador, una *skill* de terceros puede contener instrucciones o código dañinos.
@@ -69,7 +70,7 @@ description: Genera preguntas de opción múltiple en formato GIFT importable en
 
 La carpeta se completa con `ejemplo.gift`, una pregunta exportada de tu propio Moodle, como se explica en [Tests para Moodle](../tests-moodle/index.md#el-método-más-fiable-partir-de-una-exportación-de-moodle).
 
-No hace falta escribirla a mano: Claude y ChatGPT incluyen una *skill* para crear *skills*. Describe la tarea («quiero una *skill* que genere preguntas GIFT con estas reglas…»), revisa lo que propone y pruébala con casos reales antes de usarla. Es [*metaprompting*](../prompts/index.md#metaprompting-pedirle-a-la-ia-que-escriba-el-prompt) aplicado a un procedimiento.
+No hace falta escribirla a mano: Claude, ChatGPT y Gemini permiten crear una *skill* describiéndola en el chat. Describe la tarea («quiero una *skill* que genere preguntas GIFT con estas reglas…»), revisa lo que propone y pruébala con casos reales antes de usarla. Es [*metaprompting*](../prompts/index.md#metaprompting-pedirle-a-la-ia-que-escriba-el-prompt) aplicado a un procedimiento.
 
 ## Cómo escribir las instrucciones
 

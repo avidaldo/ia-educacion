@@ -2,7 +2,7 @@
 title: Asistentes e skills
 description: Como fixar instrucións e materiais para as tarefas que se repiten, desde un asistente personalizado ata unha skill.
 derived_from:
-  es/skills/index.md: "fa6c430c07b027d501291a9b2be186ba3d81ddc7"
+  es/skills/index.md: "0f1a7e389572e38c8db92ee280c615fbbc2b337a"
 ---
 
 ## Por que fixar as instrucións
@@ -24,7 +24,7 @@ Asistente personalizado
 | --- | --- | --- |
 | ChatGPT | GPTs | Instrucións, ficheiros de coñecemento e capacidades (busca, imaxes, código). Pódense compartir cunha ligazón |
 | ChatGPT e Claude | Proxectos | Instrucións e ficheiros comúns a un grupo de conversas |
-| Gemini | Gems | Instrucións e ficheiros. Dispoñibles tamén no plan gratuíto |
+| Gemini | Gems | Instrucións e ficheiros. Dispoñibles tamén no plan gratuíto. Google convérteas en *skills* a partir de novembro de 2026 (nas contas de centro, en 2027) |
 | Perplexity | Espazos | Instrucións, ficheiros e busca web. Vense no módulo de bots educativos<!-- TODO: enlazar ../bots-educativos/index.md cuando exista --> |
 
 Os nomes e o que inclúe cada plan cambian a miúdo. O que non cambia é a idea: **un *prompt* fixo máis un contexto opcional**, reutilizado en moitas conversas.
@@ -43,6 +43,7 @@ O formato publicouno Anthropic como estándar aberto ([Agent Skills](https://age
 | --- | --- |
 | Claude (web e aplicacións) | Todos os plans, incluído o gratuíto. Require activar a execución de código en Axustes → Capacidades (*Capabilities*) |
 | ChatGPT | Plans Business, Enterprise e Edu |
+| Gemini | En despregamento desde outubro de 2026: polo de agora, contas persoais de maiores de 18 anos; as contas de centro chegarán despois. Invócanse con `/` ou Gemini aplícaas cando encaixan |
 | Ferramentas de programación con axentes (Claude Code, Codex, Gemini CLI…) | Cargan *skills* desde cartafoles do proxecto |
 
 As *skills* poden incluír código que o asistente executa. Por iso **instala só *skills* que leses** ou que veñan dunha fonte de confianza: igual ca unha extensión do navegador, unha *skill* de terceiros pode conter instrucións ou código daniños.
@@ -69,7 +70,7 @@ description: Xera preguntas de escolla múltiple en formato GIFT importable en M
 
 O cartafol complétase con `exemplo.gift`, unha pregunta exportada do teu propio Moodle, como se explica en [Tests para Moodle](../tests-moodle/index.md#el-método-más-fiable-partir-de-una-exportación-de-moodle).
 
-Non fai falta escribila a man: Claude e ChatGPT inclúen unha *skill* para crear *skills*. Describe a tarefa («quero unha *skill* que xere preguntas GIFT con estas regras…»), revisa o que propón e próbaa con casos reais antes de usala. É [*metaprompting*](../prompts/index.md#metaprompting-pedirle-a-la-ia-que-escriba-el-prompt) aplicado a un procedemento.
+Non fai falta escribila a man: Claude, ChatGPT e Gemini permiten crear unha *skill* describíndoa no chat. Describe a tarefa («quero unha *skill* que xere preguntas GIFT con estas regras…»), revisa o que propón e próbaa con casos reais antes de usala. É [*metaprompting*](../prompts/index.md#metaprompting-pedirle-a-la-ia-que-escriba-el-prompt) aplicado a un procedemento.
 
 ## Como escribir as instrucións
 
