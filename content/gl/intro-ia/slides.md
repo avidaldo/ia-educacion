@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/intro-ia/slides.md: "2d540f1a0856ae0fd1e8d1aca11b48d134011e0e"
+  es/intro-ia/slides.md: "264c649676ea8cca50e43ce0c5e9e3d7e0cd4106"
 ---
 
 <!-- .slide: id="setenta-anos" class="statement" -->

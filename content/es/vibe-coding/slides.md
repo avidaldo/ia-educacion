@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/vibe-coding/index.md: "b02ed9a9456be84a9292be0861da9fd0b18571e0"
+  es/vibe-coding/index.md: "57c7b2101781e8498e4bbdce4bbb5f3b92ce3530"
 ---
 
 <!-- .slide: id="olvidar-codigo" class="statement" -->
@@ -56,7 +56,7 @@ Claude Code está incluido en todos los planes de pago de Claude; Codex, en todo
 ```text
 Quiero una aplicación web para que mi alumnado de 3.º de ESO practique
 la formulación inorgánica. Antes de escribir código, hazme las preguntas
-que necesites y propónme un plan de pantallas y funciones.
+que necesites y proponme un plan de pantallas y funciones.
 Requisitos: sin registro; no recoge ni envía datos; el progreso se guarda
 solo en el navegador; tres niveles, con pista y corrección explicada;
 usable en el móvil y con el teclado; sin servicios externos.

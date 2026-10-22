@@ -42,6 +42,9 @@ Check new interface strings against a capture of the Galician interface before a
 | *metaprompting* | *metaprompting* |
 | *one-shot*, *few-shot*, *zero-shot* | the same, in italics |
 | inyección de *prompts* | inxección de *prompts* |
+| tríada letal (Willison) | tríade letal |
+| flujo de trabajo (*workflow*), nodo, disparador | fluxo de traballo (*workflow*), nodo, disparador |
+| lienzo (editor visual) | lenzo |
 
 ## Teaching
 
@@ -66,4 +69,8 @@ Check new interface strings against a capture of the Galician interface before a
 | fichero, archivo | ficheiro, arquivo |
 | captura de pantalla | captura de pantalla |
 | contraseña | contrasinal |
+| pestaña (del navegador) | lapela |
+| canal (RSS) | canle (feminine) |
+| zona horaria | fuso horario |
+| dirección (web), dirección de correo | enderezo |
 | datos personales | datos persoais |

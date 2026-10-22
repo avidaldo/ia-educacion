@@ -37,7 +37,7 @@ Un ejemplo de especificación:
 ```text
 Quiero una aplicación web para que mi alumnado de 3.º de ESO practique
 la formulación inorgánica. Antes de escribir código, hazme las preguntas
-que necesites y propónme un plan de pantallas y funciones.
+que necesites y proponme un plan de pantallas y funciones.
 
 Requisitos:
 - Sin registro ni inicio de sesión. No recoge ni envía ningún dato.

@@ -2,7 +2,7 @@
 title: Webs educativas
 description: Crear con IA pequenas páxinas interactivas para a clase (simuladores, repasos, xogos) e publicalas onde o alumnado as poida usar.
 derived_from:
-  es/webs-educativas/index.md: "738bad2789a5baa7ac8e4bee0f328d088d2bf28b"
+  es/webs-educativas/index.md: "ffaa09e32dced5a94e8f12000040daf964147b26"
 ---
 
 ## Que se pode crear
@@ -15,7 +15,7 @@ Cunha descrición en linguaxe natural, os *chatbots* xeran **páxinas web intera
 - unha calculadora específica da materia (escalas, porcentaxes, unidades);
 - un xogo de vocabulario ou de emparellar conceptos.
 
-Unha páxina así é un único ficheiro HTML co seu deseño e o seu código. Cando o proxecto medra (varias pantallas, datos gardados, usuarios), xa non é unha páxina senón unha aplicación: trátase no módulo de *vibe coding*.<!-- TODO: enlazar ../vibe-coding/index.md cuando exista -->
+Unha páxina así é un único ficheiro HTML co seu deseño e o seu código. Cando o proxecto medra (varias pantallas, datos gardados, usuarios), xa non é unha páxina senón unha aplicación: trátase en [*Vibe coding*](../vibe-coding/index.md).
 
 ## Onde crealas
 
@@ -23,7 +23,7 @@ Unha páxina así é un único ficheiro HTML co seu deseño e o seu código. Can
 | --- | --- | --- |
 | Claude | Os Artifacts mostran a páxina funcionando xunto ao chat | Cunha ligazón, pero **quen a abra precisa conta de Claude** (e Claude esixe 18 anos). Para o alumnado, descarga o código e publícao noutro sitio |
 | Gemini | Canvas, tamén no plan gratuíto | Cunha ligazón pública que se abre en gemini.google.com. Segundo Google, quen teña a ligazón pode ver e editar os datos asociados á aplicación |
-| ChatGPT | Canvas para código e, desde GPT-6, respostas con elementos interactivos | Descarga o código para publicalo fóra de ChatGPT |
+| ChatGPT | Canvas para código e, desde GPT-6, respostas con elementos interactivos. Nos plans Plus e Pro, Sites (en probas) crea e publica páxinas e aplicacións lixeiras | Con Sites, cun enderezo propio; se non, descarga o código para publicalo fóra de ChatGPT |
 
 En todos os casos, o camiño máis robusto é o mesmo: **pedir a páxina como un único ficheiro HTML, descargalo e publicalo ti** onde o alumnado xa entra.
 

@@ -2,7 +2,7 @@
 title: Que é a intelixencia artificial
 description: De onde vén o que hoxe chamamos «a IA», por que despegou agora e que distingue un modelo, un chatbot e un axente.
 derived_from:
-  es/intro-ia/index.md: "217e0bd102a40b0d3292bc6282f800e3c63f95d3"
+  es/intro-ia/index.md: "092b9369e10fe8c4f69fb793a24a4bab55e19b09"
 ---
 
 ## Catro conceptos, un dentro doutro
@@ -78,6 +78,6 @@ Modelo de linguaxe
 Axente
 : Un sistema que, a partir dun obxectivo, **actúa**: planifica pasos, usa ferramentas (un navegador, un programa, o correo) e decide que facer a continuación segundo o que observa, ata cumprir o obxectivo ou deterse.
 
-A diferenza práctica: a un *chatbot* pregúntaslle e respóndeche; a un axente encargáslle unha tarefa e execútaa, cos riscos que iso implica. Vese en detalle no módulo de navegadores con axentes.<!-- TODO: enlazar ../navegadores-agenticos/index.md cuando exista -->
+A diferenza práctica: a un *chatbot* pregúntaslle e respóndeche; a un axente encargáslle unha tarefa e execútaa, cos riscos que iso implica. Vese en detalle en [Navegadores con axentes](../navegadores-agenticos/index.md).
 
 Como funciona por dentro un modelo de linguaxe, e por que iso explica os seus acertos e os seus erros, está en [Como funciona un modelo de linguaxe](funcionamiento.md).
