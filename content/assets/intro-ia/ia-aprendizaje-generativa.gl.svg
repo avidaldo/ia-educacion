@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif">
+  <title id="t">Intelixencia artificial (1956) ⊃ Aprendizaxe automática (1959) ⊃ Aprendizaxe profunda (auxe desde 2012) ⊃ IA xerativa (auxe desde 2022)</title>
+  <desc id="d">IA xerativa (auxe desde 2022) ⊂ Aprendizaxe profunda (auxe desde 2012) ⊂ Aprendizaxe automática (1959) ⊂ Intelixencia artificial (1956)</desc>
+  <rect width="720" height="470" rx="16" fill="#ffffff"/>
+  <rect x="20" y="20" width="680" height="430" rx="28" fill="#e6f2f0" stroke="#0b6e69" stroke-width="2"/>
+  <text x="44" y="56" font-size="22" font-weight="700" fill="#08524e">Intelixencia artificial (1956)</text>
+  <text x="44" y="82" font-size="15" fill="#4a5360">Regras, busca, sistemas expertos, ELIZA, Deep Blue</text>
+  <rect x="70" y="104" width="600" height="326" rx="24" fill="#cce6e2" stroke="#0b6e69" stroke-width="2"/>
+  <text x="94" y="140" font-size="21" font-weight="700" fill="#08524e">Aprendizaxe automática (1959)</text>
+  <text x="94" y="165" font-size="15" fill="#4a5360">Aprende patróns a partir de datos, sen regras escritas a man</text>
+  <rect x="120" y="186" width="500" height="224" rx="20" fill="#9fd1ca" stroke="#0b6e69" stroke-width="2"/>
+  <text x="144" y="222" font-size="20" font-weight="700" fill="#06403d">Aprendizaxe profunda (auxe desde 2012)</text>
+  <text x="144" y="246" font-size="15" fill="#1d232b">Redes neuronais con moitas capas: imaxe, voz, tradución</text>
+  <rect x="170" y="268" width="400" height="122" rx="18" fill="#0b6e69"/>
+  <text x="194" y="306" font-size="20" font-weight="700" fill="#ffffff">IA xerativa (auxe desde 2022)</text>
+  <text x="194" y="332" font-size="15" fill="#e6f2f0">Xera texto, imaxes, audio ou vídeo novos</text>
+</svg>

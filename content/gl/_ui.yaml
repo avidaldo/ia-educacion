@@ -1,0 +1,59 @@
+# Interface strings for Galician. Missing keys fall back to es/_ui.yaml.
+site_title: Docencia con IA
+site_tagline: Intelixencia artificial para docentes de secundaria e FP
+language_name: Galego
+nav:
+  fundamentos: Fundamentos
+  herramientas: Ferramentas
+  aplicaciones: Aplicacións na aula
+  marco: Ética e normativa
+  recursos: Recursos
+alerts:
+  note: Nota
+  tip: Consello
+  important: Importante
+  warning: Atención
+  caution: Precaución
+chat:
+  user: Docente
+  assistant: Asistente
+  expand: (ver resposta)
+labels:
+  advanced: avanzado
+  agenda: Hoxe veremos
+  back_to_site: Volver á web
+  built_on: actualizada o
+  closing: Materiais e ligazóns
+  contents: Contidos
+  copied_button: Copiado
+  copy_button: Copiar
+  date_format: "{day} de {month} de {year}"
+  deck: Presentación
+  deck_fullscreen: Pantalla completa
+  deck_picker_link: Presentacións
+  deck_presenter_hint: "vista de relator: tecla S"
+  deck_view_here: Ver aquí
+  language: Lingua
+  menu: Menú
+  next: Seguinte
+  on_this_page: Nesta páxina
+  pager: Navegación entre páxinas
+  picker_help: Marca os módulos na orde en que queiras presentalos. O enderezo resultante pódese gardar ou compartir.
+  picker_start: Presentar
+  picker_title: Prepara a sesión
+  previous: Anterior
+  prompt: Prompt
+  qr_alt: Código QR que leva á web do curso
+  reviewed: Revisado
+  skip_to_content: Saltar ao contido
+  slide_demo: Demo en directo
+  slide_practice: Práctica
+  slides: diapositivas
+  source_code: código fonte
+  theme_toggle: Cambiar entre tema claro e escuro
+  untranslated: Esta páxina aínda non está traducida; móstrase en castelán.
+months: [xaneiro, febreiro, marzo, abril, maio, xuño, xullo, agosto, setembro, outubro, novembro, decembro]
+footer:
+  privacy: Esta web non usa cookies nin rastrexadores, e non carga recursos de terceiros agás a biblioteca de diagramas Mermaid nas páxinas que a precisan.
+derived_from:
+  es/_ui.yaml: "20a8f4ddbb108628ace8959f12771c2faadc3807"

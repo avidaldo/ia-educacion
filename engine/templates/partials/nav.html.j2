@@ -1,0 +1,17 @@
+<nav id="site-nav" class="site-nav" aria-label="{{ ui.labels.contents }}">
+  {% for section in nav_tree %}
+  <section class="nav-section">
+    <h2 class="nav-section-title">{{ section.label }}</h2>
+    <ul>
+    {% for module in section.modules %}
+      <li class="{% if module.current %}current{% endif %}{% if module.open %} open{% endif %}">
+        <a href="{{ module.url }}"{% if module.current_page %} aria-current="page"{% endif %}>{{ module.title }}{% if module.advanced %} <span class="badge">{{ ui.labels.advanced }}</span>{% endif %}</a>
+        {% if module.subpages and module.open %}<ul>
+        {% for sub in module.subpages %}<li><a href="{{ sub.url }}"{% if sub.current %} aria-current="page"{% endif %}>{{ sub.title }}</a></li>
+        {% endfor %}</ul>{% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</nav>

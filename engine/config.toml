@@ -1,0 +1,12 @@
+# Build configuration. Paths are relative to the repository root.
+base_path = "/ia-educacion/"
+site_url = "https://avidaldo.github.io"
+languages = ["es", "gl"]
+source_language = "es"
+stale_after_months = 6
+max_image_kib = 300
+deck_slide_width = 1280
+deck_slide_height = 720
+# Mermaid is the only third-party resource, loaded only on pages that contain a diagram.
+mermaid_url = "https://cdn.jsdelivr.net/npm/mermaid@12.2.0/dist/mermaid.esm.min.mjs"
+reserved_slugs = ["gl", "en", "it", "docs", "assets", "pagefind", "presentacion", "presentation", "search", "markdown-page", "404", "_engine"]

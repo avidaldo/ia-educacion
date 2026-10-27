@@ -1,0 +1,27 @@
+[project]
+name = "ia-educacion"
+version = "0.1.0"
+description = "Web y presentaciones de los cursos de IA para docentes de secundaria y FP"
+requires-python = ">=3.13"
+dependencies = [
+    "markdown-it-py>=4.2",
+    "mdit-py-plugins>=0.6.1",
+    "jinja2>=3.1.6",
+    "pyyaml>=6.0.2",
+    "pygments>=2.19",
+    "pagefind[bin]==1.5.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4",
+    "playwright>=1.55",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["engine/tests"]
+pythonpath = ["engine"]
+filterwarnings = ["error"]

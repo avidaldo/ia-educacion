@@ -1,84 +1,42 @@
 # AGENTS.md
 
-## Contexto del proyecto
+Web y presentaciones de los cursos de inteligencia artificial para docentes de secundaria y FP (Galicia), en castellano y gallego. El [README](README.md) explica la estructura y los comandos; aquí están las reglas para escribir y mantener el contenido.
 
-Web educativa dirigida a **docentes de educación secundaria** que quieren comprender las herramientas de IA y sus casos de uso aplicados a la docencia. El objetivo no es formar expertos técnicos, sino dar una comprensión práctica y fundamentada de estas tecnologías.
+## Fuente única y flujo de trabajo
 
-## Tono y enfoque del contenido
+- **La web es la fuente única.** Cada módulo se escribe en castellano en `content/es/<módulo>/`. La presentación (`slides.md`) se deriva de sus páginas, y el gallego (`content/gl/`) sigue a ambos.
+- **Orden de una actualización:** página en castellano → presentación en castellano (skill `update-slides`) → gallego (skill `sync-translation`). Ambas skills aplican solo lo que cambió, a partir de `uv run engine/provenance.py status` y `diff`.
+- **Los hashes `derived_from` los escribe siempre el script** (`provenance.py stamp`), nunca a mano.
+- **Si una presentación necesita algo que no está en la página**, se añade primero a la página: quien estudia sola solo tiene la web.
+- Antes de dar algo por terminado: `uv run pytest`, `uv run engine/check.py` (0 errores) y, si cambió una presentación, `uv run engine/shoot.py --module <módulo>` (ninguna diapositiva desbordada).
 
-- **Audiencia**: Profesorado de secundaria, sin conocimientos técnicos previos en IA.
-- **Lenguaje divulgativo**: Usar términos accesibles (ej: "agente de IA" en lugar de "LLM" o "modelo de lenguaje"). Evitar jerga técnica innecesaria; cuando sea imprescindible un término técnico, explicarlo brevemente.
-- **Sin promoción de herramientas comerciales**: No favorecer ni recomendar herramientas específicas (ChatGPT, Gemini, Claude, etc.). Mantener un enfoque neutral y centrado en conceptos.
-- **Nivel de profundidad adecuado**: Explicar conceptos a nivel funcional (qué hacen, para qué sirven) sin entrar en arquitectura interna (ej: no explicar transformers, attention, etc.).
-- **Perspectiva científica**: Priorizar siempre la comprensión basada en evidencia.
-- **No antropomorfizar las IAs**: Evitar atribuir intenciones, emociones o agencia a los modelos. Son herramientas estadísticas, no entidades.
-- **No criminalizar las IAs**: Los sesgos y problemas éticos deben explicarse desde la comprensión técnica (datos de entrenamiento, diseño, limitaciones), no desde el sensacionalismo ni el miedo.
-- **Ética basada en comprensión**: El uso ético y correcto de la IA debe fundamentarse en el análisis crítico de la realidad, no en prohibiciones o miedos infundados.
-- El contenido se escribe en **español**.
+## Público y tono
 
-## Traducciones (i18n)
+- Docentes de secundaria **y de FP**, sin formación técnica previa en IA. Se trata de entender cómo funcionan estas herramientas y de usarlas bien, no de formar especialistas.
+- **Rigor y evidencia.** Los datos que caducan (modelos, planes, precios, disponibilidad, edades mínimas) se comprueban en fuentes primarias (documentación y centros de ayuda de cada proveedor) al escribir, nunca de memoria. Las páginas con esos datos llevan `reviewed:` en el *front matter*, y el comprobador avisa cuando caducan (`review_every`, en meses).
+- **Las herramientas se nombran** (ChatGPT, Gemini, Claude…) y se comparan con criterios y fecha de revisión. No hay regla de neutralidad comercial.
+- **Terminología precisa:** *modelo de lenguaje* para el modelo, *chatbot* para el producto, *agente* solo para sistemas que actúan con herramientas en bucle.
+- **No antropomorfizar** los modelos ni presentar sus sesgos con alarmismo: se explican por su causa técnica (datos, entrenamiento, objetivo).
+- Lo técnico que no todos necesitan va en bloques «Para saber más».
+- **Normas:** se citan por artículo, copiando el texto oficial, y cada restricción del módulo de ética indica su origen: obligación legal, recomendación institucional o buena práctica.
+- **Fuentes** como notas al pie (`[^nombre]`), con enlace y fecha de consulta cuando la página puede cambiar.
 
-El proyecto tiene traducciones a **gallego, inglés e italiano** en el directorio `i18n/`. Al editar contenido en `docs/`:
+## Formato
 
-- **No traducir automáticamente** cada cambio intermedio para ahorrar tokens.
-- Al terminar de editar un documento, **recordar al usuario** que existen traducciones que pueden necesitar sincronización.
-- Cuando el usuario lo pida, usar `git diff` sobre el archivo modificado para identificar exactamente qué cambió y aplicar solo esos cambios en la traducción correspondiente. Esto evita tener que releer el documento completo y también identifica cambios de estructura (ficheros movidos o nuevos creados).
+- Markdown de `content/`, con el dialecto que documenta `engine/markdown_render.py`: alertas de GitHub (`> [!TIP]`), notas al pie, listas de tareas, contenedores de chat (`:::: chat` / `::: user` / `::: assistant`) y enlaces a la ruta del fichero fuente (`../tests-moodle/index.md#gift`), que el build convierte en URL y comprueba.
+- **Nada de `style=`** ni HTML de presentación en el contenido: el estilo vive en `engine/theme/`.
+- **Imágenes** en `content/assets/<módulo>/`, de menos de 300 KB y con texto alternativo; la variante gallega es un fichero hermano `nombre.gl.svg` (o `.gl.webp`).
+- **Presentaciones:** solo las maquetaciones de `engine/theme/layouts.yaml` (una clase desconocida hace fallar el build), un `id` estable por diapositiva y las notas del ponente tras `Notas:`. Estilo de las presentaciones: `.claude/skills/update-slides/references/deck-style.md`.
+- **Sin recursos de terceros** en la web salvo Mermaid en las páginas que lo usan.
+- **No partir la prosa en líneas**: un párrafo, un elemento de lista o una fila de tabla por línea.
 
-## Comandos de desarrollo
+## Lenguas
 
-- Se requiere **Node.js ≥ 20.0**
-- Instalar dependencias: `npm ci`
-- Servidor de desarrollo: `npm start`
-- Build de producción: `npm run build`
-- Comprobación de tipos: `npm run typecheck`
-- Limpiar caché: `npm run clear`
+- Castellano y gallego. Los anglicismos sin adaptar, en cursiva y con el género de su equivalente (*la skill*, *o prompt*, por decisión expresa).
+- Gallego normativo (RAG). Convenciones y glosario: `.claude/skills/sync-translation/references/`. Las citas de textos oficiales solo publicados en castellano se mantienen en castellano dentro de la página gallega.
 
-## Cómo añadir y editar contenido
+## Git
 
-- Los documentos van en `docs/` como archivos `.md` o `.mdx`, ordenados con prefijo numérico (ej: `10-historia-y-llms.md`).
-- Cada documento necesita frontmatter con `sidebar_position` y `title`.
-- El sidebar se auto-genera desde la estructura de `docs/`.
-
-### Conversaciones de chat con IA
-
-Para mostrar ejemplos de conversaciones, crear un archivo YAML en `static/data/chats/`:
-
-```yaml
-model: "Asistente IA"   # Opcional
-date: "2024-12-21"      # Opcional
-messages:
-  - role: user
-    content: Tu pregunta aquí
-  - role: assistant
-    content: |
-      Respuesta con soporte de **markdown**.
-```
-
-Y referenciarlo en MDX:
-
-```mdx
-import { ChatConversation } from '@site/src/components/ChatConversation';
-
-<ChatConversation source="/data/chats/ejemplo.yaml" />
-```
-
-#### Traducción de chats
-
-Los archivos YAML de `static/data/chats/` son el contenido por defecto (español). Para traducir un chat a otro idioma, crear el mismo archivo en `i18n/{locale}/chat-data/`:
-
-```
-i18n/en/chat-data/specific-role.yaml   ← traducción al inglés
-i18n/gl/chat-data/specific-role.yaml   ← traducción al gallego
-i18n/it/chat-data/specific-role.yaml   ← traducción al italiano
-```
-
-- Solo es necesario crear los archivos que se quieran traducir; los que no existan usarán el contenido por defecto en español.
-- El nombre del archivo debe coincidir exactamente con el original en `static/data/chats/`.
-- El formato del YAML traducido es idéntico al original.
-
-## Estilo de código
-
-- TypeScript con anotaciones de tipo. Componentes funcionales de React.
-- CSS Modules (`.module.css`) para estilos de componentes.
-- La base URL es `/ia-educacion/` — las rutas de assets deben tenerlo en cuenta.
-- No modificar `build/`, `node_modules/` ni `.docusaurus/`.
+- No se hace *push* sin que lo pida quien mantiene el repositorio.
+- No se versionan capturas con datos personales, ni la salida del build (`engine/_build/`) ni las capturas de `engine/_screens/`.
+- La versión anterior de la web (Docusaurus) está en la rama `legacy-docusaurus`. Las rutas que publicaba están en `engine/legacy-urls.txt`, para sus redirecciones.

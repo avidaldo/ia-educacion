@@ -1,0 +1,39 @@
+# Verifies the site (tests, content checks, build) and uploads it as a downloadable artifact.
+# It does not deploy yet: the live site is still the last Docusaurus build in the gh-pages branch.
+# To go live: add a deploy job (actions/upload-pages-artifact + actions/deploy-pages) and set Pages
+# to deploy from GitHub Actions (gh api -X PUT repos/avidaldo/ia-educacion/pages -f build_type=workflow).
+name: Site
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0  # provenance diffs read old blobs from history
+      - uses: astral-sh/setup-uv@v10.3.2
+        with:
+          enable-cache: true
+      - name: Install
+        run: uv sync --locked
+      - name: Unit tests
+        run: uv run pytest -q
+      - name: Content checks (errors fail, warnings are reported)
+        run: uv run engine/check.py
+      - name: Build
+        run: uv run engine/build.py
+      - uses: actions/upload-artifact@v7
+        with:
+          name: site
+          path: engine/_build
+          retention-days: 14

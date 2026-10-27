@@ -1,0 +1,87 @@
+/* Design tokens shared by the web and the slides. Change the visual identity here, nowhere else.
+   Colours meet WCAG AA against their background in both themes. */
+
+:root {
+  color-scheme: light;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --surface-2: #f2f0ea;
+  --surface-3: #e8e5dc;
+  --ink: #1d232b;
+  --ink-2: #4a5360;
+  --line: #dcd8cf;
+
+  --accent: #0b6e69;
+  --accent-strong: #08524e;
+  --accent-ink: #ffffff;
+  --accent-soft: #e0f0ee;
+
+  --note: #2457a6;
+  --note-soft: #e6eefb;
+  --tip: var(--accent);
+  --tip-soft: var(--accent-soft);
+  --important: #6b3fa0;
+  --important-soft: #efe8f8;
+  --warning: #9a5b00;
+  --warning-soft: #fbefd9;
+  --caution: #b42318;
+  --caution-soft: #fde8e6;
+
+  --demo: #9a5b00;
+  --demo-soft: #fbefd9;
+  --practice: #6b3fa0;
+  --practice-soft: #efe8f8;
+
+  --radius: 10px;
+  --radius-small: 6px;
+  --shadow: 0 1px 2px rgb(20 24 30 / 6%), 0 4px 14px rgb(20 24 30 / 6%);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+
+  --text-small: 0.875rem;
+  --text-base: 1.0625rem;
+  --text-lead: 1.2rem;
+  --line-height: 1.65;
+  --measure: 72ch;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #12161b;
+  --surface: #181d23;
+  --surface-2: #20262e;
+  --surface-3: #2a313b;
+  --ink: #e8eaed;
+  --ink-2: #a9b1bc;
+  --line: #2e353f;
+
+  --accent: #4fc1b7;
+  --accent-strong: #7fd6ce;
+  --accent-ink: #062b28;
+  --accent-soft: #10302d;
+
+  --note: #8ab4f8;
+  --note-soft: #18243a;
+  --important: #c3a6f0;
+  --important-soft: #2a2140;
+  --warning: #f2b45a;
+  --warning-soft: #33270f;
+  --caution: #ff8a7a;
+  --caution-soft: #3a1d1a;
+
+  --demo: #f2b45a;
+  --demo-soft: #33270f;
+  --practice: #c3a6f0;
+  --practice-soft: #2a2140;
+
+  --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 4px 14px rgb(0 0 0 / 30%);
+}

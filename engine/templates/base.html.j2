@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="{{ lang }}" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page_title %}{{ page_title }} · {% endif %}{{ ui.site_title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ canonical }}">
+{% for alternate in alternates %}<link rel="alternate" hreflang="{{ alternate.lang }}" href="{{ alternate.absolute_url }}">
+{% endfor %}<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ ui.site_title }}">
+<meta property="og:title" content="{{ page_title or ui.site_title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:locale" content="{{ ui.locale }}">
+{% if noindex %}<meta name="robots" content="noindex">
+{% endif %}<link rel="icon" href="{{ base_path }}assets/shared/favicon.svg" type="image/svg+xml">
+<script>{% include "partials/theme-early.js" %}</script>
+<link rel="stylesheet" href="{{ engine_url }}theme/tokens.css">
+<link rel="stylesheet" href="{{ engine_url }}theme/base.css">
+<link rel="stylesheet" href="{{ engine_url }}theme/components.css">
+<link rel="stylesheet" href="{{ engine_url }}theme/pygments.css">
+<link rel="stylesheet" href="{{ engine_url }}theme/print.css" media="print">
+{% if search_enabled %}<link rel="stylesheet" href="{{ base_path }}pagefind/pagefind-component-ui.css">
+<script src="{{ base_path }}pagefind/pagefind-component-ui.js" defer></script>
+{% endif %}</head>
+<body class="{% block body_class %}{% endblock %}" data-copy-label="{{ ui.labels.copy_button }}" data-copied-label="{{ ui.labels.copied_button }}">
+<a class="skip-link" href="#main">{{ ui.labels.skip_to_content }}</a>
+<header class="site-header">
+  <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="{{ ui.labels.menu }}"><span aria-hidden="true">☰</span></button>
+  <a class="brand" href="{{ home_url }}"><img src="{{ base_path }}assets/shared/logo.svg" alt="" width="28" height="28"><span>{{ ui.site_title }}</span></a>
+  <div class="header-tools">
+    {% if search_enabled %}<pagefind-config bundle-path="{{ base_path }}pagefind/"></pagefind-config>
+    <pagefind-modal-trigger></pagefind-modal-trigger>
+    <pagefind-modal></pagefind-modal>
+    {% endif %}{% include "partials/lang-switch.html.j2" %}
+    <a class="header-link" href="{{ deck_index_url }}">{{ ui.labels.deck_picker_link }}</a>
+    <button class="theme-toggle" type="button" aria-label="{{ ui.labels.theme_toggle }}" title="{{ ui.labels.theme_toggle }}"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+  {% include "partials/nav.html.j2" %}
+  <main id="main" class="content"{% if indexable %} data-pagefind-body{% endif %}{% if content_lang != lang %} lang="{{ content_lang }}"{% endif %}>
+    {% block main %}{% endblock %}
+  </main>
+  {% block aside %}{% endblock %}
+</div>
+<footer class="site-footer">
+  <p>{{ ui.footer.author }} · {{ ui.labels.built_on }} {{ build_date }} · <a href="{{ ui.footer.repository_url }}">{{ ui.labels.source_code }}</a></p>
+  <p class="privacy-note">{{ ui.footer.privacy }}</p>
+</footer>
+<script type="module" src="{{ engine_url }}theme/site.js"></script>
+{% if has_mermaid %}<script type="module">
+import mermaid from "{{ mermaid_url }}";
+window.iaEduMermaid = mermaid;
+document.dispatchEvent(new Event("ia-edu:mermaid-ready"));
+</script>
+{% endif %}</body>
+</html>

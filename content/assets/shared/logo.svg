@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Docencia con IA">
+  <rect width="64" height="64" rx="14" fill="#0b6e69"/>
+  <path d="M15 46V18h6v28zM28 46l9-28h6l9 28h-6.4l-1.9-6.2H36.3L34.4 46zm9.9-11.6h6.2L41 24.5z" fill="#fff"/>
+  <circle cx="52" cy="13" r="4" fill="#f2b45a"/>
+</svg>

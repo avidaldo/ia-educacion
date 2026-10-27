@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 790 360" role="img" aria-labelledby="t" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif">
+<title id="t">Programación clásica fronte a aprendizaxe automática</title>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0b6e69"/></marker></defs>
+<rect width="790" height="360" rx="16" fill="#ffffff"/>
+<text x="30" y="44" font-size="19" font-weight="700" fill="#08524e">Programación clásica</text>
+<rect x="30" y="62" width="150" height="52" rx="12" fill="#ffffff" stroke="#0b6e69" stroke-width="2"/><text x="105.0" y="94" font-size="17" font-weight="600" fill="#1d232b" text-anchor="middle">Regras</text>
+<rect x="30" y="124" width="150" height="52" rx="12" fill="#ffffff" stroke="#0b6e69" stroke-width="2"/><text x="105.0" y="156" font-size="17" font-weight="600" fill="#1d232b" text-anchor="middle">Datos</text>
+<path d="M180 88 L260 110" stroke="#0b6e69" stroke-width="2.5" marker-end="url(#a)" fill="none"/>
+<path d="M180 150 L260 128" stroke="#0b6e69" stroke-width="2.5" marker-end="url(#a)" fill="none"/>
+<rect x="262" y="92" width="200" height="52" rx="12" fill="#e6f2f0" stroke="#0b6e69" stroke-width="2"/><text x="362.0" y="124" font-size="17" font-weight="600" fill="#1d232b" text-anchor="middle">Programa</text>
+<path d="M462 118 L540 118" stroke="#0b6e69" stroke-width="2.5" marker-end="url(#a)" fill="none"/>
+<rect x="542" y="92" width="226" height="52" rx="12" fill="#ffffff" stroke="#0b6e69" stroke-width="2"/><text x="655.0" y="124" font-size="17" font-weight="600" fill="#1d232b" text-anchor="middle">Respostas</text>
+<text x="30" y="226" font-size="19" font-weight="700" fill="#08524e">Aprendizaxe automática</text>
+<rect x="30" y="244" width="150" height="52" rx="12" fill="#ffffff" stroke="#0b6e69" stroke-width="2"/><text x="105.0" y="276" font-size="17" font-weight="600" fill="#1d232b" text-anchor="middle">Datos</text>
+<rect x="30" y="306" width="150" height="52" rx="12" fill="#ffffff" stroke="#0b6e69" stroke-width="2"/><text x="105.0" y="338" font-size="17" font-weight="600" fill="#1d232b" text-anchor="middle">Respostas</text>
+<path d="M180 270 L260 292" stroke="#0b6e69" stroke-width="2.5" marker-end="url(#a)" fill="none"/>
+<path d="M180 332 L260 310" stroke="#0b6e69" stroke-width="2.5" marker-end="url(#a)" fill="none"/>
+<rect x="262" y="274" width="200" height="52" rx="12" fill="#e6f2f0" stroke="#0b6e69" stroke-width="2"/><text x="362.0" y="306" font-size="17" font-weight="600" fill="#1d232b" text-anchor="middle">Adestramento</text>
+<path d="M462 300 L540 300" stroke="#0b6e69" stroke-width="2.5" marker-end="url(#a)" fill="none"/>
+<rect x="542" y="274" width="226" height="52" rx="12" fill="#0b6e69" stroke="#0b6e69" stroke-width="2"/><text x="655.0" y="306" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Modelo (regras aprendidas)</text>
+</svg>
