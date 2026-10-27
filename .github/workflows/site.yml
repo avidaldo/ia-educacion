@@ -1,12 +1,12 @@
-# New engine (content/ + engine/). Until the switch it only verifies and uploads the built site as a
-# downloadable artifact; Docusaurus keeps deploying from master through deploy.yml.
-# At the switch: add master to the push branches and the deploy job below (upload-pages-artifact +
-# deploy-pages), and set Pages to deploy from GitHub Actions.
+# Verifies the site (tests, content checks, build) and uploads it as a downloadable artifact.
+# It does not deploy yet: the live site is still the last Docusaurus build in the gh-pages branch.
+# To go live: add a deploy job (actions/upload-pages-artifact + actions/deploy-pages) and set Pages
+# to deploy from GitHub Actions (gh api -X PUT repos/avidaldo/ia-educacion/pages -f build_type=workflow).
 name: Site
 
 on:
   push:
-    branches: [rebuild]
+    branches: [master]
   pull_request:
   workflow_dispatch:
 
