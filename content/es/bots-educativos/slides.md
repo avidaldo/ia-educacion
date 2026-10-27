@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/bots-educativos/index.md: "394ec866ada3b9753c15ff1c673606ee1a375767"
+  es/bots-educativos/index.md: "a9d495ae5a90f82a40f955ca1ec364d910b920cb"
 ---
 
 <!-- .slide: id="que-es" class="statement" -->

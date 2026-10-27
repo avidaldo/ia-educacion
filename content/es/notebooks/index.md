@@ -64,7 +64,7 @@ Con el alumnado:
 
 Con cuentas de **Google Workspace for Education**, Gemini Notebook está disponible para usuarios de todas las edades, pero los menores de 18 años no tienen algunas funciones: la investigación a fondo, las infografías, las presentaciones, los vídeos de tipo cine y el modo interactivo de los resúmenes de audio (según la documentación de Google actualizada en septiembre de 2026). Que el centro lo tenga activado depende de la administración de su consola de Google.
 
-Antes de proponerlo al alumnado, comprueba qué cuentas usa y qué condiciones tienen: las implicaciones de protección de datos se tratan en el módulo de ética y normativa.<!-- TODO: enlazar ../etica-legal/index.md cuando exista -->
+Antes de proponerlo al alumnado, comprueba qué cuentas usa y qué condiciones tienen: las implicaciones de protección de datos se tratan en [Normativa](../etica-legal/normativa.md#protección-de-datos).
 
 ## Tus datos
 

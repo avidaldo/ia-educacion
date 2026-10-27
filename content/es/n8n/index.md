@@ -118,7 +118,7 @@ Buenos candidatos
 : Tareas sin datos personales o solo con los tuyos: boletines de novedades, recordatorios de plazos, avisos cuando cambia una web, conversión de materiales entre formatos, copias de seguridad de tus documentos.
 
 Con mucho cuidado
-: Todo lo que toque datos del alumnado o de las familias. n8n **guarda los datos de cada ejecución**, incluido lo que pasó por cada nodo. Lo que se envía al modelo de lenguaje llega a su proveedor, y la responsabilidad del tratamiento es del centro. Antes de automatizar algo así hay que saber dónde se ejecuta, quién accede, cuánto tiempo se guarda (n8n recomienda borrar las ejecuciones antiguas automáticamente[^privacidad]) y si el centro lo autoriza. El marco legal se ve en el módulo de ética y normativa.<!-- TODO: enlazar ../etica-legal/normativa.md cuando exista -->
+: Todo lo que toque datos del alumnado o de las familias. n8n **guarda los datos de cada ejecución**, incluido lo que pasó por cada nodo. Lo que se envía al modelo de lenguaje llega a su proveedor, y la responsabilidad del tratamiento es del centro. Antes de automatizar algo así hay que saber dónde se ejecuta, quién accede, cuánto tiempo se guarda (n8n recomienda borrar las ejecuciones antiguas automáticamente[^privacidad]) y si el centro lo autoriza. El marco legal está en [Normativa](../etica-legal/normativa.md#protección-de-datos).
 
 No
 : Decisiones sobre el alumnado (calificaciones, sanciones, admisiones) sin revisión humana.

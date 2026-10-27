@@ -1,7 +1,7 @@
 ---
 derived_from:
   es/intro-ia/index.md: "092b9369e10fe8c4f69fb793a24a4bab55e19b09"
-  es/intro-ia/funcionamiento.md: "85900217673a2a2f9c7585cce76fe1c774c77bc3"
+  es/intro-ia/funcionamiento.md: "a8b271e4ddb9ef870e1a39660eabd4861e8a23f8"
 ---
 
 <!-- .slide: id="setenta-anos" class="statement" -->

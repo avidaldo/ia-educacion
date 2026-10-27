@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/navegadores-agenticos/index.md: "ccdd663ba35cad5ddf4e705ef1c0e0a6418f725c"
+  es/navegadores-agenticos/index.md: "50b7ea16eac5512f068e0c62acf551af04682024"
 ---
 
 <!-- .slide: id="actuar" class="statement" -->

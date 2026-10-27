@@ -79,7 +79,7 @@ Además de lo que haga el agente, cuenta lo que envía:
 - **Comet** guarda en el dispositivo el historial, las *cookies* y las contraseñas, y envía a Perplexity el contexto que necesita cada petición, como la página que pides resumir. Ese contexto se conserva hasta 30 días.[^comet-datos]
 - **Gemini en Chrome** comparte por defecto la pestaña actual y guarda las conversaciones en la actividad de Gemini.[^gemini-chrome]
 
-Las reglas sobre datos personales son las mismas que con cualquier *chatbot* (se ven en el módulo de ética y normativa<!-- TODO: enlazar ../etica-legal/index.md cuando exista -->), con un añadido: aquí también cuenta todo lo que esté visible en pantalla.
+Las reglas sobre datos personales son las mismas que con cualquier *chatbot* (se ven en [Ética y normativa](../etica-legal/index.md#privacidad-la-regla-práctica)), con un añadido: aquí también cuenta todo lo que esté visible en pantalla.
 
 ## Con el alumnado
 

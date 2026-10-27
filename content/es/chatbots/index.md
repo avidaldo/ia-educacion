@@ -96,7 +96,7 @@ En las **cuentas personales**, por defecto, las empresas pueden usar tus convers
 | Claude | Ajustes de privacidad → mejora del modelo (*Model Improvement*): participar es la opción por defecto y se puede desactivar |
 | DeepSeek | Su política de privacidad indica que usa los datos para entrenar y que los almacena en China |
 
-Las cuentas de organización (por ejemplo, el plan Team de Claude) no entrenan con tu contenido por defecto. Qué implica todo esto para el trabajo con datos del alumnado se trata en el módulo de ética y normativa.<!-- TODO: enlazar ../etica-legal/index.md cuando exista -->
+Las cuentas de organización (por ejemplo, el plan Team de Claude) no entrenan con tu contenido por defecto. Qué implica todo esto para el trabajo con datos del alumnado se trata en [Normativa](../etica-legal/normativa.md#protección-de-datos).
 
 ## La ventana de contexto
 

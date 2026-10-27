@@ -56,7 +56,7 @@ No es un fallo puntual que se vaya a corregir en la próxima versión, sino una 
 
 El modelo aprende hasta una **fecha de corte**: lo que pasó después no está en sus parámetros. Los *chatbots* actuales compensan esa limitación **buscando en la web** y citando las páginas que usan. Eso mejora mucho la actualidad y permite verificar, pero introduce otro riesgo: el modelo puede elegir fuentes poco fiables o resumirlas mal.
 
-Tampoco es exacto decir que el modelo «no memoriza nada». Aprende patrones generales, pero también puede reproducir de forma literal fragmentos de sus datos de entrenamiento, sobre todo textos que aparecen muchas veces.[^carlini] Es una de las razones de los conflictos sobre derechos de autor y de la recomendación de no introducir datos personales en estas herramientas, que se tratan en el módulo de ética.<!-- TODO: enlazar ../etica-legal/index.md cuando exista -->
+Tampoco es exacto decir que el modelo «no memoriza nada». Aprende patrones generales, pero también puede reproducir de forma literal fragmentos de sus datos de entrenamiento, sobre todo textos que aparecen muchas veces.[^carlini] Es una de las razones de los conflictos sobre derechos de autor y de la recomendación de no introducir datos personales en estas herramientas ([Ética y normativa](../etica-legal/index.md#privacidad-la-regla-práctica)).
 
 ## Modelos que razonan
 
@@ -71,7 +71,7 @@ Hoy la mayoría de los *chatbots* deciden por sí mismos cuánto razonar según 
 
 Si en los textos de entrenamiento ciertas profesiones se asocian más a un género, o ciertos grupos se describen con otros adjetivos, el modelo aprende esas asociaciones, porque eso es exactamente lo que hace: extraer las regularidades de sus datos. Los sesgos no son una «decisión» del modelo, sino un reflejo estadístico de los textos con los que se entrenó, de cómo se seleccionaron y de cómo se hizo el ajuste posterior.
 
-Corregirlos tampoco es trivial: las correcciones introducen sus propios desequilibrios. Los tipos de sesgo y los casos documentados se tratan en el módulo de ética.<!-- TODO: enlazar ../etica-legal/index.md cuando exista -->
+Corregirlos tampoco es trivial: las correcciones introducen sus propios desequilibrios. Los casos documentados, y cómo se detecta un sesgo midiendo el error por grupos, se tratan en [Ética y normativa](../etica-legal/index.md#sesgos).
 
 ## Para saber más
 
