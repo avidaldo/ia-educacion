@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/chatbots/slides.md: "b8a39cb2b979811d31babd3efadee59b39cbaf30"
+  es/chatbots/slides.md: "b0acd7c53bf823bac2c47dd3ffa4803821ec1868"
 ---
 
 <!-- .slide: id="se-parecen" class="statement" -->

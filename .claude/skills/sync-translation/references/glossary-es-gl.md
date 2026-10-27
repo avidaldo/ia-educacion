@@ -46,6 +46,27 @@ Check new interface strings against a capture of the Galician interface before a
 | flujo de trabajo (*workflow*), nodo, disparador | fluxo de traballo (*workflow*), nodo, disparador |
 | lienzo (editor visual) | lenzo |
 
+## Law (AI Act, data protection)
+
+Quotations from Spanish-only official texts (RGPD, RIA, LOE, LOPDGDD) stay verbatim in Spanish inside the Galician page; quotations from Galician texts (DOG, the Xunta deck) stay in Galician in both languages.
+
+| Español | Galego |
+| --- | --- |
+| RGPD (Reglamento General de Protección de Datos) | RXPD (Regulamento xeral de protección de datos) |
+| reglamento, directiva | regulamento, directiva |
+| proveedor (AI Act) | provedor |
+| responsable del despliegue (deployer) | responsable do despregamento |
+| responsable / encargado del tratamiento | responsable / encargado do tratamento |
+| alto riesgo | alto risco |
+| ultrasuplantación (*deepfake*) | ultrasuplantación (*deepfake*) |
+| desnudos falsos | espidos falsos |
+| obligación legal | obriga legal |
+| buena práctica | boa práctica |
+| disposición final / adicional | disposición derradeira / adicional |
+| deber de sigilo | deber de sixilo |
+| patrón de decisión (pattern) | pauta de decisión |
+| abandono escolar temprano | abandono escolar temperán |
+
 ## Teaching
 
 | Español | Galego |

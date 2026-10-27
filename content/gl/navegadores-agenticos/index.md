@@ -2,7 +2,7 @@
 title: Navegadores con axentes
 description: Que cambia cando a IA non só le a web senón que actúa nela coas túas sesións abertas, que ferramentas hai e como usalas sen expoñer os teus datos nin os do alumnado.
 derived_from:
-  es/navegadores-agenticos/index.md: "ccdd663ba35cad5ddf4e705ef1c0e0a6418f725c"
+  es/navegadores-agenticos/index.md: "50b7ea16eac5512f068e0c62acf551af04682024"
 ---
 
 ## De ler a páxina a actuar nela
@@ -79,7 +79,7 @@ Ademais do que faga o axente, conta o que envía:
 - **Comet** garda no dispositivo o historial, as *cookies* e os contrasinais, e envíalle a Perplexity o contexto que precisa cada petición, como a páxina que pides resumir. Ese contexto consérvase ata 30 días.[^comet-datos]
 - **Gemini en Chrome** comparte por defecto a lapela actual e garda as conversas na actividade de Gemini.[^gemini-chrome]
 
-As regras sobre datos persoais son as mesmas que con calquera *chatbot* (vense no módulo de ética e normativa<!-- TODO: enlazar ../etica-legal/index.md cuando exista -->), cun engadido: aquí tamén conta todo o que estea visible na pantalla.
+As regras sobre datos persoais son as mesmas que con calquera *chatbot* (vense en [Ética e normativa](../etica-legal/index.md#privacidad-la-regla-práctica)), cun engadido: aquí tamén conta todo o que estea visible na pantalla.
 
 ## Co alumnado
 

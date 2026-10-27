@@ -2,7 +2,7 @@
 title: Cadernos de Gemini (NotebookLM)
 description: Un asistente que traballa a partir dos teus documentos, con citas, e que converte as fontes en resumos de audio e vídeo, cuestionarios, tarxetas ou presentacións.
 derived_from:
-  es/notebooks/index.md: "7b61323aae50e36bd7b501d89d25668655c2e52f"
+  es/notebooks/index.md: "6e68538813fcf5eb01503f55e56a0199e5411a40"
 ---
 
 ## Que é
@@ -64,7 +64,7 @@ Co alumnado:
 
 Con contas de **Google Workspace for Education**, Gemini Notebook está dispoñible para usuarios de todas as idades, pero os menores de 18 anos non teñen algunhas funcións: a investigación a fondo, as infografías, as presentacións, os vídeos de tipo cine e o modo interactivo dos resumos de audio (segundo a documentación de Google actualizada en setembro de 2026). Que o centro o teña activado depende da administración da súa consola de Google.
 
-Antes de propoñerllo ao alumnado, comproba que contas usa e que condicións teñen: as implicacións de protección de datos trátanse no módulo de ética e normativa.<!-- TODO: enlazar ../etica-legal/index.md cuando exista -->
+Antes de propoñerllo ao alumnado, comproba que contas usa e que condicións teñen: as implicacións de protección de datos trátanse en [Normativa](../etica-legal/normativa.md#protección-de-datos).
 
 ## Os teus datos
 

@@ -2,7 +2,7 @@
 title: Bots educativos
 description: Asistentes configurados polo docente para que o alumnado os use como titor, e o que hai que decidir antes de poñelos nas súas mans.
 derived_from:
-  es/bots-educativos/index.md: "394ec866ada3b9753c15ff1c673606ee1a375767"
+  es/bots-educativos/index.md: "a9d495ae5a90f82a40f955ca1ec364d910b920cb"
 ---
 
 ## Que é un bot educativo
@@ -24,7 +24,7 @@ Antes de deseñar o bot hai que resolver unha pregunta que condiciona todo o dem
 
 En España, un menor só pode consentir por si mesmo o tratamento dos seus datos a partir dos 14 anos; por debaixo, fai falta o consentimento de quen ten a patria potestade ou a titoría (artigo 7 da Lei orgánica de protección de datos). Pedirlle ao alumnado que se rexistre nun servizo coa súa conta persoal trasládalle a cada familia unha decisión que lle corresponde ao centro.
 
-A opción con máis garantías é a que **proporciona o centro ou a administración**: contas educativas contratadas con condicións específicas. Con **Google Workspace for Education**, por exemplo, a aplicación de Gemini está dispoñible para alumnado de todas as idades se o administrador a activa, con protección de datos de nivel empresarial; o alumnado menor de 18 anos pode usar Gems, a aprendizaxe guiada, Canvas e os cuestionarios, pero non a investigación a fondo nin Gemini Live. As implicacións legais desenvólvense no módulo de ética e normativa.<!-- TODO: enlazar ../etica-legal/normativa.md cuando exista -->
+A opción con máis garantías é a que **proporciona o centro ou a administración**: contas educativas contratadas con condicións específicas. Con **Google Workspace for Education**, por exemplo, a aplicación de Gemini está dispoñible para alumnado de todas as idades se o administrador a activa, con protección de datos de nivel empresarial; o alumnado menor de 18 anos pode usar Gems, a aprendizaxe guiada, Canvas e os cuestionarios, pero non a investigación a fondo nin Gemini Live. As implicacións legais desenvólvense en [Normativa](../etica-legal/normativa.md#la-edad-del-alumnado).
 
 > [!CAUTION]
 > **O que xa non funciona: o espazo de Perplexity sen conta**

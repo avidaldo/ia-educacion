@@ -2,7 +2,7 @@
 title: Chatbots
 description: Os principais asistentes, que os distingue, cal convén para cada tarefa e que axustes hai que coñecer antes de usalos no traballo docente.
 derived_from:
-  es/chatbots/index.md: "ede584a273171fc94c89236966e79952595954c0"
+  es/chatbots/index.md: "4af732392e2468a15bc148ee58b090390736787e"
 ---
 
 > [!IMPORTANT]
@@ -96,7 +96,7 @@ Nas **contas persoais**, por defecto, as empresas poden usar as túas conversas 
 | Claude | Axustes de privacidade → mellora do modelo (*Model Improvement*): participar é a opción por defecto e pódese desactivar |
 | DeepSeek | A súa política de privacidade indica que usa os datos para adestrar e que os almacena en China |
 
-As contas de organización (por exemplo, o plan Team de Claude) non adestran co teu contido por defecto. Que implica todo isto para o traballo con datos do alumnado trátase no módulo de ética e normativa.<!-- TODO: enlazar ../etica-legal/index.md cuando exista -->
+As contas de organización (por exemplo, o plan Team de Claude) non adestran co teu contido por defecto. Que implica todo isto para o traballo con datos do alumnado trátase en [Normativa](../etica-legal/normativa.md#protección-de-datos).
 
 ## A xanela de contexto
 

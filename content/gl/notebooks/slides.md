@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/notebooks/slides.md: "67149372a01384a04dd649c73d89a14df615cd3e"
+  es/notebooks/slides.md: "6f13a1545348d072d6cea5763ccb6262b77668b9"
 ---
 
 <!-- .slide: id="tus-fuentes" class="statement" -->

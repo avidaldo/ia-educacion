@@ -2,7 +2,7 @@
 title: Automatizacións con n8n
 description: Fluxos que se executan sós e encadean servizos e modelos de linguaxe; como funcionan, como empezar e que convén automatizar nun centro educativo.
 derived_from:
-  es/n8n/index.md: "f95eb378d67da7f41e8f86034159098bd3fa068e"
+  es/n8n/index.md: "f82a359a5a1e24db1e8a4a97c3f049d69aad5ddc"
 ---
 
 > [!NOTE]
@@ -118,7 +118,7 @@ Bos candidatos
 : Tarefas sen datos persoais ou só cos teus: boletíns de novidades, recordatorios de prazos, avisos cando cambia unha web, conversión de materiais entre formatos, copias de seguridade dos teus documentos.
 
 Con moito coidado
-: Todo o que toque datos do alumnado ou das familias. n8n **garda os datos de cada execución**, incluído o que pasou por cada nodo. O que se envía ao modelo de linguaxe chega ao seu provedor, e a responsabilidade do tratamento é do centro. Antes de automatizar algo así hai que saber onde se executa, quen accede, canto tempo se garda (n8n recomenda borrar as execucións antigas automaticamente[^privacidad]) e se o centro o autoriza. O marco legal vese no módulo de ética e normativa.<!-- TODO: enlazar ../etica-legal/normativa.md cuando exista -->
+: Todo o que toque datos do alumnado ou das familias. n8n **garda os datos de cada execución**, incluído o que pasou por cada nodo. O que se envía ao modelo de linguaxe chega ao seu provedor, e a responsabilidade do tratamento é do centro. Antes de automatizar algo así hai que saber onde se executa, quen accede, canto tempo se garda (n8n recomenda borrar as execucións antigas automaticamente[^privacidad]) e se o centro o autoriza. O marco legal está en [Normativa](../etica-legal/normativa.md#protección-de-datos).
 
 Non
 : Decisións sobre o alumnado (cualificacións, sancións, admisións) sen revisión humana.

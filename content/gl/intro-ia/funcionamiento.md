@@ -2,7 +2,7 @@
 title: Como funciona un modelo de linguaxe
 description: Que fai por dentro un modelo de linguaxe e por que iso explica tanto os seus acertos coma os seus erros.
 derived_from:
-  es/intro-ia/funcionamiento.md: "85900217673a2a2f9c7585cce76fe1c774c77bc3"
+  es/intro-ia/funcionamiento.md: "a8b271e4ddb9ef870e1a39660eabd4861e8a23f8"
 ---
 
 ## Predicir a seguinte palabra
@@ -56,7 +56,7 @@ Non é un fallo puntual que se vaia corrixir na próxima versión, senón unha c
 
 O modelo aprende ata unha **data de corte**: o que pasou despois non está nos seus parámetros. Os *chatbots* actuais compensan esa limitación **buscando na web** e citando as páxinas que usan. Iso mellora moito a actualidade e permite verificar, pero introduce outro risco: o modelo pode escoller fontes pouco fiables ou resumilas mal.
 
-Tampouco é exacto dicir que o modelo «non memoriza nada». Aprende regularidades xerais, pero tamén pode reproducir de forma literal fragmentos dos seus datos de adestramento, sobre todo textos que aparecen moitas veces.[^carlini] É unha das razóns dos conflitos sobre dereitos de autor e da recomendación de non introducir datos persoais nestas ferramentas, que se tratan no módulo de ética.<!-- TODO: enlazar ../etica-legal/index.md cuando exista -->
+Tampouco é exacto dicir que o modelo «non memoriza nada». Aprende regularidades xerais, pero tamén pode reproducir de forma literal fragmentos dos seus datos de adestramento, sobre todo textos que aparecen moitas veces.[^carlini] É unha das razóns dos conflitos sobre dereitos de autor e da recomendación de non introducir datos persoais nestas ferramentas ([Ética e normativa](../etica-legal/index.md#privacidad-la-regla-práctica)).
 
 ## Modelos que razoan
 
@@ -71,7 +71,7 @@ Hoxe a maioría dos *chatbots* deciden por si mesmos canto razoar segundo a preg
 
 Se nos textos de adestramento certas profesións se asocian máis a un xénero, ou certos grupos se describen con outros adxectivos, o modelo aprende esas asociacións, porque iso é exactamente o que fai: extraer as regularidades dos seus datos. Os nesgos non son unha «decisión» do modelo, senón un reflexo estatístico dos textos cos que se adestrou, de como se seleccionaron e de como se fixo o axuste posterior.
 
-Corrixilos tampouco é trivial: as correccións introducen os seus propios desequilibrios. Os tipos de nesgo e os casos documentados trátanse no módulo de ética.<!-- TODO: enlazar ../etica-legal/index.md cuando exista -->
+Corrixilos tampouco é trivial: as correccións introducen os seus propios desequilibrios. Os casos documentados, e como se detecta un nesgo medindo o erro por grupos, trátanse en [Ética e normativa](../etica-legal/index.md#sesgos).
 
 ## Para saber máis
 
