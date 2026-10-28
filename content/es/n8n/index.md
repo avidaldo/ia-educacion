@@ -40,7 +40,7 @@ Una automatización puede incluir un modelo de lenguaje en uno de sus pasos (par
 
 Su licencia no es de software libre en sentido estricto. Es lo que la empresa llama *fair-code*: se puede usar, modificar e instalar gratis para uso interno, personal o no comercial, pero no ofrecerlo como servicio a terceros ni revenderlo.[^licencia] Para un docente o un centro que automatiza su propio trabajo, es gratuito.
 
-| | n8n Cloud | Instalado por ti (*Community Edition*) |
+| Aspecto | n8n Cloud | Instalado por ti (*Community Edition*) |
 | --- | --- | --- |
 | Instalación | Ninguna: se usa en el navegador | En tu ordenador o en un servidor |
 | Coste | De pago, con prueba gratuita sin tarjeta; el plan básico ronda los 20 € al mes con pago anual | Gratuito |

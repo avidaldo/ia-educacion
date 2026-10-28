@@ -2,7 +2,7 @@
 title: Cadernos de Gemini (NotebookLM)
 description: Un asistente que traballa a partir dos teus documentos, con citas, e que converte as fontes en resumos de audio e vídeo, cuestionarios, tarxetas ou presentacións.
 derived_from:
-  es/notebooks/index.md: "6e68538813fcf5eb01503f55e56a0199e5411a40"
+  es/notebooks/index.md: "9c7ee23c1f766944450f01cf9f1012ade3fc73d9"
 ---
 
 ## Que é
@@ -72,7 +72,7 @@ Segundo Google, os contidos dun caderno non se usan para adestrar os modelos ag�
 
 ## Caderno ou proxecto
 
-| | Caderno de Gemini | Proxecto de ChatGPT ou Claude |
+| Aspecto | Caderno de Gemini | Proxecto de ChatGPT ou Claude |
 | --- | --- | --- |
 | Responde a partir de | As túas fontes, con citas ao fragmento | Os teus ficheiros e o seu coñecemento xeral |
 | Formatos de estudo | Audio, vídeo, tarxetas, cuestionarios, mapas, presentacións | O que pidas no chat |

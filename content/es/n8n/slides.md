@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/n8n/index.md: "f82a359a5a1e24db1e8a4a97c3f049d69aad5ddc"
+  es/n8n/index.md: "f56ea74f29db7f01e02af74292b3956f4576af6a"
 ---
 
 <!-- .slide: id="receta" class="statement" -->

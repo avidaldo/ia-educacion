@@ -14,10 +14,10 @@ content/          what is written and translated
   assets/         images (a name.gl.svg sibling is the Galician variant)
   es/  gl/        one folder per module: index.md, sub-pages, slides.md
 engine/           what builds it (scripts run by path, not a package)
-  build.py        the site, into engine/_build/
+  build.py        the site, into engine/_build/ (pages, decks, bridge pages for old addresses, sitemap.xml, search index)
   check.py        links, anchors, slides, translation parity, review dates
   provenance.py   which translations and decks are out of date, and what changed
-  shoot.py        screenshots of every slide; fails if one overflows
+  shoot.py        screenshots of every slide (fails if one overflows) and, with --audit, the accessibility audit
   redirects.yaml  where each address of the old site went
   templates/ theme/ vendor/   HTML, CSS and the vendored reveal.js
 .claude/skills/   update-slides and sync-translation, the two maintenance workflows
@@ -34,10 +34,11 @@ uv sync
 uv run engine/build.py --serve            # http://127.0.0.1:8000/ia-educacion/, rebuilds on change
 uv run engine/check.py                    # errors fail, warnings are reported
 uv run engine/provenance.py status        # what needs updating after an edit
+uv run engine/shoot.py --audit --theme both   # accessibility (axe-core) on every page; needs Google Chrome
 uv run pytest
 ```
 
-Every push to `master` runs the same checks in GitHub Actions and, if they pass, publishes the site to GitHub Pages ([site.yml](.github/workflows/site.yml)).
+Every push to `master` runs the same checks (tests, content checks, build and accessibility audit) in GitHub Actions and, if they pass, publishes the site to GitHub Pages ([site.yml](.github/workflows/site.yml)).
 
 Contribution rules (tone, sources, slide layouts, Galician conventions) are in [AGENTS.md](AGENTS.md).
 

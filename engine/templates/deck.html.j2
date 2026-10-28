@@ -14,7 +14,7 @@
 <style>:root { --label-demo: {{ ui.labels.slide_demo | css_string }}; --label-practice: {{ ui.labels.slide_practice | css_string }}; }</style>
 </head>
 <body class="deck-page" data-vendor-url="{{ vendor_url }}" data-mermaid-url="{{ mermaid_url }}">
-<div class="deck-picker" hidden>
+<main class="deck-picker" hidden>
   <div class="deck-picker-panel">
     <h1>{{ ui.labels.picker_title }}</h1>
     <p>{{ ui.labels.picker_help }}</p>
@@ -23,7 +23,7 @@
     {% endfor %}</ol>
     <p class="deck-picker-actions"><a class="button deck-picker-start" href="?m=">{{ ui.labels.picker_start }}</a> <a class="button secondary" href="{{ home_url }}">{{ ui.labels.back_to_site }}</a></p>
   </div>
-</div>
+</main>
 <div class="reveal"><div class="slides">
 <section id="portada" class="layout-statement is-cover" data-module="_cover">
 <div class="slide-body"><p class="kicker">{{ ui.site_tagline }}</p><h2>{{ ui.site_title }}</h2><p class="subtitle">{{ ui.footer.author }} · {{ short_url }}</p></div>

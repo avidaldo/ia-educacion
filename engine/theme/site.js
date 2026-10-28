@@ -30,6 +30,17 @@ function addCopyButton(container, getText) {
   container.append(button);
 }
 
+// A scrollable code block or table must be reachable with the keyboard, but only while it actually scrolls.
+const scrollables = document.querySelectorAll("main pre, main table");
+function markScrollables() {
+  scrollables.forEach((element) => {
+    if (element.scrollWidth > element.clientWidth) element.tabIndex = 0;
+    else element.removeAttribute("tabindex");
+  });
+}
+markScrollables();
+addEventListener("resize", markScrollables);
+
 document.querySelectorAll(".code-block").forEach((block) => {
   addCopyButton(block, () => block.querySelector("pre").innerText);
 });

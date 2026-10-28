@@ -37,6 +37,10 @@ jobs:
         run: uv run engine/check.py
       - name: Build
         run: uv run engine/build.py
+      - name: Accessibility audit (axe-core, both languages and themes)
+        run: |
+          uv run engine/shoot.py --audit --theme both --lang es
+          uv run engine/shoot.py --audit --theme both --lang gl
       - if: github.ref != 'refs/heads/master'
         uses: actions/upload-artifact@v7
         with:

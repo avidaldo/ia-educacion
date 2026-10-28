@@ -130,7 +130,8 @@ h4 { font-size: 1.05rem; }
   .layout, .home .layout { grid-template-columns: minmax(0, 1fr); padding: 0 var(--space-4); }
   .nav-toggle { display: inline-grid; }
   .site-header { padding: 0 var(--space-3); gap: var(--space-2); }
-  .brand span { display: none; }
+  /* Hidden from sight but not from screen readers: the logo has no text alternative of its own. */
+  .brand span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .header-link { display: none; }
   .site-nav { position: fixed; inset: 3.5rem auto 0 0; width: min(20rem, 85vw); max-height: none; padding: var(--space-5); background: var(--bg); border-right: 1px solid var(--line); transform: translateX(-105%); transition: transform 0.2s; z-index: 40; }
   body.nav-open .site-nav { transform: none; box-shadow: var(--shadow); }

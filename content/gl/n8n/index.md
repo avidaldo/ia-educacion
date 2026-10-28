@@ -2,7 +2,7 @@
 title: Automatizacións con n8n
 description: Fluxos que se executan sós e encadean servizos e modelos de linguaxe; como funcionan, como empezar e que convén automatizar nun centro educativo.
 derived_from:
-  es/n8n/index.md: "f82a359a5a1e24db1e8a4a97c3f049d69aad5ddc"
+  es/n8n/index.md: "f56ea74f29db7f01e02af74292b3956f4576af6a"
 ---
 
 > [!NOTE]
@@ -40,7 +40,7 @@ Unha automatización pode incluír un modelo de linguaxe nun dos seus pasos (par
 
 A súa licenza non é de software libre en sentido estrito. É o que a empresa chama *fair-code*: pódese usar, modificar e instalar de balde para uso interno, persoal ou non comercial, pero non ofrecelo como servizo a terceiros nin revendelo.[^licencia] Para un docente ou un centro que automatiza o seu propio traballo, é gratuíto.
 
-| | n8n Cloud | Instalado por ti (*Community Edition*) |
+| Aspecto | n8n Cloud | Instalado por ti (*Community Edition*) |
 | --- | --- | --- |
 | Instalación | Ningunha: úsase no navegador | No teu ordenador ou nun servidor |
 | Custo | De pago, cunha proba gratuíta sen tarxeta; o plan básico anda polos 20 € ao mes con pagamento anual | Gratuíto |

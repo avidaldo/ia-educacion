@@ -72,7 +72,7 @@ Según Google, los contenidos de un cuaderno no se usan para entrenar los modelo
 
 ## Cuaderno o proyecto
 
-| | Cuaderno de Gemini | Proyecto de ChatGPT o Claude |
+| Aspecto | Cuaderno de Gemini | Proyecto de ChatGPT o Claude |
 | --- | --- | --- |
 | Responde a partir de | Tus fuentes, con citas al fragmento | Tus ficheros y su conocimiento general |
 | Formatos de estudio | Audio, vídeo, tarjetas, cuestionarios, mapas, presentaciones | Lo que pidas en el chat |

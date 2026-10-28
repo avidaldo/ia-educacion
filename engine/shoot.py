@@ -1,7 +1,9 @@
 """Screenshots of decks and pages from engine/_build, with an overflow check on every slide.
 
 Usage: uv run engine/shoot.py [--lang es] [--module prompts ...] [--pages] [--theme light|dark|both] [--out engine/_screens]
-Exits 1 when a slide's content does not fit in the slide. Uses the installed Google Chrome through Playwright.
+       uv run engine/shoot.py --audit [--lang es] [--theme both]
+Exits 1 when a slide's content does not fit in the slide, or (--audit, which skips the screenshots) when axe-core finds
+a violation on a page or on the deck picker. Uses the installed Google Chrome through Playwright.
 """
 
 import argparse
@@ -11,6 +13,7 @@ import sys
 import threading
 from pathlib import Path
 
+from axe_playwright_python.sync_playwright import Axe
 from playwright.sync_api import Page, sync_playwright
 
 from build import OUTPUT_DIR
@@ -63,12 +66,29 @@ def shoot_pages(page: Page, origin: str, urls: list[str], theme: str, out_dir: P
             page.screenshot(path=out_dir / f"page-{name}-{width}-{theme}.png", full_page=True)
 
 
+def audit_urls(page: Page, origin: str, urls: list[str], theme: str) -> list[str]:
+    """Runs axe-core on each url at desktop and phone width; one line per violated rule and page."""
+    axe = Axe()
+    violations = []
+    for width in (390, 1280):
+        page.set_viewport_size({"width": width, "height": 900})
+        for url in urls:
+            page.goto(origin + url)
+            page.evaluate(f"() => {{ document.documentElement.dataset.theme = '{theme}'; }}")
+            for violation in axe.run(page).response["violations"]:
+                targets = "; ".join(node["target"][-1] for node in violation["nodes"][:3])
+                violations.append(f"{violation['impact']} {violation['id']} on {url} ({theme}, {width}px, "
+                                  f"{len(violation['nodes'])} nodes): {targets}")
+    return violations
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--lang", default="es")
     parser.add_argument("--module", action="append", help="deck to shoot (repeatable); default: every deck")
     parser.add_argument("--pages", action="store_true", help="also shoot every page at 390 and 1280 px")
     parser.add_argument("--theme", choices=["light", "dark", "both"], default="light")
+    parser.add_argument("--audit", action="store_true", help="accessibility audit with axe-core instead of screenshots")
     parser.add_argument("--out", type=Path, default=SCREENS_DIR)
     arguments = parser.parse_args()
 
@@ -84,9 +104,21 @@ def main() -> int:
     server, origin = start_static_server(OUTPUT_DIR, config.base_path)
     deck_path = model.deck_url(arguments.lang)
     overflowing: list[str] = []
+    violations: list[str] = []
     try:
         with sync_playwright() as playwright:
             browser = playwright.chromium.launch(channel="chrome")
+            if arguments.audit:
+                page = browser.new_page()
+                urls = [model.url_for(arguments.lang, p.relative_path) for p in model.ordered_pages(arguments.lang)]
+                for theme in themes:
+                    violations += audit_urls(page, origin, urls + [deck_path], theme)
+                browser.close()
+                server.shutdown()
+                for line in violations:
+                    print(f"AUDIT {line}")
+                print(f"{len(violations)} violations in {len(urls) + 1} pages")
+                return 1 if violations else 0
             page = browser.new_page(viewport={"width": config.deck_slide_width, "height": config.deck_slide_height})
             for theme in themes:
                 for module in modules:

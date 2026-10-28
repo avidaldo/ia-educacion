@@ -16,6 +16,7 @@ dependencies = [
 dev = [
     "pytest>=8.4",
     "playwright>=1.55",
+    "axe-playwright-python>=0.1.8",
 ]
 
 [tool.uv]
