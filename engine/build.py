@@ -10,6 +10,7 @@ import subprocess
 import sys
 from dataclasses import dataclass
 from pathlib import Path
+from xml.sax.saxutils import quoteattr
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 from markupsafe import Markup
@@ -301,6 +302,27 @@ def write_not_found(model: ContentModel, decks: dict[str, dict[str, RenderedDeck
     (output_dir / "404.html").write_text(html, encoding="utf-8")
 
 
+def sitemap_xml(model: ContentModel) -> str:
+    """Every translated page and the deck, each with its alternates; untranslated fallbacks stay out."""
+    languages = model.config.languages
+    translated = {language: [page.relative_path for page in model.ordered_pages(language) if not page.is_fallback]
+                  for language in languages}
+    entries = [(model.url_for(language, relative_path),
+                {other: model.url_for(other, relative_path) for other in languages if relative_path in translated[other]})
+               for language in languages for relative_path in translated[language]]
+    entries += [(model.deck_url(language), {other: model.deck_url(other) for other in languages})
+                for language in languages]
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>',
+             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
+    for url, alternates in entries:
+        lines.append(f"<url><loc>{model.config.site_url}{url}</loc>")
+        lines += [f'<xhtml:link rel="alternate" hreflang={quoteattr(language)} '
+                  f'href={quoteattr(model.config.site_url + alternate)}/>' for language, alternate in alternates.items()]
+        lines.append("</url>")
+    lines.append("</urlset>")
+    return "\n".join(lines) + "\n"
+
+
 def copy_static(output_dir: Path) -> None:
     if ASSETS_DIR.exists():
         shutil.copytree(ASSETS_DIR, output_dir / "assets", dirs_exist_ok=True)
@@ -333,6 +355,7 @@ def build(config: SiteConfig, output_dir: Path = OUTPUT_DIR, include_drafts: boo
     slide_count = write_decks(model, decks, output_dir, build_date)
     write_redirects(model, redirects, output_dir)
     write_not_found(model, decks, output_dir, search_enabled, build_date)
+    (output_dir / "sitemap.xml").write_text(sitemap_xml(model), encoding="utf-8")
     copy_static(output_dir)
     (output_dir / ".nojekyll").write_text("", encoding="utf-8")
     if search_enabled:
