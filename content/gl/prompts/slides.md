@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/prompts/slides.md: "722682882e3d04e98ba7d9abb9b75029b7bc76d3"
+  es/prompts/slides.md: "c43292de61f7ef0d6e09b06c6fc667198e81e8c7"
 ---
 
 <!-- .slide: id="especificacion" class="statement" -->

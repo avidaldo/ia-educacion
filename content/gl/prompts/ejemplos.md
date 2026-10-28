@@ -2,7 +2,7 @@
 title: Exemplos comentados
 description: Conversas reais que mostran cada técnica, co porqué de que funcionen.
 derived_from:
-  es/prompts/ejemplos.md: "e1dc354eed44255b467f904ef5e713b9aef4c074"
+  es/prompts/ejemplos.md: "38f2792c4a6aa0a990983532a641e5860ed99aae"
 ---
 
 A idea non é copiar o contido que xera a IA, senón **aprender a pedilo**: con contexto, restricións e verificación.

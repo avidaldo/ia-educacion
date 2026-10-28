@@ -1,8 +1,8 @@
 ---
 derived_from:
-  es/prompts/index.md: "8aba2aa9d5e0509c6d1923990cef353b92d052ed"
-  es/prompts/ejemplos.md: "e1dc354eed44255b467f904ef5e713b9aef4c074"
-  es/prompts/avanzado.md: "3b6f49a6e77242e316c6f7ac38bfda8858f5c9c5"
+  es/prompts/index.md: "8213a6230501b5e49f5473d1e4fb01d041eb5454"
+  es/prompts/ejemplos.md: "38f2792c4a6aa0a990983532a641e5860ed99aae"
+  es/prompts/avanzado.md: "a877280d9e0e4f91102560cc3b7f5c0da2cc1075"
 ---
 
 <!-- .slide: id="especificacion" class="statement" -->

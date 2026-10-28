@@ -2,7 +2,7 @@
 title: Deseño de prompts
 description: Como especificar unha tarefa para que o resultado sexa un material útil e verificable, non unha resposta xenérica.
 derived_from:
-  es/prompts/index.md: "8aba2aa9d5e0509c6d1923990cef353b92d052ed"
+  es/prompts/index.md: "8213a6230501b5e49f5473d1e4fb01d041eb5454"
 ---
 
 ## Que é un bo *prompt*

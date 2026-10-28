@@ -1,7 +1,7 @@
 ---
 title: Técnicas avanzadas
 description: Plantillas para tareas con varias soluciones razonables, que necesitan consistencia o que conviene descomponer.
-reviewed: 2026-04-30
+reviewed: 2026-10-28
 ---
 
 En educación muchas tareas no tienen una única respuesta correcta: diseñar una actividad, redactar una rúbrica, elegir ejemplos. En esos casos funciona mejor pedir **alternativas, criterios y selección** que pedir «la mejor respuesta» a secas.

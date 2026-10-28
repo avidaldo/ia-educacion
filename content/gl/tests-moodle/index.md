@@ -2,7 +2,7 @@
 title: Tests para Moodle
 description: Xerar preguntas con IA nun formato que Moodle importa directamente, e revisalas antes de usalas.
 derived_from:
-  es/tests-moodle/index.md: "e9122e8c800b9e9f642c41ae6742ff0a07927025"
+  es/tests-moodle/index.md: "a4605cb668e7adedb7d8d7d32962842bd07c007e"
 ---
 
 > [!IMPORTANT]
@@ -180,7 +180,7 @@ Xerar é a parte doada. A revisión é imprescindible e non se pode delegar:
 1. Garda as preguntas nun ficheiro de texto (`.txt` para GIFT ou Aiken, `.xml` para Moodle XML) con codificación UTF-8.
 2. Abre o banco de preguntas:
    - En **Moodle 4.x**: no curso, **Máis → Banco de preguntas**, e no despregable da páxina, **Importar**.
-   - En **Moodle 5.0 ou posterior**: os bancos de preguntas son unha actividade do curso. Entra en **Máis → Bancos de preguntas**, abre o banco onde queiras gardalas e escolle **Importar**.
+   - En **Moodle 5.0 ou posterior**: os bancos de preguntas están no curso, en **Máis → Bancos de preguntas**. Abre o banco onde queiras gardalas e escolle **Importar**.
 3. Escolle o formato, sobe o ficheiro e preme **Importar**. Moodle mostra as preguntas importadas ou o erro da liña que falla.
 4. Na proba, **Preguntas → Engadir → do banco de preguntas**, selecciona as novas e engádeas.
 5. Usa a **vista previa** da proba antes de abrila ao alumnado.

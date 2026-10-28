@@ -2,7 +2,7 @@
 title: Técnicas avanzadas
 description: Modelos para tarefas con varias solucións razoables, que precisan consistencia ou que convén descompoñer.
 derived_from:
-  es/prompts/avanzado.md: "3b6f49a6e77242e316c6f7ac38bfda8858f5c9c5"
+  es/prompts/avanzado.md: "a877280d9e0e4f91102560cc3b7f5c0da2cc1075"
 ---
 
 En educación moitas tarefas non teñen unha única resposta correcta: deseñar unha actividade, redactar unha rúbrica, escoller exemplos. Nestes casos funciona mellor pedir **alternativas, criterios e selección** ca pedir «a mellor resposta» sen máis.

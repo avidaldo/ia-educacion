@@ -22,9 +22,9 @@ docs/casos-uso/tests-moodle/: "tests-moodle/"
 docs/presentaciones/: "webs-educativas/presentaciones/"
 docs/programando/: "vibe-coding/"
 docs/etica/: "etica-legal/"
-# No page of their own yet: the task lists of casos-uso are planned for the home page, and recursos is unwritten.
+# casos-uso has no page of its own yet: its task lists are planned for the home page.
 docs/casos-uso/: ""
-docs/recursos/: ""
+docs/recursos/: "recursos/"
 # Docusaurus pages: its sample page, the old slide deck and its search page (search is now in the header).
 markdown-page/: ""
 presentation/: "presentacion/"

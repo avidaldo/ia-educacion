@@ -1,7 +1,7 @@
 ---
 title: Diseño de prompts
 description: Cómo especificar una tarea para que el resultado sea un material útil y verificable, no una respuesta genérica.
-reviewed: 2026-04-30
+reviewed: 2026-10-28
 ---
 
 ## Qué es un buen *prompt*

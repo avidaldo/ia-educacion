@@ -1,7 +1,7 @@
 ---
 title: Tests para Moodle
 description: Generar preguntas con IA en un formato que Moodle importa directamente, y revisarlas antes de usarlas.
-reviewed: 2026-04-30
+reviewed: 2026-10-28
 ---
 
 > [!IMPORTANT]
@@ -179,7 +179,7 @@ Generar es la parte fácil. La revisión es imprescindible y no se puede delegar
 1. Guarda las preguntas en un fichero de texto (`.txt` para GIFT o Aiken, `.xml` para Moodle XML) con codificación UTF-8.
 2. Abre el banco de preguntas:
    - En **Moodle 4.x**: en el curso, **Más → Banco de preguntas**, y en el desplegable de la página, **Importar**.
-   - En **Moodle 5.0 o posterior**: los bancos de preguntas son una actividad del curso. Entra en **Más → Bancos de preguntas**, abre el banco donde quieras guardarlas y elige **Importar**.
+   - En **Moodle 5.0 o posterior**: los bancos de preguntas están en el curso, en **Más → Bancos de preguntas**. Abre el banco donde quieras guardarlas y elige **Importar**.
 3. Elige el formato, sube el fichero y pulsa **Importar**. Moodle muestra las preguntas importadas o el error de la línea que falla.
 4. En el cuestionario, **Preguntas → Añadir → del banco de preguntas**, selecciona las nuevas y añádelas.
 5. Usa la **vista previa** del cuestionario antes de abrirlo al alumnado.

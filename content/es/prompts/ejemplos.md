@@ -1,7 +1,7 @@
 ---
 title: Ejemplos comentados
 description: Conversaciones reales que muestran cada técnica, con el porqué de que funcionen.
-reviewed: 2026-04-30
+reviewed: 2026-10-28
 ---
 
 La idea no es copiar el contenido que genera la IA, sino **aprender a pedirlo**: con contexto, restricciones y verificación.
