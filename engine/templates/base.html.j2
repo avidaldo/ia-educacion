@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if page_title %}{{ page_title }} · {% endif %}{{ ui.site_title }}</title>
 <meta name="description" content="{{ description }}">
-<link rel="canonical" href="{{ canonical }}">
-{% for alternate in alternates %}<link rel="alternate" hreflang="{{ alternate.lang }}" href="{{ alternate.absolute_url }}">
+{% if canonical %}<link rel="canonical" href="{{ canonical }}">
+{% endif %}{% for alternate in alternates %}<link rel="alternate" hreflang="{{ alternate.lang }}" href="{{ alternate.absolute_url }}">
 {% endfor %}<meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ ui.site_title }}">
 <meta property="og:title" content="{{ page_title or ui.site_title }}">
 <meta property="og:description" content="{{ description }}">
-<meta property="og:url" content="{{ canonical }}">
-<meta property="og:locale" content="{{ ui.locale }}">
+{% if canonical %}<meta property="og:url" content="{{ canonical }}">
+{% endif %}<meta property="og:locale" content="{{ ui.locale }}">
 {% if noindex %}<meta name="robots" content="noindex">
 {% endif %}<link rel="icon" href="{{ base_path }}assets/shared/favicon.svg" type="image/svg+xml">
 <script>{% include "partials/theme-early.js" %}</script>

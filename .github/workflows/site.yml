@@ -1,7 +1,8 @@
-# Verifies the site (tests, content checks, build) and uploads it as a downloadable artifact.
-# It does not deploy yet: the live site is still the last Docusaurus build in the gh-pages branch.
-# To go live: add a deploy job (actions/upload-pages-artifact + actions/deploy-pages) and set Pages
-# to deploy from GitHub Actions (gh api -X PUT repos/avidaldo/ia-educacion/pages -f build_type=workflow).
+# Verifies the site (tests, content checks, build) on every push and pull request, and publishes it to
+# GitHub Pages from master. Pages must be set to deploy from GitHub Actions:
+#   gh api -X PUT repos/avidaldo/ia-educacion/pages -f build_type=workflow
+# The last Docusaurus build stays in the gh-pages branch as a fallback. To serve it again:
+#   gh api -X PUT repos/avidaldo/ia-educacion/pages -f build_type=legacy -f 'source[branch]=gh-pages' -f 'source[path]=/'
 name: Site
 
 on:
@@ -10,9 +11,13 @@ on:
   pull_request:
   workflow_dispatch:
 
+# A newer push cancels the checks of a pull request, but never a deployment halfway through.
 concurrency:
   group: site-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
 
 jobs:
   verify:
@@ -32,8 +37,27 @@ jobs:
         run: uv run engine/check.py
       - name: Build
         run: uv run engine/build.py
-      - uses: actions/upload-artifact@v7
+      - if: github.ref != 'refs/heads/master'
+        uses: actions/upload-artifact@v7
         with:
           name: site
           path: engine/_build
           retention-days: 14
+      - if: github.ref == 'refs/heads/master'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: engine/_build
+
+  deploy:
+    needs: verify
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

@@ -18,6 +18,7 @@ engine/           what builds it (scripts run by path, not a package)
   check.py        links, anchors, slides, translation parity, review dates
   provenance.py   which translations and decks are out of date, and what changed
   shoot.py        screenshots of every slide; fails if one overflows
+  redirects.yaml  where each address of the old site went
   templates/ theme/ vendor/   HTML, CSS and the vendored reveal.js
 .claude/skills/   update-slides and sync-translation, the two maintenance workflows
 ```
@@ -36,8 +37,10 @@ uv run engine/provenance.py status        # what needs updating after an edit
 uv run pytest
 ```
 
+Every push to `master` runs the same checks in GitHub Actions and, if they pass, publishes the site to GitHub Pages ([site.yml](.github/workflows/site.yml)).
+
 Contribution rules (tone, sources, slide layouts, Galician conventions) are in [AGENTS.md](AGENTS.md).
 
 ## History
 
-Until October 2026 the site was built with Docusaurus. That version is kept in the `legacy-docusaurus` branch.
+Until October 2026 the site was built with Docusaurus. That version is kept in the `legacy-docusaurus` branch, and its addresses still work: each one is a small page that forwards to its new place.

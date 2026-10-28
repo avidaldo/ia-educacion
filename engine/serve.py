@@ -41,6 +41,20 @@ class BasePathHandler(http.server.SimpleHTTPRequestHandler):
         self.path = "/" + self.path.removeprefix(self.base_path)
         super().do_GET()
 
+    def send_error(self, code: int, message: str | None = None, explain: str | None = None) -> None:
+        """Answers a missing page with the site's 404.html, as GitHub Pages does."""
+        not_found_page = Path(self.directory) / "404.html"
+        if code != 404 or not not_found_page.exists():
+            super().send_error(code, message, explain)
+            return
+        body = not_found_page.read_bytes()
+        self.send_response(404)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        if self.command != "HEAD":
+            self.wfile.write(body)
+
     def end_headers(self) -> None:
         self.send_header("Cache-Control", "no-store")
         super().end_headers()

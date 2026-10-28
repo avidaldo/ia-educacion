@@ -35,7 +35,11 @@ labels:
   deck_view_here: Ver aquí
   language: Lingua
   menu: Menú
+  moved: "Esta páxina cambiou de enderezo:"
   next: Seguinte
+  not_found_home: Ir á portada
+  not_found_text: O enderezo non existe ou cambiou ao renovar a web. Podes buscar o tema co buscador.
+  not_found_title: Páxina non atopada
   on_this_page: Nesta páxina
   pager: Navegación entre páxinas
   picker_help: Marca os módulos na orde en que queiras presentalos. O enderezo resultante pódese gardar ou compartir.
@@ -56,4 +60,4 @@ months: [xaneiro, febreiro, marzo, abril, maio, xuño, xullo, agosto, setembro, 
 footer:
   privacy: Esta web non usa cookies nin rastrexadores, e non carga recursos de terceiros agás a biblioteca de diagramas Mermaid nas páxinas que a precisan.
 derived_from:
-  es/_ui.yaml: "20a8f4ddbb108628ace8959f12771c2faadc3807"
+  es/_ui.yaml: "3f8fde69f1c751bbfa79e5554ed1bb3cfeb37fcf"

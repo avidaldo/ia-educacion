@@ -37,6 +37,6 @@ Web y presentaciones de los cursos de inteligencia artificial para docentes de s
 
 ## Git
 
-- No se hace *push* sin que lo pida quien mantiene el repositorio.
+- No se hace *push* sin que lo pida quien mantiene el repositorio. Un *push* a `master` publica la web.
 - No se versionan capturas con datos personales, ni la salida del build (`engine/_build/`) ni las capturas de `engine/_screens/`.
-- La versión anterior de la web (Docusaurus) está en la rama `legacy-docusaurus`. Las rutas que publicaba están en `engine/legacy-urls.txt`, para sus redirecciones.
+- La versión anterior de la web (Docusaurus) está en la rama `legacy-docusaurus`. Las rutas que publicaba están en `engine/legacy-urls.txt`, y `engine/redirects.yaml` dice adónde va cada una. Si se renombra o se mueve una página, o cambia un título enlazado allí con `#ancla`, se actualiza su destino en ese fichero: el *build* falla si no existe.

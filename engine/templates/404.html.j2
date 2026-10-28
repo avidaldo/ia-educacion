@@ -1,0 +1,13 @@
+{% extends "base.html.j2" %}
+{% block body_class %}page{% endblock %}
+{% block main %}
+{# GitHub Pages serves this one file for every missing address, whatever the language, so it speaks both. #}
+<article class="not-found">
+  <header class="page-header">
+    <h1>{% for message in messages %}{% if not loop.first %} · {% endif %}<span lang="{{ message.lang }}">{{ message.title }}</span>{% endfor %}</h1>
+  </header>
+  <div class="prose">
+  {% for message in messages %}<p lang="{{ message.lang }}">{{ message.text }} <a href="{{ message.home_url }}">{{ message.home_label }}</a></p>
+  {% endfor %}</div>
+</article>
+{% endblock %}

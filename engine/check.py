@@ -1,5 +1,5 @@
 """Checks the content without writing the site: links and anchors, assets, slides, translation parity,
-provenance (what the skills still have to update) and review dates.
+provenance (what the skills still have to update), review dates and the redirects of the old site.
 
 Usage: uv run engine/check.py [--strict] [--only CATEGORY ...] [--lang gl] [--json]
 Exit status: 0 clean, 1 errors, 2 warnings with --strict.
@@ -14,7 +14,8 @@ from dataclasses import asdict
 from build import render_decks, render_pages
 from content_model import Problem, load_config, load_content
 from provenance import all_statuses
-from validation import CATEGORIES, category_of, review_problems, todo_problems, validate_rendered
+from redirects import load_legacy_routes, load_redirect_map, plan_redirects
+from validation import CATEGORIES, category_of, heading_ids, review_problems, todo_problems, validate_rendered
 
 
 def provenance_problems() -> list[Problem]:
@@ -39,6 +40,7 @@ def main() -> int:
     rendered = render_pages(model, problems)
     decks = render_decks(model, problems)
     problems += validate_rendered(model, rendered, decks)
+    problems += plan_redirects(model, heading_ids(rendered), load_legacy_routes(), load_redirect_map())[1]
     problems += review_problems(model, datetime.date.today())
     problems += provenance_problems()
     problems += todo_problems(model)

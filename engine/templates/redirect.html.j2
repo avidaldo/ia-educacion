@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8">
+<title>{{ target_title }} · {{ ui.site_title }}</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{{ absolute_url }}">
+{# The script keeps the #anchor of the old link; the meta refresh is the fallback without JavaScript. #}
+<script>location.replace({{ target_url | tojson }}{% if keeps_hash %} + location.hash{% endif %});</script>
+<meta http-equiv="refresh" content="0; url={{ target_url }}">
+</head>
+<body>
+<p>{{ ui.labels.moved }} <a href="{{ target_url }}">{{ target_title }}</a></p>
+</body>
+</html>

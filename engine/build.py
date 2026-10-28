@@ -17,8 +17,9 @@ from markupsafe import Markup
 from content_model import (ASSETS_DIR, ENGINE_DIR, REPO_ROOT, ContentModel, Page, Problem, SiteConfig,
                            load_config, load_content)
 from markdown_render import RenderContext, pygments_css, render_markdown
+from redirects import Redirect, load_legacy_routes, load_redirect_map, plan_redirects
 from slides_render import RenderedDeck, load_vocabulary, module_title_section, render_deck, section_html
-from validation import validate_rendered
+from validation import heading_ids, validate_rendered
 
 OUTPUT_DIR = ENGINE_DIR / "_build"
 TEMPLATES_DIR = ENGINE_DIR / "templates"
@@ -42,6 +43,7 @@ class BuildResult:
     problems: list[Problem]
     page_count: int
     slide_count: int
+    redirect_count: int
 
 
 def css_string(value: str) -> Markup:
@@ -266,6 +268,39 @@ def write_decks(model: ContentModel, decks: dict[str, dict[str, RenderedDeck]], 
     return total_slides
 
 
+def write_redirects(model: ContentModel, redirects: list[Redirect], output_dir: Path) -> None:
+    template = make_environment().get_template("redirect.html.j2")
+    for redirect in redirects:
+        html = template.render(lang=redirect.language, ui=model.languages[redirect.language].ui,
+                               target_url=redirect.target_url, target_title=redirect.target_title,
+                               absolute_url=model.config.site_url + redirect.target_url,
+                               keeps_hash="#" not in redirect.target_url)
+        write_html(output_dir, model.config.base_path + redirect.route, model.config.base_path, html)
+
+
+def write_not_found(model: ContentModel, decks: dict[str, dict[str, RenderedDeck]], output_dir: Path,
+                    search_enabled: bool, build_date: str) -> None:
+    """One 404.html at the site root, which GitHub Pages serves for every missing address under it."""
+    language = model.config.source_language
+    messages = [{"lang": lang, "title": content.ui["labels"]["not_found_title"],
+                 "text": content.ui["labels"]["not_found_text"], "home_label": content.ui["labels"]["not_found_home"],
+                 "home_url": model.language_root(lang)}
+                for lang, content in model.languages.items()]
+    context = common_context(model, language, build_date) | {
+        "page_title": messages[0]["title"],
+        "description": model.languages[language].ui["site_tagline"],
+        "canonical": "",
+        "alternates": alternates_for(model, "index.md"),
+        "nav_tree": nav_tree(model, language, None, decks[language]),
+        "messages": messages,
+        "noindex": True,
+        "indexable": False,
+        "search_enabled": search_enabled,
+    }
+    html = make_environment().get_template("404.html.j2").render(context)
+    (output_dir / "404.html").write_text(html, encoding="utf-8")
+
+
 def copy_static(output_dir: Path) -> None:
     if ASSETS_DIR.exists():
         shutil.copytree(ASSETS_DIR, output_dir / "assets", dirs_exist_ok=True)
@@ -287,17 +322,22 @@ def build(config: SiteConfig, output_dir: Path = OUTPUT_DIR, include_drafts: boo
     rendered = render_pages(model, problems)
     decks = render_decks(model, problems)
     problems += validate_rendered(model, rendered, decks)
+    redirects, redirect_problems = plan_redirects(model, heading_ids(rendered), load_legacy_routes(),
+                                                  load_redirect_map())
+    problems += redirect_problems
     if output_dir.exists():
         shutil.rmtree(output_dir)
     output_dir.mkdir(parents=True)
     build_date = datetime.date.today().isoformat()
     page_count = write_pages(model, rendered, decks, output_dir, search_enabled, build_date)
     slide_count = write_decks(model, decks, output_dir, build_date)
+    write_redirects(model, redirects, output_dir)
+    write_not_found(model, decks, output_dir, search_enabled, build_date)
     copy_static(output_dir)
     (output_dir / ".nojekyll").write_text("", encoding="utf-8")
     if search_enabled:
         run_search_index(output_dir)
-    return BuildResult(problems, page_count, slide_count)
+    return BuildResult(problems, page_count, slide_count, len(redirects))
 
 
 def report(result: BuildResult) -> tuple[int, int]:
@@ -305,7 +345,8 @@ def report(result: BuildResult) -> tuple[int, int]:
     warnings = [problem for problem in result.problems if problem.level == "warning"]
     for problem in sorted(result.problems, key=lambda p: (p.level != "error", p.path, p.line)):
         print(f"{problem.level.upper():7} {problem.path}:{problem.line} [{problem.code}] {problem.message}")
-    print(f"{result.page_count} pages, {result.slide_count} slides; {len(errors)} errors, {len(warnings)} warnings")
+    print(f"{result.page_count} pages, {result.slide_count} slides, {result.redirect_count} redirects; "
+          f"{len(errors)} errors, {len(warnings)} warnings")
     return len(errors), len(warnings)
 
 

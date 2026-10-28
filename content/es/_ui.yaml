@@ -35,7 +35,11 @@ labels:
   deck_view_here: Ver aquí
   language: Idioma
   menu: Menú
+  moved: "Esta página ha cambiado de dirección:"
   next: Siguiente
+  not_found_home: Ir a la portada
+  not_found_text: La dirección no existe o cambió al renovar la web. Puedes buscar el tema con el buscador.
+  not_found_title: Página no encontrada
   on_this_page: En esta página
   pager: Navegación entre páginas
   picker_help: Marca los módulos en el orden en que quieras presentarlos. La dirección resultante se puede guardar o compartir.

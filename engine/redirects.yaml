@@ -1,0 +1,31 @@
+# Where each page of the Docusaurus site went, so that links shared in earlier courses keep working.
+# Keys are the old routes without their language prefix (engine/legacy-urls.txt lists them all, with prefixes).
+# Values are the new address relative to the language root: a page's path, "presentacion/" or "" for the home
+# page, with an optional #anchor. Old /en/ and /it/ pages go to Spanish, old /gl/ pages to Galician; an old
+# language root goes to the new home page without an entry. build.py and check.py fail if a route has no entry
+# or a target does not exist.
+
+docs/historia-y-llms/: "intro-ia/"
+docs/funcionamiento/: "intro-ia/funcionamiento/"
+docs/herramientas/: "chatbots/"
+docs/ejemplos/deep-research/: "chatbots/#buscar-en-la-web-e-investigar-a-fondo"
+docs/prompt/: "prompts/"
+docs/ejemplos/: "prompts/ejemplos/"
+docs/ejemplos/instrucciones-especificas/: "prompts/ejemplos/"
+docs/ejemplos/evaluacion-critica/: "prompts/ejemplos/#pedir-una-crítica-del-propio-prompt"
+docs/ejemplos/razonamiento-avanzado/: "prompts/avanzado/"
+docs/ejemplos/agentes-y-orquestacion/: "prompts/avanzado/#ciclos-de-acción-y-observación"
+docs/ejemplos/asistente-personalizado/: "skills/#asistentes-personalizados"
+docs/notebooklm/: "notebooks/"
+docs/casos-uso/guided-learning/: "bots-educativos/#un-tutor-socrático"
+docs/casos-uso/tests-moodle/: "tests-moodle/"
+docs/presentaciones/: "webs-educativas/presentaciones/"
+docs/programando/: "vibe-coding/"
+docs/etica/: "etica-legal/"
+# No page of their own yet: the task lists of casos-uso are planned for the home page, and recursos is unwritten.
+docs/casos-uso/: ""
+docs/recursos/: ""
+# Docusaurus pages: its sample page, the old slide deck and its search page (search is now in the header).
+markdown-page/: ""
+presentation/: "presentacion/"
+search/: ""

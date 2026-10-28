@@ -15,6 +15,7 @@ CATEGORIES = {
     "parity": {"heading-parity", "orphan-translation"},
     "stale": {"stale", "trivial", "unstamped", "missing"},
     "reviewed": {"reviewed-missing", "reviewed-stale"},
+    "redirects": {"redirect-missing", "redirect-target"},
     "content": {"inline-style", "body-h1", "front-matter", "nav-entry", "nav-missing-page", "not-in-nav", "reserved-slug",
                 "todo"},
 }
