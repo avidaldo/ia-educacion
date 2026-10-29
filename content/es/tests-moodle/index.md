@@ -1,12 +1,8 @@
 ---
 title: Tests para Moodle
 description: Generar preguntas con IA en un formato que Moodle importa directamente, y revisarlas antes de usarlas.
-reviewed: 2026-10-28
+reviewed: 2026-10-29
 ---
-
-> [!IMPORTANT]
-> **Página en revisión**
-> Faltan las capturas del aula virtual actual (Moodle 4.5 o posterior). Los pasos de importación están descritos por el nombre de los menús hasta que se añadan.
 
 ## Formatos que Moodle importa
 
@@ -20,39 +16,41 @@ Moodle importa preguntas desde un fichero de texto en varios formatos. Para trab
 
 Documentación oficial de Moodle: [Aiken](https://docs.moodle.org/all/es/Formato_Aiken), [GIFT](https://docs.moodle.org/all/es/Formato_GIFT) y [Moodle XML](https://docs.moodle.org/all/es/Formato_Moodle_XML).
 
+Los ejemplos de esta página son las mismas preguntas que aparecen en las capturas.
+
 ### Aiken
 
 ```aiken
-¿Cuál es la capital de Francia?
-A. Londres
-B. París
-C. Berlín
-D. Madrid
+¿Qué es una «alucinación» de un modelo de lenguaje?
+A. Un error de conexión que impide al chatbot terminar de generar su respuesta.
+B. Una respuesta que suena convincente pero contiene datos falsos o inventados.
+C. Un aviso que muestra el chatbot cuando la petición infringe sus normas de uso.
+D. Una imagen que el modelo genera a partir de una descripción escrita en texto.
 ANSWER: B
 ```
 
 ### GIFT
 
-Una pregunta de opción múltiple con título, una respuesta correcta (`=`), tres incorrectas (`~`) que restan un 25 % y retroalimentación (`#`) en cada opción:
+Una pregunta de opción múltiple con título, una respuesta correcta (`=`), tres incorrectas (`~`) que restan un 25 % y retroalimentación (`#`) en cada opción. Los dos puntos de las retroalimentaciones van escapados (`\:`), por el motivo que explica el aviso de más abajo:
 
 ```gift
-::Capital de Francia::¿Cuál es la capital de Francia?{
-    =París#Correcto.
-    ~%-25%Londres#Londres es la capital del Reino Unido.
-    ~%-25%Berlín#Berlín es la capital de Alemania.
-    ~%-25%Madrid#Madrid es la capital de España.
+::Datos del alumnado::Quieres que un chatbot te ayude a redactar el informe de evaluación de un alumno. ¿Qué haces con su nombre?{
+    =Lo quito, igual que cualquier dato que permita identificarlo.#Correcto\: el informe no necesita datos personales del alumnado.
+    ~%-25%Lo dejo, porque el chatbot necesita saber de quién se trata.#El chatbot puede redactar el informe sin saber quién es el alumno.
+    ~%-25%Lo dejo si he desactivado que el proveedor entrene con mis datos.#Que no entrene con tus datos no evita que se los envíes a un tercero.
+    ~%-25%Lo dejo si borro la conversación al terminar el informe.#Borrarla después no evita que los datos ya se hayan enviado.
 }
 ```
 
 Una pregunta de verdadero o falso con retroalimentación. Ojo al orden: el **primer** mensaje es el que ve quien falla y el segundo, quien acierta.
 
 ```gift
-::Retropropagación::¿La retropropagación es un algoritmo para ajustar los pesos de una red neuronal?{TRUE#Revisa cómo se entrena una red neuronal.#Correcto.}
+::Revisar la clave::Si una IA marca una respuesta como correcta, la pregunta ya se puede importar en Moodle sin revisarla.{FALSE#La IA también se equivoca al marcar la respuesta correcta\: revísala siempre.#Correcto\: la revisión no se puede delegar.}
 ```
 
 > [!WARNING]
 > **El fallo más habitual al importar GIFT**
-> Los caracteres `~ = # { } :` tienen significado en GIFT. Si aparecen dentro del texto de una pregunta o de una respuesta (una fórmula, una hora, un enlace) hay que escribirlos con una barra delante: `\=`, `\:`, `\{`… Pide expresamente a la IA que los escape, y si una importación falla, empieza por buscar estos caracteres.
+> Los caracteres `~ = # { } :` tienen significado en GIFT. Si aparecen dentro del texto de una pregunta o de una respuesta (una fórmula, una hora, un enlace) hay que escribirlos con una barra delante: `\=`, `\:`, `\{`… Pide expresamente a la IA que los escape. Un carácter sin escapar no siempre da error: a veces Moodle importa sin avisar una pregunta deformada, como en el [ejemplo de la importación](#importar-en-moodle).
 
 ### Moodle XML
 
@@ -62,17 +60,17 @@ El fichero tiene que ser un documento XML completo: con la cabecera y todas las 
 <?xml version="1.0" encoding="UTF-8"?>
 <quiz>
   <question type="shortanswer">
-    <name><text>Redes para imágenes</text></name>
+    <name><text>Formato completo</text></name>
     <questiontext format="html">
-      <text><![CDATA[<p>Menciona un tipo de red neuronal muy utilizado en el procesamiento de imágenes.</p>]]></text>
+      <text><![CDATA[<p>¿Cómo se llama el formato de Moodle que admite todos los tipos de pregunta y todas sus opciones?</p>]]></text>
     </questiontext>
     <defaultgrade>1</defaultgrade>
     <answer fraction="100" format="moodle_auto_format">
-      <text>CNN</text>
+      <text>Moodle XML</text>
       <feedback format="html"><text><![CDATA[<p>Correcto.</p>]]></text></feedback>
     </answer>
     <answer fraction="100" format="moodle_auto_format">
-      <text>red neuronal convolucional</text>
+      <text>XML</text>
       <feedback format="html"><text><![CDATA[<p>Correcto.</p>]]></text></feedback>
     </answer>
   </question>
@@ -85,8 +83,18 @@ El fichero tiene que ser un documento XML completo: con la cabecera y todas las 
 
 En lugar de describirle a la IA el formato, **dale un ejemplo real**. Es la técnica de dar un ejemplo de salida (*one-shot*) aplicada a Moodle:
 
-1. Crea a mano en Moodle una pregunta del tipo que quieres (por ejemplo, opción múltiple con penalización y retroalimentación).
-2. Expórtala desde el banco de preguntas en el formato que vayas a usar (GIFT o Moodle XML).
+1. Crea a mano en Moodle una pregunta del tipo que quieres (por ejemplo, opción múltiple con penalización y retroalimentación). En las capturas es la del [ejemplo de Aiken](#aiken), ahora con penalización y retroalimentación. En el banco de preguntas (cómo llegar, en [Importar en Moodle](#importar-en-moodle)), pulsa **Crear una nueva pregunta…** y elige el tipo:
+
+   ![Cuadro «Elija un tipo de pregunta a agregar» de Moodle, con la lista de tipos (Opción múltiple, Verdadero/Falso, Respuesta corta, Numérica…) y «Opción múltiple» seleccionada](../../assets/tests-moodle/crear-pregunta-tipo.webp){.border .narrow}
+
+   En el formulario, cada respuesta lleva su calificación (100 % la correcta y un porcentaje negativo las incorrectas, si quieres que penalicen) y su retroalimentación:
+
+   ![Sección «Respuestas» del formulario de opción múltiple: la elección 1, con calificación del 100 % y su retroalimentación, y la elección 2, con calificación del −25 %](../../assets/tests-moodle/crear-pregunta-respuestas.webp){.border}
+
+2. Expórtala desde el banco de preguntas en el formato que vayas a usar (GIFT o Moodle XML): en el desplegable de la página, **Exportar**. Moodle exporta todas las preguntas de la categoría que elijas, pero solo necesitas copiar una.
+
+   ![Página «Exportar preguntas a un archivo» con el formato GIFT seleccionado, la categoría que se va a exportar y el botón «Exportar preguntas a un archivo»](../../assets/tests-moodle/exportar-gift.webp){.border}
+
 3. Abre el fichero descargado, copia la pregunta y pégala en el *chat* como ejemplo: «Genera 10 preguntas sobre [tema] con exactamente este formato».
 4. Añade las preguntas generadas al mismo fichero e impórtalo.
 
@@ -178,11 +186,34 @@ Generar es la parte fácil. La revisión es imprescindible y no se puede delegar
 
 1. Guarda las preguntas en un fichero de texto (`.txt` para GIFT o Aiken, `.xml` para Moodle XML) con codificación UTF-8.
 2. Abre el banco de preguntas:
-   - En **Moodle 4.x**: en el curso, **Más → Banco de preguntas**, y en el desplegable de la página, **Importar**.
+   - En **Moodle 4.x**: en el curso, **Más → Banco de preguntas**, y en el desplegable de la página, **Importar**. Las capturas de esta página son de esta versión, en el aula virtual de un centro (octubre de 2026).
+
+     ![Página de un curso de Moodle con el menú «Más» desplegado; la primera opción es «Banco de preguntas»](../../assets/tests-moodle/menu-mas-banco-preguntas.webp){.border}
+
    - En **Moodle 5.0 o posterior**: los bancos de preguntas están en el curso, en **Más → Bancos de preguntas**. Abre el banco donde quieras guardarlas y elige **Importar**.
-3. Elige el formato, sube el fichero y pulsa **Importar**. Moodle muestra las preguntas importadas o el error de la línea que falla.
-4. En el cuestionario, **Preguntas → Añadir → del banco de preguntas**, selecciona las nuevas y añádelas.
-5. Usa la **vista previa** del cuestionario antes de abrirlo al alumnado.
+3. Elige el formato, sube el fichero y pulsa **Importar**. En las capturas, el fichero tiene tres preguntas en GIFT: las dos del [ejemplo de GIFT](#gift) y la de respuesta corta del [ejemplo de Moodle XML](#moodle-xml).
+
+   ![Página «Importar preguntas de un archivo» con «Formato GIFT» seleccionado y el fichero preguntas-ia-docentes.txt ya subido, encima del botón «Importar»](../../assets/tests-moodle/importar-formulario.webp){.border}
+
+   Moodle muestra las preguntas importadas, o el error de la línea que falla:
+
+   ![Resultado de la importación: «Importando 3 preguntas desde archivo» y la lista con el enunciado de las tres preguntas, encima del botón «Continuar»](../../assets/tests-moodle/importar-resultado.webp){.border}
+
+   Lee esa lista aunque no haya error. Si en un enunciado aparecen marcas de GIFT (`~`, `=`, `%`), algún carácter especial no estaba escapado y Moodle ha importado una pregunta deformada sin avisar. En este ejemplo, las llaves de la plantilla `{tema}` hicieron que Moodle tomara «tema» como única respuesta correcta de una pregunta de respuesta corta, y pegara las cuatro opciones al enunciado:
+
+   ![Resultado de una importación sin error en la que el enunciado de la pregunta incluye las opciones con sus marcas de GIFT, como «~%-25%El número de preguntas…»](../../assets/tests-moodle/importar-pregunta-deformada.webp){.border}
+
+4. En el cuestionario, **Preguntas → Agregar → del banco de preguntas**:
+
+   ![Página «Preguntas» de un cuestionario con el menú «Agregar» desplegado: una nueva pregunta, del banco de preguntas, una pregunta aleatoria](../../assets/tests-moodle/cuestionario-agregar-menu.webp){.border}
+
+   Selecciona las nuevas y pulsa **Añadir preguntas seleccionadas para el cuestionario**:
+
+   ![Cuadro «Añadir del banco de preguntas al final» con cuatro preguntas marcadas y el botón «Añadir preguntas seleccionadas para el cuestionario»](../../assets/tests-moodle/cuestionario-anadir-del-banco.webp){.border}
+
+5. Usa la **vista previa** del cuestionario antes de abrirlo al alumnado: muestra cada pregunta tal como la verán.
+
+   ![Vista previa del cuestionario con la pregunta 1, «¿Qué es una alucinación de un modelo de lenguaje?», sus cuatro opciones y el panel de navegación del cuestionario](../../assets/tests-moodle/cuestionario-vista-previa.webp){.border}
 
 ## Para ir más allá
 

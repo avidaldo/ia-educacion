@@ -17,7 +17,15 @@ Fixed choices for the course site. Add a row whenever a new term is settled, and
 | Vista previa | Vista previa |
 | Importar / Exportar | Importar / Exportar |
 | Más | Máis |
-| Preguntas → Añadir → del banco de preguntas | Preguntas → Engadir → do banco de preguntas |
+| Preguntas → Agregar → del banco de preguntas | Preguntas → Engadir → do banco de preguntas |
+| Crear una nueva pregunta… | Crear unha nova pregunta… |
+| Elija un tipo de pregunta a agregar | Escolla o tipo de pregunta que engadir |
+| Retroalimentación (field of each answer in the question form) | Comentarios |
+| Exportar preguntas a un archivo | Exportar preguntas no ficheiro |
+| Importar preguntas de un archivo | Importar preguntas do ficheiro |
+| Añadir preguntas seleccionadas para el cuestionario | Engadir preguntas seleccionadas á proba |
+| Navegación por el cuestionario | Navegación da proba |
+| Configuración (tab) | Axustes |
 
 Check new interface strings against a capture of the Galician interface before adding them here.
 

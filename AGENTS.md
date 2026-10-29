@@ -25,6 +25,7 @@ Web y presentaciones de los cursos de inteligencia artificial para docentes de s
 
 - Markdown de `content/`, con el dialecto que documenta `engine/markdown_render.py`: alertas de GitHub (`> [!TIP]`), notas al pie, listas de tareas, contenedores de chat (`:::: chat` / `::: user` / `::: assistant`) y enlaces a la ruta del fichero fuente (`../tests-moodle/index.md#gift`), que el build convierte en URL y comprueba.
 - **Nada de `style=`** ni HTML de presentación en el contenido: el estilo vive en `engine/theme/`.
+- **Capturas de Moodle** (`content/assets/tests-moodle/`): son del aula virtual de un centro, Moodle 4.x, octubre de 2026, en un curso de pruebas sin alumnado. Cuando ese aula pase a Moodle 5, se rehacen todas (castellano y gallego) con los mismos nombres de fichero, y se revisan el paso «Abre el banco de preguntas» y la frase que fecha las capturas.
 - **Imágenes** en `content/assets/<módulo>/`, de menos de 300 KB y con texto alternativo; la variante gallega es un fichero hermano `nombre.gl.svg` (o `.gl.webp`).
 - **Presentaciones:** solo las maquetaciones de `engine/theme/layouts.yaml` (una clase desconocida hace fallar el build), un `id` estable por diapositiva y las notas del ponente tras `Notas:`. Estilo de las presentaciones: `.claude/skills/update-slides/references/deck-style.md`.
 - **Sin recursos de terceros** en la web salvo Mermaid en las páginas que lo usan.
