@@ -74,6 +74,7 @@ El producto con el que conversamos: modelo más interfaz, memoria, búsqueda, fi
 
 ### Agente
 Recibe un objetivo y **actúa**: planifica, usa herramientas y decide el siguiente paso.
+<!-- TODO: No creo que esta fase deje claro el aspecto agéntico, usar herramientas (aunque estaría bien dar un ejemplo al lector) sí es característica de un agente, pero planificar suele ser de hecho la persona de un agente al que no se le permite modificar el entorno -->
 
 Notas:
 A un chatbot le preguntas y te responde; a un agente le encargas una tarea y la ejecuta, con los riesgos que eso implica.
@@ -93,7 +94,7 @@ Como el teclado del móvil, pero entrenado con una cantidad enorme de texto y te
 ---
 
 <!-- .slide: id="plausible" class="statement" -->
-## Genera lo más plausible; no comprueba lo que dice
+## Genera lo más plausible <!-- TODO: ¿plausible o probable? -->; no comprueba lo que dice
 
 Casi siempre coincide con lo correcto. Cuando no, el error suena igual de seguro.
 
@@ -104,9 +105,12 @@ Casi siempre coincide con lo correcto. Cuando no, el error suena igual de seguro
 
 ### *Tokens*
 Fragmentos de texto con los que trabaja el modelo. En español, una palabra ocupa a menudo más de uno.
+<!-- TODO: Una imagen de una separación de una frase en tokens podría ser útil -->
 
 ### Ventana de contexto
 Lo que el modelo tiene en cuenta a la vez: instrucciones, conversación, adjuntos y respuesta. Lo que queda fuera no existe para él.
+
+<!-- TODO: ya que cada sección tiene su presentación con solo ese eje, el eje hacia abajo (una transparencia debajo, podría usarse para explicar elementos avanzados y complementarios); lo pienso aquí por ejemplo para una explicación de cómo los embeddings permiten "manejar matemáticamente" la semántica -->
 
 ---
 
@@ -126,6 +130,7 @@ El tono servicial y la tendencia a dar la razón no son una personalidad: son co
 
 <!-- .slide: id="demo-respuestas-distintas" class="demo" -->
 ## La misma pregunta, dos respuestas
+<!-- TODO: Hoy en día esta demo me sobra: demasiado simple y obvio. Todo el mundo ya ha usado al menos mínimamente algún chatbot -->
 
 El modelo elige entre las palabras más probables con un componente de azar.
 
@@ -147,12 +152,13 @@ Notas:
 
 - Respuesta fluida y segura que es **falsa**: datos, citas, referencias inventadas.
 - No es un fallo puntual: el entrenamiento premia más arriesgar una respuesta que decir «no lo sé».
+<!-- TODO: Es por entrenamiento? no hay también una componente epistemológica de lo difícil de "saber cuándo no sabes algo" u otros problemas técnicos? De hecho cada vez más (supongo que en la fase de el RLHF) entiendo que se castigan las alucinaciones -->
 - Los modelos actuales fallan menos, sobre todo con la búsqueda web, pero el riesgo no desaparece.
 - **Toda cifra, cita, referencia o norma se comprueba en la fuente.**
 
 ---
 
-<!-- .slide: id="demo-referencias" class="demo" -->
+<!-- .slide: id="demo-referencias" class="demo" --> <!-- TODO: Me gusta el estilo de las slides que presentan una demo, pero no tanto que ponga explícitamente "Demo en directo" -->
 ## ¿Existen estas referencias?
 
 Pedir bibliografía y comprobarla.
@@ -161,7 +167,7 @@ Notas:
 **Demo (5 min)**. Cualquier *chatbot*, en un chat temporal y sin búsqueda web si se puede desactivar.
 
 1. Pedir tres referencias académicas sobre un tema muy concreto de tu materia.
-2. Buscar cada título en un buscador académico.
+2. Buscar cada título en un buscador académico. <!-- TODO: cómo por ejemplo? -->
 3. Repetir la petición con la búsqueda web activada y abrir las fuentes que cita.
 
 **Resultado esperado:** alguna referencia verosímil que no existe o con datos cambiados; con búsqueda, fuentes reales que hay que leer igualmente.
