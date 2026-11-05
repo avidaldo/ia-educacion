@@ -1,13 +1,13 @@
 ---
-title: Automatizaciones con n8n
-description: Flujos que se ejecutan solos y encadenan servicios y modelos de lenguaje; cómo funcionan, cómo empezar y qué conviene automatizar en un centro educativo.
-reviewed: 2026-10-22
+title: Automatizaciones
+description: Flujos que se ejecutan solos y encadenan servicios y modelos de lenguaje; qué herramientas hay, cómo se construye un flujo, con n8n como ejemplo, y qué conviene automatizar en un centro educativo.
+reviewed: 2026-11-05
 review_every: 6
 ---
 
 > [!NOTE]
 > **Módulo avanzado**
-> Para seguirlo hace falta instalar un programa en tu ordenador (o contratar el servicio en la nube) y no tener miedo a configurar cosas. No hace falta saber programar.
+> No hace falta instalar nada ni saber programar, pero sí crear una cuenta en un servicio de automatización, conectarle otras cuentas (el correo, una hoja de cálculo) y no tener miedo a configurar cosas.
 
 ## Qué es una automatización
 
@@ -34,38 +34,30 @@ Automatización
 
 Una automatización puede incluir un modelo de lenguaje en uno de sus pasos (para resumir, clasificar o redactar) e incluso un agente, pero el esqueleto lo decides tú.
 
+## Las herramientas
+
+Hay varias herramientas para construir estos flujos de forma visual, sin programar: cada paso es una caja que se conecta con la siguiente. Se usan en el navegador, con una cuenta, y todas tienen conectores para cientos de servicios (Gmail, Google Sheets, Telegram, formularios, RSS). Lo que cambia es el precio, dónde quedan los datos y lo que permite el plan gratuito, como añadir un paso con un modelo de lenguaje.
+
+| Herramienta | Sin pagar | Dónde quedan los datos |
+| --- | --- | --- |
+| Zapier | Plan gratuito de 100 tareas al mes, pero solo con flujos de dos pasos (un disparador y una acción) y sin pasos de IA | En Estados Unidos, sin opción de alojarlos en la UE |
+| Make | Plan gratuito de 1000 créditos al mes; los flujos programados se ejecutan, como mucho, cada 15 minutos | En la UE o en Estados Unidos, según se elija al registrarse; después no se puede cambiar |
+| n8n Cloud | Prueba de 14 días sin tarjeta; después, desde 20 € al mes con pago anual | En la UE, en servidores de Azure en Alemania y Suecia |
+| Power Automate | Incluido en las licencias educativas de Microsoft 365 (A1, A3 y A5), solo con los conectores estándar | En el Microsoft 365 de la cuenta educativa |
+
+El flujo de ejemplo de este módulo tiene cuatro pasos y usa un modelo de lenguaje, así que no cabe en el plan gratuito de Zapier.[^herramientas]
+
+Para tareas sencillas ni siquiera hace falta un flujo: algunos asistentes ya programan tareas periódicas, como Claude en Chrome.
+
 ## n8n
 
-[n8n](https://n8n.io) es una herramienta para construir estos flujos de forma visual: cada paso es una caja (un **nodo**) que se conecta con la siguiente. Tiene nodos para cientos de servicios (Gmail, Google Sheets, Telegram, RSS, formularios, bases de datos, cualquier web con API) y nodos de IA para usar modelos de lenguaje y agentes.
+Los ejemplos de este módulo usan [n8n](https://n8n.io), por dos razones: su galería de flujos de ejemplo se puede ver nodo a nodo sin crear cuenta, y, a diferencia de Zapier y Make, también se puede instalar en un servidor propio. Tiene nodos para cientos de servicios y nodos de IA para usar modelos de lenguaje y agentes. La versión en la nube, n8n Cloud, incluye además un asistente que construye flujos a partir de una descripción, y modelos de IA que se pueden usar sin clave propia.
 
-Su licencia no es de software libre en sentido estricto. Es lo que la empresa llama *fair-code*: se puede usar, modificar e instalar gratis para uso interno, personal o no comercial, pero no ofrecerlo como servicio a terceros ni revenderlo.[^licencia] Para un docente o un centro que automatiza su propio trabajo, es gratuito.
-
-| Aspecto | n8n Cloud | Instalado por ti (*Community Edition*) |
-| --- | --- | --- |
-| Instalación | Ninguna: se usa en el navegador | En tu ordenador o en un servidor |
-| Coste | De pago, con prueba gratuita sin tarjeta; el plan básico ronda los 20 € al mes con pago anual | Gratuito |
-| Funciona cuando | Siempre | Mientras el equipo esté encendido |
-| Tus datos | En servidores de Azure en la UE (Alemania y Suecia); sus condiciones incluyen un contrato de encargo del tratamiento | En tu equipo; n8n no recibe los datos de los flujos |
-| Extras | Asistente que construye flujos a partir de una descripción, y modelos de IA sin necesidad de clave propia | Hay que conectar tus propias claves de API |
-
-Fuentes: [precios de n8n](https://n8n.io/pricing/), [privacidad](https://docs.n8n.io/privacy-and-security/privacy.md) y [subencargados](https://n8n.io/legal/sub-processors/), consultados el 22 de octubre de 2026.
-
-## Instalarlo en tu ordenador
-
-La forma más limpia es con [Docker](https://www.docker.com) (que ya hay que tener instalado). Estos dos comandos, de la [documentación oficial](https://docs.n8n.io/hosting/installation/docker/), crean un volumen para guardar los datos y arrancan n8n con la zona horaria de España:
-
-```bash
-docker volume create n8n_data
-docker run -it --rm --name n8n -p 5678:5678 \
-  -e GENERIC_TIMEZONE="Europe/Madrid" -e TZ="Europe/Madrid" \
-  -e N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true \
-  -v n8n_data:/home/node/.n8n \
-  n8nio/n8n
-```
-
-Si tienes Node.js (entre las versiones 20.19 y 24), también puedes probarlo sin instalar nada con `npx n8n`. En los dos casos, n8n se abre en el navegador en `http://localhost:5678`, y la primera vez te pide crear una cuenta de administración local.
+Instalarlo es gratis, pero su licencia no es de software libre en sentido estricto. Es lo que la empresa llama *fair-code*: se puede usar, modificar e instalar gratis para uso interno, personal o no comercial, pero no ofrecerlo como servicio a terceros ni revenderlo.[^licencia] Con una instalación propia, los datos de los flujos se quedan en ese servidor y n8n no los recibe.[^privacidad] Es una tarea para quien administre los sistemas del centro, con la [guía oficial de instalación](https://docs.n8n.io/hosting/).
 
 ## Cómo se construye un flujo
+
+Todas estas herramientas se basan en las mismas piezas, aunque las llamen de otra forma (en Zapier, los pasos son *acciones*; en Make, *módulos*). Estos son los nombres de n8n:
 
 Disparador
 : El nodo que pone en marcha el flujo: una hora fija (*Schedule Trigger*), un formulario, un mensaje en un chat, una novedad en un RSS, un correo que llega.
@@ -77,7 +69,7 @@ Elementos
 : Los datos viajan como una lista de elementos (por ejemplo, una entrada de RSS por elemento), y cada nodo se ejecuta una vez por elemento.
 
 Expresiones
-: Para usar en un nodo un dato de un paso anterior se escribe entre dobles llaves: `{{ $json.title }}` es el título del elemento que se está procesando.
+: Para usar en un nodo un dato de un paso anterior, se arrastra el campo desde el panel de entrada del nodo.[^arrastrar] n8n lo escribe como una expresión entre dobles llaves: `{{ $json.title }}` es el título del elemento que se está procesando.
 
 Credenciales
 : Las cuentas y claves que usan los nodos (tu Gmail, tu clave de API). Se guardan aparte, cifradas; al exportar un flujo viajan su nombre y su identificador, pero no la clave.
@@ -106,6 +98,8 @@ El BOE publica un canal RSS con las disposiciones sobre «Educación y enseñanz
 
 No maneja datos personales, cada resumen va con su enlace para comprobarlo y, si falla, no pasa nada grave. Por eso es un buen primer flujo.
 
+En la [galería de n8n](https://n8n.io/workflows/) hay flujos parecidos ya montados, que se pueden ver nodo a nodo sin crear cuenta. [Este boletín semanal de varios canales RSS](https://n8n.io/workflows/16037-send-a-weekly-aicurated-rss-digest-email-with-openai-and-gmail/), por ejemplo, se pone en marcha los lunes a las 8:00, lee los canales, se queda con los artículos más relevantes, pide el resumen a un modelo de OpenAI y lo envía con Gmail. Es más elaborado que el del BOE, con dos nodos que llevan código, pero el recorrido es el mismo.
+
 ## Agentes dentro de un flujo
 
 El nodo **AI Agent** convierte un paso en un agente: recibe un objetivo, un modelo de lenguaje y unas herramientas (otros nodos: buscar en una hoja de cálculo, consultar una web, enviar un mensaje) y decide cuáles usar y en qué orden. Es potente, pero recupera los riesgos que se ven en [Navegadores con agentes](../navegadores-agenticos/index.md#el-riesgo-principal-la-inyección-de-prompts): un agente que lee correos de cualquiera y puede enviar correos es la «tríada letal» completa.
@@ -117,21 +111,17 @@ n8n permite exigir **aprobación humana** antes de que el agente use una herrami
 Buenos candidatos
 : Tareas sin datos personales o solo con los tuyos: boletines de novedades, recordatorios de plazos, avisos cuando cambia una web, conversión de materiales entre formatos, copias de seguridad de tus documentos.
 
-Con mucho cuidado
-: Todo lo que toque datos del alumnado o de las familias. n8n **guarda los datos de cada ejecución**, incluido lo que pasó por cada nodo. Lo que se envía al modelo de lenguaje llega a su proveedor, y la responsabilidad del tratamiento es del centro. Antes de automatizar algo así hay que saber dónde se ejecuta, quién accede, cuánto tiempo se guarda (n8n recomienda borrar las ejecuciones antiguas automáticamente[^privacidad]) y si el centro lo autoriza. El marco legal está en [Normativa](../etica-legal/normativa.md#protección-de-datos).
+Solo en herramientas autorizadas
+: Todo lo que toque datos del alumnado o de las familias. Un servicio de automatización con tu cuenta es, como un *chatbot* con cuenta personal, una plataforma externa: los datos personales solo van a herramientas que la administración educativa haya contratado o autorizado ([Datos del alumnado](../datos-alumnado/index.md#la-pregunta-previa-necesita-la-ia-los-datos)). Además, lo que se envía al modelo de lenguaje llega a su proveedor, y n8n Cloud **guarda los datos de cada ejecución**, incluido lo que pasó por cada nodo, durante el tiempo que fije tu plan.[^privacidad]
 
 No
 : Decisiones sobre el alumnado (calificaciones, sanciones, admisiones) sin revisión humana.
 
-Dos detalles prácticos. Primero, n8n no tiene un nodo para Moodle: se puede conectar con su API web mediante el nodo *HTTP Request*, pero eso requiere un permiso que solo concede la administración del aula virtual. Segundo, si lo instalas tú, n8n envía por defecto datos técnicos de uso (versión, número de flujos, errores), aunque nunca el contenido de los flujos. Quien administra la instalación puede desactivarlo.[^privacidad]
+Un detalle práctico: n8n no tiene un nodo para Moodle. Se puede conectar con su API web mediante el nodo *HTTP Request*, pero eso requiere un permiso que solo concede la administración del aula virtual.
 
-## Alternativas
-
-- **Zapier** y **Make** ofrecen lo mismo como servicio en la nube, con muchas integraciones listas, pero sin la opción de instalarlos en tu propio equipo.
-- **Power Automate**, si el centro trabaja con Microsoft 365.
-- Para tareas sencillas, algunos asistentes ya programan tareas periódicas, como Claude en Chrome.
-
+[^herramientas]: Precios y condiciones de [Zapier](https://zapier.com/pricing) ([pasos de IA](https://help.zapier.com/hc/en-us/articles/8496342944013), [alojamiento de los datos](https://zapier.com/legal/data-privacy)), [Make](https://www.make.com/en/pricing) ([intervalo mínimo](https://academy-content.make.com/courses/make-basics-modules/05-scheduling-your-scenario/), [centros de datos](https://help.make.com/organizations)), [n8n](https://n8n.io/pricing/) ([prueba gratuita](https://docs.n8n.io/deploy/use-n8n-cloud/start-your-free-trial)) y [Power Automate](https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/faqs), consultados el 5 de noviembre de 2026. Los servidores de n8n Cloud, en su lista de [subencargados](https://n8n.io/legal/sub-processors/), consultada el 22 de octubre de 2026.
+[^arrastrar]: n8n, [*Use the UI mapper*](https://docs.n8n.io/build/work-with-data/reference-data/use-the-ui-mapper.md).
 [^licencia]: n8n, [*Community license*](https://docs.n8n.io/n8n-community-license/community-license.md) y [*License FAQ*](https://docs.n8n.io/n8n-community-license/community-license/license-faq.md), consultados el 22 de octubre de 2026.
 [^importar]: n8n, [*Export and import*](https://docs.n8n.io/build/manage-workflows/export-and-import.md).
 [^aprobacion]: n8n, [*Human-in-the-loop for tools*](https://docs.n8n.io/build/integrate-ai/ai-examples/human-in-the-loop-for-tools.md).
-[^privacidad]: n8n, [*Privacy*](https://docs.n8n.io/privacy-and-security/privacy.md), consultado el 22 de octubre de 2026.
+[^privacidad]: n8n, [*Privacy*](https://docs.n8n.io/privacy-and-security/privacy.md), consultado el 5 de noviembre de 2026.

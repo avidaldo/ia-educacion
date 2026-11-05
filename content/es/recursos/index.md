@@ -25,7 +25,7 @@ Cada enlace de esta lista se abrió al revisarla (fecha arriba) y está aquí po
 ## *Skills* y automatización
 
 - [Agent Skills](https://agentskills.io): especificación abierta del formato de las *skills*, con ejemplos. Se explica en [Asistentes y skills](../skills/index.md).
-- [Documentación de n8n](https://docs.n8n.io/): referencia oficial de la herramienta de automatización del módulo [Automatizaciones con n8n](../n8n/index.md).
+- [Documentación de n8n](https://docs.n8n.io/): referencia oficial de la herramienta de automatización del módulo [Automatizaciones](../n8n/index.md).
 
 ## Herramientas
 

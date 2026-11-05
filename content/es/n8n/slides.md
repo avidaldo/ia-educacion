@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/n8n/index.md: "f56ea74f29db7f01e02af74292b3956f4576af6a"
+  es/n8n/index.md: "198118ea86e7655fc2101e5d3406c2dad0c22cdf"
 ---
 
 <!-- .slide: id="receta" class="statement" -->
@@ -27,17 +27,23 @@ Una automatización puede incluir un modelo de lenguaje en un paso, e incluso un
 
 ---
 
-<!-- .slide: id="cloud-o-local" class="two-col" -->
-## n8n: en la nube o en tu equipo
+<!-- .slide: id="herramientas" class="cards" -->
+## Varias herramientas, las mismas piezas
+
+### Zapier
+Datos en Estados Unidos; su plan gratuito no admite pasos de IA.
+
+### Make
+Plan gratuito, con los datos en la UE si lo eliges al registrarte.
 
 ### n8n Cloud
-De pago (desde unos 20 € al mes), sin instalación, con los datos en la UE.
+Prueba gratuita; los flujos de su galería se ven sin cuenta.
 
-### Instalado por ti
-Gratuito, en tu equipo; funciona mientras esté encendido.
+### Power Automate
+Incluido en las licencias educativas de Microsoft 365.
 
 Notas:
-Licencia *fair-code*: gratis para uso interno, personal o no comercial, pero no se puede ofrecer como servicio a terceros. No es software libre en sentido estricto.
+Precios y límites, en la tabla de la página, con su fecha de revisión. Los ejemplos usan n8n, que además se puede instalar en un servidor propio. Para tareas sencillas ni siquiera hace falta un flujo: algunos asistentes, como Claude en Chrome, programan tareas periódicas.
 
 ---
 
@@ -46,7 +52,7 @@ Licencia *fair-code*: gratis para uso interno, personal o no comercial, pero no 
 
 - **Disparador**: una hora, un formulario, un RSS, un correo.
 - **Nodos**: cada paso recibe datos, trabaja y los pasa al siguiente.
-- **Expresiones**: `{{ $json.title }}` usa un dato de un paso anterior.
+- **Expresiones**: arrastras un dato de un paso anterior y queda como `{{ $json.title }}`.
 - **Credenciales**: cuentas y claves, guardadas aparte.
 - Los flujos son JSON: se copian y se pegan en el lienzo.
 
@@ -72,7 +78,7 @@ Un buen primer flujo: no maneja datos personales, cada resumen va con su enlace 
 El boletín del BOE, viendo qué sale de cada paso.
 
 Notas:
-**Demo (12 min)**. n8n instalado en local con Docker, o una prueba de n8n Cloud.
+**Demo (12 min)**. Una cuenta de prueba de n8n Cloud, creada pocos días antes de la sesión.
 
 1. Crear el *Schedule Trigger* y el nodo *RSS Read* con la dirección del canal.
 2. Ejecutar el RSS y enseñar los elementos que salen.
@@ -80,7 +86,7 @@ Notas:
 4. Enviar el correo a una cuenta de pruebas.
 
 **Resultado esperado:** un correo con los resúmenes y sus enlaces.
-**Si falla:** enseñar la salida de cada nodo, que es lo que explica cómo viajan los datos.
+**Si falla:** enseñar la salida de cada nodo, que es lo que explica cómo viajan los datos. Sin cuenta, recorrer el flujo de ejemplo de la galería que enlaza la página.
 **Mensaje clave:** cada nodo recibe elementos y los pasa al siguiente; el esqueleto lo decides tú.
 
 ---
@@ -105,24 +111,15 @@ n8n detiene el flujo hasta que alguien aprueba o rechaza la acción.
 | Qué | Cómo |
 | --- | --- |
 | Boletines, recordatorios, avisos | Adelante |
-| Datos del alumnado o las familias | Con mucho cuidado y con autorización del centro |
+| Datos del alumnado o las familias | Solo en herramientas que autorice la administración |
 | Decisiones sobre el alumnado | No, sin revisión humana |
 
 ---
 
 <!-- .slide: id="ejecuciones" class="statement" -->
-## n8n guarda los datos de cada ejecución
+## n8n Cloud guarda los datos de cada ejecución
 
-Lo que pasó por cada nodo queda guardado: conviene borrar las ejecuciones antiguas automáticamente.
+Lo que pasó por cada nodo queda guardado durante el tiempo que fije tu plan.
 
 Notas:
-Lo que se envía al modelo de lenguaje llega a su proveedor, y la responsabilidad del tratamiento es del centro. Tampoco hay nodo para Moodle: conectar con su API requiere un permiso que solo da la administración del aula virtual.
-
----
-
-<!-- .slide: id="alternativas" -->
-## Otras opciones
-
-- **Zapier** y **Make**: en la nube, sin instalación propia.
-- **Power Automate**, si el centro trabaja con Microsoft 365.
-- Para tareas sencillas, las tareas programadas de algunos asistentes, como Claude en Chrome.
+Lo que se envía al modelo de lenguaje llega a su proveedor. Un servicio de automatización con tu cuenta es, como un *chatbot* con cuenta personal, una plataforma externa: los datos del alumnado solo van a herramientas que la administración haya contratado o autorizado. Tampoco hay nodo para Moodle: conectar con su API requiere un permiso que solo da la administración del aula virtual.

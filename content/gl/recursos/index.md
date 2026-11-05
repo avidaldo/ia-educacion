@@ -2,7 +2,7 @@
 title: Recursos e fontes
 description: Ligazóns para seguir aprendendo, agrupadas por tema e comprobadas unha a unha, con preferencia pola documentación de quen fabrica a ferramenta.
 derived_from:
-  es/recursos/index.md: "d7bf93d3aa5ea716e641077ed19719adf097c322"
+  es/recursos/index.md: "d9daac0f4fd68bd4cecab531070d2aea1a3e4d40"
 ---
 
 Cada ligazón desta lista abriuse ao revisala (data arriba) e está aquí por unha razón concreta. Prefírense as fontes primarias: a documentación do provedor, o texto da norma ou o artigo orixinal. As páxinas dos módulos citan ademais as súas propias fontes ao pé.
@@ -25,7 +25,7 @@ Cada ligazón desta lista abriuse ao revisala (data arriba) e está aquí por un
 ## *Skills* e automatización
 
 - [Agent Skills](https://agentskills.io): especificación aberta do formato das *skills*, con exemplos. Explícase en [Asistentes e skills](../skills/index.md).
-- [Documentación de n8n](https://docs.n8n.io/): referencia oficial da ferramenta de automatización do módulo [Automatizacións con n8n](../n8n/index.md).
+- [Documentación de n8n](https://docs.n8n.io/): referencia oficial da ferramenta de automatización do módulo [Automatizacións](../n8n/index.md).
 
 ## Ferramentas
 
