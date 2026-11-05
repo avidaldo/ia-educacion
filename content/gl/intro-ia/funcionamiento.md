@@ -2,7 +2,7 @@
 title: Como funciona un modelo de linguaxe
 description: Que fai por dentro un modelo de linguaxe e por que iso explica tanto os seus acertos coma os seus erros.
 derived_from:
-  es/intro-ia/funcionamiento.md: "a8b271e4ddb9ef870e1a39660eabd4861e8a23f8"
+  es/intro-ia/funcionamiento.md: "d5ed5b86bc9b4aa1da5f1ed540eecf35524dde68"
 ---
 
 ## Predicir a seguinte palabra
@@ -71,7 +71,9 @@ Hoxe a maioría dos *chatbots* deciden por si mesmos canto razoar segundo a preg
 
 Se nos textos de adestramento certas profesións se asocian máis a un xénero, ou certos grupos se describen con outros adxectivos, o modelo aprende esas asociacións, porque iso é exactamente o que fai: extraer as regularidades dos seus datos. Os nesgos non son unha «decisión» do modelo, senón un reflexo estatístico dos textos cos que se adestrou, de como se seleccionaron e de como se fixo o axuste posterior.
 
-Corrixilos tampouco é trivial: as correccións introducen os seus propios desequilibrios. Os casos documentados, e como se detecta un nesgo medindo o erro por grupos, trátanse en [Ética e normativa](../etica-legal/index.md#sesgos).
+A palabra «nesgo» úsase con dous sentidos que convén non mesturar. En estatística, un nesgo é un erro sistemático: unha estimación que se desvía do valor real sempre na mesma dirección. No sentido da equidade, é un erro ou un trato sistematicamente distinto segundo o grupo. Un modelo pode reproducir con toda fidelidade os seus datos e aínda así dar resultados inxustos, se eses datos reflicten un mundo desigual: fai exactamente aquilo para o que se adestrou. Por iso «a IA é machista?» é unha pregunta que despista. A útil é en que etapa entrou o nesgo (os datos, o que se decidiu medir, como se avaliou, para que se usa) e quen tomou esa decisión.
+
+Corrixilos tampouco é trivial: as correccións introducen os seus propios desequilibrios. As etapas, os casos documentados e como se detecta un nesgo medindo o erro por grupos trátanse en [Ética e normativa](../etica-legal/index.md#sesgos).
 
 ## Para saber máis
 

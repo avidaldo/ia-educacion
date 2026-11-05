@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/intro-ia/slides.md: "49a0da342a27dc5ddcf588f06851ddd085b07802"
+  es/intro-ia/slides.md: "31a30453a5c04d63ae71e019946db30a9769ee09"
 ---
 
 <!-- .slide: id="setenta-anos" class="statement" -->
@@ -197,3 +197,6 @@ Matiz: o modelo pode reproducir de forma literal fragmentos dos seus datos de ad
 ## Os nesgos son un reflexo dos datos
 
 Non unha «decisión» do modelo, e corrixilos introduce outros desequilibrios.
+
+Notas:
+«Nesgo» ten dous sentidos que convén separar: o estatístico, un erro sistemático, e o de equidade, un erro ou un trato distinto segundo o grupo. Un modelo pode reproducir con fidelidade os seus datos e aínda así dar resultados inxustos se eses datos reflicten un mundo desigual. A pregunta útil non é «a IA é machista?», senón en que etapa entrou o nesgo e quen tomou esa decisión: as etapas vense no bloque de ética.

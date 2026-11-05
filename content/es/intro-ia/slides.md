@@ -1,7 +1,7 @@
 ---
 derived_from:
   es/intro-ia/index.md: "092b9369e10fe8c4f69fb793a24a4bab55e19b09"
-  es/intro-ia/funcionamiento.md: "a8b271e4ddb9ef870e1a39660eabd4861e8a23f8"
+  es/intro-ia/funcionamiento.md: "d5ed5b86bc9b4aa1da5f1ed540eecf35524dde68"
 ---
 
 <!-- .slide: id="setenta-anos" class="statement" -->
@@ -204,3 +204,6 @@ Matiz: el modelo puede reproducir de forma literal fragmentos de sus datos de en
 ## Los sesgos son un reflejo de los datos
 
 No una «decisión» del modelo, y corregirlos introduce otros desequilibrios.
+
+Notas:
+«Sesgo» tiene dos sentidos que conviene separar: el estadístico, un error sistemático, y el de equidad, un error o un trato distinto según el grupo. Un modelo puede reproducir con fidelidad sus datos y aun así dar resultados injustos si esos datos reflejan un mundo desigual. La pregunta útil no es «¿la IA es machista?», sino en qué etapa entró el sesgo y quién tomó esa decisión: las etapas se ven en el bloque de ética.

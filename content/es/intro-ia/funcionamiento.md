@@ -71,7 +71,9 @@ Hoy la mayoría de los *chatbots* deciden por sí mismos cuánto razonar según 
 
 Si en los textos de entrenamiento ciertas profesiones se asocian más a un género, o ciertos grupos se describen con otros adjetivos, el modelo aprende esas asociaciones, porque eso es exactamente lo que hace: extraer las regularidades de sus datos. Los sesgos no son una «decisión» del modelo, sino un reflejo estadístico de los textos con los que se entrenó, de cómo se seleccionaron y de cómo se hizo el ajuste posterior.
 
-Corregirlos tampoco es trivial: las correcciones introducen sus propios desequilibrios. Los casos documentados, y cómo se detecta un sesgo midiendo el error por grupos, se tratan en [Ética y normativa](../etica-legal/index.md#sesgos).
+La palabra «sesgo» se usa con dos sentidos que conviene no mezclar. En estadística, un sesgo es un error sistemático: una estimación que se desvía del valor real siempre en la misma dirección. En el sentido de la equidad, es un error o un trato sistemáticamente distinto según el grupo. Un modelo puede reproducir con toda fidelidad sus datos y aun así dar resultados injustos, si esos datos reflejan un mundo desigual: hace exactamente aquello para lo que se entrenó. Por eso «¿la IA es machista?» es una pregunta que despista. La útil es en qué etapa entró el sesgo (los datos, lo que se decidió medir, cómo se evaluó, para qué se usa) y quién tomó esa decisión.
+
+Corregirlos tampoco es trivial: las correcciones introducen sus propios desequilibrios. Las etapas, los casos documentados y cómo se detecta un sesgo midiendo el error por grupos se tratan en [Ética y normativa](../etica-legal/index.md#sesgos).
 
 ## Para saber más
 
