@@ -25,4 +25,3 @@ sections:
   - id: recursos
     modules:
       - recursos
-advanced: [n8n]
