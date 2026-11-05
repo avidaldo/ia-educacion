@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/datos-alumnado/slides.md: "bc9d2d6346e271d1e3d4fc31020f224698990513"
+  es/datos-alumnado/slides.md: "bed0b348e7f1ea84718de1df2ce896c1fbaa22ae"
 ---
 
 <!-- .slide: id="idea-central" class="statement" -->
@@ -19,24 +19,24 @@ Notas:
 ### 1. Sen datos
 A IA escribe o modelo de documento, a fórmula ou o procedemento; ti aplícalo no teu equipo.
 
-### 2. Anonimizado de verdade
-Só o contido do traballo, sen nada que diga de quen é.
+### 2. Sen nada que diga de quen é
+Só o contido do traballo. Ti podes sabelo; quen o recibe, non.
 
 ### 3. Datos persoais
 Só en ferramentas contratadas ou autorizadas pola administración.
 
 Notas:
-A terceira é unha obriga legal: a habilitación para tratar os datos do alumnado é do centro e da administración, non de cada ferramenta que use un docente. Un modelo local, sen conexión, non envía nada fóra, pero os datos seguen suxeitos ás normas de seguridade do centro.
+A segunda ten unha dúbida sen resolver: o protocolo da Consellería pide usar só as súas ferramentas cos datos do alumnado, e non aclara se iso inclúe un traballo xa limpo, do que só o docente sabe o autor. Se está ben limpo, o risco para o alumno é mínimo; para ter certeza, pregúntaselle á persoa delegada de protección de datos. A terceira é unha obriga legal: a habilitación para tratar os datos do alumnado é do centro e da administración, non de cada ferramenta que use un docente. Un modelo local, sen conexión, non envía nada fóra, pero os datos seguen suxeitos ás normas de seguridade do centro.
 
 ---
 
 <!-- .slide: id="seudonimizar" class="statement" -->
-## Cambiar o nome por un código non anonimiza
+## Cambiar o nome é só o primeiro paso
 
-Mentres exista a táboa que o desfai, seguen sendo datos persoais (RXPD, considerando 26).
+Ti podes saber de quen é; quen recibe o texto non debe poder sabelo.
 
 Notas:
-Pseudonimizar é útil, porque reduce o risco, e o RXPD cítaa como medida de protección. Pero non saca os datos do Regulamento. Só a información anónima, a que non permite identificar ninguén con medios razoables, queda fóra.
+O procedemento habitual é razoable: código en lugar do nome, a táboa no teu equipo, axuda da IA e a valoración de volta a cada alumno. Que o docente saiba de quen é cada traballo non é un problema: é o seu profesor. Para el, coa táboa, seguen sendo datos do alumno (a lei chámalle pseudonimizar), e por iso a táboa gárdase coma o caderno de notas. O que está en xogo é o que pode deducir quen o recibe: o ficheiro leva o autor e os comentarios, e o propio texto pode abondar.
 
 ---
 
@@ -59,7 +59,7 @@ Pseudonimizar é útil, porque reduce o risco, e o RXPD cítaa como medida de pr
 «A única de 4.º B que xoga na selección galega» non necesita nome.
 
 Notas:
-O RXPD chámalle a isto singularización: illar unha persoa dentro dun grupo. Nunha clase de vinte, dous ou tres detalles abondan. E hai textos que non se poden anonimizar sen destruílos, como unha redacción autobiográfica: entón non é a vía 2.
+O RXPD chámalle a isto singularización: illar unha persoa dentro dun grupo. Nunha clase de vinte, dous ou tres detalles abondan. E hai textos que non se poden limpar sen destruílos, como unha redacción autobiográfica: entón non é a vía 2.
 
 ---
 
@@ -96,7 +96,7 @@ Notas:
 - [ ] A táboa de códigos, fóra da ferramenta.
 
 Notas:
-E un paso que se esquece: nada de servizos en liña para anonimizar, porque para quitar os datos teñen que recibilos.
+E dous pasos que se esquecen: nada de servizos en liña para anonimizar, porque para quitar os datos teñen que recibilos, e desactivar que as conversas se usen para adestrar modelos (na páxina de Chatbots está onde se fai).
 
 ---
 
@@ -195,7 +195,7 @@ Notas:
 | Necesidades específicas | 1 | A necesidade didáctica, non o diagnóstico |
 
 Notas:
-Para adaptar un material, «necesita frases curtas, vocabulario básico e unha idea por parágrafo» funciona igual de ben que nomear un trastorno, e non revela un dato de saúde. Na páxina están os oito casos, co código dos proxectos de FP.
+Para adaptar un material, «necesita frases curtas, vocabulario básico e unha idea por parágrafo» funciona igual de ben que nomear un trastorno, e non revela un dato de saúde. Na páxina están os sete casos.
 
 ---
 

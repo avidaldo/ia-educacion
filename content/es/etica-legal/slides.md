@@ -1,7 +1,7 @@
 ---
 derived_from:
-  es/etica-legal/index.md: "db3aa3a2f6017d855c4ae3ac32aa22e28290e998"
-  es/etica-legal/normativa.md: "6d5f646d9e481932de0bf3c84464af1f99f946de"
+  es/etica-legal/index.md: "6fdd7dfa1d10dba1c17f9656b799cf4a236d79e9"
+  es/etica-legal/normativa.md: "7ae49d1dea1555a7c7676f7d8ab12348bd6b1457"
 ---
 
 <!-- .slide: id="ley-o-prudencia" class="statement" -->
@@ -152,10 +152,10 @@ La formación de la Xunta insiste en ello (pp. 3–7): sesgo de confirmación y 
 Nombres, notas, informes o fotos en un *chatbot* con cuenta personal.
 
 ### Sí
-Herramientas contratadas por la administración, o casos inventados o anonimizados de verdad.
+Herramientas contratadas por la administración, casos inventados o trabajos sin nada que diga de quién son.
 
 Notas:
-La LOE habilita al centro a tratar los datos que necesita, con seguridad, confidencialidad y deber de sigilo del profesorado. Un tercero que trate esos datos tiene que ser un encargado con contrato (art. 28 del RGPD). Anonimizar de verdad: quitar el nombre no basta si la combinación de datos identifica a la persona. Cómo hacerlo con trabajos, notas e informes está en el módulo Datos del alumnado.
+La LOE habilita al centro a tratar los datos que necesita, con seguridad, confidencialidad y deber de sigilo del profesorado. Un tercero que trate esos datos tiene que ser un encargado con contrato (art. 28 del RGPD). Quitar el nombre no basta si la combinación de datos identifica a la persona. Y quien envía un trabajo con el nombre cambiado por un código sigue tratando datos del alumno, porque guarda la tabla: reduce el riesgo, pero qué herramienta se puede usar lo decide la Consellería. Cómo hacerlo con trabajos, notas e informes está en el módulo Datos del alumnado.
 
 ---
 

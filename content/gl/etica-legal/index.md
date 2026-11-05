@@ -2,7 +2,7 @@
 title: Ética e normativa
 description: Criterios para decidir cando e como usar a IA no centro, separando o que obriga a lei do que é prudencia, cos nesgos, a privacidade, a autoría e o custo ambiental explicados desde como funciona a tecnoloxía.
 derived_from:
-  es/etica-legal/index.md: "db3aa3a2f6017d855c4ae3ac32aa22e28290e998"
+  es/etica-legal/index.md: "6fdd7dfa1d10dba1c17f9656b799cf4a236d79e9"
 ---
 
 ## Que é lei e que é prudencia
@@ -97,7 +97,7 @@ A formación da Xunta insiste en algo que se esquece a miúdo: os humanos tamén
 Os datos do alumnado pódeos tratar o centro para a súa función educativa, con medidas de seguridade e con deber de sixilo para o profesorado.[^loe] O que non cobre esa habilitación é copialos nunha ferramenta que a administración non contratou: o provedor non actúa por conta do centro, pode gardalos ou usalos para adestrar, e non hai contrato que o impida.
 
 - **Obriga legal.** Non introducir datos persoais do alumnado (nomes, notas, informes, fotos, situacións familiares) en ferramentas que non estean contratadas ou autorizadas pola administración educativa. O detalle está en [Normativa](normativa.md#protección-de-datos).
-- **Boa práctica.** Traballar con casos inventados ou anonimizados de verdade: non abonda con quitar o nome se a combinación de datos («a única alumna de 2.º con discapacidade auditiva») identifica a persoa. Como facelo con traballos, notas e informes, caso por caso, está en [Datos do alumnado](../datos-alumnado/index.md).
+- **Boa práctica.** Traballar con casos inventados ou con traballos sen nada que permita saber de quen son: non abonda con quitar o nome se a combinación de datos («a única alumna de 2.º con discapacidade auditiva») identifica a persoa. Como facelo con traballos, notas e informes, caso por caso, está en [Datos do alumnado](../datos-alumnado/index.md).
 - **Boa práctica.** Preferir sempre as contas que proporciona o centro, como se ve en [Bots educativos](../bots-educativos/index.md#lo-primero-con-qué-cuenta-entra-el-alumnado).
 
 Unha demostración útil na clase: un modelo pequeno executado no propio ordenador, con programas gratuítos como Ollama ou LM Studio, funciona **sen conexión a internet**. Desconecta a rede e segue respondendo: é a proba visible de que o modelo non precisa enviar nada fóra. Son modelos menos capaces ca os dos *chatbots* comerciais, pero amosan que a cuestión da privacidade depende de **onde se executa** o modelo.

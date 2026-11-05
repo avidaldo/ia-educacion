@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/etica-legal/slides.md: "326cfbd4d020bc2594f71640681fb2c4204988e6"
+  es/etica-legal/slides.md: "1e69c9dbef7d5274b6509f182a7cc24f193670db"
 ---
 
 <!-- .slide: id="ley-o-prudencia" class="statement" -->
@@ -151,10 +151,10 @@ A formación da Xunta insiste niso (pp. 3–7): nesgo de confirmación e exceso 
 Nomes, notas, informes ou fotos nun *chatbot* con conta persoal.
 
 ### Si
-Ferramentas contratadas pola administración, ou casos inventados ou anonimizados de verdade.
+Ferramentas contratadas pola administración, casos inventados ou traballos sen nada que diga de quen son.
 
 Notas:
-A LOE habilita o centro a tratar os datos que precisa, con seguridade, confidencialidade e deber de sixilo do profesorado. Un terceiro que trate eses datos ten que ser un encargado con contrato (art. 28 do RXPD). Anonimizar de verdade: quitar o nome non abonda se a combinación de datos identifica a persoa. Como facelo con traballos, notas e informes está no módulo Datos do alumnado.
+A LOE habilita o centro a tratar os datos que precisa, con seguridade, confidencialidade e deber de sixilo do profesorado. Un terceiro que trate eses datos ten que ser un encargado con contrato (art. 28 do RXPD). Quitar o nome non abonda se a combinación de datos identifica a persoa. E quen envía un traballo co nome cambiado por un código segue tratando datos do alumno, porque garda a táboa: reduce o risco, pero que ferramenta se pode usar decídeo a Consellería. Como facelo con traballos, notas e informes está no módulo Datos do alumnado.
 
 ---
 

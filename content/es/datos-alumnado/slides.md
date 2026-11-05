@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/datos-alumnado/index.md: "a147d2a49a3a1df74e6fc3600ab19b9b95e8ab6a"
+  es/datos-alumnado/index.md: "09bee5b7d030916665d1f922e82b34664bd31f81"
 ---
 
 <!-- .slide: id="idea-central" class="statement" -->
@@ -19,24 +19,24 @@ Notas:
 ### 1. Sin datos
 La IA escribe la plantilla, la fórmula o el procedimiento; tú lo aplicas en tu equipo.
 
-### 2. Anonimizado de verdad
-Solo el contenido del trabajo, sin nada que diga de quién es.
+### 2. Sin nada que diga de quién es
+Solo el contenido del trabajo. Tú puedes saberlo; quien lo recibe, no.
 
 ### 3. Datos personales
 Solo en herramientas contratadas o autorizadas por la administración.
 
 Notas:
-La tercera es una obligación legal: la habilitación para tratar los datos del alumnado es del centro y de la administración, no de cada herramienta que use un docente. Un modelo local, sin conexión, no envía nada fuera, pero los datos siguen sujetos a las normas de seguridad del centro.
+La segunda tiene una duda sin resolver: el protocolo de la Consellería pide usar solo sus herramientas con los datos del alumnado, y no aclara si eso incluye un trabajo ya limpio, del que solo el docente sabe el autor. Si está bien limpio, el riesgo para el alumno es mínimo; para tener certeza, se pregunta a la persona delegada de protección de datos. La tercera es una obligación legal: la habilitación para tratar los datos del alumnado es del centro y de la administración, no de cada herramienta que use un docente. Un modelo local, sin conexión, no envía nada fuera, pero los datos siguen sujetos a las normas de seguridad del centro.
 
 ---
 
 <!-- .slide: id="seudonimizar" class="statement" -->
-## Cambiar el nombre por un código no anonimiza
+## Cambiar el nombre es solo el primer paso
 
-Mientras exista la tabla que lo deshace, siguen siendo datos personales (RGPD, considerando 26).
+Tú puedes saber de quién es; quien recibe el texto no debe poder saberlo.
 
 Notas:
-Seudonimizar es útil, porque reduce el riesgo, y el RGPD la cita como medida de protección. Pero no saca los datos del Reglamento. Solo la información anónima, la que no permite identificar a nadie con medios razonables, queda fuera.
+El procedimiento habitual es razonable: código en lugar del nombre, la tabla en tu equipo, ayuda de la IA y la valoración de vuelta a cada alumno. Que el docente sepa de quién es cada trabajo no es un problema: es su profesor. Para él, con la tabla, siguen siendo datos del alumno (la ley lo llama seudonimizar), y por eso la tabla se guarda como el cuaderno de notas. Lo que se juega es lo que puede deducir quien lo recibe: el fichero lleva el autor y los comentarios, y el propio texto puede bastar.
 
 ---
 
@@ -59,7 +59,7 @@ Seudonimizar es útil, porque reduce el riesgo, y el RGPD la cita como medida de
 «La única de 4.º B que juega en la selección gallega» no necesita nombre.
 
 Notas:
-El RGPD llama a esto singularización: aislar a una persona dentro de un grupo. En una clase de veinte, dos o tres detalles bastan. Y hay textos que no se pueden anonimizar sin destruirlos, como una redacción autobiográfica: entonces no es la vía 2.
+El RGPD llama a esto singularización: aislar a una persona dentro de un grupo. En una clase de veinte, dos o tres detalles bastan. Y hay textos que no se pueden limpiar sin destruirlos, como una redacción autobiográfica: entonces no es la vía 2.
 
 ---
 
@@ -96,7 +96,7 @@ Notas:
 - [ ] La tabla de códigos, fuera de la herramienta.
 
 Notas:
-Y un paso que se olvida: nada de servicios en línea para anonimizar, porque para quitar los datos tienen que recibirlos.
+Y dos pasos que se olvidan: nada de servicios en línea para anonimizar, porque para quitar los datos tienen que recibirlos, y desactivar que las conversaciones se usen para entrenar modelos (en la página de Chatbots está dónde se hace).
 
 ---
 
@@ -195,7 +195,7 @@ Notas:
 | Necesidades específicas | 1 | La necesidad didáctica, no el diagnóstico |
 
 Notas:
-Para adaptar un material, «necesita frases cortas, vocabulario básico y una idea por párrafo» funciona igual de bien que nombrar un trastorno, y no revela un dato de salud. En la página están los ocho casos, con el código de los proyectos de FP.
+Para adaptar un material, «necesita frases cortas, vocabulario básico y una idea por párrafo» funciona igual de bien que nombrar un trastorno, y no revela un dato de salud. En la página están los siete casos.
 
 ---
 

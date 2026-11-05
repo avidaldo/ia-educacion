@@ -2,7 +2,7 @@
 title: Datos do alumnado
 description: Como usar a IA para corrixir, analizar notas ou redactar informes sen expoñer datos do alumnado, cando abonda con anonimizar e que di a lei en cada caso típico.
 derived_from:
-  es/datos-alumnado/index.md: "a147d2a49a3a1df74e6fc3600ab19b9b95e8ab6a"
+  es/datos-alumnado/index.md: "09bee5b7d030916665d1f922e82b34664bd31f81"
 ---
 
 > [!NOTE]
@@ -14,16 +14,18 @@ derived_from:
 Antes de anonimizar nada convén preguntarse se a IA necesita ver o alumnado. Case nunca: na maioría das tarefas o que achega é redactar, estruturar ou calcular, e iso pódese pedir sen datos reais. Hai tres vías, e próbanse nesta orde:
 
 1. **Sen datos do alumnado.** A IA escribe o modelo de documento, a fórmula ou o procedemento, e ti aplícalo aos datos no teu equipo. Serve para informes, comunicacións ás familias, análise de notas e rúbricas.
-2. **Co traballo do alumno, anonimizado de verdade.** Cando o que fai falla é o contido (unha redacción, as respostas dun exame), envíase só ese contido, sen nada que permita saber de quen é. É máis difícil do que parece, como se ve na sección seguinte.
+2. **Co traballo, sen nada que diga de quen é.** Cando o que fai falla é o contido (unha redacción, as respostas dun exame), envíase só ese contido. Ti podes seguir sabendo de quen é, cunha táboa de códigos; quen o recibe non debe poder sabelo. É máis difícil do que parece, como se ve [na sección seguinte](#quitar-el-nombre-no-basta).
 3. **Con datos persoais.** Só en ferramentas que a administración educativa contratase ou autorizase para ese uso (**obriga legal**; o porqué está en [quen pode tratar os datos do alumnado](../etica-legal/normativa.md#quién-puede-tratar-los-datos-del-alumnado)). En Galicia, ademais, o protocolo de protección de datos da Consellería pídelles aos centros que usen só as ferramentas que ela proporciona e que non usen plataformas externas non autorizadas (**recomendación institucional**).[^protocolo] Mentres non haxa entre elas unha ferramenta de IA para este uso (o catálogo de sistemas homologados que prevé a Lei de educación dixital aínda non existe), esta vía está pechada para a IA xerativa.
 
 Un modelo executado no teu propio equipo, sen conexión, non envía nada fóra ([a demostración](../etica-legal/index.md#privacidad-la-regla-práctica)). Pero os datos seguen sendo datos do alumnado, suxeitos ás normas de seguridade e confidencialidade do centro.
 
 ## Quitar o nome non abonda
 
-Cambiar o nome por un código (`R-07`) mentres gardas a lista que di quen é cada código é **pseudonimizar**, non anonimizar. Para o RXPD, os datos pseudonimizados «deben considerarse información sobre una persona física identificable»: seguen sendo datos persoais. Só a información anónima, a que non permite identificar ninguén cos medios que razoablemente poidan usar «el responsable del tratamiento o cualquier otra persona», queda fóra do Regulamento.[^rgpd] Pseudonimizar segue sendo útil, porque reduce o risco, e o RXPD cítaa como medida de protección, pero non saca os datos do Regulamento. O detalle está en [Anonimizar e pseudonimizar](../etica-legal/normativa.md#anonimizar-y-seudonimizar).
+O procedemento habitual é razoable: cambias o nome por un código (`R-07`), gardas no teu equipo a táboa que di quen é cada código, pídeslle axuda á IA co traballo e, ao rematar, devólveslle a cada alumno a súa valoración. Que ti saibas de quen é cada traballo non é ningún problema: es o seu profesor, e o centro pode tratar os datos do seu alumnado para avalialo.[^loe] O que importa é que **non poida sabelo quen recibe o texto**. Se non ten a táboa nin outra forma razoable de descubrilo, para el non é un dato de ninguén.[^srb]
 
-Tampouco abonda con mirar o nome, porque o traballo enteiro fala de quen o fixo. Para o Tribunal de Xustiza da UE, as respostas dun exame e as anotacións de quen o corrixe son datos persoais, e se o exame está escrito a man conteñen, ademais, «información sobre su escritura».[^nowak] Isto é o que pode identificar un alumno ou unha alumna nun traballo:
+Para ti, pola contra, coa táboa seguen sendo datos do alumno: a lei chámalle **pseudonimizar**, non anonimizar.[^rgpd] Iso non cambia o que podes facer, pero explica por que a táboa se garda co mesmo coidado que o caderno de notas. O detalle legal está en [Anonimizar e pseudonimizar](../etica-legal/normativa.md#anonimizar-y-seudonimizar).
+
+O código é só o primeiro paso, porque o nome non é o único que di de quen é un traballo: o ficheiro leva o autor e os comentarios, e ás veces abonda co propio texto. As respostas dun exame e o que anota quen o corrixe tamén son datos do alumno, e a letra a man identifícao.[^nowak] Isto é o que pode identificar un alumno ou unha alumna nun traballo:
 
 | Que | Exemplos |
 | --- | --- |
@@ -33,11 +35,13 @@ Tampouco abonda con mirar o nome, porque o traballo enteiro fala de quen o fixo.
 | Categorías especiais | Saúde, relixión, orixe étnica, orientación sexual: aínda que non identifiquen, son os datos con máis protección |
 | A voz e a cara | Audios e vídeos de exposicións orais |
 
-Os cuasiidentificadores son os que máis se escapan. O RXPD conta a **singularización** entre os medios para identificar alguén:[^rgpd] illar unha persoa dentro dun grupo sen saber o seu nome. Nunha clase de vinte, «a única de 4.º B que xoga na selección galega» non necesita nome.
+Os cuasiidentificadores son os que máis se escapan: dous ou tres detalles abondan para illar unha persoa dentro dun grupo sen saber o seu nome, e a lei cóntao como unha forma de identificala (chámalle **singularización**).[^rgpd] Nunha clase de vinte, «a única de 4.º B que xoga na selección galega» non necesita nome.
 
-O que conta é o que pode deducir quen recibe o texto. O Tribunal de Xustiza precisou que, para quen recibe datos pseudonimizados sen a táboa que os desfai, poden non ser datos persoais, pero só se non pode atribuírllos razoablemente a ninguén ([Anonimizar e pseudonimizar](../etica-legal/normativa.md#anonimizar-y-seudonimizar)). Por iso a vía 2 esixe quitar todo o que permita recoñecer a persoa, non só o nome.
+E hai textos que non se poden limpar sen destruílos: unha redacción autobiográfica chea de detalles persoais segue sendo recoñecible por moito que se quite. Entón non é a vía 2, e o que queda é a 1 ou a 3.
 
-E hai textos que non se poden anonimizar sen destruílos: unha redacción autobiográfica chea de detalles persoais segue sendo recoñecible por moito que se quite. Entón non é a vía 2, e o que queda é a 1 ou a 3.
+> [!NOTE]
+> **Unha dúbida que aínda ninguén resolveu**
+> O protocolo da Consellería pide usar cos datos do alumnado só as ferramentas que ela proporciona (**recomendación institucional**).[^protocolo] Non aclara se iso inclúe un traballo xa limpo, do que só ti sabes o autor: o que sae non identifica ninguén, pero quen o envía es ti, e para ti segue sendo o traballo dun alumno. Se o limpaches ben, o risco para o alumno é mínimo. Se o vas facer a miúdo e queres certeza, pregúntalle á persoa delegada de protección de datos da Consellería.
 
 ## Como anonimizar un traballo
 
@@ -52,10 +56,11 @@ E hai textos que non se poden anonimizar sen destruílos: unha redacción autobi
 7. **Nas fotos**, recorta a cabeceira e a sinatura, e fíxate na localización: a cámara do móbil pode gardar onde se fixo a foto. No iPhone pódese compartir sen ela (na folla de compartir, Opciones → desactivar Ubicación) ou impedir que a cámara a garde (Ajustes → Privacidad y seguridad → Localización → Cámara → Nunca).[^apple] En Android depende da app de cámara de cada fabricante. O máis seguro é fotografar os traballos coa localización da cámara desactivada.
 8. **Garda a táboa código → alumno fóra da ferramenta**, no teu equipo ou no espazo do centro.
 9. **Non uses un servizo en liña para anonimizar**: para quitar os datos, ese servizo ten que recibilos.
+10. **Desactiva que as túas conversas se usen para adestrar modelos** (**boa práctica**). Onde se fai en cada *chatbot* está en [Chatbots](../chatbots/index.md#que-tus-conversaciones-entrenen-modelos).
 
 > [!IMPORTANT]
 > **Anonimizar non sempre é posible**
-> A AEPD e o Supervisor Europeo de Protección de Datos recollen dez malentendidos frecuentes sobre a anonimización (**recomendación institucional**).[^malentendidos] Tres afectan directamente a un docente. Pseudonimizar non é anonimizar. Os datos non sempre se poden anonimizar, entre outros casos cando «el número total de posibles individuos (“universo de sujetos”) es demasiado reducido», e un grupo-clase sono. E non se pode automatizar de todo: atopar os identificadores directos «es algo trivial», pero os indirectos «no siempre son obvios».
+> A AEPD e o Supervisor Europeo de Protección de Datos resúmeno en tres ideas que afectan a calquera docente (**recomendación institucional**).[^malentendidos] Cambiar o nome non é anonimizar. Nun grupo pequeno, como unha clase, poucos detalles abondan para que quen o coñece saiba de quen se fala. E non se pode deixar en mans dun programa: os nomes atópanse sós, pero os detalles indirectos non sempre son obvios.
 
 ## Casos típicos
 
@@ -66,7 +71,6 @@ E hai textos que non se poden anonimizar sen destruílos: unha redacción autobi
 | Analizar as notas dun grupo | 1 | A IA escribe a fórmula a partir dunha mostra inventada |
 | Informes e comunicacións ás familias | 1 | Modelo de documento con ocos que enches no teu equipo |
 | Adaptar materiais para alumnado con necesidades específicas | 1 | Describir a necesidade didáctica, non o diagnóstico nin a persoa |
-| Revisar o código dun proxecto de FP | 2 | Quitar autores, correos e nomes dos ficheiros |
 | Exposicións orais gravadas | 3 | A voz e a cara identifican: só ferramentas contratadas, ou un modelo local |
 | Convivencia e expedientes disciplinarios | 1 | Só casos inventados |
 
@@ -114,10 +118,6 @@ Pide o modelo de documento con marcadores (`[NOME]`, `[FORTALEZAS]`, `[A_MELLORA
 
 Describe a necesidade didáctica, non o diagnóstico nin a persoa: «adapta este texto para alguén que necesita frases curtas, vocabulario básico e unha idea por parágrafo» funciona igual de ben que nomear un trastorno, e non revela un dato de saúde. **Obriga legal**: os datos de saúde son unha [categoría especialmente protexida](../etica-legal/normativa.md#datos-especialmente-protegidos). E o expediente de orientación non se trata «en ningún caso» con ferramentas que non sexan da Consellería, segundo o seu protocolo (**recomendación institucional**).[^protocolo-orientacion]
 
-### Revisar o código dun proxecto de FP
-
-Un repositorio identifica o seu autor en varios sitios: o nome e o correo de cada *commit*, os comentarios de cabeceira dos ficheiros e, ás veces, as rutas (`/home/<usuario>/…`). Para pedir unha revisión, copia só os ficheiros que importan e limpa eses datos; non subas o repositorio enteiro.
-
 ### Exposicións orais gravadas
 
 A voz e a cara identifican a persoa, e non hai forma razoable de anonimizalas. Unha gravación só pode ir a unha ferramenta contratada pola administración. Se o que necesitas é a transcrición, hai modelos de transcrición que funcionan no propio equipo, sen conexión.
@@ -141,7 +141,9 @@ O que había que tocar:
 
 Con todo iso quitado, a frase segue servindo para corrixir a expresión: «Cando volvo dos partidos fóra, o pavillón é o sitio onde me sinto na casa, aínda que alguén da miña familia non poida vir».
 
-[^rgpd]: Regulamento (UE) 2016/679, xeral de protección de datos ([BOE](https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807)), considerando 26.
+[^rgpd]: Regulamento (UE) 2016/679, xeral de protección de datos ([BOE](https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807)), considerando 26 e artigo 4.5.
+[^loe]: Lei orgánica 2/2006, de educación, [disposición adicional vixésimo terceira](https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899#davigesimotercera).
+[^srb]: Sentenza do Tribunal de Xustiza do 4 de setembro de 2025, *SEPD / JUR*, C-413/23 P, apartados 77 e 86 ([EUR-Lex](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:62023CJ0413)).
 [^nowak]: Sentenza do Tribunal de Xustiza do 20 de decembro de 2017, *Nowak*, C-434/16, apartados 37 e 62 ([EUR-Lex](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:62016CJ0434)). Interpreta a Directiva 95/46, á que substituíu o RXPD cunha definición de dato persoal do mesmo alcance.
 [^protocolo]: Consellería de Cultura, Educación, Formación Profesional e Universidades, [*Protocolo de protección de datos persoais*](https://www.edu.xunta.gal/portal/sites/web/files/protocolo_de_proteccion_de_datos_persoais_160823.pdf), setembro de 2022, apartados 12.1 e 21.
 [^protocolo-orientacion]: Consellería de Cultura, Educación, Formación Profesional e Universidades, [*Protocolo de protección de datos persoais*](https://www.edu.xunta.gal/portal/sites/web/files/protocolo_de_proteccion_de_datos_persoais_160823.pdf), setembro de 2022, apartado 22.3.
