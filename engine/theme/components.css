@@ -71,9 +71,10 @@ details.chat-message[open] .chat-expand { display: none; }
 .contains-task-list { list-style: none; padding-left: var(--space-2); }
 .task-list-item-checkbox { margin-right: var(--space-2); accent-color: var(--accent); }
 
-/* Footnotes */
+/* Footnotes: on pages, a closed «Sources» block (markdown_render.collapse_footnotes); in decks, a plain list */
 .footnotes-sep { margin-top: var(--space-7); }
 .footnotes { font-size: var(--text-small); color: var(--ink-2); }
+.prose details.footnotes { margin-top: var(--space-7); }
 
 /* Buttons and badges */
 .button {

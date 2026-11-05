@@ -1,8 +1,10 @@
 /* Printing a page: content only, black on white, link targets shown. */
-.site-header, .site-nav, .toc, .pager, .deck-card, .site-footer, .copy-button, .skip-link { display: none !important; }
+.site-header, .site-nav, .toc, .pager, .deck-card, .site-footer, .copy-button, .skip-link, .chat-expand { display: none !important; }
 .layout { display: block; max-width: none; padding: 0; }
 body { background: #fff; color: #000; font-size: 11pt; }
 .prose { max-width: none; }
 .prose a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; color: #444; overflow-wrap: anywhere; }
 .code-block, .chat, .markdown-alert, pre { break-inside: avoid; }
-details > :not(summary) { display: block !important; }
+/* Closed <details> (sources, collapsed chat replies) print open. Their content sits in ::details-content, which
+   the browser hides with content-visibility or display: styling the children has no effect. */
+details::details-content { content-visibility: visible; display: block; }

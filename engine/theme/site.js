@@ -1,4 +1,5 @@
-// Web behaviour: theme toggle, mobile navigation, copy buttons, embedded decks, Mermaid and the active TOC entry.
+// Web behaviour: theme toggle, mobile navigation, copy buttons, embedded decks, Mermaid, collapsed sources and the
+// active TOC entry.
 
 const root = document.documentElement;
 
@@ -94,6 +95,20 @@ async function renderMermaid() {
 }
 document.addEventListener("ia-edu:mermaid-ready", renderMermaid);
 if (window.iaEduMermaid) renderMermaid();
+
+// The sources start collapsed: following a [n] call, or arriving at #fnN, opens them before showing the note.
+const sources = document.querySelector("details.footnotes");
+function revealSource(hash) {
+  const target = hash.length > 1 ? document.getElementById(decodeURIComponent(hash.slice(1))) : null;
+  if (!sources || sources.open || !target || !sources.contains(target)) return;
+  sources.open = true;
+  target.scrollIntoView();
+}
+document.querySelectorAll(".footnote-ref a").forEach((link) => {
+  link.addEventListener("click", () => revealSource(link.hash));
+});
+addEventListener("hashchange", () => revealSource(location.hash));
+revealSource(location.hash);
 
 const tocLinks = [...document.querySelectorAll(".toc a")];
 if (tocLinks.length && "IntersectionObserver" in window) {

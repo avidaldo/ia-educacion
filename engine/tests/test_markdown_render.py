@@ -49,6 +49,23 @@ def test_chat_container_renders_messages_and_collapsed_replies(config, content_d
     assert '<details class="chat-message chat-assistant">' in html and "</div></details>" in html
 
 
+FOOTNOTES = "Uno[^a], dos[^b] y otra vez uno[^a].\n\n[^a]: Fuente A.\n[^b]: Fuente B.\n"
+
+
+def test_page_footnotes_are_collapsed_under_a_localised_count(config, content_dir):
+    model = load_content(config, content_dir)
+    html, _ = render(model, FOOTNOTES, language="gl")
+    assert '<details class="footnotes"><summary>Fontes (2)</summary>\n<ol class="footnotes-list">' in html
+    assert html.count('class="footnote-item"') == 2
+    assert html.rstrip().endswith("</ol>\n</details>")
+
+
+def test_slide_footnotes_keep_the_plain_list(config, content_dir):
+    model = load_content(config, content_dir)
+    html, _ = render(model, FOOTNOTES, slide_mode=True)
+    assert '<section class="footnotes">' in html and "<details" not in html
+
+
 def test_source_links_become_urls_in_the_rendering_language(config, content_dir):
     model = load_content(config, content_dir)
     html, context = render(model, "[a](ejemplos.md#uno) [b](../tests-moodle/index.md)", language="gl")

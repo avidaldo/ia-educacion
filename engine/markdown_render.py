@@ -375,6 +375,29 @@ def render_list_item_close(renderer, tokens: list[Token], index: int, options, e
     return label_end + renderer.renderToken(tokens, index, options, env)
 
 
+def collapse_footnotes(markdown: MarkdownIt) -> None:
+    """On pages, the sources go in a closed <details>; site.js opens it when a [n] call is followed."""
+    plugin_open = markdown.renderer.rules["footnote_block_open"]
+    plugin_close = markdown.renderer.rules["footnote_block_close"]
+
+    def render_open(renderer, tokens: list[Token], index: int, options, env: dict) -> str:
+        context: RenderContext | None = env.get("context")
+        if context is None or context.slide_mode:
+            return plugin_open(tokens, index, options, env)
+        label = escapeHtml(ui_text(context.ui, "labels", "sources", default="Sources"))
+        count = sum(1 for token in tokens if token.type == "footnote_open")
+        return f'<details class="footnotes"><summary>{label} ({count})</summary>\n<ol class="footnotes-list">\n'
+
+    def render_close(renderer, tokens: list[Token], index: int, options, env: dict) -> str:
+        context: RenderContext | None = env.get("context")
+        if context is None or context.slide_mode:
+            return plugin_close(tokens, index, options, env)
+        return "</ol>\n</details>\n"
+
+    markdown.add_render_rule("footnote_block_open", render_open)
+    markdown.add_render_rule("footnote_block_close", render_close)
+
+
 def make_html_block(content: str) -> Token:
     token = Token("html_block", "", 0)
     token.content = content
@@ -403,6 +426,7 @@ def make_markdown() -> MarkdownIt:
     markdown.add_render_rule("fence", render_fence)
     markdown.add_render_rule("list_item_open", render_list_item_open)
     markdown.add_render_rule("list_item_close", render_list_item_close)
+    collapse_footnotes(markdown)
     markdown.core.ruler.after("inline", "ia_edu_postprocess", postprocess)
     return markdown
 

@@ -43,6 +43,7 @@ def content_dir(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
         """)
     write(content / "gl" / "_ui.yaml", """
         alerts: {tip: Consello}
+        labels: {sources: Fontes}
         """)
     write(content / "es" / "index.md", """
         ---
