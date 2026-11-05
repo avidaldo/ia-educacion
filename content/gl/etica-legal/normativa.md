@@ -2,12 +2,12 @@
 title: Normativa
 description: O que din o RXPD, a LOPDGDD, a LOE, o Regulamento de IA e as normas galegas sobre o uso da IA nun centro educativo, co seu calendario de aplicación e o que aínda está en tramitación.
 derived_from:
-  es/etica-legal/normativa.md: "7b64fe9222865dcc5465019dd14c0b2292d5f976"
+  es/etica-legal/normativa.md: "6d5f646d9e481932de0bf3c84464af1f99f946de"
 ---
 
 > [!NOTE]
 > **Unha lectura docente da normativa**
-> Esta páxina explica as normas desde o traballo dun docente e cita os seus artigos para que poidas comprobalos. Non é asesoramento xurídico: ante un caso concreto, a referencia é a persoa delegada de protección de datos da Consellería, que todas as administracións públicas teñen que designar. Situación revisada o 27 de outubro de 2026.
+> Esta páxina explica as normas desde o traballo dun docente e cita os seus artigos para que poidas comprobalos. Non é asesoramento xurídico: ante un caso concreto, a referencia é a persoa delegada de protección de datos da Consellería, que todas as administracións públicas teñen que designar. Situación revisada o 5 de novembro de 2026.
 
 ## Como se ordenan as normas
 
@@ -21,7 +21,15 @@ As normas son o Regulamento xeral de protección de datos (RXPD), que é europeo
 
 ### Que é un dato persoal
 
-O RXPD defíneo de forma moi ampla: «toda información sobre una persona física identificada o identificable», e é identificable quen pode ser identificado «directa o indirectamente», por exemplo mediante «uno o varios elementos propios de la identidad física, fisiológica, genética, psíquica, económica, cultural o social».[^rgpd] Unha nota, un comentario sobre a conduta ou unha descrición que permite saber de quen se fala son datos persoais, aínda que non apareza o nome.
+O RXPD defíneo de forma moi ampla: «toda información sobre una persona física identificada o identificable», e é identificable quen pode ser identificado «directa o indirectamente», por exemplo mediante «uno o varios elementos propios de la identidad física, fisiológica, genética, psíquica, económica, cultural o social».[^rgpd] Unha nota, un comentario sobre a conduta ou unha descrición que permite saber de quen se fala son datos persoais, aínda que non apareza o nome. Tamén o son as respostas dun exame e as anotacións de quen o corrixe, segundo o Tribunal de Xustiza da UE: revelan «el nivel de conocimientos y el grado de competencia» de quen o fixo e, se está escrito a man, «contienen, además, información sobre su escritura».[^nowak]
+
+### Anonimizar e pseudonimizar
+
+O RXPD distingue dúas operacións que adoitan confundirse. **Pseudonimizar** é tratar os datos «de manera tal que ya no puedan atribuirse a un interesado sin utilizar información adicional», sempre que esa información «figure por separado» e estea protexida: é o que se fai ao cambiar os nomes por códigos e gardar á parte a táboa que os relaciona. Os datos pseudonimizados seguen sendo datos persoais, porque se poderían atribuír a unha persoa «mediante la utilización de información adicional». **Anonimizar** é conseguir que ninguén sexa identificable cos medios que razoablemente poidan usar «el responsable del tratamiento o cualquier otra persona», entre os que o Regulamento conta «la singularización»: illar unha persoa dentro dun grupo sen coñecer o seu nome. Só á información anónima deixa de aplicárselle o Regulamento.[^rgpd]
+
+O Tribunal de Xustiza matizou en 2025 para quen seguen sendo datos persoais. Para quen garda a información que permite desfacer a pseudonimización, os datos «conservan, a pesar de la seudonimización, su carácter personal». Para quen os recibe sen ela poden non selo, pero só se non pode atribuírllos razoablemente a ninguén: «siempre que no pueda excluirse» que o faga, por exemplo cotexándoos con outros datos de que dispoña, «los datos seudonimizados deben considerarse personales».[^srb] Nun centro, quen garda a táboa de códigos está sempre no primeiro caso, e un texto cheo de detalles persoais pode permitirlle a identificación a quen o recibe aínda que non leve nome.
+
+Pseudonimizar non é inútil: o RXPD ponna como exemplo das medidas coas que o responsable protexe os datos desde o deseño e garante a súa seguridade.[^rgpd] Pero non converte os datos en libres. Como se aplica aos traballos do alumnado, con casos típicos, está en [Datos do alumnado](../datos-alumnado/index.md).
 
 ### Quen pode tratar os datos do alumnado
 
@@ -32,6 +40,8 @@ A LOE habilita os centros: «podrán recabar los datos personales de su alumnado
 
 Esa habilitación é do centro e da administración educativa, non de cada ferramenta que use un docente. Cando un terceiro trata datos por conta do centro, o RXPD esixe que sexa un **encargado do tratamento** elixido entre quen ofreza «garantías suficientes», cun contrato que o regule.[^rgpd] Un *chatbot* con conta persoal non é iso: por iso os datos do alumnado só van a ferramentas que a administración contratou ou autorizou. E aínda nelas, só os imprescindibles: os datos han de ser «limitados a lo necesario en relación con los fines» (minimización).[^rgpd]
 
+En Galicia, o protocolo de protección de datos da Consellería concrétao (**recomendación institucional**): os centros «só deben utilizar as ferramentas postas a disposición polos servizos centrais da Consellería» a través da Amtega, e non se deben usar «plataformas externas ou non autorizadas expresamente», porque iso «podería supoñer unha cesión de datos persoais ou incluso unha transferencia internacional de datos».[^protocolo] O protocolo é de 2022 e non menciona a IA, pero un *chatbot* cunha conta persoal é exactamente unha plataforma externa non autorizada.
+
 ### Datos especialmente protexidos
 
 Algunhas categorías teñen unha protección reforzada: o RXPD prohibe en principio tratar datos que revelen a orixe étnica, as conviccións relixiosas, a saúde ou a orientación sexual, entre outros, agás nos supostos que enumera.[^rgpd] Un informe de necesidades educativas, un diagnóstico ou unha adaptación por motivos de saúde entran aquí: son os últimos datos que deberían acabar nunha ferramenta de IA.
@@ -40,7 +50,7 @@ Algunhas categorías teñen unha protección reforzada: o RXPD prohibe en princi
 
 En España, un menor pode consentir por si mesmo o tratamento dos seus datos «cuando sea mayor de catorce años»; por debaixo fai falla o consentimento de quen exerce a patria potestade ou a titoría.[^lopdgdd] O RXPD fixa 16 anos para os servizos en liña ofrecidos directamente a menores e permite a cada Estado baixala ata 13; España escolleu 14.[^rgpd]
 
-Isto pode cambiar. O proxecto de lei orgánica de protección das persoas menores de idade nas contornas dixitais, en tramitación no Congreso en outubro de 2026, eleva esa idade a dezaseis anos no texto que presentou o Goberno.[^menores]
+O proxecto de lei orgánica de protección das persoas menores de idade nas contornas dixitais, que a elevaba a dezaseis anos, non chegou a aprobarse: caducou ao disolverse as Cortes o 6 de outubro de 2026, porque coa disolución caducan «todos los asuntos pendientes de examen y resolución». Seguen valendo os catorce anos, e para subilos habería que presentar de novo un proxecto na próxima lexislatura.[^menores]
 
 ### Decisións automatizadas e avaliacións de impacto
 
@@ -126,10 +136,13 @@ A Lei 2/2025, para o desenvolvemento e o impulso da intelixencia artificial en G
 - **Lei de educación dixital de Galicia.** O proxecto (expediente 12/PL-000015) está no Parlamento desde xullo de 2026, coa previsión de entrar en vigor en 2027.[^xunta-lei] Segundo a Xunta, dedicará un capítulo aos usos permitidos e prohibidos da IA no ensino.[^xunta-ia] O máis relevante para o profesorado: **só se poderán usar sistemas de IA homologados e autorizados pola Consellería**, que publicará un catálogo. Ademais, prohibiranse as decisións académicas, organizativas e administrativas baseadas unicamente en resultados de IA, os sistemas de control automatizado do comportamento, a atención ou o rendemento, o uso da IA para predicir ou identificar condicións como o TEA ou o TDAH, e o recoñecemento facial. É un texto en tramitación: pode cambiar, e convén seguir a súa aprobación.
 - **EdugalIA.** Proxecto da Consellería para reducir o abandono escolar temperán mediante a análise de datos con IA, que a formación da Xunta presenta como a integración en «unha única plataforma» dos datos que hoxe están dispersos.[^xunta-edugalia] Unha plataforma así está en tensión co principio de minimización e, se elabora perfís do alumnado, necesita unha avaliación de impacto previa e non pode tomar por si soa decisións que lles afecten significativamente.
 
-[^rgpd]: Regulamento (UE) 2016/679, xeral de protección de datos ([BOE](https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807)): artigos 4.1 (dato persoal), 5.1.c (minimización), 8.1 (consentimento de menores en servizos en liña), 9.1 (categorías especiais), 22.1 (decisións automatizadas), 28.1 (encargado do tratamento), 35.1 (avaliación de impacto) e 37.1.a (delegado de protección de datos das autoridades públicas).
+[^rgpd]: Regulamento (UE) 2016/679, xeral de protección de datos ([BOE](https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807)): considerando 26 (información anónima e datos pseudonimizados) e artigos 4.1 (dato persoal), 4.5 (pseudonimización), 5.1.c (minimización), 8.1 (consentimento de menores en servizos en liña), 9.1 (categorías especiais), 22.1 (decisións automatizadas), 25.1 (protección de datos desde o deseño), 28.1 (encargado do tratamento), 32.1.a (seguridade do tratamento), 35.1 (avaliación de impacto) e 37.1.a (delegado de protección de datos das autoridades públicas).
+[^nowak]: Sentenza do Tribunal de Xustiza do 20 de decembro de 2017, *Nowak*, C-434/16, apartados 37 e 62 ([EUR-Lex](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:62016CJ0434)). Interpreta a Directiva 95/46, á que substituíu o RXPD cunha definición de dato persoal do mesmo alcance.
+[^srb]: Sentenza do Tribunal de Xustiza do 4 de setembro de 2025, *SEPD / JUR*, C-413/23 P, apartados 76, 85 e 86 ([EUR-Lex](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:62023CJ0413)). Interpreta o regulamento de protección de datos das institucións da UE, cuxa definición de dato persoal é «sustancialmente idéntica» á do RXPD (apartado 52).
+[^protocolo]: Consellería de Cultura, Educación, Formación Profesional e Universidades, [*Protocolo de protección de datos persoais*](https://www.edu.xunta.gal/portal/sites/web/files/protocolo_de_proteccion_de_datos_persoais_160823.pdf), setembro de 2022, apartados 12.1 e 21.
 [^loe]: Lei orgánica 2/2006, de educación, [disposición adicional vixésimo terceira](https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899#davigesimotercera).
 [^lopdgdd]: Lei orgánica 3/2018, de protección de datos persoais e garantía dos dereitos dixitais, [artigo 7](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673#a7).
-[^menores]: Proxecto de lei orgánica para a protección das persoas menores de idade nas contornas dixitais, [BOCG, Congreso, serie A, núm. 52-1](https://www.congreso.es/public_oficiales/L15/CONG/BOCG/A/BOCG-15-A-52-1.PDF), 11 de abril de 2025, disposición derradeira sexta.
+[^menores]: Proxecto de lei orgánica para a protección das persoas menores de idade nas contornas dixitais, [BOCG, Congreso, serie A, núm. 52-1](https://www.congreso.es/public_oficiales/L15/CONG/BOCG/A/BOCG-15-A-52-1.PDF), 11 de abril de 2025, disposición derradeira sexta. As Cortes disolvéronse polo [Real decreto 806/2026](https://www.boe.es/buscar/doc.php?id=BOE-A-2026-20742), do 5 de outubro, e a caducidade establécea o [artigo 207 do Regulamento do Congreso](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196).
 [^ria]: Regulamento (UE) 2024/1689, de intelixencia artificial ([BOE](https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079)): artigos 3.4 (responsable do despregamento), 5.1.f, 6.3, 25.1.c, 26.2, 27, 50 e 113, e anexo III, punto 3.
 [^omnibus]: Regulamento (UE) 2026/1744, do 8 de xullo de 2026 ([BOE](https://www.boe.es/buscar/doc.php?id=DOUE-L-2026-81147)): novo artigo 4; artigo 5.1, letras b bis e b ter; artigo 113.
 [^lei-ia]: [Lei 2/2025, do 2 de abril](https://www.xunta.gal/dog/Publicados/2025/20250404/AnuncioC3B0-030425-0001_gl.html), para o desenvolvemento e o impulso da intelixencia artificial en Galicia, artigos 3, 12 e 19.
@@ -140,4 +153,4 @@ A Lei 2/2025, para o desenvolvemento e o impulso da intelixencia artificial en G
 [^xunta-lei]: Xunta de Galicia, [nota de prensa do 29 de xuño de 2026](https://www.xunta.gal/notas-de-prensa/-/nova/026191/rueda-anuncia-aprobacion-anteproxecto-lei-educacion-dixital-unha-norma-pioneira); Parlamento de Galicia, [ficha do proxecto 12/PL-000015](https://www.parlamentodegalicia.es/ParticipacionCidada/LexislaConNos/3482/proxecto-de-lei-de-educacion-dixital-de-galicia.-12pl-000015).
 [^xunta-ia]: Xunta de Galicia, [nota de prensa do 11 de abril de 2026](https://www.xunta.gal/es/notas-de-prensa/-/nova/023351/galicia-autorizara-uso-educacion-para-deteccion-temprana-dificultades-aprendizaje).
 [^xunta-egia]: Presentación da Xunta *Intelixencia artificial (Ética e normativa en materia de Educación)*, p. 40.
-[^xunta-edugalia]: Presentación da Xunta *Intelixencia artificial (Ética e normativa en materia de Educación)*, pp. 64–68, comentada no [anexo](anexo-formacion-xunta.md).
+[^xunta-edugalia]: Presentación da Xunta *Intelixencia artificial (Ética e normativa en materia de Educación)*, pp. 64–68.

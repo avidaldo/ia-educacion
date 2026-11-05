@@ -103,3 +103,5 @@ Quotations from Spanish-only official texts (RGPD, RIA, LOE, LOPDGDD) stay verba
 | zona horaria | fuso horario |
 | dirección (web), dirección de correo | enderezo |
 | datos personales | datos persoais |
+| seudonimizar, seudonimización | pseudonimizar, pseudonimización (as in the Xunta's data-protection protocol, which writes «pseudonimizados») |
+| plantilla con huecos (a document with placeholders) | modelo de documento con ocos (plain «modelo» would read as a language model there) |

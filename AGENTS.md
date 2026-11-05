@@ -16,7 +16,7 @@ Web y presentaciones de los cursos de inteligencia artificial para docentes de s
 - **Rigor y evidencia.** Los datos que caducan (modelos, planes, precios, disponibilidad, edades mínimas) se comprueban en fuentes primarias (documentación y centros de ayuda de cada proveedor) al escribir, nunca de memoria. Las páginas con esos datos llevan `reviewed:` en el *front matter*, y el comprobador avisa cuando caducan (`review_every`, en meses).
 - **Las herramientas se nombran** (ChatGPT, Gemini, Claude…) y se comparan con criterios y fecha de revisión. No hay regla de neutralidad comercial.
 - **Terminología precisa:** *modelo de lenguaje* para el modelo, *chatbot* para el producto, *agente* solo para sistemas que actúan con herramientas en bucle.
-- **No antropomorfizar** los modelos ni presentar sus sesgos con alarmismo: se explican por su causa técnica (datos, entrenamiento, objetivo).
+- **No antropomorfizar** los modelos ni presentar sus sesgos con alarmismo: se explican por su causa técnica (datos, entrenamiento, objetivo). Tampoco se descarga en el modelo la responsabilidad: cada sesgo se atribuye a la etapa en la que entra (datos, medida, evaluación, uso) y a la decisión humana que hay detrás.
 - Lo técnico que no todos necesitan va en bloques «Para saber más».
 - **Normas:** se citan por artículo, copiando el texto oficial, y cada restricción del módulo de ética indica su origen: obligación legal, recomendación institucional o buena práctica.
 - **Fuentes** como notas al pie (`[^nombre]`), con enlace y fecha de consulta cuando la página puede cambiar.
@@ -40,4 +40,4 @@ Web y presentaciones de los cursos de inteligencia artificial para docentes de s
 
 - No se hace *push* sin que lo pida quien mantiene el repositorio. Un *push* a `master` publica la web.
 - No se versionan capturas con datos personales, ni la salida del build (`engine/_build/`) ni las capturas de `engine/_screens/`.
-- La versión anterior de la web (Docusaurus) está en la rama `legacy-docusaurus`. Las rutas que publicaba están en `engine/legacy-urls.txt`, y `engine/redirects.yaml` dice adónde va cada una. Si se renombra o se mueve una página, o cambia un título enlazado allí con `#ancla`, se actualiza su destino en ese fichero: el *build* falla si no existe.
+- La versión anterior de la web (Docusaurus) está en la rama `legacy-docusaurus`. Las rutas que publicaba están en `engine/legacy-urls.txt`, junto con las de las páginas de la web nueva que se retiraron después, y `engine/redirects.yaml` dice adónde va cada una. Si se renombra, se mueve o se retira una página, o cambia un título enlazado allí con `#ancla`, se actualiza su destino en ese fichero: el *build* falla si no existe.

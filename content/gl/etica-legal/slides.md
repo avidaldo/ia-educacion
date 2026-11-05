@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/etica-legal/slides.md: "f0b784868291c80749e054d3f257016154f6f4ad"
+  es/etica-legal/slides.md: "326cfbd4d020bc2594f71640681fb2c4204988e6"
 ---
 
 <!-- .slide: id="ley-o-prudencia" class="statement" -->
@@ -61,6 +61,34 @@ Co asistente melloraban un 48 % na práctica. Cun asistente configurado para dar
 
 ---
 
+<!-- .slide: id="etapas" class="table" -->
+## O nesgo entra por unha etapa, e en cada unha decide alguén
+
+| Etapa | A decisión humana |
+| --- | --- |
+| Histórica | Usar o pasado para decidir sobre o futuro |
+| Representación | Que mostra se recolle |
+| Medición | Que se decide medir |
+| Avaliación | Con quen se comproba |
+| Despregamento | Para que se usa |
+
+Notas:
+Cinco das sete fontes de dano de Suresh e Guttag (2021). «A IA ten nesgos» describe mal o problema: o nesgo entra nunha etapa concreta, e en cada etapa hai unha decisión humana. O importante para un docente é que non se ve nunha resposta solta: aparece ao medir o erro por grupos.
+
+---
+
+<!-- .slide: id="gasto-sanitario" class="big-number" -->
+## Medir o gasto en lugar da necesidade
+
+**46,5 %** de pacientes negros con atención adicional, en lugar do 17,7 %, se o algoritmo non predixese o gasto.
+
+Obermeyer et al., Science 2019.
+
+Notas:
+O algoritmo predicía o gasto sanitario e non a enfermidade. Como, por un acceso desigual á atención, se gasta menos en atender os pacientes negros, a igual puntuación estaban bastante máis enfermos. O modelo predicía ben o que se lle pediu: o que estaba mal era a pregunta.
+
+---
+
 <!-- .slide: id="gender-shades" class="image-full" -->
 ![Gráfico de barras en tres paneis (Microsoft, Face++ e IBM). Nos tres, as mulleres de pel escura teñen con diferenza a maior porcentaxe de erros: 20,8 %, 34,5 % e 34,7 %. Os homes de pel clara, a menor: 0,0 %, 0,8 % e 0,3 %.](../../assets/etica-legal/gender-shades.svg)
 
@@ -77,7 +105,34 @@ O nesgo non se ve nunha resposta solta: aparece ao medir o erro por grupos. Tres
 Koenecke et al., PNAS 2020: cinco sistemas comerciais.
 
 Notas:
-Mesmo cando dicían exactamente as mesmas frases. Con alumnado de acentos, variedades ou linguas pouco representadas, revisa a transcrición antes de dala por boa.
+Mesmo cando dicían exactamente as mesmas frases. Con alumnado de acentos, variedades ou linguas pouco representadas, revisa a transcrición antes de dala por boa. Este caso e o anterior son da etapa de avaliación: os sistemas estaban no mercado cun erro moi distinto segundo o grupo, e só se viu ao medilo.
+
+---
+
+<!-- .slide: id="regla-programada" class="statement" -->
+## Unha regra programada non é un nesgo aprendido
+
+iTutorGroup rexeitaba as candidatas de 55 anos ou máis porque alguén o programou así (EEOC, 2023).
+
+Notas:
+E os candidatos de 60 ou máis: máis de 200 persoas cualificadas descartadas. Acordou pagar 365 000 dólares. A miúdo cítase como un caso de discriminación por IA, pero non había ningún modelo que aprendese nada. A presidenta da EEOC: «mesmo cando a tecnoloxía automatiza a discriminación, o empregador segue sendo responsable». Antes de atribuírlle algo á «IA», preguntar que se decidiu e quen o decidiu.
+
+---
+
+<!-- .slide: id="quien-responde" class="cards" -->
+## Quen responde
+
+### Obriga legal
+Do sistema, quen o desenvolve; do seu uso, quen o desprega.
+
+### Recomendación institucional
+«Cando unha IA erra… a responsabilidade é da persoa que usou a IA!» (Xunta).
+
+### Boa práctica
+Deixa constancia de que usaches, para que e como o revisaches.
+
+Notas:
+A regra da Xunta é exacta para o que fai cada docente cunha ferramenta: o que usas, revísalo e respondes diso. Pero non é todo o reparto: o Regulamento de IA reparte as obrigas entre quen desenvolve o sistema e quen o desprega, o RXPD dá dereito a non quedar suxeito a unha decisión só automatizada, e na administración galega unha actuación apoiada en IA necesita a validación dunha persoa.
 
 ---
 
@@ -99,7 +154,7 @@ Nomes, notas, informes ou fotos nun *chatbot* con conta persoal.
 Ferramentas contratadas pola administración, ou casos inventados ou anonimizados de verdade.
 
 Notas:
-A LOE habilita o centro a tratar os datos que precisa, con seguridade, confidencialidade e deber de sixilo do profesorado. Un terceiro que trate eses datos ten que ser un encargado con contrato (art. 28 do RXPD). Anonimizar de verdade: quitar o nome non abonda se a combinación de datos identifica a persoa.
+A LOE habilita o centro a tratar os datos que precisa, con seguridade, confidencialidade e deber de sixilo do profesorado. Un terceiro que trate eses datos ten que ser un encargado con contrato (art. 28 do RXPD). Anonimizar de verdade: quitar o nome non abonda se a combinación de datos identifica a persoa. Como facelo con traballos, notas e informes está no módulo Datos do alumnado.
 
 ---
 
@@ -208,13 +263,6 @@ Así o anuncia a Xunta para a Lei de educación dixital, no Parlamento desde xul
 
 Notas:
 Tamén prohibiría as decisións baseadas só en IA, o control automatizado do comportamento ou o rendemento, a identificación de condicións como o TEA ou o TDAH e o recoñecemento facial. É un texto en tramitación: pode cambiar.
-
----
-
-<!-- .slide: id="anexo-xunta" class="statement" -->
-## Todos os temas da formación da Xunta están cubertos
-
-O anexo percórreos, coas súas correccións e as novidades de 2026.
 
 ---
 

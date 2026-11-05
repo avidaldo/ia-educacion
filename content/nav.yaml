@@ -20,7 +20,8 @@ sections:
       - n8n
   - id: marco
     modules:
-      - etica-legal: [normativa, anexo-formacion-xunta]
+      - etica-legal: [normativa]
+      - datos-alumnado
   - id: recursos
     modules:
       - recursos

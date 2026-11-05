@@ -1,4 +1,5 @@
-"""Plans the bridge pages that send each route of the old Docusaurus site to its new address.
+"""Plans the bridge pages that send each old route to its new address: the routes of the Docusaurus site, and
+the pages of this site that were removed later.
 
 engine/legacy-urls.txt lists the old routes and engine/redirects.yaml maps them; build.py writes the pages."""
 

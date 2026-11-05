@@ -1,4 +1,5 @@
-# Where each page of the Docusaurus site went, so that links shared in earlier courses keep working.
+# Where each page of the Docusaurus site went, and each page of this site removed later, so that links shared
+# in earlier courses keep working.
 # Keys are the old routes without their language prefix (engine/legacy-urls.txt lists them all, with prefixes).
 # Values are the new address relative to the language root: a page's path, "presentacion/" or "" for the home
 # page, with an optional #anchor. Old /en/ and /it/ pages go to Spanish, old /gl/ pages to Galician; an old
@@ -29,3 +30,6 @@ docs/recursos/: "recursos/"
 markdown-page/: ""
 presentation/: "presentacion/"
 search/: ""
+# Pages of the new site removed later. The annex on the Xunta training deck (published 2026-10-28, removed in
+# November 2026): its topics are covered in the module itself.
+etica-legal/anexo-formacion-xunta/: "etica-legal/"

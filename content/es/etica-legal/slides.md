@@ -1,8 +1,7 @@
 ---
 derived_from:
-  es/etica-legal/index.md: "e184defadf4e15cc389fc3ce453dc7f24d97e920"
-  es/etica-legal/normativa.md: "7b64fe9222865dcc5465019dd14c0b2292d5f976"
-  es/etica-legal/anexo-formacion-xunta.md: "58116c3480269a5f8bf1efbf3c6c789a8483ae44"
+  es/etica-legal/index.md: "db3aa3a2f6017d855c4ae3ac32aa22e28290e998"
+  es/etica-legal/normativa.md: "6d5f646d9e481932de0bf3c84464af1f99f946de"
 ---
 
 <!-- .slide: id="ley-o-prudencia" class="statement" -->
@@ -63,6 +62,34 @@ Con el asistente mejoraban un 48 % en la práctica. Con un asistente configurado
 
 ---
 
+<!-- .slide: id="etapas" class="table" -->
+## El sesgo entra por una etapa, y en cada una decide alguien
+
+| Etapa | La decisión humana |
+| --- | --- |
+| Histórica | Usar el pasado para decidir sobre el futuro |
+| Representación | Qué muestra se recoge |
+| Medición | Qué se decide medir |
+| Evaluación | Con quién se comprueba |
+| Despliegue | Para qué se usa |
+
+Notas:
+Cinco de las siete fuentes de daño de Suresh y Guttag (2021). «La IA tiene sesgos» describe mal el problema: el sesgo entra en una etapa concreta, y en cada etapa hay una decisión humana. Lo importante para un docente es que no se ve en una respuesta suelta: aparece al medir el error por grupos.
+
+---
+
+<!-- .slide: id="gasto-sanitario" class="big-number" -->
+## Medir el gasto en lugar de la necesidad
+
+**46,5 %** de pacientes negros con atención adicional, en lugar del 17,7 %, si el algoritmo no hubiera predicho el gasto.
+
+Obermeyer et al., Science 2019.
+
+Notas:
+El algoritmo predecía el gasto sanitario y no la enfermedad. Como, por un acceso desigual a la atención, se gasta menos en atender a los pacientes negros, a igual puntuación estaban bastante más enfermos. El modelo predecía bien lo que se le pidió: lo que estaba mal era la pregunta.
+
+---
+
 <!-- .slide: id="gender-shades" class="image-full" -->
 ![Gráfico de barras en tres paneles (Microsoft, Face++ e IBM). En los tres, las mujeres de piel oscura tienen con diferencia el mayor porcentaje de errores: 20,8 %, 34,5 % y 34,7 %. Los hombres de piel clara, el menor: 0,0 %, 0,8 % y 0,3 %.](../../assets/etica-legal/gender-shades.svg)
 
@@ -79,7 +106,34 @@ El sesgo no se ve en una respuesta suelta: aparece al medir el error por grupos.
 Koenecke et al., PNAS 2020: cinco sistemas comerciales.
 
 Notas:
-Incluso cuando decían exactamente las mismas frases. Con alumnado de acentos, variedades o lenguas poco representadas, revisa la transcripción antes de darla por buena.
+Incluso cuando decían exactamente las mismas frases. Con alumnado de acentos, variedades o lenguas poco representadas, revisa la transcripción antes de darla por buena. Este caso y el anterior son de la etapa de evaluación: los sistemas estaban en el mercado con un error muy distinto según el grupo, y solo se vio al medirlo.
+
+---
+
+<!-- .slide: id="regla-programada" class="statement" -->
+## Una regla programada no es un sesgo aprendido
+
+iTutorGroup rechazaba a las candidatas de 55 años o más porque alguien lo programó así (EEOC, 2023).
+
+Notas:
+Y a los candidatos de 60 o más: más de 200 personas cualificadas descartadas. Acordó pagar 365 000 dólares. A menudo se cita como un caso de discriminación por IA, pero no había ningún modelo que aprendiera nada. La presidenta de la EEOC: «incluso cuando la tecnología automatiza la discriminación, el empleador sigue siendo responsable». Antes de atribuir algo a «la IA», preguntar qué se decidió y quién lo decidió.
+
+---
+
+<!-- .slide: id="quien-responde" class="cards" -->
+## Quién responde
+
+### Obligación legal
+Del sistema, quien lo desarrolla; de su uso, quien lo despliega.
+
+### Recomendación institucional
+«Cando unha IA erra… a responsabilidade é da persoa que usou a IA!» (Xunta).
+
+### Buena práctica
+Deja constancia de qué usaste, para qué y cómo lo revisaste.
+
+Notas:
+La regla de la Xunta es exacta para lo que hace cada docente con una herramienta: lo que usas, lo revisas y respondes de ello. Pero no es todo el reparto: el Reglamento de IA reparte las obligaciones entre quien desarrolla el sistema y quien lo despliega, el RGPD da derecho a no quedar sujeto a una decisión solo automatizada, y en la administración gallega una actuación apoyada en IA necesita la validación de una persona.
 
 ---
 
@@ -101,7 +155,7 @@ Nombres, notas, informes o fotos en un *chatbot* con cuenta personal.
 Herramientas contratadas por la administración, o casos inventados o anonimizados de verdad.
 
 Notas:
-La LOE habilita al centro a tratar los datos que necesita, con seguridad, confidencialidad y deber de sigilo del profesorado. Un tercero que trate esos datos tiene que ser un encargado con contrato (art. 28 del RGPD). Anonimizar de verdad: quitar el nombre no basta si la combinación de datos identifica a la persona.
+La LOE habilita al centro a tratar los datos que necesita, con seguridad, confidencialidad y deber de sigilo del profesorado. Un tercero que trate esos datos tiene que ser un encargado con contrato (art. 28 del RGPD). Anonimizar de verdad: quitar el nombre no basta si la combinación de datos identifica a la persona. Cómo hacerlo con trabajos, notas e informes está en el módulo Datos del alumnado.
 
 ---
 
@@ -210,13 +264,6 @@ Así lo anuncia la Xunta para la Lei de educación dixital, en el Parlamento des
 
 Notas:
 También prohibiría las decisiones basadas solo en IA, el control automatizado del comportamiento o el rendimiento, la identificación de condiciones como el TEA o el TDAH y el reconocimiento facial. Es un texto en tramitación: puede cambiar.
-
----
-
-<!-- .slide: id="anexo-xunta" class="statement" -->
-## Todos los temas de la formación de la Xunta están cubiertos
-
-El anexo los recorre, con sus correcciones y las novedades de 2026.
 
 ---
 

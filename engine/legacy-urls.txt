@@ -1,4 +1,5 @@
-# Routes published by the Docusaurus site (origin/gh-pages @ 46b4747, 2026-04-30), relative to /ia-educacion/.
+# Routes published by the Docusaurus site (origin/gh-pages @ 46b4747, 2026-04-30), relative to /ia-educacion/,
+# followed by the pages of the new site that were removed later.
 # Every one must keep resolving after the switch: engine/redirects.yaml maps them, and the checker enforces it.
 /
 docs/casos-uso/
@@ -92,3 +93,6 @@ it/search/
 markdown-page/
 presentation/
 search/
+# Pages of the new site removed later.
+etica-legal/anexo-formacion-xunta/
+gl/etica-legal/anexo-formacion-xunta/
