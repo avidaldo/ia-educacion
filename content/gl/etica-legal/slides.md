@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/etica-legal/slides.md: "0c42e0e383606e1647c4a02a0cad72b7240ca0e9"
+  es/etica-legal/slides.md: "6a8cff079c56c50615f73b0e011a0815be1c6af7"
 ---
 
 <!-- .slide: id="ley-o-prudencia" class="statement" -->
@@ -35,29 +35,29 @@ Distinguilas evita tratar como prohibido o que só é prudente, ou como opcional
 3. **Normativa**: permíteo a lei?
 
 Notas:
-Son os filtros da formación da Xunta (p. 12). A orde importa: algo perfectamente legal pode non ter sentido nunha tarefa, e algo con moito sentido pode ser ilegal con datos do alumnado.
-
----
-
-<!-- .slide: id="residuo" class="statement" -->
-## Xerada con IA, feita con IA, avaliada con IA: ninguén aprende
-
-O que queda é «o residuo do pensamento».
-
-Notas:
-A cadea é da formación da Xunta (pp. 16–19): sen desenvolvemento profesional do docente e sen aprendizaxe do alumnado.
+A orde importa: algo perfectamente legal pode non ter sentido nunha tarefa, e algo con moito sentido pode ser ilegal con datos do alumnado.
 
 ---
 
 <!-- .slide: id="ensayo" class="big-number" -->
-## A evidencia: practicar con IA sen restricións empeora o exame
+## Render máis con IA non é aprender máis
 
-**−17 %** no exame sen asistente, fronte a quen nunca o tivo.
+**−17 %** no exame sen axuda, tras practicar cun asistente sen restricións.
 
-Bastani et al., PNAS 2025: case mil estudantes de secundaria.
+Bastani et al., PNAS 2025: un instituto de Turquía, case mil estudantes.
 
 Notas:
-Co asistente melloraban un 48 % na práctica. Cun asistente configurado para dar pistas en lugar de solucións, o efecto negativo desaparecía en boa parte: de aí os modos titor e os bots educativos.
+Co asistente melloraban un 48 % na práctica; cun configurado para dar pistas en lugar de solucións, o efecto negativo desaparecía en boa parte: de aí os modos titor e os bots educativos. O acceso repartiuse ao chou, así que a ferramenta causou a diferenza, pero alí: unha materia, un centro, un país, e a curto prazo. Para xeneralizar fan falta réplicas.
+
+---
+
+<!-- .slide: id="pregunta-abierta" class="statement" -->
+## Que debe saber facer o alumnado sen IA decídeo cada especialidade
+
+E canto usala para avaliar: preguntas aínda abertas.
+
+Notas:
+Nun ciclo de informática, traballar cun asistente pode ser parte da competencia profesional; en matemáticas, o obxectivo pode ser razoar sen axuda. A nota decídea sempre o docente. Boa práctica: tratar cada decisión como unha hipótese e comprobar despois que sabe facer o alumnado sen a ferramenta.
 
 ---
 
@@ -126,13 +126,13 @@ E os candidatos de 60 ou máis: máis de 200 persoas cualificadas descartadas. A
 Do sistema, quen o desenvolve; do seu uso, quen o desprega.
 
 ### Recomendación institucional
-«Cando unha IA erra… a responsabilidade é da persoa que usou a IA!» (Xunta).
+Cando unha IA erra, responde quen a usou.
 
 ### Boa práctica
 Deixa constancia de que usaches, para que e como o revisaches.
 
 Notas:
-A regra da Xunta é exacta para o que fai cada docente cunha ferramenta: o que usas, revísalo e respondes diso. Pero non é todo o reparto: o Regulamento de IA reparte as obrigas entre quen desenvolve o sistema e quen o desprega, o RXPD dá dereito a non quedar suxeito a unha decisión só automatizada, e na administración galega unha actuación apoiada en IA necesita a validación dunha persoa.
+Esa regra é exacta para o que fai cada docente cunha ferramenta: o que usas, revísalo e respondes diso. Pero non é todo o reparto: o Regulamento de IA reparte as obrigas entre quen desenvolve o sistema e quen o desprega, o RXPD dá dereito a non quedar suxeito a unha decisión só automatizada, e na administración galega unha actuación apoiada en IA necesita a validación dunha persoa.
 
 ---
 
@@ -150,7 +150,7 @@ Notas:
 ## Os nesgos tamén son nosos: revisamos menos o que confirma o que agardabamos
 
 Notas:
-A formación da Xunta insiste niso (pp. 3–7): nesgo de confirmación e exceso de confianza no que soa seguro.
+Sobre todo, o nesgo de confirmación e o exceso de confianza no que soa seguro.
 
 ---
 

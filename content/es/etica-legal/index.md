@@ -22,7 +22,7 @@ Distinguirlas evita dos errores frecuentes: tratar como prohibido lo que solo es
 
 ## Tres filtros antes de usar una herramienta
 
-La formación de la Xunta propone tres filtros, en este orden:[^xunta-filtros]
+Hay tres preguntas que hacerse, en este orden:[^xunta-filtros]
 
 1. **Pertinencia.** ¿Aporta algo al aprendizaje o a mi trabajo que no consiga igual de bien de otra forma? Si la respuesta es no, no hace falta pasar a los demás.
 2. **Ética.** ¿Respeta a las personas afectadas: su autonomía, su privacidad, un trato justo? Las directrices de la Comisión Europea para docentes, revisadas en 2026, lo concretan en preguntas sobre supervisión humana, transparencia, inclusión, equidad, bienestar, privacidad, solidez técnica y rendición de cuentas.[^directrices]
@@ -30,13 +30,21 @@ La formación de la Xunta propone tres filtros, en este orden:[^xunta-filtros]
 
 El orden importa. Una herramienta perfectamente legal puede no tener sentido en una tarea, y una que tiene mucho sentido puede ser ilegal con datos del alumnado.
 
-## El residuo del pensamiento
+## Aprender con IA: una pregunta abierta
 
-La formación de la Xunta resume el riesgo pedagógico central en una cadena: una tarea **generada con IA**, **realizada con IA** y **evaluada con IA** deja al docente sin desarrollo profesional y al alumnado sin aprendizaje. Lo que queda, dice, es «o residuo do pensamento».[^xunta-residuo]
+Cuánto conviene usar la IA para aprender, y cuánto para evaluar, no tiene todavía una respuesta general. Lo que sí hay son unos pocos estudios bien diseñados que enseñan qué mirar.
 
-No es solo una intuición. En un ensayo controlado con casi mil estudiantes de matemáticas de un instituto de Turquía, quienes practicaron con un asistente tipo ChatGPT sin restricciones mejoraron un 48 % en los ejercicios de práctica, pero en el examen posterior, ya sin asistente, sacaron un 17 % menos que quienes nunca lo tuvieron. Con un asistente configurado para dar pistas en lugar de soluciones, ese efecto negativo desapareció en gran parte.[^bastani] Un estudio con programadores apunta en la misma dirección: quien usa la IA para que le explique aprende más que quien la usa para que le dé el resultado (se ve en [*Vibe coding*](../vibe-coding/index.md#en-los-ciclos-de-informática)).
+El más citado es un ensayo con casi mil estudiantes de matemáticas de un instituto de Turquía, en el curso 2023-2024. El acceso a un asistente basado en GPT-4 se repartió al azar, y eso permite atribuir a la herramienta las diferencias entre grupos. Quienes practicaron con el asistente sin restricciones mejoraron un 48 % en los ejercicios de práctica, pero en el examen posterior, ya sin él, sacaron un 17 % menos que quienes nunca lo tuvieron. Con un asistente configurado para dar pistas en lugar de soluciones, ese efecto negativo desapareció en gran parte.[^bastani] Un estudio con 52 programadores encontró algo parecido: quienes usaron un asistente para aprender una biblioteca nueva sacaron peor nota en un cuestionario posterior que quienes no lo usaron (se ve en [*Vibe coding*](../vibe-coding/index.md#en-los-ciclos-de-informática)).
 
-**Buena práctica.** Diseña las tareas para que el pensamiento ocurra en algún sitio visible: el proceso, la explicación oral, la versión corregida, la decisión razonada. Y si el alumnado va a usar un asistente, que sea uno configurado para guiar y no para resolver, como los [modos tutor y los bots educativos](../bots-educativos/index.md).
+La lección que dejan es una distinción: **rendir más con la herramienta no es aprender más**. Lo aprendido es lo que queda cuando se retira. Pero estos estudios no bastan para establecer una regla general:
+
+- **Cada uno es un solo contexto.** Repartir al azar es la mejor forma de saber si la herramienta causó la diferencia, pero solo en las condiciones del estudio: una materia, un centro, un país, una versión del modelo y un momento en que estas herramientas eran nuevas. Para generalizar hacen falta réplicas en otras materias, edades y centros.
+- **Miden el corto plazo.** Los dos comprueban lo que queda poco después de practicar, no lo que pasa a lo largo de un curso.
+- **No todas sus conclusiones tienen la misma solidez.** En el de Turquía, el tipo de asistente (con soluciones o con pistas) también se repartió al azar. En el de programadores, en cambio, cada cual eligió cómo usar la IA: los que le pedían explicaciones puntuaron mejor que los que solo le pedían código, pero eran grupos de entre 2 y 7 personas, y quien pide explicaciones quizá es también quien más quiere aprender. Los propios autores advierten que esa comparación no establece una relación causal.[^anthropic-aprendizaje]
+
+Hay además una pregunta previa que ningún estudio responde por ti: **qué tiene que saber hacer el alumnado sin la herramienta**. Depende de la especialidad y del resultado de aprendizaje. En un ciclo de informática, trabajar con un asistente puede formar parte de la competencia profesional; en matemáticas, el objetivo puede ser justo el contrario, razonar sin ayuda. Con la evaluación pasa lo mismo: la nota la decides tú ([Datos del alumnado](../datos-alumnado/index.md#retroalimentación-sobre-una-redacción-o-un-trabajo)), pero cuánto puede ayudarte la IA a preparar correcciones y comentarios sin que pierdas lo que aprendes corrigiendo es otra pregunta abierta.[^xunta-residuo] Son dudas que cada especialidad irá resolviendo con la práctica docente y con más investigación.
+
+**Buena práctica.** Trata cada decisión como una hipótesis: si permites la IA en una tarea, comprueba después qué sabe hacer el alumnado sin ella. Diseña las tareas para que el pensamiento quede a la vista (el proceso, la explicación oral, la versión corregida, la decisión razonada). Y si el alumnado va a usar un asistente, que sea uno configurado para guiar y no para resolver, como los [modos tutor y los bots educativos](../bots-educativos/index.md).
 
 ## Sesgos
 
@@ -83,7 +91,7 @@ Antes de atribuir algo a «la IA», conviene preguntar qué se decidió y quién
 Que el sesgo entre por una decisión humana no quiere decir que responda siempre la misma persona:
 
 - **Obligación legal.** El Reglamento de IA reparte las obligaciones entre quien desarrolla el sistema y quien lo despliega ([quién es quién](normativa.md#quién-es-quién)). Toda persona tiene derecho a no ser objeto de una decisión basada únicamente en un tratamiento automatizado que le afecte significativamente ([artículo 22 del RGPD](normativa.md#decisiones-automatizadas-y-evaluaciones-de-impacto)). Y en la administración gallega, una actuación apoyada en IA no es una decisión administrativa sin la validación de la persona titular del órgano competente ([la ley gallega de IA](normativa.md#la-ley-gallega-de-ia)).
-- **Recomendación institucional.** La formación de la Xunta lo resume como norma de conducta: «Cando unha IA erra… a responsabilidade é da persoa que usou a IA!».[^xunta-nesgos] Para lo que haces tú con una herramienta es exactamente así: lo que usas, lo revisas y respondes de ello. Pero no es todo el reparto: del sistema responde quien lo construye, y de implantarlo, la administración que lo despliega.
+- **Recomendación institucional.** Si una IA se equivoca, la responsabilidad es de la persona que la usó.[^xunta-nesgos] Para lo que haces tú con una herramienta es exactamente así: lo que usas, lo revisas y respondes de ello. Pero no es todo el reparto: del sistema responde quien lo construye, y de implantarlo, la administración que lo despliega.
 - **Buena práctica.** Deja constancia de qué herramienta usaste, para qué y cómo revisaste el resultado. Es lo que te permite responder de ello.
 
 La idea de fondo no es nueva. Una página atribuida a una formación interna de IBM de 1979 lo resumía así: «Un ordenador nunca puede rendir cuentas; por tanto, un ordenador nunca debe tomar una decisión de gestión» (traducción propia).[^ibm-1979] Décadas después, el RGPD y la ley gallega de IA recogen esa misma idea, cada uno a su manera: el derecho a no quedar sujeto a una decisión solo automatizada, y la validación obligatoria por una persona. Ninguno prohíbe usar la herramienta; exigen que alguien decida y responda de la decisión.
@@ -92,7 +100,7 @@ La idea de fondo no es nueva. Una página atribuida a una formación interna de 
 
 ### Los sesgos de quien usa la herramienta
 
-La formación de la Xunta insiste en algo que se olvida a menudo: los humanos también tenemos sesgos, y los más relevantes aquí son el de confirmación y la tendencia a fiarnos de lo que suena seguro.[^xunta-nesgos] Una respuesta bien redactada que coincide con lo que esperábamos es justo la que menos revisamos. De ahí sale el **exceso de confianza** que la propia formación incluye entre los riesgos.
+Se olvida a menudo que los humanos también tenemos sesgos, y que los más relevantes aquí son el de confirmación y la tendencia a fiarnos de lo que suena seguro.[^xunta-nesgos] Una respuesta bien redactada que coincide con lo que esperábamos es justo la que menos revisamos. De ahí sale el **exceso de confianza**, uno de los [riesgos de la IA en la educación](#oportunidades-y-riesgos).
 
 **Buena práctica.** Revisa con más cuidado las respuestas que confirman lo que ya pensabas, y prueba las herramientas con casos de alumnado distinto antes de usarlas con un grupo.
 
@@ -111,7 +119,7 @@ Una demostración útil en clase: un modelo pequeño ejecutado en el propio orde
 **Los detectores de texto generado por IA no son fiables.** OpenAI retiró el suyo en julio de 2023 «a causa de su bajo índice de precisión»: solo identificaba el 26 % de los textos generados por IA y marcaba como generados el 9 % de los escritos por personas.[^openai-clasificador] Un estudio con siete detectores encontró que clasificaban como generados por IA más de la mitad de las redacciones escritas por estudiantes de inglés como lengua extranjera, con una tasa media de falsos positivos del 61 %: penalizan precisamente a quien escribe con un vocabulario más sencillo.[^liang]
 
 - **Buena práctica.** Nunca sancionar por el resultado de un detector. Como mucho, sirve para iniciar una conversación.
-- **Buena práctica.** Reformular la evaluación, como pide la propia formación de la Xunta:[^xunta-conclusiones] valorar el proceso, pedir explicaciones orales, trabajar en clase las partes clave, pedir las versiones intermedias.
+- **Buena práctica.** Reformular la evaluación:[^xunta-conclusiones] valorar el proceso, pedir explicaciones orales, trabajar en clase las partes clave, pedir las versiones intermedias.
 - **Recomendación institucional.** Pedir al alumnado que declare cómo ha usado la IA y enseñarle a citarla. Es una de las preguntas que las directrices europeas proponen a los docentes.[^directrices]
 - **Buena práctica.** Indicar en tus materiales qué partes se han generado con IA. Ojo: el Reglamento de IA solo obliga a etiquetar las ultrasuplantaciones (*deepfakes*) y los textos publicados para informar al público sobre asuntos de interés público ([Normativa](normativa.md#transparencia)), no un material de clase normal.
 
@@ -125,7 +133,7 @@ Las cifras públicas más precisas son pocas y vienen de los propios proveedores
 
 ## Oportunidades y riesgos
 
-La formación de la Xunta enumera las oportunidades y los riesgos de la IA en la educación, y reconoce que todavía faltan estudios sistemáticos e imparciales sobre sus efectos.[^xunta-conclusiones] Esta es la correspondencia de cada riesgo con lo que se trata en el curso:
+La IA en la educación trae oportunidades y riesgos, y todavía faltan estudios sistemáticos e imparciales sobre sus efectos.[^xunta-conclusiones] Esta tabla recoge cada riesgo, qué hacer y dónde se trata en el curso:
 
 | Riesgo | Qué hacer | Dónde se trata |
 | --- | --- | --- |
@@ -133,8 +141,8 @@ La formación de la Xunta enumera las oportunidades y los riesgos de la IA en la
 | Vigilancia | Nada de sistemas que infieran emociones en el centro: está prohibido | [Normativa](normativa.md#prácticas-prohibidas) |
 | Sesgos | Medir por grupos; revisar transcripciones y clasificaciones | [Sesgos](#sesgos) |
 | Efecto filtro | Contrastar con fuentes; pedir las fuentes | [Chatbots](../chatbots/index.md#buscar-en-la-web-e-investigar-a-fondo) |
-| Desconexión social | Que la IA no sustituya el trabajo en grupo ni la tutoría | [El residuo del pensamiento](#el-residuo-del-pensamiento) |
-| Efectos en las capacidades | Tareas en las que el pensamiento sea visible | [El residuo del pensamiento](#el-residuo-del-pensamiento) |
+| Desconexión social | Que la IA no sustituya el trabajo en grupo ni la tutoría | [Aprender con IA](#aprender-con-ia-una-pregunta-abierta) |
+| Efectos en las capacidades | Tareas en las que el pensamiento sea visible | [Aprender con IA](#aprender-con-ia-una-pregunta-abierta) |
 | Inexactitudes y exceso de confianza | Comprobar en la fuente; desconfiar de lo que confirma lo esperado | [Cómo funciona](../intro-ia/funcionamiento.md#alucinaciones-plausible-no-es-verdadero) |
 | Derechos de autor y plagio | Evaluar el proceso; declarar el uso de IA | [Autoría y evaluación](#autoría-y-evaluación) |
 | Comercialización de la educación | Preferir herramientas contratadas y recursos abiertos | [Normativa](normativa.md#galicia) |
@@ -152,19 +160,20 @@ La mejor protección del alumnado es entender cómo funcionan estas herramientas
 
 [^xunta-filtros]: Xunta de Galicia, presentación *Intelixencia artificial (Ética e normativa en materia de Educación)*, de Tina Campo Fernández y Fátima Mª García Doval, diciembre de 2025, p. 12.
 [^directrices]: Comisión Europea, [*Guidelines on the ethical use of artificial intelligence and data in teaching and learning for educators*](https://data.europa.eu/doi/10.2766/7967834), edición revisada de 2026, apartado *Guiding questions for educators and school leaders*.
-[^xunta-residuo]: Presentación de la Xunta, pp. 16–19.
+[^xunta-residuo]: Xunta de Galicia, presentación *Intelixencia artificial (Ética e normativa en materia de Educación)*, de Tina Campo Fernández y Fátima Mª García Doval, diciembre de 2025, pp. 16–19.
 [^bastani]: Bastani et al., [*Generative AI without guardrails can harm learning: Evidence from high school mathematics*](https://doi.org/10.1073/pnas.2422633122), PNAS, 2025.
+[^anthropic-aprendizaje]: Anthropic, [*How AI assistance impacts the formation of coding skills*](https://www.anthropic.com/research/AI-assistance-coding-skills), 29 de enero de 2026.
 [^gender-shades]: Buolamwini y Gebru, [*Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification*](https://proceedings.mlr.press/v81/buolamwini18a.html), 2018, tabla 4. Gráfico propio con sus datos.
 [^suresh]: Suresh y Guttag, [*A Framework for Understanding Sources of Harm throughout the Machine Learning Life Cycle*](https://doi.org/10.1145/3465416.3483305), EAAMO '21, 2021, apartado 3.
 [^obermeyer]: Obermeyer, Powers, Vogeli y Mullainathan, [*Dissecting racial bias in an algorithm used to manage the health of populations*](https://doi.org/10.1126/science.aax2342), *Science*, 2019.
 [^koenecke]: Koenecke et al., [*Racial disparities in automated speech recognition*](https://doi.org/10.1073/pnas.1915768117), PNAS, 2020.
 [^eeoc]: EEOC, [*iTutorGroup to Pay $365,000 to Settle EEOC Discriminatory Hiring Suit*](https://www.eeoc.gov/newsroom/itutorgroup-pay-365000-settle-eeoc-discriminatory-hiring-suit), 11 de septiembre de 2023; la cita de su presidenta es de la [nota de prensa de la demanda](https://www.eeoc.gov/newsroom/eeoc-sues-itutorgroup-age-discrimination), 5 de mayo de 2022.
-[^xunta-nesgos]: Presentación de la Xunta, pp. 3–7 y 15.
+[^xunta-nesgos]: Xunta de Galicia, presentación *Intelixencia artificial (Ética e normativa en materia de Educación)*, de Tina Campo Fernández y Fátima Mª García Doval, diciembre de 2025, pp. 3–7 y 15.
 [^ibm-1979]: La imagen circula desde febrero de 2017 y no se ha localizado el original: el archivo de IBM la buscó sin encontrarla. Simon Willison, [*A computer can never be held accountable*](https://simonwillison.net/2025/Feb/3/a-computer-can-never-be-held-accountable/), consultado el 9 de noviembre de 2026.
 [^loe]: Ley Orgánica 2/2006, de Educación, [disposición adicional vigesimotercera](https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899#davigesimotercera).
 [^openai-clasificador]: OpenAI, [*Nuevo clasificador de IA para detectar textos generados por IA*](https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/), nota añadida el 20 de julio de 2023.
 [^liang]: Liang et al., [*GPT detectors are biased against non-native English writers*](https://arxiv.org/abs/2304.02819), Patterns, 2023.
-[^xunta-conclusiones]: Presentación de la Xunta, pp. 70–71.
+[^xunta-conclusiones]: Xunta de Galicia, presentación *Intelixencia artificial (Ética e normativa en materia de Educación)*, de Tina Campo Fernández y Fátima Mª García Doval, diciembre de 2025, pp. 70–71.
 [^google-energia]: Elsworth et al. (Google), [*Measuring the environmental impact of delivering AI at Google Scale*](https://arxiv.org/abs/2508.15734), agosto de 2025.
 [^iea]: Agencia Internacional de la Energía, [*Energy and AI*](https://www.iea.org/reports/energy-and-ai/executive-summary), 2025.
 [^benestar]: Xunta de Galicia, [*Plan integral de benestar dixital de Galicia*](https://ficheiros-web.xunta.gal/plans/educacion-ciencia/plan-integral-benestar-dixital.pdf), 2026, actuaciones 18 y 19.

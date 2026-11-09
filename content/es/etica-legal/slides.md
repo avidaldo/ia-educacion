@@ -1,7 +1,7 @@
 ---
 derived_from:
-  es/etica-legal/index.md: "e37791a3326f09b0cbdce643c2c226eebae8a6f2"
-  es/etica-legal/normativa.md: "7ae49d1dea1555a7c7676f7d8ab12348bd6b1457"
+  es/etica-legal/index.md: "9c06799d7a3e50b84ac711e5c49c0c6044dc1dbe"
+  es/etica-legal/normativa.md: "f0f7d0a212880d50cd70e6eef0224909575255ca"
 ---
 
 <!-- .slide: id="ley-o-prudencia" class="statement" -->
@@ -36,29 +36,29 @@ Distinguirlas evita tratar como prohibido lo que solo es prudente, o como opcion
 3. **Normativa**: ¿lo permite la ley?
 
 Notas:
-Son los filtros de la formación de la Xunta (p. 12). El orden importa: algo perfectamente legal puede no tener sentido en una tarea, y algo con mucho sentido puede ser ilegal con datos del alumnado.
-
----
-
-<!-- .slide: id="residuo" class="statement" -->
-## Generada con IA, hecha con IA, evaluada con IA: nadie aprende
-
-Lo que queda es «o residuo do pensamento».
-
-Notas:
-La cadena es de la formación de la Xunta (pp. 16–19): sin desarrollo profesional del docente y sin aprendizaje del alumnado.
+El orden importa: algo perfectamente legal puede no tener sentido en una tarea, y algo con mucho sentido puede ser ilegal con datos del alumnado.
 
 ---
 
 <!-- .slide: id="ensayo" class="big-number" -->
-## La evidencia: practicar con IA sin restricciones empeora el examen
+## Rendir más con IA no es aprender más
 
-**−17 %** en el examen sin asistente, frente a quienes nunca lo tuvieron.
+**−17 %** en el examen sin ayuda, tras practicar con un asistente sin restricciones.
 
-Bastani et al., PNAS 2025: casi mil estudiantes de secundaria.
+Bastani et al., PNAS 2025: un instituto de Turquía, casi mil estudiantes.
 
 Notas:
-Con el asistente mejoraban un 48 % en la práctica. Con un asistente configurado para dar pistas en lugar de soluciones, el efecto negativo desaparecía en gran parte: de ahí los modos tutor y los bots educativos.
+Con el asistente mejoraban un 48 % en la práctica; con uno configurado para dar pistas en lugar de soluciones, el efecto negativo desaparecía en gran parte: de ahí los modos tutor y los bots educativos. El acceso se repartió al azar, así que la herramienta causó la diferencia, pero allí: una materia, un centro, un país, y a corto plazo. Para generalizar hacen falta réplicas.
+
+---
+
+<!-- .slide: id="pregunta-abierta" class="statement" -->
+## Qué debe saber hacer el alumnado sin IA lo decide cada especialidad
+
+Y cuánto usarla para evaluar: preguntas todavía abiertas.
+
+Notas:
+En un ciclo de informática, trabajar con un asistente puede ser parte de la competencia profesional; en matemáticas, el objetivo puede ser razonar sin ayuda. La nota la decide siempre el docente. Buena práctica: tratar cada decisión como una hipótesis y comprobar después qué sabe hacer el alumnado sin la herramienta.
 
 ---
 
@@ -127,13 +127,13 @@ Y a los candidatos de 60 o más: más de 200 personas cualificadas descartadas. 
 Del sistema, quien lo desarrolla; de su uso, quien lo despliega.
 
 ### Recomendación institucional
-«Cando unha IA erra… a responsabilidade é da persoa que usou a IA!» (Xunta).
+Cuando una IA se equivoca, responde quien la usó.
 
 ### Buena práctica
 Deja constancia de qué usaste, para qué y cómo lo revisaste.
 
 Notas:
-La regla de la Xunta es exacta para lo que hace cada docente con una herramienta: lo que usas, lo revisas y respondes de ello. Pero no es todo el reparto: el Reglamento de IA reparte las obligaciones entre quien desarrolla el sistema y quien lo despliega, el RGPD da derecho a no quedar sujeto a una decisión solo automatizada, y en la administración gallega una actuación apoyada en IA necesita la validación de una persona.
+Esa regla es exacta para lo que hace cada docente con una herramienta: lo que usas, lo revisas y respondes de ello. Pero no es todo el reparto: el Reglamento de IA reparte las obligaciones entre quien desarrolla el sistema y quien lo despliega, el RGPD da derecho a no quedar sujeto a una decisión solo automatizada, y en la administración gallega una actuación apoyada en IA necesita la validación de una persona.
 
 ---
 
@@ -151,7 +151,7 @@ Notas:
 ## Los sesgos también son nuestros: revisamos menos lo que confirma lo que esperábamos
 
 Notas:
-La formación de la Xunta insiste en ello (pp. 3–7): sesgo de confirmación y exceso de confianza en lo que suena seguro.
+Sobre todo, el sesgo de confirmación y el exceso de confianza en lo que suena seguro.
 
 ---
 

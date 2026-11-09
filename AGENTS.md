@@ -20,6 +20,7 @@ Web y presentaciones de los cursos de inteligencia artificial para docentes de s
 - Lo técnico que no todos necesitan va en bloques «Para saber más».
 - **Normas:** se citan por artículo, copiando el texto oficial, y cada restricción del módulo de ética indica su origen: obligación legal, recomendación institucional o buena práctica.
 - **Fuentes** como notas al pie (`[^nombre]`), con enlace y fecha de consulta cuando la página puede cambiar.
+- **La web es autocontenida.** El texto no remite a materiales que quien lee no puede consultar («la formación de la Xunta», «según la presentación»): la idea se explica con voz propia y su origen va en la nota al pie. Una fuente sin enlace se cita completa en cada nota (título, autoría, fecha y páginas), porque cada nota se lee suelta.
 
 ## Formato
 
