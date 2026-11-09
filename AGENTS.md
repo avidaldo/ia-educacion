@@ -8,7 +8,7 @@ Web y presentaciones de los cursos de inteligencia artificial para docentes de s
 - **Orden de una actualización:** página en castellano → presentación en castellano (skill `update-slides`) → gallego (skill `sync-translation`). Ambas skills aplican solo lo que cambió, a partir de `uv run engine/provenance.py status` y `diff`.
 - **Los hashes `derived_from` los escribe siempre el script** (`provenance.py stamp`), nunca a mano.
 - **Si una presentación necesita algo que no está en la página**, se añade primero a la página: quien estudia sola solo tiene la web.
-- Antes de dar algo por terminado: `uv run pytest`, `uv run engine/check.py` (0 errores) y, si cambió una presentación, `uv run engine/shoot.py --module <módulo>` (ninguna diapositiva desbordada). Si cambió una página o el tema, `uv run engine/shoot.py --audit --theme both` (cero infracciones de accesibilidad; también corre en CI).
+- Antes de dar algo por terminado: `uv run pytest`, `uv run engine/check.py` (0 errores) y, si cambió una presentación, `uv run engine/build.py --no-search` seguido de `uv run engine/shoot.py --module <módulo>` (ninguna diapositiva desbordada). `shoot.py` fotografía la última construcción de `engine/_build/`, no el contenido actual: sin construir antes, las capturas y la auditoría son de la versión anterior. Si cambió una página o el tema, `uv run engine/shoot.py --audit --theme both` (cero infracciones de accesibilidad; también corre en CI).
 
 ## Público y tono
 

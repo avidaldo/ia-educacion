@@ -46,7 +46,7 @@ En Galicia, o protocolo de protección de datos da Consellería concrétao (**re
 
 ### Datos especialmente protexidos
 
-Algunhas categorías teñen unha protección reforzada: o RXPD prohibe en principio tratar datos que revelen a orixe étnica, as conviccións relixiosas, a saúde ou a orientación sexual, entre outros, agás nos supostos que enumera.[^rgpd] Un informe de necesidades educativas, un diagnóstico ou unha adaptación por motivos de saúde entran aquí: son os últimos datos que deberían acabar nunha ferramenta de IA.
+Algunhas categorías teñen unha protección reforzada: o RXPD prohíbe en principio tratar datos que revelen a orixe étnica, as conviccións relixiosas, a saúde ou a orientación sexual, entre outros, agás nos supostos que enumera.[^rgpd] Un informe de necesidades educativas, un diagnóstico ou unha adaptación por motivos de saúde entran aquí: son os últimos datos que deberían acabar nunha ferramenta de IA.
 
 ### A idade do alumnado
 

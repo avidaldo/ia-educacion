@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/etica-legal/slides.md: "6a8cff079c56c50615f73b0e011a0815be1c6af7"
+  es/etica-legal/slides.md: "b80a689ec2cd0e2ecfe0a7cb5cb6afa7d7252b30"
 ---
 
 <!-- .slide: id="ley-o-prudencia" class="statement" -->
@@ -147,10 +147,10 @@ Notas:
 ---
 
 <!-- .slide: id="sesgo-propio" class="statement" -->
-## Os nesgos tamén son nosos: revisamos menos o que confirma o que agardabamos
+## Os nesgos tamén son nosos: fiámonos do que agardabamos e do que propón a máquina
 
 Notas:
-Sobre todo, o nesgo de confirmación e o exceso de confianza no que soa seguro.
+Nesgo de confirmación e nesgo de automatización. En catro estudos clínicos combinados, cando o sistema de apoio se equivocaba, o risco de decidir mal subía un 26 % (Goddard et al., 2012); a formación e deixar claro quen responde reducíano. Cos modelos de linguaxe, unha dúbida en primeira persoa («non estou seguro, pero…») reduciu o exceso de confianza nun experimento con 404 persoas (Kim et al., 2024), aínda que é un só estudo. O ton seguro non é sinal de acerto.
 
 ---
 

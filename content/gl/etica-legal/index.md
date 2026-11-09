@@ -2,7 +2,7 @@
 title: Ética e normativa
 description: Criterios para decidir cando e como usar a IA no centro, separando o que obriga a lei do que é prudencia, cos nesgos, a privacidade, a autoría e o custo ambiental explicados desde como funciona a tecnoloxía.
 derived_from:
-  es/etica-legal/index.md: "9c06799d7a3e50b84ac711e5c49c0c6044dc1dbe"
+  es/etica-legal/index.md: "5e747dfd51ba0055a72ecc8aadd4b5fa09c4dcf3"
 ---
 
 ## Que é lei e que é prudencia
@@ -100,9 +100,13 @@ A idea de fondo non é nova. Unha páxina atribuída a unha formación interna d
 
 ### Os nesgos de quen usa a ferramenta
 
-Esquécese a miúdo que os humanos tamén temos nesgos, e que os máis relevantes aquí son o de confirmación e a tendencia a fiarnos do que soa seguro.[^xunta-nesgos] Unha resposta ben redactada que coincide co que agardabamos é xusto a que menos revisamos. De aí sae o **exceso de confianza**, un dos [riscos da IA na educación](#oportunidades-y-riesgos).
+Esquécese a miúdo que os humanos tamén temos nesgos, e aquí pesan dous.[^xunta-nesgos] O primeiro é o **nesgo de confirmación**: buscamos e aceptamos con máis facilidade o que coincide co que xa pensabamos, un fenómeno que a psicoloxía documentou en contextos moi distintos.[^nickerson] Unha resposta ben redactada que coincide co que agardabamos é xusto a que menos revisamos.
 
-**Boa práctica.** Revisa con máis coidado as respostas que confirman o que xa pensabas, e proba as ferramentas con casos de alumnado distinto antes de usalas cun grupo.
+O segundo é o **nesgo de automatización**: a tendencia a fiarnos de máis do que propón unha máquina. Unha revisión sistemática de 74 estudos, sobre todo de medicina e aviación, descríbeo con dúas caras: seguir un consello erróneo e non actuar cando o sistema non avisa. En catro estudos clínicos que se puideron combinar, cando o sistema de apoio se equivocaba, o risco de tomar unha decisión incorrecta subía un 26 %. Entre o que o reducía estaban a formación e deixar claro que a persoa responde da decisión, xusto o que pide o apartado anterior.[^goddard]
+
+Cos modelos de linguaxe hai un agravante: unha resposta falsa pode soar tan fluída e segura coma unha correcta ([Como funciona](../intro-ia/funcionamiento.md#alucinaciones-plausible-no-es-verdadero)). Nun experimento prerrexistrado con 404 persoas que respondían preguntas médicas coa axuda dun buscador con IA ficticio, cando as respostas incluían unha expresión de dúbida en primeira persoa («non estou seguro, pero…»), os participantes fiábanse menos delas e acertaban máis: o exceso de confianza nas respostas erróneas baixou, aínda que non desapareceu.[^kim] É un só estudo, nun dominio concreto, pero suxire que o ton da resposta pesa en canto a revisamos. De aí sae o **exceso de confianza**, un dos [riscos da IA na educación](#oportunidades-y-riesgos).
+
+**Boa práctica.** Revisa con máis coidado as respostas que confirman o que xa pensabas, non tomes o ton seguro como sinal de acerto, e proba as ferramentas con casos de alumnado distinto antes de usalas cun grupo.
 
 ## Privacidade: a regra práctica
 
@@ -169,6 +173,9 @@ A mellor protección do alumnado é entender como funcionan estas ferramentas: p
 [^koenecke]: Koenecke et al., [*Racial disparities in automated speech recognition*](https://doi.org/10.1073/pnas.1915768117), PNAS, 2020.
 [^eeoc]: EEOC, [*iTutorGroup to Pay $365,000 to Settle EEOC Discriminatory Hiring Suit*](https://www.eeoc.gov/newsroom/itutorgroup-pay-365000-settle-eeoc-discriminatory-hiring-suit), 11 de setembro de 2023; a cita da súa presidenta é da [nota de prensa da demanda](https://www.eeoc.gov/newsroom/eeoc-sues-itutorgroup-age-discrimination), 5 de maio de 2022.
 [^xunta-nesgos]: Xunta de Galicia, presentación *Intelixencia artificial (Ética e normativa en materia de Educación)*, de Tina Campo Fernández e Fátima Mª García Doval, decembro de 2025, pp. 3–7 e 15.
+[^nickerson]: Nickerson, [*Confirmation bias: A ubiquitous phenomenon in many guises*](https://doi.org/10.1037/1089-2680.2.2.175), *Review of General Psychology*, 1998.
+[^goddard]: Goddard, Roudsari e Wyatt, [*Automation bias: a systematic review of frequency, effect mediators, and mitigators*](https://doi.org/10.1136/amiajnl-2011-000089), *JAMIA*, 2012.
+[^kim]: Kim, Liao, Vorvoreanu, Ballard e Vaughan, [*“I’m Not Sure, But…”: Examining the Impact of Large Language Models’ Uncertainty Expression on User Reliance and Trust*](https://doi.org/10.1145/3630106.3658941), FAccT ’24, 2024.
 [^ibm-1979]: A imaxe circula desde febreiro de 2017 e non se localizou o orixinal: o arquivo de IBM buscouna sen atopala. Simon Willison, [*A computer can never be held accountable*](https://simonwillison.net/2025/Feb/3/a-computer-can-never-be-held-accountable/), consultado o 9 de novembro de 2026.
 [^loe]: Lei orgánica 2/2006, de educación, [disposición adicional vixésimo terceira](https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899#davigesimotercera).
 [^openai-clasificador]: OpenAI, [*Nuevo clasificador de IA para detectar textos generados por IA*](https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/), nota engadida o 20 de xullo de 2023.

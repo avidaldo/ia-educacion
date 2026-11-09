@@ -100,9 +100,13 @@ La idea de fondo no es nueva. Una página atribuida a una formación interna de 
 
 ### Los sesgos de quien usa la herramienta
 
-Se olvida a menudo que los humanos también tenemos sesgos, y que los más relevantes aquí son el de confirmación y la tendencia a fiarnos de lo que suena seguro.[^xunta-nesgos] Una respuesta bien redactada que coincide con lo que esperábamos es justo la que menos revisamos. De ahí sale el **exceso de confianza**, uno de los [riesgos de la IA en la educación](#oportunidades-y-riesgos).
+Se olvida a menudo que los humanos también tenemos sesgos, y aquí pesan dos.[^xunta-nesgos] El primero es el **sesgo de confirmación**: buscamos y aceptamos con más facilidad lo que coincide con lo que ya pensábamos, un fenómeno que la psicología ha documentado en contextos muy distintos.[^nickerson] Una respuesta bien redactada que coincide con lo que esperábamos es justo la que menos revisamos.
 
-**Buena práctica.** Revisa con más cuidado las respuestas que confirman lo que ya pensabas, y prueba las herramientas con casos de alumnado distinto antes de usarlas con un grupo.
+El segundo es el **sesgo de automatización**: la tendencia a fiarnos de más de lo que propone una máquina. Una revisión sistemática de 74 estudios, sobre todo de medicina y aviación, lo describe con dos caras: seguir un consejo erróneo y no actuar cuando el sistema no avisa. En cuatro estudios clínicos que se pudieron combinar, cuando el sistema de apoyo se equivocaba, el riesgo de tomar una decisión incorrecta subía un 26 %. Entre lo que lo reducía estaban la formación y dejar claro que la persona responde de la decisión, justo lo que pide el apartado anterior.[^goddard]
+
+Con los modelos de lenguaje hay un agravante: una respuesta falsa puede sonar tan fluida y segura como una correcta ([Cómo funciona](../intro-ia/funcionamiento.md#alucinaciones-plausible-no-es-verdadero)). En un experimento prerregistrado con 404 personas que respondían preguntas médicas con ayuda de un buscador con IA ficticio, cuando las respuestas incluían una expresión de duda en primera persona («no estoy seguro, pero…»), los participantes se fiaban menos de ellas y acertaban más: el exceso de confianza en las respuestas erróneas bajó, aunque no desapareció.[^kim] Es un solo estudio, en un dominio concreto, pero sugiere que el tono de la respuesta pesa en cuánto la revisamos. De ahí sale el **exceso de confianza**, uno de los [riesgos de la IA en la educación](#oportunidades-y-riesgos).
+
+**Buena práctica.** Revisa con más cuidado las respuestas que confirman lo que ya pensabas, no tomes el tono seguro como señal de acierto, y prueba las herramientas con casos de alumnado distinto antes de usarlas con un grupo.
 
 ## Privacidad: la regla práctica
 
@@ -169,6 +173,9 @@ La mejor protección del alumnado es entender cómo funcionan estas herramientas
 [^koenecke]: Koenecke et al., [*Racial disparities in automated speech recognition*](https://doi.org/10.1073/pnas.1915768117), PNAS, 2020.
 [^eeoc]: EEOC, [*iTutorGroup to Pay $365,000 to Settle EEOC Discriminatory Hiring Suit*](https://www.eeoc.gov/newsroom/itutorgroup-pay-365000-settle-eeoc-discriminatory-hiring-suit), 11 de septiembre de 2023; la cita de su presidenta es de la [nota de prensa de la demanda](https://www.eeoc.gov/newsroom/eeoc-sues-itutorgroup-age-discrimination), 5 de mayo de 2022.
 [^xunta-nesgos]: Xunta de Galicia, presentación *Intelixencia artificial (Ética e normativa en materia de Educación)*, de Tina Campo Fernández y Fátima Mª García Doval, diciembre de 2025, pp. 3–7 y 15.
+[^nickerson]: Nickerson, [*Confirmation bias: A ubiquitous phenomenon in many guises*](https://doi.org/10.1037/1089-2680.2.2.175), *Review of General Psychology*, 1998.
+[^goddard]: Goddard, Roudsari y Wyatt, [*Automation bias: a systematic review of frequency, effect mediators, and mitigators*](https://doi.org/10.1136/amiajnl-2011-000089), *JAMIA*, 2012.
+[^kim]: Kim, Liao, Vorvoreanu, Ballard y Vaughan, [*“I’m Not Sure, But…”: Examining the Impact of Large Language Models’ Uncertainty Expression on User Reliance and Trust*](https://doi.org/10.1145/3630106.3658941), FAccT ’24, 2024.
 [^ibm-1979]: La imagen circula desde febrero de 2017 y no se ha localizado el original: el archivo de IBM la buscó sin encontrarla. Simon Willison, [*A computer can never be held accountable*](https://simonwillison.net/2025/Feb/3/a-computer-can-never-be-held-accountable/), consultado el 9 de noviembre de 2026.
 [^loe]: Ley Orgánica 2/2006, de Educación, [disposición adicional vigesimotercera](https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899#davigesimotercera).
 [^openai-clasificador]: OpenAI, [*Nuevo clasificador de IA para detectar textos generados por IA*](https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/), nota añadida el 20 de julio de 2023.

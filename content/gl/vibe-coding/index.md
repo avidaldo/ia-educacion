@@ -2,7 +2,7 @@
 title: Vibe coding
 description: Crear aplicacións a base de prompts, que ferramentas hai para cada nivel, un método que funciona e onde está o límite entre un prototipo e algo que pode usar o alumnado.
 derived_from:
-  es/vibe-coding/index.md: "57c7b2101781e8498e4bbdce4bbb5f3b92ce3530"
+  es/vibe-coding/index.md: "7fa3cd2ac07e6dc2d21eaa37d0b88cd546283290"
 ---
 
 ## Que é
@@ -77,7 +77,7 @@ Para todo o que manexe datos do alumnado xa existen ferramentas do centro, como 
 
 ## Nos ciclos de informática
 
-Para quen aprende a programar, o risco non é só a calidade do código senón **deixar de aprender**. Nun ensaio controlado publicado por Anthropic en xaneiro de 2026, 52 programadores aprenderon unha biblioteca de Python nova: os que usaron un asistente de IA sacaron un 17 % menos nun cuestionario sobre os conceptos que acababan de usar, e a maior diferenza estivo nas preguntas de depuración. Non foron significativamente máis rápidos. Pero non todos os que usaron IA aprenderon menos: os que lle pedían explicacións e lle facían preguntas conceptuais obtiveron mellores resultados que os que só lle pedían código.[^anthropic-aprendizaje] É un único estudo, feito por unha empresa do sector e sobre unha tarefa concreta, pero apunta nunha dirección clara.
+Para quen aprende a programar, o risco non é só a calidade do código senón **deixar de aprender**. Nun ensaio controlado publicado por Anthropic en xaneiro de 2026, 52 programadores aprenderon unha biblioteca de Python nova: os que usaron un asistente de IA sacaron un 17 % menos nun cuestionario sobre os conceptos que acababan de usar, e a maior diferenza estivo nas preguntas de depuración. Non foron significativamente máis rápidos. Tamén observou que os que lle pedían explicacións e lle facían preguntas conceptuais obtiveron mellores resultados que os que só lle pedían código, pero esa comparación é máis feble: cadaquén escolleu como usar a IA, os grupos eran de entre 2 e 7 persoas, e os propios autores advirten que non establece unha relación causal.[^anthropic-aprendizaje] É un único estudo, feito por unha empresa do sector e sobre unha tarefa concreta: un sinal que convén ter en conta, non unha conclusión (máis en [Aprender con IA](../etica-legal/index.md#aprender-con-ia-una-pregunta-abierta)).
 
 Algunhas ideas para a aula:
 

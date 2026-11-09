@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/etica-legal/index.md: "9c06799d7a3e50b84ac711e5c49c0c6044dc1dbe"
+  es/etica-legal/index.md: "5e747dfd51ba0055a72ecc8aadd4b5fa09c4dcf3"
   es/etica-legal/normativa.md: "f0f7d0a212880d50cd70e6eef0224909575255ca"
 ---
 
@@ -148,10 +148,10 @@ Notas:
 ---
 
 <!-- .slide: id="sesgo-propio" class="statement" -->
-## Los sesgos también son nuestros: revisamos menos lo que confirma lo que esperábamos
+## Los sesgos también son nuestros: nos fiamos de lo que esperábamos y de lo que propone la máquina
 
 Notas:
-Sobre todo, el sesgo de confirmación y el exceso de confianza en lo que suena seguro.
+Sesgo de confirmación y sesgo de automatización. En cuatro estudios clínicos combinados, cuando el sistema de apoyo se equivocaba, el riesgo de decidir mal subía un 26 % (Goddard et al., 2012); la formación y dejar claro quién responde lo reducían. Con modelos de lenguaje, una duda en primera persona («no estoy seguro, pero…») redujo el exceso de confianza en un experimento con 404 personas (Kim et al., 2024), aunque es un solo estudio. El tono seguro no es señal de acierto.
 
 ---
 

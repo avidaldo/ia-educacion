@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/vibe-coding/index.md: "57c7b2101781e8498e4bbdce4bbb5f3b92ce3530"
+  es/vibe-coding/index.md: "7fa3cd2ac07e6dc2d21eaa37d0b88cd546283290"
 ---
 
 <!-- .slide: id="olvidar-codigo" class="statement" -->
@@ -146,7 +146,10 @@ Aprendían una biblioteca de Python nueva. La mayor diferencia, en las preguntas
 ---
 
 <!-- .slide: id="explicaciones" class="statement" -->
-## Quien pedía explicaciones obtuvo mejores resultados que quien solo pedía código
+## Pedir explicaciones parecía ayudar, pero esa comparación no prueba la causa
+
+Notas:
+Los que le pedían explicaciones y preguntas conceptuales puntuaron mejor que los que solo le pedían código. Pero cada cual eligió cómo usar la IA, los grupos eran de 2 a 7 personas y los autores advierten que no establece una relación causal: quizá quien pide explicaciones es quien más quiere aprender.
 
 ---
 
