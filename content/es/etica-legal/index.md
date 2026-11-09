@@ -86,6 +86,10 @@ Que el sesgo entre por una decisión humana no quiere decir que responda siempre
 - **Recomendación institucional.** La formación de la Xunta lo resume como norma de conducta: «Cando unha IA erra… a responsabilidade é da persoa que usou a IA!».[^xunta-nesgos] Para lo que haces tú con una herramienta es exactamente así: lo que usas, lo revisas y respondes de ello. Pero no es todo el reparto: del sistema responde quien lo construye, y de implantarlo, la administración que lo despliega.
 - **Buena práctica.** Deja constancia de qué herramienta usaste, para qué y cómo revisaste el resultado. Es lo que te permite responder de ello.
 
+La idea de fondo no es nueva. Una página atribuida a una formación interna de IBM de 1979 lo resumía así: «Un ordenador nunca puede rendir cuentas; por tanto, un ordenador nunca debe tomar una decisión de gestión» (traducción propia).[^ibm-1979] Décadas después, el RGPD y la ley gallega de IA recogen esa misma idea, cada uno a su manera: el derecho a no quedar sujeto a una decisión solo automatizada, y la validación obligatoria por una persona. Ninguno prohíbe usar la herramienta; exigen que alguien decida y responda de la decisión.
+
+![Página mecanografiada con el texto, en inglés: «A computer can never be held accountable. Therefore a computer must never make a management decision».](../../assets/etica-legal/ibm-1979.webp){.narrow}
+
 ### Los sesgos de quien usa la herramienta
 
 La formación de la Xunta insiste en algo que se olvida a menudo: los humanos también tenemos sesgos, y los más relevantes aquí son el de confirmación y la tendencia a fiarnos de lo que suena seguro.[^xunta-nesgos] Una respuesta bien redactada que coincide con lo que esperábamos es justo la que menos revisamos. De ahí sale el **exceso de confianza** que la propia formación incluye entre los riesgos.
@@ -156,6 +160,7 @@ La mejor protección del alumnado es entender cómo funcionan estas herramientas
 [^koenecke]: Koenecke et al., [*Racial disparities in automated speech recognition*](https://doi.org/10.1073/pnas.1915768117), PNAS, 2020.
 [^eeoc]: EEOC, [*iTutorGroup to Pay $365,000 to Settle EEOC Discriminatory Hiring Suit*](https://www.eeoc.gov/newsroom/itutorgroup-pay-365000-settle-eeoc-discriminatory-hiring-suit), 11 de septiembre de 2023; la cita de su presidenta es de la [nota de prensa de la demanda](https://www.eeoc.gov/newsroom/eeoc-sues-itutorgroup-age-discrimination), 5 de mayo de 2022.
 [^xunta-nesgos]: Presentación de la Xunta, pp. 3–7 y 15.
+[^ibm-1979]: La imagen circula desde febrero de 2017 y no se ha localizado el original: el archivo de IBM la buscó sin encontrarla. Simon Willison, [*A computer can never be held accountable*](https://simonwillison.net/2025/Feb/3/a-computer-can-never-be-held-accountable/), consultado el 9 de noviembre de 2026.
 [^loe]: Ley Orgánica 2/2006, de Educación, [disposición adicional vigesimotercera](https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899#davigesimotercera).
 [^openai-clasificador]: OpenAI, [*Nuevo clasificador de IA para detectar textos generados por IA*](https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/), nota añadida el 20 de julio de 2023.
 [^liang]: Liang et al., [*GPT detectors are biased against non-native English writers*](https://arxiv.org/abs/2304.02819), Patterns, 2023.

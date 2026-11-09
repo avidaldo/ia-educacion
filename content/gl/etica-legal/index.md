@@ -2,7 +2,7 @@
 title: Ética e normativa
 description: Criterios para decidir cando e como usar a IA no centro, separando o que obriga a lei do que é prudencia, cos nesgos, a privacidade, a autoría e o custo ambiental explicados desde como funciona a tecnoloxía.
 derived_from:
-  es/etica-legal/index.md: "6fdd7dfa1d10dba1c17f9656b799cf4a236d79e9"
+  es/etica-legal/index.md: "e37791a3326f09b0cbdce643c2c226eebae8a6f2"
 ---
 
 ## Que é lei e que é prudencia
@@ -86,6 +86,10 @@ Que o nesgo entre por unha decisión humana non quere dicir que responda sempre 
 - **Recomendación institucional.** A formación da Xunta resúmeo como norma de conduta: «Cando unha IA erra… a responsabilidade é da persoa que usou a IA!».[^xunta-nesgos] Para o que fas ti cunha ferramenta é exactamente así: o que usas, revísalo e respondes diso. Pero non é todo o reparto: do sistema responde quen o constrúe, e de implantalo, a administración que o desprega.
 - **Boa práctica.** Deixa constancia de que ferramenta usaches, para que e como revisaches o resultado. É o que che permite responder diso.
 
+A idea de fondo non é nova. Unha páxina atribuída a unha formación interna de IBM de 1979 resumíao así: «Un ordenador nunca pode render contas; polo tanto, un ordenador nunca debe tomar unha decisión de xestión» (tradución propia).[^ibm-1979] Décadas despois, o RXPD e a lei galega de IA recollen esa mesma idea, cada un á súa maneira: o dereito a non quedar suxeito a unha decisión só automatizada, e a validación obrigatoria por unha persoa. Ningún prohíbe usar a ferramenta; esixen que alguén decida e responda da decisión.
+
+![Páxina mecanografada co texto, en inglés: «A computer can never be held accountable. Therefore a computer must never make a management decision».](../../assets/etica-legal/ibm-1979.webp){.narrow}
+
 ### Os nesgos de quen usa a ferramenta
 
 A formación da Xunta insiste en algo que se esquece a miúdo: os humanos tamén temos nesgos, e os máis relevantes aquí son o de confirmación e a tendencia a fiarnos do que soa seguro.[^xunta-nesgos] Unha resposta ben redactada que coincide co que agardabamos é xusto a que menos revisamos. De aí sae o **exceso de confianza** que a propia formación inclúe entre os riscos.
@@ -156,6 +160,7 @@ A mellor protección do alumnado é entender como funcionan estas ferramentas: p
 [^koenecke]: Koenecke et al., [*Racial disparities in automated speech recognition*](https://doi.org/10.1073/pnas.1915768117), PNAS, 2020.
 [^eeoc]: EEOC, [*iTutorGroup to Pay $365,000 to Settle EEOC Discriminatory Hiring Suit*](https://www.eeoc.gov/newsroom/itutorgroup-pay-365000-settle-eeoc-discriminatory-hiring-suit), 11 de setembro de 2023; a cita da súa presidenta é da [nota de prensa da demanda](https://www.eeoc.gov/newsroom/eeoc-sues-itutorgroup-age-discrimination), 5 de maio de 2022.
 [^xunta-nesgos]: Presentación da Xunta, pp. 3–7 e 15.
+[^ibm-1979]: A imaxe circula desde febreiro de 2017 e non se localizou o orixinal: o arquivo de IBM buscouna sen atopala. Simon Willison, [*A computer can never be held accountable*](https://simonwillison.net/2025/Feb/3/a-computer-can-never-be-held-accountable/), consultado o 9 de novembro de 2026.
 [^loe]: Lei orgánica 2/2006, de educación, [disposición adicional vixésimo terceira](https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899#davigesimotercera).
 [^openai-clasificador]: OpenAI, [*Nuevo clasificador de IA para detectar textos generados por IA*](https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/), nota engadida o 20 de xullo de 2023.
 [^liang]: Liang et al., [*GPT detectors are biased against non-native English writers*](https://arxiv.org/abs/2304.02819), Patterns, 2023.

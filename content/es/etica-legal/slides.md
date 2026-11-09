@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/etica-legal/index.md: "6fdd7dfa1d10dba1c17f9656b799cf4a236d79e9"
+  es/etica-legal/index.md: "e37791a3326f09b0cbdce643c2c226eebae8a6f2"
   es/etica-legal/normativa.md: "7ae49d1dea1555a7c7676f7d8ab12348bd6b1457"
 ---
 
@@ -134,6 +134,16 @@ Deja constancia de qué usaste, para qué y cómo lo revisaste.
 
 Notas:
 La regla de la Xunta es exacta para lo que hace cada docente con una herramienta: lo que usas, lo revisas y respondes de ello. Pero no es todo el reparto: el Reglamento de IA reparte las obligaciones entre quien desarrolla el sistema y quien lo despliega, el RGPD da derecho a no quedar sujeto a una decisión solo automatizada, y en la administración gallega una actuación apoyada en IA necesita la validación de una persona.
+
+---
+
+<!-- .slide: id="ibm-1979" class="image-full" -->
+![Página mecanografiada con el texto, en inglés: «A computer can never be held accountable. Therefore a computer must never make a management decision».](../../assets/etica-legal/ibm-1979.webp)
+
+Atribuida a una formación interna de IBM, 1979.
+
+Notas:
+«Un ordenador nunca puede rendir cuentas; por tanto, un ordenador nunca debe tomar una decisión de gestión.» La idea no es nueva: décadas después, el RGPD y la ley gallega de IA la recogen, cada uno a su manera. Ninguno prohíbe usar la herramienta; exigen que alguien decida y responda. Atribuida, no confirmada: la imagen circula desde 2017, no se ha localizado el original y el archivo de IBM no la encontró. Y esa persona que decide también tiene sesgos (siguiente diapositiva).
 
 ---
 
