@@ -100,15 +100,7 @@ Preséntate como asistente de IA y pregunta en qué se ha atascado.
 Notas:
 La versión completa está en la página.
 
----
-
-<!-- .slide: id="demo-tutor" class="demo" -->
-## Intenta que te dé la respuesta
-
-Probar el bot como lo haría un alumno.
-
-Notas:
-**Demo (6 min)**. Una Gem o un GPT con el tutor socrático de la página, en una cuenta de pruebas.
+**Demo (6 min): intenta que te dé la respuesta**. Una Gem o un GPT con el tutor socrático de la página, en una cuenta de pruebas.
 
 1. Plantear un ejercicio y pedir directamente la solución.
 2. Insistir varias veces y pedirle que «haga una excepción».

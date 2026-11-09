@@ -61,16 +61,7 @@ El procedimiento habitual es razonable: código en lugar del nombre, la tabla en
 Notas:
 El RGPD llama a esto singularización: aislar a una persona dentro de un grupo. En una clase de veinte, dos o tres detalles bastan. Y hay textos que no se pueden limpiar sin destruirlos, como una redacción autobiográfica: entonces no es la vía 2.
 
----
-
-<!-- .slide: id="demo-quitar-nombre" class="demo" -->
-## Demo: quitar el nombre no basta
-
-- Una redacción inventada, en un procesador de textos y un *chatbot*.
-- Fíjate en lo que no se ve al abrir el fichero.
-
-Notas:
-**Demo (10 min)**. Word o LibreOffice, y cualquier *chatbot* en un chat temporal. Material: una redacción inventada en `.docx`, como la del apartado «Para practicar» de la página, con el nombre en la cabecera, la autora en las propiedades y un comentario de la alumna con un dato de salud.
+**Demo (10 min): quitar el nombre no basta**. Word o LibreOffice, y cualquier *chatbot* en un chat temporal. Material: una redacción inventada en `.docx`, como la del apartado «Para practicar» de la página, con el nombre en la cabecera, la autora en las propiedades y un comentario de la alumna con un dato de salud.
 
 1. Abrir la redacción y pedir al grupo que diga qué datos ve: el nombre de la cabecera.
 2. Enseñar las propiedades del fichero (autora, «modificado por») y el comentario. En Word, Archivo → Información → Comprobar si hay problemas → Inspeccionar documento.
@@ -110,25 +101,6 @@ Además, los sistemas que evalúan resultados de aprendizaje son de alto riesgo 
 
 ---
 
-<!-- .slide: id="demo-procedimiento" class="demo" -->
-## Demo: la IA escribe la fórmula, no ve las notas
-
-- Una hoja de cálculo con notas inventadas y cualquier *chatbot*.
-- Fíjate en lo que recibe la IA: tres filas falsas.
-
-Notas:
-**Demo (5 min)**. LibreOffice Calc o Excel, y cualquier *chatbot* en un chat temporal. Material: una hoja con unos veinte alumnos inventados y cuatro notas cada uno.
-
-1. Enseñar la hoja completa y decir que es la que nunca va a salir del equipo.
-2. Pegar en el chat el *prompt* de la página: solo las columnas y tres filas inventadas.
-3. Copiar las fórmulas que devuelve en la hoja y comprobar una fila a mano.
-
-**Resultado esperado:** dos fórmulas que funcionan sobre la hoja real sin que la IA la haya visto.
-**Si falla:** si la fórmula da error, pegar el mensaje de error en el chat; si no hay red, enseñar la fórmula ya preparada.
-**Mensaje clave:** pedir el procedimiento en lugar del resultado es la vía más segura, y la que más se olvida.
-
----
-
 <!-- .slide: id="prompt-procedimiento" class="prompt" -->
 ## Las columnas y tres filas inventadas bastan
 
@@ -142,44 +114,15 @@ y otra que cuente cuántos alumnos tienen menos de 5 en cada prueba.
 Notas:
 La versión completa, con las tres filas, está en la página.
 
----
+**Demo (5 min): la IA escribe la fórmula, no ve las notas**. LibreOffice Calc o Excel, y cualquier *chatbot* en un chat temporal. Material: una hoja con unos veinte alumnos inventados y cuatro notas cada uno.
 
-<!-- .slide: id="demo-plantilla" class="demo" -->
-## Demo: una plantilla con huecos
+1. Enseñar la hoja completa y decir que es la que nunca va a salir del equipo.
+2. Pegar en el chat el *prompt* de la página: solo las columnas y tres filas inventadas.
+3. Copiar las fórmulas que devuelve en la hoja y comprobar una fila a mano.
 
-- Un informe para las familias, con marcadores que se rellenan en local.
-- Fíjate en que la IA solo aporta la redacción.
-
-Notas:
-**Demo (5 min)**. Cualquier *chatbot* en un chat temporal y un procesador de textos. Material: una tabla inventada con los datos de cinco alumnos (nombre, grupo, fortalezas, aspectos a mejorar, propuesta).
-
-1. Pedir al chat un informe de tutoría de primera evaluación con los marcadores `[NOMBRE]`, `[GRUPO]`, `[FORTALEZAS]`, `[A_MEJORAR]` y `[PROPUESTA]`.
-2. Pegar la plantilla en el procesador de textos.
-3. Rellenar un informe con buscar y reemplazar, o todos con la combinación de correspondencia a partir de la tabla.
-
-**Resultado esperado:** un informe bien redactado con datos que no salieron del equipo.
-**Si falla:** enseñar una plantilla ya generada y rellenarla.
-**Mensaje clave:** la IA aporta la redacción; los datos de cada alumno los pones tú.
-
----
-
-<!-- .slide: id="demo-examen" class="demo" -->
-## Demo: un examen escrito a mano
-
-- La foto de un examen inventado, rellenado a mano.
-- Fíjate en la cabecera, la firma y la ubicación de la foto.
-
-Notas:
-**Demo (5 min)**. Un móvil, el visor de fotos del ordenador y un *chatbot* que admita imágenes. Material: un examen inventado rellenado a mano con un nombre inventado, fotografiado con la ubicación de la cámara activada.
-
-1. Enseñar en las propiedades de la foto la ubicación que guardó la cámara.
-2. Recortar la cabecera y la firma, y compartir o exportar la foto sin ubicación (en iPhone, Opciones → desactivar Ubicación al compartir).
-3. Subir la foto recortada al chat y pedir que transcriba las respuestas antes de valorarlas.
-4. Comparar la transcripción con el original: los errores de lectura se ven ahí, antes de la corrección.
-
-**Resultado esperado:** una transcripción revisable y una valoración por pregunta, sin nombre, firma ni ubicación.
-**Si falla:** enseñar la foto recortada y explicar los pasos.
-**Mensaje clave:** la foto lleva más que lo que se ve, y la transcripción se comprueba antes de fiarse de la corrección.
+**Resultado esperado:** dos fórmulas que funcionan sobre la hoja real sin que la IA la haya visto.
+**Si falla:** si la fórmula da error, pegar el mensaje de error en el chat; si no hay red, enseñar la fórmula ya preparada.
+**Mensaje clave:** pedir el procedimiento en lugar del resultado es la vía más segura, y la que más se olvida.
 
 ---
 
@@ -196,6 +139,27 @@ Notas:
 
 Notas:
 Para adaptar un material, «necesita frases cortas, vocabulario básico y una idea por párrafo» funciona igual de bien que nombrar un trastorno, y no revela un dato de salud. En la página están los siete casos.
+
+**Demo (5 min): una plantilla con huecos**. Cualquier *chatbot* en un chat temporal y un procesador de textos. Material: una tabla inventada con los datos de cinco alumnos (nombre, grupo, fortalezas, aspectos a mejorar, propuesta).
+
+1. Pedir al chat un informe de tutoría de primera evaluación con los marcadores `[NOMBRE]`, `[GRUPO]`, `[FORTALEZAS]`, `[A_MEJORAR]` y `[PROPUESTA]`.
+2. Pegar la plantilla en el procesador de textos.
+3. Rellenar un informe con buscar y reemplazar, o todos con la combinación de correspondencia a partir de la tabla.
+
+**Resultado esperado:** un informe bien redactado con datos que no salieron del equipo.
+**Si falla:** enseñar una plantilla ya generada y rellenarla.
+**Mensaje clave:** la IA aporta la redacción; los datos de cada alumno los pones tú.
+
+**Demo (5 min): un examen escrito a mano**. Un móvil, el visor de fotos del ordenador y un *chatbot* que admita imágenes. Material: un examen inventado rellenado a mano con un nombre inventado, fotografiado con la ubicación de la cámara activada.
+
+1. Enseñar en las propiedades de la foto la ubicación que guardó la cámara.
+2. Recortar la cabecera y la firma, y compartir o exportar la foto sin ubicación (en iPhone, Opciones → desactivar Ubicación al compartir).
+3. Subir la foto recortada al chat y pedir que transcriba las respuestas antes de valorarlas.
+4. Comparar la transcripción con el original: los errores de lectura se ven ahí, antes de la corrección.
+
+**Resultado esperado:** una transcripción revisable y una valoración por pregunta, sin nombre, firma ni ubicación.
+**Si falla:** enseñar la foto recortada y explicar los pasos.
+**Mensaje clave:** la foto lleva más que lo que se ve, y la transcripción se comprueba antes de fiarse de la corrección.
 
 ---
 

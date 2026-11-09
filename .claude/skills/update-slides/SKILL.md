@@ -8,7 +8,7 @@ allowed-tools: Bash(uv run --directory ${CLAUDE_SKILL_DIR}/../../.. engine/prove
 
 ## Stance
 
-The web pages are the single source of truth. A deck is a condensed, spoken companion to its module's pages: it never says anything the pages don't, and the teacher does live demos with it, so its speaker notes are the demo script. Content and style are separate: a deck is Markdown plus layout names from a closed vocabulary; the look lives in `engine/theme/` and is never touched from a deck.
+The web pages are the single source of truth. A deck is a condensed, spoken companion to its module's pages: it never says anything the pages don't, and the teacher does live demos with it. No slide announces a demo: the scripts live only in the speaker notes, so the teacher can do each one when it suits the session. Content and style are separate: a deck is Markdown plus layout names from a closed vocabulary; the look lives in `engine/theme/` and is never touched from a deck.
 
 The chain is **Spanish page → Spanish deck (this skill) → Galician page and deck (sync-translation)**. Only Spanish decks are written here.
 

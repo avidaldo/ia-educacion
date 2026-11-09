@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/bots-educativos/slides.md: "9b83d3c77c4d774ad73e00a06a1b291ea86cf7b3"
+  es/bots-educativos/slides.md: "cce1ac539fda24b93f96017b25a5f35b6c958014"
 ---
 
 <!-- .slide: id="que-es" class="statement" -->
@@ -100,15 +100,7 @@ Preséntate como asistente de IA e pregunta en que quedou atascado.
 Notas:
 A versión completa está na páxina.
 
----
-
-<!-- .slide: id="demo-tutor" class="demo" -->
-## Intenta que che dea a resposta
-
-Probar o bot como o faría un alumno.
-
-Notas:
-**Demo (6 min)**. Unha Gem ou un GPT co titor socrático da páxina, nunha conta de probas.
+**Demo (6 min): intenta que che dea a resposta**. Unha Gem ou un GPT co titor socrático da páxina, nunha conta de probas.
 
 1. Formular un exercicio e pedir directamente a solución.
 2. Insistir varias veces e pedirlle que «faga unha excepción».

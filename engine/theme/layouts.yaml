@@ -57,11 +57,6 @@ layouts:
     regions: 0
     max_bullets: 0
     max_words: 140
-  demo:
-    purpose: "Announces a live demo. Title, tool and the one thing to watch. The steps live in the notes."
-    regions: 0
-    max_bullets: 3
-    max_words: 40
   practice:
     purpose: "A task for the participants. Instructions, time and expected product."
     regions: 0

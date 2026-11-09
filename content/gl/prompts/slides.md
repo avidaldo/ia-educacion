@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/prompts/slides.md: "c43292de61f7ef0d6e09b06c6fc667198e81e8c7"
+  es/prompts/slides.md: "1facdc2a0332ca2b8bb78e8b23eb93be85e3d44e"
 ---
 
 <!-- .slide: id="especificacion" class="statement" -->
@@ -138,15 +138,7 @@ Contexto do centro:
 Notas:
 Valen as comiñas triplas ou etiquetas con nome (`<temario>…</temario>`). O importante é usar sempre as mesmas e nomealas na instrución.
 
----
-
-<!-- .slide: id="demo-metaprompting" class="demo" -->
-## Un *prompt* que escribe *prompts*
-
-Pedir o modelo reutilizable en lugar do resultado.
-
-Notas:
-**Demo (5 min)**. Calquera *chatbot* (ChatGPT, Gemini ou Claude), nun chat temporal.
+**Demo (5 min): un *prompt* que escribe *prompts***. Calquera *chatbot* (ChatGPT, Gemini ou Claude), nun chat temporal.
 
 1. Pegar o primeiro exemplo da páxina «Exemplos comentados» («Actúa como un asesor pedagóxico… Devólveme SÓ o prompt final»).
 2. Ler en voz alta o modelo que devolve: preguntas de aclaración, supostos, encabezados fixos.

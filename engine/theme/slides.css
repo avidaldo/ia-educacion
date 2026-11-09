@@ -81,12 +81,9 @@ body.deck-page { margin: 0; background: var(--bg); }
 .reveal details.chat-message > summary { list-style: none; }
 .reveal .chat-expand { display: none; }
 
-/* demo and practice: the label comes from the language's UI strings */
-.layout-demo .slide-body, .layout-practice .slide-body { justify-content: center; border-left: 18px solid var(--demo); background: var(--demo-soft); }
-.layout-demo .slide-body::before, .layout-practice .slide-body::before { content: var(--label-demo); font-size: 22px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--demo); }
-.layout-practice .slide-body { border-left-color: var(--practice); background: var(--practice-soft); }
-.layout-practice .slide-body::before { content: var(--label-practice); color: var(--practice); }
-.layout-demo h2::after { background: var(--demo); }
+/* practice: the label comes from the language's UI strings */
+.layout-practice .slide-body { justify-content: center; border-left: 18px solid var(--practice); background: var(--practice-soft); }
+.layout-practice .slide-body::before { content: var(--label-practice); font-size: 22px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--practice); }
 .layout-practice h2::after { background: var(--practice); }
 
 /* images */

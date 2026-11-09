@@ -65,15 +65,8 @@ Pesos abiertos: cualquiera puede descargar el modelo y ejecutarlo en sus servido
 | Crear una página o una aplicación | Claude (Artifacts), ChatGPT o Gemini (Canvas) |
 | Generar o editar imágenes | ChatGPT o Gemini |
 
----
-
-<!-- .slide: id="demo-comparar" class="demo" -->
-## La misma petición en dos *chatbots*
-
-Las diferencias señalan dónde hay que comprobar.
-
 Notas:
-**Demo (5 min)**. Dos *chatbots* abiertos a la vez (por ejemplo, ChatGPT y Gemini), en chats temporales.
+**Demo (5 min): la misma petición en dos *chatbots***. Dos *chatbots* abiertos a la vez (por ejemplo, ChatGPT y Gemini), en chats temporales.
 
 1. Pegar en los dos la misma petición de la materia de alguien del grupo.
 2. Comparar las respuestas: qué coincide, qué no, qué falta en cada una.
@@ -137,15 +130,8 @@ Por defecto, en las cuentas personales, sí. Las cuentas de organización suelen
 
 Se conserva en los servidores de la empresa durante ese plazo.
 
----
-
-<!-- .slide: id="demo-ajustes" class="demo" -->
-## Dónde están los ajustes
-
-Instrucciones, memoria, chat temporal y entrenamiento.
-
 Notas:
-**Demo (5 min)**. ChatGPT y Gemini con una cuenta de pruebas.
+**Demo (5 min): dónde están los ajustes**. ChatGPT y Gemini con una cuenta de pruebas.
 
 1. Abrir la configuración y enseñar las instrucciones personalizadas.
 2. Enseñar la memoria: qué recuerda y cómo se borra.

@@ -65,15 +65,7 @@ usable en el móvil y con el teclado; sin servicios externos.
 Notas:
 La versión completa está en la página.
 
----
-
-<!-- .slide: id="demo-app" class="demo" -->
-## De la especificación a una aplicación que funciona
-
-Preguntas antes del código y un cambio cada vez.
-
-Notas:
-**Demo (10 min)**. Google AI Studio (modo Build) o Lovable, con una cuenta de pruebas.
+**Demo (10 min): de la especificación a una aplicación que funciona**. Google AI Studio (modo Build) o Lovable, con una cuenta de pruebas.
 
 1. Pegar la especificación de la página y responder a las preguntas.
 2. Revisar el plan antes de que escriba código.

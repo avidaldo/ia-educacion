@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/etica-legal/slides.md: "1e69c9dbef7d5274b6509f182a7cc24f193670db"
+  es/etica-legal/slides.md: "f7ecda657d36a55c3fc3f4100be178dd1f632c3c"
 ---
 
 <!-- .slide: id="ley-o-prudencia" class="statement" -->
@@ -156,15 +156,7 @@ Ferramentas contratadas pola administración, casos inventados ou traballos sen 
 Notas:
 A LOE habilita o centro a tratar os datos que precisa, con seguridade, confidencialidade e deber de sixilo do profesorado. Un terceiro que trate eses datos ten que ser un encargado con contrato (art. 28 do RXPD). Quitar o nome non abonda se a combinación de datos identifica a persoa. E quen envía un traballo co nome cambiado por un código segue tratando datos do alumno, porque garda a táboa: reduce o risco, pero que ferramenta se pode usar decídeo a Consellería. Como facelo con traballos, notas e informes está no módulo Datos do alumnado.
 
----
-
-<!-- .slide: id="demo-local" class="demo" -->
-## Un modelo que funciona sen internet
-
-A privacidade depende de onde se executa o modelo.
-
-Notas:
-**Demo (5 min)**. Ollama ou LM Studio cun modelo pequeno xa descargado no portátil.
+**Demo (5 min): un modelo que funciona sen internet**. Ollama ou LM Studio cun modelo pequeno xa descargado no portátil.
 
 1. Facerlle unha pregunta ao modelo local e ver a resposta.
 2. Desconectar a rede (wifi e cable).

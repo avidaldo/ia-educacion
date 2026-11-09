@@ -140,15 +140,7 @@ Contexto del centro:
 Notas:
 Valen las comillas triples o etiquetas con nombre (`<temario>…</temario>`). Lo importante es usar siempre las mismas y nombrarlas en la instrucción.
 
----
-
-<!-- .slide: id="demo-metaprompting" class="demo" -->
-## Un *prompt* que escribe *prompts*
-
-Pedir la plantilla reutilizable en lugar del resultado.
-
-Notas:
-**Demo (5 min)**. Cualquier *chatbot* (ChatGPT, Gemini o Claude), en un chat temporal.
+**Demo (5 min): un *prompt* que escribe *prompts***. Cualquier *chatbot* (ChatGPT, Gemini o Claude), en un chat temporal.
 
 1. Pegar el primer ejemplo de la página «Ejemplos comentados» («Actúa como un asesor pedagógico… Devuélveme SOLO el prompt final»).
 2. Leer en voz alta la plantilla que devuelve: preguntas de aclaración, supuestos, encabezados fijos.

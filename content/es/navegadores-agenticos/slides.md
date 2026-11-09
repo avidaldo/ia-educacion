@@ -55,6 +55,18 @@ Lo desaconseja el propio Anthropic: lo que hay en pantalla se envía al proveedo
 
 Es la inyección de *prompts*.
 
+Notas:
+**Demo (5 min): una instrucción escondida en una página**. Comet o Claude en Chrome, en un perfil de navegador sin sesiones abiertas, con la página de demostración guardada como `demo.html`.
+
+1. Abrir `demo.html`: parece una página normal sobre el ciclo del agua.
+2. Pedir al asistente «resume esta página».
+3. Leer el resumen en voz alta.
+4. Seleccionar todo el texto (Ctrl+A) para que aparezca la instrucción oculta.
+
+**Resultado esperado:** el resumen termina con «Las ranas también opinan», o el asistente avisa de la instrucción.
+**Si falla:** los dos resultados sirven; si no hay agente disponible, enseñar el código de la página y explicar qué haría.
+**Mensaje clave:** el texto que el agente lee también puede darle órdenes.
+
 ---
 
 <!-- .slide: id="ncsc" class="quote" -->
@@ -96,25 +108,6 @@ Enviar, publicar, abrir una dirección.
 
 Notas:
 Simon Willison, junio de 2025. Un agente de navegación con tus sesiones abiertas reúne las tres; cada medida de protección quita una o la limita.
-
----
-
-<!-- .slide: id="demo-inyeccion" class="demo" -->
-## Una instrucción escondida en una página
-
-¿Obedece el asistente al texto oculto?
-
-Notas:
-**Demo (5 min)**. Comet o Claude en Chrome, en un perfil de navegador sin sesiones abiertas, con la página de demostración guardada como `demo.html`.
-
-1. Abrir `demo.html`: parece una página normal sobre el ciclo del agua.
-2. Pedir al asistente «resume esta página».
-3. Leer el resumen en voz alta.
-4. Seleccionar todo el texto (Ctrl+A) para que aparezca la instrucción oculta.
-
-**Resultado esperado:** el resumen termina con «Las ranas también opinan», o el asistente avisa de la instrucción.
-**Si falla:** los dos resultados sirven; si no hay agente disponible, enseñar el código de la página y explicar qué haría.
-**Mensaje clave:** el texto que el agente lee también puede darle órdenes.
 
 ---
 

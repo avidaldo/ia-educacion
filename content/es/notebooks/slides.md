@@ -53,15 +53,8 @@ Tarjetas, cuestionarios, guías de estudio, mapas mentales.
 ### Visual
 Infografías y presentaciones a partir de las fuentes.
 
----
-
-<!-- .slide: id="demo-cuaderno" class="demo" -->
-## Un cuaderno con tu temario
-
-Preguntas con citas y un resumen de audio.
-
 Notas:
-**Demo (8 min)**. Gemini Notebook (notebook.google.com) con una cuenta de pruebas.
+**Demo (8 min): un cuaderno con tu temario**. Gemini Notebook (notebook.google.com) con una cuenta de pruebas.
 
 1. Crear un cuaderno y subir dos o tres fuentes de una unidad (la programación y unos apuntes).
 2. Preguntar algo que obligue a cruzar fuentes: «¿qué criterios de evaluación trabaja esta actividad?».

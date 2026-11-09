@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/intro-ia/slides.md: "31a30453a5c04d63ae71e019946db30a9769ee09"
+  es/intro-ia/slides.md: "dd6073a665cd145f84b3c4138150434211622b44"
 ---
 
 <!-- .slide: id="setenta-anos" class="statement" -->
@@ -89,6 +89,17 @@ A un chatbot pregúntaslle e respóndeche; a un axente encargáslle unha tarefa 
 
 Como o teclado do móbil, pero adestrado cunha cantidade enorme de texto e tendo en conta todo o anterior.
 
+Notas:
+**Demo (3 min): a mesma pregunta, dúas respostas**. Calquera *chatbot*, en dous chats temporais.
+
+1. Facer a mesma petición aberta nos dous chats (por exemplo, «Propón unha actividade de 20 minutos para introducir a fotosíntese en 2.º da ESO»).
+2. Poñer as dúas respostas unha ao lado da outra.
+3. Rexenerar unha delas e amosar que volve cambiar.
+
+**Resultado esperado:** propostas distintas, igual de seguras.
+**Se falla:** explicar coa páxina que cada palabra se escolle entre unha distribución de probabilidades.
+**Mensaxe clave:** cando o resultado importa, rexenera ou compara.
+
 ---
 
 <!-- .slide: id="plausible" class="statement" -->
@@ -123,24 +134,6 @@ O ton servizal e a tendencia a darche a razón non son unha personalidade: son c
 
 ---
 
-<!-- .slide: id="demo-respuestas-distintas" class="demo" -->
-## A mesma pregunta, dúas respostas
-
-O modelo escolle entre as palabras máis probables cun compoñente de azar.
-
-Notas:
-**Demo (3 min)**. Calquera *chatbot*, en dous chats temporais.
-
-1. Facer a mesma petición aberta nos dous chats (por exemplo, «Propón unha actividade de 20 minutos para introducir a fotosíntese en 2.º da ESO»).
-2. Poñer as dúas respostas unha ao lado da outra.
-3. Rexenerar unha delas e amosar que volve cambiar.
-
-**Resultado esperado:** propostas distintas, igual de seguras.
-**Se falla:** explicar coa páxina que cada palabra se escolle entre unha distribución de probabilidades.
-**Mensaxe clave:** cando o resultado importa, rexenera ou compara.
-
----
-
 <!-- .slide: id="alucinaciones" -->
 ## Alucinacións
 
@@ -149,15 +142,8 @@ Notas:
 - Os modelos actuais fallan menos, sobre todo coa busca web, pero o risco non desaparece.
 - **Toda cifra, cita, referencia ou norma compróbase na fonte.**
 
----
-
-<!-- .slide: id="demo-referencias" class="demo" -->
-## Existen estas referencias?
-
-Pedir bibliografía e comprobala.
-
 Notas:
-**Demo (5 min)**. Calquera *chatbot*, nun chat temporal e sen busca web se se pode desactivar.
+**Demo (5 min): existen estas referencias?** Calquera *chatbot*, nun chat temporal e sen busca web se se pode desactivar.
 
 1. Pedir tres referencias académicas sobre un tema moi concreto da túa materia.
 2. Buscar cada título nun buscador académico.

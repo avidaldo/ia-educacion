@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/notebooks/slides.md: "3367ae60f614ba840c72ab4c3710006c8d4efe77"
+  es/notebooks/slides.md: "cc94a3b499342acea5d2a8f3a92da3e8e67b80fb"
 ---
 
 <!-- .slide: id="tus-fuentes" class="statement" -->
@@ -53,15 +53,8 @@ Tarxetas, cuestionarios, guías de estudo, mapas mentais.
 ### Visual
 Infografías e presentacións a partir das fontes.
 
----
-
-<!-- .slide: id="demo-cuaderno" class="demo" -->
-## Un caderno co teu temario
-
-Preguntas con citas e un resumo de audio.
-
 Notas:
-**Demo (8 min)**. Gemini Notebook (notebook.google.com) cunha conta de probas.
+**Demo (8 min): un caderno co teu temario**. Gemini Notebook (notebook.google.com) cunha conta de probas.
 
 1. Crear un caderno e subir dúas ou tres fontes dunha unidade (a programación e uns apuntamentos).
 2. Preguntar algo que obrigue a cruzar fontes: «que criterios de avaliación traballa esta actividade?».

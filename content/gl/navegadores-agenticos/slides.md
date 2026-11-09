@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/navegadores-agenticos/slides.md: "5eca709e73835fe43ea2e190dfb51b3e5685014e"
+  es/navegadores-agenticos/slides.md: "f62993dbbf8ce5006260b16dbc9952e73fcedc87"
 ---
 
 <!-- .slide: id="actuar" class="statement" -->
@@ -55,6 +55,18 @@ Desaconséllao o propio Anthropic: o que hai na pantalla envíaselle ao provedor
 
 É a inxección de *prompts*.
 
+Notas:
+**Demo (5 min): unha instrución agochada nunha páxina**. Comet ou Claude en Chrome, nun perfil de navegador sen sesións abertas, coa páxina de demostración gardada como `demo.html`.
+
+1. Abrir `demo.html`: parece unha páxina normal sobre o ciclo da auga.
+2. Pedirlle ao asistente «resume esta páxina».
+3. Ler o resumo en voz alta.
+4. Seleccionar todo o texto (Ctrl+A) para que apareza a instrución oculta.
+
+**Resultado esperado:** o resumo remata con «Las ranas también opinan», ou o asistente avisa da instrución.
+**Se falla:** os dous resultados serven; se non hai axente dispoñible, ensinar o código da páxina e explicar que faría.
+**Mensaxe clave:** o texto que le o axente tamén pode darlle ordes.
+
 ---
 
 <!-- .slide: id="ncsc" class="quote" -->
@@ -96,25 +108,6 @@ Enviar, publicar, abrir un enderezo.
 
 Notas:
 Simon Willison, xuño de 2025. Un axente de navegación coas túas sesións abertas reúne as tres; cada medida de protección quita unha ou limítaa.
-
----
-
-<!-- .slide: id="demo-inyeccion" class="demo" -->
-## Unha instrución agochada nunha páxina
-
-Obedece o asistente o texto oculto?
-
-Notas:
-**Demo (5 min)**. Comet ou Claude en Chrome, nun perfil de navegador sen sesións abertas, coa páxina de demostración gardada como `demo.html`.
-
-1. Abrir `demo.html`: parece unha páxina normal sobre o ciclo da auga.
-2. Pedirlle ao asistente «resume esta páxina».
-3. Ler o resumo en voz alta.
-4. Seleccionar todo o texto (Ctrl+A) para que apareza a instrución oculta.
-
-**Resultado esperado:** o resumo remata con «Las ranas también opinan», ou o asistente avisa da instrución.
-**Se falla:** os dous resultados serven; se non hai axente dispoñible, ensinar o código da páxina e explicar que faría.
-**Mensaxe clave:** o texto que le o axente tamén pode darlle ordes.
 
 ---
 

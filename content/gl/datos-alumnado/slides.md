@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/datos-alumnado/slides.md: "bed0b348e7f1ea84718de1df2ce896c1fbaa22ae"
+  es/datos-alumnado/slides.md: "aff581b4f7245f1c5cef5832555bd2c0c7938efe"
 ---
 
 <!-- .slide: id="idea-central" class="statement" -->
@@ -61,16 +61,7 @@ O procedemento habitual é razoable: código en lugar do nome, a táboa no teu e
 Notas:
 O RXPD chámalle a isto singularización: illar unha persoa dentro dun grupo. Nunha clase de vinte, dous ou tres detalles abondan. E hai textos que non se poden limpar sen destruílos, como unha redacción autobiográfica: entón non é a vía 2.
 
----
-
-<!-- .slide: id="demo-quitar-nombre" class="demo" -->
-## Demo: quitar o nome non abonda
-
-- Unha redacción inventada, nun procesador de textos e un *chatbot*.
-- Fíxate no que non se ve ao abrir o ficheiro.
-
-Notas:
-**Demo (10 min)**. Word ou LibreOffice, e calquera *chatbot* nun chat temporal. Material: unha redacción inventada en `.docx`, coma a do apartado «Para practicar» da páxina, co nome na cabeceira, a autora nas propiedades e un comentario da alumna cun dato de saúde.
+**Demo (10 min): quitar o nome non abonda**. Word ou LibreOffice, e calquera *chatbot* nun chat temporal. Material: unha redacción inventada en `.docx`, coma a do apartado «Para practicar» da páxina, co nome na cabeceira, a autora nas propiedades e un comentario da alumna cun dato de saúde.
 
 1. Abrir a redacción e pedirlle ao grupo que diga que datos ve: o nome da cabeceira.
 2. Ensinar as propiedades do ficheiro (autora, «modificado por») e o comentario. En Word, coa interface en castelán: Archivo → Información → Comprobar si hay problemas → Inspeccionar documento.
@@ -110,25 +101,6 @@ Ademais, os sistemas que avalían resultados de aprendizaxe son de alto risco pa
 
 ---
 
-<!-- .slide: id="demo-procedimiento" class="demo" -->
-## Demo: a IA escribe a fórmula, non ve as notas
-
-- Unha folla de cálculo con notas inventadas e calquera *chatbot*.
-- Fíxate no que recibe a IA: tres filas falsas.
-
-Notas:
-**Demo (5 min)**. LibreOffice Calc ou Excel, e calquera *chatbot* nun chat temporal. Material: unha folla cuns vinte alumnos inventados e catro notas cada un.
-
-1. Ensinar a folla completa e dicir que é a que nunca vai saír do equipo.
-2. Pegar no chat o *prompt* da páxina: só as columnas e tres filas inventadas.
-3. Copiar na folla as fórmulas que devolve e comprobar unha fila a man.
-
-**Resultado esperado:** dúas fórmulas que funcionan sobre a folla real sen que a IA a vise.
-**Se falla:** se a fórmula dá erro, pegar a mensaxe de erro no chat; se non hai rede, ensinar a fórmula xa preparada.
-**Mensaxe clave:** pedir o procedemento en lugar do resultado é a vía máis segura, e a que máis se esquece.
-
----
-
 <!-- .slide: id="prompt-procedimiento" class="prompt" -->
 ## As columnas e tres filas inventadas abondan
 
@@ -142,44 +114,15 @@ e outra que conte cantos alumnos teñen menos de 5 en cada proba.
 Notas:
 A versión completa, coas tres filas, está na páxina.
 
----
+**Demo (5 min): a IA escribe a fórmula, non ve as notas**. LibreOffice Calc ou Excel, e calquera *chatbot* nun chat temporal. Material: unha folla cuns vinte alumnos inventados e catro notas cada un.
 
-<!-- .slide: id="demo-plantilla" class="demo" -->
-## Demo: un modelo de documento con ocos
+1. Ensinar a folla completa e dicir que é a que nunca vai saír do equipo.
+2. Pegar no chat o *prompt* da páxina: só as columnas e tres filas inventadas.
+3. Copiar na folla as fórmulas que devolve e comprobar unha fila a man.
 
-- Un informe para as familias, con marcadores que se enchen en local.
-- Fíxate en que a IA só achega a redacción.
-
-Notas:
-**Demo (5 min)**. Calquera *chatbot* nun chat temporal e un procesador de textos. Material: unha táboa inventada cos datos de cinco alumnos (nome, grupo, fortalezas, aspectos que mellorar, proposta).
-
-1. Pedirlle ao chat un informe de titoría de primeira avaliación cos marcadores `[NOME]`, `[GRUPO]`, `[FORTALEZAS]`, `[A_MELLORAR]` e `[PROPOSTA]`.
-2. Pegar o modelo no procesador de textos.
-3. Encher un informe con buscar e substituír, ou todos coa combinación de correspondencia a partir da táboa.
-
-**Resultado esperado:** un informe ben redactado con datos que non saíron do equipo.
-**Se falla:** ensinar un modelo xa xerado e enchelo.
-**Mensaxe clave:** a IA achega a redacción; os datos de cada alumno pómolos ti.
-
----
-
-<!-- .slide: id="demo-examen" class="demo" -->
-## Demo: un exame escrito a man
-
-- A foto dun exame inventado, cuberto a man.
-- Fíxate na cabeceira, na sinatura e na localización da foto.
-
-Notas:
-**Demo (5 min)**. Un móbil, o visor de fotos do ordenador e un *chatbot* que admita imaxes. Material: un exame inventado cuberto a man cun nome inventado, fotografado coa localización da cámara activada.
-
-1. Ensinar nas propiedades da foto a localización que gardou a cámara.
-2. Recortar a cabeceira e a sinatura, e compartir ou exportar a foto sen localización (no iPhone, Opciones → desactivar Ubicación ao compartir).
-3. Subir a foto recortada ao chat e pedir que transcriba as respostas antes de valoralas.
-4. Comparar a transcrición co orixinal: os erros de lectura vense aí, antes da corrección.
-
-**Resultado esperado:** unha transcrición revisable e unha valoración por pregunta, sen nome, sinatura nin localización.
-**Se falla:** ensinar a foto recortada e explicar os pasos.
-**Mensaxe clave:** a foto leva máis do que se ve, e a transcrición compróbase antes de fiarse da corrección.
+**Resultado esperado:** dúas fórmulas que funcionan sobre a folla real sen que a IA a vise.
+**Se falla:** se a fórmula dá erro, pegar a mensaxe de erro no chat; se non hai rede, ensinar a fórmula xa preparada.
+**Mensaxe clave:** pedir o procedemento en lugar do resultado é a vía máis segura, e a que máis se esquece.
 
 ---
 
@@ -196,6 +139,27 @@ Notas:
 
 Notas:
 Para adaptar un material, «necesita frases curtas, vocabulario básico e unha idea por parágrafo» funciona igual de ben que nomear un trastorno, e non revela un dato de saúde. Na páxina están os sete casos.
+
+**Demo (5 min): un modelo de documento con ocos**. Calquera *chatbot* nun chat temporal e un procesador de textos. Material: unha táboa inventada cos datos de cinco alumnos (nome, grupo, fortalezas, aspectos que mellorar, proposta).
+
+1. Pedirlle ao chat un informe de titoría de primeira avaliación cos marcadores `[NOME]`, `[GRUPO]`, `[FORTALEZAS]`, `[A_MELLORAR]` e `[PROPOSTA]`.
+2. Pegar o modelo no procesador de textos.
+3. Encher un informe con buscar e substituír, ou todos coa combinación de correspondencia a partir da táboa.
+
+**Resultado esperado:** un informe ben redactado con datos que non saíron do equipo.
+**Se falla:** ensinar un modelo xa xerado e enchelo.
+**Mensaxe clave:** a IA achega a redacción; os datos de cada alumno pómolos ti.
+
+**Demo (5 min): un exame escrito a man**. Un móbil, o visor de fotos do ordenador e un *chatbot* que admita imaxes. Material: un exame inventado cuberto a man cun nome inventado, fotografado coa localización da cámara activada.
+
+1. Ensinar nas propiedades da foto a localización que gardou a cámara.
+2. Recortar a cabeceira e a sinatura, e compartir ou exportar a foto sen localización (no iPhone, Opciones → desactivar Ubicación ao compartir).
+3. Subir a foto recortada ao chat e pedir que transcriba as respostas antes de valoralas.
+4. Comparar a transcrición co orixinal: os erros de lectura vense aí, antes da corrección.
+
+**Resultado esperado:** unha transcrición revisable e unha valoración por pregunta, sen nome, sinatura nin localización.
+**Se falla:** ensinar a foto recortada e explicar os pasos.
+**Mensaxe clave:** a foto leva máis do que se ve, e a transcrición compróbase antes de fiarse da corrección.
 
 ---
 

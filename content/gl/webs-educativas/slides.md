@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/webs-educativas/slides.md: "2a2babba44fe60eee9dd7af86401843c8bb28492"
+  es/webs-educativas/slides.md: "9fc62f8e828e540a2aae8bf38aa8b1e6d6b4e405"
 ---
 
 <!-- .slide: id="sin-programar" class="statement" -->
@@ -46,15 +46,8 @@ Deseño lexible no móbil e no proxector, bo contraste, manexable co teclado.
 Non recollas nin envíes ningún dato do usuario.
 ```
 
----
-
-<!-- .slide: id="demo-pagina" class="demo" -->
-## Do encargo a Moodle
-
-Crear, iterar e publicar unha páxina en dez minutos.
-
 Notas:
-**Demo (10 min)**. Gemini (Canvas) ou Claude, e un curso de probas de Moodle.
+**Demo (10 min): do encargo a Moodle**. Gemini (Canvas) ou Claude, e un curso de probas de Moodle.
 
 1. Pedir unha páxina co *prompt* da páxina e un tema proposto polo grupo.
 2. Probala e pedir dous cambios concretos («engade unha pista en cada pregunta»).

@@ -50,7 +50,6 @@ labels:
   qr_alt: Código QR que leva á web do curso
   reviewed: Revisado
   skip_to_content: Saltar ao contido
-  slide_demo: Demo en directo
   slide_practice: Práctica
   slides: diapositivas
   source_code: código fonte
@@ -61,4 +60,4 @@ months: [xaneiro, febreiro, marzo, abril, maio, xuño, xullo, agosto, setembro, 
 footer:
   privacy: Esta web non usa cookies nin rastrexadores, e non carga recursos de terceiros agás a biblioteca de diagramas Mermaid nas páxinas que a precisan.
 derived_from:
-  es/_ui.yaml: "01ba3dcad4468c0a48f4187a74f08661b214a69b"
+  es/_ui.yaml: "3abb82dacd9f1b24f1b3ed2587e9d02d8bb71b15"

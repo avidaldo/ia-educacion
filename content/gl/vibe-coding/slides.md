@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/vibe-coding/slides.md: "79762e1ed736a5a5a713ef0e83fa0f38b890841b"
+  es/vibe-coding/slides.md: "45c5502a3c409d955ab081d5c1c424b35a5d48a2"
 ---
 
 <!-- .slide: id="olvidar-codigo" class="statement" -->
@@ -65,15 +65,7 @@ usable no móbil e co teclado; sen servizos externos.
 Notas:
 A versión completa está na páxina.
 
----
-
-<!-- .slide: id="demo-app" class="demo" -->
-## Da especificación a unha aplicación que funciona
-
-Preguntas antes do código e un cambio cada vez.
-
-Notas:
-**Demo (10 min)**. Google AI Studio (modo Build) ou Lovable, cunha conta de probas.
+**Demo (10 min): da especificación a unha aplicación que funciona**. Google AI Studio (modo Build) ou Lovable, cunha conta de probas.
 
 1. Pegar a especificación da páxina e responder ás preguntas.
 2. Revisar o plan antes de que escriba código.

@@ -47,15 +47,8 @@ Diseño legible en móvil y proyector, buen contraste, manejable con teclado.
 No recojas ni envíes ningún dato del usuario.
 ```
 
----
-
-<!-- .slide: id="demo-pagina" class="demo" -->
-## Del encargo a Moodle
-
-Crear, iterar y publicar una página en diez minutos.
-
 Notas:
-**Demo (10 min)**. Gemini (Canvas) o Claude, y un curso de pruebas de Moodle.
+**Demo (10 min): del encargo a Moodle**. Gemini (Canvas) o Claude, y un curso de pruebas de Moodle.
 
 1. Pedir una página con el *prompt* de la página y un tema propuesto por el grupo.
 2. Probarla y pedir dos cambios concretos («añade una pista en cada pregunta»).

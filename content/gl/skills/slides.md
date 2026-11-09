@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/skills/slides.md: "86b243db474fe069872d97973b4ca9c78fd8f3e1"
+  es/skills/slides.md: "724ecefcb738029015302f40fe39f4bd12e5642d"
 ---
 
 <!-- .slide: id="no-repitas" class="statement" -->
@@ -82,15 +82,7 @@ description: Xera preguntas de escolla múltiple en formato GIFT importable en M
 Notas:
 A descrición é o máis importante: é o que o asistente le para decidir se a usa. O cartafol complétase cunha pregunta exportada do teu propio Moodle. A versión completa está na páxina.
 
----
-
-<!-- .slide: id="demo-crear-skill" class="demo" -->
-## Unha *skill* que crea *skills*
-
-Describir a tarefa e deixar que o asistente escriba o procedemento.
-
-Notas:
-**Demo (8 min)**. Claude (plan gratuíto, coa execución de código activada en Axustes → Capacidades) ou ChatGPT Edu.
+**Demo (8 min): unha *skill* que crea *skills***. Claude (plan gratuíto, coa execución de código activada en Axustes → Capacidades) ou ChatGPT Edu.
 
 1. Pedir: «Quero unha *skill* que xere preguntas GIFT para Moodle con estas regras…» e pegar as regras da páxina.
 2. Revisar a descrición e as instrucións que propón; corrixir o que non encaixe.

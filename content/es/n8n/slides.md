@@ -70,15 +70,7 @@ Precios y límites, en la tabla de la página, con su fecha de revisión. Los ej
 Notas:
 Un buen primer flujo: no maneja datos personales, cada resumen va con su enlace para comprobarlo y, si falla, no pasa nada grave.
 
----
-
-<!-- .slide: id="demo-boe" class="demo" -->
-## Un primer flujo, nodo a nodo
-
-El boletín del BOE, viendo qué sale de cada paso.
-
-Notas:
-**Demo (12 min)**. Una cuenta de prueba de n8n Cloud, creada pocos días antes de la sesión.
+**Demo (12 min): un primer flujo, nodo a nodo**. Una cuenta de prueba de n8n Cloud, creada pocos días antes de la sesión.
 
 1. Crear el *Schedule Trigger* y el nodo *RSS Read* con la dirección del canal.
 2. Ejecutar el RSS y enseñar los elementos que salen.

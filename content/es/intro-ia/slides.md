@@ -91,6 +91,18 @@ A un chatbot le preguntas y te responde; a un agente le encargas una tarea y la 
 
 Como el teclado del móvil, pero entrenado con una cantidad enorme de texto y teniendo en cuenta todo lo anterior.
 
+Notas:
+<!-- TODO: Hoy en día esta demo me sobra: demasiado simple y obvio. Todo el mundo ya ha usado al menos mínimamente algún chatbot -->
+**Demo (3 min): la misma pregunta, dos respuestas**. Cualquier *chatbot*, en dos chats temporales.
+
+1. Hacer la misma petición abierta en los dos chats (por ejemplo, «Propón una actividad de 20 minutos para introducir la fotosíntesis en 2.º de ESO»).
+2. Poner las dos respuestas lado a lado.
+3. Regenerar una de ellas y mostrar que vuelve a cambiar.
+
+**Resultado esperado:** propuestas distintas, igual de seguras.
+**Si falla:** explicar con la página que cada palabra se elige entre una distribución de probabilidades.
+**Mensaje clave:** cuando el resultado importa, regenera o compara.
+
 ---
 
 <!-- .slide: id="plausible" class="statement" -->
@@ -128,25 +140,6 @@ El tono servicial y la tendencia a dar la razón no son una personalidad: son co
 
 ---
 
-<!-- .slide: id="demo-respuestas-distintas" class="demo" -->
-## La misma pregunta, dos respuestas
-<!-- TODO: Hoy en día esta demo me sobra: demasiado simple y obvio. Todo el mundo ya ha usado al menos mínimamente algún chatbot -->
-
-El modelo elige entre las palabras más probables con un componente de azar.
-
-Notas:
-**Demo (3 min)**. Cualquier *chatbot*, en dos chats temporales.
-
-1. Hacer la misma petición abierta en los dos chats (por ejemplo, «Propón una actividad de 20 minutos para introducir la fotosíntesis en 2.º de ESO»).
-2. Poner las dos respuestas lado a lado.
-3. Regenerar una de ellas y mostrar que vuelve a cambiar.
-
-**Resultado esperado:** propuestas distintas, igual de seguras.
-**Si falla:** explicar con la página que cada palabra se elige entre una distribución de probabilidades.
-**Mensaje clave:** cuando el resultado importa, regenera o compara.
-
----
-
 <!-- .slide: id="alucinaciones" -->
 ## Alucinaciones
 
@@ -156,15 +149,8 @@ Notas:
 - Los modelos actuales fallan menos, sobre todo con la búsqueda web, pero el riesgo no desaparece.
 - **Toda cifra, cita, referencia o norma se comprueba en la fuente.**
 
----
-
-<!-- .slide: id="demo-referencias" class="demo" --> <!-- TODO: Me gusta el estilo de las slides que presentan una demo, pero no tanto que ponga explícitamente "Demo en directo" -->
-## ¿Existen estas referencias?
-
-Pedir bibliografía y comprobarla.
-
 Notas:
-**Demo (5 min)**. Cualquier *chatbot*, en un chat temporal y sin búsqueda web si se puede desactivar.
+**Demo (5 min): ¿existen estas referencias?** Cualquier *chatbot*, en un chat temporal y sin búsqueda web si se puede desactivar.
 
 1. Pedir tres referencias académicas sobre un tema muy concreto de tu materia.
 2. Buscar cada título en un buscador académico. <!-- TODO: cómo por ejemplo? -->

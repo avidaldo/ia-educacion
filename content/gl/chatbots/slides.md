@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/chatbots/slides.md: "b0acd7c53bf823bac2c47dd3ffa4803821ec1868"
+  es/chatbots/slides.md: "3ebcff4a11242e8b103fcb507e3bdb991d7ecea5"
 ---
 
 <!-- .slide: id="se-parecen" class="statement" -->
@@ -65,15 +65,8 @@ Pesos abertos: calquera pode descargar o modelo e executalo nos seus servidores.
 | Crear unha páxina ou unha aplicación | Claude (Artifacts), ChatGPT ou Gemini (Canvas) |
 | Xerar ou editar imaxes | ChatGPT ou Gemini |
 
----
-
-<!-- .slide: id="demo-comparar" class="demo" -->
-## A mesma petición en dous *chatbots*
-
-As diferenzas sinalan onde hai que comprobar.
-
 Notas:
-**Demo (5 min)**. Dous *chatbots* abertos á vez (por exemplo, ChatGPT e Gemini), en chats temporais.
+**Demo (5 min): a mesma petición en dous *chatbots***. Dous *chatbots* abertos á vez (por exemplo, ChatGPT e Gemini), en chats temporais.
 
 1. Pegar nos dous a mesma petición da materia de alguén do grupo.
 2. Comparar as respostas: que coincide, que non, que falta en cada unha.
@@ -137,15 +130,8 @@ Por defecto, nas contas persoais, si. As contas de organización adoitan excluí
 
 Consérvase nos servidores da empresa durante ese prazo.
 
----
-
-<!-- .slide: id="demo-ajustes" class="demo" -->
-## Onde están os axustes
-
-Instrucións, memoria, chat temporal e adestramento.
-
 Notas:
-**Demo (5 min)**. ChatGPT e Gemini cunha conta de probas.
+**Demo (5 min): onde están os axustes**. ChatGPT e Gemini cunha conta de probas.
 
 1. Abrir a configuración e ensinar as instrucións personalizadas.
 2. Ensinar a memoria: que lembra e como se borra.

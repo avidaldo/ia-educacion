@@ -157,15 +157,7 @@ Herramientas contratadas por la administración, casos inventados o trabajos sin
 Notas:
 La LOE habilita al centro a tratar los datos que necesita, con seguridad, confidencialidad y deber de sigilo del profesorado. Un tercero que trate esos datos tiene que ser un encargado con contrato (art. 28 del RGPD). Quitar el nombre no basta si la combinación de datos identifica a la persona. Y quien envía un trabajo con el nombre cambiado por un código sigue tratando datos del alumno, porque guarda la tabla: reduce el riesgo, pero qué herramienta se puede usar lo decide la Consellería. Cómo hacerlo con trabajos, notas e informes está en el módulo Datos del alumnado.
 
----
-
-<!-- .slide: id="demo-local" class="demo" -->
-## Un modelo que funciona sin internet
-
-La privacidad depende de dónde se ejecuta el modelo.
-
-Notas:
-**Demo (5 min)**. Ollama o LM Studio con un modelo pequeño ya descargado en el portátil.
+**Demo (5 min): un modelo que funciona sin internet**. Ollama o LM Studio con un modelo pequeño ya descargado en el portátil.
 
 1. Hacer una pregunta al modelo local y ver la respuesta.
 2. Desconectar la red (wifi y cable).

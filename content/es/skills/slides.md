@@ -82,15 +82,7 @@ description: Genera preguntas de opción múltiple en formato GIFT importable en
 Notas:
 La descripción es lo más importante: es lo que el asistente lee para decidir si la usa. La carpeta se completa con una pregunta exportada de tu propio Moodle. La versión completa está en la página.
 
----
-
-<!-- .slide: id="demo-crear-skill" class="demo" -->
-## Una *skill* que crea *skills*
-
-Describir la tarea y dejar que el asistente escriba el procedimiento.
-
-Notas:
-**Demo (8 min)**. Claude (plan gratuito, con la ejecución de código activada en Ajustes → Capacidades) o ChatGPT Edu.
+**Demo (8 min): una *skill* que crea *skills***. Claude (plan gratuito, con la ejecución de código activada en Ajustes → Capacidades) o ChatGPT Edu.
 
 1. Pedir: «Quiero una *skill* que genere preguntas GIFT para Moodle con estas reglas…» y pegar las reglas de la página.
 2. Revisar la descripción y las instrucciones que propone; corregir lo que no encaje.

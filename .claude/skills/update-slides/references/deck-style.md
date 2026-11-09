@@ -12,7 +12,7 @@ A typical module deck, 15–25 slides (about 45 minutes with demos):
 
 1. A `statement` that states the module's central idea.
 2. Blocks of 3–6 slides, one per main section of the page; a `section` divider only when the module has three or more blocks.
-3. A `demo` slide wherever the page shows something worth doing live (usually 1–3 per module).
+3. No slide announces a demo: the teacher decides during the session whether and when to do each one. Wherever the page shows something worth doing live (usually 1–3 per module), the demo script goes in the speaker notes of the slide that explains what the demo shows (see «Speaker notes»).
 4. A `practice` slide near the end when the page offers a task the group can do in 10–15 minutes.
 5. Optionally a closing `statement` or `checklist` that sums up.
 
@@ -38,17 +38,19 @@ A typical module deck, 15–25 slides (about 45 minutes with demos):
 
 ## Ids
 
-ASCII kebab-case from the slide's meaning (`preguntar-primero`, `demo-metaprompting`), unique in the deck, never renamed once published.
+ASCII kebab-case from the slide's meaning (`preguntar-primero`, `prompt-procedimiento`), unique in the deck, never renamed once published.
 
 ## Speaker notes
 
-Every `demo` and `practice` slide has notes; other slides have notes only when there is something to say that the slide does not show. Start the notes with `Notas:` at column 0.
+Every `practice` slide has notes, and so does every slide that carries a demo script; other slides have notes only when there is something to say that the slide does not show. Start the notes with `Notas:` at column 0.
 
-Demo notes follow this template:
+A demo script goes at the end of its slide's notes, after a blank line, and follows this template. Its title says what the group will see, since no slide shows it; a slide may carry more than one script, one after the other. Never put a `---` line in the notes: it would split the slide.
 
-```
+```markdown
 Notas:
-**Demo (5 min)**. Herramienta y cuenta (p. ej. cualquier chatbot, en un chat temporal).
+Lo que la diapositiva ya tuviera en sus notas, si tenía.
+
+**Demo (5 min): lo que el grupo va a ver**. Herramienta y cuenta (p. ej. cualquier chatbot, en un chat temporal).
 
 1. Paso concreto.
 2. Paso concreto.

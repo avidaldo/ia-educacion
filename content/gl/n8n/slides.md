@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/n8n/slides.md: "f2c0c961f716fff047aa744ba36cd34f97163f9f"
+  es/n8n/slides.md: "33fb9b6b5d8ffb970486b3ad37f5eea957522585"
 ---
 
 <!-- .slide: id="receta" class="statement" -->
@@ -70,15 +70,7 @@ Prezos e límites, na táboa da páxina, coa súa data de revisión. Os exemplos
 Notas:
 Un bo primeiro fluxo: non manexa datos persoais, cada resumo vai coa súa ligazón para comprobalo e, se falla, non pasa nada grave.
 
----
-
-<!-- .slide: id="demo-boe" class="demo" -->
-## Un primeiro fluxo, nodo a nodo
-
-O boletín do BOE, vendo que sae de cada paso.
-
-Notas:
-**Demo (12 min)**. Unha conta de proba de n8n Cloud, creada poucos días antes da sesión.
+**Demo (12 min): un primeiro fluxo, nodo a nodo**. Unha conta de proba de n8n Cloud, creada poucos días antes da sesión.
 
 1. Crear o *Schedule Trigger* e o nodo *RSS Read* co enderezo da canle.
 2. Executar o RSS e ensinar os elementos que saen.
