@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/datos-alumnado/slides.md: "aff581b4f7245f1c5cef5832555bd2c0c7938efe"
+  es/datos-alumnado/slides.md: "0eadf84db108779f8a39c00afe3fb923606578c5"
 ---
 
 <!-- .slide: id="idea-central" class="statement" -->
@@ -16,17 +16,30 @@ Notas:
 <!-- .slide: id="tres-vias" class="cards fragments" -->
 ## Tres vías, nesta orde
 
-### 1. Sen datos
-A IA escribe o modelo de documento, a fórmula ou o procedemento; ti aplícalo no teu equipo.
+### 1. Sen datos: si
+A IA escribe o modelo de documento, a fórmula ou o procedemento; ti aplícalo aos datos.
 
-### 2. Sen nada que diga de quen é
-Só o contido do traballo. Ti podes sabelo; quen o recibe, non.
+### 2. Traballo limpo: sen aclarar
+Só o contido, cun código. O risco é mínimo, pero ninguén o autorizou.
 
-### 3. Datos persoais
-Só en ferramentas contratadas ou autorizadas pola administración.
+### 3. Datos persoais: non
+Agás en ferramentas contratadas ou autorizadas pola administración. Hoxe non hai ningunha de IA xerativa.
 
 Notas:
-A segunda ten unha dúbida sen resolver: o protocolo da Consellería pide usar só as súas ferramentas cos datos do alumnado, e non aclara se iso inclúe un traballo xa limpo, do que só o docente sabe o autor. Se está ben limpo, o risco para o alumno é mínimo; para ter certeza, pregúntaselle á persoa delegada de protección de datos. A terceira é unha obriga legal: a habilitación para tratar os datos do alumnado é do centro e da administración, non de cada ferramenta que use un docente. Un modelo local, sen conexión, non envía nada fóra, pero os datos seguen suxeitos ás normas de seguridade do centro.
+A terceira é unha obriga legal: a habilitación para tratar os datos do alumnado é do centro e da administración, non de cada ferramenta que use un docente. A segunda é a que máis se pregunta, e detállaa a diapositiva seguinte. Un modelo local, sen conexión, non envía nada fóra, pero os traballos seguen sendo datos do alumnado, e o protocolo da Consellería pide non gardalos en dispositivos persoais do profesorado.
+
+---
+
+<!-- .slide: id="tabla-codigos" class="bullets" -->
+## Cun código, o risco baixa, pero falta o permiso
+
+- **Gardar a táboa**: si, coma o caderno de notas, fóra da ferramenta
+- **Para quen recibe** o texto limpo, non é un dato de ninguén
+- **Para ti** segue sendo un dato do alumno, e envialo xa é tratalo
+- **A Consellería** recomenda alias «mantendo as obrigas»; **o INTEF**, permiso previo
+
+Notas:
+É a pregunta que máis se fai: se cambio o nome por un código e gardo a táboa, podo pegar o traballo nun *chatbot* coa miña conta? Se o texto aínda delata o alumno, non: é unha obriga legal. Se está ben limpo, ningunha norma o prohibe de forma expresa, e ninguén o autorizou. A Consellería, no seu protocolo, só admite plataformas externas para proxectos con autorización por escrito, e aínda así recomenda nelas contas con alias que manteñen as obrigas. O INTEF pide avaliar a ferramenta e o permiso da administración ou do centro, despois de consultar a delegación de protección de datos. Mentres tanto: a vía 1 se abonda; se se usa a vía 2, texto ben limpo, chat temporal e adestramento desactivado; e se se vai facer a miúdo, pedir o visto e prace a través do centro.
 
 ---
 
@@ -36,7 +49,7 @@ A segunda ten unha dúbida sen resolver: o protocolo da Consellería pide usar s
 Ti podes saber de quen é; quen recibe o texto non debe poder sabelo.
 
 Notas:
-O procedemento habitual é razoable: código en lugar do nome, a táboa no teu equipo, axuda da IA e a valoración de volta a cada alumno. Que o docente saiba de quen é cada traballo non é un problema: é o seu profesor. Para el, coa táboa, seguen sendo datos do alumno (a lei chámalle pseudonimizar), e por iso a táboa gárdase coma o caderno de notas. O que está en xogo é o que pode deducir quen o recibe: o ficheiro leva o autor e os comentarios, e o propio texto pode abondar.
+O que está en xogo na vía 2 é o que pode deducir quen recibe o texto. O nome é o fácil: o ficheiro leva o autor e os comentarios, e o propio texto pode abondar.
 
 ---
 
@@ -138,7 +151,7 @@ A versión completa, coas tres filas, está na páxina.
 | Necesidades específicas | 1 | A necesidade didáctica, non o diagnóstico |
 
 Notas:
-Para adaptar un material, «necesita frases curtas, vocabulario básico e unha idea por parágrafo» funciona igual de ben que nomear un trastorno, e non revela un dato de saúde. Na páxina están os sete casos.
+Para adaptar un material, «necesita frases curtas, vocabulario básico e unha idea por parágrafo» funciona igual de ben que nomear un trastorno, e non revela un dato de saúde. Na páxina están os sete casos. O exame é o caso da vía 2 con máis reparos: o INTEF descarta ferramentas externas para avaliar probas de coñecemento, así que a IA transcribe e sinala erros, e a puntuación de cada pregunta decídea o docente.
 
 **Demo (5 min): un modelo de documento con ocos**. Calquera *chatbot* nun chat temporal e un procesador de textos. Material: unha táboa inventada cos datos de cinco alumnos (nome, grupo, fortalezas, aspectos que mellorar, proposta).
 

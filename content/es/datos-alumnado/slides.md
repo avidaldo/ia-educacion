@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/datos-alumnado/index.md: "09bee5b7d030916665d1f922e82b34664bd31f81"
+  es/datos-alumnado/index.md: "545cc3bc432229ae80c063504f8a2ed617847940"
 ---
 
 <!-- .slide: id="idea-central" class="statement" -->
@@ -16,17 +16,30 @@ Notas:
 <!-- .slide: id="tres-vias" class="cards fragments" -->
 ## Tres vías, en este orden
 
-### 1. Sin datos
-La IA escribe la plantilla, la fórmula o el procedimiento; tú lo aplicas en tu equipo.
+### 1. Sin datos: sí
+La IA escribe la plantilla, la fórmula o el procedimiento; tú lo aplicas a los datos.
 
-### 2. Sin nada que diga de quién es
-Solo el contenido del trabajo. Tú puedes saberlo; quien lo recibe, no.
+### 2. Trabajo limpio: sin aclarar
+Solo el contenido, con un código. El riesgo es mínimo, pero nadie lo ha autorizado.
 
-### 3. Datos personales
-Solo en herramientas contratadas o autorizadas por la administración.
+### 3. Datos personales: no
+Salvo en herramientas contratadas o autorizadas por la administración. Hoy no hay ninguna de IA generativa.
 
 Notas:
-La segunda tiene una duda sin resolver: el protocolo de la Consellería pide usar solo sus herramientas con los datos del alumnado, y no aclara si eso incluye un trabajo ya limpio, del que solo el docente sabe el autor. Si está bien limpio, el riesgo para el alumno es mínimo; para tener certeza, se pregunta a la persona delegada de protección de datos. La tercera es una obligación legal: la habilitación para tratar los datos del alumnado es del centro y de la administración, no de cada herramienta que use un docente. Un modelo local, sin conexión, no envía nada fuera, pero los datos siguen sujetos a las normas de seguridad del centro.
+La tercera es una obligación legal: la habilitación para tratar los datos del alumnado es del centro y de la administración, no de cada herramienta que use un docente. La segunda es la que más se pregunta, y la detalla la diapositiva siguiente. Un modelo local, sin conexión, no envía nada fuera, pero los trabajos siguen siendo datos del alumnado, y el protocolo de la Consellería pide no guardarlos en dispositivos personales del profesorado.
+
+---
+
+<!-- .slide: id="tabla-codigos" class="bullets" -->
+## Con un código, el riesgo baja, pero falta el permiso
+
+- **Guardar la tabla**: sí, como el cuaderno de notas, fuera de la herramienta
+- **Para quien recibe** el texto limpio, no es un dato de nadie
+- **Para ti** sigue siendo un dato del alumno, y enviarlo ya es tratarlo
+- **La Consellería** recomienda alias «mantendo as obrigas»; **el INTEF**, permiso previo
+
+Notas:
+Es la pregunta que más se hace: si cambio el nombre por un código y guardo la tabla, ¿puedo pegar el trabajo en un *chatbot* con mi cuenta? Si el texto todavía delata al alumno, no: es una obligación legal. Si está bien limpio, ninguna norma lo prohíbe de forma expresa, y nadie lo ha autorizado. La Consellería, en su protocolo, solo admite plataformas externas para proyectos con autorización por escrito, y aun así recomienda en ellas cuentas con alias que mantienen las obligaciones. El INTEF pide evaluar la herramienta y el permiso de la administración o del centro, después de consultar a la delegación de protección de datos. Mientras tanto: la vía 1 si basta; si se usa la vía 2, texto bien limpio, chat temporal y entrenamiento desactivado; y si se va a hacer a menudo, pedir el visto bueno a través del centro.
 
 ---
 
@@ -36,7 +49,7 @@ La segunda tiene una duda sin resolver: el protocolo de la Consellería pide usa
 Tú puedes saber de quién es; quien recibe el texto no debe poder saberlo.
 
 Notas:
-El procedimiento habitual es razonable: código en lugar del nombre, la tabla en tu equipo, ayuda de la IA y la valoración de vuelta a cada alumno. Que el docente sepa de quién es cada trabajo no es un problema: es su profesor. Para él, con la tabla, siguen siendo datos del alumno (la ley lo llama seudonimizar), y por eso la tabla se guarda como el cuaderno de notas. Lo que se juega es lo que puede deducir quien lo recibe: el fichero lleva el autor y los comentarios, y el propio texto puede bastar.
+Lo que se juega en la vía 2 es lo que puede deducir quien recibe el texto. El nombre es lo fácil: el fichero lleva el autor y los comentarios, y el propio texto puede bastar.
 
 ---
 
@@ -138,7 +151,7 @@ La versión completa, con las tres filas, está en la página.
 | Necesidades específicas | 1 | La necesidad didáctica, no el diagnóstico |
 
 Notas:
-Para adaptar un material, «necesita frases cortas, vocabulario básico y una idea por párrafo» funciona igual de bien que nombrar un trastorno, y no revela un dato de salud. En la página están los siete casos.
+Para adaptar un material, «necesita frases cortas, vocabulario básico y una idea por párrafo» funciona igual de bien que nombrar un trastorno, y no revela un dato de salud. En la página están los siete casos. El examen es el caso de la vía 2 con más reparos: el INTEF descarta herramientas externas para evaluar pruebas de conocimiento, así que la IA transcribe y señala errores, y la puntuación de cada pregunta la decide el docente.
 
 **Demo (5 min): una plantilla con huecos**. Cualquier *chatbot* en un chat temporal y un procesador de textos. Material: una tabla inventada con los datos de cinco alumnos (nombre, grupo, fortalezas, aspectos a mejorar, propuesta).
 

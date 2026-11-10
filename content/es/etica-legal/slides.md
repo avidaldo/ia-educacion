@@ -1,7 +1,7 @@
 ---
 derived_from:
-  es/etica-legal/index.md: "5e747dfd51ba0055a72ecc8aadd4b5fa09c4dcf3"
-  es/etica-legal/normativa.md: "f0f7d0a212880d50cd70e6eef0224909575255ca"
+  es/etica-legal/index.md: "c078391d16d26e76edafef7b5a27b9f69d8c3d7d"
+  es/etica-legal/normativa.md: "39a2799419012f8e3ec905adeaead031b959a67c"
 ---
 
 <!-- .slide: id="ley-o-prudencia" class="statement" -->
@@ -162,10 +162,10 @@ Sesgo de confirmación y sesgo de automatización. En cuatro estudios clínicos 
 Nombres, notas, informes o fotos en un *chatbot* con cuenta personal.
 
 ### Sí
-Herramientas contratadas por la administración, casos inventados o trabajos sin nada que diga de quién son.
+Herramientas contratadas por la administración, casos inventados, o la plantilla y el procedimiento en lugar del resultado.
 
 Notas:
-La LOE habilita al centro a tratar los datos que necesita, con seguridad, confidencialidad y deber de sigilo del profesorado. Un tercero que trate esos datos tiene que ser un encargado con contrato (art. 28 del RGPD). Quitar el nombre no basta si la combinación de datos identifica a la persona. Y quien envía un trabajo con el nombre cambiado por un código sigue tratando datos del alumno, porque guarda la tabla: reduce el riesgo, pero qué herramienta se puede usar lo decide la Consellería. Cómo hacerlo con trabajos, notas e informes está en el módulo Datos del alumnado.
+La LOE habilita al centro a tratar los datos que necesita, con seguridad, confidencialidad y deber de sigilo del profesorado. Un tercero que trate esos datos tiene que ser un encargado con contrato (art. 28 del RGPD). Quitar el nombre no basta si la combinación de datos identifica a la persona. Y quien envía un trabajo con el nombre cambiado por un código sigue tratando datos del alumno, porque guarda la tabla: reduce el riesgo, pero qué herramienta se puede usar lo decide la Consellería, que en su protocolo recomienda alias en plataformas externas «mantendo as obrigas» de la normativa. Por eso un trabajo bien limpio no está ni en el «No» ni en el «Sí»: nadie lo ha autorizado todavía. Qué está claro y qué no, con trabajos, notas e informes, está en el módulo Datos del alumnado.
 
 **Demo (5 min): un modelo que funciona sin internet**. Ollama o LM Studio con un modelo pequeño ya descargado en el portátil.
 

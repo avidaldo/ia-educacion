@@ -2,7 +2,7 @@
 title: Normativa
 description: O que din o RXPD, a LOPDGDD, a LOE, o Regulamento de IA e as normas galegas sobre o uso da IA nun centro educativo, co seu calendario de aplicación e o que aínda está en tramitación.
 derived_from:
-  es/etica-legal/normativa.md: "f0f7d0a212880d50cd70e6eef0224909575255ca"
+  es/etica-legal/normativa.md: "39a2799419012f8e3ec905adeaead031b959a67c"
 ---
 
 > [!NOTE]
@@ -31,7 +31,9 @@ O Tribunal de Xustiza matizou en 2025 para quen seguen sendo datos persoais. Par
 
 O que a sentenza non cambia é a posición de quen envía. Enviar xa é tratar datos (o RXPD conta a «comunicación por transmisión» entre os tratamentos), e para quen garda a táboa os datos pseudonimizados non poden considerarse «de ninguna forma datos anónimos». O Tribunal aplicouno ao deber de informar os interesados de quen vai recibir os seus datos: rexe antes do envío, «con independencia de si tenían o no carácter de datos personales» para o destinatario.[^srb] Por iso pseudonimizar reduce o risco, pero non decide por si só que ferramenta se pode usar. Iso depende das instrucións do responsable do tratamento, que nos centros públicos galegos é a Consellería e non cada centro,[^protocolo] porque quen traballa baixo a súa autoridade trata os datos «siguiendo instrucciones del responsable».[^rgpd]
 
-Pseudonimizar non é inútil: o RXPD ponna como exemplo das medidas coas que o responsable protexe os datos desde o deseño e garante a súa seguridade.[^rgpd] Pero non converte os datos en libres. Como se aplica aos traballos do alumnado, con casos típicos, está en [Datos do alumnado](../datos-alumnado/index.md).
+A propia Consellería trata o alias desa maneira. Para as plataformas externas que admite en proxectos, o seu protocolo recomenda «contas con alias, é dicir, cos datos persoais “pseudonimizados” pero mantendo as obrigas e medidas contempladas na normativa de protección de datos» (**recomendación institucional**).[^protocolo] E o aviso que reciben as familias ao matricular, segundo o modelo do mesmo protocolo, anuncia como destinatarios dos datos outras administracións públicas e «as empresas subministradoras de servizos no centro».[^protocolo] Un *chatbot* coa conta persoal dun docente non é ningunha das dúas cousas.
+
+Pseudonimizar non é inútil: o RXPD ponna como exemplo das medidas coas que o responsable protexe os datos desde o deseño e garante a súa seguridade.[^rgpd] Pero non converte os datos en libres. Que significa para un docente que lle cambia o nome a un traballo por un código antes de pedirlle axuda á IA está en [a táboa de códigos, en catro preguntas](../datos-alumnado/index.md#la-tabla-de-códigos-en-cuatro-preguntas).
 
 ### Quen pode tratar os datos do alumnado
 
@@ -141,7 +143,7 @@ A Lei 2/2025, para o desenvolvemento e o impulso da intelixencia artificial en G
 [^rgpd]: Regulamento (UE) 2016/679, xeral de protección de datos ([BOE](https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807)): considerando 26 (información anónima e datos pseudonimizados) e artigos 4.1 (dato persoal), 4.2 (tratamento), 4.5 (pseudonimización), 5.1.c (minimización), 8.1 (consentimento de menores en servizos en liña), 9.1 (categorías especiais), 22.1 (decisións automatizadas), 25.1 (protección de datos desde o deseño), 28.1 (encargado do tratamento), 29 (tratamento baixo a autoridade do responsable), 32.1.a (seguridade do tratamento), 35.1 (avaliación de impacto) e 37.1.a (delegado de protección de datos das autoridades públicas).
 [^nowak]: Sentenza do Tribunal de Xustiza do 20 de decembro de 2017, *Nowak*, C-434/16, apartados 37 e 62 ([EUR-Lex](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:62016CJ0434)). Interpreta a Directiva 95/46, á que substituíu o RXPD cunha definición de dato persoal do mesmo alcance.
 [^srb]: Sentenza do Tribunal de Xustiza do 4 de setembro de 2025, *SEPD / JUR*, C-413/23 P, apartados 73, 76, 85, 86 e 112 ([EUR-Lex](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:62023CJ0413)). Interpreta o regulamento de protección de datos das institucións da UE, cuxa definición de dato persoal é «sustancialmente idéntica» á do RXPD (apartado 52).
-[^protocolo]: Consellería de Cultura, Educación, Formación Profesional e Universidades, [*Protocolo de protección de datos persoais*](https://www.edu.xunta.gal/portal/sites/web/files/protocolo_de_proteccion_de_datos_persoais_160823.pdf), setembro de 2022, apartados 4, 12.1 e 21.
+[^protocolo]: Consellería de Cultura, Educación, Formación Profesional e Universidades, [*Protocolo de protección de datos persoais*](https://www.edu.xunta.gal/portal/sites/web/files/protocolo_de_proteccion_de_datos_persoais_160823.pdf), setembro de 2022, apartados 4, 12.1 e 21, e anexo, modelo 1 (cláusula informativa para os formularios de matrícula).
 [^loe]: Lei orgánica 2/2006, de educación, [disposición adicional vixésimo terceira](https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899#davigesimotercera).
 [^lopdgdd]: Lei orgánica 3/2018, de protección de datos persoais e garantía dos dereitos dixitais, [artigo 7](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673#a7).
 [^menores]: Proxecto de lei orgánica para a protección das persoas menores de idade nas contornas dixitais, [BOCG, Congreso, serie A, núm. 52-1](https://www.congreso.es/public_oficiales/L15/CONG/BOCG/A/BOCG-15-A-52-1.PDF), 11 de abril de 2025, disposición derradeira sexta. As Cortes disolvéronse polo [Real decreto 806/2026](https://www.boe.es/buscar/doc.php?id=BOE-A-2026-20742), do 5 de outubro, e a caducidade establécea o [artigo 207 do Regulamento do Congreso](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196).

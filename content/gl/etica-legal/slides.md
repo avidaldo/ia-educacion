@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/etica-legal/slides.md: "b80a689ec2cd0e2ecfe0a7cb5cb6afa7d7252b30"
+  es/etica-legal/slides.md: "3b8a60fcc69e6402b7f3bc2a843861b20ba14ae9"
 ---
 
 <!-- .slide: id="ley-o-prudencia" class="statement" -->
@@ -161,10 +161,10 @@ Nesgo de confirmación e nesgo de automatización. En catro estudos clínicos co
 Nomes, notas, informes ou fotos nun *chatbot* con conta persoal.
 
 ### Si
-Ferramentas contratadas pola administración, casos inventados ou traballos sen nada que diga de quen son.
+Ferramentas contratadas pola administración, casos inventados, ou o modelo de documento e o procedemento en lugar do resultado.
 
 Notas:
-A LOE habilita o centro a tratar os datos que precisa, con seguridade, confidencialidade e deber de sixilo do profesorado. Un terceiro que trate eses datos ten que ser un encargado con contrato (art. 28 do RXPD). Quitar o nome non abonda se a combinación de datos identifica a persoa. E quen envía un traballo co nome cambiado por un código segue tratando datos do alumno, porque garda a táboa: reduce o risco, pero que ferramenta se pode usar decídeo a Consellería. Como facelo con traballos, notas e informes está no módulo Datos do alumnado.
+A LOE habilita o centro a tratar os datos que precisa, con seguridade, confidencialidade e deber de sixilo do profesorado. Un terceiro que trate eses datos ten que ser un encargado con contrato (art. 28 do RXPD). Quitar o nome non abonda se a combinación de datos identifica a persoa. E quen envía un traballo co nome cambiado por un código segue tratando datos do alumno, porque garda a táboa: reduce o risco, pero que ferramenta se pode usar decídeo a Consellería, que no seu protocolo recomenda alias en plataformas externas «mantendo as obrigas» da normativa. Por iso un traballo ben limpo non está nin no «Non» nin no «Si»: aínda ninguén o autorizou. Que está claro e que non, con traballos, notas e informes, está no módulo Datos do alumnado.
 
 **Demo (5 min): un modelo que funciona sen internet**. Ollama ou LM Studio cun modelo pequeno xa descargado no portátil.
 

@@ -2,7 +2,7 @@
 title: Ética e normativa
 description: Criterios para decidir cando e como usar a IA no centro, separando o que obriga a lei do que é prudencia, cos nesgos, a privacidade, a autoría e o custo ambiental explicados desde como funciona a tecnoloxía.
 derived_from:
-  es/etica-legal/index.md: "5e747dfd51ba0055a72ecc8aadd4b5fa09c4dcf3"
+  es/etica-legal/index.md: "c078391d16d26e76edafef7b5a27b9f69d8c3d7d"
 ---
 
 ## Que é lei e que é prudencia
@@ -113,7 +113,7 @@ Cos modelos de linguaxe hai un agravante: unha resposta falsa pode soar tan flu�
 Os datos do alumnado pódeos tratar o centro para a súa función educativa, con medidas de seguridade e con deber de sixilo para o profesorado.[^loe] O que non cobre esa habilitación é copialos nunha ferramenta que a administración non contratou: o provedor non actúa por conta do centro, pode gardalos ou usalos para adestrar, e non hai contrato que o impida.
 
 - **Obriga legal.** Non introducir datos persoais do alumnado (nomes, notas, informes, fotos, situacións familiares) en ferramentas que non estean contratadas ou autorizadas pola administración educativa. O detalle está en [Normativa](normativa.md#protección-de-datos).
-- **Boa práctica.** Traballar con casos inventados ou con traballos sen nada que permita saber de quen son: non abonda con quitar o nome se a combinación de datos («a única alumna de 2.º con discapacidade auditiva») identifica a persoa. Como facelo con traballos, notas e informes, caso por caso, está en [Datos do alumnado](../datos-alumnado/index.md).
+- **Boa práctica.** Traballar con casos inventados, ou pedirlle á IA o modelo de documento ou o procedemento en lugar do resultado. Con traballos reais sen nada que permita saber de quen son, o risco baixa moito, pero aínda ninguén autorizou envialos a un *chatbot* con conta persoal, e non abonda con quitar o nome se a combinación de datos («a única alumna de 2.º con discapacidade auditiva») identifica a persoa. Que está claro e que non, caso por caso, está en [Datos do alumnado](../datos-alumnado/index.md).
 - **Boa práctica.** Preferir sempre as contas que proporciona o centro, como se ve en [Bots educativos](../bots-educativos/index.md#lo-primero-con-qué-cuenta-entra-el-alumnado).
 
 Unha demostración útil na clase: un modelo pequeno executado no propio ordenador, con programas gratuítos como Ollama ou LM Studio, funciona **sen conexión a internet**. Desconecta a rede e segue respondendo: é a proba visible de que o modelo non precisa enviar nada fóra. Son modelos menos capaces ca os dos *chatbots* comerciais, pero amosan que a cuestión da privacidade depende de **onde se executa** o modelo.
