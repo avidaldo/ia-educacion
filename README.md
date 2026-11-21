@@ -1,18 +1,18 @@
 # Docencia con IA
 
-Course materials on artificial intelligence for secondary and vocational teachers (Galicia, Spain), in Spanish and Galician: a website with one page per module and a slide deck per module that can be combined for each session.
+Course materials on artificial intelligence for secondary and vocational teachers (Galicia, Spain), in Spanish and Galician, with an English edition for teachers across Europe: a website with one page per module and a slide deck per module that can be combined for each session.
 
 **Site:** <https://i.gal/ia-edu>
 
 ## How it works
 
-The website is the single source of truth. Each module is written once, in Spanish, as Markdown; its slide deck is derived from it, and the Galician version follows both. A small Python generator turns that into a static site with search, and reveal.js shows the decks.
+The website is the single source of truth. Each module is written once, in Spanish, as Markdown; its slide deck is derived from it, and the Galician version follows both. The English edition follows them too, as an adaptation: it leaves out Spanish and Galician law and keeps EU law (GDPR, AI Act), so the pages that deal with law are rewritten rather than translated (`adapted: true` in their front matter). A small Python generator turns that into a static site with search, and reveal.js shows the decks.
 
 ```text
 content/          what is written and translated
   nav.yaml        order of sections, modules and sub-pages
-  assets/         images (a name.gl.svg sibling is the Galician variant)
-  es/  gl/        one folder per module: index.md, sub-pages, slides.md
+  assets/         images (a name.gl.svg or name.en.svg sibling is the Galician or English variant)
+  es/  gl/  en/   one folder per module: index.md, sub-pages, slides.md
 engine/           what builds it (scripts run by path, not a package)
   build.py        the site, into engine/_build/ (pages, decks, bridge pages for old addresses, sitemap.xml, search index)
   check.py        links, anchors, slides, translation parity, review dates
@@ -23,7 +23,7 @@ engine/           what builds it (scripts run by path, not a package)
 .claude/skills/   update-slides and sync-translation, the two maintenance workflows
 ```
 
-Every derived file (a deck, a Galician page) records the git hash of the Spanish text it came from, so `provenance.py` can say exactly which ones a change affects and show the diff to apply.
+Every derived file (a deck, a Galician or English page) records the git hash of the Spanish text it came from, so `provenance.py` can say exactly which ones a change affects and show the diff to apply.
 
 ## Working on it
 
@@ -44,4 +44,4 @@ Contribution rules (tone, sources, slide layouts, Galician conventions) are in [
 
 ## History
 
-Until October 2026 the site was built with Docusaurus. That version is kept in the `legacy-docusaurus` branch, and its addresses still work: each one is a small page that forwards to its new place.
+Until October 2026 the site was built with Docusaurus. That version is kept in the `legacy-docusaurus` branch, and its addresses still work: each one is a small page that forwards to its new place. Its English pages, machine-translated, now forward to the English edition.

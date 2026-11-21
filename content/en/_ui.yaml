@@ -1,0 +1,63 @@
+# Interface strings for English. Missing keys fall back to es/_ui.yaml.
+site_title: Teaching with AI
+site_tagline: Artificial intelligence for secondary and VET teachers
+language_name: English
+nav:
+  fundamentos: Foundations
+  herramientas: Tools
+  aplicaciones: In the classroom
+  marco: Ethics and law
+  recursos: Resources
+alerts:
+  note: Note
+  tip: Tip
+  important: Important
+  warning: Warning
+  caution: Caution
+chat:
+  user: Teacher
+  assistant: Assistant
+  expand: (see answer)
+labels:
+  advanced: advanced
+  agenda: Today
+  back_to_site: Back to the website
+  built_on: updated on
+  closing: Materials and links
+  contents: Contents
+  copied_button: Copied
+  copy_button: Copy
+  date_format: "{day} {month} {year}"
+  deck: Slides
+  deck_fullscreen: Full screen
+  deck_picker_link: Slides
+  deck_presenter_hint: "speaker view: press S"
+  deck_view_here: View here
+  language: Language
+  menu: Menu
+  moved: "This page has moved to:"
+  next: Next
+  not_found_home: Go to the home page
+  not_found_text: This address does not exist, or it changed when the website was rebuilt. You can look for the topic with the search box.
+  not_found_title: Page not found
+  on_this_page: On this page
+  pager: Page navigation
+  picker_help: Tick the modules in the order you want to present them. You can save or share the resulting address.
+  picker_start: Present
+  picker_title: Plan the session
+  previous: Previous
+  prompt: Prompt
+  qr_alt: QR code linking to the course website
+  reviewed: Reviewed
+  skip_to_content: Skip to content
+  slide_practice: Practice
+  slides: slides
+  source_code: source code
+  sources: Sources
+  theme_toggle: Switch between light and dark theme
+  untranslated: This page has not been translated yet; it is shown in Spanish.
+months: [January, February, March, April, May, June, July, August, September, October, November, December]
+footer:
+  privacy: This website uses no cookies or trackers, and loads no third-party resources except the Mermaid diagram library on the pages that need it.
+derived_from:
+  es/_ui.yaml: "3abb82dacd9f1b24f1b3ed2587e9d02d8bb71b15"

@@ -1,11 +1,11 @@
 # AGENTS.md
 
-Web y presentaciones de los cursos de inteligencia artificial para docentes de secundaria y FP (Galicia), en castellano y gallego. El [README](README.md) explica la estructura y los comandos; aquí están las reglas para escribir y mantener el contenido.
+Web y presentaciones de los cursos de inteligencia artificial para docentes de secundaria y FP (Galicia), en castellano y gallego, con una edición en inglés para docentes de toda Europa. El [README](README.md) explica la estructura y los comandos; aquí están las reglas para escribir y mantener el contenido.
 
 ## Fuente única y flujo de trabajo
 
-- **La web es la fuente única.** Cada módulo se escribe en castellano en `content/es/<módulo>/`. La presentación (`slides.md`) se deriva de sus páginas, y el gallego (`content/gl/`) sigue a ambos.
-- **Orden de una actualización:** página en castellano → presentación en castellano (skill `update-slides`) → gallego (skill `sync-translation`). Ambas skills aplican solo lo que cambió, a partir de `uv run engine/provenance.py status` y `diff`.
+- **La web es la fuente única.** Cada módulo se escribe en castellano en `content/es/<módulo>/`. La presentación (`slides.md`) se deriva de sus páginas, y el gallego (`content/gl/`) y el inglés (`content/en/`) siguen a ambos.
+- **Orden de una actualización:** página en castellano → presentación en castellano (skill `update-slides`) → gallego e inglés (skill `sync-translation`). Ambas skills aplican solo lo que cambió, a partir de `uv run engine/provenance.py status` y `diff`.
 - **Los hashes `derived_from` los escribe siempre el script** (`provenance.py stamp`), nunca a mano.
 - **Si una presentación necesita algo que no está en la página**, se añade primero a la página: quien estudia sola solo tiene la web.
 - Antes de dar algo por terminado: `uv run pytest`, `uv run engine/check.py` (0 errores) y, si cambió una presentación, `uv run engine/build.py --no-search` seguido de `uv run engine/shoot.py --module <módulo>` (ninguna diapositiva desbordada). `shoot.py` fotografía la última construcción de `engine/_build/`, no el contenido actual: sin construir antes, las capturas y la auditoría son de la versión anterior. Si cambió una página o el tema, `uv run engine/shoot.py --audit --theme both` (cero infracciones de accesibilidad; también corre en CI).
@@ -35,6 +35,7 @@ Web y presentaciones de los cursos de inteligencia artificial para docentes de s
 ## Lenguas
 
 - Castellano y gallego. Los anglicismos sin adaptar, en cursiva y con el género de su equivalente (*la skill*, *o prompt*, por decisión expresa).
+- **La edición en inglés es una adaptación, no solo una traducción:** deja fuera la normativa española y gallega y se queda con la europea (RGPD, Reglamento de IA), citada por su texto oficial en inglés. Casi todos sus ficheros son espejos del castellano; los que reescriben el contenido llevan `adapted: true` en el *front matter* y tienen sus propios encabezados y anclas. Sus reglas, en `.claude/skills/sync-translation/references/english-conventions.md`. Un cambio en castellano que solo afecta a España o a Galicia no se lleva al inglés.
 - Gallego normativo (RAG). Convenciones y glosario: `.claude/skills/sync-translation/references/`. Las citas de textos oficiales solo publicados en castellano se mantienen en castellano dentro de la página gallega.
 
 ## Git

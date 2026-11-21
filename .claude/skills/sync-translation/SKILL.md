@@ -1,14 +1,14 @@
 ---
 name: sync-translation
-description: Keep the Galician version of the ia-educacion course site (content/gl/) in step with its Spanish source (content/es/) by applying only what changed — pages, slide decks and interface strings (_ui.yaml) — and write the first Galician version of new ones. Use when Spanish content changed, when engine/check.py or engine/provenance.py status reports Galician files as stale, unstamped or missing, or when the user asks to translate, "traducir", "pasar ao galego" or sync the translations of the course site.
+description: Keep the Galician and English versions of the ia-educacion course site (content/gl/, content/en/) in step with their Spanish source (content/es/) by applying only what changed — pages, slide decks and interface strings (_ui.yaml) — and write the first version of new ones. The English edition is an EU-only adaptation (no Spanish or Galician law). Use when Spanish content changed, when engine/check.py or engine/provenance.py status reports Galician or English files as stale, unstamped or missing, or when the user asks to translate, "traducir", "pasar ao galego", "pasar al inglés" or sync the translations of the course site.
 allowed-tools: Bash(uv run --directory ${CLAUDE_SKILL_DIR}/../../.. engine/provenance.py *), Bash(uv run --directory ${CLAUDE_SKILL_DIR}/../../.. engine/build.py *), Bash(uv run --directory ${CLAUDE_SKILL_DIR}/../../.. engine/check.py *), Bash(git mv *)
 ---
 
-# Sync translation — Spanish is the source, Galician follows the diff
+# Sync translation — Spanish is the source, Galician and English follow the diff
 
 ## Stance
 
-Spanish (`content/es/`) is the single source of truth; `content/gl/` mirrors it file by file. A Galician file is never rewritten from scratch when its source changes: the change in the Spanish text is located and the same change is made at the same place in the Galician text, so the rest of the translation — including wording the teacher may have polished — stays as it is.
+Spanish (`content/es/`) is the single source of truth; `content/gl/` and `content/en/` mirror it file by file. A translated file is never rewritten from scratch when its source changes: the change in the Spanish text is located and the same change is made at the same place in the Galician text, so the rest of the translation — including wording the teacher may have polished — stays as it is.
 
 Translate only reviewed Spanish: if the user is still editing a Spanish page or its deck is about to be updated (`update-slides`), wait, or translating twice costs double.
 
@@ -16,6 +16,9 @@ Translate only reviewed Spanish: if the user is still editing a Spanish page or 
 
 - [references/galician-conventions.md](references/galician-conventions.md) — normative Galician, the anglicism rule, typography, frequent Spanish calques.
 - [references/glossary-es-gl.md](references/glossary-es-gl.md) — fixed terms, including Moodle's Galician interface. Add to it when you settle a new term, and tell the user.
+- [references/english-conventions.md](references/english-conventions.md) — for `content/en/` only: what the English edition leaves out (Spanish and Galician law) and puts in its place (EU law, quoted from its English text), mirrors vs adaptations (`adapted: true`), British English and the glossary. Where it differs from this file (fences, italics, anchors of adapted pages), it wins for English.
+
+In the commands below, `gl` stands for the language being synced: run them with `en` for the English edition.
 
 All commands run from the repository root (`projects/ia-edu/ia-educacion`); the `--directory` form below works from anywhere.
 
@@ -43,6 +46,8 @@ uv run --directory ${CLAUDE_SKILL_DIR}/../../.. engine/provenance.py diff conten
 ```
 
 For each hunk, find the corresponding passage in the Galician file (same heading, same position) and make the equivalent edit with a targeted Edit — never rewrite the file. If the diff says the recorded version is not in git, compare the whole Spanish and Galician files instead.
+
+In an English adaptation (`adapted: true`), apply a hunk only if it is general or concerns EU law, rewriting it under the English conventions; skip a hunk that only concerns Spain or Galicia, stamp anyway, and list it in the report. A hunk that changes an EU fact is checked against the English text in `domain/normativa/eu/`.
 
 ### 3. Translate a new file
 
