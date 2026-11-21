@@ -1,7 +1,7 @@
 # Build configuration. Paths are relative to the repository root.
 base_path = "/ia-educacion/"
 site_url = "https://avidaldo.github.io"
-languages = ["es", "gl"]
+languages = ["es", "gl", "en"]
 source_language = "es"
 stale_after_months = 6
 max_image_kib = 300

@@ -1,5 +1,7 @@
 """Every route of the old Docusaurus site keeps resolving: it is a page of the new site or a bridge page to one."""
 
+from dataclasses import replace
+
 from build import render_pages, write_redirects
 from content_model import load_config, load_content
 from redirects import Redirect, load_legacy_routes, load_redirect_map, plan_redirects
@@ -15,8 +17,8 @@ def test_every_legacy_route_of_the_real_site_resolves():
     legacy_routes = load_legacy_routes()
     redirects, problems = plan(model, legacy_routes, load_redirect_map())
     assert not problems, [problem.message for problem in problems]
-    # The two home pages are still served by the new site itself; every other old route gets a bridge page.
-    assert {redirect.route for redirect in redirects} == set(legacy_routes) - {"", "gl/"}
+    # The home pages are still served by the new site itself; every other old route gets a bridge page.
+    assert {redirect.route for redirect in redirects} == set(legacy_routes) - {"", "gl/", "en/"}
 
 
 def test_the_prefix_chooses_the_language_and_the_anchor_is_resolved_in_it(config, content_dir):
@@ -36,6 +38,14 @@ def test_the_prefix_chooses_the_language_and_the_anchor_is_resolved_in_it(config
         ("it/docs/old-deck/", "es", "/sitio/presentacion/", "Presentaciones"),
     ]
 
+
+
+def test_old_english_routes_go_to_the_english_edition_when_the_site_has_one(config, content_dir):
+    model = load_content(replace(config, languages=["es", "gl", "en"]), content_dir)
+    redirects, problems = plan(model, ["en/docs/prompt/"], {"docs/prompt/": "prompts/#qué-es-un-prompt"})
+    assert not problems
+    assert [(redirect.language, redirect.target_url) for redirect in redirects] == [
+        ("en", "/sitio/en/prompts/#qué-es-un-prompt")]
 
 def test_missing_entries_and_targets_are_reported_once_each(config, content_dir):
     model = load_content(config, content_dir)

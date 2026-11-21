@@ -27,7 +27,7 @@ TEMPLATES_DIR = ENGINE_DIR / "templates"
 THEME_DIR = ENGINE_DIR / "theme"
 VENDOR_DIR = ENGINE_DIR / "vendor"
 SHORT_URL = "i.gal/ia-edu"
-LOCALES = {"es": "es_ES", "gl": "gl_ES"}
+LOCALES = {"es": "es_ES", "gl": "gl_ES", "en": "en_GB"}
 
 
 @dataclass
@@ -81,7 +81,8 @@ def render_pages(model: ContentModel, problems: list[Problem]) -> dict[str, dict
         content = model.languages[language]
         rendered[language] = {}
         for relative_path, page in content.pages.items():
-            inherited = None if language == source_language or page.is_fallback else source_heading_ids.get(relative_path)
+            own_ids = language == source_language or page.is_fallback or page.is_adaptation
+            inherited = None if own_ids else source_heading_ids.get(relative_path)
             context = RenderContext(model=model, language=language, source_file=page.source_file, ui=content.ui,
                                     line_offset=page.body_start_line - 1, inherited_heading_ids=inherited)
             result = render_markdown(page.body, context)

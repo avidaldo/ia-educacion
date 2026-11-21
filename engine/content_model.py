@@ -100,6 +100,12 @@ class Page:
     def is_module_index(self) -> bool:
         return self.module is not None and PurePosixPath(self.relative_path).name == "index.md"
 
+    @property
+    def is_adaptation(self) -> bool:
+        """A translation marked `adapted: true` rewrites its source for another audience (the English edition drops
+        Spanish and Galician law), so its headings need not mirror the source's and it keeps its own anchor ids."""
+        return bool(self.front.get("adapted"))
+
 
 @dataclass
 class Deck:

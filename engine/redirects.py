@@ -13,8 +13,9 @@ from content_model import ENGINE_DIR, ContentModel, Problem
 LEGACY_URLS_FILE = ENGINE_DIR / "legacy-urls.txt"
 REDIRECTS_FILE = ENGINE_DIR / "redirects.yaml"
 REDIRECTS_SOURCE = "engine/redirects.yaml"
-# The old site's translations: English and Italian were machine translations, so they land on the Spanish source.
-LEGACY_LANGUAGE_PREFIXES = {"gl/": "gl", "en/": "es", "it/": "es"}
+# The old site's translations. Its Italian was a machine translation that was never replaced, so it lands on the
+# Spanish source; English lands on the English edition when the site has one.
+LEGACY_LANGUAGE_PREFIXES = {"gl/": "gl", "en/": "en", "it/": "es"}
 DECK_PATH = "presentacion/"
 
 
@@ -65,6 +66,8 @@ def plan_redirects(model: ContentModel, heading_ids: dict[tuple[str, str], set[s
             continue
         prefix = next((prefix for prefix in LEGACY_LANGUAGE_PREFIXES if route.startswith(prefix)), "")
         language = LEGACY_LANGUAGE_PREFIXES.get(prefix, model.config.source_language)
+        if language not in model.languages:
+            language = model.config.source_language
         old_path = route.removeprefix(prefix)
         # An old language root (/en/, /it/) goes to the home page without needing an entry.
         target = "" if old_path == "" else redirect_map.get(old_path)

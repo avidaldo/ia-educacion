@@ -1,3 +1,5 @@
+from build import render_pages
+from conftest import write
 from content_model import load_content
 from markdown_render import RenderContext, render_markdown, slugify
 
@@ -120,6 +122,23 @@ def test_translated_headings_inherit_the_source_ids(config, content_dir):
     _, mismatched = render(model, "## Só un\n", language="gl", inherited_heading_ids=["que-es", "otro"])
     assert "heading-parity" in codes(mismatched)
 
+
+
+def test_an_adapted_translation_keeps_its_own_heading_ids(config, content_dir):
+    write(content_dir / "gl" / "prompts" / "index.md", """
+        ---
+        title: Prompts (gl)
+        adapted: true
+        ---
+        ## Outra cousa
+
+        ## E outra máis
+        """)
+    model = load_content(config, content_dir)
+    problems = []
+    page = render_pages(model, problems)["gl"]["prompts/index.md"]
+    assert [heading.id for heading in page.toc] == ["outra-cousa", "e-outra-máis"]
+    assert "heading-parity" not in {problem.code for problem in problems}
 
 def test_template_braces_and_mermaid_pass_through(config, content_dir):
     model = load_content(config, content_dir)

@@ -2,8 +2,8 @@
 # in earlier courses keep working.
 # Keys are the old routes without their language prefix (engine/legacy-urls.txt lists them all, with prefixes).
 # Values are the new address relative to the language root: a page's path, "presentacion/" or "" for the home
-# page, with an optional #anchor. Old /en/ and /it/ pages go to Spanish, old /gl/ pages to Galician; an old
-# language root goes to the new home page without an entry. build.py and check.py fail if a route has no entry
+# page, with an optional #anchor. Old /en/ pages go to the English edition, old /it/ pages to Spanish and old /gl/
+# pages to Galician; an old language root goes to the new home page without an entry. build.py and check.py fail if a route has no entry
 # or a target does not exist.
 
 docs/historia-y-llms/: "intro-ia/"
