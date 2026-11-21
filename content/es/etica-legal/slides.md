@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/etica-legal/index.md: "a228c9dd27c4c96e50bcb2a9c4fb20c69561de68"
+  es/etica-legal/index.md: "aa4f196af5ba158540be3240e8214a4470cace3a"
   es/etica-legal/normativa.md: "ba7cafda6c3309b0b32791a59b2afe6dbe09801f"
 ---
 

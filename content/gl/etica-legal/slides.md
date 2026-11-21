@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/etica-legal/slides.md: "9825d49a67995a9fa762b94b28519657a850ac63"
+  es/etica-legal/slides.md: "b26002e76a1009a5c86cd5b34eb43d5b99458fb8"
 ---
 
 <!-- .slide: id="ley-o-prudencia" class="statement" -->
