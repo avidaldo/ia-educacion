@@ -2,7 +2,7 @@
 title: Ética e normativa
 description: Criterios para decidir cando e como usar a IA no centro, separando o que obriga a lei do que é prudencia, cos nesgos, a privacidade, a autoría e o custo ambiental explicados desde como funciona a tecnoloxía.
 derived_from:
-  es/etica-legal/index.md: "c078391d16d26e76edafef7b5a27b9f69d8c3d7d"
+  es/etica-legal/index.md: "a228c9dd27c4c96e50bcb2a9c4fb20c69561de68"
 ---
 
 ## Que é lei e que é prudencia
@@ -24,7 +24,7 @@ Distinguilas evita dous erros frecuentes: tratar como prohibido o que só é pru
 
 Hai tres preguntas que facerse, nesta orde:[^xunta-filtros]
 
-1. **Pertinencia.** Achega algo á aprendizaxe ou ao meu traballo que non consiga igual de ben doutra forma? Se a resposta é non, non fai falla pasar aos demais.
+1. **Pertinencia.** Achega algo á aprendizaxe ou ao meu traballo que non consiga igual de ben doutra forma? Se a resposta é non, non fai falla pasar aos demais. A guía do Ministerio para as administracións empeza polo mesmo: «La IA no siempre es la solución más adecuada».[^guia-aapp]
 2. **Ética.** Respecta as persoas afectadas: a súa autonomía, a súa privacidade, un trato xusto? As directrices da Comisión Europea para docentes, revisadas en 2026, concrétano en preguntas sobre supervisión humana, transparencia, inclusión, equidade, benestar, privacidade, solidez técnica e rendición de contas.[^directrices]
 3. **Normativa.** Permíteo a lei? Protección de datos, Regulamento de IA e normas educativas.
 
@@ -90,8 +90,8 @@ Antes de atribuírlle algo á «IA», convén preguntar que se decidiu e quen o 
 
 Que o nesgo entre por unha decisión humana non quere dicir que responda sempre a mesma persoa:
 
-- **Obriga legal.** O Regulamento de IA reparte as obrigas entre quen desenvolve o sistema e quen o desprega ([quen é quen](normativa.md#quién-es-quién)). Toda persoa ten dereito a non ser obxecto dunha decisión baseada unicamente nun tratamento automatizado que lle afecte significativamente ([artigo 22 do RXPD](normativa.md#decisiones-automatizadas-y-evaluaciones-de-impacto)). E na administración galega, unha actuación apoiada en IA non é unha decisión administrativa sen a validación da persoa titular do órgano competente ([a lei galega de IA](normativa.md#la-ley-gallega-de-ia)).
-- **Recomendación institucional.** Se unha IA erra, a responsabilidade é da persoa que a usou.[^xunta-nesgos] Para o que fas ti cunha ferramenta é exactamente así: o que usas, revísalo e respondes diso. Pero non é todo o reparto: do sistema responde quen o constrúe, e de implantalo, a administración que o desprega.
+- **Obriga legal.** O Regulamento de IA reparte as obrigas entre quen desenvolve ou encarga o sistema e quen o desprega ([quen é quen](normativa.md#quién-es-quién)). Toda persoa ten dereito a non ser obxecto dunha decisión baseada unicamente nun tratamento automatizado que lle afecte significativamente ([artigo 22 do RXPD](normativa.md#decisiones-automatizadas-y-evaluaciones-de-impacto)). E na administración galega, unha actuación apoiada en IA non é unha decisión administrativa sen a validación da persoa titular do órgano competente ([a lei galega de IA](normativa.md#la-ley-gallega-de-ia)).
+- **Recomendación institucional.** Se unha IA erra, a responsabilidade é da persoa que a usou.[^xunta-nesgos] A guía do Ministerio formúlao como principio para toda administración: «La responsabilidad, el criterio profesional y la decisión administrativa final recaen siempre en las personas».[^guia-aapp] Para o que fas ti cunha ferramenta é exactamente así: o que usas, revísalo e respondes diso. Pero non é todo o reparto: do sistema responde quen o constrúe, e de implantalo, a administración que o desprega.
 - **Boa práctica.** Deixa constancia de que ferramenta usaches, para que e como revisaches o resultado. É o que che permite responder diso.
 
 A idea de fondo non é nova. Unha páxina atribuída a unha formación interna de IBM de 1979 resumíao así: «Un ordenador nunca pode render contas; polo tanto, un ordenador nunca debe tomar unha decisión de xestión» (tradución propia).[^ibm-1979] Décadas despois, o RXPD e a lei galega de IA recollen esa mesma idea, cada un á súa maneira: o dereito a non quedar suxeito a unha decisión só automatizada, e a validación obrigatoria por unha persoa. Ningún prohíbe usar a ferramenta; esixen que alguén decida e responda da decisión.
@@ -133,7 +133,7 @@ As trampas de texto oculto nos enunciados, e por que non serven para avaliar, ve
 
 As cifras públicas máis precisas son poucas e veñen dos propios provedores. Google mediu en 2025 que unha consulta de texto mediana a Gemini consumía 0,24 Wh e 0,26 ml de auga, algo menos que ver nove segundos de televisión; é a súa propia medición, e só para texto.[^google-energia] O problema é o agregado: segundo a Axencia Internacional da Enerxía, os centros de datos consumiron en 2024 arredor do 1,5 % da electricidade mundial (415 TWh), e prevé que esa cifra se duplique ata uns 945 TWh en 2030, coa IA como principal motor.[^iea]
 
-**Boa práctica.** Proporcionalidade: usar a IA cando achega algo, non por defecto, e preferir a xeración de texto á de imaxe ou vídeo cando abonda.
+**Boa práctica.** Proporcionalidade: usar a IA cando achega algo, non por defecto, e preferir a xeración de texto á de imaxe ou vídeo cando abonda. Para os seus contratos, a guía do Ministerio recoméndalles o mesmo ás administracións: priorizar «modelos menos intensivos en consumo computacional capaces de resolver el caso de uso».[^guia-aapp]
 
 ## Oportunidades e riscos
 
@@ -183,4 +183,5 @@ A mellor protección do alumnado é entender como funcionan estas ferramentas: p
 [^xunta-conclusiones]: Xunta de Galicia, presentación *Intelixencia artificial (Ética e normativa en materia de Educación)*, de Tina Campo Fernández e Fátima Mª García Doval, decembro de 2025, pp. 70–71.
 [^google-energia]: Elsworth et al. (Google), [*Measuring the environmental impact of delivering AI at Google Scale*](https://arxiv.org/abs/2508.15734), agosto de 2025.
 [^iea]: Axencia Internacional da Enerxía, [*Energy and AI*](https://www.iea.org/reports/energy-and-ai/executive-summary), 2025.
+[^guia-aapp]: Ministerio para la Transformación Digital y de la Función Pública, [*Guía para la adopción ética de la inteligencia artificial en las Administraciones públicas*](https://digital.gob.es/content/dam/portal-mtdfp/avance-digital/telecomunicacion-e-infraestructuras-digitales/estadisticas-e-informes/Guia-de-IA-en-las-AAPP.pdf), novembro de 2026, pp. 3 (principios), 30 (idoneidade da IA) e 40 (sustentabilidade).
 [^benestar]: Xunta de Galicia, [*Plan integral de benestar dixital de Galicia*](https://ficheiros-web.xunta.gal/plans/educacion-ciencia/plan-integral-benestar-dixital.pdf), 2026, actuacións 18 e 19.

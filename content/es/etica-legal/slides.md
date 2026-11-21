@@ -1,7 +1,7 @@
 ---
 derived_from:
-  es/etica-legal/index.md: "c078391d16d26e76edafef7b5a27b9f69d8c3d7d"
-  es/etica-legal/normativa.md: "39a2799419012f8e3ec905adeaead031b959a67c"
+  es/etica-legal/index.md: "a228c9dd27c4c96e50bcb2a9c4fb20c69561de68"
+  es/etica-legal/normativa.md: "ba7cafda6c3309b0b32791a59b2afe6dbe09801f"
 ---
 
 <!-- .slide: id="ley-o-prudencia" class="statement" -->
@@ -124,7 +124,7 @@ Y a los candidatos de 60 o más: más de 200 personas cualificadas descartadas. 
 ## Quién responde
 
 ### Obligación legal
-Del sistema, quien lo desarrolla; de su uso, quien lo despliega.
+Del sistema, quien lo desarrolla o lo encarga; de su uso, quien lo despliega.
 
 ### Recomendación institucional
 Cuando una IA se equivoca, responde quien la usó.
@@ -133,7 +133,7 @@ Cuando una IA se equivoca, responde quien la usó.
 Deja constancia de qué usaste, para qué y cómo lo revisaste.
 
 Notas:
-Esa regla es exacta para lo que hace cada docente con una herramienta: lo que usas, lo revisas y respondes de ello. Pero no es todo el reparto: el Reglamento de IA reparte las obligaciones entre quien desarrolla el sistema y quien lo despliega, el RGPD da derecho a no quedar sujeto a una decisión solo automatizada, y en la administración gallega una actuación apoyada en IA necesita la validación de una persona.
+Esa regla es exacta para lo que hace cada docente con una herramienta: lo que usas, lo revisas y respondes de ello. Pero no es todo el reparto: el Reglamento de IA reparte las obligaciones entre quien desarrolla o encarga el sistema y quien lo despliega, el RGPD da derecho a no quedar sujeto a una decisión solo automatizada, y en la administración gallega una actuación apoyada en IA necesita la validación de una persona.
 
 ---
 
@@ -216,6 +216,7 @@ OpenAI retiró su propio detector en julio de 2023 por su baja precisión: detec
 | 2 de agosto de 2026 | Avisar de que se habla con una IA; etiquetar *deepfakes* |
 | 2 de diciembre de 2026 | Prohibidas las aplicaciones de desnudos falsos |
 | 2 de diciembre de 2027 | Obligaciones para los sistemas educativos de alto riesgo |
+| 2 de agosto de 2030 | Plazo final para los de alto riesgo que la administración ya usaba |
 
 Notas:
 El Reglamento (UE) 2026/1744, el *Omnibus*, retrasó el alto riesgo (antes, 2 de agosto de 2026) y añadió las nuevas prohibiciones. Muchas guías, incluidas las directrices europeas para docentes, todavía dan las fechas antiguas.
@@ -248,7 +249,7 @@ Decidir el nivel educativo adecuado.
 Vigilar conductas prohibidas.
 
 Notas:
-Anexo III, punto 3. No es de alto riesgo lo que no influye sustancialmente en la decisión (artículo 6.3), salvo que elabore perfiles. Las obligaciones recaen sobre todo en la administración que implanta el sistema.
+Anexo III, punto 3. No es de alto riesgo lo que no influye sustancialmente en la decisión (artículo 6.3), salvo que elabore perfiles. Las obligaciones recaen sobre todo en la administración que implanta el sistema: supervisión humana, informar al alumnado y evaluación de impacto.
 
 ---
 

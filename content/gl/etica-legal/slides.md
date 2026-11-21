@@ -1,6 +1,6 @@
 ---
 derived_from:
-  es/etica-legal/slides.md: "3b8a60fcc69e6402b7f3bc2a843861b20ba14ae9"
+  es/etica-legal/slides.md: "9825d49a67995a9fa762b94b28519657a850ac63"
 ---
 
 <!-- .slide: id="ley-o-prudencia" class="statement" -->
@@ -123,7 +123,7 @@ E os candidatos de 60 ou máis: máis de 200 persoas cualificadas descartadas. A
 ## Quen responde
 
 ### Obriga legal
-Do sistema, quen o desenvolve; do seu uso, quen o desprega.
+Do sistema, quen o desenvolve ou o encarga; do seu uso, quen o desprega.
 
 ### Recomendación institucional
 Cando unha IA erra, responde quen a usou.
@@ -132,7 +132,7 @@ Cando unha IA erra, responde quen a usou.
 Deixa constancia de que usaches, para que e como o revisaches.
 
 Notas:
-Esa regra é exacta para o que fai cada docente cunha ferramenta: o que usas, revísalo e respondes diso. Pero non é todo o reparto: o Regulamento de IA reparte as obrigas entre quen desenvolve o sistema e quen o desprega, o RXPD dá dereito a non quedar suxeito a unha decisión só automatizada, e na administración galega unha actuación apoiada en IA necesita a validación dunha persoa.
+Esa regra é exacta para o que fai cada docente cunha ferramenta: o que usas, revísalo e respondes diso. Pero non é todo o reparto: o Regulamento de IA reparte as obrigas entre quen desenvolve ou encarga o sistema e quen o desprega, o RXPD dá dereito a non quedar suxeito a unha decisión só automatizada, e na administración galega unha actuación apoiada en IA necesita a validación dunha persoa.
 
 ---
 
@@ -215,6 +215,7 @@ OpenAI retirou o seu propio detector en xullo de 2023 pola súa baixa precisión
 | 2 de agosto de 2026 | Avisar de que se fala cunha IA; etiquetar *deepfakes* |
 | 2 de decembro de 2026 | Prohibidas as aplicacións de espidos falsos |
 | 2 de decembro de 2027 | Obrigas para os sistemas educativos de alto risco |
+| 2 de agosto de 2030 | Prazo final para os de alto risco que a administración xa usaba |
 
 Notas:
 O Regulamento (UE) 2026/1744, o *Omnibus*, atrasou o alto risco (antes, 2 de agosto de 2026) e engadiu as novas prohibicións. Moitas guías, incluídas as directrices europeas para docentes, aínda dan as datas antigas.
@@ -247,7 +248,7 @@ Decidir o nivel educativo axeitado.
 Vixiar condutas prohibidas.
 
 Notas:
-Anexo III, punto 3. Non é de alto risco o que non inflúe substancialmente na decisión (artigo 6.3), agás que elabore perfís. As obrigas recaen sobre todo na administración que implanta o sistema.
+Anexo III, punto 3. Non é de alto risco o que non inflúe substancialmente na decisión (artigo 6.3), agás que elabore perfís. As obrigas recaen sobre todo na administración que implanta o sistema: supervisión humana, informar o alumnado e avaliación de impacto.
 
 ---
 

@@ -2,7 +2,7 @@
 title: Normativa
 description: O que din o RXPD, a LOPDGDD, a LOE, o Regulamento de IA e as normas galegas sobre o uso da IA nun centro educativo, co seu calendario de aplicación e o que aínda está en tramitación.
 derived_from:
-  es/etica-legal/normativa.md: "39a2799419012f8e3ec905adeaead031b959a67c"
+  es/etica-legal/normativa.md: "ba7cafda6c3309b0b32791a59b2afe6dbe09801f"
 ---
 
 > [!NOTE]
@@ -11,7 +11,7 @@ derived_from:
 
 ## Como se ordenan as normas
 
-Un **regulamento europeo** é obrigatorio e directamente aplicable en todos os Estados, sen que faga falla unha lei nacional que o traspoña; unha **directiva**, en cambio, fixa obxectivos que cada Estado incorpora coa súa propia lei. Pero «directamente aplicable» non significa «aplicable desde que se publica»: cada regulamento fixa a súa data de entrada en vigor e os seus prazos de aplicación. O Regulamento de IA, por exemplo, publicouse en xullo de 2024, entrou en vigor o 1 de agosto de 2024 e aplícase por fases ata 2028 ([calendario](#calendario)).
+Un **regulamento europeo** é obrigatorio e directamente aplicable en todos os Estados, sen que faga falla unha lei nacional que o traspoña; unha **directiva**, en cambio, fixa obxectivos que cada Estado incorpora coa súa propia lei. Pero «directamente aplicable» non significa «aplicable desde que se publica»: cada regulamento fixa a súa data de entrada en vigor e os seus prazos de aplicación. O Regulamento de IA, por exemplo, publicouse en xullo de 2024, entrou en vigor o 1 de agosto de 2024 e aplícase por fases ([calendario](#calendario)).
 
 Por debaixo están as normas españolas (leis orgánicas como a LOPDGDD ou a LOE, reais decretos) e as galegas. E fóra desa xerarquía, as **guías e recomendacións** (da Comisión Europea, do INTEF, da Xunta), que orientan pero non obrigan.
 
@@ -79,16 +79,19 @@ O Regulamento (UE) 2024/1689, coñecido como RIA ou *AI Act*, aplícase por fase
 | 2 de decembro de 2026 | Novas prohibicións do *Omnibus* | Prohibidos os sistemas para xerar imaxes íntimas sen consentimento |
 | 2 de decembro de 2027 | Sistemas de alto risco do anexo III, entre eles os educativos | Obrigas para quen implante sistemas que avalían ou admiten alumnado |
 | 2 de agosto de 2028 | Sistemas de alto risco integrados en produtos (anexo I) | Pouca |
+| 2 de agosto de 2030 | Sistemas de alto risco das autoridades públicas que xa estaban en servizo | Prazo final para adaptar os sistemas educativos de alto risco que a administración xa usaba antes de decembro de 2027 |
 
 As datas de alto risco eran o 2 de agosto de 2026 e 2027. Moitas guías publicadas antes de xullo de 2026, incluídas as directrices europeas para docentes, aínda dan as datas antigas.
 
 ### Quen é quen
 
-O Regulamento reparte as obrigas entre o **provedor**, quen desenvolve o sistema e o comercializa, e o **responsable do despregamento**, que é quen o usa «bajo su propia autoridad, salvo cuando su uso se enmarque en una actividad personal de carácter no profesional».[^ria] Nun centro público, cando a Consellería implanta unha ferramenta, o responsable do despregamento é a administración, e o docente úsaa por conta dela. O que faga un docente pola súa conta para o seu traballo queda nunha zona menos clara, e é outro motivo para usar as ferramentas que proporciona a administración.
+O Regulamento reparte as obrigas entre o **provedor**, quen desenvolve un sistema, ou o encarga, e o pon no mercado ou en servizo co seu nome, «previo pago o gratuitamente», e o **responsable do despregamento**, que é quen o usa «bajo su propia autoridad, salvo cuando su uso se enmarque en una actividad personal de carácter no profesional».[^ria] Nun centro público, cando a Consellería implanta unha ferramenta comprada, o responsable do despregamento é a administración, e o docente úsaa por conta dela; se a desenvolve ou a encarga para usala co seu nome, é ademais a súa provedora.[^guia-aapp] O que faga un docente pola súa conta para o seu traballo queda nunha zona menos clara, e é outro motivo para usar as ferramentas que proporciona a administración.
 
 ### Alfabetización
 
 O artigo 4 obrigaba inicialmente a provedores e responsables do despregamento a «garantizar que, en la mayor medida posible», o seu persoal tivese «un nivel suficiente de alfabetización en materia de IA». Desde o 27 de xullo de 2026, tras o *Omnibus*, a obriga é máis suave: deben adoptar «medidas para apoyar la promoción de la alfabetización en materia de IA» do seu persoal, e o texto aclara que non lles esixe garantir «un nivel específico» de ninguén. A Comisión e os Estados deben apoiar ese esforzo.[^omnibus]
+
+Para as administracións, a guía do Ministerio vai máis alá: pide «asegurar» que o persoal que usa sistemas de IA, sexa cal sexa o seu risco, teña «los conocimientos adecuados para hacer un uso correcto y fiable de esta tecnología» (**recomendación institucional**).[^guia-aapp]
 
 En Galicia, ademais, a lei de IA obriga a administración a velar porque o persoal que intervén no ciclo de vida destes sistemas manteña «as capacidades precisas para que poida garantir un debido uso destes».[^lei-ia]
 
@@ -100,7 +103,7 @@ A máis relevante en educación é a do artigo 5.1.f: o uso de sistemas de IA «
 - Un sistema de supervisión de exames en liña que segue a mirada para detectar material non autorizado non está prohibido; se ademais detecta nerviosismo ou ansiedade, si.
 - Usar o recoñecemento de emocións para inferir o interese ou a atención do alumnado está prohibido.
 
-O resto da lista (manipulación subliminar, explotación de vulnerabilidades, puntuación social, bases de datos de recoñecemento facial, categorización biométrica para deducir datos sensibles, identificación biométrica en tempo real en espazos públicos con fins policiais) afecta pouco ao traballo dun centro.
+O resto da lista (manipulación subliminar, explotación de vulnerabilidades, puntuación social, predición de delitos a partir só do perfil dunha persoa, bases de datos de recoñecemento facial, categorización biométrica para deducir datos sensibles, identificación biométrica en tempo real en espazos públicos con fins policiais) afecta pouco ao traballo dun centro.
 
 Desde o 2 de decembro de 2026 engádense dúas prohibicións con consecuencias directas para a convivencia escolar: os sistemas que xeren imaxes, vídeos ou audios realistas «de las partes íntimas de una persona física identificable» ou dunha persoa identificable en actividades sexualmente explícitas sen o seu consentimento, e os que xeren material de abuso sexual infantil.[^omnibus] Afecta ás aplicacións de «espidos» falsos, cuxo uso entre estudantes é un risco para a convivencia.
 
@@ -115,9 +118,9 @@ O anexo III considera de alto risco catro usos en educación e formación profes
 
 Non todo sistema que toque eses ámbitos é de alto risco. Segundo o artigo 6.3, non o é cando non inflúe substancialmente na decisión: se fai unha tarefa de procedemento limitada, mellora o resultado dunha actividade humana xa feita, detecta desviacións en pautas de decisión sen substituír a valoración humana, ou fai unha tarefa preparatoria. Pero sempre o é cando elabora perfís de persoas.[^ria]
 
-As obrigas correspondentes aplícanse desde o 2 de decembro de 2027. Para a administración que implante un destes sistemas inclúen encargar a supervisión humana «a personas físicas que tengan la competencia, la formación y la autoridad necesarias» e, por ser un organismo público, facer unha avaliación de impacto sobre os dereitos fundamentais antes de despregalo.[^ria]
+As obrigas correspondentes aplícanse desde o 2 de decembro de 2027. Para a administración que implante un destes sistemas inclúen encargar a supervisión humana «a personas físicas que tengan la competencia, la formación y la autoridad necesarias», informar o alumnado de que se usa con el e, por ser un organismo público, facer unha avaliación de impacto sobre os dereitos fundamentais antes de despregalo.[^ria]
 
-Queda unha cuestión aberta: o artigo 25.1.c converte en provedor dun sistema de alto risco a quen «modifique la finalidad prevista de un sistema de IA, incluido un sistema de IA de uso general», de xeito que pase a ser de alto risco.[^ria] Como se aplica a un docente que usa un *chatbot* xeral para poñer notas non está resolto no texto. É un argumento máis, xunto ao artigo 22 do RXPD, para que a IA non decida a cualificación.
+Queda unha cuestión aberta: o artigo 25.1.c converte en provedor dun sistema de alto risco a quen «modifique la finalidad prevista de un sistema de IA, incluido un sistema de IA de uso general», de xeito que pase a ser de alto risco.[^ria] Como se aplica a un docente que usa un *chatbot* xeral para poñer notas non está resolto no texto. Para as administracións, a guía do Ministerio dá o seu criterio: a que usa un sistema comprado para un uso distinto do que fixou o seu provedor pasa a ser provedora do novo sistema, con todas as súas obrigas (**recomendación institucional**).[^guia-aapp] É un argumento máis, xunto ao artigo 22 do RXPD, para que a IA non decida a cualificación.
 
 ### Transparencia
 
@@ -147,12 +150,13 @@ A Lei 2/2025, para o desenvolvemento e o impulso da intelixencia artificial en G
 [^loe]: Lei orgánica 2/2006, de educación, [disposición adicional vixésimo terceira](https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899#davigesimotercera).
 [^lopdgdd]: Lei orgánica 3/2018, de protección de datos persoais e garantía dos dereitos dixitais, [artigo 7](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673#a7).
 [^menores]: Proxecto de lei orgánica para a protección das persoas menores de idade nas contornas dixitais, [BOCG, Congreso, serie A, núm. 52-1](https://www.congreso.es/public_oficiales/L15/CONG/BOCG/A/BOCG-15-A-52-1.PDF), 11 de abril de 2025, disposición derradeira sexta. As Cortes disolvéronse polo [Real decreto 806/2026](https://www.boe.es/buscar/doc.php?id=BOE-A-2026-20742), do 5 de outubro, e a caducidade establécea o [artigo 207 do Regulamento do Congreso](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196).
-[^ria]: Regulamento (UE) 2024/1689, de intelixencia artificial ([BOE](https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079)): artigos 3.4 (responsable do despregamento), 5.1.f, 6.3, 25.1.c, 26.2, 27, 50 e 113, e anexo III, punto 3.
-[^omnibus]: Regulamento (UE) 2026/1744, do 8 de xullo de 2026 ([BOE](https://www.boe.es/buscar/doc.php?id=DOUE-L-2026-81147)): novo artigo 4; artigo 5.1, letras b bis e b ter; artigo 113.
+[^ria]: Regulamento (UE) 2024/1689, de intelixencia artificial ([BOE](https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079)): artigos 3.3 (provedor), 3.4 (responsable do despregamento), 5.1.d, 5.1.f, 6.3, 25.1.c, 26.2, 26.11, 27, 50 e 113, e anexo III, punto 3.
+[^omnibus]: Regulamento (UE) 2026/1744, do 8 de xullo de 2026 ([BOE](https://www.boe.es/buscar/doc.php?id=DOUE-L-2026-81147)): novo artigo 4; artigo 5.1, letras b bis e b ter; artigos 111.2 e 113.
 [^lei-ia]: [Lei 2/2025, do 2 de abril](https://www.xunta.gal/dog/Publicados/2025/20250404/AnuncioC3B0-030425-0001_gl.html), para o desenvolvemento e o impulso da intelixencia artificial en Galicia, artigos 3, 12 e 19.
 [^lei-5]: [Lei 5/2025, do 23 de decembro](https://www.xunta.gal/dog/Publicados/2025/20251231/AnuncioC3B0-231225-0002_gl.html), de medidas fiscais e administrativas, artigo 48.
 [^directrices]: Comisión Europea, [*Guidelines on the ethical use of artificial intelligence and data in teaching and learning for educators*](https://data.europa.eu/doi/10.2766/7967834), 2026, táboa 1, con exemplos das directrices da Comisión sobre prácticas prohibidas. Tradución propia.
 [^aesia]: Real decreto 729/2023, Estatuto da AESIA, [artigo 4](https://www.boe.es/buscar/act.php?id=BOE-A-2023-18911).
+[^guia-aapp]: Ministerio para la Transformación Digital y de la Función Pública, [*Guía para la adopción ética de la inteligencia artificial en las Administraciones públicas*](https://digital.gob.es/content/dam/portal-mtdfp/avance-digital/telecomunicacion-e-infraestructuras-digitales/estadisticas-e-informes/Guia-de-IA-en-las-AAPP.pdf), novembro de 2026, pp. 17–21 (roles das administracións, cos seus exemplos, e alfabetización) e 33 (sistemas desenvolvidos ou encargados pola administración).
 [^benestar]: Xunta de Galicia, [*Plan integral de benestar dixital de Galicia*](https://ficheiros-web.xunta.gal/plans/educacion-ciencia/plan-integral-benestar-dixital.pdf), actuacións 18, 19 e 28.
 [^xunta-lei]: Xunta de Galicia, [nota de prensa do 29 de xuño de 2026](https://www.xunta.gal/notas-de-prensa/-/nova/026191/rueda-anuncia-aprobacion-anteproxecto-lei-educacion-dixital-unha-norma-pioneira); Parlamento de Galicia, [ficha do proxecto 12/PL-000015](https://www.parlamentodegalicia.es/ParticipacionCidada/LexislaConNos/3482/proxecto-de-lei-de-educacion-dixital-de-galicia.-12pl-000015).
 [^xunta-ia]: Xunta de Galicia, [nota de prensa do 11 de abril de 2026](https://www.xunta.gal/es/notas-de-prensa/-/nova/023351/galicia-autorizara-uso-educacion-para-deteccion-temprana-dificultades-aprendizaje).
